@@ -154,7 +154,6 @@ if (!isNil "musicRadiosArray") then {
 if (count musicRadiosArray > 0) then {
 {
 _x enableSimulationGlobal false;
-_x enableSimulation false;
 _x allowdamage false;
 playSound3D [format ["poddy_music\music\" + whatSong + ".ogg"], _x, false, getPosASL _x, 4, 1, 50];
 } foreach musicRadiosArray;
