@@ -247,4 +247,4 @@ switch(_includeAI) do {
 }forEach _unitsArr;
 
 player createDiarySubject ["roster", "Team Roster"];
-player createDiaryRecord ["roster", ["Roster", _strFinal]];
+player createDiaryRecord ["roster", [format ["Roster %1", date], _strFinal]];

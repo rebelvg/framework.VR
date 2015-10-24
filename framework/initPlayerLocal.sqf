@@ -16,7 +16,11 @@ switch (_playerSide) do {
 	};
 };
 
+if (time < 1) then {
 [2, false, true] execVM "scripts\roster.sqf";
+} else {
+[[[2, false, true], "scripts\roster.sqf"], "BIS_fnc_execVM"] call BIS_fnc_MP;
+};
 [] execVM "scripts\radio_settings.sqf";
 
 sleep 90;
