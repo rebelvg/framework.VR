@@ -18,7 +18,6 @@ in initServer.sqf
 Framework should not throw ANY script errors. If you see any errors connected to the framework, you're probably doing something wrong, ask rebel.
 loadoutArray is located in framework\init.sqf
 It's pretty self-explanatory.
-Main thing you need to know is to not leave weapons, mags and grenades slots empty, nothing major will happen, it'll just throw a few config errors.
 Loadouts per class are located in the scripts folder, loadout_west.sqf, loadout_east.sqf, loadout_guer.sqf.
 To test your loadouts you can use some neat framework functions.
 Execute

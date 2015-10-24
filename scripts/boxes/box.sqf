@@ -62,31 +62,47 @@ _handgunDevices = _handgunArray select 2;
 
 _unit addItemCargoGlobal ["ToolKit", 1];
 
-if (_atSingleShot != "") then {
+if (!(_atSingleShot isEqualTo "")) then {
 _unit addWeaponCargoGlobal [_atSingleShot, 20];
 };
 
 {
+if (!(_x isEqualTo "")) then {
 _unit addMagazineCargoGlobal [_x, 100];
+};
 } foreach _allRifleMags;
-if (_MGMags != "") then {
+
+if (!(_MGMags isEqualTo "")) then {
 _unit addMagazineCargoGlobal [_MGMags, 50];
 };
-if (_marksmanMags != "") then {
+
+if (!(_marksmanMags isEqualTo "")) then {
 _unit addMagazineCargoGlobal [_marksmanMags, 25];
 };
-if (_glGrenade != "") then {
+
+if (!(_glGrenade isEqualTo "")) then {
 _unit addMagazineCargoGlobal [_glGrenade, 40];
 };
+
+if (!(_handgunMags isEqualTo "")) then {
 _unit addMagazineCargoGlobal [_handgunMags, 20];
+};
+
+if (!(_atMags isEqualTo "")) then {
 _unit addMagazineCargoGlobal [_atMags, 20];
-if (_aaMags != "") then {
+};
+
+if (!(_aaMags isEqualTo "")) then {
 _unit addMagazineCargoGlobal [_aaMags, 20];
 };
 
+if (!(_handGrenade isEqualTo "")) then {
 _unit addMagazineCargoGlobal [_handGrenade, 40];
+};
+if (!(_smokeGrenade isEqualTo "")) then {
 _unit addMagazineCargoGlobal [_smokeGrenade, 200];
-_unit addMagazineCargoGlobal ["rhs_mag_nspn_yellow", 80];
+};
+//_unit addMagazineCargoGlobal ["rhs_mag_nspn_yellow", 80];
 _unit addMagazineCargoGlobal ["DemoCharge_Remote_Mag", 30];
 _unit addMagazineCargoGlobal ["SatchelCharge_Remote_Mag", 10];
 

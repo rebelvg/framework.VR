@@ -16,7 +16,7 @@ switch (_playerSide) do {
 	};
 };
 
-if (time < 1) then {
+if (serverTime < 1) then {
 [2, false, true] execVM "scripts\roster.sqf";
 } else {
 [[[2, false, true], "scripts\roster.sqf"], "BIS_fnc_execVM"] call BIS_fnc_MP;

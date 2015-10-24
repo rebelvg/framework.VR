@@ -1674,12 +1674,12 @@ class Mission
 		class Item4
 		{
 			position[]={3290.8511,5,3881.2212};
-			azimut=476.04709;
+			azimut=476.047;
 			id=60;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			skill=0.60000002;
-			init="0 = [this] execVM ""musicRadio\vehicleInit.sqf"";";
+			init="0 = [this] execVM ""scripts\boxes\box_veh.sqf""; 0 = [this] execVM ""musicRadio\vehicleInit.sqf"";";
 		};
 	};
 	class Markers

@@ -3,6 +3,21 @@ _className = _this select 1;
 
 waituntil {!isNil "loadoutArray"};
 
+_loadoutMainWeapon = "";
+_loadoutHandgunWeapon = "";
+_loadoutLauncherWeapon = "";
+
+_loadoutMainWeaponDevices = "";
+_loadoutHandgunWeaponDevices = "";
+_loadoutLauncherWeaponDevices = "";
+
+_loadoutMainWeaponMags = "";
+_loadoutHandgunWeaponMags = "";
+_loadoutLauncherWeaponMags = "";
+_loadoutMainWeaponGlGrenades = "";
+
+_loadoutBinoculars = "";
+
 removeAllAssignedItems _unit;
 removeAllWeapons _unit;
 removeBackpack _unit;
@@ -113,44 +128,31 @@ for "_i" from 1 to 1 do {_unit addItem _smokeGrenade;};
 
 switch (_className) do {
 	case "squad leader": {
-	_unit addWeapon _glRifle;
-	{
-		_unit addPrimaryWeaponItem _x;
-	} foreach _glRifleDevices;
-	_unit addMagazines [_glRifleMags, 8];
-	if (_glGrenade != "") then {
-	_unit addMagazines [_glGrenade, 6];
-	};
-	_unit addWeapon _handgun;
-	{
-		_unit addHandgunItem _x;
-	} foreach _handgunDevices;
-	_unit addMagazines [_handgunMags, 2];
-	_unit addWeapon _binoculars;
+	_loadoutMainWeapon = _glRifle;
+	_loadoutMainWeaponDevices = _glRifleDevices;
+	_loadoutMainWeaponMags = _glRifleMags;
+	_loadoutMainWeaponGlGrenades = _glGrenade;
+	_loadoutHandgunWeapon = _handgun;
+	_loadoutHandgunWeaponDevices = _handgunDevices;
+	_loadoutHandgunWeaponMags = _handgunMags;
+	_loadoutBinoculars = _binoculars;
 	};
 	
 	case "team leader": {
-	_unit addWeapon _glRifle;
-	{
-		_unit addPrimaryWeaponItem _x;
-	} foreach _glRifleDevices;
-	_unit addMagazines [_glRifleMags, 8];
-	if (_glGrenade != "") then {
-	_unit addMagazines [_glGrenade, 6];
-	};
-	_unit addWeapon _handgun;
-	{
-		_unit addHandgunItem _x;
-	} foreach _handgunDevices;
-	_unit addMagazines [_handgunMags, 2];
-	_unit addWeapon _binoculars;
+	_loadoutMainWeapon = _glRifle;
+	_loadoutMainWeaponDevices = _glRifleDevices;
+	_loadoutMainWeaponMags = _glRifleMags;
+	_loadoutMainWeaponGlGrenades = _glGrenade;
+	_loadoutHandgunWeapon = _handgun;
+	_loadoutHandgunWeaponDevices = _handgunDevices;
+	_loadoutHandgunWeaponMags = _handgunMags;
+	_loadoutBinoculars = _binoculars;
 	};
 	
 	case "combat life saver": {
-	_unit addWeapon _rifle;
-	{
-		_unit addPrimaryWeaponItem _x;
-	} foreach _rifleDevices;
+	_loadoutMainWeapon = _rifle;
+	_loadoutMainWeaponDevices = _rifleDevices;
+	_loadoutMainWeaponMags = _rifleMags;
 	for "_i" from 1 to 15 do {_unit addItem "ACE_elasticBandage";};
 	for "_i" from 1 to 15 do {_unit addItem "ACE_quikclot";};
 	for "_i" from 1 to 10 do {_unit addItem "ACE_morphine";};
@@ -158,95 +160,106 @@ switch (_className) do {
 	for "_i" from 1 to 10 do {_unit addItem "ACE_atropine";};
 	for "_i" from 1 to 5 do {_unit addItem "ACE_tourniquet";};
 	for "_i" from 1 to 5 do {_unit addItem "ACE_salineIV_500";};
-	for "_i" from 1 to 3 do {_unit addItem "ACE_personalAidKit";};	
-	_unit addMagazines [_rifleMags, 8];
+	for "_i" from 1 to 3 do {_unit addItem "ACE_personalAidKit";};
 	};
 	
 	case "autorifleman": {
-	_unit addWeapon _MG;
-	{
-		_unit addPrimaryWeaponItem _x;
-	} foreach _mgDevices;
-	_unit addMagazines [_MGMags, 5];
+	_loadoutMainWeapon = _MG;
+	_loadoutMainWeaponDevices = _mgDevices;
+	_loadoutMainWeaponMags = _MGMags;
 	};
 	
 	case "rifleman (at)": {
-	_unit addWeapon _rifle;
-	{
-		_unit addPrimaryWeaponItem _x;
-	} foreach _rifleDevices;
-	_unit addMagazines [_rifleMags, 8];
-	_unit addWeapon _atSingleShot;
+	_loadoutMainWeapon = _rifle;
+	_loadoutMainWeaponDevices = _rifleDevices;
+	_loadoutMainWeaponMags = _rifleMags;
+	_loadoutLauncherWeapon = _atSingleShot;
 	};
 	
 	case "missile specialist (at)": {
-	_unit addWeapon _rifle;
-	{
-		_unit addPrimaryWeaponItem _x;
-	} foreach _rifleDevices;
-	_unit addMagazines [_rifleMags, 8];
-	_unit addWeapon _atReloadable;
-	{
-		_unit addSecondaryWeaponItem _x;
-	} foreach _atDevices;
-	_unit addMagazines [_atMags, 5];
+	_loadoutMainWeapon = _rifle;
+	_loadoutMainWeaponDevices = _rifleDevices;
+	_loadoutMainWeaponMags = _rifleMags;
+	_loadoutLauncherWeapon = _atReloadable;
+	_loadoutLauncherWeaponDevices = _atDevices;
+	_loadoutLauncherWeaponMags = _atMags;
 	};
 	
 	case "rifleman": {
-	_unit addWeapon _rifle;
-	{
-		_unit addPrimaryWeaponItem _x;
-	} foreach _rifleDevices;
-	_unit addMagazines [_rifleMags, 8];
+	_loadoutMainWeapon = _rifle;
+	_loadoutMainWeaponDevices = _rifleDevices;
+	_loadoutMainWeaponMags = _rifleMags;
 	};
 	
 	case "engineer": {
-	_unit addWeapon _rifle;
-	{
-		_unit addPrimaryWeaponItem _x;
-	} foreach _rifleDevices;
-	_unit addMagazines [_rifleMags, 8];
+	_loadoutMainWeapon = _rifle;
+	_loadoutMainWeaponDevices = _rifleDevices;
+	_loadoutMainWeaponMags = _rifleMags;
 	_unit addItem "ACE_M26_Clacker";
 	_unit addItem "ACE_DefusalKit";
-	for "_i" from 1 to 3 do {_unit addItem "DemoCharge_Remote_Mag";};
-	for "_i" from 1 to 1 do {_unit addItem "SatchelCharge_Remote_Mag";};
+	for "_i" from 1 to 2 do {_unit addItem "DemoCharge_Remote_Mag";};
 	};
 	
 	case "marksman": {
-	_unit addWeapon _marksmanRifle;
-	{
-		_unit addPrimaryWeaponItem _x;
-	} foreach _marksmanDevices;
-	_unit addMagazines [_marksmanMags, 8];
+	_loadoutMainWeapon = _marksmanRifle;
+	_loadoutMainWeaponDevices = _marksmanDevices;
+	_loadoutMainWeaponMags = _marksmanMags;
 	};
 	
 	case "grenadier": {
-	_unit addWeapon _glRifle;
-	{
-		_unit addPrimaryWeaponItem _x;
-	} foreach _glRifleDevices;
-	_unit addMagazines [_glRifleMags, 8];
-	if (_glGrenade != "") then {
-	_unit addMagazines [_glGrenade, 6];
-	};
+	_loadoutMainWeapon = _glRifle;
+	_loadoutMainWeaponDevices = _glRifleDevices;
+	_loadoutMainWeaponMags = _glRifleMags;
+	_loadoutMainWeaponGlGrenades = _glGrenade;
 	};
 	
 	case "missile specialist (aa)": {
-	_unit addWeapon _rifle;
-	{
-		_unit addPrimaryWeaponItem _x;
-	} foreach _rifleDevices;
-	_unit addMagazines [_rifleMags, 8];
-	_unit addWeapon _aa;
-	_unit addMagazines [_aaMags, 5];
+	_loadoutMainWeapon = _rifle;
+	_loadoutMainWeaponDevices = _rifleDevices;
+	_loadoutMainWeaponMags = _rifleMags;
+	_loadoutLauncherWeapon = _aa;
+	_loadoutLauncherWeaponMags = _aaMags;
 	};
 	
 	default {
-	 _unit addWeapon _rifle;
+	_loadoutMainWeapon = _rifle;
+	_loadoutMainWeaponDevices = _rifleDevices;
+	_loadoutMainWeaponMags = _rifleMags;
+	systemchat "Wrong loadout classname, falling back to rifleman.";
+	};
+};
+
+if (!(_loadoutMainWeapon isEqualTo "")) then {
+	_unit addWeapon _loadoutMainWeapon;
 	{
 		_unit addPrimaryWeaponItem _x;
-	} foreach _rifleDevices;
-	_unit addMagazines [_rifleMags, 8];
-	systemchat "wrong loadout classname, falling back to rifleman";
+	} foreach _loadoutMainWeaponDevices;
+	_unit addMagazines [_loadoutMainWeaponMags, 8];
+	if (_loadoutMainWeaponGlGrenades != "") then {
+	_unit addMagazines [_loadoutMainWeaponGlGrenades, 6];
 	};
+};
+
+if (!(_loadoutHandgunWeapon isEqualTo "")) then {
+	_unit addWeapon _loadoutHandgunWeapon;
+	{
+		_unit addHandgunItem _x;
+	} foreach _loadoutHandgunWeaponDevices;
+	_unit addMagazines [_loadoutHandgunWeaponMags, 2];
+};
+
+if (!(_loadoutLauncherWeapon isEqualTo "")) then {
+	_unit addWeapon _loadoutLauncherWeapon;
+	if (!(_loadoutLauncherWeaponDevices isEqualTo "")) then {
+	{
+		_unit addSecondaryWeaponItem _x;
+	} foreach _loadoutLauncherWeaponDevices;
+	};
+	if (!(_loadoutLauncherWeaponMags isEqualTo "")) then {
+	_unit addMagazines [_loadoutLauncherWeaponMags, 2];
+	};
+};
+
+if (!(_loadoutBinoculars isEqualTo "")) then {
+	_unit addWeapon _loadoutBinoculars;
 };
