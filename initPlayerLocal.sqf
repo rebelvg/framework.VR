@@ -1,0 +1,1 @@
+[] execVM "framework\initPlayerLocal.sqf";

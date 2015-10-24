@@ -1,0 +1,36 @@
+disabledAI=true;
+respawn = 3;
+respawnDelay = 5;
+respawnDialog = 0;
+enableDebugConsole = 1;
+forceRotorLibSimulation = 2;
+saving = 0;
+respawnButton = 0;
+
+onLoadName = "Framework GUER";
+onLoadMission = "";
+author="Murshun / Rebel";
+loadScreen =  "logo.jpg";
+
+class Header
+{
+	gameType = COOP;
+	minPlayers = 1;
+	maxPlayers = 21;
+};
+
+class CfgDebriefing
+{
+	class End1
+	{
+	title = "Mission Completed!";
+	subtitle = "Good Job!";
+	description = "";
+	};
+	class End2
+	{
+	title = "Mission Failed!";
+	subtitle = "Come on, guys.";
+	description = "";
+	};	
+};
