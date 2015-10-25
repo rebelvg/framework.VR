@@ -1679,7 +1679,7 @@ class Mission
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			skill=0.60000002;
-			init="0 = [this] execVM ""scripts\boxes\box_veh.sqf""; 0 = [this] execVM ""musicRadio\vehicleInit.sqf"";";
+			init="0 = [this] execVM ""scripts\boxes\box_veh.sqf""; 0 = [this] execVM ""music_radio\vehicleInit.sqf"";";
 		};
 	};
 	class Markers

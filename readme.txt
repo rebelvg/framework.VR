@@ -38,4 +38,4 @@ Modified roster script adds frequencies to the roster.
 
 //remove musicRadiosArray if you don't have and don't need a radio on the base
 //add next line to each vehicle that you want to have a radio inside
-//0 = [this] execVM "musicRadio\vehicleInit.sqf";
+//0 = [this] execVM "music_radio\vehicleInit.sqf";
