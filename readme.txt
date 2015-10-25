@@ -5,7 +5,7 @@ Framework needs a few lines to be initialized properly.
 [] execVM "framework\init.sqf";
 in init.sqf
 
-[] execVM "framework\initPlayerLocal.sqf";
+(_this) execVM "framework\initPlayerLocal.sqf";
 in initPlayerLocal.sqf
 
 [] execVM "framework\initServer.sqf";
