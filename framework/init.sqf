@@ -19,6 +19,8 @@ loadoutArray = [
 "" //binoculars 17
 ];
 
+ace_maptools_EveryoneCanDrawOnBriefing = false;
+
 debugLoadout_fnc = {
 {
 if (side _x == side player) then {

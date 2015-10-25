@@ -3,6 +3,8 @@ _className = _this select 1;
 
 waituntil {!isNil "loadoutArray"};
 
+if (count loadoutArray == 0) exitWith {};
+
 _loadoutMainWeapon = "";
 _loadoutHandgunWeapon = "";
 _loadoutLauncherWeapon = "";
@@ -124,7 +126,9 @@ for "_i" from 1 to 2 do {_unit addItem "ACE_epinephrine";};
 for "_i" from 1 to 1 do {_unit addItem "ACE_atropine";};
 for "_i" from 1 to 1 do {_unit addItem "ACE_tourniquet";};
 
+if (!(_smokeGrenade isEqualTo "")) then {
 for "_i" from 1 to 1 do {_unit addItem _smokeGrenade;};
+};
 
 switch (_className) do {
 	case "squad leader": {

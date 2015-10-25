@@ -1,1 +1,1 @@
-[] execVM "framework\initPlayerLocal.sqf";
+(_this) execVM "framework\initPlayerLocal.sqf";
