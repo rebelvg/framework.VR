@@ -2,12 +2,12 @@
 //do not overwrite this file when copying framework from mission to mission
 
 loadoutArray = [
-["U_B_CombatUniform_mcam"], //uniform array 0
-["V_PlateCarrier1_rgr"], //vest array 1
-["H_HelmetB_desert"], //headgear array 2
-["B_FieldPack_khk"], //backpack array 3
+["U_B_CombatUniform_mcam"], //uniforms array 0
+["V_PlateCarrier1_rgr"], //vests array 1
+["H_HelmetB_desert"], //headgears array 2
+["B_FieldPack_khk"], //backpacks array 3
 "", // radio backpack 4
-["G_Bandanna_khk", ""], //facewear array 5
+["G_Bandanna_khk", ""], //facewears array 5
 ["ACE_EarPlugs", "ACE_Flashlight_XL50"], //items 6
 ["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "tf_anprc152", "NVGoggles"], //link items 7, personal radio, nvgs
 [["arifle_MX_Black_F", "30Rnd_65x39_caseless_mag", ["muzzle_snds_H", "acc_pointer_IR", "optic_Aco", "bipod_01_F_blk"]], ["arifle_MX_Black_F", "30Rnd_65x39_caseless_mag", ["", "", "", ""]]], //rifles array 8, mag, devices
