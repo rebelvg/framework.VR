@@ -110,11 +110,6 @@ _unit addGoggles _facewear;
 	_unit addItem _x;
 } foreach _items;
 
-_unit linkItem "ItemMap";
-_unit linkItem "ItemCompass";
-_unit linkItem "ItemWatch";
-//_unit linkItem "ItemGPS";
-
 {
 	_unit linkItem _x;
 } foreach _linkItems;

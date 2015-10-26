@@ -66,8 +66,8 @@ _handgunDevices = _handgunArray select 2;
 
 _unit addItemCargoGlobal ["ToolKit", 1];
 
-_unit addItemCargoGlobal ["ACE_elasticBandage", 200];
-_unit addItemCargoGlobal ["ACE_quikclot", 200];
+_unit addItemCargoGlobal ["ACE_elasticBandage", 100];
+_unit addItemCargoGlobal ["ACE_quikclot", 100];
 _unit addItemCargoGlobal ["ACE_morphine", 25];
 _unit addItemCargoGlobal ["ACE_epinephrine", 25];
 _unit addItemCargoGlobal ["ACE_atropine", 25];

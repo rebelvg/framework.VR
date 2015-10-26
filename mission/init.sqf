@@ -2,22 +2,22 @@
 //do not overwrite this file when copying framework from mission to mission
 
 loadoutArray = [
-["TRYK_U_denim_jersey_blu", "TRYK_U_denim_jersey_blk", "TRYK_U_denim_hood_blk"], //uniform array 0
-["TRYK_V_IOTV_BLK"], //vest array 1
-["H_Bandanna_gry", "TRYK_H_woolhat"], //headgear array 2
-["B_FieldPack_blk"], //backpack array 3
+["U_B_CombatUniform_mcam"], //uniform array 0
+["V_PlateCarrier1_rgr"], //vest array 1
+["H_HelmetB_desert"], //headgear array 2
+["B_FieldPack_khk"], //backpack array 3
 "", // radio backpack 4
-["G_Bandanna_blk", ""], //facewear array 5
+["G_Bandanna_khk", ""], //facewear array 5
 ["ACE_EarPlugs", "ACE_Flashlight_XL50"], //items 6
-["tf_fadak", ""], //personal radio 7, nvg
-[["hlc_rifle_aek971worn", "hlc_30Rnd_545x39_B_AK", ["", "", "", ""]], ["rhs_weap_akms", "rhs_30Rnd_762x39mm", ["", "", "", ""]]], //rifles array 8, mag, devices
-["hlc_rifle_aek971worn", "hlc_30Rnd_545x39_B_AK", "", ["", "", "", ""]], //gl rifle 9, mag, gl grenade, devices
-["rhs_weap_pkm", "rhs_100Rnd_762x54mmR", ["", "", "", ""]], //mg 10, mag, devices
-["rhs_weap_svdp_wd", "rhs_10Rnd_762x54mmR_7N1", ["rhs_acc_pso1m2", "", "", ""]], //marksman rifle 11, mag, devices
-"rhs_weap_rpg26", //at singleshot 12
-["rhs_weap_rpg7", "rhs_rpg7_PG7VL_mag", ["", "", "", ""]], //at reloadable 13, mag, devices
+["tf_anprc152", "NVGoggles", "ItemMap", "ItemCompass", "ItemWatch", "ItemGPS"], //personal radio 7, nvgs, link items
+[["arifle_MX_Black_F", "30Rnd_65x39_caseless_mag", ["muzzle_snds_H", "acc_pointer_IR", "optic_Aco", "bipod_01_F_blk"]], ["arifle_MX_Black_F", "30Rnd_65x39_caseless_mag", ["", "", "", ""]]], //rifles array 8, mag, devices
+["arifle_MX_GL_Black_F", "30Rnd_65x39_caseless_mag", "1Rnd_HE_Grenade_shell", ["muzzle_snds_H", "acc_pointer_IR", "optic_Aco", "bipod_01_F_blk"]], //gl rifle 9, mag, gl grenade, devices
+["arifle_MX_GL_Black_F", "30Rnd_65x39_caseless_mag", ["muzzle_snds_H", "acc_pointer_IR", "optic_Aco", "bipod_01_F_blk"]], //mg 10, mag, devices
+["arifle_MX_GL_Black_F", "30Rnd_65x39_caseless_mag", ["muzzle_snds_H", "acc_pointer_IR", "optic_Aco", "bipod_01_F_blk"]], //marksman rifle 11, mag, devices
+"", //at singleshot 12
+["", "", ["", "", "", ""]], //at reloadable 13, mag, devices
 ["", ""], //aa 14, mag
-["rhs_mag_rgd5", "rhs_mag_rdg2_white"], //grenades array 15
-["RH_tt33", "RH_8Rnd_762_tt33", ["", "", "", ""]], //sl handgun 16, mag, devices
-"Binocular" //binoculars 17
+["HandGrenade", "SmokeShellBlue"], //grenades array 15
+["hgun_ACPC2_F", "9Rnd_45ACP_Mag", ["", "", "", ""]], //sl handgun 16, mag, devices
+"Laserdesignator" //binoculars 17
 ];
