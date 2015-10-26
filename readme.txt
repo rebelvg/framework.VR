@@ -1,4 +1,6 @@
 /*
+https://github.com/rebelvg/framework_guer.VR
+
 Framework Info.
 Framework needs a few lines to be initialized properly.
 

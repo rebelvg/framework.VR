@@ -100,12 +100,4 @@ if (_className == "team leader") then {
 	[(call TFAR_fnc_ActiveSWRadio), 7] call TFAR_fnc_setAdditionalSwChannel;
 };
 
-systemChat format ["Radio settings initialized."];
-systemChat format ["Your radio channel is - %1.", ((call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwChannel) + 1];
-systemChat format ["Your frequency is - %1.", (call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getSwFrequency];
-if (_className == "squad leader" or _className == "team leader") then {
-systemChat format ["Your additional radio channel is - %1.", ((call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getAdditionalSwChannel) + 1];
-systemChat format ["Your additional frequency is - %1.", ([(call TFAR_fnc_activeSwRadio), ((call TFAR_fnc_ActiveSwRadio) call TFAR_fnc_getAdditionalSwChannel) + 1] call TFAR_fnc_GetChannelFrequency)];
-};
-
 [player] spawn murshun_assignTeam_fnc;
