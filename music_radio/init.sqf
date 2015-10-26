@@ -1,4 +1,4 @@
-musicArray = "gettext (_x >> 'tag') == 'Poddy Music'" configClasses (configFile >> "cfgMusic");
+musicArray = "gettext (_x >> 'tag') == 'Poddy Music'" configClasses (configFile >> "CfgMusic");
 
 if (count musicArray == 0) exitWith {hint "musicArray is empty.";};
 
