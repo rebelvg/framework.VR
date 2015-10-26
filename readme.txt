@@ -37,8 +37,12 @@ Modified roster script adds frequencies to the roster.
 
 To enable suicide set canSuicide to true in the init.sqf.
 To enable JIP teleportation set murshun_allowJipTeleporting to true in the inti.sqf.
-*/
 
-//remove musicRadiosArray if you don't have and don't need a radio on the base
-//add next line to each vehicle that you want to have a radio inside
-//0 = [this] execVM "music_radio\vehicleInit.sqf";
+If you want to have music radio in your mission uncomment musicRadiosArray line and add radio objects inside of the array.
+Example
+musicRadiosArray = [musicRadio_01, musicRadio_02, musicRadio_03];
+musicRadio_01, etc, have to be an object in the editor (sound will spawn at the object location, so it's better be a radio type of object,can be anything though).
+Sometimes music tracks can overlap each other (caused by alt-tabing, saving or pressing escape sometimes), arma bug, gonna be fixed in 1.54.
+Add next line to each vehicle that you want to have a radio inside.
+0 = [this] execVM "music_radio\vehicleInit.sqf";
+*/
