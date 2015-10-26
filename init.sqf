@@ -5,3 +5,6 @@
 if (!isNil "musicRadio_01") then {
 //musicRadiosArray = [musicRadio_01];
 };
+
+canSuicide = false;
+murshun_allowJipTeleporting = true;

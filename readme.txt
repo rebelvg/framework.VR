@@ -23,7 +23,7 @@ or
 [] spawn testLoadout_fnc;
 to test loadouts on ai units.
 
-Visit initPlayerLocal.sqf and framework\initPlayerLocal.sqf for radios, loadouts, custom roster script, etc.
+Visit framework\initPlayerLocal.sqf for radios, loadouts, custom roster script, etc.
 You need to set up radioNetArray in your initPlayerLocal.
 You need to set radio_channel for all playable units.
 this setVariable ["radio_channel", [1,0]];
@@ -34,6 +34,9 @@ Modified roster script adds frequencies to the roster.
 0 = [this] execVM "scripts\boxes\box.sqf"; //add this to the main box, it uses loadoutArray from framework\init.sqf to place things in
 0 = [this] execVM "scripts\boxes\box_medical.sqf"; //box with advanced medical equipment
 0 = [this] execVM "scripts\boxes\box_veh.sqf"; //contains same as box.sqf but in smaller quantities
+
+To enable suicide set canSuicide to true in the init.sqf.
+To enable JIP teleportation set murshun_allowJipTeleporting to true in the inti.sqf.
 */
 
 //remove musicRadiosArray if you don't have and don't need a radio on the base
