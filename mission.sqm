@@ -48,7 +48,7 @@ class Mission
 	randomSeed=7339529;
 	class Intel
 	{
-		briefingName="Framework GUER";
+		briefingName="Framework";
 		resistanceWest=0;
 		timeOfChanges=28800;
 		startWeather=0;

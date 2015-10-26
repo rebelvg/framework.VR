@@ -1,2 +1,2 @@
 [] execVM "framework\initServer.sqf";
-[] execVM "tasks.sqf";
+[] execVM "mission\tasks.sqf";

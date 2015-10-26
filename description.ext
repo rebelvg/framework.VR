@@ -7,7 +7,7 @@ forceRotorLibSimulation = 2;
 saving = 0;
 respawnButton = 0;
 
-onLoadName = "Framework GUER";
+onLoadName = "Framework";
 onLoadMission = "";
 author="Murshun / Rebel";
 loadScreen =  "logo.jpg";
