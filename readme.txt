@@ -14,7 +14,7 @@ in initPlayerLocal.sqf
 in initServer.sqf
 
 Framework should not throw ANY script errors. If you see any errors connected to the framework, you're probably doing something wrong, ask rebel.
-loadoutArray is located in framework\init.sqf
+loadoutArray is located in mission\init.sqf
 It's pretty self-explanatory.
 Loadouts per class are located in the scripts folder, loadout_west.sqf, loadout_east.sqf, loadout_guer.sqf.
 To test your loadouts you can use some neat framework functions.
