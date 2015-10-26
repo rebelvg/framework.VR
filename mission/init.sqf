@@ -9,7 +9,7 @@ loadoutArray = [
 "", // radio backpack 4
 ["G_Bandanna_khk", ""], //facewear array 5
 ["ACE_EarPlugs", "ACE_Flashlight_XL50"], //items 6
-["tf_anprc152", "NVGoggles", "ItemMap", "ItemCompass", "ItemWatch", "ItemGPS"], //personal radio 7, nvgs, link items
+["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "tf_anprc152", "NVGoggles"], //link items 7, personal radio, nvgs
 [["arifle_MX_Black_F", "30Rnd_65x39_caseless_mag", ["muzzle_snds_H", "acc_pointer_IR", "optic_Aco", "bipod_01_F_blk"]], ["arifle_MX_Black_F", "30Rnd_65x39_caseless_mag", ["", "", "", ""]]], //rifles array 8, mag, devices
 ["arifle_MX_GL_Black_F", "30Rnd_65x39_caseless_mag", "1Rnd_HE_Grenade_shell", ["muzzle_snds_H", "acc_pointer_IR", "optic_Aco", "bipod_01_F_blk"]], //gl rifle 9, mag, gl grenade, devices
 ["arifle_MX_GL_Black_F", "30Rnd_65x39_caseless_mag", ["muzzle_snds_H", "acc_pointer_IR", "optic_Aco", "bipod_01_F_blk"]], //mg 10, mag, devices
