@@ -10,6 +10,10 @@ clearBackpackCargoGlobal _unit;
 
 _unit allowDamage false;
 
+if (!isMultiplayer) then {
+_unit addAction ["Virtual Arsenal",{["Open",true] call BIS_fnc_arsenal}];
+};
+
 _rifleArray = ((loadoutArray select 8) call BIS_fnc_selectRandom);
 _rifle = _rifleArray select 0;
 _rifleMags = _rifleArray select 1;

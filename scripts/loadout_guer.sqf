@@ -5,6 +5,12 @@ waituntil {!isNil "loadoutArray"};
 
 if (count loadoutArray == 0) exitWith {};
 
+_loadoutUniform = "";
+_loadoutVest = "";
+_loadoutHeadgear = "";
+_loadoutBackpack = "";
+_loadoutFacewear = "";
+
 _loadoutMainWeapon = "";
 _loadoutHandgunWeapon = "";
 _loadoutLauncherWeapon = "";
@@ -37,12 +43,6 @@ _radioBackpack = (loadoutArray select 4);
 _facewear = ((loadoutArray select 5) call BIS_fnc_selectRandom);
 _items = (loadoutArray select 6);
 _linkItems = (loadoutArray select 7);
-
-if (random 1 >= 0.8) then {
-_items = _items + ["murshun_cigs_lighter"];
-} else {
-_items = _items + ["murshun_cigs_matches"];
-};
 
 _rifleArray = ((loadoutArray select 8) call BIS_fnc_selectRandom);
 _rifle = _rifleArray select 0;
@@ -96,24 +96,6 @@ _handgunDevices = _handgunArray select 2;
 
 _binoculars = (loadoutArray select 17);
 
-if (_className == "squad leader" and _radioBackpack != "") then {
-_backpack = _radioBackpack;
-};
-
-_unit forceAddUniform _uniform;
-_unit addVest _vest;
-_unit addHeadgear _headgear;
-_unit addBackpack _backpack;
-_unit addGoggles _facewear;
-
-{
-	_unit addItem _x;
-} foreach _items;
-
-{
-	_unit linkItem _x;
-} foreach _linkItems;
-
 for "_i" from 1 to 10 do {_unit addItem "ACE_elasticBandage";};
 for "_i" from 1 to 10 do {_unit addItem "ACE_quikclot";};
 for "_i" from 1 to 4 do {_unit addItem "ACE_morphine";};
@@ -127,6 +109,18 @@ for "_i" from 1 to 1 do {_unit addItem _smokeGrenade;};
 
 switch (_className) do {
 	case "squad leader": {
+	_loadoutUniform = _uniform;
+	_loadoutVest = _vest;
+	_loadoutHeadgear = _headgear;
+	if (!(_radioBackpack isEqualTo "")) then {
+	_loadoutBackpack = _radioBackpack;
+	} else {
+	_loadoutBackpack = _backpack;
+	};
+	_loadoutFacewear = _facewear;
+	
+	_items = _items + ["murshun_cigs_lighter"];
+		
 	_loadoutMainWeapon = _glRifle;
 	_loadoutMainWeaponDevices = _glRifleDevices;
 	_loadoutMainWeaponMags = _glRifleMags;
@@ -138,6 +132,14 @@ switch (_className) do {
 	};
 	
 	case "team leader": {
+	_loadoutUniform = _uniform;
+	_loadoutVest = _vest;
+	_loadoutHeadgear = _headgear;
+	_loadoutBackpack = _backpack;
+	_loadoutFacewear = _facewear;
+	
+	_items = _items + ["murshun_cigs_lighter"];
+	
 	_loadoutMainWeapon = _glRifle;
 	_loadoutMainWeaponDevices = _glRifleDevices;
 	_loadoutMainWeaponMags = _glRifleMags;
@@ -149,6 +151,14 @@ switch (_className) do {
 	};
 	
 	case "combat life saver": {
+	_loadoutUniform = _uniform;
+	_loadoutVest = _vest;
+	_loadoutHeadgear = _headgear;
+	_loadoutBackpack = _backpack;
+	_loadoutFacewear = _facewear;
+	
+	_items = _items + ["murshun_cigs_matches"];
+	
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
@@ -163,12 +173,28 @@ switch (_className) do {
 	};
 	
 	case "autorifleman": {
+	_loadoutUniform = _uniform;
+	_loadoutVest = _vest;
+	_loadoutHeadgear = _headgear;
+	_loadoutBackpack = _backpack;
+	_loadoutFacewear = _facewear;
+	
+	_items = _items + ["murshun_cigs_matches"];
+	
 	_loadoutMainWeapon = _MG;
 	_loadoutMainWeaponDevices = _mgDevices;
 	_loadoutMainWeaponMags = _MGMags;
 	};
 	
 	case "rifleman (at)": {
+	_loadoutUniform = _uniform;
+	_loadoutVest = _vest;
+	_loadoutHeadgear = _headgear;
+	_loadoutBackpack = _backpack;
+	_loadoutFacewear = _facewear;
+	
+	_items = _items + ["murshun_cigs_matches"];
+	
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
@@ -176,6 +202,14 @@ switch (_className) do {
 	};
 	
 	case "missile specialist (at)": {
+	_loadoutUniform = _uniform;
+	_loadoutVest = _vest;
+	_loadoutHeadgear = _headgear;
+	_loadoutBackpack = _backpack;
+	_loadoutFacewear = _facewear;
+	
+	_items = _items + ["murshun_cigs_matches"];
+	
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
@@ -185,12 +219,28 @@ switch (_className) do {
 	};
 	
 	case "rifleman": {
+	_loadoutUniform = _uniform;
+	_loadoutVest = _vest;
+	_loadoutHeadgear = _headgear;
+	_loadoutBackpack = _backpack;
+	_loadoutFacewear = _facewear;
+	
+	_items = _items + ["murshun_cigs_matches"];
+	
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
 	};
 	
 	case "engineer": {
+	_loadoutUniform = _uniform;
+	_loadoutVest = _vest;
+	_loadoutHeadgear = _headgear;
+	_loadoutBackpack = _backpack;
+	_loadoutFacewear = _facewear;
+	
+	_items = _items + ["murshun_cigs_matches"];
+	
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
@@ -200,12 +250,28 @@ switch (_className) do {
 	};
 	
 	case "marksman": {
+	_loadoutUniform = _uniform;
+	_loadoutVest = _vest;
+	_loadoutHeadgear = _headgear;
+	_loadoutBackpack = _backpack;
+	_loadoutFacewear = _facewear;
+	
+	_items = _items + ["murshun_cigs_matches"];
+	
 	_loadoutMainWeapon = _marksmanRifle;
 	_loadoutMainWeaponDevices = _marksmanDevices;
 	_loadoutMainWeaponMags = _marksmanMags;
 	};
 	
 	case "grenadier": {
+	_loadoutUniform = _uniform;
+	_loadoutVest = _vest;
+	_loadoutHeadgear = _headgear;
+	_loadoutBackpack = _backpack;
+	_loadoutFacewear = _facewear;
+	
+	_items = _items + ["murshun_cigs_matches"];
+	
 	_loadoutMainWeapon = _glRifle;
 	_loadoutMainWeaponDevices = _glRifleDevices;
 	_loadoutMainWeaponMags = _glRifleMags;
@@ -213,6 +279,14 @@ switch (_className) do {
 	};
 	
 	case "missile specialist (aa)": {
+	_loadoutUniform = _uniform;
+	_loadoutVest = _vest;
+	_loadoutHeadgear = _headgear;
+	_loadoutBackpack = _backpack;
+	_loadoutFacewear = _facewear;
+	
+	_items = _items + ["murshun_cigs_matches"];
+	
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
@@ -221,12 +295,34 @@ switch (_className) do {
 	};
 	
 	default {
+	_loadoutUniform = _uniform;
+	_loadoutVest = _vest;
+	_loadoutHeadgear = _headgear;
+	_loadoutBackpack = _backpack;
+	_loadoutFacewear = _facewear;
+	
+	_items = _items + ["murshun_cigs_matches"];
+	
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
 	systemchat "Wrong loadout classname, falling back to rifleman.";
 	};
 };
+
+_unit forceAddUniform _loadoutUniform;
+_unit addVest _loadoutVest;
+_unit addHeadgear _loadoutHeadgear;
+_unit addBackpack _loadoutBackpack;
+_unit addGoggles _loadoutFacewear;
+
+{
+	_unit addItem _x;
+} foreach _items;
+
+{
+	_unit linkItem _x;
+} foreach _linkItems;
 
 if (!(_loadoutMainWeapon isEqualTo "")) then {
 	_unit addWeapon _loadoutMainWeapon;
