@@ -3,6 +3,8 @@
 [] execVM "murshun_spectator\spectator\init.sqf";
 [] execVM "mission\init.sqf";
 
+murshun_whoDunIt = "Murshun";
+
 //musicRadiosArray = [musicRadio_01];
 
 canSuicide = false;

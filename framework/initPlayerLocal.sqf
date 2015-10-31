@@ -57,4 +57,6 @@ sleep 0.5;
 
 sleep 11;
 
-[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>%1</t><br /><t shadow='2' align='right' size='1.6'>%2</t>", "Created and Directed by", "Rebel"], true, nil, 9, 1, 0] spawn BIS_fnc_textTiles;
+if (isNil "murshun_whoDunIt") exitWith {};
+
+[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>%1</t><br /><t shadow='2' align='right' size='1.6'>%2</t>", "Created and Directed by", murshun_whoDunIt], true, nil, 9, 1, 0] spawn BIS_fnc_textTiles;

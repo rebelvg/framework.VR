@@ -9,7 +9,7 @@ respawnButton = 0;
 
 onLoadName = "Framework";
 onLoadMission = "";
-author="Murshun / Rebel";
+author="Murshun";
 loadScreen =  "logo.jpg";
 
 class Header
