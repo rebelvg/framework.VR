@@ -21,13 +21,13 @@ class Header
 
 class CfgDebriefing
 {
-	class End1
+	class Completed1
 	{
 	title = "Mission Completed!";
 	subtitle = "Good Job!";
 	description = "";
 	};
-	class End2
+	class Failed1
 	{
 	title = "Mission Failed!";
 	subtitle = "Come on, guys.";
