@@ -1,8 +1,8 @@
 _unit = (_this select 0);
 
-waituntil {!isNil "loadoutArray"};
+waituntil {!isNil "loadoutArray_guer"};
 
-_loadoutArray = loadoutArray;
+_loadoutArray = loadoutArray_guer;
 
 if (!isServer) exitWith {};
 clearMagazineCargoGlobal _unit;

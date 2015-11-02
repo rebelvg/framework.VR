@@ -3,7 +3,9 @@ _className = _this select 1;
 
 waituntil {!isNil "loadoutArray"};
 
-if (count loadoutArray == 0) exitWith {};
+_loadoutArray = loadoutArray;
+
+if (count _loadoutArray == 0) exitWith {};
 
 _loadoutUniform = "";
 _loadoutVest = "";
@@ -35,21 +37,21 @@ removeUniform _unit;
 removeVest _unit;
 removeHeadgear _unit;
 
-_uniform = ((loadoutArray select 0) call BIS_fnc_selectRandom);
-_vest = ((loadoutArray select 1) call BIS_fnc_selectRandom);
-_headgear = ((loadoutArray select 2) call BIS_fnc_selectRandom);
-_backpack = ((loadoutArray select 3) call BIS_fnc_selectRandom);
-_radioBackpack = (loadoutArray select 4);
-_facewear = ((loadoutArray select 5) call BIS_fnc_selectRandom);
-_items = (loadoutArray select 6);
-_linkItems = (loadoutArray select 7);
+_uniform = ((_loadoutArray select 0) call BIS_fnc_selectRandom);
+_vest = ((_loadoutArray select 1) call BIS_fnc_selectRandom);
+_headgear = ((_loadoutArray select 2) call BIS_fnc_selectRandom);
+_backpack = ((_loadoutArray select 3) call BIS_fnc_selectRandom);
+_radioBackpack = (_loadoutArray select 4);
+_facewear = ((_loadoutArray select 5) call BIS_fnc_selectRandom);
+_items = (_loadoutArray select 6);
+_linkItems = (_loadoutArray select 7);
 
-_rifleArray = ((loadoutArray select 8) call BIS_fnc_selectRandom);
+_rifleArray = ((_loadoutArray select 8) call BIS_fnc_selectRandom);
 _rifle = _rifleArray select 0;
 _rifleMags = _rifleArray select 1;
 _rifleDevices = _rifleArray select 2;
 
-_glRifleArray = (loadoutArray select 9);
+_glRifleArray = (_loadoutArray select 9);
 _glRifle = _glRifleArray select 0;
 _glRifleMags = _glRifleArray select 1;
 _glGrenade = _glRifleArray select 2;
@@ -57,44 +59,44 @@ _glRifleDevices = _glRifleArray select 3;
 
 _allRifleMags = [];
 
-_riflesArray = (loadoutArray select 8);
+_riflesArray = (_loadoutArray select 8);
 {
 _allRifleMags = _allRifleMags + [_x select 1];
 } foreach _riflesArray;
 
 _allRifleMags = _allRifleMags + [_glRifleMags];
 
-_MGArray = (loadoutArray select 10);
+_MGArray = (_loadoutArray select 10);
 _MG = _MGArray select 0;
 _MGMags = _MGArray select 1;
 _MGDevices = _MGArray select 2;
 
-_marksmanRifleArray = (loadoutArray select 11);
+_marksmanRifleArray = (_loadoutArray select 11);
 _marksmanRifle = _marksmanRifleArray select 0;
 _marksmanMags = _marksmanRifleArray select 1;
 _marksmanDevices = _marksmanRifleArray select 2;
 
-_atSingleShot = (loadoutArray select 12);
+_atSingleShot = (_loadoutArray select 12);
 
-_atReloadableArray = (loadoutArray select 13);
+_atReloadableArray = (_loadoutArray select 13);
 _atReloadable = _atReloadableArray select 0;
 _atMags = _atReloadableArray select 1;
 _atDevices = _atReloadableArray select 2;
 
-_aaArray = (loadoutArray select 14);
+_aaArray = (_loadoutArray select 14);
 _aa = _aaArray select 0;
 _aaMags = _aaArray select 1;
 
-_grenadesArray = (loadoutArray select 15);
+_grenadesArray = (_loadoutArray select 15);
 _handGrenade = _grenadesArray select 0;
 _smokeGrenade = _grenadesArray select 1;
 
-_handgunArray = (loadoutArray select 16);
+_handgunArray = (_loadoutArray select 16);
 _handgun = _handgunArray select 0;
 _handgunMags = _handgunArray select 1;
 _handgunDevices = _handgunArray select 2;
 
-_binoculars = (loadoutArray select 17);
+_binoculars = (_loadoutArray select 17);
 
 for "_i" from 1 to 10 do {_unit addItem "ACE_elasticBandage";};
 for "_i" from 1 to 10 do {_unit addItem "ACE_quikclot";};
@@ -113,9 +115,9 @@ switch (_className) do {
 	_loadoutVest = _vest;
 	_loadoutHeadgear = _headgear;
 	if (!(_radioBackpack isEqualTo "")) then {
-	_loadoutBackpack = _radioBackpack;
+	//_loadoutBackpack = _radioBackpack;
 	} else {
-	_loadoutBackpack = _backpack;
+	//_loadoutBackpack = _backpack;
 	};
 	_loadoutFacewear = _facewear;
 	
@@ -135,7 +137,7 @@ switch (_className) do {
 	_loadoutUniform = _uniform;
 	_loadoutVest = _vest;
 	_loadoutHeadgear = _headgear;
-	_loadoutBackpack = _backpack;
+	//_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
 	
 	_items = _items + ["murshun_cigs_lighter"];
@@ -176,7 +178,7 @@ switch (_className) do {
 	_loadoutUniform = _uniform;
 	_loadoutVest = _vest;
 	_loadoutHeadgear = _headgear;
-	_loadoutBackpack = _backpack;
+	//_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
 	
 	_items = _items + ["murshun_cigs_matches"];
@@ -190,7 +192,7 @@ switch (_className) do {
 	_loadoutUniform = _uniform;
 	_loadoutVest = _vest;
 	_loadoutHeadgear = _headgear;
-	_loadoutBackpack = _backpack;
+	//_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
 	
 	_items = _items + ["murshun_cigs_matches"];
@@ -222,7 +224,7 @@ switch (_className) do {
 	_loadoutUniform = _uniform;
 	_loadoutVest = _vest;
 	_loadoutHeadgear = _headgear;
-	_loadoutBackpack = _backpack;
+	//_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
 	
 	_items = _items + ["murshun_cigs_matches"];
@@ -253,7 +255,7 @@ switch (_className) do {
 	_loadoutUniform = _uniform;
 	_loadoutVest = _vest;
 	_loadoutHeadgear = _headgear;
-	_loadoutBackpack = _backpack;
+	//_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
 	
 	_items = _items + ["murshun_cigs_matches"];
@@ -267,7 +269,7 @@ switch (_className) do {
 	_loadoutUniform = _uniform;
 	_loadoutVest = _vest;
 	_loadoutHeadgear = _headgear;
-	_loadoutBackpack = _backpack;
+	//_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
 	
 	_items = _items + ["murshun_cigs_matches"];
@@ -294,11 +296,32 @@ switch (_className) do {
 	_loadoutLauncherWeaponMags = _aaMags;
 	};
 	
-	default {
+	case "ammo bearer": {
 	_loadoutUniform = _uniform;
 	_loadoutVest = _vest;
 	_loadoutHeadgear = _headgear;
 	_loadoutBackpack = _backpack;
+	_loadoutFacewear = _facewear;
+	
+	_items = _items + ["murshun_cigs_matches"];
+	
+	_loadoutMainWeapon = _rifle;
+	_loadoutMainWeaponDevices = _rifleDevices;
+	_loadoutMainWeaponMags = _rifleMags;
+	
+	[_unit, _MGMags] spawn {
+	_unit = _this select 0;
+	_MGMags = _this select 1;
+	sleep 1;
+	_unit addMagazines [_MGMags, 2];
+	};
+	};
+	
+	default {
+	_loadoutUniform = _uniform;
+	_loadoutVest = _vest;
+	_loadoutHeadgear = _headgear;
+	//_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
 	
 	_items = _items + ["murshun_cigs_matches"];

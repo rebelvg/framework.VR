@@ -1,11 +1,10 @@
 debugLoadout_fnc = {
 {
-if (side _x == side player) then {
 _className = tolower gettext (configFile >> "cfgVehicles" >> typeOf _x >> "displayName");
 
 systemChat format ["init loadout - %1", _className];
 
-_playerSide = str (side player);
+_playerSide = str (side _x);
 
 switch (_playerSide) do {
 	case "WEST": {
@@ -22,16 +21,14 @@ switch (_playerSide) do {
 sleep 5;
 
 systemChat format ["init successful"];
-};
 } foreach switchableUnits;
 };
 
 testLoadout_fnc = {
 {
-if (side _x == side player) then {
 _className = tolower gettext (configFile >> "cfgVehicles" >> typeOf _x >> "displayName");
 
-_playerSide = str (side player);
+_playerSide = str (side _x);
 
 switch (_playerSide) do {
 	case "WEST": {
@@ -45,10 +42,7 @@ switch (_playerSide) do {
 	};	
 };
 
-};
-
 [_x] spawn murshun_assignTeam_fnc;
-
 } foreach switchableUnits - [player];
 };
 
