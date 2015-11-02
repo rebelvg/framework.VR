@@ -98,31 +98,18 @@ _handgunDevices = _handgunArray select 2;
 
 _binoculars = (_loadoutArray select 17);
 
-for "_i" from 1 to 10 do {_unit addItem "ACE_elasticBandage";};
-for "_i" from 1 to 10 do {_unit addItem "ACE_quikclot";};
-for "_i" from 1 to 4 do {_unit addItem "ACE_morphine";};
-for "_i" from 1 to 2 do {_unit addItem "ACE_epinephrine";};
-for "_i" from 1 to 1 do {_unit addItem "ACE_atropine";};
-for "_i" from 1 to 1 do {_unit addItem "ACE_tourniquet";};
-
-if (!(_smokeGrenade isEqualTo "")) then {
-for "_i" from 1 to 1 do {_unit addItem _smokeGrenade;};
-};
-
 switch (_className) do {
 	case "squad leader": {
 	_loadoutUniform = _uniform;
 	_loadoutVest = _vest;
 	_loadoutHeadgear = _headgear;
 	if (!(_radioBackpack isEqualTo "")) then {
-	//_loadoutBackpack = _radioBackpack;
+	_loadoutBackpack = _radioBackpack;
 	} else {
 	//_loadoutBackpack = _backpack;
 	};
 	_loadoutFacewear = _facewear;
-	
-	_items = _items + ["murshun_cigs_lighter"];
-		
+
 	_loadoutMainWeapon = _glRifle;
 	_loadoutMainWeaponDevices = _glRifleDevices;
 	_loadoutMainWeaponMags = _glRifleMags;
@@ -130,6 +117,7 @@ switch (_className) do {
 	_loadoutHandgunWeapon = _handgun;
 	_loadoutHandgunWeaponDevices = _handgunDevices;
 	_loadoutHandgunWeaponMags = _handgunMags;
+	
 	_loadoutBinoculars = _binoculars;
 	};
 	
@@ -139,9 +127,7 @@ switch (_className) do {
 	_loadoutHeadgear = _headgear;
 	//_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
-	
-	_items = _items + ["murshun_cigs_lighter"];
-	
+
 	_loadoutMainWeapon = _glRifle;
 	_loadoutMainWeaponDevices = _glRifleDevices;
 	_loadoutMainWeaponMags = _glRifleMags;
@@ -149,6 +135,7 @@ switch (_className) do {
 	_loadoutHandgunWeapon = _handgun;
 	_loadoutHandgunWeaponDevices = _handgunDevices;
 	_loadoutHandgunWeaponMags = _handgunMags;
+	
 	_loadoutBinoculars = _binoculars;
 	};
 	
@@ -158,20 +145,10 @@ switch (_className) do {
 	_loadoutHeadgear = _headgear;
 	_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
-	
-	_items = _items + ["murshun_cigs_matches"];
-	
+
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
-	for "_i" from 1 to 15 do {_unit addItem "ACE_elasticBandage";};
-	for "_i" from 1 to 15 do {_unit addItem "ACE_quikclot";};
-	for "_i" from 1 to 10 do {_unit addItem "ACE_morphine";};
-	for "_i" from 1 to 10 do {_unit addItem "ACE_epinephrine";};
-	for "_i" from 1 to 10 do {_unit addItem "ACE_atropine";};
-	for "_i" from 1 to 5 do {_unit addItem "ACE_tourniquet";};
-	for "_i" from 1 to 5 do {_unit addItem "ACE_salineIV_500";};
-	for "_i" from 1 to 3 do {_unit addItem "ACE_personalAidKit";};
 	};
 	
 	case "autorifleman": {
@@ -180,9 +157,7 @@ switch (_className) do {
 	_loadoutHeadgear = _headgear;
 	//_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
-	
-	_items = _items + ["murshun_cigs_matches"];
-	
+
 	_loadoutMainWeapon = _MG;
 	_loadoutMainWeaponDevices = _mgDevices;
 	_loadoutMainWeaponMags = _MGMags;
@@ -194,9 +169,7 @@ switch (_className) do {
 	_loadoutHeadgear = _headgear;
 	//_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
-	
-	_items = _items + ["murshun_cigs_matches"];
-	
+
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
@@ -209,9 +182,7 @@ switch (_className) do {
 	_loadoutHeadgear = _headgear;
 	_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
-	
-	_items = _items + ["murshun_cigs_matches"];
-	
+
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
@@ -226,9 +197,7 @@ switch (_className) do {
 	_loadoutHeadgear = _headgear;
 	//_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
-	
-	_items = _items + ["murshun_cigs_matches"];
-	
+
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
@@ -240,15 +209,10 @@ switch (_className) do {
 	_loadoutHeadgear = _headgear;
 	_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
-	
-	_items = _items + ["murshun_cigs_matches"];
-	
+
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
-	_unit addItem "ACE_M26_Clacker";
-	_unit addItem "ACE_DefusalKit";
-	for "_i" from 1 to 2 do {_unit addItem "DemoCharge_Remote_Mag";};
 	};
 	
 	case "marksman": {
@@ -257,9 +221,7 @@ switch (_className) do {
 	_loadoutHeadgear = _headgear;
 	//_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
-	
-	_items = _items + ["murshun_cigs_matches"];
-	
+
 	_loadoutMainWeapon = _marksmanRifle;
 	_loadoutMainWeaponDevices = _marksmanDevices;
 	_loadoutMainWeaponMags = _marksmanMags;
@@ -271,9 +233,7 @@ switch (_className) do {
 	_loadoutHeadgear = _headgear;
 	//_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
-	
-	_items = _items + ["murshun_cigs_matches"];
-	
+
 	_loadoutMainWeapon = _glRifle;
 	_loadoutMainWeaponDevices = _glRifleDevices;
 	_loadoutMainWeaponMags = _glRifleMags;
@@ -286,9 +246,7 @@ switch (_className) do {
 	_loadoutHeadgear = _headgear;
 	_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
-	
-	_items = _items + ["murshun_cigs_matches"];
-	
+
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
@@ -302,19 +260,10 @@ switch (_className) do {
 	_loadoutHeadgear = _headgear;
 	_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
-	
-	_items = _items + ["murshun_cigs_matches"];
-	
+
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
-	
-	[_unit, _MGMags] spawn {
-	_unit = _this select 0;
-	_MGMags = _this select 1;
-	sleep 1;
-	_unit addMagazines [_MGMags, 2];
-	};
 	};
 	
 	default {
@@ -323,12 +272,11 @@ switch (_className) do {
 	_loadoutHeadgear = _headgear;
 	//_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
-	
-	_items = _items + ["murshun_cigs_matches"];
-	
+
 	_loadoutMainWeapon = _rifle;
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
+	
 	systemchat "Wrong loadout classname, falling back to rifleman.";
 	};
 };
@@ -338,6 +286,86 @@ _unit addVest _loadoutVest;
 _unit addHeadgear _loadoutHeadgear;
 _unit addBackpack _loadoutBackpack;
 _unit addGoggles _loadoutFacewear;
+
+for "_i" from 1 to 10 do {_unit addItem "ACE_elasticBandage";};
+for "_i" from 1 to 10 do {_unit addItem "ACE_quikclot";};
+for "_i" from 1 to 4 do {_unit addItem "ACE_morphine";};
+for "_i" from 1 to 2 do {_unit addItem "ACE_epinephrine";};
+for "_i" from 1 to 1 do {_unit addItem "ACE_atropine";};
+for "_i" from 1 to 1 do {_unit addItem "ACE_tourniquet";};
+
+if (!(_smokeGrenade isEqualTo "")) then {
+for "_i" from 1 to 1 do {_unit addItem _smokeGrenade;};
+};
+
+switch (_className) do {
+	case "squad leader": {
+	_items = _items + ["murshun_cigs_lighter"];
+	};
+	
+	case "team leader": {
+	_items = _items + ["murshun_cigs_lighter"];
+	};
+	
+	case "combat life saver": {
+	_items = _items + ["murshun_cigs_matches"];
+
+	for "_i" from 1 to 15 do {_unit addItem "ACE_elasticBandage";};
+	for "_i" from 1 to 15 do {_unit addItem "ACE_quikclot";};
+	for "_i" from 1 to 10 do {_unit addItem "ACE_morphine";};
+	for "_i" from 1 to 10 do {_unit addItem "ACE_epinephrine";};
+	for "_i" from 1 to 10 do {_unit addItem "ACE_atropine";};
+	for "_i" from 1 to 5 do {_unit addItem "ACE_tourniquet";};
+	for "_i" from 1 to 5 do {_unit addItem "ACE_salineIV_500";};
+	for "_i" from 1 to 3 do {_unit addItem "ACE_personalAidKit";};
+	};
+	
+	case "autorifleman": {
+	_items = _items + ["murshun_cigs_matches"];
+	};
+	
+	case "rifleman (at)": {
+	_items = _items + ["murshun_cigs_matches"];
+	};
+	
+	case "missile specialist (at)": {
+	_items = _items + ["murshun_cigs_matches"];
+	};
+	
+	case "rifleman": {
+	_items = _items + ["murshun_cigs_matches"];
+	};
+	
+	case "engineer": {
+	_items = _items + ["murshun_cigs_matches"];
+	
+	_unit addItem "ACE_M26_Clacker";
+	_unit addItem "ACE_DefusalKit";
+	for "_i" from 1 to 2 do {_unit addItem "DemoCharge_Remote_Mag";};
+	};
+	
+	case "marksman": {
+	_items = _items + ["murshun_cigs_matches"];
+	};
+	
+	case "grenadier": {
+	_items = _items + ["murshun_cigs_matches"];
+	};
+	
+	case "missile specialist (aa)": {
+	_items = _items + ["murshun_cigs_matches"];
+	};
+	
+	case "ammo bearer": {
+	_items = _items + ["murshun_cigs_matches"];
+
+	_unit addMagazines [_MGMags, 2];
+	};
+	
+	default {
+	_items = _items + ["murshun_cigs_matches"];
+	};
+};
 
 {
 	_unit addItem _x;
