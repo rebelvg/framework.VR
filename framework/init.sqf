@@ -2,32 +2,6 @@ debugLoadout_fnc = {
 {
 _className = tolower gettext (configFile >> "cfgVehicles" >> typeOf _x >> "displayName");
 
-systemChat format ["init loadout - %1", _className];
-
-_playerSide = str (side _x);
-
-switch (_playerSide) do {
-	case "WEST": {
-	[player, _className] execVM "scripts\loadout_west.sqf";
-	};
-	case "EAST": {
-	[player, _className] execVM "scripts\loadout_east.sqf";
-	};
-	case "GUER": {
-	[player, _className] execVM "scripts\loadout_guer.sqf";
-	};	
-};
-
-sleep 5;
-
-systemChat format ["init successful"];
-} foreach switchableUnits;
-};
-
-testLoadout_fnc = {
-{
-_className = tolower gettext (configFile >> "cfgVehicles" >> typeOf _x >> "displayName");
-
 _playerSide = str (side _x);
 
 switch (_playerSide) do {

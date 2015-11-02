@@ -20,9 +20,6 @@ Loadouts per class are located in the scripts folder, loadout_west.sqf, loadout_
 To test your loadouts you can use some neat framework functions.
 Execute
 [] spawn debugLoadout_fnc;
-in the console to test every loadout on your soldier
-or 
-[] spawn testLoadout_fnc;
 to test loadouts on ai units.
 
 Visit framework\initPlayerLocal.sqf for radios, loadouts, custom roster script, etc.
