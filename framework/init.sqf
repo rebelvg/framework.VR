@@ -26,4 +26,5 @@ if (!isPlayer _x) then {
 _x disableAI "MOVE";
 };
 } foreach switchableUnits;
+[] spawn debugLoadout_fnc;
 };
