@@ -5,7 +5,7 @@
 
 murshun_whoDunIt = "Murshun";
 
-//musicRadiosArray = [musicRadio_01];
+musicRadiosArray = [musicRadio_01];
 
 canSuicide = false;
 murshun_allowJipTeleporting = true;

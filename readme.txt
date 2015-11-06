@@ -30,8 +30,8 @@ this setVariable ["radio_channel", [1,0]];
 Colors will be applied automatically.
 Modified roster script adds frequencies to the roster.
 
-0 = [this] execVM "scripts\boxes\box.sqf"; //add this to the main box, it uses loadoutArray from framework\init.sqf to place things in
-Main box will have virtual arsenal enabled but only is singleplayer. For more loadouts control.
+0 = [this] execVM "scripts\boxes\box.sqf"; //add this to the main box, it uses loadoutArray to place things in
+Main box will have virtual arsenal enabled but only in singleplayer (for loadout tests).
 0 = [this] execVM "scripts\boxes\box_medical.sqf"; //box with advanced medical equipment
 0 = [this] execVM "scripts\boxes\box_veh.sqf"; //contains same as box.sqf but in smaller quantities
 

@@ -12,7 +12,7 @@ KK_fnc_arrayShufflePlus = {
     _arr
 };
 
-musicArray = [musicArray, 2 * count musicArray] call KK_fnc_arrayShufflePlus;
+musicArray = [musicArray, 4 * count musicArray] call KK_fnc_arrayShufflePlus;
 
 if (isNil "whatSong") then {
 whatSong = "";
@@ -136,6 +136,7 @@ waituntil {time > 15};
 while {true} do {
 {
 whatSong = _x;
+_configWhatSong = whatSong;
 whatSong = configName whatSong;
 timeStarted = serverTime;
 
@@ -155,7 +156,7 @@ if (count musicRadiosArray > 0) then {
 {
 _x enableSimulationGlobal false;
 _x allowdamage false;
-playSound3D [format ["poddy_music\music\" + whatSong + ".ogg"], _x, false, getPosASL _x, 4, 1, 50];
+playSound3D [((getArray (musicArray select (musicArray find _configWhatSong) >> "sound")) select 0), _x, false, getPosASL _x, 4, 1, 50];
 } foreach musicRadiosArray;
 };
 };

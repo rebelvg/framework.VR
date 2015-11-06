@@ -20,6 +20,23 @@ switch (_playerSide) do {
 } foreach switchableUnits - [player];
 };
 
+murshun_assignTeam_fnc = {
+_unit = _this select 0;
+_radio_channel = _unit getVariable ["radio_channel", [1, 0]];
+
+_squad = _radio_channel select 0;
+_team = _radio_channel select 1;
+
+_teamsArray = ["MAIN", "RED", "GREEN", "BLUE", "YELLOW"];
+
+waituntil {time > 10};
+
+if (_team == 0) exitWith {};
+if (_team > 4) exitWith {systemChat "Can't set color for this team.";};
+
+[[_unit, _teamsArray select _team], "ace_interaction_fnc_joinTeam"] call BIS_fnc_MP;
+};
+
 if (!isMultiplayer) then {
 {
 if (!isPlayer _x) then {
