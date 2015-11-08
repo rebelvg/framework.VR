@@ -472,7 +472,7 @@ class Mission
 						};
 						class Item4
 						{
-							value="1";
+							value="0";
 							parentCls="ACE_moduleMedicalSettings";
 							typeName="enableScreams";
 						};

@@ -442,7 +442,7 @@ class Mission
 				class Item0
 				{
 					position[]={3039.2141,5,3954.2761};
-					azimut=-7.4726615;
+					azimut=-7.4726601;
 					class args
 					{
 						items=13;
@@ -472,7 +472,7 @@ class Mission
 						};
 						class Item4
 						{
-							value="1";
+							value="0";
 							parentCls="ACE_moduleMedicalSettings";
 							typeName="enableScreams";
 						};

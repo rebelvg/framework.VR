@@ -29,7 +29,7 @@ _team = _radio_channel select 1;
 
 _teamsArray = ["MAIN", "RED", "GREEN", "BLUE", "YELLOW"];
 
-waituntil {time > 10};
+waituntil {time > 1};
 
 if (_team == 0) exitWith {};
 if (_team > 4) exitWith {systemChat "Can't set color for this team.";};
