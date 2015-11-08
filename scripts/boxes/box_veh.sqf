@@ -72,9 +72,7 @@ _unit addItemCargoGlobal ["ACE_morphine", 25];
 _unit addItemCargoGlobal ["ACE_epinephrine", 25];
 _unit addItemCargoGlobal ["ACE_atropine", 25];
 _unit addItemCargoGlobal ["ACE_tourniquet", 10];
-_unit addItemCargoGlobal ["ACE_salineIV_250", 10];
-_unit addItemCargoGlobal ["ACE_salineIV_500", 10];
-_unit addItemCargoGlobal ["ACE_salineIV", 10];
+_unit addItemCargoGlobal ["ACE_salineIV_500", 5];
 _unit addItemCargoGlobal ["ACE_personalAidKit", 10];
 
 if (!(_atSingleShot isEqualTo "")) then {

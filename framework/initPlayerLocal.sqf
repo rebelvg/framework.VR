@@ -2,19 +2,7 @@ radioNetArray = [["101", "102", "103", "104", "105", "106", "107", "108"], ["111
 
 _className = tolower gettext (configFile >> "cfgVehicles" >> typeOf player >> "displayName");
 
-_playerSide = str (side player);
-
-switch (_playerSide) do {
-	case "WEST": {
-	[player, _className] execVM "scripts\loadout_west.sqf";
-	};
-	case "EAST": {
-	[player, _className] execVM "scripts\loadout_east.sqf";
-	};
-	case "GUER": {
-	[player, _className] execVM "scripts\loadout_guer.sqf";
-	};
-};
+[player, _className] execVM "scripts\loadout.sqf";
 
 if (!(didJIP)) then {
 [2, false, true] execVM "scripts\roster.sqf";

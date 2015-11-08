@@ -155,7 +155,7 @@ switch (_className) do {
 	_loadoutUniform = _uniform;
 	_loadoutVest = _vest;
 	_loadoutHeadgear = _headgear;
-	//_loadoutBackpack = _backpack;
+	_loadoutBackpack = _backpack;
 	_loadoutFacewear = _facewear;
 
 	_loadoutMainWeapon = _MG;

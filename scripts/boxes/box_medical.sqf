@@ -14,7 +14,5 @@ _unit addItemCargoGlobal ["ACE_morphine", 100];
 _unit addItemCargoGlobal ["ACE_epinephrine", 100];
 _unit addItemCargoGlobal ["ACE_atropine", 100];
 _unit addItemCargoGlobal ["ACE_tourniquet", 50];
-_unit addItemCargoGlobal ["ACE_salineIV_250", 50];
 _unit addItemCargoGlobal ["ACE_salineIV_500", 50];
-_unit addItemCargoGlobal ["ACE_salineIV", 50];
 _unit addItemCargoGlobal ["ACE_personalAidKit", 50];
