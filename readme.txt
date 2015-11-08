@@ -16,13 +16,11 @@ in initServer.sqf
 Framework should not throw ANY script errors. If you see any errors connected to the framework, you're probably doing something wrong, ask rebel.
 loadoutArray is located in mission\init.sqf
 It's pretty self-explanatory.
-Loadouts per class are located in the scripts folder, loadout_west.sqf, loadout_east.sqf, loadout_guer.sqf.
 To test your loadouts you can use some neat framework functions.
 Execute
 [] spawn debugLoadout_fnc;
 to test loadouts on ai units.
 
-Visit framework\initPlayerLocal.sqf for radios, loadouts, custom roster script, etc.
 You need to set up radioNetArray in your initPlayerLocal.
 You need to set radio_channel for all playable units.
 this setVariable ["radio_channel", [1,0]];
