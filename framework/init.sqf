@@ -33,3 +33,11 @@ _x disableAI "MOVE";
 } foreach switchableUnits;
 [] spawn debugLoadout_fnc;
 };
+
+if (!isNil "ZE_Zeus") then {
+if (!isMultiplayer) then {
+[] execVM "zes.sqf";
+} else {
+deleteVehicle ZE_Zeus;
+};
+};

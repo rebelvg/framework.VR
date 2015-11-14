@@ -44,4 +44,7 @@ musicRadio_01, etc, have to be an object in the editor (sound will spawn at the 
 Sometimes music tracks can overlap each other (caused by alt-tabing, saving or pressing escape sometimes), arma bug, gonna be fixed in 1.54.
 Add next line to each vehicle that you want to have a radio inside.
 0 = [this] execVM "music_radio\vehicleInit.sqf";
+
+I added a ZES script that allows to place objects in zeus and copy their positions to the clipboard.
+It works only in singleplayer so there's no reason to delete the module from the mission when exporting it to the final version.
 */
