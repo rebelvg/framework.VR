@@ -80,7 +80,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={361.16074,5,646.09912};
+					position[]={352.87753,5,649.34033};
 					azimut=-6.2724643;
 					class args
 					{
@@ -115,7 +115,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={354.55258,5,673.14038};
+					position[]={346.26938,5,676.38159};
 					azimut=-6.2724624;
 					class args
 					{
@@ -198,7 +198,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={362.79306,5,666.58691};
+					position[]={354.50986,5,669.82813};
 					azimut=-6.2724624;
 					class args
 					{
@@ -275,7 +275,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={324.95932,5,646.01978};
+					position[]={353.29822,5,632.80591};
 					azimut=-6.2724681;
 					class args
 					{
@@ -316,7 +316,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={351.99545,5,655.23608};
+					position[]={343.71225,5,658.47729};
 					azimut=-6.2724643;
 					class args
 					{
@@ -357,7 +357,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={344.96078,5,663.90674};
+					position[]={336.67758,5,667.14795};
 					azimut=-7.4726939;
 					class args
 					{
@@ -416,7 +416,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={352.35825,5,639.31201};
+					position[]={344.07504,5,642.55322};
 					azimut=-7.4726958;
 					class args
 					{
@@ -445,7 +445,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={334.03989,5,655.23071};
+					position[]={325.75668,5,658.47192};
 					azimut=-7.4726601;
 					class args
 					{
@@ -546,7 +546,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={370.504,5,636.63281};
+					position[]={362.22079,5,639.87402};
 					azimut=-7.9354548;
 					class args
 					{
@@ -641,7 +641,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={379.2767,5,649.1665};
+					position[]={370.9935,5,652.40771};
 					azimut=-6.9658623;
 					class args
 					{
@@ -706,7 +706,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={369.50742,5,659.05054};
+					position[]={361.22421,5,662.29175};
 					azimut=-7.2199607;
 					class args
 					{
@@ -939,7 +939,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={341.84946,5,647.68774};
+					position[]={333.56625,5,650.92896};
 					azimut=-7.4726958;
 					class args
 					{
@@ -1598,7 +1598,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={389.60928,5,638.14502};
+					position[]={381.32608,5,641.38623};
 					azimut=-7.4726601;
 					class args
 					{
@@ -1648,7 +1648,7 @@ class Mission
 			azimut=368.68301;
 			id=56;
 			side="EMPTY";
-			vehicle="I_CargoNet_01_ammo_F";
+			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
 			init="0 = [this] execVM ""scripts\boxes\box.sqf"";";
 		};
@@ -1658,7 +1658,7 @@ class Mission
 			azimut=188.08501;
 			id=57;
 			side="EMPTY";
-			vehicle="I_CargoNet_01_ammo_F";
+			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
 			init="0 = [this] execVM ""scripts\boxes\box_medical.sqf"";";
 		};
