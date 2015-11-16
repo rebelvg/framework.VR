@@ -34,8 +34,7 @@ Main box will have virtual arsenal enabled but only in singleplayer (for loadout
 0 = [this] execVM "scripts\boxes\box_veh.sqf"; //contains same as box.sqf but in smaller quantities
 
 To enable suicide set canSuicide to true in the init.sqf.
-To enable JIP teleportation set murshun_allowJipTeleporting to true in the inti.sqf.
-murshun_whoDunIt is a string that you can set with mission makers name to show on the mission intro.
+To disable JIP teleportation set murshun_allowJipTeleporting to false in the inti.sqf (JIP teleportation enabled by default in the murshun_menu pbo).
 
 If you want to have music radio in your mission uncomment musicRadiosArray line and add radio objects inside of the array.
 Example.
