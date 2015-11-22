@@ -1087,7 +1087,6 @@ class Mission
 					skill=0.60000002;
 					text="s4";
 					init="this setVariable [""radio_channel"", [1, 1]];";
-					description="AT (RPG-7V2)";
 				};
 				class Item4
 				{
@@ -1218,7 +1217,6 @@ class Mission
 					skill=0.60000002;
 					text="s14";
 					init="this setVariable [""radio_channel"", [2, 1]];";
-					description="AT (RPG-7V2)";
 				};
 				class Item4
 				{
@@ -1349,7 +1347,6 @@ class Mission
 					skill=0.60000002;
 					text="s24";
 					init="this setVariable [""radio_channel"", [3, 1]];";
-					description="AT (RPG-7V2)";
 				};
 				class Item4
 				{
@@ -1480,7 +1477,6 @@ class Mission
 					skill=0.60000002;
 					text="s34";
 					init="this setVariable [""radio_channel"", [4, 1]];";
-					description="AT (RPG-7V2)";
 				};
 				class Item4
 				{
