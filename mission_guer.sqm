@@ -23,7 +23,8 @@ class Mission
 		"A3_Soft_F_Offroad_01",
 		"A3_Supplies_F_Heli_CargoNets",
 		"3DEN",
-		"a3_modules_f_curator_curator"
+		"a3_modules_f_curator_curator",
+		"ace_sitting"
 	};
 	addOnsAuto[]=
 	{
@@ -43,6 +44,7 @@ class Mission
 		"a3_characters_f",
 		"3DEN",
 		"a3_modules_f_curator_curator",
+		"ace_sitting",
 		"A3_Supplies_F_Heli_CargoNets",
 		"A3_Structures_F_EPA_Civ_Camping",
 		"A3_Structures_F_Items_Electronics",
@@ -71,7 +73,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=19;
+		items=20;
 		class Item0
 		{
 			side="LOGIC";
@@ -1564,9 +1566,10 @@ class Mission
 					azimut=364.35999;
 					id=53;
 					side="GUER";
-					vehicle="I_Soldier_SL_F";
+					vehicle="I_officer_F";
 					player="PLAYER COMMANDER";
 					leader=1;
+					rank="CAPTAIN";
 					skill=0.60000002;
 					text="s41";
 					init="this setVariable [""radio_channel"", [7, 0]];";
@@ -1634,6 +1637,35 @@ class Mission
 				};
 			};
 		};
+		class Item19
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={316.91495,5,650.73096};
+					azimut=-7.4726601;
+					class args
+					{
+						items=1;
+						class Item0
+						{
+							value="1";
+							parentCls="ACE_ModuleSitting";
+							typeName="enable";
+						};
+					};
+					id=56;
+					side="LOGIC";
+					vehicle="ACE_ModuleSitting";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -1642,7 +1674,7 @@ class Mission
 		{
 			position[]={602.65961,5,568.12769};
 			azimut=368.68301;
-			id=56;
+			id=57;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
@@ -1652,7 +1684,7 @@ class Mission
 		{
 			position[]={605.80145,5,567.62451};
 			azimut=188.08501;
-			id=57;
+			id=58;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
@@ -1662,7 +1694,7 @@ class Mission
 		{
 			position[]={607.88275,5,577.85156};
 			azimut=459.47409;
-			id=58;
+			id=59;
 			side="EMPTY";
 			vehicle="Land_WoodenTable_small_F";
 			skill=0.60000002;
@@ -1672,7 +1704,7 @@ class Mission
 			position[]={607.85223,5,577.86621};
 			azimut=548.09497;
 			offsetY=1;
-			id=59;
+			id=60;
 			side="EMPTY";
 			vehicle="Land_FMradio_F";
 			skill=0.60000002;
@@ -1682,7 +1714,7 @@ class Mission
 		{
 			position[]={590.737,5,578.90137};
 			azimut=476.047;
-			id=60;
+			id=61;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			skill=0.60000002;

@@ -88,8 +88,8 @@ _aa = _aaArray select 0;
 _aaMags = _aaArray select 1;
 
 _grenadesArray = (_loadoutArray select 15);
-_handGrenade = _grenadesArray select 0;
-_smokeGrenade = _grenadesArray select 1;
+_lethalGrenades = _grenadesArray select 0;
+_nonLethalGrenades = _grenadesArray select 1;
 
 _handgunArray = (_loadoutArray select 16);
 _handgun = _handgunArray select 0;
@@ -104,7 +104,7 @@ switch (_className) do {
 	_loadoutVest = _vest;
 	_loadoutHeadgear = _headgear;
 	if (!(_radioBackpack isEqualTo "")) then {
-	_loadoutBackpack = _radioBackpack;
+	//_loadoutBackpack = _radioBackpack;
 	} else {
 	//_loadoutBackpack = _backpack;
 	};
@@ -126,6 +126,28 @@ switch (_className) do {
 	_loadoutVest = _vest;
 	_loadoutHeadgear = _headgear;
 	//_loadoutBackpack = _backpack;
+	_loadoutFacewear = _facewear;
+
+	_loadoutMainWeapon = _glRifle;
+	_loadoutMainWeaponDevices = _glRifleDevices;
+	_loadoutMainWeaponMags = _glRifleMags;
+	_loadoutMainWeaponGlGrenades = _glGrenade;
+	_loadoutHandgunWeapon = _handgun;
+	_loadoutHandgunWeaponDevices = _handgunDevices;
+	_loadoutHandgunWeaponMags = _handgunMags;
+	
+	_loadoutBinoculars = _binoculars;
+	};
+	
+	case "officer": {
+	_loadoutUniform = _uniform;
+	_loadoutVest = _vest;
+	_loadoutHeadgear = _headgear;
+	if (!(_radioBackpack isEqualTo "")) then {
+	_loadoutBackpack = _radioBackpack;
+	} else {
+	//_loadoutBackpack = _backpack;
+	};
 	_loadoutFacewear = _facewear;
 
 	_loadoutMainWeapon = _glRifle;
@@ -294,9 +316,9 @@ for "_i" from 1 to 2 do {_unit addItem "ACE_epinephrine";};
 for "_i" from 1 to 1 do {_unit addItem "ACE_atropine";};
 for "_i" from 1 to 1 do {_unit addItem "ACE_tourniquet";};
 
-if (!(_smokeGrenade isEqualTo "")) then {
-for "_i" from 1 to 1 do {_unit addItem _smokeGrenade;};
-};
+{
+for "_i" from 1 to 2 do {_unit addItem _x;};
+} foreach _nonLethalGrenades;
 
 switch (_className) do {
 	case "squad leader": {
@@ -304,6 +326,10 @@ switch (_className) do {
 	};
 	
 	case "team leader": {
+	_items = _items + ["murshun_cigs_lighter"];
+	};
+	
+	case "officer": {
 	_items = _items + ["murshun_cigs_lighter"];
 	};
 	
@@ -376,33 +402,33 @@ switch (_className) do {
 } foreach _linkItems;
 
 if (!(_loadoutMainWeapon isEqualTo "")) then {
-	_unit addWeapon _loadoutMainWeapon;
-	{
-		_unit addPrimaryWeaponItem _x;
-	} foreach _loadoutMainWeaponDevices;
 	_unit addMagazines [_loadoutMainWeaponMags, 8];
 	if (_loadoutMainWeaponGlGrenades != "") then {
 	_unit addMagazines [_loadoutMainWeaponGlGrenades, 6];
 	};
+	_unit addWeapon _loadoutMainWeapon;
+	{
+		_unit addPrimaryWeaponItem _x;
+	} foreach _loadoutMainWeaponDevices;
 };
 
 if (!(_loadoutHandgunWeapon isEqualTo "")) then {
+	_unit addMagazines [_loadoutHandgunWeaponMags, 2];
 	_unit addWeapon _loadoutHandgunWeapon;
 	{
 		_unit addHandgunItem _x;
 	} foreach _loadoutHandgunWeaponDevices;
-	_unit addMagazines [_loadoutHandgunWeaponMags, 2];
 };
 
 if (!(_loadoutLauncherWeapon isEqualTo "")) then {
+	if (!(_loadoutLauncherWeaponMags isEqualTo "")) then {
+	_unit addMagazines [_loadoutLauncherWeaponMags, 2];
+	};
 	_unit addWeapon _loadoutLauncherWeapon;
 	if (!(_loadoutLauncherWeaponDevices isEqualTo "")) then {
 	{
 		_unit addSecondaryWeaponItem _x;
 	} foreach _loadoutLauncherWeaponDevices;
-	};
-	if (!(_loadoutLauncherWeaponMags isEqualTo "")) then {
-	_unit addMagazines [_loadoutLauncherWeaponMags, 2];
 	};
 };
 

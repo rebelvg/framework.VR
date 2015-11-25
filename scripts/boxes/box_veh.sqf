@@ -56,8 +56,8 @@ _aa = _aaArray select 0;
 _aaMags = _aaArray select 1;
 
 _grenadesArray = (loadoutArray select 15);
-_handGrenade = _grenadesArray select 0;
-_smokeGrenade = _grenadesArray select 1;
+_lethalGrenades = _grenadesArray select 0;
+_nonLethalGrenades = _grenadesArray select 1;
 
 _handgunArray = (loadoutArray select 16);
 _handgun = _handgunArray select 0;
@@ -109,15 +109,14 @@ if (!(_aaMags isEqualTo "")) then {
 _unit addMagazineCargoGlobal [_aaMags, 2];
 };
 
-if (!(_handGrenade isEqualTo "")) then {
-_unit addMagazineCargoGlobal [_handGrenade, 5];
-};
-if (!(_smokeGrenade isEqualTo "")) then {
-_unit addMagazineCargoGlobal [_smokeGrenade, 20];
-};
-//_unit addMagazineCargoGlobal ["rhs_mag_nspn_yellow", 20];
-_unit addMagazineCargoGlobal ["DemoCharge_Remote_Mag", 3];
-_unit addMagazineCargoGlobal ["SatchelCharge_Remote_Mag", 1];
+{
+_unit addItemCargoGlobal [_x, 5];
+} foreach _lethalGrenades;
+{
+_unit addItemCargoGlobal [_x, 20];
+} foreach _nonLethalGrenades;
+_unit addItemCargoGlobal ["DemoCharge_Remote_Mag", 3];
+_unit addItemCargoGlobal ["SatchelCharge_Remote_Mag", 1];
 
 _unit addItemCargoGlobal ["ACE_wirecutter", 1];
 _unit addItemCargoGlobal ["ACE_SpareBarrel", 1];

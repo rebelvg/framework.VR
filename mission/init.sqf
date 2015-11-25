@@ -17,7 +17,7 @@ loadoutArray = [
 "", //at singleshot 12
 ["", "", ["", "", "", ""]], //at reloadable 13, mag, devices
 ["", ""], //aa 14, mag
-["HandGrenade", "SmokeShellBlue"], //grenades array 15
+[["HandGrenade"], ["SmokeShellBlue"]], //grenades array 15, lethal grenades, non lethal grenades
 ["hgun_ACPC2_F", "9Rnd_45ACP_Mag", ["", "", "", ""]], //sl handgun 16, mag, devices
 "Laserdesignator" //binoculars 17
 ];
