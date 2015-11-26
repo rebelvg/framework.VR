@@ -1,9 +1,11 @@
 _unit = _this select 0;
 _side = _this select 1;
 
+if (!isServer) exitWith {};
+
 _loadoutArray = [];
 
-waituntil {!isNil "loadoutArray" or !isNil "loadoutArray_west" or !isNil "loadoutArray_east" or !isNil "loadoutArray_guer" or !isNil "loadoutArray_civ"};
+waituntil {time > 1 and (!isNil "loadoutArray" or !isNil "loadoutArray_west" or !isNil "loadoutArray_east" or !isNil "loadoutArray_guer" or !isNil "loadoutArray_civ")};
 
 if (isNil "_side") then {
 _side = side _unit;
@@ -59,7 +61,6 @@ switch (_side) do {
 	};
 };
 
-if (!isServer) exitWith {};
 clearMagazineCargoGlobal _unit;
 clearWeaponCargoGlobal _unit;
 clearitemcargoGlobal _unit;
@@ -121,14 +122,21 @@ _handgunDevices = _handgunArray select 2;
 
 _unit addItemCargoGlobal ["ToolKit", 1];
 
+if (ace_medical_level > 1) then {
 _unit addItemCargoGlobal ["ACE_elasticBandage", 100];
 _unit addItemCargoGlobal ["ACE_quikclot", 100];
 _unit addItemCargoGlobal ["ACE_morphine", 25];
 _unit addItemCargoGlobal ["ACE_epinephrine", 25];
 _unit addItemCargoGlobal ["ACE_atropine", 25];
 _unit addItemCargoGlobal ["ACE_tourniquet", 10];
+_unit addItemCargoGlobal ["ACE_personalAidKit", 5];
 _unit addItemCargoGlobal ["ACE_salineIV_500", 5];
-_unit addItemCargoGlobal ["ACE_personalAidKit", 10];
+} else {
+_unit addItemCargoGlobal ["ACE_elasticBandage", 100];
+_unit addItemCargoGlobal ["ACE_morphine", 25];
+_unit addItemCargoGlobal ["ACE_epinephrine", 25];
+_unit addItemCargoGlobal ["ACE_salineIV_500", 5];
+};
 
 if (!(_atSingleShot isEqualTo "")) then {
 _unit addWeaponCargoGlobal [_atSingleShot, 2];

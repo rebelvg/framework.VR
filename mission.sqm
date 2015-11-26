@@ -22,9 +22,9 @@ class Mission
 		"map_vr",
 		"A3_Soft_F_Offroad_01",
 		"A3_Supplies_F_Heli_CargoNets",
-		"3DEN",
 		"a3_modules_f_curator_curator",
-		"ace_sitting"
+		"ace_sitting",
+		"3DEN"
 	};
 	addOnsAuto[]=
 	{

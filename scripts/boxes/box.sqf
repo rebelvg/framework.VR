@@ -1,9 +1,11 @@
 _unit = _this select 0;
 _side = _this select 1;
 
+if (!isServer) exitWith {};
+
 _loadoutArray = [];
 
-waituntil {!isNil "loadoutArray" or !isNil "loadoutArray_west" or !isNil "loadoutArray_east" or !isNil "loadoutArray_guer" or !isNil "loadoutArray_civ"};
+waituntil {time > 1 and (!isNil "loadoutArray" or !isNil "loadoutArray_west" or !isNil "loadoutArray_east" or !isNil "loadoutArray_guer" or !isNil "loadoutArray_civ")};
 
 if (isNil "_side") then {
 _side = side _unit;
@@ -59,7 +61,6 @@ switch (_side) do {
 	};
 };
 
-if (!isServer) exitWith {};
 clearMagazineCargoGlobal _unit;
 clearWeaponCargoGlobal _unit;
 clearitemcargoGlobal _unit;

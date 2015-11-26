@@ -359,12 +359,18 @@ _unit addHeadgear _loadoutHeadgear;
 _unit addBackpack _loadoutBackpack;
 _unit addGoggles _loadoutFacewear;
 
+if (ace_medical_level > 1) then {
 for "_i" from 1 to 10 do {_unit addItem "ACE_elasticBandage";};
 for "_i" from 1 to 10 do {_unit addItem "ACE_quikclot";};
 for "_i" from 1 to 4 do {_unit addItem "ACE_morphine";};
 for "_i" from 1 to 2 do {_unit addItem "ACE_epinephrine";};
 for "_i" from 1 to 1 do {_unit addItem "ACE_atropine";};
 for "_i" from 1 to 1 do {_unit addItem "ACE_tourniquet";};
+} else {
+for "_i" from 1 to 10 do {_unit addItem "ACE_elasticBandage";};
+for "_i" from 1 to 4 do {_unit addItem "ACE_morphine";};
+for "_i" from 1 to 2 do {_unit addItem "ACE_epinephrine";};
+};
 
 {
 for "_i" from 1 to 2 do {_unit addItem _x;};
@@ -385,15 +391,22 @@ switch (_className) do {
 	
 	case "combat life saver": {
 	_items = _items + ["murshun_cigs_matches"];
-
+	
+	if (ace_medical_level > 1) then {
 	for "_i" from 1 to 15 do {_unit addItem "ACE_elasticBandage";};
 	for "_i" from 1 to 15 do {_unit addItem "ACE_quikclot";};
 	for "_i" from 1 to 10 do {_unit addItem "ACE_morphine";};
 	for "_i" from 1 to 10 do {_unit addItem "ACE_epinephrine";};
 	for "_i" from 1 to 10 do {_unit addItem "ACE_atropine";};
 	for "_i" from 1 to 5 do {_unit addItem "ACE_tourniquet";};
-	for "_i" from 1 to 5 do {_unit addItem "ACE_salineIV_500";};
 	for "_i" from 1 to 3 do {_unit addItem "ACE_personalAidKit";};
+	for "_i" from 1 to 2 do {_unit addItem "ACE_salineIV_500";};
+	} else {
+	for "_i" from 1 to 15 do {_unit addItem "ACE_elasticBandage";};
+	for "_i" from 1 to 10 do {_unit addItem "ACE_morphine";};
+	for "_i" from 1 to 10 do {_unit addItem "ACE_epinephrine";};
+	for "_i" from 1 to 2 do {_unit addItem "ACE_salineIV_500";};
+	};
 	};
 	
 	case "autorifleman": {
