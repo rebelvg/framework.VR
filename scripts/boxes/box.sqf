@@ -1,67 +1,16 @@
-_unit = (_this select 0);
+_unit = _this select 0;
 _side = _this select 1;
 
 _loadoutArray = [];
 
 waituntil {!isNil "loadoutArray" or !isNil "loadoutArray_west" or !isNil "loadoutArray_east" or !isNil "loadoutArray_guer" or !isNil "loadoutArray_civ"};
 
-if (!isNil "_side") then {
-switch (_side) do {
-	case "WEST": {
-	if (!isNil "loadoutArray_west") then
-	{
-	_loadoutArray = loadoutArray_west;
-	}
-	else
-	{
-	_loadoutArray = loadoutArray;
-	};
-	};
-	
-	case "EAST": {
-	if (!isNil "loadoutArray_east") then
-	{
-	_loadoutArray = loadoutArray_east;
-	}
-	else
-	{
-	_loadoutArray = loadoutArray;
-	};
-	};
-	
-	case "GUER": {
-	if (!isNil "loadoutArray_guer") then
-	{
-	_loadoutArray = loadoutArray_guer;
-	}
-	else
-	{
-	_loadoutArray = loadoutArray;
-	};
-	};
-	
-	case "CIV": {
-	if (!isNil "loadoutArray_civ") then
-	{
-	_loadoutArray = loadoutArray_civ;
-	}
-	else
-	{
-	_loadoutArray = loadoutArray;
-	};
-	};
-	
-	default {
-	_loadoutArray = loadoutArray;
-	};
+if (isNil "_side") then {
+_side = side _unit;
 };
-}
-else
-{
-_side = str (side _unit);
 
 switch (_side) do {
-	case "WEST": {
+	case WEST: {
 	if (!isNil "loadoutArray_west") then
 	{
 	_loadoutArray = loadoutArray_west;
@@ -72,7 +21,7 @@ switch (_side) do {
 	};
 	};
 	
-	case "EAST": {
+	case EAST: {
 	if (!isNil "loadoutArray_east") then
 	{
 	_loadoutArray = loadoutArray_east;
@@ -83,7 +32,7 @@ switch (_side) do {
 	};
 	};
 	
-	case "GUER": {
+	case RESISTANCE: {
 	if (!isNil "loadoutArray_guer") then
 	{
 	_loadoutArray = loadoutArray_guer;
@@ -94,7 +43,7 @@ switch (_side) do {
 	};
 	};
 	
-	case "CIV": {
+	case CIVILIAN: {
 	if (!isNil "loadoutArray_civ") then
 	{
 	_loadoutArray = loadoutArray_civ;
@@ -108,7 +57,6 @@ switch (_side) do {
 	default {
 	_loadoutArray = loadoutArray;
 	};
-};
 };
 
 if (!isServer) exitWith {};
@@ -222,5 +170,6 @@ _unit addItemCargoGlobal ["SatchelCharge_Remote_Mag", 10];
 
 _unit addItemCargoGlobal ["ACE_wirecutter", 2];
 _unit addItemCargoGlobal ["ACE_SpareBarrel", 2];
+_unit addItemCargoGlobal ["ACE_Clacker", 2];
 _unit addItemCargoGlobal ["ACE_CableTie", 30];
-//_unit addItemCargoGlobal ["EWK_Cig1", 100];
+_unit addItemCargoGlobal ["EWK_Cig1", 100];
