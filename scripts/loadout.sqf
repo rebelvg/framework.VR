@@ -1,9 +1,59 @@
 _unit = _this select 0;
 _className = _this select 1;
 
-waituntil {!isNil "loadoutArray"};
+_loadoutArray = [];
 
-_loadoutArray = loadoutArray;
+waituntil {!isNil "loadoutArray" or !isNil "loadoutArray_west" or !isNil "loadoutArray_east" or !isNil "loadoutArray_guer" or !isNil "loadoutArray_civ"};
+
+switch (side _unit) do {
+	case WEST: {
+	if (!isNil "loadoutArray_west") then
+	{
+	_loadoutArray = loadoutArray_west;
+	}
+	else
+	{
+	_loadoutArray = loadoutArray;
+	};
+	};
+	
+	case EAST: {
+	if (!isNil "loadoutArray_east") then
+	{
+	_loadoutArray = loadoutArray_east;
+	}
+	else
+	{
+	_loadoutArray = loadoutArray;
+	};
+	};
+	
+	case RESISTANCE: {
+	if (!isNil "loadoutArray_guer") then
+	{
+	_loadoutArray = loadoutArray_guer;
+	}
+	else
+	{
+	_loadoutArray = loadoutArray;
+	};
+	};
+	
+	case CIVILIAN: {
+	if (!isNil "loadoutArray_civ") then
+	{
+	_loadoutArray = loadoutArray_civ;
+	}
+	else
+	{
+	_loadoutArray = loadoutArray;
+	};
+	};
+	
+	default {
+	_loadoutArray = loadoutArray;
+	};
+};
 
 if (count _loadoutArray == 0) exitWith {};
 
