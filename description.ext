@@ -5,7 +5,6 @@ respawnDialog = 0;
 enableDebugConsole = 1;
 forceRotorLibSimulation = 2;
 saving = 0;
-respawnButton = 0;
 
 onLoadName = "Framework";
 onLoadMission = "";
