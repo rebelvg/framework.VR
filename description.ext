@@ -1,6 +1,6 @@
 disabledAI=true;
 respawn = 3;
-respawnDelay = 5;
+respawnDelay = 1;
 respawnDialog = 0;
 enableDebugConsole = 1;
 forceRotorLibSimulation = 2;
