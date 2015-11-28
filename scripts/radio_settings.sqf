@@ -38,13 +38,8 @@ so you can re-establish communications if leaders are KIA or missing.
 
 waituntil {
 _haveRadio = call TFAR_fnc_haveSWRadio;
-_unableUseRadio = player getVariable ["tf_unable_to_use_radio", false];
-_haveRadio or _unableUseRadio
+_haveRadio
 };
-
-_unableUseRadio = player getVariable ["tf_unable_to_use_radio", false];
-
-if (_unableUseRadio) exitWith {};
 
 _radio_channel = player getVariable ["radio_channel", [1, 0]];
 _channel = _radio_channel select 0;
