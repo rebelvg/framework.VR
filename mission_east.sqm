@@ -644,7 +644,7 @@ class Mission
 				class Item0
 				{
 					position[]={370.9935,5,652.40771};
-					azimut=-6.9658623;
+					azimut=-6.9658599;
 					class args
 					{
 						items=7;
