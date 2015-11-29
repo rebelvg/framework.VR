@@ -1,1 +1,1 @@
-[player] execVM "murshun_spectator\spectator\onPlayerKilled.sqf";
+[player] execVM "murshun_menu\spectator\onPlayerKilled.sqf";

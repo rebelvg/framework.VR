@@ -1,1 +1,1 @@
-[player] execVM "murshun_spectator\spectator\onPlayerRespawn.sqf";
+[player] execVM "murshun_menu\spectator\onPlayerRespawn.sqf";
