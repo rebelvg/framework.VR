@@ -120,7 +120,13 @@ _handgun = _handgunArray select 0;
 _handgunMags = _handgunArray select 1;
 _handgunDevices = _handgunArray select 2;
 
+_binoculars = (_loadoutArray select 17);
+
+_boxItems = (_loadoutArray select 18);
+
 _unit addItemCargoGlobal ["ToolKit", 1];
+_unit addItemCargoGlobal ["ACE_wirecutter", 1];
+_unit addItemCargoGlobal ["ACE_SpareBarrel", 1];
 
 if (ace_medical_level > 1) then {
 _unit addItemCargoGlobal ["ACE_elasticBandage", 100];
@@ -178,14 +184,10 @@ _unit addItemCargoGlobal [_x, 5];
 {
 _unit addItemCargoGlobal [_x, 20];
 } foreach _nonLethalGrenades;
-_unit addItemCargoGlobal ["DemoCharge_Remote_Mag", 3];
-_unit addItemCargoGlobal ["SatchelCharge_Remote_Mag", 1];
 
-_unit addItemCargoGlobal ["ACE_wirecutter", 1];
-_unit addItemCargoGlobal ["ACE_SpareBarrel", 1];
-_unit addItemCargoGlobal ["ACE_Clacker", 1];
-_unit addItemCargoGlobal ["ACE_CableTie", 10];
-_unit addItemCargoGlobal ["EWK_Cig1", 20];
+{
+_unit addItemCargoGlobal [_x select 0, ceil ((_x select 1)/3)];
+} foreach _boxItems;
 
 if (_unit isKindOf "car") then {
 [_unit, 3] call ace_repair_fnc_addSpareParts;

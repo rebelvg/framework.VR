@@ -124,7 +124,13 @@ _handgun = _handgunArray select 0;
 _handgunMags = _handgunArray select 1;
 _handgunDevices = _handgunArray select 2;
 
-_unit addItemCargoGlobal ["ToolKit", 1];
+_binoculars = (_loadoutArray select 17);
+
+_boxItems = (_loadoutArray select 18);
+
+_unit addItemCargoGlobal ["ToolKit", 2];
+_unit addItemCargoGlobal ["ACE_wirecutter", 2];
+_unit addItemCargoGlobal ["ACE_SpareBarrel", 2];
 
 if (!(_atSingleShot isEqualTo "")) then {
 _unit addWeaponCargoGlobal [_atSingleShot, 20];
@@ -166,11 +172,7 @@ _unit addItemCargoGlobal [_x, 40];
 {
 _unit addItemCargoGlobal [_x, 200];
 } foreach _nonLethalGrenades;
-_unit addItemCargoGlobal ["DemoCharge_Remote_Mag", 30];
-_unit addItemCargoGlobal ["SatchelCharge_Remote_Mag", 10];
 
-_unit addItemCargoGlobal ["ACE_wirecutter", 2];
-_unit addItemCargoGlobal ["ACE_SpareBarrel", 2];
-_unit addItemCargoGlobal ["ACE_Clacker", 2];
-_unit addItemCargoGlobal ["ACE_CableTie", 30];
-_unit addItemCargoGlobal ["EWK_Cig1", 100];
+{
+_unit addItemCargoGlobal _x;
+} foreach _boxItems;
