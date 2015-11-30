@@ -46,4 +46,18 @@ Add next line to each vehicle that you want to have a radio inside.
 
 I added a ZES script that allows to place objects in zeus and copy their positions to the clipboard.
 It works only in singleplayer so there's no reason to delete the module from the mission when exporting it to the final version.
+
+Framework now supports per-side loadouts.
+loadoutArray_west
+loadoutArray_east
+loadoutArray_guer
+loadoutArray_civ
+and for boxes and cars
+0 = [this, WEST] execVM "scripts\boxes\box.sqf";
+0 = [this, EAST] execVM "scripts\boxes\box.sqf";
+0 = [this, RESISTANCE] execVM "scripts\boxes\box.sqf";
+0 = [this, CIVILIAN] execVM "scripts\boxes\box.sqf";
+
+If framework can't find the correct side loadoutArray it will always fallback to the loadoutArray.
+If loadoutArray is empty framework will skip the loadouts.
 */

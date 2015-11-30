@@ -349,7 +349,7 @@ switch (_className) do {
 	_loadoutMainWeaponDevices = _rifleDevices;
 	_loadoutMainWeaponMags = _rifleMags;
 	
-	systemchat "Wrong loadout classname, falling back to rifleman.";
+	systemchat format ["Can't find loadout for %1, falling back to rifleman.", _className];
 	};
 };
 
