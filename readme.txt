@@ -40,7 +40,6 @@ If you want to have music radio in your mission uncomment musicRadiosArray line 
 Example.
 musicRadiosArray = [musicRadio_01, musicRadio_02, musicRadio_03];
 musicRadio_01, etc, have to be an object in the editor (sound will spawn at the object's location, so it's better be a radio type of object, can be anything though).
-Sometimes music tracks can overlap each other (caused by alt-tabing, saving or pressing escape sometimes), arma bug, gonna be fixed in 1.54.
 Add next line to each vehicle that you want to have a radio inside.
 0 = [this] execVM "music_radio\vehicleInit.sqf";
 

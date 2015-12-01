@@ -31,7 +31,7 @@ _car setVariable ["radioIsOn", true, true];
 
 if (player in crew _car) then {
 playMusic "";
-playMusic [whatSong, serverTime - timeStarted];
+playMusic [whatSong, time - timeStarted];
 
 if ((gettext (configfile >> "CfgMusic" >> whatSong >> "name") != "")) then {
 [parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>""%1""</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", toUpper (gettext (configfile >> "CfgMusic" >> whatSong >> "name")), "by" + " " + (gettext (configfile >> "CfgMusic" >> whatSong >> "artist"))], true, nil, 7, 1, 0] spawn BIS_fnc_textTiles;
@@ -77,7 +77,7 @@ _isPlaying = _car getVariable ["radioIsOn", false];
 
 if (_isPlaying) then {
 playMusic "";
-playMusic [whatSong, serverTime - timeStarted];
+playMusic [whatSong, time - timeStarted];
 
 if ((gettext (configfile >> "CfgMusic" >> whatSong >> "name") != "")) then {
 [parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>""%1""</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", toUpper (gettext (configfile >> "CfgMusic" >> whatSong >> "name")), "by" + " " + (gettext (configfile >> "CfgMusic" >> whatSong >> "artist"))], true, nil, 7, 1, 0] spawn BIS_fnc_textTiles;
@@ -108,6 +108,7 @@ _car = (_this select 0);
 
 },[nil],0,false,true,"","vehicle _this != _this && driver _target == _this && (_target getVariable ['radioIsOn', false])"];
 
+/*
 _veh addAction ["Resync Song",{
 _car = (_this select 0);
 
@@ -115,12 +116,13 @@ _isPlaying = _car getVariable ["radioIsOn", false];
 
 if (_isPlaying) then {
 playMusic "";
-playMusic [whatSong, serverTime - timeStarted];
+playMusic [whatSong, time - timeStarted];
 } else {
 playMusic "";
 };
 
 },[nil],0,false,true,"","vehicle _this != _this && _this in crew _target"];
+*/
 };
 
 player addEventHandler ["respawn", {
@@ -138,7 +140,7 @@ while {true} do {
 whatSong = _x;
 _configWhatSong = whatSong;
 whatSong = configName whatSong;
-timeStarted = serverTime;
+timeStarted = time;
 
 publicVariable "whatSong";
 publicVariable "timeStarted";
