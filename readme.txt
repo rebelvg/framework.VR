@@ -58,6 +58,6 @@ and for boxes and cars
 0 = [this, RESISTANCE] execVM "scripts\boxes\box.sqf";
 0 = [this, CIVILIAN] execVM "scripts\boxes\box.sqf";
 
-If framework can't find the correct side loadoutArray it will always fallback to the loadoutArray.
-If loadoutArray is empty framework will skip the loadouts.
+If framework can't find the correct side loadoutArray it will always fallback to the default loadoutArray.
+If loadoutArray is empty or do not exist framework will skip the loadouts.
 */
