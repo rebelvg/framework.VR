@@ -114,7 +114,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={345.55133,5,694.88306};
+					position[]={345.36789,5,693.96606};
 					class args
 					{
 						items=10;
@@ -196,7 +196,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={345.83313,5,685.15765};
+					position[]={345.64969,5,684.24066};
 					class args
 					{
 						items=9;
@@ -637,7 +637,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={355.87943,5,694.46234};
+					position[]={355.87943,5,693.72894};
 					class args
 					{
 						items=7;
@@ -701,7 +701,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={346.16608,5,674.91565};
+					position[]={345.98264,5,673.99866};
 					class args
 					{
 						items=35;
@@ -1588,7 +1588,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={356.02661,5,685.16345};
+					position[]={356.02661,5,684.43005};
 					class args
 					{
 						items=4;
@@ -1635,7 +1635,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={332.92477,5,693.22571};
+					position[]={332.80246,5,693.53137};
 					class args
 					{
 						items=1;
