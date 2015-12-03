@@ -80,8 +80,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={352.87753,5,649.34033};
-					azimut=-6.2724643;
+					position[]={320.86325,5,673.6413};
 					class args
 					{
 						items=2;
@@ -115,8 +114,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={346.26938,5,676.38159};
-					azimut=-6.2724624;
+					position[]={345.55133,5,694.88306};
 					class args
 					{
 						items=10;
@@ -198,8 +196,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={354.50986,5,669.82813};
-					azimut=-6.2724624;
+					position[]={345.83313,5,685.15765};
 					class args
 					{
 						items=9;
@@ -275,8 +272,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={353.29822,5,632.80591};
-					azimut=-6.2724681;
+					position[]={308.24658,5,660.81995};
 					class args
 					{
 						items=3;
@@ -316,11 +312,10 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={343.71225,5,658.47729};
-					azimut=-6.2724643;
+					position[]={320.69363,5,684.0675};
 					class args
 					{
-						items=3;
+						items=4;
 						class Item0
 						{
 							value="1";
@@ -338,6 +333,12 @@ class Mission
 							value="1";
 							parentCls="ACE_ModuleHearing";
 							typeName="enabledForZeusUnits";
+						};
+						class Item3
+						{
+							value="1";
+							parentCls="ACE_ModuleHearing";
+							typeName="autoAddEarplugsToUnits";
 						};
 					};
 					id=4;
@@ -357,8 +358,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={336.67758,5,667.14795};
-					azimut=-7.4726939;
+					position[]={321.15689,5,693.67053};
 					class args
 					{
 						items=6;
@@ -416,8 +416,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={344.07504,5,642.55322};
-					azimut=-7.4726958;
+					position[]={308.06265,5,673.51672};
 					class args
 					{
 						items=1;
@@ -445,8 +444,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={325.75668,5,658.47192};
-					azimut=-7.4726601;
+					position[]={308.11917,5,693.83038};
 					class args
 					{
 						items=13;
@@ -546,8 +544,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={362.22079,5,639.87402};
-					azimut=-7.9354548;
+					position[]={320.93359,5,660.59369};
 					class args
 					{
 						items=9;
@@ -623,8 +620,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={319.45663,5,684.1748};
-					azimut=-6.9658241;
+					position[]={332.5769,5,683.60913};
 					id=9;
 					side="LOGIC";
 					vehicle="DAC_Source_Extern";
@@ -641,8 +637,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={370.9935,5,652.40771};
-					azimut=-6.9658599;
+					position[]={355.87943,5,694.46234};
 					class args
 					{
 						items=7;
@@ -706,8 +701,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={361.22421,5,662.29175};
-					azimut=-7.2199607;
+					position[]={346.16608,5,674.91565};
 					class args
 					{
 						items=35;
@@ -939,8 +933,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={333.56625,5,650.92896};
-					azimut=-7.4726958;
+					position[]={308.28723,5,684.3634};
 					class args
 					{
 						items=13;
@@ -964,7 +957,7 @@ class Mission
 						};
 						class Item3
 						{
-							value="1";
+							value="0";
 							parentCls="ACE_moduleAdvancedMedicalSettings";
 							typeName="medicSetting_PAK";
 						};
@@ -1595,8 +1588,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={381.32608,5,641.38623};
-					azimut=-7.4726601;
+					position[]={356.02661,5,685.16345};
 					class args
 					{
 						items=4;
@@ -1643,8 +1635,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={316.91495,5,650.73096};
-					azimut=-7.4726601;
+					position[]={332.92477,5,693.22571};
 					class args
 					{
 						items=1;
