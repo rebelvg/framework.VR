@@ -1,4 +1,3 @@
-/*
 https://github.com/rebelvg/framework.VR
 
 Framework Info.
@@ -16,12 +15,8 @@ in initServer.sqf
 Framework should not throw ANY script errors. If you see any errors connected to the framework, you're probably doing something wrong, ask rebel.
 loadoutArray is located in mission\init.sqf
 It's pretty self-explanatory.
-To test your loadouts you can use some neat framework functions.
-Execute
-[] spawn debugLoadout_fnc;
-to test loadouts on ai units.
 
-You need to set up radioNetArray in your initPlayerLocal.
+radioNetArray is located in the framework\init.sqf
 You need to set radio_channel for all playable units.
 this setVariable ["radio_channel", [1,0]];
 [1,0] is a special radio array, 1 is a squad, 0 is a team, squad 7 is reserved for command, team 0 is squad leader and medic
@@ -44,7 +39,7 @@ Add next line to each vehicle that you want to have a radio inside.
 0 = [this] execVM "music_radio\vehicleInit.sqf";
 
 I added a ZES script that allows to place objects in zeus and copy their positions to the clipboard.
-It works only in singleplayer so there's no reason to delete the module from the mission when exporting it to the final version.
+Zeus works only in singleplayer so there's no reason to delete the module from the mission when exporting it to the final version.
 
 Framework now supports per-side loadouts.
 loadoutArray_west
@@ -59,4 +54,3 @@ and for boxes and cars
 
 If framework can't find the correct side loadoutArray it will always fallback to the default loadoutArray.
 If loadoutArray is empty or do not exist framework will skip the loadouts.
-*/
