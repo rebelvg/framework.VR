@@ -157,7 +157,7 @@ if (!isNil "musicRadiosArray") then {
 if (count musicRadiosArray > 0) then {
 {
 _x enableSimulationGlobal false;
-_x allowdamage false;
+_x allowDamage false;
 playSound3D [((getArray (musicArray select (musicArray find _configWhatSong) >> "sound")) select 0), _x, false, getPosASL _x, 4, 1, 50];
 } foreach musicRadiosArray;
 };
