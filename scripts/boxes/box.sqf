@@ -81,12 +81,6 @@ clearWeaponCargoGlobal _unit;
 clearitemcargoGlobal _unit;
 clearBackpackCargoGlobal _unit;
 
-_unit allowDamage false;
-
-if (!isMultiplayer) then {
-_unit addAction ["Virtual Arsenal",{["Open",true] call BIS_fnc_arsenal}];
-};
-
 if (count _loadoutArray == 0) exitWith {};
 
 _rifleArray = ((_loadoutArray select 8) call BIS_fnc_selectRandom);
@@ -144,6 +138,12 @@ _binoculars = (_loadoutArray select 17);
 _boxItems = (_loadoutArray select 18);
 
 if (_unit isKindOf "thing") then {
+_unit allowDamage false;
+
+if (!isMultiplayer) then {
+_unit addAction ["Virtual Arsenal",{["Open",true] call BIS_fnc_arsenal}];
+};
+
 _unit addItemCargoGlobal ["ToolKit", 2];
 _unit addItemCargoGlobal ["ACE_wirecutter", 2];
 _unit addItemCargoGlobal ["ACE_SpareBarrel", 2];
