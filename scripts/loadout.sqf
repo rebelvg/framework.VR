@@ -13,7 +13,10 @@ switch (side _unit) do {
 	}
 	else
 	{
+	if (!isNil "loadoutArray") then
+	{
 	_loadoutArray = loadoutArray;
+	};
 	};
 	};
 	
@@ -24,7 +27,10 @@ switch (side _unit) do {
 	}
 	else
 	{
+	if (!isNil "loadoutArray") then
+	{
 	_loadoutArray = loadoutArray;
+	};
 	};
 	};
 	
@@ -35,7 +41,10 @@ switch (side _unit) do {
 	}
 	else
 	{
+	if (!isNil "loadoutArray") then
+	{
 	_loadoutArray = loadoutArray;
+	};
 	};
 	};
 	
@@ -46,12 +55,18 @@ switch (side _unit) do {
 	}
 	else
 	{
+	if (!isNil "loadoutArray") then
+	{
 	_loadoutArray = loadoutArray;
+	};
 	};
 	};
 	
 	default {
+	if (!isNil "loadoutArray") then
+	{
 	_loadoutArray = loadoutArray;
+	};
 	};
 };
 

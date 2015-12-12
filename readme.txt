@@ -23,10 +23,9 @@ this setVariable ["radio_channel", [1,0]];
 Colors will be applied automatically.
 Modified roster script adds frequencies to the roster.
 
-0 = [this] execVM "scripts\boxes\box.sqf"; //add this to the main box, it uses loadoutArray to place things in
+0 = [this] execVM "scripts\boxes\box.sqf"; //add this to the main box, it uses loadoutArray to place things in, works for vehicles too
 Main box will have virtual arsenal enabled but only in singleplayer (for loadout tests).
 0 = [this] execVM "scripts\boxes\box_medical.sqf"; //box with advanced medical equipment
-0 = [this] execVM "scripts\boxes\box_veh.sqf"; //contains same as box.sqf but in smaller quantities
 
 To enable suicide set canSuicide to true in the init.sqf.
 To disable JIP teleportation set murshun_allowJipTeleporting to false in the inti.sqf (JIP teleportation enabled by default in the murshun_menu pbo).

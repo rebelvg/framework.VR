@@ -19,7 +19,10 @@ switch (_side) do {
 	}
 	else
 	{
+	if (!isNil "loadoutArray") then
+	{
 	_loadoutArray = loadoutArray;
+	};
 	};
 	};
 	
@@ -30,7 +33,10 @@ switch (_side) do {
 	}
 	else
 	{
+	if (!isNil "loadoutArray") then
+	{
 	_loadoutArray = loadoutArray;
+	};
 	};
 	};
 	
@@ -41,7 +47,10 @@ switch (_side) do {
 	}
 	else
 	{
+	if (!isNil "loadoutArray") then
+	{
 	_loadoutArray = loadoutArray;
+	};
 	};
 	};
 	
@@ -52,12 +61,18 @@ switch (_side) do {
 	}
 	else
 	{
+	if (!isNil "loadoutArray") then
+	{
 	_loadoutArray = loadoutArray;
+	};
 	};
 	};
 	
 	default {
+	if (!isNil "loadoutArray") then
+	{
 	_loadoutArray = loadoutArray;
+	};
 	};
 };
 
@@ -128,6 +143,7 @@ _binoculars = (_loadoutArray select 17);
 
 _boxItems = (_loadoutArray select 18);
 
+if (_unit isKindOf "thing") then {
 _unit addItemCargoGlobal ["ToolKit", 2];
 _unit addItemCargoGlobal ["ACE_wirecutter", 2];
 _unit addItemCargoGlobal ["ACE_SpareBarrel", 2];
@@ -176,3 +192,81 @@ _unit addItemCargoGlobal [_x, 200];
 {
 _unit addItemCargoGlobal _x;
 } foreach _boxItems;
+} else {
+_unit addItemCargoGlobal ["ToolKit", 1];
+_unit addItemCargoGlobal ["ACE_wirecutter", 1];
+_unit addItemCargoGlobal ["ACE_SpareBarrel", 1];
+
+if (ace_medical_level > 1) then {
+_unit addItemCargoGlobal ["ACE_elasticBandage", 100];
+_unit addItemCargoGlobal ["ACE_quikclot", 100];
+_unit addItemCargoGlobal ["ACE_morphine", 25];
+_unit addItemCargoGlobal ["ACE_epinephrine", 25];
+_unit addItemCargoGlobal ["ACE_atropine", 25];
+_unit addItemCargoGlobal ["ACE_tourniquet", 10];
+_unit addItemCargoGlobal ["ACE_personalAidKit", 5];
+_unit addItemCargoGlobal ["ACE_salineIV_500", 5];
+} else {
+_unit addItemCargoGlobal ["ACE_elasticBandage", 100];
+_unit addItemCargoGlobal ["ACE_morphine", 25];
+_unit addItemCargoGlobal ["ACE_epinephrine", 25];
+_unit addItemCargoGlobal ["ACE_salineIV_500", 5];
+};
+
+if (!(_atSingleShot isEqualTo "")) then {
+_unit addWeaponCargoGlobal [_atSingleShot, 2];
+};
+
+{
+if (!(_x isEqualTo "")) then {
+_unit addMagazineCargoGlobal [_x, 10];
+};
+} foreach _allRifleMags;
+
+if (!(_MGMags isEqualTo "")) then {
+_unit addMagazineCargoGlobal [_MGMags, 10];
+};
+
+if (!(_marksmanMags isEqualTo "")) then {
+_unit addMagazineCargoGlobal [_marksmanMags, 5];
+};
+
+if (!(_glGrenade isEqualTo "")) then {
+_unit addMagazineCargoGlobal [_glGrenade, 10];
+};
+
+if (!(_handgunMags isEqualTo "")) then {
+_unit addMagazineCargoGlobal [_handgunMags, 5];
+};
+
+if (!(_atMags isEqualTo "")) then {
+_unit addMagazineCargoGlobal [_atMags, 2];
+};
+
+if (!(_aaMags isEqualTo "")) then {
+_unit addMagazineCargoGlobal [_aaMags, 2];
+};
+
+{
+_unit addItemCargoGlobal [_x, 5];
+} foreach _lethalGrenades;
+{
+_unit addItemCargoGlobal [_x, 20];
+} foreach _nonLethalGrenades;
+
+{
+_unit addItemCargoGlobal [_x select 0, ceil ((_x select 1)/3)];
+} foreach _boxItems;
+
+if (_unit isKindOf "car") then {
+[_unit, 3] call ace_repair_fnc_addSpareParts;
+};
+
+if (_unit isKindOf "tank") then {
+[_unit, 3] call ace_repair_fnc_addSpareParts;
+};
+
+if (_unit isKindOf "air") then {
+_unit addBackpackCargoGlobal ["B_Parachute", 6];
+};
+};
