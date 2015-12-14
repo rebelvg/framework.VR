@@ -1,7 +1,7 @@
 //place all mission related stuff here
 //do not overwrite this file when copying framework from mission to mission
 
-//you can use loadoutArray_west, loadoutArray_east, loadoutArray_guer, loadoutArray_civ or just loadoutArray all sides
+//you can use loadoutArray_west, loadoutArray_east, loadoutArray_guer, loadoutArray_civ or just loadoutArray for all sides
 loadoutArray_west = [
 ["U_B_CombatUniform_mcam"], //uniforms array 0, supports randomize
 ["V_PlateCarrier1_rgr"], //vests array 1, supports randomize
