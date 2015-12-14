@@ -1,11 +1,9 @@
-_className = tolower gettext (configFile >> "cfgVehicles" >> typeOf player >> "displayName");
-
-[player, _className] execVM "scripts\loadout.sqf";
+[player] execVM "scripts\loadout.sqf";
 
 if (!(didJIP)) then {
 [2, false, true] execVM "scripts\roster.sqf";
 } else {
-if (time > 1) then {
+if (time > 60) then {
 [[[2, false, true], "scripts\roster.sqf"], "BIS_fnc_execVM"] call BIS_fnc_MP;
 } else {
 [2, false, true] execVM "scripts\roster.sqf";
@@ -49,7 +47,6 @@ sleep 0.5;
 sleep 11;
 
 _murshun_whoDunIt = getText (missionConfigFile >> "author");
-if (isNil "_murshun_whoDunIt") exitWith {};
 if (_murshun_whoDunIt == "") exitWith {};
 
 [parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>%1</t><br /><t shadow='2' align='right' size='1.6'>%2</t>", "Created and Directed by", _murshun_whoDunIt], true, nil, 9, 1, 0] spawn BIS_fnc_textTiles;

@@ -33,3 +33,11 @@ class CfgDebriefing
 	description = "";
 	};	
 };
+
+class Extended_Init_Eventhandlers
+{
+    class CAManBase
+    {
+		init = "_this execVM 'scripts\enemy_loadout.sqf'";
+    };
+};

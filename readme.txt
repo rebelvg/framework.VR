@@ -53,3 +53,7 @@ and for boxes and cars
 
 If framework can't find the correct side loadoutArray it will always fallback to the default loadoutArray.
 If loadoutArray is empty or do not exist framework will skip the loadouts.
+
+You can create custom loadouts for enemies now.
+Just set murshun_customEnemyLoadouts to true in the init.sqf and create a loadoutArray for your enemy side.
+So for example your enemies are opfor so just create loadoutArray_east and fill it accordingly to the standard.

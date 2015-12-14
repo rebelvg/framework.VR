@@ -7,3 +7,4 @@ musicRadiosArray = [musicRadio_01];
 
 canSuicide = false;
 murshun_allowJipTeleporting = true;
+murshun_customEnemyLoadouts = false;
