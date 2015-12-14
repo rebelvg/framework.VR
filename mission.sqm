@@ -23,7 +23,9 @@ class Mission
 		"A3_Supplies_F_Heli_CargoNets",
 		"a3_modules_f_curator_curator",
 		"ace_sitting",
-		"3DEN"
+		"3DEN",
+		"A3_Characters_F_OPFOR",
+		"A3_Characters_F_INDEP"
 	};
 	addOnsAuto[]=
 	{
@@ -43,6 +45,8 @@ class Mission
 		"3DEN",
 		"a3_modules_f_curator_curator",
 		"ace_sitting",
+		"A3_Characters_F_OPFOR",
+		"A3_Characters_F_INDEP",
 		"A3_Supplies_F_Heli_CargoNets",
 		"A3_Structures_F_EPA_Civ_Camping",
 		"A3_Structures_F_Items_Electronics",
@@ -62,16 +66,17 @@ class Mission
 		forecastWind=0.099999994;
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
-		year=2035;
-		day=28;
-		hour=13;
-		minute=35;
+		year=2015;
+		month=6;
+		day=1;
+		hour=12;
+		minute=0;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
 	class Groups
 	{
-		items=19;
+		items=29;
 		class Item0
 		{
 			side="LOGIC";
@@ -1627,25 +1632,1135 @@ class Mission
 				};
 			};
 		};
+		class Item19
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=10;
+				class Item0
+				{
+					position[]={423.86465,5,337.99719};
+					azimut=274.2905;
+					id=56;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="s43";
+					init="this setVariable [""radio_channel"", [1, 0]];";
+					description="SL Alpha";
+				};
+				class Item1
+				{
+					position[]={431.00253,5,327.33719};
+					azimut=274.2905;
+					id=57;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s44";
+					init="this setVariable [""radio_channel"", [1, 0]];";
+				};
+				class Item2
+				{
+					position[]={436.3855,5,339.23444};
+					azimut=274.2905;
+					id=58;
+					side="EAST";
+					vehicle="O_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s45";
+					init="this setVariable [""radio_channel"", [1, 1]];";
+				};
+				class Item3
+				{
+					position[]={447.46933,5,328.11179};
+					azimut=274.2905;
+					id=59;
+					side="EAST";
+					vehicle="O_Soldier_AT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s46";
+					init="this setVariable [""radio_channel"", [1, 1]];";
+				};
+				class Item4
+				{
+					position[]={446.99643,5,339.46786};
+					azimut=274.2905;
+					id=60;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s47";
+					init="this setVariable [""radio_channel"", [1, 1]];";
+				};
+				class Item5
+				{
+					position[]={446.83301,5,349.61734};
+					azimut=274.2905;
+					id=61;
+					side="EAST";
+					vehicle="O_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s48";
+					init="this setVariable [""radio_channel"", [1, 1]];";
+				};
+				class Item6
+				{
+					position[]={435.09918,5,373.32892};
+					azimut=274.2905;
+					id=62;
+					side="EAST";
+					vehicle="O_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s49";
+					init="this setVariable [""radio_channel"", [1, 2]];";
+				};
+				class Item7
+				{
+					position[]={447.09802,5,362.2084};
+					azimut=274.2905;
+					id=63;
+					side="EAST";
+					vehicle="O_engineer_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s50";
+					init="this setVariable [""radio_channel"", [1, 2]];";
+				};
+				class Item8
+				{
+					position[]={447.39926,5,372.38971};
+					azimut=274.2905;
+					id=64;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s51";
+					init="this setVariable [""radio_channel"", [1, 2]];";
+				};
+				class Item9
+				{
+					position[]={447.28055,5,383.88434};
+					azimut=274.2905;
+					id=65;
+					side="EAST";
+					vehicle="O_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s52";
+					init="this setVariable [""radio_channel"", [1, 2]];";
+				};
+			};
+		};
+		class Item20
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=10;
+				class Item0
+				{
+					position[]={466.85913,5,334.62665};
+					azimut=274.2905;
+					id=66;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="s53";
+					init="this setVariable [""radio_channel"", [2, 0]];";
+					description="SL Bravo";
+				};
+				class Item1
+				{
+					position[]={473.99695,5,323.96613};
+					azimut=274.2905;
+					id=67;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s54";
+					init="this setVariable [""radio_channel"", [2, 0]];";
+				};
+				class Item2
+				{
+					position[]={479.3721,5,335.86285};
+					azimut=274.2905;
+					id=68;
+					side="EAST";
+					vehicle="O_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s55";
+					init="this setVariable [""radio_channel"", [2, 1]];";
+				};
+				class Item3
+				{
+					position[]={490.45993,5,324.73911};
+					azimut=274.2905;
+					id=69;
+					side="EAST";
+					vehicle="O_Soldier_AT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s56";
+					init="this setVariable [""radio_channel"", [2, 1]];";
+				};
+				class Item4
+				{
+					position[]={489.99097,5,336.09692};
+					azimut=274.2905;
+					id=70;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s57";
+					init="this setVariable [""radio_channel"", [2, 1]];";
+				};
+				class Item5
+				{
+					position[]={489.8186,5,346.24448};
+					azimut=274.2905;
+					id=71;
+					side="EAST";
+					vehicle="O_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s58";
+					init="this setVariable [""radio_channel"", [2, 1]];";
+				};
+				class Item6
+				{
+					position[]={478.09259,5,369.95917};
+					azimut=274.2905;
+					id=72;
+					side="EAST";
+					vehicle="O_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s59";
+					init="this setVariable [""radio_channel"", [2, 2]];";
+				};
+				class Item7
+				{
+					position[]={490.08853,5,358.83771};
+					azimut=274.2905;
+					id=73;
+					side="EAST";
+					vehicle="O_engineer_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s60";
+					init="this setVariable [""radio_channel"", [2, 2]];";
+				};
+				class Item8
+				{
+					position[]={490.39258,5,369.01913};
+					azimut=274.2905;
+					id=74;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s61";
+					init="this setVariable [""radio_channel"", [2, 2]];";
+				};
+				class Item9
+				{
+					position[]={490.276,5,380.51337};
+					azimut=274.2905;
+					id=75;
+					side="EAST";
+					vehicle="O_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s62";
+					init="this setVariable [""radio_channel"", [2, 2]];";
+				};
+			};
+		};
+		class Item21
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=10;
+				class Item0
+				{
+					position[]={425.73825,5,420.45554};
+					azimut=274.2905;
+					id=76;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="s63";
+					init="this setVariable [""radio_channel"", [3, 0]];";
+					description="SL Charlie";
+				};
+				class Item1
+				{
+					position[]={432.87729,5,409.7963};
+					azimut=274.2905;
+					id=77;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s64";
+					init="this setVariable [""radio_channel"", [3, 0]];";
+				};
+				class Item2
+				{
+					position[]={438.25241,5,421.69318};
+					azimut=274.2905;
+					id=78;
+					side="EAST";
+					vehicle="O_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s65";
+					init="this setVariable [""radio_channel"", [3, 1]];";
+				};
+				class Item3
+				{
+					position[]={449.3392,5,410.5697};
+					azimut=274.2905;
+					id=79;
+					side="EAST";
+					vehicle="O_Soldier_AT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s66";
+					init="this setVariable [""radio_channel"", [3, 1]];";
+				};
+				class Item4
+				{
+					position[]={448.86841,5,421.92795};
+					azimut=274.2905;
+					id=80;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s67";
+					init="this setVariable [""radio_channel"", [3, 1]];";
+				};
+				class Item5
+				{
+					position[]={448.69882,5,432.07523};
+					azimut=274.2905;
+					id=81;
+					side="EAST";
+					vehicle="O_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s68";
+					init="this setVariable [""radio_channel"", [3, 1]];";
+				};
+				class Item6
+				{
+					position[]={436.96796,5,455.78723};
+					azimut=274.2905;
+					id=82;
+					side="EAST";
+					vehicle="O_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s69";
+					init="this setVariable [""radio_channel"", [3, 2]];";
+				};
+				class Item7
+				{
+					position[]={448.96683,5,444.66769};
+					azimut=274.2905;
+					id=83;
+					side="EAST";
+					vehicle="O_engineer_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s70";
+					init="this setVariable [""radio_channel"", [3, 2]];";
+				};
+				class Item8
+				{
+					position[]={449.2709,5,454.84784};
+					azimut=274.2905;
+					id=84;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s71";
+					init="this setVariable [""radio_channel"", [3, 2]];";
+				};
+				class Item9
+				{
+					position[]={449.1582,5,466.34409};
+					azimut=274.2905;
+					id=85;
+					side="EAST";
+					vehicle="O_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s72";
+					init="this setVariable [""radio_channel"", [3, 2]];";
+				};
+			};
+		};
+		class Item22
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=10;
+				class Item0
+				{
+					position[]={466.92731,5,418.64108};
+					azimut=274.2905;
+					id=86;
+					side="EAST";
+					vehicle="O_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="s73";
+					init="this setVariable [""radio_channel"", [4, 0]];";
+					description="SL Delta";
+				};
+				class Item1
+				{
+					position[]={474.06601,5,407.98227};
+					azimut=274.2905;
+					id=87;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s74";
+					init="this setVariable [""radio_channel"", [4, 0]];";
+				};
+				class Item2
+				{
+					position[]={479.44113,5,419.879};
+					azimut=274.2905;
+					id=88;
+					side="EAST";
+					vehicle="O_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s75";
+					init="this setVariable [""radio_channel"", [4, 1]];";
+				};
+				class Item3
+				{
+					position[]={490.52795,5,408.75522};
+					azimut=274.2905;
+					id=89;
+					side="EAST";
+					vehicle="O_Soldier_AT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s76";
+					init="this setVariable [""radio_channel"", [4, 1]];";
+				};
+				class Item4
+				{
+					position[]={490.05811,5,420.11362};
+					azimut=274.2905;
+					id=90;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s77";
+					init="this setVariable [""radio_channel"", [4, 1]];";
+				};
+				class Item5
+				{
+					position[]={489.88779,5,430.26089};
+					azimut=274.2905;
+					id=91;
+					side="EAST";
+					vehicle="O_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s78";
+					init="this setVariable [""radio_channel"", [4, 1]];";
+				};
+				class Item6
+				{
+					position[]={478.15634,5,453.97348};
+					azimut=274.2905;
+					id=92;
+					side="EAST";
+					vehicle="O_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s79";
+					init="this setVariable [""radio_channel"", [4, 2]];";
+				};
+				class Item7
+				{
+					position[]={490.15558,5,442.85345};
+					azimut=274.2905;
+					id=93;
+					side="EAST";
+					vehicle="O_engineer_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s80";
+					init="this setVariable [""radio_channel"", [4, 2]];";
+				};
+				class Item8
+				{
+					position[]={490.4595,5,453.03357};
+					azimut=274.2905;
+					id=94;
+					side="EAST";
+					vehicle="O_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s81";
+					init="this setVariable [""radio_channel"", [4, 2]];";
+				};
+				class Item9
+				{
+					position[]={490.34717,5,464.53009};
+					azimut=274.2905;
+					id=95;
+					side="EAST";
+					vehicle="O_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s82";
+					init="this setVariable [""radio_channel"", [4, 2]];";
+				};
+			};
+		};
+		class Item23
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={407.49002,5,383.10956};
+					azimut=274.2905;
+					id=96;
+					side="EAST";
+					vehicle="O_officer_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=0.60000002;
+					text="s83";
+					init="this setVariable [""radio_channel"", [7, 0]];";
+					description="Commander";
+				};
+				class Item1
+				{
+					position[]={414.62811,5,372.44931};
+					azimut=274.2905;
+					id=97;
+					side="EAST";
+					vehicle="O_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s84";
+					init="this setVariable [""radio_channel"", [7, 0]];";
+				};
+			};
+		};
+		class Item24
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=10;
+				class Item0
+				{
+					position[]={775.36353,5,452.45505};
+					azimut=453.76813;
+					id=98;
+					side="GUER";
+					vehicle="I_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="s85";
+					init="this setVariable [""radio_channel"", [1, 0]];";
+					description="SL Alpha";
+				};
+				class Item1
+				{
+					position[]={768.12848,5,463.04953};
+					azimut=453.76813;
+					id=99;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s86";
+					init="this setVariable [""radio_channel"", [1, 0]];";
+				};
+				class Item2
+				{
+					position[]={762.85425,5,451.10361};
+					azimut=453.76813;
+					id=100;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s87";
+					init="this setVariable [""radio_channel"", [1, 1]];";
+				};
+				class Item3
+				{
+					position[]={751.66949,5,462.12491};
+					azimut=453.76813;
+					id=101;
+					side="GUER";
+					vehicle="I_Soldier_AT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s88";
+					init="this setVariable [""radio_channel"", [1, 1]];";
+				};
+				class Item4
+				{
+					position[]={752.24615,5,450.77338};
+					azimut=453.76813;
+					id=102;
+					side="GUER";
+					vehicle="I_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s89";
+					init="this setVariable [""radio_channel"", [1, 1]];";
+				};
+				class Item5
+				{
+					position[]={752.50177,5,440.62595};
+					azimut=453.76813;
+					id=103;
+					side="GUER";
+					vehicle="I_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s90";
+					init="this setVariable [""radio_channel"", [1, 1]];";
+				};
+				class Item6
+				{
+					position[]={764.4516,5,417.02283};
+					azimut=453.76813;
+					id=104;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s91";
+					init="this setVariable [""radio_channel"", [1, 2]];";
+				};
+				class Item7
+				{
+					position[]={752.35193,5,428.03287};
+					azimut=453.76813;
+					id=105;
+					side="GUER";
+					vehicle="I_engineer_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s92";
+					init="this setVariable [""radio_channel"", [1, 2]];";
+				};
+				class Item8
+				{
+					position[]={752.14355,5,417.84973};
+					azimut=453.76813;
+					id=106;
+					side="GUER";
+					vehicle="I_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s93";
+					init="this setVariable [""radio_channel"", [1, 2]];";
+				};
+				class Item9
+				{
+					position[]={752.36694,5,406.35657};
+					azimut=453.76813;
+					id=107;
+					side="GUER";
+					vehicle="I_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s94";
+					init="this setVariable [""radio_channel"", [1, 2]];";
+				};
+			};
+		};
+		class Item25
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=10;
+				class Item0
+				{
+					position[]={732.33997,5,455.43341};
+					azimut=453.76813;
+					id=108;
+					side="GUER";
+					vehicle="I_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="s95";
+					init="this setVariable [""radio_channel"", [2, 0]];";
+					description="SL Bravo";
+				};
+				class Item1
+				{
+					position[]={725.10553,5,466.0282};
+					azimut=453.76813;
+					id=109;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s96";
+					init="this setVariable [""radio_channel"", [2, 0]];";
+				};
+				class Item2
+				{
+					position[]={719.83881,5,454.08334};
+					azimut=453.76813;
+					id=110;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s97";
+					init="this setVariable [""radio_channel"", [2, 1]];";
+				};
+				class Item3
+				{
+					position[]={708.65033,5,465.10519};
+					azimut=453.76813;
+					id=111;
+					side="GUER";
+					vehicle="I_Soldier_AT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s98";
+					init="this setVariable [""radio_channel"", [2, 1]];";
+				};
+				class Item4
+				{
+					position[]={709.22253,5,453.75226};
+					azimut=453.76813;
+					id=112;
+					side="GUER";
+					vehicle="I_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s99";
+					init="this setVariable [""radio_channel"", [2, 1]];";
+				};
+				class Item5
+				{
+					position[]={709.4873,5,443.60641};
+					azimut=453.76813;
+					id=113;
+					side="GUER";
+					vehicle="I_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s100";
+					init="this setVariable [""radio_channel"", [2, 1]];";
+				};
+				class Item6
+				{
+					position[]={721.42938,5,419.99994};
+					azimut=453.76813;
+					id=114;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s101";
+					init="this setVariable [""radio_channel"", [2, 2]];";
+				};
+				class Item7
+				{
+					position[]={709.3324,5,431.01151};
+					azimut=453.76813;
+					id=115;
+					side="GUER";
+					vehicle="I_engineer_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s102";
+					init="this setVariable [""radio_channel"", [2, 2]];";
+				};
+				class Item8
+				{
+					position[]={709.12109,5,420.82785};
+					azimut=453.76813;
+					id=116;
+					side="GUER";
+					vehicle="I_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s103";
+					init="this setVariable [""radio_channel"", [2, 2]];";
+				};
+				class Item9
+				{
+					position[]={709.34271,5,409.33524};
+					azimut=453.76813;
+					id=117;
+					side="GUER";
+					vehicle="I_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s104";
+					init="this setVariable [""radio_channel"", [2, 2]];";
+				};
+			};
+		};
+		class Item26
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=10;
+				class Item0
+				{
+					position[]={774.24219,5,369.98325};
+					azimut=453.76813;
+					id=118;
+					side="GUER";
+					vehicle="I_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="s105";
+					init="this setVariable [""radio_channel"", [3, 0]];";
+					description="SL Charlie";
+				};
+				class Item1
+				{
+					position[]={767.00629,5,380.57648};
+					azimut=453.76813;
+					id=119;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s106";
+					init="this setVariable [""radio_channel"", [3, 0]];";
+				};
+				class Item2
+				{
+					position[]={761.73938,5,368.6315};
+					azimut=453.76813;
+					id=120;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s107";
+					init="this setVariable [""radio_channel"", [3, 1]];";
+				};
+				class Item3
+				{
+					position[]={750.55157,5,379.65353};
+					azimut=453.76813;
+					id=121;
+					side="GUER";
+					vehicle="I_Soldier_AT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s108";
+					init="this setVariable [""radio_channel"", [3, 1]];";
+				};
+				class Item4
+				{
+					position[]={751.1261,5,368.30008};
+					azimut=453.76813;
+					id=122;
+					side="GUER";
+					vehicle="I_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s109";
+					init="this setVariable [""radio_channel"", [3, 1]];";
+				};
+				class Item5
+				{
+					position[]={751.38818,5,358.15472};
+					azimut=453.76813;
+					id=123;
+					side="GUER";
+					vehicle="I_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s110";
+					init="this setVariable [""radio_channel"", [3, 1]];";
+				};
+				class Item6
+				{
+					position[]={763.3349,5,334.54999};
+					azimut=453.76813;
+					id=124;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s111";
+					init="this setVariable [""radio_channel"", [3, 2]];";
+				};
+				class Item7
+				{
+					position[]={751.2348,5,345.56024};
+					azimut=453.76813;
+					id=125;
+					side="GUER";
+					vehicle="I_engineer_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s112";
+					init="this setVariable [""radio_channel"", [3, 2]];";
+				};
+				class Item8
+				{
+					position[]={751.02423,5,335.37766};
+					azimut=453.76813;
+					id=126;
+					side="GUER";
+					vehicle="I_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s113";
+					init="this setVariable [""radio_channel"", [3, 2]];";
+				};
+				class Item9
+				{
+					position[]={751.24133,5,323.88324};
+					azimut=453.76813;
+					id=127;
+					side="GUER";
+					vehicle="I_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s114";
+					init="this setVariable [""radio_channel"", [3, 2]];";
+				};
+			};
+		};
+		class Item27
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=10;
+				class Item0
+				{
+					position[]={733.03851,5,371.422};
+					azimut=453.76813;
+					id=128;
+					side="GUER";
+					vehicle="I_Soldier_SL_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="s115";
+					init="this setVariable [""radio_channel"", [4, 0]];";
+					description="SL Delta";
+				};
+				class Item1
+				{
+					position[]={725.80267,5,382.01526};
+					azimut=453.76813;
+					id=129;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s116";
+					init="this setVariable [""radio_channel"", [4, 0]];";
+				};
+				class Item2
+				{
+					position[]={720.53589,5,370.07001};
+					azimut=453.76813;
+					id=130;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s117";
+					init="this setVariable [""radio_channel"", [4, 1]];";
+				};
+				class Item3
+				{
+					position[]={709.34821,5,381.09195};
+					azimut=453.76813;
+					id=131;
+					side="GUER";
+					vehicle="I_Soldier_AT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s118";
+					init="this setVariable [""radio_channel"", [4, 1]];";
+				};
+				class Item4
+				{
+					position[]={709.92163,5,369.73877};
+					azimut=453.76813;
+					id=132;
+					side="GUER";
+					vehicle="I_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s119";
+					init="this setVariable [""radio_channel"", [4, 1]];";
+				};
+				class Item5
+				{
+					position[]={710.18481,5,359.59329};
+					azimut=453.76813;
+					id=133;
+					side="GUER";
+					vehicle="I_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s120";
+					init="this setVariable [""radio_channel"", [4, 1]];";
+				};
+				class Item6
+				{
+					position[]={722.13171,5,335.98868};
+					azimut=453.76813;
+					id=134;
+					side="GUER";
+					vehicle="I_Soldier_TL_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s121";
+					init="this setVariable [""radio_channel"", [4, 2]];";
+				};
+				class Item7
+				{
+					position[]={710.03174,5,346.99866};
+					azimut=453.76813;
+					id=135;
+					side="GUER";
+					vehicle="I_engineer_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s122";
+					init="this setVariable [""radio_channel"", [4, 2]];";
+				};
+				class Item8
+				{
+					position[]={709.82037,5,336.81647};
+					azimut=453.76813;
+					id=136;
+					side="GUER";
+					vehicle="I_Soldier_AR_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s123";
+					init="this setVariable [""radio_channel"", [4, 2]];";
+				};
+				class Item9
+				{
+					position[]={710.03802,5,325.32175};
+					azimut=453.76813;
+					id=137;
+					side="GUER";
+					vehicle="I_Soldier_LAT_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s124";
+					init="this setVariable [""radio_channel"", [4, 2]];";
+				};
+			};
+		};
+		class Item28
+		{
+			side="GUER";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={792.1488,5,407.49405};
+					azimut=453.76813;
+					id=138;
+					side="GUER";
+					vehicle="I_officer_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=0.60000002;
+					text="s125";
+					init="this setVariable [""radio_channel"", [7, 0]];";
+					description="Commander";
+				};
+				class Item1
+				{
+					position[]={784.91376,5,418.08868};
+					azimut=453.76813;
+					id=139;
+					side="GUER";
+					vehicle="I_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="s126";
+					init="this setVariable [""radio_channel"", [7, 0]];";
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=5;
+		items=11;
 		class Item0
 		{
 			position[]={602.65961,5,568.12769};
 			azimut=368.68301;
-			id=56;
+			id=140;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
-			init="0 = [this] execVM ""scripts\boxes\box.sqf"";";
+			init="0 = [this, WEST] execVM ""scripts\boxes\box.sqf"";";
 		};
 		class Item1
 		{
 			position[]={605.80145,5,567.62451};
 			azimut=188.08501;
-			id=57;
+			id=141;
 			side="EMPTY";
 			vehicle="B_CargoNet_01_ammo_F";
 			skill=0.60000002;
@@ -1655,7 +2770,7 @@ class Mission
 		{
 			position[]={607.88275,5,577.85156};
 			azimut=459.47409;
-			id=58;
+			id=142;
 			side="EMPTY";
 			vehicle="Land_WoodenTable_small_F";
 			skill=0.60000002;
@@ -1665,7 +2780,7 @@ class Mission
 			position[]={607.85223,5,577.86621};
 			azimut=548.09497;
 			offsetY=1;
-			id=59;
+			id=143;
 			side="EMPTY";
 			vehicle="Land_FMradio_F";
 			skill=0.60000002;
@@ -1675,11 +2790,71 @@ class Mission
 		{
 			position[]={590.737,5,578.90137};
 			azimut=476.047;
-			id=60;
+			id=144;
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			skill=0.60000002;
-			init="0 = [this] execVM ""scripts\boxes\box.sqf""; 0 = [this] execVM ""music_radio\vehicleInit.sqf"";";
+			init="0 = [this, WEST] execVM ""scripts\boxes\box.sqf""; 0 = [this] execVM ""music_radio\vehicleInit.sqf"";";
+		};
+		class Item5
+		{
+			position[]={385.4136,5,384.32208};
+			azimut=274.93701;
+			id=145;
+			side="EMPTY";
+			vehicle="B_CargoNet_01_ammo_F";
+			skill=0.60000002;
+			init="0 = [this, EAST] execVM ""scripts\boxes\box.sqf"";";
+		};
+		class Item6
+		{
+			position[]={385.71057,5,387.49002};
+			azimut=94.339081;
+			id=146;
+			side="EMPTY";
+			vehicle="B_CargoNet_01_ammo_F";
+			skill=0.60000002;
+			init="0 = [this] execVM ""scripts\boxes\box_medical.sqf"";";
+		};
+		class Item7
+		{
+			position[]={375.44196,5,371.72095};
+			azimut=382.30099;
+			id=147;
+			side="EMPTY";
+			vehicle="C_Offroad_01_F";
+			skill=0.60000002;
+			init="0 = [this, EAST] execVM ""scripts\boxes\box.sqf""; 0 = [this] execVM ""music_radio\vehicleInit.sqf"";";
+		};
+		class Item8
+		{
+			position[]={807.28125,5,408.53983};
+			azimut=449.60699;
+			id=148;
+			side="EMPTY";
+			vehicle="B_CargoNet_01_ammo_F";
+			skill=0.60000002;
+			init="0 = [this, RESISTANCE] execVM ""scripts\boxes\box.sqf"";";
+		};
+		class Item9
+		{
+			position[]={807.27972,5,405.35788};
+			azimut=269.00949;
+			id=149;
+			side="EMPTY";
+			vehicle="B_CargoNet_01_ammo_F";
+			skill=0.60000002;
+			init="0 = [this] execVM ""scripts\boxes\box_medical.sqf"";";
+		};
+		class Item10
+		{
+			position[]={816.03973,5,422.01294};
+			azimut=556.97101;
+			id=150;
+			side="EMPTY";
+			vehicle="C_Offroad_01_F";
+			skill=0.60000002;
+			init="0 = [this, RESISTANCE] execVM ""scripts\boxes\box.sqf""; 0 = [this] execVM ""music_radio\vehicleInit.sqf"";";
 		};
 	};
 	class Markers

@@ -30,7 +30,7 @@ if (_team > 4) exitWith {systemChat "Can't set color for this team.";};
 if (!isMultiplayer) then {
 {
 if (!isPlayer _x) then {
-_x disableAI "MOVE";
+_x disableAI "ANIM";
 };
 } foreach switchableUnits;
 [] spawn debugLoadout_fnc;
