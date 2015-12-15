@@ -7,7 +7,7 @@ ACE3.
 ALIVE.
 TFAR.
 DAC.
-Spectator, Jip teleporting script, Cigs and Suicide script are located in the murshun mods pack. All are completely optional.
+Spectator, Jip teleporting script, Cigs and Suicide script are located in the murshun mod pack. All are completely optional.
 
 Framework Info.
 Framework needs a few lines to be initialized properly.
