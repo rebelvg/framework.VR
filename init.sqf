@@ -3,8 +3,9 @@
 [] execVM "murshun_menu\spectator\init.sqf";
 [] execVM "mission\init.sqf";
 
-musicRadiosArray = [musicRadio_01];
+murshun_musicRadiosArray = [musicRadio_01];
+murshun_enableRadioInCars = true;
 
-canSuicide = false;
+murshun_canSuicide = false;
 murshun_allowJipTeleporting = true;
 murshun_customEnemyLoadouts = false;

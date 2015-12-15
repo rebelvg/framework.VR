@@ -269,4 +269,10 @@ if (_unit isKindOf "tank") then {
 if (_unit isKindOf "air") then {
 _unit addBackpackCargoGlobal ["B_Parachute", 6];
 };
+
+if (!isNil "murshun_enableRadioInCars") then {
+if (murshun_enableRadioInCars) then {
+[_unit] execVM "music_radio\vehicleInit.sqf";
+};
+};
 };

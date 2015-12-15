@@ -2794,7 +2794,7 @@ class Mission
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			skill=0.60000002;
-			init="0 = [this, WEST] execVM ""scripts\boxes\box.sqf""; 0 = [this] execVM ""music_radio\vehicleInit.sqf"";";
+			init="0 = [this, WEST] execVM ""scripts\boxes\box.sqf"";";
 		};
 		class Item5
 		{
@@ -2824,7 +2824,7 @@ class Mission
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			skill=0.60000002;
-			init="0 = [this, EAST] execVM ""scripts\boxes\box.sqf""; 0 = [this] execVM ""music_radio\vehicleInit.sqf"";";
+			init="0 = [this, EAST] execVM ""scripts\boxes\box.sqf"";";
 		};
 		class Item8
 		{
@@ -2854,7 +2854,7 @@ class Mission
 			side="EMPTY";
 			vehicle="C_Offroad_01_F";
 			skill=0.60000002;
-			init="0 = [this, RESISTANCE] execVM ""scripts\boxes\box.sqf""; 0 = [this] execVM ""music_radio\vehicleInit.sqf"";";
+			init="0 = [this, RESISTANCE] execVM ""scripts\boxes\box.sqf"";";
 		};
 	};
 	class Markers

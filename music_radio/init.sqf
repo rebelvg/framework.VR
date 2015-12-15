@@ -1,6 +1,6 @@
-musicArray = "gettext (_x >> 'tag') == 'Poddy Music'" configClasses (configFile >> "CfgMusic");
+murshun_musicArray = "gettext (_x >> 'tag') == 'Poddy Music'" configClasses (configFile >> "CfgMusic");
 
-if (count musicArray == 0) exitWith {hint "musicArray is empty.";};
+if (count murshun_musicArray == 0) exitWith {hint "murshun_musicArray is empty.";};
 
 KK_fnc_arrayShufflePlus = {
     private ["_arr","_cnt"];
@@ -12,52 +12,52 @@ KK_fnc_arrayShufflePlus = {
     _arr
 };
 
-musicArray = [musicArray, 4 * count musicArray] call KK_fnc_arrayShufflePlus;
+murshun_musicArray = [murshun_musicArray, 4 * count murshun_musicArray] call KK_fnc_arrayShufflePlus;
 
-if (isNil "whatSong") then {
-whatSong = "";
+if (isNil "murshun_whatSong") then {
+murshun_whatSong = "";
 };
 
-if (isNil "timeStarted") then {
-timeStarted = 0;
+if (isNil "murshun_timeStarted") then {
+murshun_timeStarted = 0;
 };
 
-playSongOnRadio_fnc = {
+murshun_playSongOnRadio_fnc = {
 _car = _this select 0;
 
 if (isServer) then {
-_car setVariable ["radioIsOn", true, true];
+_car setVariable ["murshun_radioIsOn", true, true];
 };
 
 if (player in crew _car) then {
 playMusic "";
-playMusic [whatSong, time - timeStarted];
+playMusic [murshun_whatSong, time - murshun_timeStarted];
 
-if ((gettext (configfile >> "CfgMusic" >> whatSong >> "name") != "")) then {
-[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>""%1""</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", toUpper (gettext (configfile >> "CfgMusic" >> whatSong >> "name")), "by" + " " + (gettext (configfile >> "CfgMusic" >> whatSong >> "artist"))], true, nil, 7, 1, 0] spawn BIS_fnc_textTiles;
+if ((gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name") != "")) then {
+[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>""%1""</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", toUpper (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name")), "by" + " " + (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "artist"))], true, nil, 7, 1, 0] spawn BIS_fnc_textTiles;
 };
 };
 };
 
-sendNewSong_fnc = {
+murshun_sendNewSong_fnc = {
 _car = vehicle player;
 _song = _this select 0;
 
-if (player in crew _car && vehicle player != player && (_car getVariable ['radioIsOn', false]) && (_car getVariable ['hasRadio', false])) then {
+if (player in crew _car && vehicle player != player && (_car getVariable ['murshun_radioIsOn', false]) && (_car getVariable ['murshun_hasRadio', false])) then {
 playMusic "";
 playMusic _song;
 
-if ((gettext (configfile >> "CfgMusic" >> whatSong >> "name") != "")) then {
-[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>""%1""</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", toUpper (gettext (configfile >> "CfgMusic" >> whatSong >> "name")), "by" + " " + (gettext (configfile >> "CfgMusic" >> whatSong >> "artist"))], true, nil, 7, 1, 0] spawn BIS_fnc_textTiles;
+if ((gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name") != "")) then {
+[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>""%1""</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", toUpper (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name")), "by" + " " + (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "artist"))], true, nil, 7, 1, 0] spawn BIS_fnc_textTiles;
 };
 };
 };
 
-stopSongOnRadio_fnc = {
+murshun_stopSongOnRadio_fnc = {
 _car = _this select 0;
 
 if (isServer) then {
-_car setVariable ["radioIsOn", false, true];
+_car setVariable ["murshun_radioIsOn", false, true];
 };
 
 if (player in crew _car) then {
@@ -65,7 +65,7 @@ playMusic "";
 };
 };
 
-addActionVehRadio_fnc = {
+murshun_addActionVehRadio_fnc = {
 _veh = _this select 0;
 
 _veh addEventHandler ["GetIn",{
@@ -73,14 +73,14 @@ _car = _this select 0;
 _playerEntered = _this select 2;
 
 if (_playerEntered == player) then {
-_isPlaying = _car getVariable ["radioIsOn", false];
+_isPlaying = _car getVariable ["murshun_radioIsOn", false];
 
 if (_isPlaying) then {
 playMusic "";
-playMusic [whatSong, time - timeStarted];
+playMusic [murshun_whatSong, time - murshun_timeStarted];
 
-if ((gettext (configfile >> "CfgMusic" >> whatSong >> "name") != "")) then {
-[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>""%1""</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", toUpper (gettext (configfile >> "CfgMusic" >> whatSong >> "name")), "by" + " " + (gettext (configfile >> "CfgMusic" >> whatSong >> "artist"))], true, nil, 7, 1, 0] spawn BIS_fnc_textTiles;
+if ((gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name") != "")) then {
+[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>""%1""</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", toUpper (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name")), "by" + " " + (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "artist"))], true, nil, 7, 1, 0] spawn BIS_fnc_textTiles;
 };
 };
 };
@@ -97,26 +97,26 @@ playMusic "";
 _veh addAction ["Turn Radio On",{
 _car = (_this select 0);
 
-[[_car],"playSongOnRadio_fnc"] call BIS_fnc_MP;
+[[_car],"murshun_playSongOnRadio_fnc"] call BIS_fnc_MP;
 
-},[nil],0,false,true,"","vehicle _this != _this && driver _target == _this && !(_target getVariable ['radioIsOn', false])"];
+},[nil],0,false,true,"","vehicle _this != _this && driver _target == _this && !(_target getVariable ['murshun_radioIsOn', false])"];
 
 _veh addAction ["Turn Radio Off",{
 _car = (_this select 0);
 
-[[_car],"stopSongOnRadio_fnc"] call BIS_fnc_MP;
+[[_car],"murshun_stopSongOnRadio_fnc"] call BIS_fnc_MP;
 
-},[nil],0,false,true,"","vehicle _this != _this && driver _target == _this && (_target getVariable ['radioIsOn', false])"];
+},[nil],0,false,true,"","vehicle _this != _this && driver _target == _this && (_target getVariable ['murshun_radioIsOn', false])"];
 
 /*
 _veh addAction ["Resync Song",{
 _car = (_this select 0);
 
-_isPlaying = _car getVariable ["radioIsOn", false];
+_isPlaying = _car getVariable ["murshun_radioIsOn", false];
 
 if (_isPlaying) then {
 playMusic "";
-playMusic [whatSong, time - timeStarted];
+playMusic [murshun_whatSong, time - murshun_timeStarted];
 } else {
 playMusic "";
 };
@@ -125,52 +125,50 @@ playMusic "";
 */
 };
 
-player addEventHandler ["respawn", {
+player addEventHandler ["Respawn", {
 playMusic "";
 }];
 
 [] spawn {
 if (isServer) then {
-waituntil {!isNil "musicArray"};
+waituntil {!isNil "murshun_musicArray"};
 
 waituntil {time > 15};
 
 while {true} do {
 {
-whatSong = _x;
-_configWhatSong = whatSong;
-whatSong = configName whatSong;
-timeStarted = time;
+murshun_whatSong = _x;
+_config_murshun_whatSong = murshun_whatSong;
+murshun_whatSong = configName murshun_whatSong;
+murshun_timeStarted = time;
 
-publicVariable "whatSong";
-publicVariable "timeStarted";
+publicVariable "murshun_whatSong";
+publicVariable "murshun_timeStarted";
 
-skipTrack = false;
+murshun_skipTrack = false;
 
-_songInfo = [whatSong, "_"] call CBA_fnc_split;
+_songInfo = [murshun_whatSong, "_"] call CBA_fnc_split;
 _songLength = _songInfo select 1;
 _songLength = parseNumber _songLength;
 
-[[whatSong],"sendNewSong_fnc"] call BIS_fnc_MP;
+[[murshun_whatSong],"murshun_sendNewSong_fnc"] call BIS_fnc_MP;
 
-if (!isNil "musicRadiosArray") then {
-if (count musicRadiosArray > 0) then {
+if (!isNil "murshun_musicRadiosArray") then {
+if (count murshun_musicRadiosArray > 0) then {
 {
-_x enableSimulationGlobal false;
-_x allowDamage false;
-playSound3D [((getArray (musicArray select (musicArray find _configWhatSong) >> "sound")) select 0), _x, false, getPosASL _x, 4, 1, 50];
-} foreach musicRadiosArray;
+playSound3D [((getArray (murshun_musicArray select (murshun_musicArray find _config_murshun_whatSong) >> "sound")) select 0), _x, false, getPosASL _x, 4, 1, 50];
+} foreach murshun_musicRadiosArray;
 };
 };
 
 _time = time;
 waituntil {
 sleep 1;
-time >= _time + _songLength or skipTrack
+time >= _time + _songLength or murshun_skipTrack
 };
 
-skipTrack = false;
-} foreach musicArray;
+murshun_skipTrack = false;
+} foreach murshun_musicArray;
 };
 };
 };

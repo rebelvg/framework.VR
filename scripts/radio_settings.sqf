@@ -37,8 +37,7 @@ so you can re-establish communications if leaders are KIA or missing.
 "]];
 
 waituntil {
-_haveRadio = call TFAR_fnc_haveSWRadio;
-_haveRadio
+call TFAR_fnc_haveSWRadio;
 };
 
 _radio_channel = player getVariable ["radio_channel", [1, 0]];

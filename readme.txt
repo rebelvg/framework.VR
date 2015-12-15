@@ -1,5 +1,14 @@
 https://github.com/rebelvg/framework.VR
 
+Requirements.
+Latest ARMA 3.
+CBA.
+ACE3.
+ALIVE.
+TFAR.
+DAC.
+Spectator, Jip teleporting script, Cigs and Suicide script are located in the murshun mods pack. All are completely optional.
+
 Framework Info.
 Framework needs a few lines to be initialized properly.
 
@@ -27,7 +36,7 @@ Modified roster script adds frequencies to the roster.
 Main box will have virtual arsenal enabled but only in singleplayer (for loadout tests).
 0 = [this] execVM "scripts\boxes\box_medical.sqf"; //box with advanced medical equipment
 
-To enable suicide set canSuicide to true in the init.sqf.
+To enable suicide set murshun_canSuicide to true in the init.sqf.
 To disable JIP teleportation set murshun_allowJipTeleporting to false in the inti.sqf (JIP teleportation enabled by default in the murshun_menu pbo).
 
 If you want to have music radio in your mission uncomment musicRadiosArray line and add radio objects inside of the array.
@@ -36,6 +45,7 @@ musicRadiosArray = [musicRadio_01, musicRadio_02, musicRadio_03];
 musicRadio_01, etc, have to be an object in the editor (sound will spawn at the object's location, so it's better be a radio type of object, can be anything though).
 Add next line to each vehicle that you want to have a radio inside.
 0 = [this] execVM "music_radio\vehicleInit.sqf";
+or just set murshun_enableRadioInCars to true in the init.sqf for the car to have a radio (works only if you added the box script to the car).
 
 I added a ZES script that allows to place objects in zeus and copy their positions to the clipboard.
 Zeus works only in singleplayer so there's no reason to delete the module from the mission when exporting it to the final version.
