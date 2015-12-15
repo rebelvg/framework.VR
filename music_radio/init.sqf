@@ -107,22 +107,6 @@ _car = (_this select 0);
 [[_car],"murshun_stopSongOnRadio_fnc"] call BIS_fnc_MP;
 
 },[nil],0,false,true,"","vehicle _this != _this && driver _target == _this && (_target getVariable ['murshun_radioIsOn', false])"];
-
-/*
-_veh addAction ["Resync Song",{
-_car = (_this select 0);
-
-_isPlaying = _car getVariable ["murshun_radioIsOn", false];
-
-if (_isPlaying) then {
-playMusic "";
-playMusic [murshun_whatSong, time - murshun_timeStarted];
-} else {
-playMusic "";
-};
-
-},[nil],0,false,true,"","vehicle _this != _this && _this in crew _target"];
-*/
 };
 
 player addEventHandler ["Respawn", {

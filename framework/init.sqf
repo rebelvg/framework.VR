@@ -3,7 +3,6 @@ radioNetArray = [["101", "102", "103", "104", "105", "106", "107", "108"], ["111
 debugLoadout_fnc = {
 {
 [_x] execVM "scripts\loadout.sqf";
-
 [_x] spawn murshun_assignTeam_fnc;
 } foreach switchableUnits - [player];
 };

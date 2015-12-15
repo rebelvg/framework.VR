@@ -67,3 +67,6 @@ If loadoutArray is empty or do not exist framework will skip the loadouts.
 You can create custom loadouts for enemies now.
 Just set murshun_customEnemyLoadouts to true in the init.sqf and create a loadoutArray for your enemy side.
 So for example your enemies are opfor so just create loadoutArray_east and fill it accordingly to the standard.
+
+By default arma places units from one squad in a wedge formation really far away from each other. So it's kinda hard to predict where some units will actually spawn and that can happen inside a rock or a building.
+Framework now moves players closer to the leader right after the mission start. The formation will be saved, but the distance between units will be ~2 meters instead of ~7 by default.
