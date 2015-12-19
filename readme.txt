@@ -36,7 +36,7 @@ Modified roster script adds frequencies to the roster.
 Main box will have virtual arsenal enabled but only in singleplayer (for loadout tests).
 0 = [this] execVM "scripts\boxes\box_medical.sqf"; //box with advanced medical equipment
 
-To enable suicide set murshun_canSuicide to true in the init.sqf.
+To enable suicide set murshun_easywayout_canSuicide to true in the init.sqf.
 To disable JIP teleportation set murshun_allowJipTeleporting to false in the inti.sqf (JIP teleportation enabled by default in the murshun_menu pbo).
 
 If you want to have music radio in your mission uncomment musicRadiosArray line and add radio objects inside of the array.
