@@ -2,7 +2,7 @@
 //do not overwrite this file when copying framework from mission to mission
 
 //you can use loadoutArray_west, loadoutArray_east, loadoutArray_guer, loadoutArray_civ or just loadoutArray for all sides
-loadoutArray_west = [
+loadoutArray = [
 ["U_B_CombatUniform_mcam"], //uniforms array 0, supports randomize
 ["V_PlateCarrier1_rgr"], //vests array 1, supports randomize
 ["H_HelmetB_desert"], //headgears array 2, supports randomize
@@ -23,3 +23,8 @@ loadoutArray_west = [
 "Laserdesignator", //binoculars 17
 [["DemoCharge_Remote_Mag", 30], ["SatchelCharge_Remote_Mag", 10], ["ACE_CableTie", 30], ["ACE_Clacker", 2], ["EWK_Cig1", 100]] //additional content for boxes 18, ["item", quantity], cars will have the same but 3 times less
 ];
+
+loadoutArray_west = loadoutArray;
+loadoutArray_east = loadoutArray;
+loadoutArray_guer = loadoutArray;
+loadoutArray_civ = loadoutArray;
