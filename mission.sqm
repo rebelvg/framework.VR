@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=170;
+		nextID=171;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={544.80432,49.236229,413.69681};
-		dir[]={0.32453734,-0.44060022,0.83708906};
-		up[]={0.15929432,0.89766914,0.41086739};
-		aside[]={0.93244821,-3.1280797e-007,-0.36151367};
+		pos[]={341.04626,49.236229,615.33545};
+		dir[]={-0.020100383,-0.63629174,0.77130485};
+		up[]={-0.016575223,0.77141833,0.63611042};
+		aside[]={0.99973929,1.018685e-006,0.026047757};
 	};
 };
 binarizationWanted=0;
@@ -46,7 +46,8 @@ addons[]=
 	"ace_sitting",
 	"A3_Characters_F_OPFOR",
 	"A3_Characters_F_INDEP",
-	"ace_finger"
+	"ace_finger",
+	"ace_optionsmenu"
 };
 randomSeed=5706534;
 class CustomAttributes
@@ -100,7 +101,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=43;
+		items=44;
 		class Item0
 		{
 			dataType="Marker";
@@ -5740,6 +5741,39 @@ class Mission
 					};
 				};
 				nAttributes=2;
+			};
+		};
+		class Item43
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={332.92001,5,672.987};
+			};
+			id=170;
+			type="ACE_moduleAllowConfigExport";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleAllowConfigExport_allowconfigurationExport";
+					expression="_this setVariable ['allowconfigurationExport',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
 			};
 		};
 	};
