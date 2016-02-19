@@ -1,10 +1,10 @@
-disabledAI=true;
-respawn = 3;
-respawnDelay = 15;
-respawnDialog = 0;
+//disabledAI=true;
+//respawn = 3;
+//respawnDelay = 15;
+//respawnDialog = 0;
 enableDebugConsole = 1;
 forceRotorLibSimulation = 2;
-saving = 0;
+//saving = 0;
 
 onLoadName = "Framework";
 onLoadMission = "";
@@ -15,7 +15,7 @@ class Header
 {
 	gameType = COOP;
 	minPlayers = 1;
-	maxPlayers = 42;
+	maxPlayers = 64;
 };
 
 class CfgDebriefing

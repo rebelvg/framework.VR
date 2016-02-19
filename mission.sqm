@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={571.89575,79.502937,346.00327};
-		dir[]={0.038448717,-0.5269435,0.84917718};
-		up[]={0.023842899,0.84984553,0.52647209};
-		aside[]={0.99906582,1.0395306e-006,-0.045240618};
+		pos[]={592.79529,101.20308,312.12427};
+		dir[]={0.029503191,-0.47257027,0.88080388};
+		up[]={0.01582027,0.8812921,0.47230679};
+		aside[]={0.99944347,3.2741809e-009,-0.033477064};
 	};
 };
 binarizationWanted=0;
@@ -53,7 +53,19 @@ randomSeed=5706534;
 class ScenarioData
 {
 	overViewPicture="logo.jpg";
+	overViewPictureLocked="logo.jpg";
+	loadScreen="logo.jpg";
+	saving=0;
+	respawnDialog=0;
 	disabledAI=1;
+	respawn=3;
+	respawnDelay=15;
+	class Header
+	{
+		gameType="Coop";
+		minPlayers=1;
+		maxPlayers=64;
+	};
 };
 class CustomAttributes
 {
@@ -61,25 +73,6 @@ class CustomAttributes
 	{
 		name="Multiplayer";
 		class Attribute0
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -108,10 +101,29 @@ class CustomAttributes
 										"STRING"
 									};
 								};
-								value="None";
+								value="Counter";
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
 				};
 			};
 		};
@@ -135,7 +147,7 @@ class CustomAttributes
 							"SCALAR"
 						};
 					};
-					value=0;
+					value=1;
 				};
 			};
 		};
