@@ -31,6 +31,8 @@ _x disableAI "ANIM";
 };
 } foreach switchableUnits;
 [] spawn debugLoadout_fnc;
+
+[player] spawn BIS_fnc_traceBullets;
 };
 
 if (!isNil "ZE_Zeus") then {

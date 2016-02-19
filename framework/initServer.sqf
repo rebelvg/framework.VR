@@ -1,3 +1,4 @@
+/*
 waitUntil {time > 0};
 
 {
@@ -9,3 +10,4 @@ _LY = (getPosATL leader _x select 2);
 _x setPosATL [_LX, _LZ, _LY];
 };
 } foreach (switchableUnits + playableUnits);
+*/
