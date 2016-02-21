@@ -91,6 +91,9 @@ loadoutArray = [
 		]
 	], //personal items
 	[
+		["ToolKit", 2],
+		["ACE_wirecutter", 2],
+		["ACE_SpareBarrel", 2],
 		["DemoCharge_Remote_Mag", 30],
 		["SatchelCharge_Remote_Mag", 10],
 		["ACE_CableTie", 30],

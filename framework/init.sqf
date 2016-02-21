@@ -142,10 +142,6 @@ murshun_giveMedicalSupplies_fnc = {
 murshun_fillBox_fnc = {
 	_unit = _this select 0;
 	_divider = _this select 1;
-	
-	_unit addItemCargoGlobal ["ToolKit", ceil (2 / _divider)];
-	_unit addItemCargoGlobal ["ACE_wirecutter", ceil (2 / _divider)];
-	_unit addItemCargoGlobal ["ACE_SpareBarrel", ceil (2 / _divider)];
 
 	{
 		if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
