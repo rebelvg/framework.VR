@@ -104,6 +104,6 @@ loadoutArray = [
 ];
 
 loadoutArray_west = loadoutArray;
-loadoutArray_east = loadoutArray;
-loadoutArray_guer = loadoutArray;
-loadoutArray_civ = loadoutArray;
+loadoutArray_east = [];
+loadoutArray_guer = [];
+loadoutArray_civ = [];

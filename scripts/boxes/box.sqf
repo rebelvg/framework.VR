@@ -6,25 +6,22 @@ if (!isServer) exitWith {};
 _loadoutArray = [];
 
 waitUntil {!isNil "murshun_frameworkInit"};
-waituntil {time > 1 and (!isNil "loadoutArray" or !isNil "loadoutArray_west" or !isNil "loadoutArray_east" or !isNil "loadoutArray_guer" or !isNil "loadoutArray_civ")};
+waitUntil {time > 1 and (!isNil "loadoutArray_west" or !isNil "loadoutArray_east" or !isNil "loadoutArray_guer" or !isNil "loadoutArray_civ")};
 
 if (isNil "_side") then {
 	_side = side _unit;
 };
 
-switch (side _unit) do {
+switch (_side) do {
 case WEST: {
 		_loadoutArray = ["loadoutArray_west"] call murshun_checkArrayExists_fnc;
 	};
-
 case EAST: {
 		_loadoutArray = ["loadoutArray_east"] call murshun_checkArrayExists_fnc;
 	};
-
 case RESISTANCE: {
 		_loadoutArray = ["loadoutArray_guer"] call murshun_checkArrayExists_fnc;
 	};
-
 case CIVILIAN: {
 		_loadoutArray = ["loadoutArray_civ"] call murshun_checkArrayExists_fnc;
 	};

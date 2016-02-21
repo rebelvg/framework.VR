@@ -5,14 +5,8 @@ murshun_checkArrayExists_fnc = {
 
 	_return = [];
 
-	if (!isNil _array) then
-	{
+	if (!isNil _array) then {
 		_return = missionNamespace getVariable _array;
-	} else {
-		if (!isNil "loadoutArray") then
-		{
-			_return = loadoutArray;
-		};
 	};
 
 	_return;
@@ -84,8 +78,10 @@ murshun_giveWeapon_fnc = {
 	_devices = _array select 2;
 
 	{
-		if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
-			_unit addMagazines _x;
+		if ([_x] call murshun_checkVarNotEmpty_fnc) then {
+			if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
+				_unit addMagazines _x;
+			};
 		};
 	} foreach _mags;
 
@@ -105,8 +101,10 @@ murshun_giveItems_fnc = {
 	_array = _this select 1;
 
 	{
-		if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
-			for "_i" from 1 to (_x select 1) do {_unit addItem (_x select 0)};
+		if ([_x] call murshun_checkVarNotEmpty_fnc) then {
+			if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
+				for "_i" from 1 to (_x select 1) do {_unit addItem (_x select 0)};
+			};
 		};
 	} foreach _array;
 };
@@ -144,8 +142,10 @@ murshun_fillBox_fnc = {
 	_divider = _this select 1;
 
 	{
-		if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
-			_unit addItemCargoGlobal [_x select 0, ceil (100 / _divider)];
+		if ([_x] call murshun_checkVarNotEmpty_fnc) then {
+			if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
+				_unit addItemCargoGlobal [_x select 0, ceil (100 / _divider)];
+			};
 		};
 	} foreach (_loadoutArray select 1 select 0);
 
@@ -157,8 +157,10 @@ murshun_fillBox_fnc = {
 				_mags = _x select 1;
 				
 				{
-					if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
-						_unit addMagazineCargoGlobal [_x select 0, ceil (50 / _divider)];
+					if ([_x] call murshun_checkVarNotEmpty_fnc) then {
+						if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
+							_unit addMagazineCargoGlobal [_x select 0, ceil (50 / _divider)];
+						};
 					};
 				} foreach _mags;
 			};
@@ -167,8 +169,10 @@ murshun_fillBox_fnc = {
 	} foreach (_loadoutArray select 0);
 
 	{
-		if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
-			_unit addItemCargoGlobal [_x select 0, ceil ((_x select 1) / _divider)];
+		if ([_x] call murshun_checkVarNotEmpty_fnc) then {
+			if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
+				_unit addItemCargoGlobal [_x select 0, ceil ((_x select 1) / _divider)];
+			};
 		};
 	} foreach (_loadoutArray select 2);
 };
