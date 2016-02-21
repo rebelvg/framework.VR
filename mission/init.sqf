@@ -2,26 +2,102 @@
 //do not overwrite this file when copying framework from mission to mission
 
 //you can use loadoutArray_west, loadoutArray_east, loadoutArray_guer, loadoutArray_civ or just loadoutArray for all sides
+
+/*
+classesArray = ["class1", "class2", "class3"];
+fashionArray = ["uniform", "vest", "headgear", "backpack", "goggles"];
+weaponArray1 = ["rifle", [["mag1", number], ["mag2", number]], ["device1", "device2"]];
+weaponArray2 = ["handgun", [["mag", number]], ["device"]];
+weaponsArray = [weaponArray1, weaponArray2];
+eqpArray = [classesArray, [fashionArray, weaponsArray]];
+*/
+
+/*
+//example
+
+_classesArray = ["officer", "squad leader", "team leader"];
+_fahionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
+_weaponArray1 = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]];
+_weaponArray2 = ["hgun_Pistol_heavy_01_MRD_F", [["11Rnd_45ACP_Mag", 3]], ["optic_MRD"]];
+_weaponsArray = [_weaponArray1, _weaponArray2];
+_eqpArray1 = [_classesArray, [_fashionArray, _weaponsArray]];
+
+_classesArray = ["rifleman"];
+_fahionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "", "", ""];
+_weaponArray1 = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]];
+_weaponsArray = [_weaponArray1];
+_eqpArray2 = [_classesArray, [_fashionArray, _weaponsArray]];
+
 loadoutArray = [
-["U_B_CombatUniform_mcam"], //uniforms array 0, supports randomize
-["V_PlateCarrier1_rgr"], //vests array 1, supports randomize
-["H_HelmetB_desert"], //headgears array 2, supports randomize
-["B_FieldPack_khk"], //backpacks array 3, supports randomize
-"", // radio backpack 4
-["G_Bandanna_khk", ""], //facewears array 5, supports randomize
-["ACE_EarPlugs", "ACE_Flashlight_XL50"], //items 6
-["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "tf_anprc152", "NVGoggles"], //link items 7, personal radio, nvgs
-[["arifle_MX_Black_F", "30Rnd_65x39_caseless_mag", ["", "", "", ""]]], //rifles array 8, mag, devices, supports randomize
-["arifle_MX_GL_Black_F", "30Rnd_65x39_caseless_mag", "1Rnd_HE_Grenade_shell", ["", "", "", ""]], //gl rifle 9, mag, gl grenade, devices
-["arifle_MX_Black_F", "30Rnd_65x39_caseless_mag", ["", "", "", ""]], //mg 10, mag, devices
-["arifle_MX_Black_F", "30Rnd_65x39_caseless_mag", ["", "", "", ""]], //marksman rifle 11, mag, devices
-"", //at singleshot 12
-["", "", ["", "", "", ""]], //at reloadable 13, mag, devices
-["", ""], //aa 14, mag
-[["HandGrenade"], ["SmokeShellBlue"]], //grenades array 15, lethal grenades, non lethal grenades
-["hgun_ACPC2_F", "9Rnd_45ACP_Mag", ["", "", "", ""]], //sl handgun 16, mag, devices
-"Laserdesignator", //binoculars 17
-[["DemoCharge_Remote_Mag", 30], ["SatchelCharge_Remote_Mag", 10], ["ACE_CableTie", 30], ["ACE_Clacker", 2], ["EWK_Cig1", 100]] //additional content for boxes 18, ["item", quantity], cars will have the same but 3 times less
+	[
+		_eqpArray1,
+		_eqpArray2
+	], //equipment
+	[
+		[
+			["ACE_EarPlugs", 1]
+		],
+		[
+			"ItemMap"
+		]
+	], //personal items
+	[
+		["DemoCharge_Remote_Mag", 30]
+	] //additional content for boxes
+];
+*/
+
+loadoutArray = [
+	[
+		[
+			["officer", "squad leader", "team leader"],
+			[["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""], [["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]], ["hgun_Pistol_heavy_01_MRD_F", [["11Rnd_45ACP_Mag", 3]], ["optic_MRD"]], ["Laserdesignator", [], []]]]
+		],
+		[
+			["rifleman"],
+			[["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""], [["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]]
+		],
+		[
+			["autorifleman"],
+			[["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""], [["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]]
+		],
+		[
+			["rifleman (at)"],
+			[["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""], [["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]]
+		],
+		[
+			["missile specialist (at)"],
+			[["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""], [["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]]
+		],
+		[
+			["engineer"],
+			[["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""], [["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]]
+		]
+	], //equipment
+	[
+		[
+			["ACE_EarPlugs", 1],
+			["ACE_Flashlight_XL50", 1],
+			["HandGrenade", 1],
+			["SmokeShellBlue", 2]
+		],
+		[
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemGPS",
+			"tf_anprc152",
+			"NVGoggles"
+		]
+	], //personal items
+	[
+		["DemoCharge_Remote_Mag", 30],
+		["SatchelCharge_Remote_Mag", 10],
+		["ACE_CableTie", 30],
+		["ACE_Clacker", 2],
+		["murshun_cigs_matches", 50],
+		["EWK_Cig1", 500]
+	] //additional content for boxes
 ];
 
 loadoutArray_west = loadoutArray;
