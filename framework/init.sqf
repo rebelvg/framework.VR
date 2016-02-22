@@ -110,23 +110,6 @@ murshun_giveLinkItems = {
 	} foreach _array;
 };
 
-murshun_giveMedicalSupplies_fnc = {
-	_unit = _this select 0;
-	
-	if (ace_medical_level > 1) then {
-		for "_i" from 1 to 10 do {_unit addItem "ACE_elasticBandage"};
-		for "_i" from 1 to 10 do {_unit addItem "ACE_quikclot"};
-		for "_i" from 1 to 4 do {_unit addItem "ACE_morphine"};
-		for "_i" from 1 to 2 do {_unit addItem "ACE_epinephrine"};
-		for "_i" from 1 to 1 do {_unit addItem "ACE_atropine"};
-		for "_i" from 1 to 1 do {_unit addItem "ACE_tourniquet"};
-	} else {
-		for "_i" from 1 to 10 do {_unit addItem "ACE_elasticBandage"};
-		for "_i" from 1 to 4 do {_unit addItem "ACE_morphine"};
-		for "_i" from 1 to 2 do {_unit addItem "ACE_epinephrine"};
-	};
-};
-
 murshun_fillBox_fnc = {
 	_unit = _this select 0;
 	_divider = _this select 1;

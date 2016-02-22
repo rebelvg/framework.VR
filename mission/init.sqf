@@ -47,6 +47,11 @@ loadoutArray = [
 ];
 */
 
+_advancedMedicine = [["ACE_elasticBandage", 10], ["ACE_quikclot", 10], ["ACE_morphine", 4], ["ACE_epinephrine", 2], ["ACE_atropine", 1], ["ACE_tourniquet", 1]];
+_basicMedicine = [["ACE_elasticBandage", 10], ["ACE_morphine", 4], ["ACE_epinephrine", 2]];
+_advancedMedic = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 8], ["ACE_atropine", 4], ["ACE_tourniquet", 4], ["ACE_personalAidKit", 3], ["ACE_salineIV_500", 2]];
+_basicMedic = [["ACE_elasticBandage", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 6], ["ACE_salineIV_500", 2]];
+
 loadoutArray = [
 	[
 		[
@@ -125,8 +130,12 @@ loadoutArray = [
 			[["EWK_Cigar1", 1], ["murshun_cigs_lighter", 1]]
 		],
 		[
+			["combat life saver"],
+			_advancedMedic
+		],
+		[
 			["all units"],
-			[["ACE_Clacker", 1]]
+			_advancedMedicine + [["ACE_Clacker", 1]]
 		]
 	] //additional items per class
 ];

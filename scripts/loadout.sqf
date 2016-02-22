@@ -31,6 +31,7 @@ if (count _loadoutArray == 4) then {
 	removeVest _unit;
 	removeHeadgear _unit;
 	
+	_fallbackClassName = _className;
 	_allClassesArray = [];
 	
 	{
@@ -39,11 +40,11 @@ if (count _loadoutArray == 4) then {
 	
 	if (!(_className in _allClassesArray)) then {
 		systemchat format ["Can't find loadout for %1, falling back to rifleman.", _className];
-		_className = "rifleman";
+		_fallbackClassName = "rifleman";
 	};
 
 	{
-		if (_className in (_x select 0)) then {
+		if (_fallbackClassName in (_x select 0)) then {
 			_fashionArray = _x select 1 select 0;
 			_weaponsArray = _x select 1 select 1;
 			
@@ -71,6 +72,4 @@ if (count _loadoutArray == 4) then {
 			[_unit, _itemsArray] call murshun_giveItems_fnc;
 		};
 	} foreach (_loadoutArray select 3);
-
-	[_unit] call murshun_giveMedicalSupplies_fnc;
 };
