@@ -21,7 +21,7 @@ case CIVILIAN: {
 	};
 };
 
-if (count _loadoutArray == 3) then {
+if (count _loadoutArray == 4) then {
 	removeAllAssignedItems _unit;
 	removeAllWeapons _unit;
 	removeBackpack _unit;
@@ -56,15 +56,21 @@ if (count _loadoutArray == 3) then {
 			};
 
 			{
-				if (count _x == 3) then {		
-					[_unit, _x] call murshun_giveWeapon_fnc;
-				};
+				[_unit, _x] call murshun_giveWeapon_fnc;
 			} foreach _weaponsArray;
 		};
 	} foreach (_loadoutArray select 0);
 
 	[_unit, _loadoutArray select 1 select 0] call murshun_giveItems_fnc;
-	[_unit, _loadoutArray select 1 select 1] call murshun_giveLinkItems;	
+	[_unit, _loadoutArray select 1 select 1] call murshun_giveLinkItems;
+	
+	{
+		if (_className in (_x select 0) || "all units" in (_x select 0)) then {
+			_itemsArray = _x select 1;
+
+			[_unit, _itemsArray] call murshun_giveItems_fnc;
+		};
+	} foreach (_loadoutArray select 3);
 
 	[_unit] call murshun_giveMedicalSupplies_fnc;
 };

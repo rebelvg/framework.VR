@@ -12,23 +12,11 @@ murshun_checkArrayExists_fnc = {
 	_return;
 };
 
-murshun_checkVarNotEmpty_fnc = {
-	_var = _this select 0;
-
-	_return = false;
-
-	if ((count _var != 0)) then {
-		_return = true;
-	};
-
-	_return;
-};
-
 murshun_giveUniform_fnc = {
 	_unit = _this select 0;
 	_string = _this select 1;
 
-	if ([_string] call murshun_checkVarNotEmpty_fnc) then {
+	if (count _string != 0) then {
 		_unit forceAddUniform _string;
 	};
 };
@@ -37,7 +25,7 @@ murshun_giveVest_fnc = {
 	_unit = _this select 0;
 	_string = _this select 1;
 
-	if ([_string] call murshun_checkVarNotEmpty_fnc) then {
+	if (count _string != 0) then {
 		_unit addVest _string;
 	};
 };
@@ -46,7 +34,7 @@ murshun_giveHeadgear_fnc = {
 	_unit = _this select 0;
 	_string = _this select 1;
 
-	if ([_string] call murshun_checkVarNotEmpty_fnc) then {
+	if (count _string != 0) then {
 		_unit addHeadgear _string;
 	};
 };
@@ -55,7 +43,7 @@ murshun_giveBackpack_fnc = {
 	_unit = _this select 0;
 	_string = _this select 1;
 
-	if ([_string] call murshun_checkVarNotEmpty_fnc) then {
+	if (count _string != 0) then {
 		_unit addBackpack _string;
 	};
 };
@@ -64,7 +52,7 @@ murshun_giveGoggles_fnc = {
 	_unit = _this select 0;
 	_string = _this select 1;
 
-	if ([_string] call murshun_checkVarNotEmpty_fnc) then {
+	if (count _string != 0) then {
 		_unit addGoggles _string;
 	};
 };
@@ -77,23 +65,25 @@ murshun_giveWeapon_fnc = {
 	_mags = _array select 1;
 	_devices = _array select 2;
 
-	{
-		if ([_x] call murshun_checkVarNotEmpty_fnc) then {
-			if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
-				_unit addMagazines _x;
+	if (count _array == 3) then {
+		{
+			if (count _x == 2) then {
+				if (count (_x select 0) != 0) then {
+					_unit addMagazines _x;
+				};
 			};
-		};
-	} foreach _mags;
+		} foreach _mags;
 
-	if ([_weapon] call murshun_checkVarNotEmpty_fnc) then {
-		_unit addWeapon _weapon;
+		if (count _weapon != 0) then {
+			_unit addWeapon _weapon;
+		};
+
+		{
+			if (count _x != 0) then {
+				_unit addPrimaryWeaponItem _x;
+			};
+		} foreach _devices;
 	};
-
-	{
-		if ([_x] call murshun_checkVarNotEmpty_fnc) then {
-			_unit addPrimaryWeaponItem _x;
-		};
-	} foreach _devices;
 };
 
 murshun_giveItems_fnc = {
@@ -101,8 +91,8 @@ murshun_giveItems_fnc = {
 	_array = _this select 1;
 
 	{
-		if ([_x] call murshun_checkVarNotEmpty_fnc) then {
-			if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
+		if (count _x == 2) then {
+			if (count (_x select 0) != 0) then {
 				for "_i" from 1 to (_x select 1) do {_unit addItem (_x select 0)};
 			};
 		};
@@ -114,7 +104,7 @@ murshun_giveLinkItems = {
 	_array = _this select 1;
 
 	{
-		if ([_x] call murshun_checkVarNotEmpty_fnc) then {
+		if (count _x != 0) then {
 			_unit linkItem _x;
 		};
 	} foreach _array;
@@ -142,8 +132,8 @@ murshun_fillBox_fnc = {
 	_divider = _this select 1;
 
 	{
-		if ([_x] call murshun_checkVarNotEmpty_fnc) then {
-			if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
+		if (count _x == 2) then {
+			if (count (_x select 0) != 0) then {
 				_unit addItemCargoGlobal [_x select 0, ceil (100 / _divider)];
 			};
 		};
@@ -157,8 +147,8 @@ murshun_fillBox_fnc = {
 				_mags = _x select 1;
 				
 				{
-					if ([_x] call murshun_checkVarNotEmpty_fnc) then {
-						if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
+					if (count _x == 2) then {
+						if (count (_x select 0) != 0) then {
 							_unit addMagazineCargoGlobal [_x select 0, ceil (50 / _divider)];
 						};
 					};
@@ -169,8 +159,8 @@ murshun_fillBox_fnc = {
 	} foreach (_loadoutArray select 0);
 
 	{
-		if ([_x] call murshun_checkVarNotEmpty_fnc) then {
-			if ([_x select 0] call murshun_checkVarNotEmpty_fnc) then {
+		if (count _x == 2) then {
+			if (count (_x select 0) != 0) then {
 				_unit addItemCargoGlobal [_x select 0, ceil ((_x select 1) / _divider)];
 			};
 		};
@@ -206,6 +196,7 @@ if (!isMultiplayer) then {
 			_x disableAI "ANIM";
 		};
 	} foreach switchableUnits;
+	
 	[] spawn debugLoadout_fnc;
 
 	[player] spawn BIS_fnc_traceBullets;

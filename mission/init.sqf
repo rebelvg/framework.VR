@@ -51,27 +51,45 @@ loadoutArray = [
 	[
 		[
 			["officer", "squad leader", "team leader"],
-			[["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""], [["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]], ["hgun_Pistol_heavy_01_MRD_F", [["11Rnd_45ACP_Mag", 3]], ["optic_MRD"]], ["Laserdesignator", [], []]]]
+			[
+				["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""],
+				[["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]], ["hgun_Pistol_heavy_01_MRD_F", [["11Rnd_45ACP_Mag", 3]], ["optic_MRD"]], ["Laserdesignator", [], []]]
+			]
 		],
 		[
 			["rifleman"],
-			[["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""], [["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]]
+			[
+				["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""],
+				[["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]
+			]
 		],
 		[
 			["autorifleman"],
-			[["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""], [["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]]
+			[
+				["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""],
+				[["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]
+			]
 		],
 		[
 			["rifleman (at)"],
-			[["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""], [["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]]
+			[
+				["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""],
+				[["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]
+			]
 		],
 		[
 			["missile specialist (at)"],
-			[["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""], [["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]]
+			[
+				["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""],
+				[["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]
+			]
 		],
 		[
 			["engineer"],
-			[["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""], [["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]]
+			[
+				["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""],
+				[["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]
+			]
 		]
 	], //equipment
 	[
@@ -100,7 +118,17 @@ loadoutArray = [
 		["ACE_Clacker", 2],
 		["murshun_cigs_matches", 50],
 		["EWK_Cig1", 500]
-	] //additional content for boxes
+	], //additional content for boxes
+	[
+		[
+			["officer", "squad leader", "team leader"],
+			[["EWK_Cigar1", 1], ["murshun_cigs_lighter", 1]]
+		],
+		[
+			["all units"],
+			[["ACE_Clacker", 1]]
+		]
+	] //additional items per class
 ];
 
 loadoutArray_west = loadoutArray;

@@ -27,7 +27,7 @@ case CIVILIAN: {
 	};
 };
 
-if (count _loadoutArray == 3) then {
+if (count _loadoutArray == 4) then {
 	clearMagazineCargoGlobal _unit;
 	clearWeaponCargoGlobal _unit;
 	clearitemcargoGlobal _unit;
