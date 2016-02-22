@@ -43,7 +43,9 @@ loadoutArray = [
 	], //personal items
 	[
 		["DemoCharge_Remote_Mag", 30]
-	] //additional content for boxes
+	], //additional content for boxes
+	[
+	] //additional personal items per class
 ];
 */
 
@@ -137,7 +139,7 @@ loadoutArray = [
 			["all units"],
 			_advancedMedicine + [["ACE_Clacker", 1]]
 		]
-	] //additional items per class
+	] //additional personal items per class
 ];
 
 loadoutArray_west = loadoutArray;

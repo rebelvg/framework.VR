@@ -62,8 +62,10 @@ if (count _loadoutArray == 4) then {
 		};
 	} foreach (_loadoutArray select 0);
 
-	[_unit, _loadoutArray select 1 select 0] call murshun_giveItems_fnc;
-	[_unit, _loadoutArray select 1 select 1] call murshun_giveLinkItems;
+	if (count (_loadoutArray select 1) == 2) then {
+		[_unit, _loadoutArray select 1 select 0] call murshun_giveItems_fnc;
+		[_unit, _loadoutArray select 1 select 1] call murshun_giveLinkItems;
+	};
 	
 	{
 		if (_className in (_x select 0) || "all units" in (_x select 0)) then {

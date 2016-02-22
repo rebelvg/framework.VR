@@ -113,14 +113,16 @@ murshun_giveLinkItems = {
 murshun_fillBox_fnc = {
 	_unit = _this select 0;
 	_divider = _this select 1;
-
-	{
-		if (count _x == 2) then {
-			if (count (_x select 0) != 0) then {
-				_unit addItemCargoGlobal [_x select 0, ceil (100 / _divider)];
+	
+	if (count (_loadoutArray select 1) == 2) then {
+		{
+			if (count _x == 2) then {
+				if (count (_x select 0) != 0) then {
+					_unit addItemCargoGlobal [_x select 0, ceil (100 / _divider)];
+				};
 			};
-		};
-	} foreach (_loadoutArray select 1 select 0);
+		} foreach (_loadoutArray select 1 select 0);
+	};
 
 	{
 		_weaponsArray = _x select 1 select 1;
