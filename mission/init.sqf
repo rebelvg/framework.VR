@@ -1,7 +1,7 @@
 //place all mission related stuff here
 //do not overwrite this file when copying framework from mission to mission
 
-//you can use loadoutArray_west, loadoutArray_east, loadoutArray_guer, loadoutArray_civ or just loadoutArray for all sides
+//you can use loadoutArray_west, loadoutArray_east, loadoutArray_guer, loadoutArray_civ
 
 /*
 classesArray = ["class1", "class2", "class3"];
@@ -12,93 +12,54 @@ weaponsArray = [weaponArray1, weaponArray2];
 eqpArray = [classesArray, [fashionArray, weaponsArray]];
 */
 
-/*
-//example
-
-_classesArray = ["officer", "squad leader", "team leader"];
-_fahionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
-_weaponArray1 = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]];
-_weaponArray2 = ["hgun_Pistol_heavy_01_MRD_F", [["11Rnd_45ACP_Mag", 3]], ["optic_MRD"]];
-_weaponsArray = [_weaponArray1, _weaponArray2];
-_eqpArray1 = [_classesArray, [_fashionArray, _weaponsArray]];
-
-_classesArray = ["rifleman"];
-_fahionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "", "", ""];
-_weaponArray1 = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]];
-_weaponsArray = [_weaponArray1];
-_eqpArray2 = [_classesArray, [_fashionArray, _weaponsArray]];
-
-loadoutArray = [
-	[
-		_eqpArray1,
-		_eqpArray2
-	], //equipment
-	[
-		[
-			["ACE_EarPlugs", 1]
-		],
-		[
-			"ItemMap"
-		]
-	], //personal items
-	[
-		["DemoCharge_Remote_Mag", 30]
-	], //additional content for boxes
-	[
-	] //additional personal items per class
-];
-*/
-
 _advancedMedicine = [["ACE_elasticBandage", 10], ["ACE_quikclot", 10], ["ACE_morphine", 4], ["ACE_epinephrine", 2], ["ACE_atropine", 1], ["ACE_tourniquet", 1]];
 _basicMedicine = [["ACE_elasticBandage", 10], ["ACE_morphine", 4], ["ACE_epinephrine", 2]];
 _advancedMedic = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 8], ["ACE_atropine", 4], ["ACE_tourniquet", 4], ["ACE_personalAidKit", 3], ["ACE_salineIV_500", 2]];
 _basicMedic = [["ACE_elasticBandage", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 6], ["ACE_salineIV_500", 2]];
+
+_fashionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
+_rifleArray = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]];
+_handgunArray = ["hgun_P07_F", [["16Rnd_9x21_Mag", 3]], []];
+_binocularsArray = ["Laserdesignator", [], []];
 
 loadoutArray = [
 	[
 		[
 			["officer", "squad leader", "team leader"],
 			[
-				["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""],
-				[["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]], ["hgun_Pistol_heavy_01_MRD_F", [["11Rnd_45ACP_Mag", 3]], ["optic_MRD"]], ["Laserdesignator", [], []]]
+				_fashionArray,
+				[_rifleArray, _handgunArray, _binocularsArray]
 			]
 		],
 		[
 			["rifleman"],
 			[
-				["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""],
-				[["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]
+				_fashionArray,
+				[_rifleArray]
 			]
 		],
 		[
 			["autorifleman"],
 			[
-				["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""],
-				[["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]
+				_fashionArray,
+				[_rifleArray]
 			]
 		],
 		[
 			["rifleman (at)"],
 			[
-				["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""],
-				[["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]
+				_fashionArray,
+				[_rifleArray]
 			]
 		],
 		[
 			["missile specialist (at)"],
 			[
-				["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""],
-				[["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]
-			]
-		],
-		[
-			["engineer"],
-			[
-				["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""],
-				[["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]]]
+				_fashionArray,
+				[_rifleArray]
 			]
 		]
-	], //equipment
+	], //equipment per class
 	[
 		[
 			["ACE_EarPlugs", 1],
@@ -128,16 +89,12 @@ loadoutArray = [
 	], //additional content for boxes
 	[
 		[
-			["officer", "squad leader", "team leader"],
-			[["EWK_Cigar1", 1], ["murshun_cigs_lighter", 1]]
-		],
-		[
 			["combat life saver"],
 			_advancedMedic
 		],
 		[
 			["all units"],
-			_advancedMedicine + [["ACE_Clacker", 1]]
+			_advancedMedicine
 		]
 	] //additional personal items per class
 ];

@@ -188,9 +188,7 @@ if (!isMultiplayer) then {
 };
 
 if (!isNil "ZE_Zeus") then {
-	if (!isMultiplayer) then {
-		[] execVM "zes.sqf";
-	} else {
+	if (isMultiplayer) then {
 		deleteVehicle ZE_Zeus;
 	};
 };
