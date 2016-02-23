@@ -39,7 +39,9 @@ if (count _loadoutArray == 4) then {
 	} foreach (_loadoutArray select 0);
 	
 	if (!(_className in _allClassesArray)) then {
-		systemchat format ["Can't find loadout for %1, falling back to rifleman.", _className];
+		if (!isMultiplayer) then {
+			systemchat format ["Can't find loadout for %1, falling back to rifleman.", _className];
+		};
 		_fallbackClassName = "rifleman";
 	};
 

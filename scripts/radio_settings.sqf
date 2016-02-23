@@ -25,7 +25,13 @@ Squad Leader + Medic                <font color='#FFEC00'>[</font color>Channel 
 Squad Leader + Fireteam Leaders    <font color='#FFEC00'>[</font color><font color='#8A8A8A'>Alt Channel - 138</font color><font color='#FFEC00'>]</font color><br/>
 Squad Leader + Medic                <font color='#FFEC00'>[</font color>Channel 8 - 138<font color='#FFEC00'>]</font color><br/>
 <font color='#FF9980'>Fireteam 1</font color>                           	<font color='#FFEC00'>[</font color>Channel 1 - 131<font color='#FFEC00'>]</font color><br/>
-<font color='#99E699'>Fireteam 2</font color>                            <font color='#FFEC00'>[</font color>Channel 2 - 132<font color='#FFEC00'>]</font color><br/><br/><br/>
+<font color='#99E699'>Fireteam 2</font color>                            <font color='#FFEC00'>[</font color>Channel 2 - 132<font color='#FFEC00'>]</font color><br/><br/>
+
+<font size='20'>DELTA</font><br/>
+Squad Leader + Fireteam Leaders    <font color='#FFEC00'>[</font color><font color='#8A8A8A'>Alt Channel - 148</font color><font color='#FFEC00'>]</font color><br/>
+Squad Leader + Medic                <font color='#FFEC00'>[</font color>Channel 8 - 148<font color='#FFEC00'>]</font color><br/>
+<font color='#FF9980'>Fireteam 1</font color>                           	<font color='#FFEC00'>[</font color>Channel 1 - 141<font color='#FFEC00'>]</font color><br/>
+<font color='#99E699'>Fireteam 2</font color>                            <font color='#FFEC00'>[</font color>Channel 2 - 142<font color='#FFEC00'>]</font color><br/><br/><br/>
 
 Radios are automatically set up for ease of use.<br/>
 <font color='#FFEC00'>[</font color>CAPS<font color='#FFEC00'>]</font color> is bound for inter-group communication.<br/>
@@ -40,7 +46,7 @@ waituntil {
 call TFAR_fnc_haveSWRadio;
 };
 
-_radio_channel = player getVariable ["radio_channel", [1, 0]];
+_radio_channel = player getVariable ["radio_channel", [6, 0]];
 _channel = _radio_channel select 0;
 _team = _radio_channel select 1;
 

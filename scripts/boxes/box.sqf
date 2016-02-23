@@ -27,6 +27,10 @@ case CIVILIAN: {
 	};
 };
 
+if (!isMultiplayer) then {
+	_unit addAction ["Virtual Arsenal",{["Open",true] call BIS_fnc_arsenal}];
+};
+
 if (count _loadoutArray == 4) then {
 	clearMagazineCargoGlobal _unit;
 	clearWeaponCargoGlobal _unit;
@@ -35,10 +39,6 @@ if (count _loadoutArray == 4) then {
 
 	if (_unit isKindOf "thing") then {
 		_unit allowDamage false;
-
-		if (!isMultiplayer) then {
-			_unit addAction ["Virtual Arsenal",{["Open",true] call BIS_fnc_arsenal}];
-		};
 		
 		[_unit, 1] call murshun_fillBox_fnc;
 	} else {
