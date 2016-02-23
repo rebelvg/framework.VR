@@ -30,14 +30,14 @@ if (count _loadoutArray == 4) then {
 	removeUniform _unit;
 	removeVest _unit;
 	removeHeadgear _unit;
-	
+
 	_fallbackClassName = _className;
 	_allClassesArray = [];
-	
+
 	{
 		_allClassesArray = _allClassesArray + (_x select 0);
 	} foreach (_loadoutArray select 0);
-	
+
 	if (!(_className in _allClassesArray)) then {
 		if (!isMultiplayer) then {
 			systemchat format ["Can't find loadout for %1, falling back to rifleman.", _className];
@@ -49,7 +49,7 @@ if (count _loadoutArray == 4) then {
 		if (_fallbackClassName in (_x select 0)) then {
 			_fashionArray = _x select 1 select 0;
 			_weaponsArray = _x select 1 select 1;
-			
+
 			if (count _fashionArray == 5) then {
 				[_unit, _fashionArray select 0] call murshun_giveUniform_fnc;
 				[_unit, _fashionArray select 1] call murshun_giveVest_fnc;
@@ -68,7 +68,7 @@ if (count _loadoutArray == 4) then {
 		[_unit, _loadoutArray select 1 select 0] call murshun_giveItems_fnc;
 		[_unit, _loadoutArray select 1 select 1] call murshun_giveLinkItems;
 	};
-	
+
 	{
 		if (_className in (_x select 0) || "all units" in (_x select 0)) then {
 			_itemsArray = _x select 1;
