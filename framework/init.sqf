@@ -175,6 +175,19 @@ murshun_assignTeam_fnc = {
 	[[_unit, _teamsArray select _team], "ace_interaction_fnc_joinTeam"] call BIS_fnc_MP;
 };
 
+murshun_framework_revivePlayers_fnc = {
+	{
+		[[], "murshun_disableSpectator_fnc", _x] call BIS_fnc_MP;
+	} foreach (nearestObjects [spectator_respawn_flag, ["Man"], 10]);
+
+	{
+		[[_x, false], "murshun_addToSpectatorArray_fnc", false] call BIS_fnc_MP;
+	} foreach murshun_respawnArray;
+	
+	murshun_respawnArrayLocal = [];
+	publicVariable "murshun_respawnArrayLocal";
+};
+
 if (!isMultiplayer) then {
 	{
 		if (!isPlayer _x) then {

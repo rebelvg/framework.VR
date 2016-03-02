@@ -1,10 +1,6 @@
-//disabledAI=true;
-//respawn = 3;
-//respawnDelay = 15;
-//respawnDialog = 0;
 enableDebugConsole = 1;
 forceRotorLibSimulation = 2;
-//saving = 0;
+saving = 0;
 respawnButton = 1;
 
 onLoadName = "Framework";
@@ -12,26 +8,19 @@ onLoadMission = "";
 author="Murshun";
 loadScreen =  "logo.jpg";
 
-class Header
-{
-	gameType = COOP;
-	minPlayers = 1;
-	maxPlayers = 64;
-};
-
 class CfgDebriefing
 {
 	class Completed1
 	{
-	title = "Mission Completed!";
-	subtitle = "Good Job!";
-	description = "";
+		title = "Mission Completed!";
+		subtitle = "Good Job!";
+		description = "";
 	};
 	class Failed1
 	{
-	title = "Mission Failed!";
-	subtitle = "Come on, guys.";
-	description = "";
+		title = "Mission Failed!";
+		subtitle = "Come on, guys.";
+		description = "";
 	};	
 };
 
