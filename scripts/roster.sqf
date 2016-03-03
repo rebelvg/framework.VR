@@ -59,7 +59,7 @@
 *****************************************************************************************************************************************
 */
 
-waituntil {!isNil "radioNetArray"};
+waituntil {!isNil "murshun_frameworkInit"};
 
 if (isClass(configFile >> "CfgPatches" >> "skippy_roster")) exitWith {};
 
@@ -82,7 +82,7 @@ if(count _this > 0) then {
 	};
 
 	if(count _this > 1) then {
-	
+		
 		if((typeName (_this select 1)) != "BOOL") then {
 			hint "Skippy-Roster - Param2 isn't boolean";
 		} else {
@@ -113,17 +113,17 @@ _teamColor = "";
 
 
 switch(_includeAI) do {
-	case 0:{//only players
+case 0:{//only players
 		{
 			if(isPlayer _x) then {
 				_unitsArr = _unitsArr + [_x];
 			};
 		}forEach allUnits;
 	};
-	case 1:{//both AI and players
+case 1:{//both AI and players
 		_unitsArr = allUnits;
 	};
-	case 2:{//only playable units
+case 2:{//only playable units
 		if(isMultiplayer) then {
 			_unitsArr = playableUnits;
 		} else {
@@ -142,25 +142,25 @@ switch(_includeAI) do {
 		
 		if(_rank) then {
 			switch(rankID _x) do {
-				case 0:{
+			case 0:{
 					_strRank = "Pvt. ";
 				};
-				case 1:{
+			case 1:{
 					_strRank = "Cpl. ";
 				};
-				case 2:{
+			case 2:{
 					_strRank = "Sgt. ";
 				};
-				case 3:{
+			case 3:{
 					_strRank = "Lt. ";
 				};
-				case 4:{
+			case 4:{
 					_strRank = "Cpt. ";
 				};
-				case 5:{
+			case 5:{
 					_strRank = "Maj. ";
 				};
-				case 6:{
+			case 6:{
 					_strRank = "Col. ";
 				};
 				default{
@@ -189,16 +189,16 @@ switch(_includeAI) do {
 				};
 			} else {
 				switch (side _x) do {
-					case EAST:{
+				case EAST:{
 						_strColorGrp = "'#990000'";
 					};
-					case WEST:{
+				case WEST:{
 						_strColorGrp = "'#0066CC'";
 					};
-					case RESISTANCE:{
+				case RESISTANCE:{
 						_strColorGrp = "'#339900'";
 					};
-					case CIVILIAN:{
+				case CIVILIAN:{
 						_strColorGrp = "'#990099'";
 					};
 				};
@@ -215,16 +215,16 @@ switch(_includeAI) do {
 		_team = _radio_channel select 1;
 		
 		switch (_team) do {
-			case 1: {
+		case 1: {
 				_teamColor = "'#FF0000'";
 			};
-			case 2: {
+		case 2: {
 				_teamColor = "'#00FF00'";
 			};
-			case 3: {
+		case 3: {
 				_teamColor = "'#0000FF'";
 			};
-			case 4: {
+		case 4: {
 				_teamColor = "'#FFFF00'";
 			};
 			default {
@@ -233,9 +233,9 @@ switch(_includeAI) do {
 		};
 		
 		if (_team == 0) then {
-		_team = 7;
+			_team = 7;
 		} else {
-		_team = _team - 1;
+			_team = _team - 1;
 		};
 		
 		_freq = radioNetArray select _squad select _team;

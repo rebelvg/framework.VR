@@ -1,4 +1,4 @@
-waituntil {!isNil "radioNetArray"};
+waituntil {!isNil "murshun_frameworkInit"};
 
 player createDiarySubject ["radioFrequencies", "Radio Frequencies"];
 
@@ -43,7 +43,7 @@ so you can re-establish communications if leaders are KIA or missing.
 "]];
 
 waituntil {
-call TFAR_fnc_haveSWRadio;
+	call TFAR_fnc_haveSWRadio;
 };
 
 _radio_channel = player getVariable ["radio_channel", [6, 0]];
@@ -60,7 +60,7 @@ _team = _radio_channel select 1;
 [(call TFAR_fnc_activeSwRadio), 8, (radioNetArray select _channel) select 7] call TFAR_fnc_SetChannelFrequency;
 
 if (_team != 0) then {
-[(call TFAR_fnc_activeSwRadio), _team - 1] call TFAR_fnc_setSwChannel;
+	[(call TFAR_fnc_activeSwRadio), _team - 1] call TFAR_fnc_setSwChannel;
 };
 
 _className = tolower gettext (configFile >> "cfgVehicles" >> typeOf player >> "displayName");
@@ -75,7 +75,7 @@ if (_team == 0) then {
 	[(call TFAR_fnc_activeSwRadio), 7, (radioNetArray select 0) select 6] call TFAR_fnc_SetChannelFrequency;	
 	[(call TFAR_fnc_activeSwRadio), 8, (radioNetArray select 0) select 7] call TFAR_fnc_SetChannelFrequency;
 	if (_className == "squad leader" or _className == "officer") then {
-	[(call TFAR_fnc_ActiveSWRadio), 7] call TFAR_fnc_setAdditionalSwChannel;
+		[(call TFAR_fnc_ActiveSWRadio), 7] call TFAR_fnc_setAdditionalSwChannel;
 	};
 };
 

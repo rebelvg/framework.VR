@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={597.40778,17.230537,543.06543};
-		dir[]={0.15332685,-0.44675592,0.88156134};
-		up[]={0.076566048,0.89463109,0.44022712};
-		aside[]={0.9853037,3.3114338e-007,-0.17137083};
+		pos[]={592.5108,30.029028,497.74811};
+		dir[]={0.059298363,-0.40476581,0.91263193};
+		up[]={0.026248902,0.91439688,0.40400162};
+		aside[]={0.99799049,2.9319199e-007,-0.0648451};
 	};
 };
 binarizationWanted=0;
@@ -53,9 +53,6 @@ addons[]=
 randomSeed=5706534;
 class ScenarioData
 {
-	overViewPicture="logo.jpg";
-	overViewPictureLocked="logo.jpg";
-	loadScreen="logo.jpg";
 	saving=0;
 	respawnDialog=0;
 	disabledAI=1;
@@ -74,25 +71,6 @@ class CustomAttributes
 	{
 		name="Multiplayer";
 		class Attribute0
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -125,6 +103,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
 				};
 			};
 		};

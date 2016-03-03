@@ -34,7 +34,7 @@ if (!isMultiplayer) then {
 if (count _loadoutArray == 4) then {
 	clearMagazineCargoGlobal _unit;
 	clearWeaponCargoGlobal _unit;
-	clearitemcargoGlobal _unit;
+	clearItemCargoGlobal _unit;
 	clearBackpackCargoGlobal _unit;
 
 	if (_unit isKindOf "thing") then {
