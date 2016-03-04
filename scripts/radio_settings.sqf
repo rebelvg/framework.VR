@@ -1,4 +1,4 @@
-waituntil {!isNil "murshun_frameworkInit"};
+waitUntil {!isNil "murshun_frameworkInit"};
 
 player createDiarySubject ["radioFrequencies", "Radio Frequencies"];
 
@@ -42,45 +42,34 @@ Fireteam members do not have an alternative channel.<br/><br/>
 so you can re-establish communications if leaders are KIA or missing.
 "]];
 
-waituntil {
+waitUntil {
 	call TFAR_fnc_haveSWRadio;
 };
 
+_currentSwRadio = call TFAR_fnc_activeSwRadio;
 _radio_channel = player getVariable ["radio_channel", [6, 0]];
 _channel = _radio_channel select 0;
 _team = _radio_channel select 1;
 
-[(call TFAR_fnc_activeSwRadio), 1, (radioNetArray select _channel) select 0] call TFAR_fnc_SetChannelFrequency;
-[(call TFAR_fnc_activeSwRadio), 2, (radioNetArray select _channel) select 1] call TFAR_fnc_SetChannelFrequency;
-[(call TFAR_fnc_activeSwRadio), 3, (radioNetArray select _channel) select 2] call TFAR_fnc_SetChannelFrequency;
-[(call TFAR_fnc_activeSwRadio), 4, (radioNetArray select _channel) select 3] call TFAR_fnc_SetChannelFrequency;
-[(call TFAR_fnc_activeSwRadio), 5, (radioNetArray select _channel) select 4] call TFAR_fnc_SetChannelFrequency;
-[(call TFAR_fnc_activeSwRadio), 6, (radioNetArray select _channel) select 5] call TFAR_fnc_SetChannelFrequency;
-[(call TFAR_fnc_activeSwRadio), 7, (radioNetArray select _channel) select 6] call TFAR_fnc_SetChannelFrequency;
-[(call TFAR_fnc_activeSwRadio), 8, (radioNetArray select _channel) select 7] call TFAR_fnc_SetChannelFrequency;
+if (_channel >= count radioNetArray) exitWith {};
 
-if (_team != 0) then {
-	[(call TFAR_fnc_activeSwRadio), _team - 1] call TFAR_fnc_setSwChannel;
-};
+_i = 1;
+{
+	[_currentSwRadio, _i, _x] call TFAR_fnc_SetChannelFrequency;
+	_i = _i + 1;
+} foreach (radioNetArray select _channel);
 
 _className = tolower gettext (configFile >> "cfgVehicles" >> typeOf player >> "displayName");
 
 if (_team == 0) then {
-	[(call TFAR_fnc_activeSwRadio), 1, (radioNetArray select _channel) select 7] call TFAR_fnc_SetChannelFrequency;
-	[(call TFAR_fnc_activeSwRadio), 2, (radioNetArray select 0) select 1] call TFAR_fnc_SetChannelFrequency;
-	[(call TFAR_fnc_activeSwRadio), 3, (radioNetArray select 0) select 2] call TFAR_fnc_SetChannelFrequency;
-	[(call TFAR_fnc_activeSwRadio), 4, (radioNetArray select 0) select 3] call TFAR_fnc_SetChannelFrequency;
-	[(call TFAR_fnc_activeSwRadio), 5, (radioNetArray select 0) select 4] call TFAR_fnc_SetChannelFrequency;
-	[(call TFAR_fnc_activeSwRadio), 6, (radioNetArray select 0) select 5] call TFAR_fnc_SetChannelFrequency;
-	[(call TFAR_fnc_activeSwRadio), 7, (radioNetArray select 0) select 6] call TFAR_fnc_SetChannelFrequency;	
-	[(call TFAR_fnc_activeSwRadio), 8, (radioNetArray select 0) select 7] call TFAR_fnc_SetChannelFrequency;
-	if (_className == "squad leader" or _className == "officer") then {
-		[(call TFAR_fnc_ActiveSWRadio), 7] call TFAR_fnc_setAdditionalSwChannel;
-	};
+	[_currentSwRadio, 1, (radioNetArray select _channel) select 7] call TFAR_fnc_SetChannelFrequency;
+	[_currentSwRadio, 8, (radioNetArray select 0) select 7] call TFAR_fnc_SetChannelFrequency;
+} else {
+	[_currentSwRadio, _team - 1] call TFAR_fnc_setSwChannel;
 };
 
-if (_className == "team leader") then {
-	[(call TFAR_fnc_ActiveSWRadio), 7] call TFAR_fnc_setAdditionalSwChannel;
+if (_className == "officer" or _className == "squad leader" or _className == "team leader") then {
+	[_currentSwRadio, 7] call TFAR_fnc_setAdditionalSwChannel;
 };
 
 [player] spawn murshun_assignTeam_fnc;

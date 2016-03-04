@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=237;
+		nextID=245;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={592.5108,30.029028,497.74811};
-		dir[]={0.059298363,-0.40476581,0.91263193};
-		up[]={0.026248902,0.91439688,0.40400162};
-		aside[]={0.99799049,2.9319199e-007,-0.0648451};
+		pos[]={588.01996,73.447273,381.03378};
+		dir[]={0.012741229,-0.49041271,0.87154067};
+		up[]={0.0071673859,0.87148064,0.49042812};
+		aside[]={0.99996877,3.8787039e-007,-0.014616385};
 	};
 };
 binarizationWanted=0;
@@ -72,6 +72,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -103,25 +122,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=1;
 				};
 			};
 		};
@@ -1723,7 +1723,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={256.75107,5,778.1712};
+				position[]={256.93668,5,766.5968};
 			};
 			id=21;
 			type="DAC_Source_Extern";
@@ -1733,7 +1733,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={280.05359,5,788.29102};
+				position[]={280.05399,5,788.29102};
 			};
 			id=22;
 			type="tfar_ModuleTaskForceRadioEnforceUsage";
@@ -3810,7 +3810,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={280.20078,5,778.99213};
+				position[]={279.6965,5,778.29132};
 			};
 			name="ZE_Zeus";
 			id=72;
@@ -3920,7 +3920,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={256.97662,5,788.09344};
+				position[]={256.97699,5,788.09302};
 			};
 			id=73;
 			type="ACE_ModuleSitting";
@@ -5983,7 +5983,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={257.09418,5,767.54907};
+				position[]={257.04715,5,777.7594};
 			};
 			id=170;
 			type="ACE_moduleAllowConfigExport";
