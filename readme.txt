@@ -71,4 +71,4 @@ in the object's init.
 Only logged admins, officers and squad leaders will be able to call for respawn.
 If you, as mission maker, want to respawn people on the base_marker you can execute
 [] spawn murshun_framework_revivePlayers_fnc;
-in your tasks. Execute only once for the server side.
+in your tasks. Execute only once from the server side.

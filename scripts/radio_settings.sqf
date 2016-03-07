@@ -47,7 +47,7 @@ waitUntil {
 };
 
 _currentSwRadio = call TFAR_fnc_activeSwRadio;
-_radio_channel = player getVariable ["radio_channel", [6, 0]];
+_radio_channel = player getVariable ["radio_channel", [6, 4]];
 _channel = _radio_channel select 0;
 _team = _radio_channel select 1;
 

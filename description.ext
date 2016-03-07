@@ -28,6 +28,7 @@ class Extended_Init_Eventhandlers
 {
     class CAManBase
     {
-		init = "_this execVM 'scripts\enemy_loadout.sqf'";
+		enemy_loadout = "_this execVM 'scripts\enemy_loadout.sqf'";
+		dac_init = "_this execVM 'scripts\dac_init.sqf'";
     };
 };

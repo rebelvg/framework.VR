@@ -209,7 +209,7 @@ case 2:{//only playable units
 			};
 		};
 		
-		_radio_channel = _x getVariable ["radio_channel", [1,0]];
+		_radio_channel = _x getVariable ["radio_channel", [6, 4]];
 		
 		_squad = _radio_channel select 0;
 		_team = _radio_channel select 1;

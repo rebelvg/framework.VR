@@ -195,6 +195,8 @@ if (!isMultiplayer) then {
 		};
 	} foreach switchableUnits;
 	
+	waitUntil {time > 1};
+	
 	[] spawn debugLoadout_fnc;
 
 	[player] spawn BIS_fnc_traceBullets;

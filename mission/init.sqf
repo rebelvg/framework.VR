@@ -18,11 +18,13 @@ _advancedMedic = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine
 _basicMedic = [["ACE_elasticBandage", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 6], ["ACE_salineIV_500", 2]];
 
 _fashionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
+_fashionPilot = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_Parachute", ""];
 _rifleArray = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]];
 _handgunArray = ["hgun_P07_F", [["16Rnd_9x21_Mag", 3]], []];
+_atLauncher = ["launch_NLAW_F", [], []];
 _binocularsArray = ["Laserdesignator", [], []];
 
-loadoutArray = [
+_loadoutArray_west = [
 	[
 		[
 			["officer", "squad leader", "team leader"],
@@ -49,14 +51,35 @@ loadoutArray = [
 			["rifleman (at)"],
 			[
 				_fashionArray,
-				[_rifleArray]
+				[_rifleArray, _atLauncher]
 			]
 		],
 		[
 			["missile specialist (at)"],
 			[
 				_fashionArray,
+				[_rifleArray, _atLauncher]
+			]
+		],
+		[
+			["combat life saver"],
+			[
+				_fashionArray,
 				[_rifleArray]
+			]
+		],
+		[
+			["engineer"],
+			[
+				_fashionArray,
+				[_rifleArray]
+			]
+		],
+		[
+			["pilot"],
+			[
+				_fashionPilot,
+				[_handgunArray]
 			]
 		]
 	], //equipment per class
@@ -80,6 +103,7 @@ loadoutArray = [
 		["ToolKit", 2],
 		["ACE_wirecutter", 2],
 		["ACE_SpareBarrel", 2],
+		["ACE_SpraypaintBlue", 60],
 		["DemoCharge_Remote_Mag", 30],
 		["SatchelCharge_Remote_Mag", 10],
 		["ACE_CableTie", 30],
@@ -89,8 +113,16 @@ loadoutArray = [
 	], //additional content for boxes
 	[
 		[
+			["officer"],
+			[["murshun_cigs_lighter", 1]]
+		],
+		[
 			["combat life saver"],
 			_advancedMedic
+		],
+		[
+			["engineer"],
+			[["ACE_M26_Clacker", 1]]
 		],
 		[
 			["all units"],
@@ -99,7 +131,7 @@ loadoutArray = [
 	] //additional personal items per class
 ];
 
-loadoutArray_west = loadoutArray;
+loadoutArray_west = _loadoutArray_west;
 loadoutArray_east = [];
 loadoutArray_guer = [];
 loadoutArray_civ = [];
