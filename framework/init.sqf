@@ -154,7 +154,7 @@ murshun_fillBox_fnc = {
 
 debugLoadout_fnc = {
 	waitUntil {time > 1};
-	
+
 	{
 		[_x] execVM "scripts\loadout.sqf";
 		[_x] spawn murshun_assignTeam_fnc;
@@ -195,7 +195,7 @@ if (!isMultiplayer) then {
 		if (!isPlayer _x) then {
 			_x disableAI "ANIM";
 		};
-	} foreach switchableUnits;	
+	} foreach switchableUnits;
 	
 	[] spawn debugLoadout_fnc;
 
