@@ -26,8 +26,8 @@ loadoutArray is located in mission\init.sqf
 It's pretty self-explanatory.
 
 You need to set radio_channel for all playable units.
-this setVariable ["radio_channel", [1,0]];
-[1,0] is a special radio array, 1 is a squad, 0 is a team, squad 7 is reserved for command, team 0 is squad leader and medic
+this setVariable ["radio_channel", [1, 0]];
+[1, 0] is a special radio array, 1 is a squad, 0 is a team, squad 7 is reserved for command, team 0 is squad leader and medic
 Colors will be applied automatically.
 Modified roster script adds frequencies to the roster.
 
@@ -61,14 +61,14 @@ If framework can't find the correct side loadoutArray it will skip the loadouts 
 
 You can create custom loadouts for enemies now.
 Just set murshun_customEnemyLoadouts to true in the init.sqf and create a loadoutArray for your enemy side.
-So for example your enemies are opfor so just create loadoutArray_east and fill it accordingly to the standard.
+So for example your enemies are opfor just create loadoutArray_east and fill it accordingly to the standard.
 
 Framework now supports respawn integration in a gameplay form.
 All you need is a "base_marker" on the base. As mission maker you can move it after each objective to other places you want.
 If you want to have an object that will respawn players on the base_marker you need to place
 0 = [this] execVM "scripts\revive_players.sqf";
 in the object's init.
-Only logged admins, officers and squad leaders will be able to call for respawn.
+Only officers and squad leaders will be able to call for respawn.
 If you, as mission maker, want to respawn people on the base_marker you can execute
 [] spawn murshun_framework_revivePlayers_fnc;
 in your tasks. Execute only once from the server side.
