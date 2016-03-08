@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={607.69769,102.59361,382.46124};
-		dir[]={-0.012465082,-0.52264071,0.8525421};
-		up[]={-0.0076422621,0.85251641,0.52265096};
-		aside[]={0.99994957,1.7995626e-007,0.014621721};
+		pos[]={611.00879,101.94466,401.07187};
+		dir[]={-0.010238077,-0.56503236,0.82514191};
+		up[]={-0.007011475,0.82501036,0.56507605};
+		aside[]={1.000008,-1.2718374e-008,0.012408183};
 	};
 };
 binarizationWanted=0;
@@ -180,7 +180,7 @@ class Mission
 		class Item0
 		{
 			dataType="Marker";
-			position[]={607.38196,5,519.78223};
+			position[]={608.50726,5,578.18604};
 			name="base_marker";
 			text="BASE";
 			type="mil_start";
@@ -202,13 +202,55 @@ class Mission
 			};
 			id=4;
 			type="Land_WoodenTable_small_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isRepairFacility";
+					expression="_this setVariable ['ace_isRepairFacility',_value, true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 		class Item2
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={603.8847,6.6115026,569.6347};
+				position[]={603.64294,6.6115026,568.41296};
 				angles[]={0,2.0254021,0};
 			};
 			side="Empty";
@@ -248,8 +290,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={664.88232,6.6115026,519.29468};
-				angles[]={0,3.4377923,0};
+				position[]={632.95599,6.6115026,567.17181};
+				angles[]={0,1.8597846,0};
 			};
 			side="Empty";
 			class Attributes
@@ -2352,7 +2394,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};
@@ -2609,6 +2651,7 @@ class Mission
 						skill=0.60000002;
 						rank="CAPTAIN";
 						init="this setVariable [""radio_channel"", [7, 0]];";
+						name="s1";
 						isPlayer=1;
 						isPlayable=1;
 					};
@@ -2662,7 +2705,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={610.66187,5.0014391,556.62537};
+						position[]={610.66199,5.0014391,556.625};
 						angles[]={0,0.076096356,0};
 					};
 					side="West";
@@ -2670,6 +2713,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [7, 0]];";
+						name="s2";
 						isPlayable=1;
 					};
 					id=71;
@@ -2722,7 +2766,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={607.13086,5.0014391,556.62634};
+						position[]={607.00281,5.0014391,554.76135};
 						angles[]={0,6.2553825,0};
 					};
 					side="West";
@@ -2730,6 +2774,7 @@ class Mission
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 0]];";
+						name="s3";
 						isPlayable=1;
 					};
 					id=245;
@@ -2782,7 +2827,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={609.00391,5.0014391,556.62335};
+						position[]={608.87585,5.0014391,554.75836};
 						angles[]={0,6.2553825,0};
 					};
 					side="West";
@@ -2790,6 +2835,7 @@ class Mission
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 0]];";
+						name="s4";
 						isPlayable=1;
 					};
 					id=248;
@@ -3103,8 +3149,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={550.50079,6.6115026,507.27988};
-				angles[]={0,0.38922587,0};
+				position[]={567.09161,6.6115026,568.57813};
+				angles[]={0,1.9520031,0};
 			};
 			side="Empty";
 			class Attributes
@@ -3210,6 +3256,48 @@ class Mission
 			};
 			id=191;
 			type="Land_WoodenTable_small_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isRepairFacility";
+					expression="_this setVariable ['ace_isRepairFacility',_value, true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 		class Item26
 		{
@@ -3230,6 +3318,25 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="ace_isRepairFacility";
+					expression="_this setVariable ['ace_isRepairFacility',_value, true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="ace_isMedicalFacility";
 					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
 					class Value
@@ -3247,7 +3354,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				nAttributes=2;
 			};
 		};
 		class Item27
@@ -3270,6 +3377,25 @@ class Mission
 			{
 				class Attribute0
 				{
+					property="ace_isRepairFacility";
+					expression="_this setVariable ['ace_isRepairFacility',_value, true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
 					property="ace_isMedicalFacility";
 					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
 					class Value
@@ -3287,7 +3413,7 @@ class Mission
 						};
 					};
 				};
-				nAttributes=1;
+				nAttributes=2;
 			};
 		};
 		class Item28
@@ -3302,14 +3428,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={560.99597,5.0014391,513.05072};
-						angles[]={0,4.7313466,0};
+						position[]={572.98083,5.0014391,558.96667};
+						angles[]={0,0.010935307,0};
 					};
 					side="East";
 					flags=3;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 0]];";
+						name="s37";
 						isPlayable=1;
 					};
 					id=305;
@@ -3362,14 +3489,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={563.3288,5.0014391,514.86096};
-						angles[]={0,4.7221699,0};
+						position[]={574.81042,5.0014391,556.64825};
+						angles[]={0,0.0017542839,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 0]];";
+						name="s38";
 						isPlayable=1;
 					};
 					id=306;
@@ -3422,14 +3550,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={563.27856,5.0014391,510.88678};
-						angles[]={0,4.7221699,0};
+						position[]={570.83478,5.0014391,554.72223};
+						angles[]={0,0.0017542839,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 0]];";
+						name="s39";
 						isPlayable=1;
 					};
 					id=307;
@@ -3482,14 +3611,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={563.32306,5.0014391,513.0271};
-						angles[]={0,4.7221699,0};
+						position[]={572.9751,5.0014391,554.69446};
+						angles[]={0,0.0017542839,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 0]];";
+						name="s40";
 						isPlayable=1;
 					};
 					id=308;
@@ -3578,14 +3708,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={565.55096,5.0014391,506.80771};
-						angles[]={0,4.6996999,0};
+						position[]={566.89667,5.0014391,554.88702};
+						angles[]={0,6.2624779,0};
 					};
 					side="East";
 					flags=3;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 0]];";
+						name="s41";
 						isPlayable=1;
 					};
 					id=310;
@@ -3638,14 +3769,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={567.83374,5.0014391,508.70477};
-						angles[]={0,4.72539,0};
+						position[]={568.81195,5.0014391,552.61932};
+						angles[]={0,0.0049834251,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 0]];";
+						name="s42";
 						isPlayable=1;
 					};
 					id=311;
@@ -3698,14 +3830,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={569.63892,5.0014391,506.66501};
-						angles[]={0,4.705513,0};
+						position[]={566.78644,5.0014391,550.79803};
+						angles[]={0,6.2682896,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s43";
 						isPlayable=1;
 					};
 					id=312;
@@ -3758,14 +3891,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={571.7854,5.0014424,503.14182};
-						angles[]={0,4.714963,0};
+						position[]={563.28082,5.0014391,548.62384};
+						angles[]={0,6.2777319,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s44";
 						isPlayable=1;
 					};
 					id=313;
@@ -3818,14 +3952,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={571.75018,5.0014424,505.12045};
-						angles[]={0,4.6949191,0};
+						position[]={565.25848,5.0014391,548.67474};
+						angles[]={0,6.2577133,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s45";
 						isPlayable=1;
 					};
 					id=314;
@@ -3878,14 +4013,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={571.72974,5.0014424,506.96558};
-						angles[]={0,4.7151585,0};
+						position[]={567.10419,5.0014391,548.70953};
+						angles[]={0,6.2779417,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s46";
 						isPlayable=1;
 					};
 					id=315;
@@ -3938,14 +4074,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={571.82904,5.0014448,508.92651};
-						angles[]={0,4.7169166,0};
+						position[]={569.06598,5.0014391,548.62628};
+						angles[]={0,6.2796869,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s47";
 						isPlayable=1;
 					};
 					id=316;
@@ -3998,14 +4135,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={571.83148,5.0014391,511.03229};
-						angles[]={0,4.7331114,0};
+						position[]={571.1709,5.0014391,548.64111};
+						angles[]={0,0.012697697,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s48";
 						isPlayable=1;
 					};
 					id=317;
@@ -4094,14 +4232,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={565.61914,5.0014391,516.67969};
-						angles[]={0,4.6996999,0};
+						position[]={576.76526,5.0014391,554.77979};
+						angles[]={0,6.2624779,0};
 					};
 					side="East";
 					flags=3;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 0]];";
+						name="s49";
 						isPlayable=1;
 					};
 					id=319;
@@ -4154,14 +4293,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={567.90192,5.0014391,518.57672};
-						angles[]={0,4.72539,0};
+						position[]={578.68048,5.0014391,552.51208};
+						angles[]={0,0.0049834251,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 0]];";
+						name="s50";
 						isPlayable=1;
 					};
 					id=320;
@@ -4214,14 +4354,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={569.70709,5.0014391,516.53699};
-						angles[]={0,4.705513,0};
+						position[]={576.65503,5.0014391,550.6908};
+						angles[]={0,6.2682896,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s51";
 						isPlayable=1;
 					};
 					id=321;
@@ -4274,14 +4415,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={571.85364,5.0014424,513.01373};
-						angles[]={0,4.714963,0};
+						position[]={573.14935,5.0014391,548.51556};
+						angles[]={0,6.2777319,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s52";
 						isPlayable=1;
 					};
 					id=322;
@@ -4334,14 +4476,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={571.81836,5.0014424,514.99243};
-						angles[]={0,4.6949191,0};
+						position[]={575.12701,5.0014391,548.56744};
+						angles[]={0,6.2577133,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s53";
 						isPlayable=1;
 					};
 					id=323;
@@ -4394,14 +4537,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={571.79797,5.0014424,516.83752};
-						angles[]={0,4.7151585,0};
+						position[]={576.97284,5.0014391,548.60229};
+						angles[]={0,6.2779417,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s54";
 						isPlayable=1;
 					};
 					id=324;
@@ -4454,14 +4598,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={571.89722,5.0014448,518.79846};
-						angles[]={0,4.7169166,0};
+						position[]={578.93353,5.0014391,548.51898};
+						angles[]={0,6.2796869,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s55";
 						isPlayable=1;
 					};
 					id=325;
@@ -4514,14 +4659,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={571.89972,5.0014391,520.90424};
-						angles[]={0,4.7331114,0};
+						position[]={581.03949,5.0014391,548.5329};
+						angles[]={0,0.012697697,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s56";
 						isPlayable=1;
 					};
 					id=326;
@@ -4610,14 +4756,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={573.27258,5.0014391,506.87329};
-						angles[]={0,4.6996999,0};
+						position[]={566.9126,5.0014391,546.78937};
+						angles[]={0,6.2624779,0};
 					};
 					side="East";
 					flags=3;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 0]];";
+						name="s57";
 						isPlayable=1;
 					};
 					id=328;
@@ -4670,14 +4817,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={575.55536,5.0014391,508.77032};
-						angles[]={0,4.72539,0};
+						position[]={568.82782,5.0014391,544.52264};
+						angles[]={0,0.0049834251,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 0]];";
+						name="s58";
 						isPlayable=1;
 					};
 					id=329;
@@ -4730,14 +4878,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={577.36053,5.0014391,506.73059};
-						angles[]={0,4.705513,0};
+						position[]={566.80334,5.0014391,542.70032};
+						angles[]={0,6.2682896,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s59";
 						isPlayable=1;
 					};
 					id=330;
@@ -4790,14 +4939,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={579.50702,5.0014424,503.2074};
-						angles[]={0,4.714963,0};
+						position[]={563.29669,5.0014391,540.52612};
+						angles[]={0,6.2777319,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s60";
 						isPlayable=1;
 					};
 					id=331;
@@ -4850,14 +5000,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={579.4718,5.0014424,505.18604};
-						angles[]={0,4.6949191,0};
+						position[]={565.27533,5.0014391,540.57703};
+						angles[]={0,6.2577133,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s61";
 						isPlayable=1;
 					};
 					id=332;
@@ -4910,14 +5061,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={579.45135,5.0014424,507.03116};
-						angles[]={0,4.7151585,0};
+						position[]={567.12012,5.0014391,540.61285};
+						angles[]={0,6.2779417,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s62";
 						isPlayable=1;
 					};
 					id=333;
@@ -4970,14 +5122,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={579.55066,5.0014448,508.99213};
-						angles[]={0,4.7169166,0};
+						position[]={569.08185,5.0014391,540.5285};
+						angles[]={0,6.2796869,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s63";
 						isPlayable=1;
 					};
 					id=334;
@@ -5030,14 +5183,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={579.5531,5.0014391,511.09784};
-						angles[]={0,4.7331114,0};
+						position[]={571.18781,5.0014391,540.54346};
+						angles[]={0,0.012697697,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s64";
 						isPlayable=1;
 					};
 					id=335;
@@ -5126,14 +5280,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={573.27521,5.0014391,516.76923};
-						angles[]={0,4.6996999,0};
+						position[]={576.79608,5.0014391,546.71277};
+						angles[]={0,6.2624779,0};
 					};
 					side="East";
 					flags=3;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 0]];";
+						name="s65";
 						isPlayable=1;
 					};
 					id=337;
@@ -5186,14 +5341,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={575.55792,5.0014391,518.66632};
-						angles[]={0,4.72539,0};
+						position[]={578.71136,5.0014391,544.44513};
+						angles[]={0,0.0049834251,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 0]];";
+						name="s66";
 						isPlayable=1;
 					};
 					id=338;
@@ -5246,14 +5402,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={577.36316,5.0014391,516.62653};
-						angles[]={0,4.705513,0};
+						position[]={576.68689,5.0014391,542.62384};
+						angles[]={0,6.2682896,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s67";
 						isPlayable=1;
 					};
 					id=339;
@@ -5306,14 +5463,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={579.50964,5.0014424,513.10333};
-						angles[]={0,4.714963,0};
+						position[]={573.18018,5.0014391,540.44861};
+						angles[]={0,6.2777319,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s68";
 						isPlayable=1;
 					};
 					id=340;
@@ -5366,14 +5524,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={579.47443,5.0014424,515.08203};
-						angles[]={0,4.6949191,0};
+						position[]={575.15881,5.0014391,540.50049};
+						angles[]={0,6.2577133,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s69";
 						isPlayable=1;
 					};
 					id=341;
@@ -5426,14 +5585,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={579.45398,5.0014424,516.92712};
-						angles[]={0,4.7151585,0};
+						position[]={577.00366,5.0014391,540.53528};
+						angles[]={0,6.2779417,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s70";
 						isPlayable=1;
 					};
 					id=342;
@@ -5486,14 +5646,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={579.55322,5.0014448,518.88806};
-						angles[]={0,4.7169166,0};
+						position[]={578.96539,5.0014391,540.45203};
+						angles[]={0,6.2796869,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s71";
 						isPlayable=1;
 					};
 					id=343;
@@ -5546,14 +5707,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={579.55573,5.0014391,520.99377};
-						angles[]={0,4.7331114,0};
+						position[]={581.07129,5.0014391,540.46588};
+						angles[]={0,0.012697697,0};
 					};
 					side="East";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s72";
 						isPlayable=1;
 					};
 					id=344;
@@ -5753,8 +5915,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={556.784,5.6349964,515.07202};
-				angles[]={0,1.6465261,0};
+				position[]={575.01898,5.6349964,563.14514};
+				angles[]={0,3.2093034,0};
 			};
 			side="Empty";
 			class Attributes
@@ -5812,8 +5974,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={556.51599,5.6349964,511.69601};
-				angles[]={0,4.7985559,0};
+				position[]={571.64093,5.6349964,563.38605};
+				angles[]={0,0.078147411,0};
 			};
 			side="Empty";
 			class Attributes
@@ -5871,8 +6033,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={658.01801,5.6349964,508.41199};
-				angles[]={0,4.6950927,0};
+				position[]={641.2984,5.6349964,561.8299};
+				angles[]={0,3.117085,0};
 			};
 			side="Empty";
 			class Attributes
@@ -5930,8 +6092,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={658.664,5.6349964,511.51599};
-				angles[]={0,1.5639372,0};
+				position[]={638.18982,5.6349964,562.45349};
+				angles[]={0,6.269115,0};
 			};
 			side="Empty";
 			class Attributes
@@ -5996,14 +6158,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={655.07043,5.0014377,510.71024};
-						angles[]={0,1.6041213,0};
+						position[]={639.07172,5.0014391,558.91577};
+						angles[]={0,0.026106834,0};
 					};
 					side="Independent";
 					flags=3;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 0]];";
+						name="s73";
 						isPlayable=1;
 					};
 					id=371;
@@ -6056,14 +6219,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={653.04327,5.0014362,509.02591};
-						angles[]={0,1.6218077,0};
+						position[]={640.7702,5.0014391,556.901};
+						angles[]={0,0.043804646,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 0]];";
+						name="s74";
 						isPlayable=1;
 					};
 					id=372;
@@ -6116,14 +6280,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={652.9267,5.0014391,513.26099};
-						angles[]={0,1.5321788,0};
+						position[]={636.50702,5.0014391,554.66699};
+						angles[]={0,6.2373528,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 0]];";
+						name="s75";
 						isPlayable=1;
 					};
 					id=373;
@@ -6176,14 +6341,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={652.87152,5.0014391,511.11978};
-						angles[]={0,1.5875623,0};
+						position[]={638.64899,5.0014391,554.62701};
+						angles[]={0,0.0095469505,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 0]];";
+						name="s76";
 						isPlayable=1;
 					};
 					id=374;
@@ -6272,14 +6438,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={650.68414,5.0014391,516.97626};
-						angles[]={0,1.5672195,0};
+						position[]={632.83698,5.0014391,554.48499};
+						angles[]={0,6.2723989,0};
 					};
 					side="Independent";
 					flags=3;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 0]];";
+						name="s77";
 						isPlayable=1;
 					};
 					id=376;
@@ -6332,14 +6499,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={648.88794,5.00144,515.02972};
-						angles[]={0,1.6095221,0};
+						position[]={634.797,5.0014391,552.703};
+						angles[]={0,0.031520646,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 0]];";
+						name="s78";
 						isPlayable=1;
 					};
 					id=377;
@@ -6392,14 +6560,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={646.91907,5.0014391,516.91669};
-						angles[]={0,1.5820475,0};
+						position[]={632.92401,5.0014391,550.71997};
+						angles[]={0,0.0040317108,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s79";
 						isPlayable=1;
 					};
 					id=378;
@@ -6452,14 +6621,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={644.89203,5.0014391,521.10901};
-						angles[]={0,1.5580349,0};
+						position[]={628.74597,5.0014391,548.66296};
+						angles[]={0,6.2632184,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s80";
 						isPlayable=1;
 					};
 					id=379;
@@ -6512,14 +6682,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={644.80591,5.0014391,518.93201};
-						angles[]={0,1.5931519,0};
+						position[]={630.92401,5.0014391,548.59302};
+						angles[]={0,0.015149457,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s81";
 						isPlayable=1;
 					};
 					id=380;
@@ -6572,14 +6743,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={644.77118,5.0014391,516.87848};
-						angles[]={0,1.56092,0};
+						position[]={632.97803,5.0014391,548.573};
+						angles[]={0,6.2660985,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s82";
 						isPlayable=1;
 					};
 					id=381;
@@ -6632,14 +6804,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={644.83197,5.0014386,514.98846};
-						angles[]={0,1.5906931,0};
+						position[]={634.867,5.0014391,548.64697};
+						angles[]={0,0.012688544,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s83";
 						isPlayable=1;
 					};
 					id=382;
@@ -6692,14 +6865,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={644.69794,5.00144,513.16553};
-						angles[]={0,1.5886409,0};
+						position[]={636.69098,5.0014391,548.526};
+						angles[]={0,0.010629055,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s84";
 						isPlayable=1;
 					};
 					id=383;
@@ -6788,14 +6962,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={650.63995,5.0014391,506.87949};
-						angles[]={0,1.5672195,0};
+						position[]={642.93402,5.0014391,554.513};
+						angles[]={0,6.2723989,0};
 					};
 					side="Independent";
 					flags=3;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 0]];";
+						name="s85";
 						isPlayable=1;
 					};
 					id=385;
@@ -6848,14 +7023,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={648.84375,5.00144,504.93295};
-						angles[]={0,1.6095221,0};
+						position[]={644.89301,5.0014391,552.73102};
+						angles[]={0,0.031520646,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 0]];";
+						name="s86";
 						isPlayable=1;
 					};
 					id=386;
@@ -6908,14 +7084,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={646.87488,5.0014391,506.81992};
-						angles[]={0,1.5820475,0};
+						position[]={643.021,5.0014391,550.74896};
+						angles[]={0,0.0040317108,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s87";
 						isPlayable=1;
 					};
 					id=387;
@@ -6968,14 +7145,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={644.84784,5.0014391,511.01224};
-						angles[]={0,1.5580349,0};
+						position[]={638.84302,5.0014391,548.69202};
+						angles[]={0,6.2632184,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s88";
 						isPlayable=1;
 					};
 					id=388;
@@ -7028,14 +7206,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={644.76172,5.0014391,508.83524};
-						angles[]={0,1.5931519,0};
+						position[]={641.021,5.0014391,548.62097};
+						angles[]={0,0.015149457,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s89";
 						isPlayable=1;
 					};
 					id=389;
@@ -7088,14 +7267,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={644.72699,5.0014391,506.78171};
-						angles[]={0,1.56092,0};
+						position[]={643.07397,5.0014391,548.60101};
+						angles[]={0,6.2660985,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s90";
 						isPlayable=1;
 					};
 					id=390;
@@ -7148,14 +7328,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={644.78778,5.0014391,504.89169};
-						angles[]={0,1.5906931,0};
+						position[]={644.96399,5.0014391,548.67596};
+						angles[]={0,0.012688544,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s91";
 						isPlayable=1;
 					};
 					id=391;
@@ -7208,14 +7389,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={644.65375,5.00144,503.06876};
-						angles[]={0,1.5886409,0};
+						position[]={646.78802,5.0014391,548.55499};
+						angles[]={0,0.010629055,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s92";
 						isPlayable=1;
 					};
 					id=392;
@@ -7304,14 +7486,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={642.54712,5.0014391,516.82544};
-						angles[]={0,1.5672195,0};
+						position[]={633.00702,5.0014391,546.61798};
+						angles[]={0,6.2723989,0};
 					};
 					side="Independent";
 					flags=3;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 0]];";
+						name="s93";
 						isPlayable=1;
 					};
 					id=394;
@@ -7364,14 +7547,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={640.75092,5.00144,514.87891};
-						angles[]={0,1.6095221,0};
+						position[]={634.966,5.0014391,544.836};
+						angles[]={0,0.031520646,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 0]];";
+						name="s94";
 						isPlayable=1;
 					};
 					id=395;
@@ -7424,14 +7608,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={638.78204,5.0014391,516.76587};
-						angles[]={0,1.5820475,0};
+						position[]={633.09302,5.0014391,542.85297};
+						angles[]={0,0.0040317108,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s95";
 						isPlayable=1;
 					};
 					id=396;
@@ -7484,14 +7669,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={636.755,5.0014391,520.95819};
-						angles[]={0,1.5580349,0};
+						position[]={628.91602,5.0014391,540.79596};
+						angles[]={0,6.2632184,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s96";
 						isPlayable=1;
 					};
 					id=397;
@@ -7544,14 +7730,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={636.66888,5.0014391,518.78119};
-						angles[]={0,1.5931519,0};
+						position[]={631.09302,5.0014391,540.72498};
+						angles[]={0,0.015149457,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s97";
 						isPlayable=1;
 					};
 					id=398;
@@ -7604,14 +7791,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={636.63416,5.0014391,516.72766};
-						angles[]={0,1.56092,0};
+						position[]={633.14697,5.0014391,540.70599};
+						angles[]={0,6.2660985,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s98";
 						isPlayable=1;
 					};
 					id=399;
@@ -7664,14 +7852,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={636.69495,5.0014391,514.83765};
-						angles[]={0,1.5906931,0};
+						position[]={635.03601,5.0014391,540.77997};
+						angles[]={0,0.012688544,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s99";
 						isPlayable=1;
 					};
 					id=400;
@@ -7724,14 +7913,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={636.56091,5.00144,513.01471};
-						angles[]={0,1.5886409,0};
+						position[]={636.85999,5.0014391,540.659};
+						angles[]={0,0.010629055,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s100";
 						isPlayable=1;
 					};
 					id=401;
@@ -7820,14 +8010,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={642.46613,5.0014391,506.85443};
-						angles[]={0,1.5672195,0};
+						position[]={642.94598,5.0014391,546.495};
+						angles[]={0,6.2723989,0};
 					};
 					side="Independent";
 					flags=3;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 0]];";
+						name="s101";
 						isPlayable=1;
 					};
 					id=403;
@@ -7880,14 +8071,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={640.66992,5.00144,504.9079};
-						angles[]={0,1.6095221,0};
+						position[]={644.90601,5.0014391,544.71301};
+						angles[]={0,0.031520646,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 0]];";
+						name="s102";
 						isPlayable=1;
 					};
 					id=404;
@@ -7940,14 +8132,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={638.70105,5.0014391,506.79486};
-						angles[]={0,1.5820475,0};
+						position[]={643.03302,5.0014391,542.72998};
+						angles[]={0,0.0040317108,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s103";
 						isPlayable=1;
 					};
 					id=405;
@@ -8000,14 +8193,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={636.67401,5.0014391,510.98718};
-						angles[]={0,1.5580349,0};
+						position[]={638.85498,5.0014391,540.67297};
+						angles[]={0,6.2632184,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s104";
 						isPlayable=1;
 					};
 					id=406;
@@ -8060,14 +8254,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={636.58789,5.0014391,508.81018};
-						angles[]={0,1.5931519,0};
+						position[]={641.03302,5.0014391,540.60297};
+						angles[]={0,0.015149457,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s105";
 						isPlayable=1;
 					};
 					id=407;
@@ -8120,14 +8315,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={636.55316,5.0014391,506.75665};
-						angles[]={0,1.56092,0};
+						position[]={643.08698,5.0014391,540.58301};
+						angles[]={0,6.2660985,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s106";
 						isPlayable=1;
 					};
 					id=408;
@@ -8180,14 +8376,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={636.61395,5.0014391,504.86664};
-						angles[]={0,1.5906931,0};
+						position[]={644.97601,5.0014391,540.65698};
+						angles[]={0,0.012688544,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s107";
 						isPlayable=1;
 					};
 					id=409;
@@ -8240,14 +8437,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={636.47992,5.00144,503.0437};
-						angles[]={0,1.5886409,0};
+						position[]={646.79999,5.0014391,540.53601};
+						angles[]={0,0.010629055,0};
 					};
 					side="Independent";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s108";
 						isPlayable=1;
 					};
 					id=410;
@@ -8408,8 +8606,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={603.11639,5.0014391,554.92108};
-						angles[]={0,0.00228405,0};
+						position[]={603.11603,5.0014391,554.92096};
+						angles[]={0,0.0022863813,0};
 					};
 					side="West";
 					flags=2;
@@ -8417,6 +8615,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [1, 0]];";
+						name="s5";
 						isPlayable=1;
 					};
 					id=546;
@@ -8469,14 +8668,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={604.33154,5.0014391,553.22858};
-						angles[]={0,0.00228405,0};
+						position[]={604.33197,5.0014391,553.229};
+						angles[]={0,0.0022863813,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [1, 0]];";
+						name="s6";
 						isPlayable=1;
 					};
 					id=547;
@@ -8529,14 +8729,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={602.65503,5.0014391,550.98663};
-						angles[]={0,0.00228405,0};
+						position[]={602.65503,5.0014391,550.987};
+						angles[]={0,0.0022863813,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s7";
 						isPlayable=1;
 					};
 					id=548;
@@ -8589,14 +8790,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={598.85358,5.0014391,548.70453};
-						angles[]={0,0.00228405,0};
+						position[]={598.854,5.0014391,548.70502};
+						angles[]={0,0.0022863813,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s8";
 						isPlayable=1;
 					};
 					id=549;
@@ -8649,14 +8851,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={600.90881,5.0014391,548.72552};
-						angles[]={0,0.00228405,0};
+						position[]={600.909,5.0014391,548.72601};
+						angles[]={0,0.0022863813,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s9";
 						isPlayable=1;
 					};
 					id=550;
@@ -8717,6 +8920,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s10";
 						isPlayable=1;
 					};
 					id=552;
@@ -8769,13 +8973,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={605.08435,5.0014019,548.80853};
+						position[]={605.08398,5.0014391,548.80896};
 					};
 					side="West";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s11";
 						isPlayable=1;
 					};
 					id=581;
@@ -8828,13 +9033,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={607.1228,5.0014038,548.81238};
+						position[]={607.12299,5.0014391,548.81201};
 					};
 					side="West";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
+						name="s12";
 						isPlayable=1;
 					};
 					id=582;
@@ -8923,7 +9129,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={613.16693,5.0014391,554.98035};
+						position[]={613.16699,5.0014391,554.97998};
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
@@ -8932,6 +9138,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [2, 0]];";
+						name="s13";
 						isPlayable=1;
 					};
 					id=584;
@@ -8984,7 +9191,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={614.38208,5.0014391,553.28784};
+						position[]={614.38202,5.0014391,553.28796};
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
@@ -8992,6 +9199,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [2, 0]];";
+						name="s14";
 						isPlayable=1;
 					};
 					id=585;
@@ -9044,14 +9252,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={612.70557,5.0014391,551.0459};
-						angles[]={0,0.00228405,0};
+						position[]={612.70599,5.0014391,551.04596};
+						angles[]={0,0.0022863813,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s15";
 						isPlayable=1;
 					};
 					id=586;
@@ -9104,14 +9313,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={608.90411,5.0014391,548.76379};
-						angles[]={0,0.00228405,0};
+						position[]={608.90399,5.0014391,548.76398};
+						angles[]={0,0.0022863813,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s16";
 						isPlayable=1;
 					};
 					id=587;
@@ -9164,14 +9374,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={610.95935,5.0014391,548.78479};
-						angles[]={0,0.00228405,0};
+						position[]={610.95898,5.0014391,548.78497};
+						angles[]={0,0.0022863813,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s17";
 						isPlayable=1;
 					};
 					id=588;
@@ -9224,7 +9435,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={612.58356,5.0014391,548.76025};
+						position[]={612.58398,5.0014391,548.76001};
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
@@ -9232,6 +9443,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s18";
 						isPlayable=1;
 					};
 					id=589;
@@ -9284,13 +9496,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={615.13489,5.0014391,548.8678};
+						position[]={615.13501,5.0014391,548.86798};
 					};
 					side="West";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s19";
 						isPlayable=1;
 					};
 					id=590;
@@ -9343,13 +9556,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={617.17334,5.0014391,548.87164};
+						position[]={617.17297,5.0014391,548.87201};
 					};
 					side="West";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
+						name="s20";
 						isPlayable=1;
 					};
 					id=591;
@@ -9438,7 +9652,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={603.0177,5.0014391,546.5755};
+						position[]={603.01801,5.0014391,546.57599};
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
@@ -9447,6 +9661,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [3, 0]];";
+						name="s21";
 						isPlayable=1;
 					};
 					id=593;
@@ -9499,7 +9714,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={604.23285,5.0014391,544.883};
+						position[]={604.23297,5.0014391,544.883};
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
@@ -9507,6 +9722,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [3, 0]];";
+						name="s22";
 						isPlayable=1;
 					};
 					id=594;
@@ -9559,14 +9775,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={602.55634,5.0014391,542.64105};
-						angles[]={0,0.00228405,0};
+						position[]={602.55603,5.0014391,542.64099};
+						angles[]={0,0.0022863813,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s23";
 						isPlayable=1;
 					};
 					id=595;
@@ -9619,14 +9836,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={598.75488,5.0014391,540.35895};
-						angles[]={0,0.00228405,0};
+						position[]={598.755,5.0014391,540.35901};
+						angles[]={0,0.0022863813,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s24";
 						isPlayable=1;
 					};
 					id=596;
@@ -9679,14 +9897,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={600.81012,5.0014391,540.37994};
-						angles[]={0,0.00228405,0};
+						position[]={600.81,5.0014391,540.38};
+						angles[]={0,0.0022863813,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s25";
 						isPlayable=1;
 					};
 					id=597;
@@ -9739,7 +9958,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={602.43433,5.0014391,540.35541};
+						position[]={602.43402,5.0014391,540.35498};
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
@@ -9747,6 +9966,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s26";
 						isPlayable=1;
 					};
 					id=598;
@@ -9799,13 +10019,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={604.98566,5.0014391,540.46295};
+						position[]={604.98602,5.0014391,540.46301};
 					};
 					side="West";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s27";
 						isPlayable=1;
 					};
 					id=599;
@@ -9858,13 +10079,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={607.02411,5.0014391,540.4668};
+						position[]={607.02399,5.0014391,540.46698};
 					};
 					side="West";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
+						name="s28";
 						isPlayable=1;
 					};
 					id=600;
@@ -9953,7 +10175,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={613.11353,5.0014391,546.71387};
+						position[]={613.11401,5.0014391,546.71399};
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
@@ -9962,6 +10184,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [4, 0]];";
+						name="s29";
 						isPlayable=1;
 					};
 					id=602;
@@ -10014,7 +10237,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={614.32867,5.0014391,545.02136};
+						position[]={614.32898,5.0014391,545.021};
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
@@ -10022,6 +10245,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [4, 0]];";
+						name="s30";
 						isPlayable=1;
 					};
 					id=603;
@@ -10074,14 +10298,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={612.65216,5.0014391,542.77942};
-						angles[]={0,0.00228405,0};
+						position[]={612.65198,5.0014391,542.77899};
+						angles[]={0,0.0022863813,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s31";
 						isPlayable=1;
 					};
 					id=604;
@@ -10134,14 +10359,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={608.85071,5.0014391,540.49731};
-						angles[]={0,0.00228405,0};
+						position[]={608.85101,5.0014391,540.49701};
+						angles[]={0,0.0022863813,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s32";
 						isPlayable=1;
 					};
 					id=605;
@@ -10194,14 +10420,15 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={610.90594,5.0014391,540.51831};
-						angles[]={0,0.00228405,0};
+						position[]={610.90601,5.0014391,540.51801};
+						angles[]={0,0.0022863813,0};
 					};
 					side="West";
 					class Attributes
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s33";
 						isPlayable=1;
 					};
 					id=606;
@@ -10254,7 +10481,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={612.53015,5.0014391,540.49377};
+						position[]={612.53003,5.0014391,540.49396};
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
@@ -10262,6 +10489,7 @@ class Mission
 					{
 						skill=0.60000002;
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s34";
 						isPlayable=1;
 					};
 					id=607;
@@ -10314,13 +10542,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={615.08148,5.0014391,540.60132};
+						position[]={615.08099,5.0014391,540.60101};
 					};
 					side="West";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s35";
 						isPlayable=1;
 					};
 					id=608;
@@ -10373,13 +10602,14 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={617.11993,5.0014391,540.60516};
+						position[]={617.12,5.0014391,540.60498};
 					};
 					side="West";
 					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [4, 1]];";
+						name="s36";
 						isPlayable=1;
 					};
 					id=609;
