@@ -8,6 +8,15 @@ onLoadMission = "";
 author="Murshun";
 loadScreen =  "logo.jpg";
 
+class CfgTaskEnhancements
+{
+   enable       = 1;
+   3d           = 0;
+   3dDrawDist   = 0;
+   share        = 0;
+   propagate    = 0;
+};
+
 class CfgDebriefing
 {
 	class Completed1
