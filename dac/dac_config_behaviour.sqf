@@ -9,14 +9,14 @@
 //////////////////////////////
 
 private [
-			"_array","_setSkill","_setCombat","_setBehav","_setSpeed","_setForm","_setPatrol","_setSearch",
-			"_setFleeing","_setHeliVal","_setPause","_setBldgBeh","_setSupport","_setJoin","_setEmpVeh","_setSupTime","_setHidTime"
-		];
+"_array","_setSkill","_setCombat","_setBehav","_setSpeed","_setForm","_setPatrol","_setSearch",
+"_setFleeing","_setHeliVal","_setPause","_setBldgBeh","_setSupport","_setJoin","_setEmpVeh","_setSupTime","_setHidTime"
+];
 
 switch (_this select 0) do
 {
-//-------------------------------------------------------------------------------------------------------------------------
-	case 0:
+	//-------------------------------------------------------------------------------------------------------------------------
+case 0:
 	{
 		//_setSkill = ["aimingAccuracy","aimingShake","aimingSpeed","Endurance","spotDistance","spotTime","courage","reloadSpeed","commanding","general"];
 		_setSkill   = [[0.3,0.5],[0.3,0.5],[0.3,0.5],[0.4,0.7],[0.4,0.7],[0.4,0.7],[0.4,0.7],[0.4,0.7],[0.4,0.7],[0.4,0.7]];
@@ -36,8 +36,8 @@ switch (_this select 0) do
 		_setSupTime = ["5 + ((skill _unit) * (5 * DAC_AI_Level))",2,5];
 		_setHidTime = ["(((10 * DAC_AI_Level) + ((skill _leader) * 50)) / ((count units _group) + 1))"];
 	};
-//-------------------------------------------------------------------------------------------------------------------------
-	case 1:
+	//-------------------------------------------------------------------------------------------------------------------------
+case 1:
 	{
 		//_setSkill = ["aimingAccuracy","aimingShake","aimingSpeed","Endurance","spotDistance","spotTime","courage","reloadSpeed","commanding","general"];
 		_setSkill   = [[0.3,0.6],[0.3,0.6],[0.3,0.6],[0.5,0.8],[0.5,0.8],[0.5,0.8],[0.5,0.8],[0.5,0.8],[0.5,0.8],[0.5,0.8]];
@@ -57,7 +57,7 @@ switch (_this select 0) do
 		_setSupTime = ["5 + ((skill _unit) * (5 * DAC_AI_Level))",2,5];
 		_setHidTime = ["(((10 * DAC_AI_Level) + ((skill _leader) * 50)) / ((count units _group) + 1))"];
 	};
-	case 2:
+case 2:
 	{
 		//_setSkill = ["aimingAccuracy","aimingShake","aimingSpeed","Endurance","spotDistance","spotTime","courage","reloadSpeed","commanding","general"];
 		_setSkill   = [[0.2,0.4],[0.2,0.4],[0.2,0.4],[0.3,0.6],[0.3,0.6],[0.3,0.6],[0.3,0.6],[0.3,0.6],[0.3,0.6],[0.3,0.6]];
@@ -77,7 +77,7 @@ switch (_this select 0) do
 		_setSupTime = ["5 + ((skill _unit) * (5 * DAC_AI_Level))",2,5];
 		_setHidTime = ["(((10 * DAC_AI_Level) + ((skill _leader) * 50)) / ((count units _group) + 1))"];
 	};
-	case 3:
+case 3:
 	{
 		//_setSkill = ["aimingAccuracy","aimingShake","aimingSpeed","Endurance","spotDistance","spotTime","courage","reloadSpeed","commanding","general"];
 		_setSkill   = [[0.1,0.2],[0.1,0.2],[0.1,0.2],[0.1,0.2],[0.1,0.2],[0.1,0.2],[0.1,0.2],[0.1,0.2],[0.1,0.2],[0.1,0.2]];
@@ -97,20 +97,20 @@ switch (_this select 0) do
 		_setSupTime = ["5 + ((skill _unit) * (5 * DAC_AI_Level))",2,5];
 		_setHidTime = ["(((10 * DAC_AI_Level) + ((skill _leader) * 50)) / ((count units _group) + 1))"];
 	};
-//-------------------------------------------------------------------------------------------------------------------------
+	//-------------------------------------------------------------------------------------------------------------------------
 	Default {
-				if(DAC_Basic_Value != 5) then
-				{
-					DAC_Basic_Value = 5;publicvariable "DAC_Basic_Value";
-					hintc "Error: DAC_Config_Behaviour > No valid config number";
-				};
-				if(true) exitwith {};
-			};
+		if(DAC_Basic_Value != 5) then
+		{
+			DAC_Basic_Value = 5;publicvariable "DAC_Basic_Value";
+			hintc "Error: DAC_Config_Behaviour > No valid config number";
+		};
+		if(true) exitwith {};
+	};
 };
 
 _array =	[
-				_setSkill,_setCombat,_setBehav,_setSpeed,_setForm,_setFleeing,
-				_setHeliVal,_setPause,_setBldgBeh,_setPatrol,_setSearch,
-				_setSupport,_setJoin,_setEmpVeh,_setSupTime,_setHidTime
-			];
+_setSkill,_setCombat,_setBehav,_setSpeed,_setForm,_setFleeing,
+_setHeliVal,_setPause,_setBldgBeh,_setPatrol,_setSearch,
+_setSupport,_setJoin,_setEmpVeh,_setSupTime,_setHidTime
+];
 _array
