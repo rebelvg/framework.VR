@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=610;
+		nextID=612;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={611.00879,101.94466,401.07187};
-		dir[]={-0.010238077,-0.56503236,0.82514191};
-		up[]={-0.007011475,0.82501036,0.56507605};
-		aside[]={1.000008,-1.2718374e-008,0.012408183};
+		pos[]={609.68738,84.971222,425.61649};
+		dir[]={-0.015470267,-0.51316124,0.85828614};
+		up[]={-0.0092500104,0.85823327,0.51317668};
+		aside[]={0.99991864,6.3988409e-008,0.018023798};
 	};
 };
 binarizationWanted=0;
@@ -383,8 +383,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={541.54718,5,587.45007};
-				angles[]={0,6.2732205,0};
+				position[]={541.547,5,587.45001};
+				angles[]={0,6.2732191,0};
 			};
 			id=14;
 			type="ALiVE_require";
@@ -462,7 +462,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="kick";
+							value="warning";
 						};
 					};
 				};
@@ -588,8 +588,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={541.9259,5,577.72797};
-				angles[]={0,6.2732205,0};
+				position[]={541.92603,5,577.72803};
+				angles[]={0,6.2732191,0};
 			};
 			id=15;
 			type="ALiVE_SYS_LOGISTICSDISABLE";
@@ -1692,8 +1692,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={542.36084,5,567.48981};
-				angles[]={0,6.2732205,0};
+				position[]={542.36102,5,567.48999};
+				angles[]={0,6.2732191,0};
 			};
 			id=23;
 			type="ALiVE_SYS_playeroptions";
