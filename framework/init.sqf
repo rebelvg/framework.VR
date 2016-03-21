@@ -178,6 +178,8 @@ murshun_assignTeam_fnc = {
 };
 
 murshun_framework_revivePlayers_fnc = {
+	"respawn" setMarkerPos getMarkerPos "base_marker";
+	
 	{
 		[[], "murshun_disableSpectator_fnc", _x] call BIS_fnc_MP;
 	} foreach (nearestObjects [spectator_respawn_flag, ["Man"], 10]);
