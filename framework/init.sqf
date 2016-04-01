@@ -61,11 +61,11 @@ murshun_giveWeapon_fnc = {
 	_unit = _this select 0;
 	_array = _this select 1;
 
+	if (count _array == 3) then {
 	_weapon = _array select 0;
 	_mags = _array select 1;
 	_devices = _array select 2;
 
-	if (count _array == 3) then {
 		{
 			if (count _x == 2) then {
 				if (count (_x select 0) != 0) then {
