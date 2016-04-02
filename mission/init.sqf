@@ -10,18 +10,24 @@ weaponArray1 = ["rifle", [["mag1", number], ["mag2", number]], ["device1", "devi
 weaponArray2 = ["handgun", [["mag", number]], ["device"]];
 weaponsArray = [weaponArray1, weaponArray2];
 eqpArray = [classesArray, [fashionArray, weaponsArray]];
+
+randomWeaponArray = selectRandom [weaponArray1, weaponArray2];
 */
 
-_advancedMedicine = [["ACE_elasticBandage", 10], ["ACE_quikclot", 10], ["ACE_morphine", 4], ["ACE_epinephrine", 2], ["ACE_atropine", 1], ["ACE_tourniquet", 1]];
 _basicMedicine = [["ACE_elasticBandage", 10], ["ACE_morphine", 4], ["ACE_epinephrine", 2]];
-_advancedMedic = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 8], ["ACE_atropine", 4], ["ACE_tourniquet", 4], ["ACE_personalAidKit", 3], ["ACE_salineIV_500", 2]];
+_advancedMedicine = [["ACE_elasticBandage", 10], ["ACE_quikclot", 10], ["ACE_morphine", 4], ["ACE_epinephrine", 2], ["ACE_atropine", 1], ["ACE_tourniquet", 1]];
+
 _basicMedic = [["ACE_elasticBandage", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 6], ["ACE_salineIV_500", 2]];
+_advancedMedic = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 8], ["ACE_atropine", 4], ["ACE_tourniquet", 4], ["ACE_personalAidKit", 3], ["ACE_salineIV_500", 2]];
 
 _fashionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
 _fashionPilot = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_Parachute", ""];
-_rifleArray = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]];
+_glRifleArray = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]];
+_rifleArray = ["arifle_MX_F", [["30Rnd_65x39_caseless_mag", 7]], []];
+_mgArray = ["arifle_MX_SW_F", [["100Rnd_65x39_caseless_mag_Tracer", 7]], ["bipod_01_F_snd"]];
 _handgunArray = ["hgun_P07_F", [["16Rnd_9x21_Mag", 3]], []];
 _atLauncher = ["launch_NLAW_F", [], []];
+_msLauncher = ["launch_B_Titan_short_F", [["Titan_AT", 3]], []];
 _binocularsArray = ["Laserdesignator", [], []];
 
 _loadoutArray_west = [
@@ -30,7 +36,7 @@ _loadoutArray_west = [
 			["officer", "squad leader", "team leader"],
 			[
 				_fashionArray,
-				[_rifleArray, _handgunArray, _binocularsArray]
+				[_glRifleArray, _handgunArray, _binocularsArray]
 			]
 		],
 		[
@@ -44,7 +50,7 @@ _loadoutArray_west = [
 			["autorifleman"],
 			[
 				_fashionArray,
-				[_rifleArray]
+				[_mgArray]
 			]
 		],
 		[
@@ -58,7 +64,7 @@ _loadoutArray_west = [
 			["missile specialist (at)"],
 			[
 				_fashionArray,
-				[_rifleArray, _atLauncher]
+				[_rifleArray, _msLauncher]
 			]
 		],
 		[
@@ -87,8 +93,8 @@ _loadoutArray_west = [
 		[
 			["ACE_EarPlugs", 1],
 			["ACE_Flashlight_XL50", 1],
-			["HandGrenade", 1],
-			["SmokeShellBlue", 2]
+			["SmokeShellBlue", 2],
+			["HandGrenade", 1]
 		],
 		[
 			"ItemMap",
