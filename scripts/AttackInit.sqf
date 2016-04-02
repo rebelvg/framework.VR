@@ -142,8 +142,8 @@ fnc_VehicleAttack = {
 	};
 };
 
-//["SPAWNMARKERNAME", "ATTACKMARKERNAME", "BLUFOR", "BLUFOR Air", WEST, 0] spawn fnc_HeliAttack;
-fnc_HeliAttack = {
+//["SPAWNMARKERNAME", "ATTACKMARKERNAME", "BLUFOR", "BLUFOR Air", WEST, 0] spawn fnc_AirAttack;
+fnc_AirAttack = {
 	private ["_marker","_attackMarker","_faction","_vehicle","_side","_times","_soldierArray","_vehicleArray","_spawnMarker","_randomUnit","_randomVehicle","_grp","_veh","_vehicleCommander","_vehicleDriver","_vehicleGunner","_wp","_formations","_chosenFormations"];	_marker = _this select 0;
 	_marker = _this select 0;
 	_attackMarker = _this select 1;
