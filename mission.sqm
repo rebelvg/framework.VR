@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=612;
+		nextID=614;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={609.76318,72.383102,424.89093};
-		dir[]={-0.006277414,-0.46011829,0.88796514};
-		up[]={-0.0032537007,0.88779896,0.46021783};
-		aside[]={1.0000554,1.0087024e-007,0.0070705232};
+		pos[]={600.88135,69.657166,460.4856};
+		dir[]={0.014398035,-0.61195189,0.79090899};
+		up[]={0.011139538,0.79083145,0.61192638};
+		aside[]={0.99991268,-1.4530087e-008,-0.018202007};
 	};
 };
 binarizationWanted=0;
@@ -48,7 +48,8 @@ addons[]=
 	"A3_Structures_F_Items_Electronics",
 	"A3_Characters_F_OPFOR",
 	"A3_Supplies_F_Heli_CargoNets",
-	"A3_Characters_F_INDEP"
+	"A3_Characters_F_INDEP",
+	"ace_common"
 };
 randomSeed=5706534;
 class ScenarioData
@@ -71,6 +72,25 @@ class CustomAttributes
 	{
 		name="Multiplayer";
 		class Attribute0
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
 		{
 			property="RespawnTemplates";
 			expression="true";
@@ -103,25 +123,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=1;
 				};
 			};
 		};
@@ -176,7 +177,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=49;
+		items=50;
 		class Item0
 		{
 			dataType="Marker";
@@ -462,7 +463,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="warning";
+							value="kick";
 						};
 					};
 				};
@@ -8527,7 +8528,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={551.86298,5,567.61401};
+				position[]={517.4024,5,550.09357};
 				angles[]={0,6.2732191,0};
 			};
 			id=508;
@@ -10684,6 +10685,77 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item49
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={505.73999,5,550.34302};
+			};
+			id=612;
+			type="ACE_ModuleCheckPBOs";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_ModuleCheckPBOs_CheckAll";
+					expression="_this setVariable ['CheckAll',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ACE_ModuleCheckPBOs_Whitelist";
+					expression="_this setVariable ['Whitelist',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[]";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_ModuleCheckPBOs_Action";
+					expression="_this setVariable ['Action',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=3;
 			};
 		};
 	};

@@ -93,8 +93,7 @@ _loadoutArray_west = [
 		[
 			["ACE_EarPlugs", 1],
 			["ACE_Flashlight_XL50", 1],
-			["SmokeShellBlue", 2],
-			["HandGrenade", 1]
+			["SmokeShellBlue", 2]
 		],
 		[
 			"ItemMap",
@@ -109,7 +108,6 @@ _loadoutArray_west = [
 		["ToolKit", 2],
 		["ACE_wirecutter", 2],
 		["ACE_SpareBarrel", 2],
-		["ACE_SpraypaintBlue", 60],
 		["DemoCharge_Remote_Mag", 30],
 		["SatchelCharge_Remote_Mag", 10],
 		["ACE_CableTie", 30],
