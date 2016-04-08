@@ -71,11 +71,5 @@ if (count _loadoutArray == 4) then {
 		if (_unit isKindOf "air") then {
 			_unit addBackpackCargoGlobal ["B_Parachute", count fullCrew [_unit, "", true]];
 		};
-
-		if (!isNil "murshun_enableRadioInCars") then {
-			if (murshun_enableRadioInCars) then {
-				[_unit] execVM "music_radio\vehicleInit.sqf";
-			};
-		};
 	};
 };

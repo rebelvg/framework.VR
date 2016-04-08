@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=614;
+		nextID=615;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={600.20319,71.923248,433.85452};
-		dir[]={0.019040812,-0.45232618,0.89177948};
-		up[]={0.0096578514,0.89179039,0.45233825};
-		aside[]={0.99985176,1.3819954e-007,-0.021347515};
+		pos[]={606.69513,52.092209,451.6543};
+		dir[]={0.0045214533,-0.39490965,0.91884226};
+		up[]={0.0019438036,0.91866326,0.39503607};
+		aside[]={1.000065,6.3850166e-008,-0.0049199467};
 	};
 };
 binarizationWanted=0;
@@ -76,25 +76,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -126,6 +107,25 @@ class CustomAttributes
 							};
 						};
 					};
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
 				};
 			};
 		};
@@ -254,14 +254,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={603.64294,6.6115026,568.41296};
+				position[]={603.64301,6.6115026,568.41278};
 				angles[]={0,2.0254021,0};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, WEST] execVM ""scripts\boxes\box.sqf"";";
+				init="0 = [this, WEST] execVM ""scripts\boxes\box.sqf""; 0 = [this] execVM ""music_radio\radioInit.sqf"";";
 			};
 			id=6;
 			type="C_Offroad_01_F";
@@ -294,14 +294,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={632.95599,6.6115026,567.17181};
-				angles[]={0,1.8597846,0};
+				position[]={632.95599,6.6115026,567.17175};
+				angles[]={0,1.8597879,0};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, RESISTANCE] execVM ""scripts\boxes\box.sqf"";";
+				init="0 = [this, RESISTANCE] execVM ""scripts\boxes\box.sqf""; 0 = [this] execVM ""music_radio\radioInit.sqf"";";
 			};
 			id=12;
 			type="C_Offroad_01_F";
@@ -3153,14 +3153,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={567.09161,6.6115026,568.57813};
-				angles[]={0,1.9520031,0};
+				position[]={567.09198,6.6115026,568.57776};
+				angles[]={0,1.9520112,0};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, EAST] execVM ""scripts\boxes\box.sqf"";";
+				init="0 = [this, EAST] execVM ""scripts\boxes\box.sqf""; 0 = [this] execVM ""music_radio\radioInit.sqf"";";
 			};
 			id=9;
 			type="C_Offroad_01_F";
@@ -3366,14 +3366,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={615.64142,5.9376087,566.67896};
+				position[]={615.64099,5.9376087,566.67902};
 				angles[]={0,3.282877,0};
 			};
 			side="Empty";
 			class Attributes
 			{
 				skill=0.60000002;
-				name="musicRadio_01";
+				init="0 = [this] execVM ""music_radio\radioInit.sqf"";";
 			};
 			id=225;
 			type="Land_FMradio_F";
