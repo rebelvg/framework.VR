@@ -80,7 +80,15 @@ murshun_giveWeapon_fnc = {
 
 		{
 			if (count _x != 0) then {
-				_unit addPrimaryWeaponItem _x;
+				if (primaryWeapon _unit == _weapon) then {
+					_unit addPrimaryWeaponItem _x;
+				};
+				if (handgunWeapon _unit == _weapon) then {
+					_unit addHandgunItem _x;
+				};
+				if (secondaryWeapon _unit == _weapon) then {
+					_unit addSecondaryWeaponItem _x;
+				};
 			};
 		} foreach _devices;
 	};
