@@ -28,7 +28,9 @@ case CIVILIAN: {
 };
 
 if (!isMultiplayer) then {
-	_unit addAction ["Virtual Arsenal",{["Open",true] call BIS_fnc_arsenal}];
+	if (_unit isKindOf "thing") then {
+		_unit addAction ["Virtual Arsenal", {["Open", true] call BIS_fnc_arsenal}];
+	};
 };
 
 if (count _loadoutArray == 4) then {

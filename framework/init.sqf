@@ -64,8 +64,28 @@ murshun_giveWeapon_fnc = {
 	if (count _array == 3) then {
 		_weapon = _array select 0;
 		_mags = _array select 1;
-		_devices = _array select 2;
+		_devices = _array select 2;		
 
+		if (count _weapon != 0) then {
+			_unit addWeapon _weapon;
+		};
+		
+		{
+			if (count _x == 2) then {
+				if (count (_x select 0) != 0) then {
+					if (([_weapon] call ace_common_fnc_getItemType) select 1 == "primary") then {
+						_unit addPrimaryWeaponItem (_x select 0);
+					};
+					if (([_weapon] call ace_common_fnc_getItemType) select 1 == "handgun") then {
+						_unit addHandgunItem (_x select 0);
+					};
+					if (([_weapon] call ace_common_fnc_getItemType) select 1 == "secondary") then {
+						_unit addSecondaryWeaponItem (_x select 0);
+					};
+				};
+			};
+		} foreach _mags;
+		
 		{
 			if (count _x == 2) then {
 				if (count (_x select 0) != 0) then {
@@ -74,19 +94,15 @@ murshun_giveWeapon_fnc = {
 			};
 		} foreach _mags;
 
-		if (count _weapon != 0) then {
-			_unit addWeapon _weapon;
-		};
-
 		{
 			if (count _x != 0) then {
-				if (primaryWeapon _unit == _weapon) then {
+				if (([_weapon] call ace_common_fnc_getItemType) select 1 == "primary") then {
 					_unit addPrimaryWeaponItem _x;
 				};
-				if (handgunWeapon _unit == _weapon) then {
+				if (([_weapon] call ace_common_fnc_getItemType) select 1 == "handgun") then {
 					_unit addHandgunItem _x;
 				};
-				if (secondaryWeapon _unit == _weapon) then {
+				if (([_weapon] call ace_common_fnc_getItemType) select 1 == "secondary") then {
 					_unit addSecondaryWeaponItem _x;
 				};
 			};

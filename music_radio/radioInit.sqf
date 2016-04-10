@@ -1,8 +1,13 @@
 _radio = _this select 0;
+_enabledOnStart = _this select 1;
 
 waitUntil {!isnil "murshun_musicRadiosArray"};
 
-if (_radio isKindOf "thing") then {
+if (isNil "_enabledOnStart") then {
+	_enabledOnStart = false;
+};
+
+if (_radio isKindOf "thing" or _enabledOnStart) then {
 	if (isServer) then {
 		_radio setVariable ["radio_playing", true, true];
 	};
