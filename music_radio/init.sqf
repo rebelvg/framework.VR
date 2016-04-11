@@ -66,11 +66,14 @@ player addEventHandler ["Respawn", {
 	playMusic "";
 }];
 
-if (isServer) then {	
+if (isServer) then {
 	waitUntil {time > 15};
 	
+	_musicArray = "gettext (_x >> 'tag') == 'Poddy Music'" configClasses (configFile >> "CfgMusic");
+	
+	if (count _musicArray == 0) exitWith {};
+	
 	while {true} do {
-		_musicArray = "gettext (_x >> 'tag') == 'Poddy Music'" configClasses (configFile >> "CfgMusic");
 		_musicArray = [_musicArray, 4 * count _musicArray] call KK_fnc_arrayShufflePlus;
 		
 		{
