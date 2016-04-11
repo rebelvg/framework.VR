@@ -41,7 +41,7 @@ this setVariable ["radio_channel", [1, 1]];
 [1, 1] is a special radio array, 1 is a squad, 1 is a team.
 Squads available - 1 to 6, squad 7 is reserved for command network.
 Teams available - 1 to 4, team 5 is reserved for squad command network.
-So in total you can have 6 squads with 4 fireteams per squad which is more then enough which can cover up to 96 players (not counting any command players).
+So in total you can have 6 squads with 4 fireteams per squad which is more than enough which can cover up to 96 players (not counting any command players).
 Colors will be applied automatically.
 Modified roster script adds frequencies to the roster.
 
