@@ -21,13 +21,27 @@ in initPlayerLocal.sqf
 [] execVM "framework\initServer.sqf";
 in initServer.sqf
 
+Spectator is located inside of our murshun pack. If you want to enable it you must add a few lines.
+
+[] execVM "murshun_menu\spectator\init.sqf";
+in init.sqf
+
+[player] execVM "murshun_menu\spectator\onPlayerKilled.sqf";
+in onPlayerKilled.sqf
+
+[player] execVM "murshun_menu\spectator\onPlayerRespawn.sqf";
+in onPlayerRespawn.sqf
+
 Framework should not throw ANY script errors. If you see any errors connected to the framework, you're probably doing something wrong, ask rebel.
 loadoutArray is located in mission\init.sqf
 It's pretty self-explanatory.
 
 You need to set radio_channel for all playable units.
-this setVariable ["radio_channel", [1, 0]];
-[1, 0] is a special radio array, 1 is a squad, 0 is a team, squad 7 is reserved for command, team 0 is squad leader and medic
+this setVariable ["radio_channel", [1, 1]];
+[1, 1] is a special radio array, 1 is a squad, 1 is a team.
+Squads available - 1 to 6, squad 7 is reserved for command network.
+Teams available - 1 to 4, team 5 is reserved for squad command network.
+So in total you can have 6 squads with 4 fireteams per squad which is more then enough which can cover up to 96 players (not counting any command players).
 Colors will be applied automatically.
 Modified roster script adds frequencies to the roster.
 

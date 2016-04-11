@@ -6,7 +6,8 @@ respawnButton = 1;
 onLoadName = "Framework";
 onLoadMission = "";
 author="Murshun";
-loadScreen =  "logo.jpg";
+loadScreen =  "logo.paa";
+overviewPicture = "logo.paa";
 
 class CfgTaskEnhancements
 {

@@ -4,7 +4,7 @@ _className = tolower gettext (configFile >> "cfgVehicles" >> typeOf _unit >> "di
 _loadoutArray = [];
 
 waitUntil {!isNil "murshun_frameworkInit"};
-waitUntil {!isNil "loadoutArray_west" or !isNil "loadoutArray_east" or !isNil "loadoutArray_guer" or !isNil "loadoutArray_civ"};
+waitUntil {time > 0 and (!isNil "loadoutArray_west" or !isNil "loadoutArray_east" or !isNil "loadoutArray_guer" or !isNil "loadoutArray_civ")};
 
 switch (side _unit) do {
 case WEST: {

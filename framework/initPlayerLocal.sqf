@@ -1,9 +1,9 @@
 [player] execVM "scripts\loadout.sqf";
 
-if (!(didJIP)) then {
+if (!didJIP) then {
 	[2, false, true] execVM "scripts\roster.sqf";
 } else {
-	if (time > 60) then {
+	if (time > 0) then {
 		[[[2, false, true], "scripts\roster.sqf"], "BIS_fnc_execVM"] call BIS_fnc_MP;
 	} else {
 		[2, false, true] execVM "scripts\roster.sqf";
@@ -21,11 +21,10 @@ _month = _monthArray select _month - 1;
 _dateArray = date;
 
 {
-	_indexId = _dateArray find _x;
 	if (_x < 10) then {
-		_dateArray set [_indexId, "0" + str(_x)];
+		_dateArray set [_forEachIndex, "0" + str _x];
 	} else {
-		_dateArray set [_indexId, str(_x)];
+		_dateArray set [_forEachIndex, str _x];
 	};
 } foreach _dateArray;
 
@@ -45,6 +44,7 @@ sleep 0.5;
 sleep 11;
 
 _murshun_whoDunIt = getText (missionConfigFile >> "author");
+
 if (_murshun_whoDunIt == "") exitWith {};
 
 [parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>%1</t><br /><t shadow='2' align='right' size='1.6'>%2</t>", "Created and Directed by", _murshun_whoDunIt], true, nil, 9, 1, 0] spawn BIS_fnc_textTiles;
