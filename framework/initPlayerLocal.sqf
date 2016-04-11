@@ -11,6 +11,7 @@ if (!didJIP) then {
 };
 
 [] execVM "scripts\radio_settings.sqf";
+[player] spawn murshun_assignTeam_fnc;
 
 sleep 90;
 

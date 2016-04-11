@@ -59,7 +59,24 @@
 *****************************************************************************************************************************************
 */
 
-waituntil {!isNil "murshun_frameworkInit"};
+waitUntil {!isNil "radioNetArray_west" and !isNil "radioNetArray_east" and !isNil "radioNetArray_guer" and !isNil "radioNetArray_civ"};
+
+_radioNetArray = [];
+
+switch (side player) do {
+case WEST: {
+		_radioNetArray = radioNetArray_west;
+	};
+case EAST: {
+		_radioNetArray = radioNetArray_east;
+	};
+case RESISTANCE: {
+		_radioNetArray = radioNetArray_guer;
+	};
+case CIVILIAN: {
+		_radioNetArray = radioNetArray_civ;
+	};
+};
 
 if (isClass(configFile >> "CfgPatches" >> "skippy_roster")) exitWith {};
 
@@ -232,19 +249,15 @@ case 2:{//only playable units
 			};
 		};
 		
-		if (_team == 0) then {
-			_team = 7;
-		} else {
-			_team = _team - 1;
-		};
+		_team = _team - 1;
 		
-		_freq = radioNetArray select _squad select _team;
+		_freq = _radioNetArray select _squad select _team;
 
 		_strFinal =  _strFinal + "<font color="+_strColorGrp+">"+_strGrp+"</font>" + _strRank + "<font color="+_teamColor+">"+name _x+"</font>" + _strRole + " " + "(" + _freq + ")" + "<br/>";
 
 		_oldGrp = group _x;
 	};
-}forEach _unitsArr;
+} forEach _unitsArr;
 
 player createDiarySubject ["roster", "Team Roster"];
 player createDiaryRecord ["roster", [format ["Roster %1", date], _strFinal]];
