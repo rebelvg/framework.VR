@@ -34,6 +34,15 @@ class CfgDebriefing
 	};	
 };
 
+class CfgDebriefingSections
+{
+	class PrintMurshunDebriefing
+	{
+		title = "Murshun Debriefing Screen";
+		variable = "murshun_debriefing_text";
+	};
+};
+
 class Extended_Init_Eventhandlers
 {
     class CAManBase
