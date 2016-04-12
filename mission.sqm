@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=811;
+		nextID=852;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={610.28448,53.005936,463.95898};
-		dir[]={0.0040630354,-0.47216427,0.88164854};
-		up[]={0.0021764031,0.88145792,0.47225815};
-		aside[]={1.000001,-8.4108433e-007,-0.0046112835};
+		pos[]={614.33325,55.248161,483.42224};
+		dir[]={-0.0065377997,-0.5758391,0.81769711};
+		up[]={-0.0046052109,0.81751907,0.57589471};
+		aside[]={0.99997127,-2.2236418e-007,0.0079932101};
 	};
 };
 binarizationWanted=0;
@@ -80,6 +80,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -111,25 +130,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=1;
 				};
 			};
 		};
@@ -201,7 +201,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={615.67212,5.4322958,566.66443};
-				angles[]={0,1.7361503,0};
+				angles[]={0,1.7660649,0};
 			};
 			side="Empty";
 			class Attributes
@@ -2958,8 +2958,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={615.64099,5.9376087,566.67902};
-				angles[]={0,3.282877,0};
+				position[]={615.67023,5.9372005,566.66205};
+				angles[]={0,3.3111482,0};
 			};
 			side="Empty";
 			class Attributes
@@ -8999,15 +8999,14 @@ class Mission
 						angles[]={0,6.2756629,0};
 					};
 					side="Independent";
-					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
 						name="i_9";
 						isPlayable=1;
 					};
-					id=379;
-					type="I_Soldier_AA_F";
+					id=811;
+					type="I_Soldier_AT_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9243,15 +9242,14 @@ class Mission
 						angles[]={0,6.2756629,0};
 					};
 					side="Independent";
-					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 2]];";
 						name="i_13";
 						isPlayable=1;
 					};
-					id=774;
-					type="I_Soldier_AA_F";
+					id=812;
+					type="I_Soldier_AT_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9421,7 +9419,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=764;
+			id=817;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9458,8 +9456,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={632.90527,5.0014391,544.58875};
-						angles[]={0,0.0016580628,0};
+						position[]={632.95813,5.0014391,544.47754};
+						angles[]={0,6.2723184,0};
 					};
 					side="Independent";
 					flags=3;
@@ -9469,7 +9467,7 @@ class Mission
 						name="i_16";
 						isPlayable=1;
 					};
-					id=780;
+					id=829;
 					type="I_Soldier_SL_F";
 					class CustomAttributes
 					{
@@ -9519,8 +9517,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={634.84229,5.0014391,542.78174};
-						angles[]={0,0.043964844,0};
+						position[]={634.9176,5.0014391,542.69495};
+						angles[]={0,0.031439714,0};
 					};
 					side="Independent";
 					flags=1;
@@ -9530,7 +9528,7 @@ class Mission
 						name="i_17";
 						isPlayable=1;
 					};
-					id=781;
+					id=830;
 					type="I_medic_F";
 					class CustomAttributes
 					{
@@ -9580,8 +9578,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={631.20026,5.0014391,542.67578};
-						angles[]={0,6.278543,0};
+						position[]={631.27722,5.0014391,542.5434};
+						angles[]={0,6.2660179,0};
 					};
 					side="Independent";
 					flags=1;
@@ -9591,7 +9589,7 @@ class Mission
 						name="i_18";
 						isPlayable=1;
 					};
-					id=782;
+					id=831;
 					type="I_engineer_F";
 					class CustomAttributes
 					{
@@ -9641,8 +9639,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={629.14825,5.0014391,540.99774};
-						angles[]={0,0.016475908,0};
+						position[]={629.2464,5.0014391,540.83978};
+						angles[]={0,0.0039507803,0};
 					};
 					side="Independent";
 					flags=1;
@@ -9652,7 +9650,7 @@ class Mission
 						name="i_19";
 						isPlayable=1;
 					};
-					id=783;
+					id=832;
 					type="I_Soldier_TL_F";
 					class CustomAttributes
 					{
@@ -9702,19 +9700,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={627.0733,5.0014391,538.83173};
-						angles[]={0,6.2756629,0};
+						position[]={627.19873,5.0014391,538.64795};
+						angles[]={0,6.2631378,0};
 					};
 					side="Independent";
-					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
 						name="i_20";
 						isPlayable=1;
 					};
-					id=784;
-					type="I_Soldier_AA_F";
+					id=833;
+					type="I_Soldier_AT_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9763,8 +9760,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={629.2663,5.0014391,538.82874};
-						angles[]={0,0.027593656,0};
+						position[]={629.3916,5.0014391,538.67242};
+						angles[]={0,0.015068527,0};
 					};
 					side="Independent";
 					flags=1;
@@ -9774,7 +9771,7 @@ class Mission
 						name="i_21";
 						isPlayable=1;
 					};
-					id=785;
+					id=834;
 					type="I_Soldier_AR_F";
 					class CustomAttributes
 					{
@@ -9824,8 +9821,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={630.91528,5.0014391,538.81476};
-						angles[]={0,0.025132742,0};
+						position[]={631.04059,5.0014391,538.67908};
+						angles[]={0,0.012607614,0};
 					};
 					side="Independent";
 					flags=1;
@@ -9835,7 +9832,7 @@ class Mission
 						name="i_22";
 						isPlayable=1;
 					};
-					id=786;
+					id=835;
 					type="I_Soldier_LAT_F";
 					class CustomAttributes
 					{
@@ -9885,8 +9882,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={636.83228,5.0014391,540.66376};
-						angles[]={0,0.016475908,0};
+						position[]={636.93396,5.0014391,540.60205};
+						angles[]={0,0.0039507803,0};
 					};
 					side="Independent";
 					flags=1;
@@ -9896,7 +9893,7 @@ class Mission
 						name="i_23";
 						isPlayable=1;
 					};
-					id=787;
+					id=836;
 					type="I_Soldier_TL_F";
 					class CustomAttributes
 					{
@@ -9946,19 +9943,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={634.75726,5.0014391,538.49774};
-						angles[]={0,6.2756629,0};
+						position[]={634.88629,5.0014391,538.41022};
+						angles[]={0,6.2631378,0};
 					};
 					side="Independent";
-					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 2]];";
 						name="i_24";
 						isPlayable=1;
 					};
-					id=788;
-					type="I_Soldier_AA_F";
+					id=837;
+					type="I_Soldier_AT_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10007,8 +10003,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={636.99969,5.0014391,538.62421};
-						angles[]={0,0.027593656,0};
+						position[]={637.09003,5.0014391,538.60101};
+						angles[]={0,0.015068527,0};
 					};
 					side="Independent";
 					flags=1;
@@ -10018,7 +10014,7 @@ class Mission
 						name="i_25";
 						isPlayable=1;
 					};
-					id=789;
+					id=838;
 					type="I_Soldier_AR_F";
 					class CustomAttributes
 					{
@@ -10068,8 +10064,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={638.81226,5.0014391,538.58624};
-						angles[]={0,0.025132742,0};
+						position[]={638.84479,5.0014391,538.51953};
+						angles[]={0,0.012607614,0};
 					};
 					side="Independent";
 					flags=1;
@@ -10079,7 +10075,7 @@ class Mission
 						name="i_26";
 						isPlayable=1;
 					};
-					id=790;
+					id=839;
 					type="I_Soldier_LAT_F";
 					class CustomAttributes
 					{
@@ -10128,7 +10124,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=779;
+			id=828;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10165,8 +10161,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={648.8609,5.0014391,544.36462};
-						angles[]={0,0.0016580628,0};
+						position[]={648.81964,5.0014391,544.49561};
+						angles[]={0,0.0033563492,0};
 					};
 					side="Independent";
 					flags=3;
@@ -10176,7 +10172,7 @@ class Mission
 						name="i_27";
 						isPlayable=1;
 					};
-					id=792;
+					id=841;
 					type="I_Soldier_SL_F";
 					class CustomAttributes
 					{
@@ -10226,8 +10222,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={650.79791,5.0014391,542.55762};
-						angles[]={0,0.043964844,0};
+						position[]={650.7536,5.0014391,542.6853};
+						angles[]={0,0.04566313,0};
 					};
 					side="Independent";
 					flags=1;
@@ -10237,7 +10233,7 @@ class Mission
 						name="i_28";
 						isPlayable=1;
 					};
-					id=793;
+					id=842;
 					type="I_medic_F";
 					class CustomAttributes
 					{
@@ -10287,8 +10283,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={647.15588,5.0014391,542.45166};
-						angles[]={0,6.278543,0};
+						position[]={647.11139,5.0014391,542.58551};
+						angles[]={0,6.2802415,0};
 					};
 					side="Independent";
 					flags=1;
@@ -10298,7 +10294,7 @@ class Mission
 						name="i_29";
 						isPlayable=1;
 					};
-					id=794;
+					id=843;
 					type="I_engineer_F";
 					class CustomAttributes
 					{
@@ -10348,8 +10344,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={645.10388,5.0014391,540.77362};
-						angles[]={0,0.016475908,0};
+						position[]={645.05652,5.0014391,540.91101};
+						angles[]={0,0.018174196,0};
 					};
 					side="Independent";
 					flags=1;
@@ -10359,7 +10355,7 @@ class Mission
 						name="i_30";
 						isPlayable=1;
 					};
-					id=795;
+					id=844;
 					type="I_Soldier_TL_F";
 					class CustomAttributes
 					{
@@ -10409,19 +10405,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={643.02893,5.0014391,538.6076};
-						angles[]={0,6.2756629,0};
+						position[]={642.97791,5.0014391,538.74847};
+						angles[]={0,6.2773614,0};
 					};
 					side="Independent";
-					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
 						name="i_31";
 						isPlayable=1;
 					};
-					id=796;
-					type="I_Soldier_AA_F";
+					id=845;
+					type="I_Soldier_AT_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10470,8 +10465,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={645.22192,5.0014391,538.60461};
-						angles[]={0,0.027593656,0};
+						position[]={645.1709,5.0014391,538.74176};
+						angles[]={0,0.029291943,0};
 					};
 					side="Independent";
 					flags=1;
@@ -10481,7 +10476,7 @@ class Mission
 						name="i_32";
 						isPlayable=1;
 					};
-					id=797;
+					id=846;
 					type="I_Soldier_AR_F";
 					class CustomAttributes
 					{
@@ -10531,8 +10526,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={646.87091,5.0014391,538.59064};
-						angles[]={0,0.025132742,0};
+						position[]={646.81982,5.0014391,538.72504};
+						angles[]={0,0.026831029,0};
 					};
 					side="Independent";
 					flags=1;
@@ -10542,7 +10537,7 @@ class Mission
 						name="i_33";
 						isPlayable=1;
 					};
-					id=798;
+					id=847;
 					type="I_Soldier_LAT_F";
 					class CustomAttributes
 					{
@@ -10592,8 +10587,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={652.7879,5.0014391,540.43964};
-						angles[]={0,0.016475908,0};
+						position[]={652.73999,5.0014391,540.56396};
+						angles[]={0,0.018174196,0};
 					};
 					side="Independent";
 					flags=1;
@@ -10603,7 +10598,7 @@ class Mission
 						name="i_34";
 						isPlayable=1;
 					};
-					id=799;
+					id=848;
 					type="I_Soldier_TL_F";
 					class CustomAttributes
 					{
@@ -10653,19 +10648,18 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={650.71289,5.0014391,538.27362};
-						angles[]={0,6.2756629,0};
+						position[]={650.66125,5.0014391,538.40149};
+						angles[]={0,6.2773614,0};
 					};
 					side="Independent";
-					flags=1;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 2]];";
 						name="i_35";
 						isPlayable=1;
 					};
-					id=800;
-					type="I_Soldier_AA_F";
+					id=849;
+					type="I_Soldier_AT_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10714,8 +10708,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={652.95532,5.0014391,538.40009};
-						angles[]={0,0.027593656,0};
+						position[]={652.86755,5.0014391,538.56091};
+						angles[]={0,0.029291943,0};
 					};
 					side="Independent";
 					flags=1;
@@ -10725,7 +10719,7 @@ class Mission
 						name="i_36";
 						isPlayable=1;
 					};
-					id=801;
+					id=850;
 					type="I_Soldier_AR_F";
 					class CustomAttributes
 					{
@@ -10775,8 +10769,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={654.76788,5.0014391,538.36212};
-						angles[]={0,0.025132742,0};
+						position[]={654.62097,5.0014391,538.45447};
+						angles[]={0,0.026831029,0};
 					};
 					side="Independent";
 					flags=1;
@@ -10786,7 +10780,7 @@ class Mission
 						name="i_37";
 						isPlayable=1;
 					};
-					id=802;
+					id=851;
 					type="I_Soldier_LAT_F";
 					class CustomAttributes
 					{
@@ -10835,7 +10829,7 @@ class Mission
 			class Attributes
 			{
 			};
-			id=791;
+			id=840;
 			class CustomAttributes
 			{
 				class Attribute0
