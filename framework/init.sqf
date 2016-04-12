@@ -1,15 +1,3 @@
-murshun_checkArrayExists_fnc = {
-	_arrayName = _this select 0;
-
-	_return = [];
-
-	if (!isNil _arrayName) then {
-		_return = missionNamespace getVariable _arrayName;
-	};
-
-	_return;
-};
-
 murshun_giveUniform_fnc = {
 	_unit = _this select 0;
 	_string = _this select 1;

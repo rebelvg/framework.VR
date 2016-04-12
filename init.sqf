@@ -2,6 +2,7 @@
 [] execVM "music_radio\init.sqf";
 [] execVM "murshun_menu\spectator\init.sqf";
 [] execVM "mission\init.sqf";
+[] execVM "mission\loadouts.sqf";
 
 murshun_easywayout_canSuicide = false;
 murshun_allowJipTeleporting = true;

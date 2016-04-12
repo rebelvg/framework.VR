@@ -4,20 +4,20 @@ _className = tolower gettext (configFile >> "cfgVehicles" >> typeOf _unit >> "di
 _loadoutArray = [];
 
 waitUntil {!isNil "murshun_frameworkInit"};
-waitUntil {time > 0 and (!isNil "loadoutArray_west" or !isNil "loadoutArray_east" or !isNil "loadoutArray_guer" or !isNil "loadoutArray_civ")};
+waitUntil {time > 0 and !isNil "loadoutArray_west" and !isNil "loadoutArray_east" and !isNil "loadoutArray_guer" and !isNil "loadoutArray_civ"};
 
 switch (side _unit) do {
 case WEST: {
-		_loadoutArray = ["loadoutArray_west"] call murshun_checkArrayExists_fnc;
+		_loadoutArray = loadoutArray_west;
 	};
 case EAST: {
-		_loadoutArray = ["loadoutArray_east"] call murshun_checkArrayExists_fnc;
+		_loadoutArray = loadoutArray_east;
 	};
 case RESISTANCE: {
-		_loadoutArray = ["loadoutArray_guer"] call murshun_checkArrayExists_fnc;
+		_loadoutArray = loadoutArray_guer;
 	};
 case CIVILIAN: {
-		_loadoutArray = ["loadoutArray_civ"] call murshun_checkArrayExists_fnc;
+		_loadoutArray = loadoutArray_civ;
 	};
 };
 
