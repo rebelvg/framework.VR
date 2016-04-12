@@ -33,7 +33,7 @@ if (!isMultiplayer) then {
 	};
 };
 
-if (count _loadoutArray == 4) then {
+if (count _loadoutArray == 3) then {
 	clearMagazineCargoGlobal _unit;
 	clearWeaponCargoGlobal _unit;
 	clearItemCargoGlobal _unit;

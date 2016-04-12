@@ -123,16 +123,6 @@ murshun_giveLinkItems = {
 murshun_fillBox_fnc = {
 	_unit = _this select 0;
 	_divider = _this select 1;
-	
-	if (count (_loadoutArray select 1) == 2) then {
-		{
-			if (count _x == 2) then {
-				if (count (_x select 0) != 0) then {
-					_unit addItemCargoGlobal [_x select 0, ceil (100 / _divider)];
-				};
-			};
-		} foreach (_loadoutArray select 1 select 0);
-	};
 
 	{
 		_weaponsArray = _x select 1 select 1;
@@ -185,21 +175,6 @@ murshun_assignTeam_fnc = {
 	if (_team > 0 and _team < 5) then {
 		[[_unit, _teamsArray select _team], "ace_interaction_fnc_joinTeam"] call BIS_fnc_MP;
 	};
-};
-
-murshun_framework_revivePlayers_fnc = {
-	"respawn" setMarkerPos getMarkerPos "base_marker";
-	
-	{
-		[[], "murshun_disableSpectator_fnc", _x] call BIS_fnc_MP;
-	} foreach (nearestObjects [spectator_respawn_flag, ["Man"], 10]);
-
-	{
-		[[_x, false], "murshun_addToSpectatorArray_fnc", false] call BIS_fnc_MP;
-	} foreach murshun_respawnArray;
-	
-	murshun_respawnArrayLocal = [];
-	publicVariable "murshun_respawnArrayLocal";
 };
 
 if (!isMultiplayer) then {

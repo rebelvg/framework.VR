@@ -91,20 +91,29 @@ _loadoutArray_west = [
 	], //equipment per class
 	[
 		[
-			["ACE_EarPlugs", 1],
-			["ACE_Flashlight_XL50", 1],
-			["SmokeShellBlue", 2]
+			["all units"],
+			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], ["SmokeShellBlue", 2]] + _advancedMedicine, //items
+			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "tf_anprc152", "NVGoggles"] //link items
 		],
 		[
-			"ItemMap",
-			"ItemCompass",
-			"ItemWatch",
-			"ItemGPS",
-			"tf_anprc152",
-			"NVGoggles"
+			["officer", "squad leader", "team leader"],
+			[["murshun_cigs_lighter", 1]],
+			[]
+		],
+		[
+			["combat life saver"],
+			_advancedMedic,
+			[]
+		],
+		[
+			["engineer"],
+			[["ACE_M26_Clacker", 1]],
+			[]
 		]
-	], //personal items
+	], //personal items per class
 	[
+		["ACE_EarPlugs", 50],
+		["ACE_Flashlight_XL50", 50],
 		["ToolKit", 2],
 		["ACE_wirecutter", 2],
 		["ACE_SpareBarrel", 2],
@@ -114,26 +123,9 @@ _loadoutArray_west = [
 		["ACE_Clacker", 2],
 		["murshun_cigs_matches", 50],
 		["EWK_Cig1", 500],
+		["SmokeShellBlue", 100],
 		["HandGrenade", 100]
-	], //additional content for boxes
-	[
-		[
-			["officer"],
-			[["murshun_cigs_lighter", 1]]
-		],
-		[
-			["combat life saver"],
-			_advancedMedic
-		],
-		[
-			["engineer"],
-			[["ACE_M26_Clacker", 1]]
-		],
-		[
-			["all units"],
-			_advancedMedicine
-		]
-	] //additional personal items per class
+	] //additional content for boxes
 ];
 
 //do not remove these arrays, leave empty if you don't need loadouts for that side

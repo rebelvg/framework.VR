@@ -21,7 +21,7 @@ case CIVILIAN: {
 	};
 };
 
-if (count _loadoutArray == 4) then {
+if (count _loadoutArray == 3) then {
 	removeAllAssignedItems _unit;
 	removeAllWeapons _unit;
 	removeBackpack _unit;
@@ -32,6 +32,7 @@ if (count _loadoutArray == 4) then {
 	removeHeadgear _unit;
 
 	_fallbackClassName = _className;
+	
 	_allClassesArray = [];
 
 	{
@@ -42,6 +43,7 @@ if (count _loadoutArray == 4) then {
 		if (!isMultiplayer) then {
 			systemchat format ["Can't find loadout for %1, falling back to rifleman.", _className];
 		};
+		
 		_fallbackClassName = "rifleman";
 	};
 
@@ -64,16 +66,15 @@ if (count _loadoutArray == 4) then {
 		};
 	} foreach (_loadoutArray select 0);
 
-	if (count (_loadoutArray select 1) == 2) then {
-		[_unit, _loadoutArray select 1 select 0] call murshun_giveItems_fnc;
-		[_unit, _loadoutArray select 1 select 1] call murshun_giveLinkItems;
-	};
-
 	{
-		if (_className in (_x select 0) || "all units" in (_x select 0)) then {
-			_itemsArray = _x select 1;
+		if (count _x == 3) then {
+			if (_fallbackClassName in (_x select 0) || "all units" in (_x select 0)) then {
+				_itemsArray = _x select 1;
+				_linkItemsArray = _x select 2;
 
-			[_unit, _itemsArray] call murshun_giveItems_fnc;
+				[_unit, _itemsArray] call murshun_giveItems_fnc;
+				[_unit, _linkItemsArray] call murshun_giveLinkItems;
+			};
 		};
-	} foreach (_loadoutArray select 3);
+	} foreach (_loadoutArray select 1);
 };
