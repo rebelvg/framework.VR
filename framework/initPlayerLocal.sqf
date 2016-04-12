@@ -1,3 +1,5 @@
+waitUntil {!isNil "murshun_frameworkInit"};
+
 [player] execVM "scripts\loadout.sqf";
 
 if (!didJIP) then {
