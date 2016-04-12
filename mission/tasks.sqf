@@ -18,6 +18,6 @@ waitUntil {
 sleep 15;
 
 [{
-	["Completed1", true, 5] call BIS_fnc_endMission;
+	["Completed1", true, true, true] call BIS_fnc_endMission;
 },"BIS_fnc_spawn"] call BIS_fnc_MP;
 */
