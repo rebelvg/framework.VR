@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=852;
+		nextID=853;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={612.68396,52.373482,473.17566};
-		dir[]={0.0037297371,-0.46710101,0.88434857};
-		up[]={0.0019697107,0.88416159,0.46719697};
-		aside[]={0.99999487,-4.7252979e-007,-0.0042195367};
+		pos[]={612.41119,69.377335,445.08325};
+		dir[]={-0.0062758797,-0.50649178,0.86237621};
+		up[]={-0.0036871685,0.86220503,0.50656545};
+		aside[]={0.99997318,-3.807836e-007,0.0072751758};
 	};
 };
 binarizationWanted=0;
@@ -80,6 +80,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -111,25 +130,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=1;
 				};
 			};
 		};
