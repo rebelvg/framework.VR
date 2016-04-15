@@ -12,8 +12,8 @@ overviewPicture = "logo.paa";
 showHUD[] = {
 	true,	// Scripted HUD (same as showHUD command)
 	true,	// Vehicle + soldier info
-	false,	// Vehicle radar [HIDDEN]
-	false,	// Vehicle compass [HIDDEN]
+	false,	// Vehicle radar
+	false,	// Vehicle compass
 	false,	// Tank direction indicator
 	false,	// Commanding menu
 	false,	// Group Bar
