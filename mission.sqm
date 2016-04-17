@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=854;
+		nextID=855;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={612.65558,94.188858,421.81976};
-		dir[]={0.00033473363,-0.52495712,0.85128427};
-		up[]={0.00020578079,0.85109013,0.52503985};
-		aside[]={0.99999964,-3.4018524e-007,-0.00039527085};
+		pos[]={609.69135,145.21111,409.91788};
+		dir[]={-0.00084509875,-0.74015176,0.67247444};
+		up[]={-0.00093025446,0.67236471,0.74022084};
+		aside[]={1.0000174,5.9567355e-008,0.0012567216};
 	};
 };
 binarizationWanted=0;
@@ -80,6 +80,25 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnButton";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnTemplates";
 			expression="true";
 			class Value
@@ -111,25 +130,6 @@ class CustomAttributes
 							};
 						};
 					};
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnButton";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"SCALAR"
-						};
-					};
-					value=1;
 				};
 			};
 		};
@@ -200,7 +200,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={615.67212,5.4322958,566.66443};
+				position[]={616.98877,5.4322958,585.04755};
 				angles[]={0,1.7660649,0};
 			};
 			side="Empty";
@@ -2842,7 +2842,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={613.9635,5.4322958,566.98108};
+				position[]={615.28015,5.4322958,585.3642};
 				angles[]={0,1.7361503,0};
 			};
 			side="Empty";
@@ -2900,7 +2900,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={613.94342,5.8758397,566.92896};
+				position[]={615.26007,5.8758397,585.31207};
 				angles[]={0,0.21022491,0};
 			};
 			side="Empty";
@@ -2958,7 +2958,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={615.67023,5.9372005,566.66205};
+				position[]={616.98688,5.9372005,585.04517};
 				angles[]={0,3.3111482,0};
 			};
 			side="Empty";

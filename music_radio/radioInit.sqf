@@ -50,10 +50,83 @@ if (_radio isKindOf "thing" or _enabledOnStart) then {
 } else {
 	if (_radio isKindOf "air" || _radio isKindOf "ship") then {
 		if (isServer) then {
+			_radio setVariable ["murshun_radioIsOn", false, true];
 			_radio setVariable ["radio_playing", false, true];
+			
+			_radio addMPEventHandler ["MPKilled", {
+				_car = _this select 0;
+
+				[[_car], "murshun_stopSongOnRadio_fnc"] call BIS_fnc_MP;
+				
+				_trueRadio = _car getVariable ["radio_object", nil];
+				_car setVariable ["radio_playing", false, true];
+				
+				detach _trueRadio;
+				_trueRadio setPosATL [0, 0, 0];
+			}];
 		};
+
+		_radio addEventHandler ["GetIn", {
+			_car = _this select 0;
+			_playerEntered = _this select 2;
+
+			if (_playerEntered == player) then {
+				_isPlaying = _car getVariable ["murshun_radioIsOn", false];
+
+				if (_isPlaying) then {
+					playMusic "";
+					playMusic [murshun_whatSong, time - murshun_timeStarted];
+
+					if ((gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name") != "")) then {
+						[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>""%1""</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", toUpper (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name")), "by" + " " + (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "artist"))], true, nil, 7, 1, 0] spawn BIS_fnc_textTiles;
+					};
+				};
+			};
+		}];
+		
+		_radio addEventHandler ["GetOut", {
+			_playerExited = _this select 2;
+
+			if (_playerExited == player) then {
+				playMusic "";
+			};
+		}];
 		
 		_action = ["murshun_radio_turnRadioOff", "Turn Radio Off", "", {
+			_radio = _this select 0;
+			
+			[[_radio], "murshun_stopSongOnRadio_fnc"] call BIS_fnc_MP;
+		}, {
+			_radio = _this select 0;
+			_player = _this select 1;
+			
+			_isPlaying = _radio getVariable ["murshun_radioIsOn", false];
+			
+			_isPlaying && driver _radio == _player
+		}] call ace_interact_menu_fnc_createAction;
+		[_radio, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+
+		_action = ["murshun_radio_turnRadioOn", "Turn Radio On", "", {
+			_radio = _this select 0;
+			
+			_trueRadio = _radio getVariable ["radio_object", nil];
+			_radio setVariable ["radio_playing", false, true];
+			
+			detach _trueRadio;
+			_trueRadio setPosATL [0, 0, 0];
+			
+			[[_radio], "murshun_playSongOnRadio_fnc"] call BIS_fnc_MP;
+		}, {
+			_radio = _this select 0;
+			_player = _this select 1;
+			
+			_isPlaying = _radio getVariable ["murshun_radioIsOn", true];
+			
+			!_isPlaying && driver _radio == _player
+		}] call ace_interact_menu_fnc_createAction;
+		[_radio, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+		
+		_action = ["murshun_radio_turnRadioOff", "Turn Loudspeaker Off", "", {
 			_radio = _this select 0;
 			
 			_trueRadio = _radio getVariable ["radio_object", nil];
@@ -71,8 +144,10 @@ if (_radio isKindOf "thing" or _enabledOnStart) then {
 		}] call ace_interact_menu_fnc_createAction;
 		[_radio, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 
-		_action = ["murshun_radio_turnRadioOn", "Turn Radio On", "", {
+		_action = ["murshun_radio_turnRadioOn", "Turn Loudspeaker On", "", {
 			_radio = _this select 0;
+			
+			[[_radio], "murshun_stopSongOnRadio_fnc"] call BIS_fnc_MP;
 			
 			_trueRadio = _radio getVariable ["radio_object", nil];
 			_radio setVariable ["radio_playing", true, true];

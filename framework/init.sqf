@@ -180,7 +180,7 @@ murshun_assignTeam_fnc = {
 murshun_debriefing_text = "";
 
 addMissionEventHandler ["Ended", {
-	murshun_debriefing_text = format ["---Friendly Fire Logs---<br/>%1<br/>---Spectators---<br/>%2<br/>---Players---<br/>%3<br/>---AI Units---<br/>Count - %4", str (murshun_ffArray apply {(_x select 1) + " damaged " + (_x select 0) + " " + str floor(time - (_x select 2)) + " seconds ago"}), str murshun_respawnArray, str (allPlayers apply {name _x}), {!isPlayer _x} count allUnits];
+	murshun_debriefing_text = format ["---Friendly Fire Logs---<br/>%1<br/>---Spectators---<br/>%2<br/>---Players---<br/>%3", str (murshun_ffArray apply {(_x select 1) + " damaged " + (_x select 0) + " " + str floor(time - (_x select 2)) + " seconds ago"}), str murshun_respawnArray, str (allPlayers apply {name _x})];
 }];
 
 if (!isMultiplayer) then {

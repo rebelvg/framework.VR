@@ -107,7 +107,7 @@ _loadoutArray_west = [
 		],
 		[
 			["engineer"],
-			[["ACE_M26_Clacker", 1]],
+			[["ACE_M26_Clacker", 1], ["ACE_DefusalKit", 1]],
 			[]
 		]
 	], //personal items per class
@@ -116,7 +116,7 @@ _loadoutArray_west = [
 		["ACE_Flashlight_XL50", 50],
 		["ToolKit", 2],
 		["ACE_wirecutter", 2],
-		["ACE_SpareBarrel", 2],
+		["ACE_SpareBarrel", 10],
 		["DemoCharge_Remote_Mag", 30],
 		["SatchelCharge_Remote_Mag", 10],
 		["ACE_CableTie", 30],
@@ -125,7 +125,7 @@ _loadoutArray_west = [
 		["EWK_Cig1", 500],
 		["SmokeShellBlue", 100],
 		["HandGrenade", 100]
-	] //additional content for boxes
+	] //content for boxes
 ];
 
 //do not remove these arrays, leave empty if you don't need loadouts for that side
