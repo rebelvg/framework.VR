@@ -36,15 +36,15 @@ fnc_InfantryAttack = {
 
 		{
 			_x setSkill ["general", 0.4];
-			_x setSkill ["aimingAccuracy", 0.3];
-			_x setSkill ["aimingShake", 0.3];
-			_x setSkill ["aimingSpeed", 0.3];
-			_x setSkill ["endurance", 0.4];
-			_x setSkill ["spotDistance", 0.4];
-			_x setSkill ["spotTime", 0.4];
-			_x setSkill ["courage", 0.4];
-			_x setSkill ["reloadSpeed", 0.4];
-			_x setSkill ["commanding", 0.4];
+			_x setSkill ["aimingAccuracy", 0.1];
+			_x setSkill ["aimingShake", 0.1];
+			_x setSkill ["aimingSpeed", 0.1];
+			_x setSkill ["endurance", 0.3];
+			_x setSkill ["spotDistance", 0.3];
+			_x setSkill ["spotTime", 0.3];
+			_x setSkill ["courage", 0.3];
+			_x setSkill ["reloadSpeed", 0.3];
+			_x setSkill ["commanding", 0.3];
 		} forEach units group _groupLeader;
 
 		_wp = _grp addWaypoint [getMarkerPos _attackMarker, 0];
@@ -122,15 +122,15 @@ fnc_VehicleAttack = {
 
 		{
 			_x setSkill ["general", 0.4];
-			_x setSkill ["aimingAccuracy", 0.3];
-			_x setSkill ["aimingShake", 0.3];
-			_x setSkill ["aimingSpeed", 0.3];
-			_x setSkill ["endurance", 0.4];
-			_x setSkill ["spotDistance", 0.4];
-			_x setSkill ["spotTime", 0.4];
-			_x setSkill ["courage", 0.4];
-			_x setSkill ["reloadSpeed", 0.4];
-			_x setSkill ["commanding", 0.4];
+			_x setSkill ["aimingAccuracy", 0.1];
+			_x setSkill ["aimingShake", 0.1];
+			_x setSkill ["aimingSpeed", 0.1];
+			_x setSkill ["endurance", 0.3];
+			_x setSkill ["spotDistance", 0.3];
+			_x setSkill ["spotTime", 0.3];
+			_x setSkill ["courage", 0.3];
+			_x setSkill ["reloadSpeed", 0.3];
+			_x setSkill ["commanding", 0.3];
 		} forEach units group _vehicleDriver;
 
 		_wp = _grp addWaypoint [getMarkerPos _attackMarker, 0];
@@ -205,15 +205,15 @@ fnc_AirAttack = {
 
 		{
 			_x setSkill ["general", 0.4];
-			_x setSkill ["aimingAccuracy", 0.3];
-			_x setSkill ["aimingShake", 0.3];
-			_x setSkill ["aimingSpeed", 0.3];
-			_x setSkill ["endurance", 0.4];
-			_x setSkill ["spotDistance", 0.4];
-			_x setSkill ["spotTime", 0.4];
-			_x setSkill ["courage", 0.4];
-			_x setSkill ["reloadSpeed", 0.4];
-			_x setSkill ["commanding", 0.4];
+			_x setSkill ["aimingAccuracy", 0.1];
+			_x setSkill ["aimingShake", 0.1];
+			_x setSkill ["aimingSpeed", 0.1];
+			_x setSkill ["endurance", 0.3];
+			_x setSkill ["spotDistance", 0.3];
+			_x setSkill ["spotTime", 0.3];
+			_x setSkill ["courage", 0.3];
+			_x setSkill ["reloadSpeed", 0.3];
+			_x setSkill ["commanding", 0.3];
 		} forEach units group _vehicleDriver;
 
 		_wp = _grp addWaypoint [getMarkerPos _attackMarker, 0];
