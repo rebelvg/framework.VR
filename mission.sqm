@@ -94,24 +94,6 @@ class CustomAttributes
 							"ARRAY"
 						};
 					};
-					class value
-					{
-						items=1;
-						class Item0
-						{
-							class data
-							{
-								class type
-								{
-									type[]=
-									{
-										"STRING"
-									};
-								};
-								value="Counter";
-							};
-						};
-					};
 				};
 			};
 		};
