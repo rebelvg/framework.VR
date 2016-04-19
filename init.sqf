@@ -4,6 +4,7 @@
 [] execVM "mission\init.sqf";
 [] execVM "mission\loadouts.sqf";
 
+//do not remove these variables
 murshun_easywayout_canSuicide = false;
 murshun_allowJipTeleporting = true;
 murshun_customEnemyLoadouts = false;
