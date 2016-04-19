@@ -89,3 +89,11 @@ Framework now supports random generation of radio frequencies for each squad.
 Can be useful for TVTs.
 To enable random frequency generation switch murshun_framework_generateRandomFreqs to true in the init.sqf
 Team roster and radio briefing will reflect all that data.
+
+Recommended settings for TVT missions.
+description.ext - enableDebugConsole = 0;
+init.sqf - murshun_framework_generateRandomFreqs = true;
+Alive Require Module - Disable Admin Actions - Yes.
+Alive Player Options - Max View Distance - 1500.
+Alive Player Options - Min Terrain Grid - 2.
+Ace View Distance Limiter - 1500.

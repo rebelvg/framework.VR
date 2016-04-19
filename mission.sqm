@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=855;
+		nextID=858;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={609.76593,145.21111,398.78156};
-		dir[]={0.0073340628,-0.64836282,0.76133651};
-		up[]={0.0062463237,0.76125985,0.64842147};
-		aside[]={0.99997801,5.8513251e-008,-0.0096329553};
+		pos[]={608.62604,103.20589,432.96884};
+		dir[]={-0.0041328231,-0.6568051,0.75411177};
+		up[]={-0.0035999937,0.75396955,0.65691018};
+		aside[]={1.0000241,1.9281288e-010,0.0054803472};
 	};
 };
 binarizationWanted=0;
@@ -53,7 +53,8 @@ addons[]=
 	"A3_Characters_F_BLUFOR",
 	"a3_characters_f",
 	"A3_Characters_F_OPFOR",
-	"A3_Characters_F_INDEP"
+	"A3_Characters_F_INDEP",
+	"ace_viewdistance"
 };
 randomSeed=5706534;
 class ScenarioData
@@ -184,7 +185,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=46;
+		items=47;
 		class Item0
 		{
 			dataType="Marker";
@@ -10780,6 +10781,58 @@ class Mission
 					};
 				};
 				nAttributes=1;
+			};
+		};
+		class Item46
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={517.146,5,549.841};
+			};
+			id=857;
+			type="ace_viewdistance_ModuleSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_viewdistance_ModuleSettings_moduleViewDistanceLimit";
+					expression="_this setVariable ['moduleViewDistanceLimit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=8000;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_viewdistance_ModuleSettings_moduleViewDistanceEnabled";
+					expression="_this setVariable ['moduleViewDistanceEnabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 	};
