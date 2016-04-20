@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={610.16901,103.20589,432.17047};
-		dir[]={0.0016875213,-0.62270147,0.78252178};
-		up[]={0.0013432557,0.78236973,0.62282366};
-		aside[]={1.0000391,-7.0494934e-009,-0.0021567789};
+		pos[]={607.67682,109.22258,442.62759};
+		dir[]={-0.0090869162,-0.70348209,0.71072894};
+		up[]={-0.0089947907,0.71061575,0.70353234};
+		aside[]={0.99996179,1.4762918e-008,0.012784663};
 	};
 };
 binarizationWanted=0;
@@ -81,24 +81,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -113,6 +95,24 @@ class CustomAttributes
 						};
 					};
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -3019,7 +3019,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={611.06,5.6349964,562.76428};
+				position[]={612.8783,5.6349964,562.73035};
 				angles[]={0,3.2722685,0};
 			};
 			side="Empty";
@@ -3078,7 +3078,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={607.06036,5.6349964,564.02167};
+				position[]={609.04059,5.6349964,564.29797};
 				angles[]={0,3.2322559,0};
 			};
 			side="Empty";
@@ -3137,7 +3137,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={578.9729,5.6349964,562.841};
+				position[]={580.94867,5.6349964,562.84906};
 				angles[]={0,3.2093034,0};
 			};
 			side="Empty";
@@ -3196,7 +3196,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={575.05188,5.6349964,564.17603};
+				position[]={576.99792,5.6349964,564.12854};
 				angles[]={0,0.078147411,0};
 			};
 			side="Empty";
@@ -3255,7 +3255,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={642.89679,5.6349964,562.87103};
+				position[]={644.95074,5.6349964,562.72736};
 				angles[]={0,3.2801144,0};
 			};
 			side="Empty";
@@ -3314,7 +3314,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={638.99097,5.6349964,564.02979};
+				position[]={641.02936,5.6349964,564.37231};
 				angles[]={0,3.1841414,0};
 			};
 			side="Empty";
