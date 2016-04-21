@@ -51,6 +51,20 @@ waitUntil {
 */
 
 /*
+//this block will spawn a thread that will end a mission if everyone is dead (aka spectating)
+
+[] spawn {
+	waitUntil {
+		{isObjectHidden _x} count allPlayers == count allPlayers && count allPlayers > 0
+	};
+	
+	[{
+		["Failed1", false, true, true] call BIS_fnc_endMission;
+	},"BIS_fnc_spawn"] call BIS_fnc_MP;
+};
+*/
+
+/*
 //call mission completed
 [{
 	["Completed1", true, true, true] call BIS_fnc_endMission;
