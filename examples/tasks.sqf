@@ -3,7 +3,7 @@
 /*
 //creates task, waits until the hostage is 50m from the base marker, completes task
 
-[BluFor, "blufor_task_01", ["Task description.<br/><br/><img image='logo.paa' width='256' height='256'/>", "Hostage Task"], "task_01_marker", "ASSIGNED", 0, true, "Default"] call BIS_fnc_taskCreate;
+[BluFor, "blufor_task_01", ["Task description.", "Hostage Rescue"], hostage, "ASSIGNED", 0, true, "Default"] call BIS_fnc_taskCreate;
 
 waitUntil {
 	hostage distance getMarkerPos "base_marker" < 50
@@ -29,7 +29,7 @@ waitUntil {
 /*
 //creates task, waits until at least one player is 50m from the objective marker, completes task
 
-[BluFor, "blufor_task_03", ["Task description.", "Check This Position"], "task_03_marker", "ASSIGNED", 0, true, "Default"] call BIS_fnc_taskCreate;
+[BluFor, "blufor_task_03", ["Task description.", "Check Position"], "task_03_marker", "ASSIGNED", 0, true, "Default"] call BIS_fnc_taskCreate;
 
 waitUntil {
 	{_x distance getMarkerPos "task_03_marker" < 50} count allPlayers > 0
