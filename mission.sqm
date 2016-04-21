@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=858;
+		nextID=872;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={602.84875,109.22258,431.99506};
-		dir[]={0.003420227,-0.6037575,0.79724014};
-		up[]={0.0025908006,0.79708326,0.60387808};
-		aside[]={1.0000474,8.0515747e-008,-0.0042905556};
+		pos[]={602.96643,94.530052,427.80817};
+		dir[]={-0.0046420712,-0.53677487,0.84380656};
+		up[]={-0.0029535689,0.84364128,0.5369153};
+		aside[]={1.0000519,2.3541361e-007,0.0054999138};
 	};
 };
 binarizationWanted=0;
@@ -116,7 +116,26 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=2;
+		class Attribute2
+		{
+			property="SharedObjectives";
+			expression="if (isMultiplayer) then {[_value] spawn bis_fnc_sharedObjectives;};";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		nAttributes=3;
 	};
 	class Category1
 	{
