@@ -1,4 +1,4 @@
-version=51;
+version=52;
 class EditorData
 {
 	moveGridStep=1;
@@ -21,9 +21,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={602.84875,109.22258,431.99506};
-		dir[]={-0.0012127357,-0.67732787,0.73575312};
-		up[]={-0.0011165077,0.73558503,0.67744106};
-		aside[]={1.0000426,8.6834007e-009,0.0016481675};
+		dir[]={0.003420227,-0.6037575,0.79724014};
+		up[]={0.0025908006,0.79708326,0.60387808};
+		aside[]={1.0000474,8.0515747e-008,-0.0042905556};
 	};
 };
 binarizationWanted=0;
@@ -81,24 +81,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					class type
-					{
-						type[]=
-						{
-							"ARRAY"
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -113,6 +95,24 @@ class CustomAttributes
 						};
 					};
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
 				};
 			};
 		};
@@ -187,6 +187,7 @@ class Mission
 				angles[]={0,1.7660649,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -245,6 +246,7 @@ class Mission
 				angles[]={0,2.0254021,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -285,6 +287,7 @@ class Mission
 				angles[]={0,1.8597879,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -2732,6 +2735,7 @@ class Mission
 				angles[]={0,1.9520112,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -2829,6 +2833,7 @@ class Mission
 				angles[]={0,1.7361503,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -2887,12 +2892,14 @@ class Mission
 				angles[]={0,0.21022491,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				init="0 = [this] execVM ""scripts\revive_players.sqf"";";
 			};
 			id=197;
 			type="Land_DataTerminal_01_F";
+			atlOffset=0.00040817261;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2945,6 +2952,7 @@ class Mission
 				angles[]={0,3.3111482,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -3023,6 +3031,7 @@ class Mission
 				angles[]={0,3.2722685,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -3082,6 +3091,7 @@ class Mission
 				angles[]={0,3.2322559,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -3141,6 +3151,7 @@ class Mission
 				angles[]={0,3.2093034,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -3200,6 +3211,7 @@ class Mission
 				angles[]={0,0.078147411,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -3259,6 +3271,7 @@ class Mission
 				angles[]={0,3.2801144,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -3318,6 +3331,7 @@ class Mission
 				angles[]={0,3.1841414,0};
 			};
 			side="Empty";
+			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
@@ -3584,7 +3598,7 @@ class Mission
 						angles[]={0,0.076096356,0};
 					};
 					side="West";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -3648,6 +3662,7 @@ class Mission
 						angles[]={0,6.2627912,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -3709,7 +3724,7 @@ class Mission
 						angles[]={0,6.2553825,0};
 					};
 					side="West";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 5]];";
@@ -3770,7 +3785,7 @@ class Mission
 						angles[]={0,6.2553825,0};
 					};
 					side="West";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 5]];";
@@ -3867,7 +3882,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -3929,6 +3944,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -3990,6 +4006,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -4051,6 +4068,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -4112,6 +4130,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -4173,6 +4192,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -4233,7 +4253,7 @@ class Mission
 						position[]={606.96759,5.0014391,546.61066};
 					};
 					side="West";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
@@ -4294,6 +4314,7 @@ class Mission
 						angles[]={0,0.028344147,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -4355,6 +4376,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -4416,6 +4438,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -4476,7 +4499,7 @@ class Mission
 						position[]={614.84857,5.0014391,546.65668};
 					};
 					side="West";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 2]];";
@@ -4573,7 +4596,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -4635,6 +4658,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -4696,6 +4720,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -4757,6 +4782,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -4818,6 +4844,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -4879,6 +4906,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -4939,7 +4967,7 @@ class Mission
 						position[]={598.81116,5.0014391,538.59692};
 					};
 					side="West";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
@@ -5000,6 +5028,7 @@ class Mission
 						angles[]={0,0.028344147,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -5061,6 +5090,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -5122,6 +5152,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -5182,7 +5213,7 @@ class Mission
 						position[]={606.69214,5.0014391,538.64294};
 					};
 					side="West";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 2]];";
@@ -5279,7 +5310,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -5341,6 +5372,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -5402,6 +5434,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -5463,6 +5496,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -5524,6 +5558,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -5585,6 +5620,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -5645,7 +5681,7 @@ class Mission
 						position[]={614.8808,5.0014391,538.77045};
 					};
 					side="West";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
@@ -5706,6 +5742,7 @@ class Mission
 						angles[]={0,0.028344147,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -5767,6 +5804,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -5828,6 +5866,7 @@ class Mission
 						angles[]={0,0.0022863813,0};
 					};
 					side="West";
+					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -5888,7 +5927,7 @@ class Mission
 						position[]={622.76178,5.0014391,538.81647};
 					};
 					side="West";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 2]];";
@@ -5985,7 +6024,7 @@ class Mission
 						angles[]={0,0.010943213,0};
 					};
 					side="East";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 5]];";
@@ -6046,7 +6085,7 @@ class Mission
 						angles[]={0,0.0017627826,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 5]];";
@@ -6107,7 +6146,7 @@ class Mission
 						angles[]={0,0.0017627826,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 5]];";
@@ -6168,7 +6207,7 @@ class Mission
 						angles[]={0,0.0017627826,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 5]];";
@@ -6265,7 +6304,7 @@ class Mission
 						angles[]={0,6.2624855,0};
 					};
 					side="East";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 5]];";
@@ -6326,7 +6365,7 @@ class Mission
 						angles[]={0,0.0049916417,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 5]];";
@@ -6387,7 +6426,7 @@ class Mission
 						angles[]={0,6.2779493,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 5]];";
@@ -6448,7 +6487,7 @@ class Mission
 						angles[]={0,6.2818413,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
@@ -6509,7 +6548,7 @@ class Mission
 						angles[]={0,0.0080983276,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
@@ -6570,7 +6609,7 @@ class Mission
 						angles[]={0,6.2712646,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
@@ -6631,7 +6670,7 @@ class Mission
 						angles[]={0,0.010053096,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
@@ -6692,7 +6731,7 @@ class Mission
 						angles[]={0,6.2818413,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 2]];";
@@ -6753,7 +6792,7 @@ class Mission
 						angles[]={0,0.0080983276,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 2]];";
@@ -6814,7 +6853,7 @@ class Mission
 						angles[]={0,6.2712646,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 2]];";
@@ -6875,7 +6914,7 @@ class Mission
 						angles[]={0,0.010053096,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 2]];";
@@ -6972,7 +7011,7 @@ class Mission
 						angles[]={0,6.2624855,0};
 					};
 					side="East";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 5]];";
@@ -7033,7 +7072,7 @@ class Mission
 						angles[]={0,0.0049916417,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 5]];";
@@ -7094,7 +7133,7 @@ class Mission
 						angles[]={0,6.2779493,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 5]];";
@@ -7155,7 +7194,7 @@ class Mission
 						angles[]={0,6.2818413,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
@@ -7216,7 +7255,7 @@ class Mission
 						angles[]={0,0.0080983276,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
@@ -7277,7 +7316,7 @@ class Mission
 						angles[]={0,6.2712646,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
@@ -7338,7 +7377,7 @@ class Mission
 						angles[]={0,0.010053096,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
@@ -7399,7 +7438,7 @@ class Mission
 						angles[]={0,6.2818413,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 2]];";
@@ -7460,7 +7499,7 @@ class Mission
 						angles[]={0,0.0080983276,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 2]];";
@@ -7521,7 +7560,7 @@ class Mission
 						angles[]={0,6.2712646,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 2]];";
@@ -7582,7 +7621,7 @@ class Mission
 						angles[]={0,0.010053096,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 2]];";
@@ -7679,7 +7718,7 @@ class Mission
 						angles[]={0,6.2624855,0};
 					};
 					side="East";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 5]];";
@@ -7740,7 +7779,7 @@ class Mission
 						angles[]={0,0.0049916417,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 5]];";
@@ -7801,7 +7840,7 @@ class Mission
 						angles[]={0,6.2779493,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 5]];";
@@ -7862,7 +7901,7 @@ class Mission
 						angles[]={0,6.2818413,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
@@ -7923,7 +7962,7 @@ class Mission
 						angles[]={0,0.0080983276,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
@@ -7984,7 +8023,7 @@ class Mission
 						angles[]={0,6.2712646,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
@@ -8045,7 +8084,7 @@ class Mission
 						angles[]={0,0.010053096,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
@@ -8106,7 +8145,7 @@ class Mission
 						angles[]={0,6.2818413,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 2]];";
@@ -8167,7 +8206,7 @@ class Mission
 						angles[]={0,0.0080983276,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 2]];";
@@ -8228,7 +8267,7 @@ class Mission
 						angles[]={0,6.2712646,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 2]];";
@@ -8289,7 +8328,7 @@ class Mission
 						angles[]={0,0.010053096,0};
 					};
 					side="East";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 2]];";
@@ -8386,7 +8425,7 @@ class Mission
 						angles[]={0,0.026110126,0};
 					};
 					side="Independent";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 5]];";
@@ -8447,7 +8486,7 @@ class Mission
 						angles[]={0,0.043807764,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 5]];";
@@ -8508,7 +8547,7 @@ class Mission
 						angles[]={0,6.2373528,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 5]];";
@@ -8569,7 +8608,7 @@ class Mission
 						angles[]={0,0.0095469505,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [7, 5]];";
@@ -8666,7 +8705,7 @@ class Mission
 						angles[]={0,0.0016580628,0};
 					};
 					side="Independent";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 5]];";
@@ -8727,7 +8766,7 @@ class Mission
 						angles[]={0,0.043964844,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 5]];";
@@ -8788,7 +8827,7 @@ class Mission
 						angles[]={0,6.278543,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 5]];";
@@ -8849,7 +8888,7 @@ class Mission
 						angles[]={0,0.016475908,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
@@ -8910,6 +8949,7 @@ class Mission
 						angles[]={0,6.2756629,0};
 					};
 					side="Independent";
+					flags=4;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
@@ -8970,7 +9010,7 @@ class Mission
 						angles[]={0,0.027593656,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
@@ -9031,7 +9071,7 @@ class Mission
 						angles[]={0,0.025132742,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 1]];";
@@ -9092,7 +9132,7 @@ class Mission
 						angles[]={0,0.016475908,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 2]];";
@@ -9153,6 +9193,7 @@ class Mission
 						angles[]={0,6.2756629,0};
 					};
 					side="Independent";
+					flags=4;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 2]];";
@@ -9213,7 +9254,7 @@ class Mission
 						angles[]={0,0.027593656,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 2]];";
@@ -9274,7 +9315,7 @@ class Mission
 						angles[]={0,0.025132742,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [1, 2]];";
@@ -9371,7 +9412,7 @@ class Mission
 						angles[]={0,6.2723184,0};
 					};
 					side="Independent";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 5]];";
@@ -9432,7 +9473,7 @@ class Mission
 						angles[]={0,0.031439714,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 5]];";
@@ -9493,7 +9534,7 @@ class Mission
 						angles[]={0,6.2660179,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 5]];";
@@ -9554,7 +9595,7 @@ class Mission
 						angles[]={0,0.0039507803,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
@@ -9615,6 +9656,7 @@ class Mission
 						angles[]={0,6.2631378,0};
 					};
 					side="Independent";
+					flags=4;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
@@ -9675,7 +9717,7 @@ class Mission
 						angles[]={0,0.015068527,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
@@ -9736,7 +9778,7 @@ class Mission
 						angles[]={0,0.012607614,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 1]];";
@@ -9797,7 +9839,7 @@ class Mission
 						angles[]={0,0.0039507803,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 2]];";
@@ -9858,6 +9900,7 @@ class Mission
 						angles[]={0,6.2631378,0};
 					};
 					side="Independent";
+					flags=4;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 2]];";
@@ -9918,7 +9961,7 @@ class Mission
 						angles[]={0,0.015068527,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 2]];";
@@ -9979,7 +10022,7 @@ class Mission
 						angles[]={0,0.012607614,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [2, 2]];";
@@ -10076,7 +10119,7 @@ class Mission
 						angles[]={0,0.0033563492,0};
 					};
 					side="Independent";
-					flags=3;
+					flags=7;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 5]];";
@@ -10137,7 +10180,7 @@ class Mission
 						angles[]={0,0.04566313,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 5]];";
@@ -10198,7 +10241,7 @@ class Mission
 						angles[]={0,6.2802415,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 5]];";
@@ -10259,7 +10302,7 @@ class Mission
 						angles[]={0,0.018174196,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
@@ -10320,6 +10363,7 @@ class Mission
 						angles[]={0,6.2773614,0};
 					};
 					side="Independent";
+					flags=4;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
@@ -10380,7 +10424,7 @@ class Mission
 						angles[]={0,0.029291943,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
@@ -10441,7 +10485,7 @@ class Mission
 						angles[]={0,0.026831029,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 1]];";
@@ -10502,7 +10546,7 @@ class Mission
 						angles[]={0,0.018174196,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 2]];";
@@ -10563,6 +10607,7 @@ class Mission
 						angles[]={0,6.2773614,0};
 					};
 					side="Independent";
+					flags=4;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 2]];";
@@ -10623,7 +10668,7 @@ class Mission
 						angles[]={0,0.029291943,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 2]];";
@@ -10684,7 +10729,7 @@ class Mission
 						angles[]={0,0.026831029,0};
 					};
 					side="Independent";
-					flags=1;
+					flags=5;
 					class Attributes
 					{
 						init="this setVariable [""radio_channel"", [3, 2]];";
