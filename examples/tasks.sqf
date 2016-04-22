@@ -29,7 +29,7 @@ waitUntil {
 */
 
 /*
-//waits until at least one player is 50m from the objective marker
+//waits until at least one player is 50m from the position marker
 
 [BluFor, "blufor_visit_pos_task", ["Task description.", "Visit Position"], "position_marker", "ASSIGNED", 0, true, "Default"] call BIS_fnc_taskCreate;
 
