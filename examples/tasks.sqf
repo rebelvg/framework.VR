@@ -84,7 +84,7 @@ waitUntil {
 [BluFor, "blufor_task_06", ["Task description.", "Overrun Area"], "overrun_marker", "ASSIGNED", 0, true, "Default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-	{_x distance2d getMarkerPos "overrun_marker" < 500} count allPlayers > {side _x == EAST && _x distance2d getMarkerPos "overrun_marker" < 500}
+	{_x distance2d getMarkerPos "overrun_marker" < 500} count allPlayers > {side _x == EAST && _x distance2d getMarkerPos "overrun_marker" < 500} count allUnits
 };
 
 ["blufor_task_06", "Succeeded", true] call BIS_fnc_taskSetState;
