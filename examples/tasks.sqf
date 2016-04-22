@@ -19,7 +19,7 @@ waitUntil {
 
 _objArray = [obj_01, obj_02, obj_03];
 
-[BluFor, "blufor_sad_task", ["Task description.", "Search And Destroy"], "task_02_marker", "ASSIGNED", 0, true, "Default"] call BIS_fnc_taskCreate;
+[BluFor, "blufor_sad_task", ["Task description.", "Search And Destroy"], nil, "ASSIGNED", 0, true, "Default"] call BIS_fnc_taskCreate;
 
 waitUntil {
 	{alive _x} count _objArray == 0
@@ -31,10 +31,10 @@ waitUntil {
 /*
 //waits until at least one player is 50m from the objective marker
 
-[BluFor, "blufor_visit_pos_task", ["Task description.", "Visit Position"], "task_03_marker", "ASSIGNED", 0, true, "Default"] call BIS_fnc_taskCreate;
+[BluFor, "blufor_visit_pos_task", ["Task description.", "Visit Position"], "position_marker", "ASSIGNED", 0, true, "Default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-	{_x distance getMarkerPos "task_03_marker" < 50} count allPlayers > 0
+	{_x distance getMarkerPos "position_marker" < 50} count allPlayers > 0
 };
 
 ["blufor_visit_pos_task", "Succeeded", true] call BIS_fnc_taskSetState;
@@ -96,7 +96,7 @@ waitUntil {
 //this block creates two simultaneous tasks that run at the same time
 //simple tvt tasks
 //eliminate enemy team, west vs east
-//reason why this doesn't use allPlayers is because this task will auto-complete in the editor/single-player
+//reason why this doesn't use allPlayers is because it will auto-complete in the editor/single-player
 //also waits for mission to actually start to prevent auto-completion when players are still loading in the lobby
 //this works because spectators are counted as civilians
 
@@ -111,7 +111,7 @@ waitUntil {
 };
 
 [] spawn {
-	[OpFor, "opfor_sad_west_task", ["Task description.", "Eliminate East Side Team"], nil, "ASSIGNED", 0, true, "Default"] call BIS_fnc_taskCreate;
+	[OpFor, "opfor_sad_west_task", ["Task description.", "Eliminate West Side Team"], nil, "ASSIGNED", 0, true, "Default"] call BIS_fnc_taskCreate;
 	
 	waitUntil {
 		{side _x == WEST} count (playableUnits + switchableUnits) == 0 && time > 0
@@ -123,6 +123,7 @@ waitUntil {
 
 /*
 //call mission completed
+
 [{
 	["Completed1", true, true, true] call BIS_fnc_endMission;
 },"BIS_fnc_spawn"] call BIS_fnc_MP;
@@ -130,6 +131,7 @@ waitUntil {
 
 /*
 //call mission failed
+
 [{
 	["Failed1", false, true, true] call BIS_fnc_endMission;
 },"BIS_fnc_spawn"] call BIS_fnc_MP;
