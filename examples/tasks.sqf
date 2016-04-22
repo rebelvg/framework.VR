@@ -67,7 +67,7 @@ waitUntil {
 */
 
 /*
-//waits until there's no east side units in the 500 radius of the attach marker
+//waits until there's no east side units in the 500m radius of the attack marker
 //checks if at least one of the players is around too (to prevent auto-completion if using dac or alive or other dynamic ai spawn systems)
 
 [BluFor, "blufor_clear_area_task", ["Task description.", "Clear Area"], "attack_marker", "ASSIGNED", 0, true, "Default"] call BIS_fnc_taskCreate;
