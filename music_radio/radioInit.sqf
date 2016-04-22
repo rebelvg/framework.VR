@@ -1,7 +1,7 @@
 _radio = _this select 0;
 _enabledOnStart = _this select 1;
 
-waitUntil {!isnil "murshun_musicRadiosArray"};
+waitUntil {!isNil "murshun_musicRadiosArray"};
 
 if (isNil "_enabledOnStart") then {
 	_enabledOnStart = false;
