@@ -195,10 +195,4 @@ if (!isMultiplayer) then {
 	[player] spawn BIS_fnc_traceBullets;
 };
 
-if (!isNil "ZE_Zeus") then {
-	if (isMultiplayer) then {
-		deleteVehicle ZE_Zeus;
-	};
-};
-
 murshun_frameworkInit = true;
