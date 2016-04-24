@@ -108,7 +108,11 @@ if (isServer) then {
 					hideObjectGlobal _radio;
 					_radio allowDamage false;
 					
-					[[_radio, murshun_whatSong], "say3d"] call BIS_fnc_MP;
+					if (_x isKindOf "air" || _x isKindOf "ship") then {
+						[[_radio, murshun_whatSong], "say3d"] call BIS_fnc_MP;
+					} else {
+						[[_radio, "radio_" + murshun_whatSong], "say3d"] call BIS_fnc_MP;
+					};
 				};
 			} foreach murshun_musicRadiosArray;
 			
@@ -116,7 +120,6 @@ if (isServer) then {
 			
 			_time = time;
 			waituntil {
-				sleep 1;
 				time >= _time + _songLength or murshun_skipTrack
 			};
 			
