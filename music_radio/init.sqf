@@ -109,9 +109,9 @@ if (isServer) then {
 					_radio allowDamage false;
 					
 					if (_x isKindOf "air" || _x isKindOf "ship") then {
-						[[_radio, murshun_whatSong], "say3d"] call BIS_fnc_MP;
+						[[_radio, "loud_" + murshun_whatSong], "say3d"] call BIS_fnc_MP;
 					} else {
-						[[_radio, "radio_" + murshun_whatSong], "say3d"] call BIS_fnc_MP;
+						[[_radio, murshun_whatSong], "say3d"] call BIS_fnc_MP;
 					};
 				};
 			} foreach murshun_musicRadiosArray;
