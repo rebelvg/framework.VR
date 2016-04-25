@@ -6,7 +6,7 @@ if (isServer) then {
 	_obj allowDamage false;
 };
 
-_action = ["murshun_framework_reviveEveryone", "Revive Everyone (At Base)", "", {	
+_action = ["murshun_framework_reviveEveryone", "Revive Everyone (At This Base)", "", {	
 	_this spawn {
 		_player = _this select 1;
 		_newPos = getPos _player findEmptyPosition [0, 20];
