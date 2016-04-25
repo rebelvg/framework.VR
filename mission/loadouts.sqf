@@ -92,7 +92,7 @@ _loadoutArray_west = [
 	[
 		[
 			["all units"],
-			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], ["SmokeShellBlue", 2]] + _advancedMedicine, //items
+			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], ["SmokeShellBlue", 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items
 			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "tf_anprc152", "NVGoggles"] //link items
 		],
 		[
