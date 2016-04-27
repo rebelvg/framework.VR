@@ -104,8 +104,8 @@ if (isServer) then {
 						_x setVariable ["radio_object", _radio, true];
 					};
 					
-					hideObject _radio;
 					hideObjectGlobal _radio;
+					hideObject _radio;
 					_radio allowDamage false;
 					
 					if (_x isKindOf "air" || _x isKindOf "ship") then {
