@@ -43,20 +43,20 @@ if (_radio isKindOf "thing" or _radio isKindOf "static") then {
 		_radio setVariable ["murshun_loudRadioIsOn", false, true];
 		
 		_radio addMPEventHandler ["MPKilled", {
-			_car = _this select 0;
+			_radio = _this select 0;
 
-			[[_car], "murshun_stopSongOnRadio_fnc"] call BIS_fnc_MP;			
+			[[_radio], "murshun_stopSongOnRadio_fnc"] call BIS_fnc_MP;			
 
 			[_radio] spawn murshun_removeRadio_fnc;
 		}];
 	};
 
 	_radio addEventHandler ["GetIn", {
-		_car = _this select 0;
+		_radio = _this select 0;
 		_playerEntered = _this select 2;
 
 		if (_playerEntered == player) then {
-			if (_car getVariable ["murshun_radioIsOn", false]) then {
+			if (_radio getVariable ["murshun_radioIsOn", false]) then {
 				playMusic "";
 				playMusic [murshun_whatSong, time - murshun_timeStarted];
 

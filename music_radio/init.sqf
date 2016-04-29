@@ -8,13 +8,13 @@ murshun_sendNewSong_fnc = {
 };
 
 murshun_playSongOnRadio_fnc = {
-	_car = _this select 0;
+	_vehicle = _this select 0;
 
 	if (isServer) then {
-		_car setVariable ["murshun_radioIsOn", true, true];
+		_vehicle setVariable ["murshun_radioIsOn", true, true];
 	};
 
-	if (player in crew _car) then {
+	if (player in crew _vehicle) then {
 		playMusic "";
 		playMusic [murshun_whatSong, time - murshun_timeStarted];
 
@@ -23,13 +23,13 @@ murshun_playSongOnRadio_fnc = {
 };
 
 murshun_stopSongOnRadio_fnc = {
-	_car = _this select 0;
+	_vehicle = _this select 0;
 
 	if (isServer) then {
-		_car setVariable ["murshun_radioIsOn", false, true];
+		_vehicle setVariable ["murshun_radioIsOn", false, true];
 	};
 
-	if (player in crew _car) then {
+	if (player in crew _vehicle) then {
 		playMusic "";
 	};
 };
@@ -42,21 +42,21 @@ murshun_removeRadio_fnc = {
 };
 
 murshun_createRadio_fnc = {
-	_obj = _this select 0;
-	_radio = "Land_FMradio_F" createVehicle [0, 0, 0];
+	_radio = _this select 0;
+	_hiddenRadio = "Land_FMradio_F" createVehicle [0, 0, 0];
 	
-	hideObjectGlobal _radio;
-	hideObject _radio;
-	_radio allowDamage false;
+	hideObjectGlobal _hiddenRadio;
+	hideObject _hiddenRadio;
+	_hiddenRadio allowDamage false;
 
-	_radio setPosATL getPosATL _obj;
-	_radio attachTo [_obj, [0, 0, 0]];
-	_obj setVariable ["murshun_hiddenRadio", _radio, true];
+	_hiddenRadio setPosATL getPosATL _radio;
+	_hiddenRadio attachTo [_radio, [0, 0, 0]];
+	_radio setVariable ["murshun_hiddenRadio", _hiddenRadio, true];
 	
-	if (_obj isKindOf "air" || _obj isKindOf "ship") then {
-		[[_radio, "loud_" + murshun_whatSong], "say3d"] call BIS_fnc_MP;
+	if (_radio isKindOf "air" || _radio isKindOf "ship") then {
+		[[_hiddenRadio, "loud_" + murshun_whatSong], "say3d"] call BIS_fnc_MP;
 	} else {
-		[[_radio, murshun_whatSong], "say3d"] call BIS_fnc_MP;
+		[[_hiddenRadio, murshun_whatSong], "say3d"] call BIS_fnc_MP;
 	};
 };
 
