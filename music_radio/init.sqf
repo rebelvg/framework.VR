@@ -1,14 +1,9 @@
 murshun_sendNewSong_fnc = {
-	_car = vehicle player;
-	_song = _this select 0;
-
-	if (player in crew _car && vehicle player != player && (_car getVariable ['murshun_radioIsOn', false])) then {
+	if ((vehicle player) getVariable ['murshun_radioIsOn', false]) then {
 		playMusic "";
-		playMusic _song;
+		playMusic murshun_whatSong;
 
-		if ((gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name") != "")) then {
-			[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>""%1""</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", toUpper (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name")), "by" + " " + (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "artist"))], true, nil, 7, 1, 0] spawn BIS_fnc_textTiles;
-		};
+		[] spawn murshun_printSongName;
 	};
 };
 
@@ -23,9 +18,7 @@ murshun_playSongOnRadio_fnc = {
 		playMusic "";
 		playMusic [murshun_whatSong, time - murshun_timeStarted];
 
-		if ((gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name") != "")) then {
-			[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>""%1""</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", toUpper (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name")), "by" + " " + (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "artist"))], true, nil, 7, 1, 0] spawn BIS_fnc_textTiles;
-		};
+		[] spawn murshun_printSongName;
 	};
 };
 
@@ -41,10 +34,44 @@ murshun_stopSongOnRadio_fnc = {
 	};
 };
 
+murshun_removeRadio_fnc = {
+	_radio = _this select 0;
+
+	_radio setVariable ["murshun_loudRadioIsOn", false, true];
+	deleteVehicle (_radio getVariable ["murshun_hiddenRadio", nil]);
+};
+
+murshun_createRadio_fnc = {
+	_obj = _this select 0;
+	_radio = "Land_FMradio_F" createVehicle [0, 0, 0];
+	
+	hideObjectGlobal _radio;
+	hideObject _radio;
+	_radio allowDamage false;
+
+	_radio setPosATL getPosATL _obj;
+	_radio attachTo [_obj, [0, 0, 0]];
+	_obj setVariable ["murshun_hiddenRadio", _radio, true];
+	
+	if (_obj isKindOf "air" || _obj isKindOf "ship") then {
+		[[_radio, "loud_" + murshun_whatSong], "say3d"] call BIS_fnc_MP;
+	} else {
+		[[_radio, murshun_whatSong], "say3d"] call BIS_fnc_MP;
+	};
+};
+
+murshun_printSongName = {
+	if ((gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name") != "")) then {
+		[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>""%1""</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", toUpper (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name")), "by" + " " + (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "artist"))], true, nil, 7, 1, 0] spawn BIS_fnc_textTiles;
+	};
+};
+
 KK_fnc_arrayShufflePlus = {
-	private ["_arr","_cnt"];
+	private ["_arr", "_cnt"];
+	
 	_arr = _this select 0;
 	_cnt = count _arr;
+	
 	for "_i" from 1 to (_this select 1) do {
 		_arr pushBack (_arr deleteAt floor random _cnt);
 	};
@@ -65,6 +92,8 @@ if (isNil "murshun_timeStarted") then {
 player addEventHandler ["Respawn", {
 	playMusic "";
 }];
+
+murshun_radioInit = true;
 
 if (isServer) then {
 	waitUntil {time > 15};
@@ -88,38 +117,20 @@ if (isServer) then {
 			_songLength = _songInfo select 1;
 			_songLength = parseNumber _songLength;
 			
-			[[murshun_whatSong], "murshun_sendNewSong_fnc"] call BIS_fnc_MP;
+			[[], "murshun_sendNewSong_fnc"] call BIS_fnc_MP;
 			
 			{
-				deleteVehicle (_x getVariable ["radio_object", nil]);
+				deleteVehicle (_x getVariable ["murshun_hiddenRadio", nil]);
 				
-				if (alive _x) then {
-					_radio = "Land_FMradio_F" createVehicle [0, 0, 0];
-					
-					if (_x getVariable ["radio_playing", false]) then {
-						_radio setPosATL getPosATL _x;
-						_radio attachTo [_x, [0, 0, 0]];
-						_x setVariable ["radio_object", _radio, true];
-					} else {
-						_x setVariable ["radio_object", _radio, true];
-					};
-					
-					hideObjectGlobal _radio;
-					hideObject _radio;
-					_radio allowDamage false;
-					
-					if (_x isKindOf "air" || _x isKindOf "ship") then {
-						[[_radio, "loud_" + murshun_whatSong], "say3d"] call BIS_fnc_MP;
-					} else {
-						[[_radio, murshun_whatSong], "say3d"] call BIS_fnc_MP;
-					};
+				if (alive _x && _x getVariable ["murshun_loudRadioIsOn", false]) then {
+					[_x] spawn murshun_createRadio_fnc;
 				};
 			} foreach murshun_musicRadiosArray;
 			
 			murshun_skipTrack = false;
 			
 			_time = time;
-			waituntil {
+			waitUntil {
 				time >= _time + _songLength or murshun_skipTrack
 			};
 			

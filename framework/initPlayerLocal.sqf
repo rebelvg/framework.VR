@@ -50,4 +50,4 @@ _murshun_whoDunIt = getText (missionConfigFile >> "author");
 
 if (_murshun_whoDunIt == "") exitWith {};
 
-[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>%1</t><br /><t shadow='2' align='right' size='1.6'>%2</t>", "Created and Directed by", _murshun_whoDunIt], true, nil, 9, 1, 0] spawn BIS_fnc_textTiles;
+[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>%1</t><br /><t shadow='2' align='right' size='1.6'>%2</t>", "Created and Directed", "by " + _murshun_whoDunIt], true, nil, 9, 1, 0] spawn BIS_fnc_textTiles;
