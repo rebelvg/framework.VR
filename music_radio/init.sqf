@@ -93,16 +93,12 @@ if (isServer) then {
 	if (isNil "murshun_radioThemes") then {
 		_musicArray = "gettext (_x >> 'tag') == 'Poddy Music'" configClasses (configFile >> "CfgMusic");
 	} else {
-		if (count murshun_radioThemes != 0) then {
-			{
-				if (count _x != 0) then {
-					_searchString = format ["gettext (_x >> 'theme') == '%1'", _x];
-					_musicArray = _musicArray + (_searchString configClasses (configFile >> "CfgMusic"));
-				};
-			} foreach murshun_radioThemes;
-		} else {
-			_musicArray = "gettext (_x >> 'tag') == 'Poddy Music'" configClasses (configFile >> "CfgMusic");
-		};
+		{
+			if (count _x != 0) then {
+				_searchString = format ["gettext (_x >> 'theme') == '%1'", _x];
+				_musicArray = _musicArray + (_searchString configClasses (configFile >> "CfgMusic"));
+			};
+		} foreach murshun_radioThemes;
 	};
 	
 	if (count _musicArray == 0) exitWith {};

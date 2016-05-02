@@ -210,7 +210,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, WEST] execVM ""scripts\boxes\box.sqf""; 0 = [this] execVM ""music_radio\radioInit.sqf"";";
+				init="0 = [this, WEST] execVM ""scripts\boxes\box.sqf"";";
 			};
 			id=6;
 			type="C_Offroad_01_F";
@@ -243,7 +243,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={633.43536,6.6115026,567.74438};
+				position[]={633.435,6.6115026,567.74475};
 				angles[]={0,1.8597879,0};
 			};
 			side="Empty";
@@ -251,7 +251,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, RESISTANCE] execVM ""scripts\boxes\box.sqf""; 0 = [this] execVM ""music_radio\radioInit.sqf"";";
+				init="0 = [this, RESISTANCE] execVM ""scripts\boxes\box.sqf"";";
 			};
 			id=12;
 			type="C_Offroad_01_F";
@@ -2691,7 +2691,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={570.51318,6.6115026,567.89197};
+				position[]={570.513,6.6115026,567.89178};
 				angles[]={0,1.9520112,0};
 			};
 			side="Empty";
@@ -2699,7 +2699,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, EAST] execVM ""scripts\boxes\box.sqf""; 0 = [this] execVM ""music_radio\radioInit.sqf"";";
+				init="0 = [this, EAST] execVM ""scripts\boxes\box.sqf"";";
 			};
 			id=9;
 			type="C_Offroad_01_F";

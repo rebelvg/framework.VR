@@ -60,4 +60,21 @@ class Extended_Init_Eventhandlers
     {
 		enemy_loadout = "_this execVM 'scripts\enemy_loadout.sqf'";
     };
+	
+	class Car
+	{
+		radio_init = "_this execVM 'music_radio\radioInit.sqf'";
+	};
+	class Tank
+	{
+		radio_init = "_this execVM 'music_radio\radioInit.sqf'";
+	};
+	class Air
+	{
+		radio_init = "_this execVM 'music_radio\radioInit.sqf'";
+	};
+	class Ship
+	{
+		radio_init = "_this execVM 'music_radio\radioInit.sqf'";
+	};
 };

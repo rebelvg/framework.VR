@@ -52,10 +52,10 @@ Main box will have virtual arsenal enabled but only in singleplayer (for loadout
 To enable suicide set murshun_easywayout_canSuicide to true in the init.sqf.
 To disable JIP teleportation set murshun_allowJipTeleporting to false in the inti.sqf (JIP teleportation enabled by default in the murshun_menu pbo).
 
-If you want to have music radio in your mission all you need to do is to add only one line to the object.
-Add next line to each vehicle or object that you want to have a radio inside or be a radio.
-Script will automatically detect if the object is a vehicle or a static object and will act accordingly.
+Radios are now automatically added to any vehicle.
+To add radio to an object use the line below.
 0 = [this] execVM "music_radio\radioInit.sqf";
+Script will automatically detect if the object is a vehicle or a static object and will act accordingly.
 To start the radio use ace-interaction menu.
 
 Framework now supports per-side loadouts.

@@ -2,6 +2,8 @@ _radio = _this select 0;
 
 waitUntil {!isNil "murshun_radioInit"};
 
+if (!isNil {_radio getVariable "murshun_loudRadioIsOn"}) exitWith {};
+
 if (_radio isKindOf "thing" or _radio isKindOf "static") then {
 	if (isServer) then {
 		murshun_musicRadiosArray = murshun_musicRadiosArray + [_radio];
