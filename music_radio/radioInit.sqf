@@ -59,8 +59,6 @@ if (_radio isKindOf "thing" or _radio isKindOf "static") then {
 			if (_radio getVariable ["murshun_radioIsOn", false]) then {
 				playMusic "";
 				playMusic [murshun_whatSong, time - murshun_timeStarted];
-
-				[] spawn murshun_printSongName;
 			};
 		};
 	}];

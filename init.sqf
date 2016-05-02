@@ -4,6 +4,8 @@
 [] execVM "mission\init.sqf";
 [] execVM "mission\loadouts.sqf";
 
+murshun_radioThemes = ["slav", "vietnam"];
+
 //do not remove these variables
 murshun_easywayout_canSuicide = false;
 murshun_allowJipTeleporting = true;

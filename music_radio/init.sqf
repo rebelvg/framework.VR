@@ -2,8 +2,6 @@ murshun_sendNewSong_fnc = {
 	if ((vehicle player) getVariable ['murshun_radioIsOn', false]) then {
 		playMusic "";
 		playMusic murshun_whatSong;
-
-		[] spawn murshun_printSongName;
 	};
 };
 
@@ -17,8 +15,6 @@ murshun_playSongOnRadio_fnc = {
 	if (player in crew _vehicle) then {
 		playMusic "";
 		playMusic [murshun_whatSong, time - murshun_timeStarted];
-
-		[] spawn murshun_printSongName;
 	};
 };
 
@@ -53,16 +49,10 @@ murshun_createRadio_fnc = {
 	_hiddenRadio attachTo [_radio, [0, 0, 0]];
 	_radio setVariable ["murshun_hiddenRadio", _hiddenRadio, true];
 	
-	if (_radio isKindOf "air" || _radio isKindOf "ship") then {
+	if (_radio isKindOf "air") then {
 		[[_hiddenRadio, "loud_" + murshun_whatSong], "say3d"] call BIS_fnc_MP;
 	} else {
 		[[_hiddenRadio, murshun_whatSong], "say3d"] call BIS_fnc_MP;
-	};
-};
-
-murshun_printSongName = {
-	if ((gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name") != "")) then {
-		[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>""%1""</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", toUpper (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "name")), "by" + " " + (gettext (configfile >> "CfgMusic" >> murshun_whatSong >> "artist"))], true, nil, 7, 1, 0] spawn BIS_fnc_textTiles;
 	};
 };
 
@@ -98,7 +88,22 @@ murshun_radioInit = true;
 if (isServer) then {
 	waitUntil {time > 15};
 	
-	_musicArray = "gettext (_x >> 'tag') == 'Poddy Music'" configClasses (configFile >> "CfgMusic");
+	_musicArray = [];
+	
+	if (isNil "murshun_radioThemes") then {
+		_musicArray = "gettext (_x >> 'tag') == 'Poddy Music'" configClasses (configFile >> "CfgMusic");
+	} else {
+		if (count murshun_radioThemes != 0) then {
+			{
+				if (count _x != 0) then {
+					_searchString = format ["gettext (_x >> 'theme') == '%1'", _x];
+					_musicArray = _musicArray + (_searchString configClasses (configFile >> "CfgMusic"));
+				};
+			} foreach murshun_radioThemes;
+		} else {
+			_musicArray = "gettext (_x >> 'tag') == 'Poddy Music'" configClasses (configFile >> "CfgMusic");
+		};
+	};
 	
 	if (count _musicArray == 0) exitWith {};
 	
