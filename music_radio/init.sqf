@@ -93,6 +93,8 @@ if (isServer) then {
 	if (!isNil "murshun_radioSongs") then {
 		if (count murshun_radioSongs != 0) then {
 			_musicArray = murshun_radioSongs;
+			
+			_musicArray = _musicArray select {getText (configFile >> "CfgMusic" >> _x >> "tag") == "Poddy Music"};
 		};
 	};
 	
@@ -107,6 +109,8 @@ if (isServer) then {
 				} foreach murshun_radioThemes;
 				
 				_musicArray = _musicArray apply {configName _x};
+				
+				_musicArray = _musicArray select {getText (configFile >> "CfgMusic" >> _x >> "tag") == "Poddy Music"};
 			};
 		};
 	};
@@ -118,8 +122,6 @@ if (isServer) then {
 	};
 	
 	if (count _musicArray == 0) exitWith {};
-
-	_musicArray = _musicArray select {getText (configFile >> "CfgMusic" >> _x >> "tag") == "Poddy Music"};
 	
 	murshun_radioSongs = _musicArray;
 	
