@@ -63,18 +63,18 @@ class Extended_Init_Eventhandlers
 	
 	class Car
 	{
-		radio_init = "_this execVM 'music_radio\radioInit.sqf'";
+		radio_init = "_this execVM 'scripts\radio_init.sqf'";
 	};
 	class Tank
 	{
-		radio_init = "_this execVM 'music_radio\radioInit.sqf'";
+		radio_init = "_this execVM 'scripts\radio_init.sqf'";
 	};
 	class Air
 	{
-		radio_init = "_this execVM 'music_radio\radioInit.sqf'";
+		radio_init = "_this execVM 'scripts\radio_init.sqf'";
 	};
 	class Ship
 	{
-		radio_init = "_this execVM 'music_radio\radioInit.sqf'";
+		radio_init = "_this execVM 'scripts\radio_init.sqf'";
 	};
 };

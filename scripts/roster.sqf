@@ -260,4 +260,4 @@ case 2:{//only playable units
 } forEach _unitsArr;
 
 player createDiarySubject ["roster", "Team Roster"];
-player createDiaryRecord ["roster", [format ["Roster %1", date], _strFinal]];
+player createDiaryRecord ["roster", [format ["Roster (%1 seconds)", time], _strFinal]];
