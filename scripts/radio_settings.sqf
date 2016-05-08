@@ -17,17 +17,8 @@ case CIVILIAN: {
 	};
 };
 
-_radio_channel = player getVariable ["radio_channel", [6, 4]];
-_channel = _radio_channel select 0;
-_team = _radio_channel select 1;
-
-tf_freq_west = [0,7,radioNetArray_west select _channel,0,"_murshun",-1,0,"_SP_PLAYER_",false];
-tf_freq_east = [0,7,radioNetArray_east select _channel,0,"_murshun",-1,0,"_SP_PLAYER_",false];
-tf_freq_guer = [0,7,radioNetArray_guer select _channel,0,"_murshun",-1,0,"_SP_PLAYER_",false];
-
 player createDiarySubject ["radioFrequencies", "Radio Frequencies"];
-
-player createDiaryRecord ["radioFrequencies", ["Radio Frequencies", format ["<br/>
+player createDiaryRecord ["radioFrequencies", ["Short Range Frequencies", format ["<br/>
 <font color='#FFEC00'><font size='20'>COMMAND NET</font></font color> <br/>
 Commander, Squad Leaders, Special  <font color='#FFEC00'>[</font color><font color='#8A8A8A'>Alt Channel - %1</font color><font color='#FFEC00'>]</font color><br/><br/>
 
@@ -61,19 +52,27 @@ Fireteam members do not have an alternative channel.<br/><br/>
 so you can re-establish communications if leaders are KIA or missing.
 ", (_radioNetArray select 0) select 7, (_radioNetArray select 7) select 4, (_radioNetArray select 1) select 4, (_radioNetArray select 1) select 0, (_radioNetArray select 1) select 1, (_radioNetArray select 2) select 4, (_radioNetArray select 2) select 0, (_radioNetArray select 2) select 1, (_radioNetArray select 3) select 4, (_radioNetArray select 3) select 0, (_radioNetArray select 3) select 1]]];
 
+_radio_channel = player getVariable ["radio_channel", [6, 4]];
+_channel = _radio_channel select 0;
+_team = _radio_channel select 1;
+
+if (isNil {_radioNetArray select _channel}) exitWith {};
+
+tf_freq_west = [_team - 1,7,radioNetArray_west select _channel,0,"_murshun",-1,0,"_SP_PLAYER_",false];
+tf_freq_east = [_team - 1,7,radioNetArray_east select _channel,0,"_murshun",-1,0,"_SP_PLAYER_",false];
+tf_freq_guer = [_team - 1,7,radioNetArray_guer select _channel,0,"_murshun",-1,0,"_SP_PLAYER_",false];
+
 waitUntil {
-	time > 1 and call TFAR_fnc_haveSWRadio
+	time > 0 and call TFAR_fnc_haveSWRadio
 };
 
 _currentSwRadio = call TFAR_fnc_activeSwRadio;
-
-if (isNil {_radioNetArray select _channel}) exitWith {};
 
 {
 	[_currentSwRadio, _forEachIndex + 1, _x] call TFAR_fnc_SetChannelFrequency;
 } foreach (_radioNetArray select _channel);
 
-_className = tolower gettext (configFile >> "cfgVehicles" >> typeOf player >> "displayName");
+_className = tolower gettext (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
 
 [_currentSwRadio, _team - 1] call TFAR_fnc_setSwChannel;
 

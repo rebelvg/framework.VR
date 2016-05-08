@@ -2,7 +2,7 @@ _unit = _this select 0;
 
 if (!isServer) exitWith {};
 
-waitUntil {time > 1};
+waitUntil {time > 0};
 
 if (isNil "murshun_customEnemyLoadouts") exitWith {};
 

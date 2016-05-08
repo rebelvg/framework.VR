@@ -20,6 +20,7 @@ _advancedMedicine = [["ACE_elasticBandage", 10], ["ACE_quikclot", 10], ["ACE_mor
 _basicMedic = [["ACE_elasticBandage", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 6], ["ACE_salineIV_500", 2]];
 _advancedMedic = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 8], ["ACE_atropine", 4], ["ACE_tourniquet", 4], ["ACE_personalAidKit", 3], ["ACE_salineIV_500", 2]];
 
+_leaderFashionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
 _fashionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
 _pilotFashionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_Parachute", ""];
 _slRifleArray = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]];
@@ -33,10 +34,17 @@ _binocularsArray = ["Laserdesignator", [], []];
 _loadoutArray_west = [
 	[
 		[
-			["officer", "squad leader", "team leader"],
+			["officer", "squad leader"],
+			[
+				_leaderFashionArray,
+				[_slRifleArray, _handgunArray, _binocularsArray]
+			]
+		],
+		[
+			["team leader"],
 			[
 				_fashionArray,
-				[_slRifleArray, _handgunArray, _binocularsArray]
+				[_slRifleArray, _binocularsArray]
 			]
 		],
 		[
@@ -92,7 +100,7 @@ _loadoutArray_west = [
 	[
 		[
 			["all units"],
-			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], ["SmokeShellBlue", 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items
+			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], ["SmokeShellBlue", 2], ["ACE_CableTie", 2], ["murshun_cigs_matches", 1]] + _advancedMedicine, //items
 			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "tf_anprc152", "NVGoggles"] //link items
 		],
 		[

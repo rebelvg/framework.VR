@@ -86,9 +86,9 @@ if(isNil "_this") exitWith {hint "Skippy-Roster Script needs array as parameter"
 if(typeName _this != "ARRAY") exitWith {hint "Skippy-Roster Script needs array as parameter"};
 
 
-_includeAI 	= 1;//0->only players, 1->both AI and players, 2->playable units only (includes player and some AI)
-_rank 		= true;//true->display unit's rank		false->hide unit's rank
-_role 		= true;//true->display unit's role		false->hide unit's role
+_includeAI 	= 1; //0->only players, 1->both AI and players, 2->playable units only (includes player and some AI)
+_rank 		= true; //true->display unit's rank		false->hide unit's rank
+_role 		= true; //true->display unit's role		false->hide unit's role
 
 
 if(count _this > 0) then {
@@ -117,17 +117,16 @@ if(count _this > 0) then {
 };
 
 
-_strRank 		= "";//will contain unit's rank
-_strRole 		= "";//will contain unit's role
-_strGrp 		= "";//will contain unit's group name
-_strColorGrp 	= "";//will contain unit's group color
-_strFinal 		= "";//will contain final string to be displayed
-_oldGrp 		= grpNull;//group of last checked unit
-_newGrp 		= grpNull;//group of current unit
-_unitsArr 		= [];//will contain all units that have to be processed
+_strRank 		= ""; //will contain unit's rank
+_strRole 		= ""; //will contain unit's role
+_strGrp 		= ""; //will contain unit's group name
+_strColorGrp 	= ""; //will contain unit's group color
+_strFinal 		= ""; //will contain final string to be displayed
+_oldGrp 		= grpNull; //group of last checked unit
+_newGrp 		= grpNull; //group of current unit
+_unitsArr 		= []; //will contain all units that have to be processed
 
 _teamColor = "";
-
 
 switch(_includeAI) do {
 case 0:{//only players

@@ -2,7 +2,7 @@ _unit = _this select 0;
 
 if (!isServer) exitWith {};
 
-waituntil {time > 1};
+waitUntil {time > 0};
 
 clearMagazineCargoGlobal _unit;
 clearWeaponCargoGlobal _unit;

@@ -1,19 +1,14 @@
 waitUntil {!isNil "murshun_frameworkInit"};
 
-[player] execVM "scripts\loadout.sqf";
-
-if (!didJIP) then {
-	[2, false, true] execVM "scripts\roster.sqf";
-} else {
-	if (time > 0) then {
-		[[[2, false, true], "scripts\roster.sqf"], "BIS_fnc_execVM"] call BIS_fnc_MP;
-	} else {
-		[2, false, true] execVM "scripts\roster.sqf";
-	};
-};
-
 [] execVM "scripts\radio_settings.sqf";
+[player] execVM "scripts\loadout.sqf";
 [player] spawn murshun_assignTeam_fnc;
+
+if (time > 0) then {
+	[[[2, false, true], "scripts\roster.sqf"], "BIS_fnc_execVM"] call BIS_fnc_MP;
+} else {
+	[2, false, true] execVM "scripts\roster.sqf";
+};
 
 waitUntil {time > 90};
 

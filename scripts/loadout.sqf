@@ -1,10 +1,10 @@
 _unit = _this select 0;
-_className = tolower gettext (configFile >> "cfgVehicles" >> typeOf _unit >> "displayName");
+_className = tolower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
 
 _loadoutArray = [];
 
 waitUntil {!isNil "murshun_frameworkInit"};
-waitUntil {time > 0 and !isNil "loadoutArray_west" and !isNil "loadoutArray_east" and !isNil "loadoutArray_guer" and !isNil "loadoutArray_civ"};
+waitUntil {!isNil "loadoutArray_west" and !isNil "loadoutArray_east" and !isNil "loadoutArray_guer" and !isNil "loadoutArray_civ"};
 
 switch (side _unit) do {
 case WEST: {
@@ -41,7 +41,7 @@ if (count _loadoutArray == 3) then {
 
 	if (!(_className in _allClassesArray)) then {
 		if (!isMultiplayer) then {
-			systemchat format ["Can't find loadout for %1, falling back to rifleman.", _className];
+			systemChat format ["Can't find loadout for %1, falling back to rifleman.", _className];
 		};
 		
 		_fallbackClassName = "rifleman";

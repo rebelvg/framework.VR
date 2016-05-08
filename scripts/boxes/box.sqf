@@ -6,7 +6,7 @@ if (!isServer) exitWith {};
 _loadoutArray = [];
 
 waitUntil {!isNil "murshun_frameworkInit"};
-waitUntil {time > 1 and !isNil "loadoutArray_west" and !isNil "loadoutArray_east" and !isNil "loadoutArray_guer" and !isNil "loadoutArray_civ"};
+waitUntil {time > 0 and !isNil "loadoutArray_west" and !isNil "loadoutArray_east" and !isNil "loadoutArray_guer" and !isNil "loadoutArray_civ"};
 
 if (isNil "_side") then {
 	_side = side _unit;

@@ -58,23 +58,23 @@ class Extended_Init_Eventhandlers
 {
     class CAManBase
     {
-		enemy_loadout = "_this execVM 'scripts\enemy_loadout.sqf'";
+		enemy_init = "_this execVM 'scripts\enemy_init.sqf'";
     };
 	
 	class Car
 	{
-		radio_init = "_this execVM 'scripts\radio_init.sqf'";
+		veh_init = "_this execVM 'scripts\veh_init.sqf'";
 	};
 	class Tank
 	{
-		radio_init = "_this execVM 'scripts\radio_init.sqf'";
+		veh_init = "_this execVM 'scripts\veh_init.sqf'";
 	};
 	class Air
 	{
-		radio_init = "_this execVM 'scripts\radio_init.sqf'";
+		veh_init = "_this execVM 'scripts\veh_init.sqf'";
 	};
 	class Ship
 	{
-		radio_init = "_this execVM 'scripts\radio_init.sqf'";
+		veh_init = "_this execVM 'scripts\veh_init.sqf'";
 	};
 };

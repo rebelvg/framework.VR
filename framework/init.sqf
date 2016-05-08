@@ -153,12 +153,16 @@ murshun_fillBox_fnc = {
 };
 
 debugLoadout_fnc = {
-	waitUntil {time > 1};
-
+	{
+		_x disableAI "ANIM";
+	} foreach (switchableUnits - [player]);
+	
+	waitUntil {time > 0};
+	
 	{
 		[_x] execVM "scripts\loadout.sqf";
 		[_x] spawn murshun_assignTeam_fnc;
-	} foreach switchableUnits - [player];
+	} foreach (switchableUnits - [player]);
 };
 
 murshun_assignTeam_fnc = {
@@ -170,7 +174,7 @@ murshun_assignTeam_fnc = {
 
 	_teamsArray = ["MAIN", "RED", "GREEN", "BLUE", "YELLOW"];
 
-	waitUntil {time > 1};
+	waitUntil {time > 0};
 
 	if (_team > 0 and _team < 5) then {
 		[[_unit, _teamsArray select _team], "ace_interaction_fnc_joinTeam"] call BIS_fnc_MP;
@@ -184,16 +188,21 @@ addMissionEventHandler ["Ended", {
 }];
 
 if (!isMultiplayer) then {
-	{
-		if (!isPlayer _x) then {
-			_x disableAI "ANIM";
-		};
-	} foreach switchableUnits;
-	
 	[] spawn debugLoadout_fnc;
 
 	[player] spawn BIS_fnc_traceBullets;
 };
+
+//tfar block
+tf_radio_channel_name = "TaskForceRadio";
+tf_radio_channel_password = "123";
+TF_terrain_interception_coefficient = 7;
+TF_give_microdagr_to_soldier = false;
+
+tf_no_auto_long_range_radio = true;
+TF_give_personal_radio_to_regular_soldier = false;
+tf_same_sw_frequencies_for_side = true;
+tf_same_lr_frequencies_for_side = true;
 
 tf_west_radio_code = "_murshun";
 tf_east_radio_code = "_murshun";
