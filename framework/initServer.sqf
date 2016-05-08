@@ -1,6 +1,6 @@
 [] spawn {
 	waitUntil {!isNil "murshun_framework_generateRandomFreqs"};
-	
+
 	if (murshun_framework_generateRandomFreqs) then {
 		_freqsPool = [];
 
