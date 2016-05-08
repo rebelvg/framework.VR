@@ -2,7 +2,7 @@ _radio = _this select 0;
 
 waitUntil {!isNil "murshun_radioInit"};
 
-if (!isNil {_radio getVariable "murshun_loudRadioIsOn"}) exitWith {};
+if (!isNil {_radio getVariable "murshun_radio_action_added"}) exitWith {};
 
 if (_radio isKindOf "thing" or _radio isKindOf "static") then {
 	if (isServer) then {
@@ -134,3 +134,5 @@ if (_radio isKindOf "thing" or _radio isKindOf "static") then {
 	}] call ace_interact_menu_fnc_createAction;
 	[_radio, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;	
 };
+
+_radio setVariable ["murshun_radio_action_added", true];
