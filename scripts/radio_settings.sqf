@@ -17,6 +17,14 @@ case CIVILIAN: {
 	};
 };
 
+_radio_channel = player getVariable ["radio_channel", [6, 4]];
+_channel = _radio_channel select 0;
+_team = _radio_channel select 1;
+
+tf_freq_west = [0,7,radioNetArray_west select _channel,0,"_murshun",-1,0,"_SP_PLAYER_",false];
+tf_freq_east = [0,7,radioNetArray_east select _channel,0,"_murshun",-1,0,"_SP_PLAYER_",false];
+tf_freq_guer = [0,7,radioNetArray_guer select _channel,0,"_murshun",-1,0,"_SP_PLAYER_",false];
+
 player createDiarySubject ["radioFrequencies", "Radio Frequencies"];
 
 player createDiaryRecord ["radioFrequencies", ["Radio Frequencies", format ["<br/>
@@ -58,9 +66,6 @@ waitUntil {
 };
 
 _currentSwRadio = call TFAR_fnc_activeSwRadio;
-_radio_channel = player getVariable ["radio_channel", [6, 4]];
-_channel = _radio_channel select 0;
-_team = _radio_channel select 1;
 
 if (isNil {_radioNetArray select _channel}) exitWith {};
 

@@ -195,4 +195,13 @@ if (!isMultiplayer) then {
 	[player] spawn BIS_fnc_traceBullets;
 };
 
+tf_west_radio_code = "_murshun";
+tf_east_radio_code = "_murshun";
+tf_guer_radio_code = "_murshun";
+
+_freqs = [0,7,["31","32","33","34","35","36","37","38","39","40"],0,"_murshun",-1,0,false];
+tf_freq_west_lr = _freqs;
+tf_freq_east_lr = _freqs;
+tf_freq_guer_lr = _freqs;
+
 murshun_frameworkInit = true;
