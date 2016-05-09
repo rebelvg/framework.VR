@@ -2586,7 +2586,7 @@ class Mission
 			{
 				name="z1";
 				condition="time > 1";
-				onActivation="fun = [""z1"",[1,1,0],[6,3,60,10],[],[],[],[1,1,0,0]] spawn DAC_Zone;";
+				onActivation="fun = [""z1"",[1,1,0],[6,3,60,10],[],[],[],[0,0,0,0]] spawn DAC_Zone;";
 				sizeA=200;
 				sizeB=200;
 				interuptable=1;
