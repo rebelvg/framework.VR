@@ -154,7 +154,7 @@ if (isServer) then {
 			_time = time;
 			waitUntil {
 				sleep 1;
-				time >= _time + _songLength or murshun_skipTrack
+				time > (_time + _songLength) or murshun_skipTrack
 			};
 			
 			murshun_skipTrack = false;
