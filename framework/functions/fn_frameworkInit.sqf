@@ -122,7 +122,7 @@ murshun_giveLinkItems = {
 
 murshun_fillBox_fnc = {
 	_unit = _this select 0;
-	_divider = _this select 1;
+	_multiplier = _this select 1;
 
 	{
 		_weaponsArray = _x select 1 select 1;
@@ -134,7 +134,7 @@ murshun_fillBox_fnc = {
 				{
 					if (count _x == 2) then {
 						if (count (_x select 0) != 0) then {
-							_unit addMagazineCargoGlobal [_x select 0, ceil (50 / _divider)];
+							_unit addMagazineCargoGlobal [_x select 0, ceil (50 * _multiplier)];
 						};
 					};
 				} foreach _mags;
@@ -146,17 +146,19 @@ murshun_fillBox_fnc = {
 	{
 		if (count _x == 2) then {
 			if (count (_x select 0) != 0) then {
-				_unit addItemCargoGlobal [_x select 0, ceil ((_x select 1) / _divider)];
+				_unit addItemCargoGlobal [_x select 0, ceil ((_x select 1) * _multiplier)];
 			};
 		};
 	} foreach (_loadoutArray select 2);
 };
 
-debugLoadout_fnc = {
+mf_disableAI_fnc = {
 	{
 		_x disableAI "ANIM";
 	} foreach (switchableUnits - [player]);
-	
+};
+
+mf_debugLoadout_fnc = {
 	waitUntil {time > 0};
 	
 	{
@@ -188,7 +190,8 @@ addMissionEventHandler ["Ended", {
 }];
 
 if (!isMultiplayer) then {
-	[] spawn debugLoadout_fnc;
+	[] call mf_disableAI_fnc;
+	[] spawn mf_debugLoadout_fnc;
 
 	[player] spawn BIS_fnc_traceBullets;
 };

@@ -60,7 +60,7 @@ if (count _loadoutArray == 3) then {
 			_unit addItemCargoGlobal ["ACE_salineIV_500", 5];
 		};
 		
-		[_unit, 4] call murshun_fillBox_fnc;
+		[_unit, 1/4] call murshun_fillBox_fnc;
 
 		if (_unit isKindOf "car") then {
 			[_unit, 3] call ace_repair_fnc_addSpareParts;

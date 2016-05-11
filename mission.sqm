@@ -5731,6 +5731,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						rank="CAPTAIN";
 						init="this setVariable [""mf_groupChannel"", [7, 5]];";
 						name="o_1";
 						description="Command SL";
@@ -8142,6 +8143,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
+						rank="CAPTAIN";
 						init="this setVariable [""mf_groupChannel"", [7, 5]];";
 						name="i_1";
 						description="Command SL";
