@@ -22,11 +22,11 @@ showHUD[] = {
 
 class CfgTaskEnhancements
 {
-   enable       = 1;
-   3d           = 0;
-   3dDrawDist   = 0;
-   share        = 0;
-   propagate    = 0;
+	enable       = 1;
+	3d           = 0;
+	3dDrawDist   = 0;
+	share        = 0;
+	propagate    = 0;
 };
 
 class CfgDebriefing
@@ -56,10 +56,10 @@ class CfgDebriefingSections
 
 class Extended_Init_Eventhandlers
 {
-    class CAManBase
-    {
+	class CAManBase
+	{
 		unitInit = "_this execVM 'framework\initEvents\unitInit.sqf'";
-    };
+	};
 	
 	class Car
 	{
