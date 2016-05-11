@@ -196,11 +196,11 @@ if (!isMultiplayer) then {
 //tfar block
 tf_radio_channel_name = "TaskForceRadio";
 tf_radio_channel_password = "123";
-TF_terrain_interception_coefficient = 7;
-TF_give_microdagr_to_soldier = false;
+tf_terrain_interception_coefficient = 7;
+tf_give_microdagr_to_soldier = false;
 
 tf_no_auto_long_range_radio = true;
-TF_give_personal_radio_to_regular_soldier = false;
+tf_give_personal_radio_to_regular_soldier = false;
 tf_same_sw_frequencies_for_side = true;
 tf_same_lr_frequencies_for_side = true;
 
