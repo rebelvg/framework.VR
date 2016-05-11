@@ -10,4 +10,4 @@ if (!murshun_customEnemyLoadouts) exitWith {};
 
 if (_unit in (switchableUnits + playableUnits)) exitWith {};
 
-[_unit] execVM "scripts\loadout.sqf";
+[_unit] spawn mf_fnc_giveLoadout;

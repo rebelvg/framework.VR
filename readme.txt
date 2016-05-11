@@ -10,16 +10,6 @@ DAC.
 Spectator, Jip teleporting script, Cigs and Suicide script are located in the murshun mod pack. All are completely optional.
 
 Framework Info.
-Framework needs a few lines to be initialized properly.
-
-[] execVM "framework\init.sqf";
-in init.sqf
-
-[] execVM "framework\initPlayerLocal.sqf";
-in initPlayerLocal.sqf
-
-[] execVM "framework\initServer.sqf";
-in initServer.sqf
 
 Spectator is located inside of our murshun pack. If you want to enable it you must add a few lines.
 
@@ -33,10 +23,9 @@ in onPlayerKilled.sqf
 in onPlayerRespawn.sqf
 
 Framework should not throw ANY script errors. If you see any errors connected to the framework, you're probably doing something wrong, ask rebel.
-loadoutArray is located in mission\init.sqf
-It's pretty self-explanatory.
 
 You need to set radio_channel for all playable units.
+Example.
 this setVariable ["radio_channel", [1, 1]];
 [1, 1] is a special radio array, 1 is a squad, 1 is a team.
 Squads available - 1 to 6, squad 7 is reserved for command network.
@@ -45,29 +34,23 @@ So in total you can have 6 squads with 4 fireteams per squad which is more than 
 Colors will be applied automatically.
 Modified roster script adds frequencies to the roster.
 
-0 = [this] execVM "scripts\boxes\box.sqf"; //add this to the main box, it uses loadoutArray to place things in, works for vehicles too
-Main box will have virtual arsenal enabled but only in singleplayer (for loadout selection).
-0 = [this] execVM "scripts\boxes\box_medical.sqf"; //box with advanced medical equipment
-
 To enable suicide set murshun_easywayout_canSuicide to true in the init.sqf.
 To disable JIP teleportation set murshun_allowJipTeleporting to false in the inti.sqf (JIP teleportation enabled by default in the murshun_menu pbo).
 
 Radios are now automatically added to any vehicle.
 To add radio to an object use the line below.
-0 = [this] execVM "music_radio\radioInit.sqf";
+0 = [this] execVM "musicRadio\radioInit.sqf";
 Script will automatically detect if the object is a vehicle or a static object and will act accordingly.
 To start the radio use ace-interaction menu.
 
-Framework now supports per-side loadouts.
-loadoutArray_west
-loadoutArray_east
-loadoutArray_guer
-loadoutArray_civ
-and for boxes and cars
-0 = [this, WEST] execVM "scripts\boxes\box.sqf";
-0 = [this, EAST] execVM "scripts\boxes\box.sqf";
-0 = [this, RESISTANCE] execVM "scripts\boxes\box.sqf";
-0 = [this, CIVILIAN] execVM "scripts\boxes\box.sqf";
+Framework supports per-side loadouts.
+Visit mission\loadouts folder.
+Also for boxes and cars.
+0 = [this, WEST] spawn mf_fnc_fillBox;
+0 = [this, EAST] spawn mf_fnc_fillBox;
+0 = [this, RESISTANCE] spawn mf_fnc_fillBox;
+0 = [this, CIVILIAN] spawn mf_fnc_fillBox;
+0 = [this] spawn mf_fnc_fillBoxMedical; //box with advanced medical equipment
 
 If framework can't find the correct side loadoutArray it will skip the loadouts distribution.
 
@@ -78,7 +61,7 @@ So for example your enemies are opfor just create loadoutArray_east and fill it 
 Framework now supports respawn integration in a gameplay form.
 All you need is a "base_marker" on the base. As mission maker you can move it after each objective to other places you want.
 If you want to have an object that will respawn players on the base_marker you need to place
-0 = [this] execVM "scripts\revive_players.sqf";
+0 = [this] spawn mf_fnc_addReviveBase;
 in the object's init.
 Only officers and squad leaders will be able to call for respawn.
 If you, as mission maker, want to respawn people on the base_marker you can execute

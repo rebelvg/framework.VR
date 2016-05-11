@@ -1,7 +1,7 @@
 waitUntil {!isNil "murshun_frameworkInit"};
 
-[] execVM "scripts\radio_settings.sqf";
-[player] execVM "scripts\loadout.sqf";
+[] execVM "scripts\tfarSettings.sqf";
+[player] spawn mf_fnc_giveLoadout;
 [player] spawn murshun_assignTeam_fnc;
 
 if (time > 0) then {

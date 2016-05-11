@@ -1,3 +1,3 @@
 [] execVM "framework\initServer.sqf";
-[] execVM "scripts\AttackInit.sqf";
+[] execVM "scripts\attackInit.sqf";
 [] execVM "mission\tasks.sqf";

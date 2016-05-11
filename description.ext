@@ -58,23 +58,48 @@ class Extended_Init_Eventhandlers
 {
     class CAManBase
     {
-		enemy_init = "_this execVM 'scripts\enemy_init.sqf'";
+		unitInit = "_this execVM 'framework\initEvents\unitInit.sqf'";
     };
 	
 	class Car
 	{
-		veh_init = "_this execVM 'scripts\veh_init.sqf'";
+		carInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
 	};
 	class Tank
 	{
-		veh_init = "_this execVM 'scripts\veh_init.sqf'";
+		tankInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
 	};
 	class Air
 	{
-		veh_init = "_this execVM 'scripts\veh_init.sqf'";
+		airInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
 	};
 	class Ship
 	{
-		veh_init = "_this execVM 'scripts\veh_init.sqf'";
+		shipInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
+	};
+};
+
+class CfgFunctions
+{
+	class MF
+	{
+		class functions
+		{
+			file = "framework\functions";
+			class functionsInit {postInit = 1;};
+			class giveLoadout {};
+			class fillBox {};
+			class fillBoxMedical {};
+			class addReviveBase {};
+		};
+		
+		class loadouts
+		{
+			file = "mission\loadouts";
+			class loadoutWest {};
+			class loadoutEast {};
+			class loadoutGuer {};
+			class loadoutCiv {};
+		};
 	};
 };

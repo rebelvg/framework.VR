@@ -1,6 +1,6 @@
 _radio = _this select 0;
 
-[_radio] execVM "music_radio\radioInit.sqf";
+[_radio] execVM "musicRadio\radioInit.sqf";
 
 if (!isServer) exitWith {};
 

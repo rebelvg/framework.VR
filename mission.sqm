@@ -209,7 +209,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, WEST] execVM ""scripts\boxes\box.sqf"";";
+				init="0 = [this, WEST] spawn mf_fnc_fillBox;";
 			};
 			id=6;
 			type="C_Offroad_01_F";
@@ -250,7 +250,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, RESISTANCE] execVM ""scripts\boxes\box.sqf"";";
+				init="0 = [this, RESISTANCE] spawn mf_fnc_fillBox;";
 			};
 			id=12;
 			type="C_Offroad_01_F";
@@ -2550,7 +2550,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, EAST] execVM ""scripts\boxes\box.sqf"";";
+				init="0 = [this, EAST] spawn mf_fnc_fillBox;";
 			};
 			id=9;
 			type="C_Offroad_01_F";
@@ -2661,14 +2661,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={615.26007,5.8758397,585.31207};
+				position[]={615.26001,5.8758397,585.31201};
 				angles[]={0,0.21022491,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this] execVM ""scripts\revive_players.sqf"";";
+				init="0 = [this] spawn mf_fnc_addReviveBase;";
 			};
 			id=197;
 			type="Land_DataTerminal_01_F";
@@ -2721,15 +2721,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={612.8783,5.6349964,562.73035};
-				angles[]={0,3.2722685,0};
+				position[]={612.87799,5.6349964,562.72998};
+				angles[]={0,3.2722654,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this] execVM ""scripts\boxes\box_medical.sqf"";";
+				init="0 = [this] spawn mf_fnc_fillBoxMedical;";
 			};
 			id=364;
 			type="CargoNet_01_box_F";
@@ -2781,15 +2781,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={609.04059,5.6349964,564.29797};
-				angles[]={0,3.2322559,0};
+				position[]={609.04102,5.6349964,564.29797};
+				angles[]={0,3.2322626,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, WEST] execVM ""scripts\boxes\box.sqf"";";
+				init="0 = [this, WEST] spawn mf_fnc_fillBox;";
 			};
 			id=365;
 			type="CargoNet_01_box_F";
@@ -2841,15 +2841,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={580.94867,5.6349964,562.84906};
-				angles[]={0,3.2093034,0};
+				position[]={580.94897,5.6349964,562.849};
+				angles[]={0,3.2093115,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this] execVM ""scripts\boxes\box_medical.sqf"";";
+				init="0 = [this] spawn mf_fnc_fillBoxMedical;";
 			};
 			id=366;
 			type="CargoNet_01_box_F";
@@ -2901,15 +2901,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={576.99792,5.6349964,564.12854};
-				angles[]={0,0.078147411,0};
+				position[]={576.99799,5.6349964,564.12903};
+				angles[]={0,0.078155845,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, EAST] execVM ""scripts\boxes\box.sqf"";";
+				init="0 = [this, EAST] spawn mf_fnc_fillBox;";
 			};
 			id=367;
 			type="CargoNet_01_box_F";
@@ -2961,15 +2961,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={644.95074,5.6349964,562.72736};
-				angles[]={0,3.2801144,0};
+				position[]={644.95099,5.6349964,562.72699};
+				angles[]={0,3.2801194,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this] execVM ""scripts\boxes\box_medical.sqf"";";
+				init="0 = [this] spawn mf_fnc_fillBoxMedical;";
 			};
 			id=368;
 			type="CargoNet_01_box_F";
@@ -3021,15 +3021,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={641.02936,5.6349964,564.37231};
-				angles[]={0,3.1841414,0};
+				position[]={641.02899,5.6349964,564.37201};
+				angles[]={0,3.1841438,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, RESISTANCE] execVM ""scripts\boxes\box.sqf"";";
+				init="0 = [this, RESISTANCE] spawn mf_fnc_fillBox;";
 			};
 			id=369;
 			type="CargoNet_01_box_F";
@@ -10591,13 +10591,13 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={617.04785,8.5031853,585.28937};
+				position[]={617.04797,8.5031853,585.289};
 			};
 			side="Empty";
 			flags=5;
 			class Attributes
 			{
-				init="0 = [this] execVM ""music_radio\radioInit.sqf"";";
+				init="0 = [this] execVM ""musicRadio\radioInit.sqf"";";
 			};
 			id=872;
 			type="Land_Loudspeakers_F";

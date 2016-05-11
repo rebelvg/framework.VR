@@ -160,7 +160,7 @@ debugLoadout_fnc = {
 	waitUntil {time > 0};
 	
 	{
-		[_x] execVM "scripts\loadout.sqf";
+		[_x] spawn mf_fnc_giveLoadout;
 		[_x] spawn murshun_assignTeam_fnc;
 	} foreach (switchableUnits - [player]);
 };

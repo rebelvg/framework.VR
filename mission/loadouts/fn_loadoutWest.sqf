@@ -1,8 +1,6 @@
 //place all mission related stuff here
 //do not overwrite this file when copying framework from mission to mission
 
-//you can use loadoutArray_west, loadoutArray_east, loadoutArray_guer, loadoutArray_civ
-
 /*
 classesArray = ["class1", "class2", "class3"];
 fashionArray = ["uniform", "vest", "headgear", "backpack", "goggles"];
@@ -11,14 +9,12 @@ weaponArray2 = ["rifle2", [["mag1", number], ["mag2", number]], ["device1", "dev
 handgunArray1 = ["handgun", [["mag", number]], ["device"]];
 weaponsArray = [weaponArray1, handgunArray1];
 eqpArray = [classesArray, [fashionArray, weaponsArray]];
-
-randomWeaponArray = selectRandom [weaponArray1, weaponArray2];
 */
 
 _basicMedicine = [["ACE_elasticBandage", 10], ["ACE_morphine", 4], ["ACE_epinephrine", 2]];
 _advancedMedicine = [["ACE_elasticBandage", 10], ["ACE_quikclot", 10], ["ACE_morphine", 4], ["ACE_epinephrine", 2], ["ACE_atropine", 1], ["ACE_tourniquet", 1]];
-_basicMedic = [["ACE_elasticBandage", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 6], ["ACE_salineIV_500", 2]];
-_advancedMedic = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 8], ["ACE_atropine", 4], ["ACE_tourniquet", 4], ["ACE_personalAidKit", 3], ["ACE_salineIV_500", 2]];
+_basicMedicMedicine = [["ACE_elasticBandage", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 6], ["ACE_salineIV_500", 2]];
+_advancedMedicMedicine = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 8], ["ACE_atropine", 4], ["ACE_tourniquet", 4], ["ACE_personalAidKit", 3], ["ACE_salineIV_500", 2]];
 
 _leaderFashionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
 _fashionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
@@ -31,7 +27,7 @@ _atLauncherArray = ["launch_NLAW_F", [], []];
 _msLauncherArray = ["launch_B_Titan_short_F", [["Titan_AT", 3]], []];
 _binocularsArray = ["Laserdesignator", [], []];
 
-_loadoutArray_west = [
+_loadoutArray = [
 	[
 		[
 			["officer", "squad leader"],
@@ -99,7 +95,7 @@ _loadoutArray_west = [
 	], //equipment per class
 	[
 		[
-			["all units"],
+			["all"],
 			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], ["SmokeShellBlue", 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items
 			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "tf_anprc152", "NVGoggles"] //link items
 		],
@@ -110,7 +106,7 @@ _loadoutArray_west = [
 		],
 		[
 			["combat life saver"],
-			_advancedMedic,
+			_advancedMedicMedicine,
 			[]
 		],
 		[
@@ -136,8 +132,5 @@ _loadoutArray_west = [
 	] //content for boxes
 ];
 
-//do not remove these arrays, leave empty if you don't need loadouts for that side
-loadoutArray_west = _loadoutArray_west;
-loadoutArray_east = [];
-loadoutArray_guer = [];
-loadoutArray_civ = [];
+//output of the function, do not remove or change
+_loadoutArray

@@ -1,11 +1,10 @@
-[] execVM "framework\init.sqf";
-[] execVM "music_radio\init.sqf";
-[] execVM "murshun_menu\spectator\init.sqf";
 [] execVM "mission\init.sqf";
-[] execVM "mission\loadouts.sqf";
+[] execVM "musicRadio\init.sqf";
+[] execVM "murshun_menu\spectator\init.sqf";
 
 //leave empty to use all available themes
-murshun_radioThemes = ["slav", "vietnam"];
+//see available themes at the link below
+murshun_radioThemes = [];
 
 //leave empty to use all available songs
 //if not empty - overrides themes setting
