@@ -3297,7 +3297,7 @@ class Mission
 					{
 						skill=0.60000002;
 						rank="CAPTAIN";
-						init="this setVariable [""radio_channel"", [7, 5]];";
+						init="this setVariable [""mf_groupChannel"", [7, 5]];";
 						name="b_1";
 						description="Command SL";
 						isPlayer=1;
@@ -3361,7 +3361,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [7, 5]];";
+						init="this setVariable [""mf_groupChannel"", [7, 5]];";
 						name="b_2";
 						isPlayable=1;
 					};
@@ -3422,7 +3422,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [7, 5]];";
+						init="this setVariable [""mf_groupChannel"", [7, 5]];";
 						name="b_3";
 						isPlayable=1;
 					};
@@ -3483,7 +3483,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [7, 5]];";
+						init="this setVariable [""mf_groupChannel"", [7, 5]];";
 						name="b_4";
 						isPlayable=1;
 					};
@@ -3581,7 +3581,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [1, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 5]];";
 						name="b_5";
 						description="Alpha - SL";
 						isPlayable=1;
@@ -3644,7 +3644,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [1, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 5]];";
 						name="b_6";
 						isPlayable=1;
 					};
@@ -3706,7 +3706,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [1, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 5]];";
 						name="b_7";
 						isPlayable=1;
 					};
@@ -3768,7 +3768,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [1, 1]];";
+						init="this setVariable [""mf_groupChannel"", [1, 1]];";
 						name="b_8";
 						description="TL1";
 						isPlayable=1;
@@ -3831,7 +3831,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [1, 1]];";
+						init="this setVariable [""mf_groupChannel"", [1, 1]];";
 						name="b_9";
 						isPlayable=1;
 					};
@@ -3893,7 +3893,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [1, 1]];";
+						init="this setVariable [""mf_groupChannel"", [1, 1]];";
 						name="b_10";
 						isPlayable=1;
 					};
@@ -3953,7 +3953,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 1]];";
+						init="this setVariable [""mf_groupChannel"", [1, 1]];";
 						name="b_11";
 						isPlayable=1;
 					};
@@ -4015,7 +4015,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [1, 2]];";
+						init="this setVariable [""mf_groupChannel"", [1, 2]];";
 						name="b_12";
 						description="TL2";
 						isPlayable=1;
@@ -4078,7 +4078,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [1, 2]];";
+						init="this setVariable [""mf_groupChannel"", [1, 2]];";
 						name="b_13";
 						isPlayable=1;
 					};
@@ -4140,7 +4140,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [1, 2]];";
+						init="this setVariable [""mf_groupChannel"", [1, 2]];";
 						name="b_14";
 						isPlayable=1;
 					};
@@ -4200,7 +4200,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 2]];";
+						init="this setVariable [""mf_groupChannel"", [1, 2]];";
 						name="b_15";
 						isPlayable=1;
 					};
@@ -4298,7 +4298,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [2, 5]];";
+						init="this setVariable [""mf_groupChannel"", [2, 5]];";
 						name="b_16";
 						description="Bravo - SL";
 						isPlayable=1;
@@ -4361,7 +4361,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [2, 5]];";
+						init="this setVariable [""mf_groupChannel"", [2, 5]];";
 						name="b_17";
 						isPlayable=1;
 					};
@@ -4423,7 +4423,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [2, 5]];";
+						init="this setVariable [""mf_groupChannel"", [2, 5]];";
 						name="b_18";
 						isPlayable=1;
 					};
@@ -4485,7 +4485,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [2, 1]];";
+						init="this setVariable [""mf_groupChannel"", [2, 1]];";
 						name="b_19";
 						description="TL1";
 						isPlayable=1;
@@ -4548,7 +4548,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [2, 1]];";
+						init="this setVariable [""mf_groupChannel"", [2, 1]];";
 						name="b_20";
 						isPlayable=1;
 					};
@@ -4610,7 +4610,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [2, 1]];";
+						init="this setVariable [""mf_groupChannel"", [2, 1]];";
 						name="b_21";
 						isPlayable=1;
 					};
@@ -4670,7 +4670,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 1]];";
+						init="this setVariable [""mf_groupChannel"", [2, 1]];";
 						name="b_22";
 						isPlayable=1;
 					};
@@ -4732,7 +4732,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [2, 2]];";
+						init="this setVariable [""mf_groupChannel"", [2, 2]];";
 						name="b_23";
 						description="TL2";
 						isPlayable=1;
@@ -4795,7 +4795,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [2, 2]];";
+						init="this setVariable [""mf_groupChannel"", [2, 2]];";
 						name="b_24";
 						isPlayable=1;
 					};
@@ -4857,7 +4857,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [2, 2]];";
+						init="this setVariable [""mf_groupChannel"", [2, 2]];";
 						name="b_25";
 						isPlayable=1;
 					};
@@ -4917,7 +4917,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 2]];";
+						init="this setVariable [""mf_groupChannel"", [2, 2]];";
 						name="b_26";
 						isPlayable=1;
 					};
@@ -5015,7 +5015,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [3, 5]];";
+						init="this setVariable [""mf_groupChannel"", [3, 5]];";
 						name="b_27";
 						description="Charlie - SL";
 						isPlayable=1;
@@ -5078,7 +5078,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [3, 5]];";
+						init="this setVariable [""mf_groupChannel"", [3, 5]];";
 						name="b_28";
 						isPlayable=1;
 					};
@@ -5140,7 +5140,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [3, 5]];";
+						init="this setVariable [""mf_groupChannel"", [3, 5]];";
 						name="b_29";
 						isPlayable=1;
 					};
@@ -5202,7 +5202,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [3, 1]];";
+						init="this setVariable [""mf_groupChannel"", [3, 1]];";
 						name="b_30";
 						description="TL1";
 						isPlayable=1;
@@ -5265,7 +5265,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [3, 1]];";
+						init="this setVariable [""mf_groupChannel"", [3, 1]];";
 						name="b_31";
 						isPlayable=1;
 					};
@@ -5327,7 +5327,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [3, 1]];";
+						init="this setVariable [""mf_groupChannel"", [3, 1]];";
 						name="b_32";
 						isPlayable=1;
 					};
@@ -5387,7 +5387,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 1]];";
+						init="this setVariable [""mf_groupChannel"", [3, 1]];";
 						name="b_33";
 						isPlayable=1;
 					};
@@ -5449,7 +5449,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [3, 2]];";
+						init="this setVariable [""mf_groupChannel"", [3, 2]];";
 						name="b_34";
 						description="TL2";
 						isPlayable=1;
@@ -5512,7 +5512,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [3, 2]];";
+						init="this setVariable [""mf_groupChannel"", [3, 2]];";
 						name="b_35";
 						isPlayable=1;
 					};
@@ -5574,7 +5574,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""radio_channel"", [3, 2]];";
+						init="this setVariable [""mf_groupChannel"", [3, 2]];";
 						name="b_36";
 						isPlayable=1;
 					};
@@ -5634,7 +5634,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 2]];";
+						init="this setVariable [""mf_groupChannel"", [3, 2]];";
 						name="b_37";
 						isPlayable=1;
 					};
@@ -5731,7 +5731,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [7, 5]];";
+						init="this setVariable [""mf_groupChannel"", [7, 5]];";
 						name="o_1";
 						description="Command SL";
 						isPlayable=1;
@@ -5793,7 +5793,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [7, 5]];";
+						init="this setVariable [""mf_groupChannel"", [7, 5]];";
 						name="o_2";
 						isPlayable=1;
 					};
@@ -5854,7 +5854,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [7, 5]];";
+						init="this setVariable [""mf_groupChannel"", [7, 5]];";
 						name="o_3";
 						isPlayable=1;
 					};
@@ -5915,7 +5915,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [7, 5]];";
+						init="this setVariable [""mf_groupChannel"", [7, 5]];";
 						name="o_4";
 						isPlayable=1;
 					};
@@ -6012,7 +6012,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 5]];";
 						name="o_5";
 						description="Alpha - SL";
 						isPlayable=1;
@@ -6074,7 +6074,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 5]];";
 						name="o_6";
 						isPlayable=1;
 					};
@@ -6135,7 +6135,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 5]];";
 						name="o_7";
 						isPlayable=1;
 					};
@@ -6196,7 +6196,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 1]];";
+						init="this setVariable [""mf_groupChannel"", [1, 1]];";
 						name="o_8";
 						description="TL1";
 						isPlayable=1;
@@ -6258,7 +6258,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 1]];";
+						init="this setVariable [""mf_groupChannel"", [1, 1]];";
 						name="o_9";
 						isPlayable=1;
 					};
@@ -6319,7 +6319,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 1]];";
+						init="this setVariable [""mf_groupChannel"", [1, 1]];";
 						name="o_10";
 						isPlayable=1;
 					};
@@ -6380,7 +6380,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 1]];";
+						init="this setVariable [""mf_groupChannel"", [1, 1]];";
 						name="o_11";
 						isPlayable=1;
 					};
@@ -6441,7 +6441,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 2]];";
+						init="this setVariable [""mf_groupChannel"", [1, 2]];";
 						name="o_12";
 						description="TL2";
 						isPlayable=1;
@@ -6503,7 +6503,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 2]];";
+						init="this setVariable [""mf_groupChannel"", [1, 2]];";
 						name="o_13";
 						isPlayable=1;
 					};
@@ -6564,7 +6564,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 2]];";
+						init="this setVariable [""mf_groupChannel"", [1, 2]];";
 						name="o_14";
 						isPlayable=1;
 					};
@@ -6625,7 +6625,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 2]];";
+						init="this setVariable [""mf_groupChannel"", [1, 2]];";
 						name="o_15";
 						isPlayable=1;
 					};
@@ -6722,7 +6722,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 5]];";
+						init="this setVariable [""mf_groupChannel"", [2, 5]];";
 						name="o_16";
 						description="Bravo - SL";
 						isPlayable=1;
@@ -6784,7 +6784,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 5]];";
+						init="this setVariable [""mf_groupChannel"", [2, 5]];";
 						name="o_17";
 						isPlayable=1;
 					};
@@ -6845,7 +6845,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 5]];";
+						init="this setVariable [""mf_groupChannel"", [2, 5]];";
 						name="o_18";
 						isPlayable=1;
 					};
@@ -6906,7 +6906,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 1]];";
+						init="this setVariable [""mf_groupChannel"", [2, 1]];";
 						name="o_19";
 						description="TL1";
 						isPlayable=1;
@@ -6968,7 +6968,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 1]];";
+						init="this setVariable [""mf_groupChannel"", [2, 1]];";
 						name="o_20";
 						isPlayable=1;
 					};
@@ -7029,7 +7029,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 1]];";
+						init="this setVariable [""mf_groupChannel"", [2, 1]];";
 						name="o_21";
 						isPlayable=1;
 					};
@@ -7090,7 +7090,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 1]];";
+						init="this setVariable [""mf_groupChannel"", [2, 1]];";
 						name="o_22";
 						isPlayable=1;
 					};
@@ -7151,7 +7151,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 2]];";
+						init="this setVariable [""mf_groupChannel"", [2, 2]];";
 						name="o_23";
 						description="TL2";
 						isPlayable=1;
@@ -7213,7 +7213,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 2]];";
+						init="this setVariable [""mf_groupChannel"", [2, 2]];";
 						name="o_24";
 						isPlayable=1;
 					};
@@ -7274,7 +7274,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 2]];";
+						init="this setVariable [""mf_groupChannel"", [2, 2]];";
 						name="o_25";
 						isPlayable=1;
 					};
@@ -7335,7 +7335,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 2]];";
+						init="this setVariable [""mf_groupChannel"", [2, 2]];";
 						name="o_26";
 						isPlayable=1;
 					};
@@ -7432,7 +7432,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 5]];";
+						init="this setVariable [""mf_groupChannel"", [3, 5]];";
 						name="o_27";
 						description="Charlie - SL";
 						isPlayable=1;
@@ -7494,7 +7494,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 5]];";
+						init="this setVariable [""mf_groupChannel"", [3, 5]];";
 						name="o_28";
 						isPlayable=1;
 					};
@@ -7555,7 +7555,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 5]];";
+						init="this setVariable [""mf_groupChannel"", [3, 5]];";
 						name="o_29";
 						isPlayable=1;
 					};
@@ -7616,7 +7616,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 1]];";
+						init="this setVariable [""mf_groupChannel"", [3, 1]];";
 						name="o_30";
 						description="TL1";
 						isPlayable=1;
@@ -7678,7 +7678,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 1]];";
+						init="this setVariable [""mf_groupChannel"", [3, 1]];";
 						name="o_31";
 						isPlayable=1;
 					};
@@ -7739,7 +7739,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 1]];";
+						init="this setVariable [""mf_groupChannel"", [3, 1]];";
 						name="o_32";
 						isPlayable=1;
 					};
@@ -7800,7 +7800,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 1]];";
+						init="this setVariable [""mf_groupChannel"", [3, 1]];";
 						name="o_33";
 						isPlayable=1;
 					};
@@ -7861,7 +7861,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 2]];";
+						init="this setVariable [""mf_groupChannel"", [3, 2]];";
 						name="o_34";
 						description="TL2";
 						isPlayable=1;
@@ -7923,7 +7923,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 2]];";
+						init="this setVariable [""mf_groupChannel"", [3, 2]];";
 						name="o_35";
 						isPlayable=1;
 					};
@@ -7984,7 +7984,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 2]];";
+						init="this setVariable [""mf_groupChannel"", [3, 2]];";
 						name="o_36";
 						isPlayable=1;
 					};
@@ -8045,7 +8045,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 2]];";
+						init="this setVariable [""mf_groupChannel"", [3, 2]];";
 						name="o_37";
 						isPlayable=1;
 					};
@@ -8142,7 +8142,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [7, 5]];";
+						init="this setVariable [""mf_groupChannel"", [7, 5]];";
 						name="i_1";
 						description="Command SL";
 						isPlayable=1;
@@ -8204,7 +8204,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [7, 5]];";
+						init="this setVariable [""mf_groupChannel"", [7, 5]];";
 						name="i_2";
 						isPlayable=1;
 					};
@@ -8265,7 +8265,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [7, 5]];";
+						init="this setVariable [""mf_groupChannel"", [7, 5]];";
 						name="i_3";
 						isPlayable=1;
 					};
@@ -8326,7 +8326,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [7, 5]];";
+						init="this setVariable [""mf_groupChannel"", [7, 5]];";
 						name="i_4";
 						isPlayable=1;
 					};
@@ -8423,7 +8423,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 5]];";
 						name="i_5";
 						description="Alpha - SL";
 						isPlayable=1;
@@ -8485,7 +8485,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 5]];";
 						name="i_6";
 						isPlayable=1;
 					};
@@ -8546,7 +8546,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 5]];";
 						name="i_7";
 						isPlayable=1;
 					};
@@ -8607,7 +8607,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 1]];";
+						init="this setVariable [""mf_groupChannel"", [1, 1]];";
 						name="i_8";
 						description="TL1";
 						isPlayable=1;
@@ -8669,7 +8669,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 1]];";
+						init="this setVariable [""mf_groupChannel"", [1, 1]];";
 						name="i_9";
 						isPlayable=1;
 					};
@@ -8730,7 +8730,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 1]];";
+						init="this setVariable [""mf_groupChannel"", [1, 1]];";
 						name="i_10";
 						isPlayable=1;
 					};
@@ -8791,7 +8791,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 1]];";
+						init="this setVariable [""mf_groupChannel"", [1, 1]];";
 						name="i_11";
 						isPlayable=1;
 					};
@@ -8852,7 +8852,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 2]];";
+						init="this setVariable [""mf_groupChannel"", [1, 2]];";
 						name="i_12";
 						description="TL2";
 						isPlayable=1;
@@ -8914,7 +8914,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 2]];";
+						init="this setVariable [""mf_groupChannel"", [1, 2]];";
 						name="i_13";
 						isPlayable=1;
 					};
@@ -8975,7 +8975,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 2]];";
+						init="this setVariable [""mf_groupChannel"", [1, 2]];";
 						name="i_14";
 						isPlayable=1;
 					};
@@ -9036,7 +9036,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [1, 2]];";
+						init="this setVariable [""mf_groupChannel"", [1, 2]];";
 						name="i_15";
 						isPlayable=1;
 					};
@@ -9133,7 +9133,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 5]];";
+						init="this setVariable [""mf_groupChannel"", [2, 5]];";
 						name="i_16";
 						description="Bravo - SL";
 						isPlayable=1;
@@ -9195,7 +9195,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 5]];";
+						init="this setVariable [""mf_groupChannel"", [2, 5]];";
 						name="i_17";
 						isPlayable=1;
 					};
@@ -9256,7 +9256,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 5]];";
+						init="this setVariable [""mf_groupChannel"", [2, 5]];";
 						name="i_18";
 						isPlayable=1;
 					};
@@ -9317,7 +9317,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 1]];";
+						init="this setVariable [""mf_groupChannel"", [2, 1]];";
 						name="i_19";
 						description="TL1";
 						isPlayable=1;
@@ -9379,7 +9379,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 1]];";
+						init="this setVariable [""mf_groupChannel"", [2, 1]];";
 						name="i_20";
 						isPlayable=1;
 					};
@@ -9440,7 +9440,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 1]];";
+						init="this setVariable [""mf_groupChannel"", [2, 1]];";
 						name="i_21";
 						isPlayable=1;
 					};
@@ -9501,7 +9501,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 1]];";
+						init="this setVariable [""mf_groupChannel"", [2, 1]];";
 						name="i_22";
 						isPlayable=1;
 					};
@@ -9562,7 +9562,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 2]];";
+						init="this setVariable [""mf_groupChannel"", [2, 2]];";
 						name="i_23";
 						description="TL2";
 						isPlayable=1;
@@ -9624,7 +9624,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 2]];";
+						init="this setVariable [""mf_groupChannel"", [2, 2]];";
 						name="i_24";
 						isPlayable=1;
 					};
@@ -9685,7 +9685,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 2]];";
+						init="this setVariable [""mf_groupChannel"", [2, 2]];";
 						name="i_25";
 						isPlayable=1;
 					};
@@ -9746,7 +9746,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [2, 2]];";
+						init="this setVariable [""mf_groupChannel"", [2, 2]];";
 						name="i_26";
 						isPlayable=1;
 					};
@@ -9843,7 +9843,7 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 5]];";
+						init="this setVariable [""mf_groupChannel"", [3, 5]];";
 						name="i_27";
 						description="Charlie - SL";
 						isPlayable=1;
@@ -9905,7 +9905,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 5]];";
+						init="this setVariable [""mf_groupChannel"", [3, 5]];";
 						name="i_28";
 						isPlayable=1;
 					};
@@ -9966,7 +9966,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 5]];";
+						init="this setVariable [""mf_groupChannel"", [3, 5]];";
 						name="i_29";
 						isPlayable=1;
 					};
@@ -10027,7 +10027,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 1]];";
+						init="this setVariable [""mf_groupChannel"", [3, 1]];";
 						name="i_30";
 						description="TL1";
 						isPlayable=1;
@@ -10089,7 +10089,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 1]];";
+						init="this setVariable [""mf_groupChannel"", [3, 1]];";
 						name="i_31";
 						isPlayable=1;
 					};
@@ -10150,7 +10150,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 1]];";
+						init="this setVariable [""mf_groupChannel"", [3, 1]];";
 						name="i_32";
 						isPlayable=1;
 					};
@@ -10211,7 +10211,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 1]];";
+						init="this setVariable [""mf_groupChannel"", [3, 1]];";
 						name="i_33";
 						isPlayable=1;
 					};
@@ -10272,7 +10272,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 2]];";
+						init="this setVariable [""mf_groupChannel"", [3, 2]];";
 						name="i_34";
 						description="TL2";
 						isPlayable=1;
@@ -10334,7 +10334,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 2]];";
+						init="this setVariable [""mf_groupChannel"", [3, 2]];";
 						name="i_35";
 						isPlayable=1;
 					};
@@ -10395,7 +10395,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 2]];";
+						init="this setVariable [""mf_groupChannel"", [3, 2]];";
 						name="i_36";
 						isPlayable=1;
 					};
@@ -10456,7 +10456,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""radio_channel"", [3, 2]];";
+						init="this setVariable [""mf_groupChannel"", [3, 2]];";
 						name="i_37";
 						isPlayable=1;
 					};

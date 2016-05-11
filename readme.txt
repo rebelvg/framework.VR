@@ -24,9 +24,9 @@ in onPlayerRespawn.sqf
 
 Framework should not throw ANY script errors. If you see any errors connected to the framework, you're probably doing something wrong, ask rebel.
 
-You need to set radio_channel for all playable units.
+You need to set mf_groupChannel for all playable units.
 Example.
-this setVariable ["radio_channel", [1, 1]];
+this setVariable ["mf_groupChannel", [1, 1]];
 [1, 1] is a special radio array, 1 is a squad, 1 is a team.
 Squads available - 1 to 6, squad 7 is reserved for command network.
 Teams available - 1 to 4, team 5 is reserved for squad command network.

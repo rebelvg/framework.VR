@@ -52,9 +52,9 @@ Fireteam members do not have an alternative channel.<br/><br/>
 so you can re-establish communications if leaders are KIA or missing.
 ", (_radioNetArray select 0) select 7, (_radioNetArray select 7) select 4, (_radioNetArray select 1) select 4, (_radioNetArray select 1) select 0, (_radioNetArray select 1) select 1, (_radioNetArray select 2) select 4, (_radioNetArray select 2) select 0, (_radioNetArray select 2) select 1, (_radioNetArray select 3) select 4, (_radioNetArray select 3) select 0, (_radioNetArray select 3) select 1]]];
 
-_radio_channel = player getVariable ["radio_channel", [6, 4]];
-_channel = _radio_channel select 0;
-_team = _radio_channel select 1;
+_mf_groupChannel = player getVariable ["mf_groupChannel", [6, 4]];
+_channel = _mf_groupChannel select 0;
+_team = _mf_groupChannel select 1;
 
 if (isNil {_radioNetArray select _channel}) exitWith {};
 

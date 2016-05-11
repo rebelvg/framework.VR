@@ -167,10 +167,10 @@ debugLoadout_fnc = {
 
 murshun_assignTeam_fnc = {
 	_unit = _this select 0;
-	_radio_channel = _unit getVariable ["radio_channel", [6, 4]];
+	_mf_groupChannel = _unit getVariable ["mf_groupChannel", [6, 4]];
 
-	_squad = _radio_channel select 0;
-	_team = _radio_channel select 1;
+	_squad = _mf_groupChannel select 0;
+	_team = _mf_groupChannel select 1;
 
 	_teamsArray = ["MAIN", "RED", "GREEN", "BLUE", "YELLOW"];
 

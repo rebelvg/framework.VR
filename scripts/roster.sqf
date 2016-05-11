@@ -225,10 +225,10 @@ case 2:{//only playable units
 			};
 		};
 		
-		_radio_channel = _x getVariable ["radio_channel", [6, 4]];
+		_mf_groupChannel = _x getVariable ["mf_groupChannel", [6, 4]];
 		
-		_squad = _radio_channel select 0;
-		_team = _radio_channel select 1;
+		_squad = _mf_groupChannel select 0;
+		_team = _mf_groupChannel select 1;
 		
 		switch (_team) do {
 		case 1: {
