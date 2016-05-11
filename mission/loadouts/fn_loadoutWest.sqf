@@ -126,7 +126,7 @@ _loadoutArray = [
 		["ACE_CableTie", 30],
 		["ACE_Clacker", 2],
 		["murshun_cigs_matches", 50],
-		["EWK_Cig1", 500],
+		["EWK_Cig1", 200],
 		["SmokeShellBlue", 100],
 		["HandGrenade", 100]
 	] //content for boxes
