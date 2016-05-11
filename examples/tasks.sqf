@@ -46,7 +46,7 @@ waitUntil {
 [WEST, "task_id", ["Task description.", "RTB"], "base_marker", "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-	{_x distance getMarkerPos "base_marker" < 50} count allPlayers > ({!isObjectHidden _x} count allPlayers) * 0.8
+	{_x distance getMarkerPos "base_marker" < 50} count allPlayers >= ({!isObjectHidden _x} count allPlayers) * 0.8 && {_x distance getMarkerPos "base_marker" < 50} count allPlayers > 0
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
