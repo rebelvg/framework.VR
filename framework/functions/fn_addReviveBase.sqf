@@ -23,5 +23,5 @@ _action = ["murshun_framework_reviveEveryone", "Revive Everyone (At This Base)",
 		
 		[] spawn murshun_spectator_reviveAllPlayers_fnc;
 	};
-}, {(tolower gettext (configFile >> "cfgVehicles" >> typeOf player >> "displayName") == "officer") || (tolower gettext (configFile >> "cfgVehicles" >> typeOf player >> "displayName") == "squad leader")}] call ace_interact_menu_fnc_createAction;
+}, {(tolower gettext (configFile >> "CfgVehicles" >> typeOf player >> "displayName") == "officer") || (tolower gettext (configFile >> "CfgVehicles" >> typeOf player >> "displayName") == "squad leader")}] call ace_interact_menu_fnc_createAction;
 [_obj, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;

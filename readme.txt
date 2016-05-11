@@ -60,7 +60,7 @@ So for example your enemies are opfor just create loadoutArray_east and fill it 
 
 Framework now supports respawn integration in a gameplay form.
 All you need is a "base_marker" on the base. As mission maker you can move it after each objective to other places you want.
-If you want to have an object that will respawn players on the base_marker you need to place
+If you want to have an object that will respawn players on near it you need to place
 0 = [this] spawn mf_fnc_addReviveBase;
 in the object's init.
 Only officers and squad leaders will be able to call for respawn.
