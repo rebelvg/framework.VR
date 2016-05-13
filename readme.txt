@@ -16,10 +16,10 @@ Spectator is located inside of our murshun pack. If you want to enable it you mu
 [] execVM "murshun_menu\spectator\init.sqf";
 in init.sqf
 
-[player] execVM "murshun_menu\spectator\onPlayerKilled.sqf";
+[] execVM "murshun_menu\spectator\onPlayerKilled.sqf";
 in onPlayerKilled.sqf
 
-[player] execVM "murshun_menu\spectator\onPlayerRespawn.sqf";
+[] execVM "murshun_menu\spectator\onPlayerRespawn.sqf";
 in onPlayerRespawn.sqf
 
 Framework should not throw ANY script errors. If you see any errors connected to the framework, you're probably doing something wrong, ask rebel.
