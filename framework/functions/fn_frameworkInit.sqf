@@ -160,7 +160,7 @@ mf_disableAI_fnc = {
 
 mf_debugLoadout_fnc = {
 	waitUntil {time > 0};
-	
+
 	{
 		[_x] spawn mf_fnc_giveLoadout;
 		[_x] spawn murshun_assignTeam_fnc;
