@@ -1,7 +1,5 @@
 _obj = _this select 0;
 
-waitUntil {!isNil "murshun_frameworkInit"};
-
 if (isServer) then {
 	_obj allowDamage false;
 };

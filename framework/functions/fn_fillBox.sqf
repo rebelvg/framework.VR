@@ -5,12 +5,13 @@ if (!isServer) exitWith {};
 
 _loadoutArray = [];
 
-waitUntil {!isNil "murshun_frameworkInit"};
 waitUntil {time > 0};
 
 if (isNil "_side") then {
 	_side = side _unit;
 };
+
+_unit setVariable ["tf_side", _side, true];
 
 switch (_side) do {
 case WEST: {

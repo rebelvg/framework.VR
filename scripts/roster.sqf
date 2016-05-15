@@ -59,8 +59,6 @@
 *****************************************************************************************************************************************
 */
 
-waitUntil {!isNil "radioNetArray_west" and !isNil "radioNetArray_east" and !isNil "radioNetArray_guer" and !isNil "radioNetArray_civ"};
-
 _radioNetArray = [];
 
 switch (side player) do {

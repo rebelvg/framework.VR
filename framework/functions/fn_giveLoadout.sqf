@@ -3,8 +3,6 @@ _className = tolower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "di
 
 _loadoutArray = [];
 
-waitUntil {!isNil "murshun_frameworkInit"};
-
 switch (side _unit) do {
 case WEST: {
 		_loadoutArray = call mf_fnc_loadoutWest;

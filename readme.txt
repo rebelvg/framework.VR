@@ -75,7 +75,6 @@ Team roster and radio briefing will reflect all that data.
 
 Recommended settings for TVT missions.
 description.ext - enableDebugConsole = 0;
-init.sqf - murshun_framework_generateRandomFreqs = true;
 Alive Require Module - Disable Admin Actions - Yes.
 Alive Player Options - Max View Distance - 1500.
 Alive Player Options - Min Terrain Grid - 2.

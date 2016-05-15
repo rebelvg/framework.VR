@@ -1,8 +1,8 @@
 waitUntil {!isNil "murshun_frameworkInit"};
 
-[] execVM "scripts\tfarSettings.sqf";
-[player] spawn mf_fnc_giveLoadout;
+[player] call mf_fnc_giveLoadout;
 [player] spawn murshun_assignTeam_fnc;
+[] execVM "scripts\tfarSettings.sqf";
 
 if (time > 0) then {
 	[[[2, false, true], "scripts\roster.sqf"], "BIS_fnc_execVM"] call BIS_fnc_MP;

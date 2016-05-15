@@ -1,5 +1,3 @@
-waitUntil {!isNil "radioNetArray_west" and !isNil "radioNetArray_east" and !isNil "radioNetArray_guer" and !isNil "radioNetArray_civ"};
-
 _radioNetArray = [];
 
 switch (side player) do {
@@ -57,10 +55,6 @@ _channel = _mf_groupChannel select 0;
 _team = _mf_groupChannel select 1;
 
 if (isNil {_radioNetArray select _channel}) exitWith {};
-
-tf_freq_west = [_team - 1,7,radioNetArray_west select _channel,0,"_murshun",-1,0,"_SP_PLAYER_",false];
-tf_freq_east = [_team - 1,7,radioNetArray_east select _channel,0,"_murshun",-1,0,"_SP_PLAYER_",false];
-tf_freq_guer = [_team - 1,7,radioNetArray_guer select _channel,0,"_murshun",-1,0,"_SP_PLAYER_",false];
 
 waitUntil {
 	time > 0 and call TFAR_fnc_haveSWRadio
