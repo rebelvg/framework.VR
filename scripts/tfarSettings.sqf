@@ -1,3 +1,5 @@
+if (!(isClass (configFile >> "CfgPatches" >> "task_force_radio"))) exitWith {};
+
 _radioNetArray = [];
 
 switch (side player) do {
