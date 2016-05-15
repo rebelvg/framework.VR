@@ -76,6 +76,8 @@ so you can re-establish communications if leaders are KIA or missing.",
 	_team = _mf_groupChannel select 1;
 
 	if (isNil {_radioNetArray select _channel}) exitWith {};
+	
+	if ({_x call TFAR_fnc_isPrototypeRadio} count (assignedItems player) == 0) exitWith {};
 
 	waitUntil {
 		time > 0 and call TFAR_fnc_haveSWRadio
@@ -103,13 +105,25 @@ so you can re-establish communications if leaders are KIA or missing.",
 };
 
 [] spawn {
+	if (count (player call TFAR_fnc_backpackLR) == 0) exitWith {};
+	
 	waitUntil {
 		time > 0 and call TFAR_fnc_haveLRRadio
 	};
 	
-	_currentLrRadio = call TFAR_fnc_activeLrRadio;
+	_currentLrRadio = player call TFAR_fnc_backpackLR;
 	
 	_lrSettings = [0,7,["31","32","33","34","35","36","37","38","39","40"],0,"_murshun",-1,0,false];
 	
 	[_currentLrRadio select 0, _currentLrRadio select 1, _lrSettings] call TFAR_fnc_setLrSettings;
 };
+
+player addEventHandler ["GetInMan", {
+	if (count (player call TFAR_fnc_vehicleLr) == 0) exitWith {};
+
+	_currentVehRadio = player call TFAR_fnc_vehicleLr;
+	
+	_lrSettings = [0,7,["31","32","33","34","35","36","37","38","39","40"],0,"_murshun",-1,0,false];
+	
+	[_currentVehRadio select 0, _currentVehRadio select 1, _lrSettings] call TFAR_fnc_setLrSettings;
+}];
