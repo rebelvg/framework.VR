@@ -246,9 +246,7 @@ case 2:{//only playable units
 			};
 		};
 		
-		_team = _team - 1;
-		
-		//_freq = _radioNetArray select _squad select _team;
+		//_freq = _radioNetArray select _squad select (_team - 1);
 
 		//_strFinal =  _strFinal + "<font color="+_strColorGrp+">"+_strGrp+"</font>" + _strRank + "<font color="+_teamColor+">"+name _x+"</font>" + _strRole + " " + "(" + _freq + ")" + "<br/>";
 		

@@ -203,7 +203,7 @@ mf_fnc_dynamicItems = {
 				if (_getItemCargo select 1 select _forEachIndex < 5) then {
 					_box addItemCargoGlobal [_x, 1];
 				};
-			} foreach _itemsArray;
+			} foreach (_getItemCargo select 0);
 		};
 	};	
 };
