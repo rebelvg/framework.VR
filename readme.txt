@@ -24,6 +24,11 @@ in onPlayerRespawn.sqf
 
 Framework should not throw ANY script errors. If you see any errors connected to the framework, you're probably doing something wrong, ask rebel.
 
+Framework settings are located in the mission\fn_settings.sqf
+List of songs and themes for murshun radio.
+https://gist.github.com/rebelvg/a16187f3a7b930fd958b0f0c9db7782f
+If music related arrays are empty, script will use all available songs or themes.
+
 You need to set mf_groupChannel for all playable units.
 Example.
 this setVariable ["mf_groupChannel", [1, 1]];
@@ -81,3 +86,13 @@ Alive Player Options - Min Terrain Grid - 2.
 Ace View Distance Limiter - 1500.
 
 Some examples are located in the examples folder.
+
+ACRE2 and TFAR details.
+Framework now supports both radio systems and is backwards compatible.
+Just leave tfar and acre radios in the loadouts, they will be added only if the respective mod is enabled.
+Missions made for acre will work with tfar if we suddenly decide to switch back.
+To fight some of the acre performance issues, framework removes all items from ai units and boxes.
+And boxes on the base will have infinite number items.
+What I mean by items is stuff like - bandages, earplugs and stuff like that, not mags or weapons or uniforms.
+That's happening because acre scans boxes for radios, and if a box has to many items in it, acre will produce freezes cause it's trying to scan to many items in one frame.
+It's an engine limitation, can't be easily fixed completely atm, acre team is working on a workaround and optimizing.
