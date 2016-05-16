@@ -75,3 +75,9 @@ if (count _loadoutArray == 3) then {
 		};
 	} foreach (_loadoutArray select 0);	
 };
+
+if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
+	if (!isPlayer _unit) then {
+		removeAllItems _unit;
+	};
+};

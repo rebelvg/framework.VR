@@ -11,10 +11,10 @@ weaponsArray = [weaponArray1, handgunArray1];
 eqpArray = [classesArray, [fashionArray, weaponsArray]];
 */
 
-_basicMedicine = [["ACE_elasticBandage", 10], ["ACE_morphine", 4], ["ACE_epinephrine", 2]];
-_advancedMedicine = [["ACE_elasticBandage", 10], ["ACE_quikclot", 10], ["ACE_morphine", 4], ["ACE_epinephrine", 2], ["ACE_atropine", 1], ["ACE_tourniquet", 1]];
-_basicMedicMedicine = [["ACE_elasticBandage", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 6], ["ACE_salineIV_500", 2]];
-_advancedMedicMedicine = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 6], ["ACE_epinephrine", 8], ["ACE_atropine", 4], ["ACE_tourniquet", 4], ["ACE_personalAidKit", 3], ["ACE_salineIV_500", 2]];
+_basicMedicine = [["ACE_elasticBandage", 5], ["ACE_morphine", 2], ["ACE_epinephrine", 2]];
+_advancedMedicine = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 2], ["ACE_epinephrine", 2], ["ACE_atropine", 2], ["ACE_tourniquet", 1]];
+_basicMedicMedicine = [["ACE_elasticBandage", 10], ["ACE_morphine", 3], ["ACE_epinephrine", 3], ["ACE_salineIV_500", 2]];
+_advancedMedicMedicine = [["ACE_elasticBandage", 10], ["ACE_quikclot", 10], ["ACE_morphine", 3], ["ACE_epinephrine", 3], ["ACE_atropine", 3], ["ACE_tourniquet", 2], ["ACE_personalAidKit", 2], ["ACE_salineIV_500", 2]];
 
 _leaderFashionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
 _fashionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
@@ -126,19 +126,19 @@ _loadoutArray = [
 		]
 	], //personal items per class
 	[
-		["ACE_EarPlugs", 50],
-		["ACE_Flashlight_XL50", 50],
+		["ACE_EarPlugs", 20],
+		["ACE_Flashlight_XL50", 20],
 		["ToolKit", 2],
 		["ACE_wirecutter", 2],
-		["ACE_SpareBarrel", 10],
-		["DemoCharge_Remote_Mag", 30],
-		["SatchelCharge_Remote_Mag", 10],
-		["ACE_CableTie", 30],
+		["ACE_SpareBarrel", 4],
+		["DemoCharge_Remote_Mag", 20],
+		["SatchelCharge_Remote_Mag", 4],
+		["ACE_CableTie", 10],
 		["ACE_Clacker", 2],
-		["murshun_cigs_matches", 50],
-		["EWK_Cig1", 200],
+		["EWK_Cig1", 100],
+		["murshun_cigs_matches", 40],	
 		["SmokeShellBlue", 100],
-		["HandGrenade", 100]
+		["HandGrenade", 20]
 	] //content for boxes
 ];
 

@@ -134,7 +134,7 @@ murshun_fillBox_fnc = {
 				{
 					if (count _x == 2) then {
 						if (count (_x select 0) != 0) then {
-							_unit addMagazineCargoGlobal [_x select 0, ceil (50 * _multiplier)];
+							_unit addMagazineCargoGlobal [_x select 0, ceil (40 * _multiplier)];
 						};
 					};
 				} foreach _mags;
@@ -181,6 +181,31 @@ murshun_assignTeam_fnc = {
 	if (_team > 0 and _team < 5) then {
 		[[_unit, _teamsArray select _team], "ace_interaction_fnc_joinTeam"] call BIS_fnc_MP;
 	};
+};
+
+mf_fnc_dynamicItems = {
+	_box = _this select 0;
+	
+	if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {	
+		_itemsArray = (getItemCargo _box) select 0;
+		clearItemCargoGlobal _box;
+		
+		{
+			_box addItemCargoGlobal [_x, 5];
+		} foreach _itemsArray;
+		
+		while {alive _box} do {
+			sleep (1/15);
+			
+			_getItemCargo = getItemCargo _box;
+			
+			{
+				if (_getItemCargo select 1 select _forEachIndex < 5) then {
+					_box addItemCargoGlobal [_x, 1];
+				};
+			} foreach _itemsArray;
+		};
+	};	
 };
 
 radioNetArray_west = [["101", "102", "103", "104", "105", "106", "107", "108"], ["111", "112", "113", "114", "115", "116", "117", "118"], ["121", "122", "123", "124", "125", "126", "127", "128"], ["131", "132", "133", "134", "135", "136", "137", "138"], ["141", "142", "143", "144", "145", "146", "147", "148"], ["151", "152", "153", "154", "155", "156", "157", "158"], ["161", "162", "163", "164", "165", "166", "167", "168"], ["171", "172", "173", "174", "175", "176", "177", "178"]];

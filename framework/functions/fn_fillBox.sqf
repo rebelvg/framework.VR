@@ -1,4 +1,4 @@
-_unit = _this select 0;
+_box = _this select 0;
 _side = _this select 1;
 
 if (!isServer) exitWith {};
@@ -8,10 +8,10 @@ _loadoutArray = [];
 waitUntil {time > 0};
 
 if (isNil "_side") then {
-	_side = side _unit;
+	_side = side _box;
 };
 
-_unit setVariable ["tf_side", _side, true];
+_box setVariable ["tf_side", _side, true];
 
 switch (_side) do {
 case WEST: {
@@ -29,50 +29,52 @@ case CIVILIAN: {
 };
 
 if (!isMultiplayer) then {
-	if (_unit isKindOf "thing") then {
-		_unit addAction ["Virtual Arsenal", {["Open", true] call BIS_fnc_arsenal}];
+	if (_box isKindOf "thing") then {
+		_box addAction ["Virtual Arsenal", {["Open", true] call BIS_fnc_arsenal}];
 	};
 };
+
+clearMagazineCargoGlobal _box;
+clearWeaponCargoGlobal _box;
+clearItemCargoGlobal _box;
+clearBackpackCargoGlobal _box;
 
 if (count _loadoutArray == 3) then {
-	clearMagazineCargoGlobal _unit;
-	clearWeaponCargoGlobal _unit;
-	clearItemCargoGlobal _unit;
-	clearBackpackCargoGlobal _unit;
-
-	if (_unit isKindOf "thing") then {
-		_unit allowDamage false;
+	if (_box isKindOf "thing") then {
+		_box allowDamage false;
 		
-		[_unit, 1] call murshun_fillBox_fnc;
+		[_box, 1] call murshun_fillBox_fnc;
 	} else {
 		if (ace_medical_level > 1) then {
-			_unit addItemCargoGlobal ["ACE_elasticBandage", 100];
-			_unit addItemCargoGlobal ["ACE_quikclot", 100];
-			_unit addItemCargoGlobal ["ACE_morphine", 25];
-			_unit addItemCargoGlobal ["ACE_epinephrine", 25];
-			_unit addItemCargoGlobal ["ACE_atropine", 25];
-			_unit addItemCargoGlobal ["ACE_tourniquet", 10];
-			_unit addItemCargoGlobal ["ACE_personalAidKit", 5];
-			_unit addItemCargoGlobal ["ACE_salineIV_500", 5];
+			_box addItemCargoGlobal ["ACE_elasticBandage", 20];
+			_box addItemCargoGlobal ["ACE_quikclot", 20];
+			_box addItemCargoGlobal ["ACE_morphine", 4];
+			_box addItemCargoGlobal ["ACE_epinephrine", 4];
+			_box addItemCargoGlobal ["ACE_atropine", 4];
+			_box addItemCargoGlobal ["ACE_tourniquet", 2];
+			_box addItemCargoGlobal ["ACE_salineIV_500", 2];
+			_box addItemCargoGlobal ["ACE_personalAidKit", 2];
 		} else {
-			_unit addItemCargoGlobal ["ACE_elasticBandage", 100];
-			_unit addItemCargoGlobal ["ACE_morphine", 25];
-			_unit addItemCargoGlobal ["ACE_epinephrine", 25];
-			_unit addItemCargoGlobal ["ACE_salineIV_500", 5];
+			_box addItemCargoGlobal ["ACE_elasticBandage", 20];
+			_box addItemCargoGlobal ["ACE_morphine", 4];
+			_box addItemCargoGlobal ["ACE_epinephrine", 4];
+			_box addItemCargoGlobal ["ACE_salineIV_500", 2];
 		};
 		
-		[_unit, 1/4] call murshun_fillBox_fnc;
+		[_box, 1/4] call murshun_fillBox_fnc;
 
-		if (_unit isKindOf "car") then {
-			[_unit, 3] call ace_repair_fnc_addSpareParts;
+		if (_box isKindOf "car") then {
+			[_box, 3] call ace_repair_fnc_addSpareParts;
 		};
 
-		if (_unit isKindOf "tank") then {
-			[_unit, 3] call ace_repair_fnc_addSpareParts;
+		if (_box isKindOf "tank") then {
+			[_box, 3] call ace_repair_fnc_addSpareParts;
 		};
 
-		if (_unit isKindOf "air") then {
-			_unit addBackpackCargoGlobal ["B_Parachute", count fullCrew [_unit, "", true]];
+		if (_box isKindOf "air") then {
+			_box addBackpackCargoGlobal ["B_Parachute", count fullCrew [_box, "", true]];
 		};
 	};
 };
+
+[_box] spawn mf_fnc_dynamicItems;

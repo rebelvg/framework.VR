@@ -77,6 +77,11 @@ class Extended_Init_Eventhandlers
 	{
 		shipInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
 	};
+	
+	class ReammoBox_F
+	{
+		boxInit = "_this execVM 'framework\initEvents\boxInit.sqf'";
+	};
 };
 
 class CfgFunctions
@@ -100,6 +105,12 @@ class CfgFunctions
 			class loadoutEast {};
 			class loadoutGuer {};
 			class loadoutCiv {};
+		};
+		
+		class mission
+		{
+			file = "mission";
+			class settings {preInit = 1;};
 		};
 	};
 };

@@ -1,28 +1,30 @@
-_unit = _this select 0;
+_box = _this select 0;
 
 if (!isServer) exitWith {};
 
 waitUntil {time > 0};
 
-clearMagazineCargoGlobal _unit;
-clearWeaponCargoGlobal _unit;
-clearItemCargoGlobal _unit;
-clearBackpackCargoGlobal _unit;
+clearMagazineCargoGlobal _box;
+clearWeaponCargoGlobal _box;
+clearItemCargoGlobal _box;
+clearBackpackCargoGlobal _box;
 
-_unit allowDamage false;
+_box allowDamage false;
 
 if (ace_medical_level > 1) then {
-	_unit addItemCargoGlobal ["ACE_elasticBandage", 500];
-	_unit addItemCargoGlobal ["ACE_quikclot", 500];
-	_unit addItemCargoGlobal ["ACE_morphine", 100];
-	_unit addItemCargoGlobal ["ACE_epinephrine", 100];
-	_unit addItemCargoGlobal ["ACE_atropine", 100];
-	_unit addItemCargoGlobal ["ACE_tourniquet", 50];
-	_unit addItemCargoGlobal ["ACE_salineIV_500", 50];
-	_unit addItemCargoGlobal ["ACE_personalAidKit", 50];
+	_box addItemCargoGlobal ["ACE_elasticBandage", 100];
+	_box addItemCargoGlobal ["ACE_quikclot", 100];
+	_box addItemCargoGlobal ["ACE_morphine", 20];
+	_box addItemCargoGlobal ["ACE_epinephrine", 20];
+	_box addItemCargoGlobal ["ACE_atropine", 20];
+	_box addItemCargoGlobal ["ACE_tourniquet", 10];
+	_box addItemCargoGlobal ["ACE_salineIV_500", 10];
+	_box addItemCargoGlobal ["ACE_personalAidKit", 10];
 } else {
-	_unit addItemCargoGlobal ["ACE_elasticBandage", 500];
-	_unit addItemCargoGlobal ["ACE_morphine", 100];
-	_unit addItemCargoGlobal ["ACE_epinephrine", 100];
-	_unit addItemCargoGlobal ["ACE_salineIV_500", 50];
+	_box addItemCargoGlobal ["ACE_elasticBandage", 100];
+	_box addItemCargoGlobal ["ACE_morphine", 20];
+	_box addItemCargoGlobal ["ACE_epinephrine", 20];
+	_box addItemCargoGlobal ["ACE_salineIV_500", 10];
 };
+
+[_box] spawn mf_fnc_dynamicItems;

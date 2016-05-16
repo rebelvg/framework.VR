@@ -2,12 +2,16 @@ _unit = _this select 0;
 
 if (!isServer) exitWith {};
 
-waitUntil {time > 0};
+if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
+	if (!isPlayer _unit) then {
+		removeAllItems _unit;
+	};
+};
 
-if (isNil "murshun_customEnemyLoadouts") exitWith {};
-
-if (!murshun_customEnemyLoadouts) exitWith {};
-
-if (_unit in (switchableUnits + playableUnits)) exitWith {};
-
-[_unit] call mf_fnc_giveLoadout;
+if (!isNil "murshun_customEnemyLoadouts") then {
+	if (murshun_customEnemyLoadouts) then {
+		if (!(_unit in (switchableUnits + playableUnits))) then {
+			[_unit] call mf_fnc_giveLoadout;
+		};
+	};	
+};
