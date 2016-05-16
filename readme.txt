@@ -93,6 +93,6 @@ Just leave tfar and acre radios in the loadouts, they will be added only if the 
 Missions made for acre will work with tfar if we suddenly decide to switch back.
 To fight some of the acre performance issues, framework removes all items from ai units and boxes.
 And boxes on the base will have infinite number items.
-What I mean by items is stuff like - bandages, earplugs and stuff like that, not mags or weapons or uniforms.
+What I mean by items is stuff like - bandages, earplugs, etc, not mags or weapons or uniforms.
 That's happening because acre scans boxes for radios, and if a box has to many items in it, acre will produce freezes cause it's trying to scan to many items in one frame.
 It's an engine limitation, can't be easily fixed completely atm, acre team is working on a workaround and optimizing.
