@@ -40,7 +40,7 @@ _loadoutArray = [
 			["team leader"],
 			[
 				_fashionArray,
-				[_slRifleArray, _binocularsArray]
+				[_slRifleArray, _handgunArray, _binocularsArray]
 			]
 		],
 		[
@@ -96,12 +96,17 @@ _loadoutArray = [
 	[
 		[
 			["all"],
-			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], ["SmokeShellBlue", 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items
-			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "tf_anprc152", "NVGoggles"] //link items
+			[["ACRE_PRC343", 1], ["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], ["SmokeShellBlue", 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items, acre radios go here
+			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "tf_anprc152", "NVGoggles"] //link items, tfar radios go here
 		],
 		[
-			["officer", "squad leader", "team leader"],
-			[["murshun_cigs_lighter", 1]],
+			["officer", "squad leader"],
+			[["ACRE_PRC152", 1], ["murshun_cigs_lighter", 1]],
+			[]
+		],
+		[
+			["team leader"],
+			[["ACRE_PRC343", 1], ["murshun_cigs_lighter", 1]],
 			[]
 		],
 		[
@@ -112,6 +117,11 @@ _loadoutArray = [
 		[
 			["engineer"],
 			[["ACE_M26_Clacker", 1], ["ACE_DefusalKit", 1]],
+			[]
+		],
+		[
+			["pilot"],
+			[["ACRE_PRC152", 1], ["ACE_M26_Clacker", 1], ["ACE_DefusalKit", 1]],
 			[]
 		]
 	], //personal items per class

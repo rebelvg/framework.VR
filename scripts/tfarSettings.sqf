@@ -19,13 +19,6 @@ case CIVILIAN: {
 
 player createDiarySubject ["radioFrequencies", "Radio Frequencies"];
 
-player createDiaryRecord ["radioFrequencies", ["Long Range Frequencies", format ["<br/>
-<font color='#FFEC00'><font size='20'>COMMAND NET</font></font color> <br/>
-Commander, Squad Leaders, Vehicles  <font color='#FFEC00'>[</font color><font color='#8A8A8A'>Channel 1 - 31</font color><font color='#FFEC00'>]</font color><br/><br/><br/>
-
-Radios are automatically set up for ease of use.<br/>
-<font color='#FFEC00'>[</font color>CAPS<font color='#FFEC00'>]</font color> is bound for inter-group communication."]]];
-
 player createDiaryRecord ["radioFrequencies", ["Short Range Frequencies", format ["<br/>
 <font color='#FFEC00'><font size='20'>COMMAND NET</font></font color> <br/>
 Commander, Squad Leaders, Special  <font color='#FFEC00'>[</font color><font color='#8A8A8A'>Alt Channel - %1</font color><font color='#FFEC00'>]</font color><br/><br/>
@@ -69,6 +62,13 @@ so you can re-establish communications if leaders are KIA or missing.",
 (_radioNetArray select 3) select 4,
 (_radioNetArray select 3) select 0,
 (_radioNetArray select 3) select 1]]];
+
+player createDiaryRecord ["radioFrequencies", ["Long Range Frequencies", format ["<br/>
+<font color='#FFEC00'><font size='20'>COMMAND NET</font></font color> <br/>
+Commander, Squad Leaders, Vehicles  <font color='#FFEC00'>[</font color><font color='#8A8A8A'>Channel 1 - 31</font color><font color='#FFEC00'>]</font color><br/><br/><br/>
+
+Radios are automatically set up for ease of use.<br/>
+<font color='#FFEC00'>[</font color>CAPS<font color='#FFEC00'>]</font color> is bound for inter-group communication."]]];
 
 [_radioNetArray] spawn {
 	params ["_radioNetArray"];
