@@ -186,7 +186,7 @@ murshun_assignTeam_fnc = {
 mf_fnc_dynamicItems = {
 	_box = _this select 0;
 	
-	if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {	
+	if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 		_itemsArray = (getItemCargo _box) select 0;
 		clearItemCargoGlobal _box;
 		
@@ -195,15 +195,21 @@ mf_fnc_dynamicItems = {
 		} foreach _itemsArray;
 		
 		while {alive _box} do {
-			sleep (1/15);
+			sleep (1/10);
 			
 			_getItemCargo = getItemCargo _box;
 			
 			{
-				if (_getItemCargo select 1 select _forEachIndex < 5) then {
-					_box addItemCargoGlobal [_x, 1];
+				if (_x in (_getItemCargo select 0)) then {
+					_index = (_getItemCargo select 0) find _x;
+					
+					if (_getItemCargo select 1 select _index < 5) then {
+						_box addItemCargoGlobal [_x, 1];
+					};
+				} else {
+					_box addItemCargoGlobal [_x, 5];
 				};
-			} foreach (_getItemCargo select 0);
+			} foreach _itemsArray;
 		};
 	};	
 };
