@@ -5,7 +5,7 @@ waitUntil {!isNil "murshun_frameworkInit"};
 [] execVM "scripts\acreSettings.sqf";
 [] execVM "scripts\tfarSettings.sqf";
 
-if (time > 0 or didJIP) then {
+if (didJIP) then {
 	[[[2, false, true], "scripts\roster.sqf"], "BIS_fnc_execVM"] call BIS_fnc_MP;
 } else {
 	[2, false, true] execVM "scripts\roster.sqf";
