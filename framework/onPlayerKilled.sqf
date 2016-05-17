@@ -3,6 +3,8 @@
 	
 	_startTime = time;	
 	while {time < _startTime + 10} do {
+		sleep (1/10);
+		
 		0 fadeSound 0;
 		0 fadeMusic 0;
 		ace_hearing_volumeAttenuation = 0;
