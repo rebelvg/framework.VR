@@ -191,7 +191,7 @@ mf_fnc_dynamicItems = {
 		clearItemCargoGlobal _box;
 		
 		{
-			_box addItemCargoGlobal [_x, 5];
+			_box addItemCargoGlobal [_x, 1];
 		} foreach _itemsArray;
 		
 		while {alive _box} do {
@@ -200,14 +200,8 @@ mf_fnc_dynamicItems = {
 			_getItemCargo = getItemCargo _box;
 			
 			{
-				if (_x in (_getItemCargo select 0)) then {
-					_index = (_getItemCargo select 0) find _x;
-					
-					if (_getItemCargo select 1 select _index < 5) then {
-						_box addItemCargoGlobal [_x, 1];
-					};
-				} else {
-					_box addItemCargoGlobal [_x, 5];
+				if (!(_x in (_getItemCargo select 0))) then {
+					_box addItemCargoGlobal [_x, 1];
 				};
 			} foreach _itemsArray;
 		};

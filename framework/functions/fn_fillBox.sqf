@@ -48,17 +48,8 @@ if (count _loadoutArray == 3) then {
 		if (ace_medical_level > 1) then {
 			_box addItemCargoGlobal ["ACE_elasticBandage", 20];
 			_box addItemCargoGlobal ["ACE_quikclot", 20];
-			_box addItemCargoGlobal ["ACE_morphine", 4];
-			_box addItemCargoGlobal ["ACE_epinephrine", 4];
-			_box addItemCargoGlobal ["ACE_atropine", 4];
-			_box addItemCargoGlobal ["ACE_tourniquet", 2];
-			_box addItemCargoGlobal ["ACE_salineIV_500", 2];
-			_box addItemCargoGlobal ["ACE_personalAidKit", 2];
 		} else {
 			_box addItemCargoGlobal ["ACE_elasticBandage", 20];
-			_box addItemCargoGlobal ["ACE_morphine", 4];
-			_box addItemCargoGlobal ["ACE_epinephrine", 4];
-			_box addItemCargoGlobal ["ACE_salineIV_500", 2];
 		};
 		
 		[_box, 1/4] call murshun_fillBox_fnc;
