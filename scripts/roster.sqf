@@ -83,11 +83,9 @@ private["_includeAI","_rank","_role","_strRank","_strRole","_strGrp","_strColorG
 if(isNil "_this") exitWith {hint "Skippy-Roster Script needs array as parameter"};
 if(typeName _this != "ARRAY") exitWith {hint "Skippy-Roster Script needs array as parameter"};
 
-
 _includeAI 	= 1; //0->only players, 1->both AI and players, 2->playable units only (includes player and some AI)
 _rank 		= true; //true->display unit's rank		false->hide unit's rank
 _role 		= true; //true->display unit's role		false->hide unit's role
-
 
 if(count _this > 0) then {
 	if((typeName (_this select 0)) != "SCALAR") then {
@@ -96,8 +94,7 @@ if(count _this > 0) then {
 		_includeAI = _this select 0;
 	};
 
-	if(count _this > 1) then {
-		
+	if(count _this > 1) then {		
 		if((typeName (_this select 1)) != "BOOL") then {
 			hint "Skippy-Roster - Param2 isn't boolean";
 		} else {
@@ -113,7 +110,6 @@ if(count _this > 0) then {
 		};
 	};
 };
-
 
 _strRank 		= ""; //will contain unit's rank
 _strRole 		= ""; //will contain unit's role
@@ -132,7 +128,7 @@ case 0:{//only players
 			if(isPlayer _x) then {
 				_unitsArr = _unitsArr + [_x];
 			};
-		}forEach allUnits;
+		} forEach allUnits;
 	};
 case 1:{//both AI and players
 		_unitsArr = allUnits;
@@ -149,7 +145,7 @@ case 2:{//only playable units
 	};
 };
 
-{//forEach
+{
 	if(side _x == side player) then {
 		_newGrp = group _x;
 		_strGrp = "";
