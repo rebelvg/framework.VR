@@ -208,6 +208,50 @@ mf_fnc_dynamicItems = {
 	};	
 };
 
+mf_fnc_isUnitPilot = {
+	_unit = _this select 0;
+	
+	if (vehicle _unit == _unit) exitWith {false};
+	
+	_veh = (vehicle _unit);
+	
+	if (!(_veh isKindOf "air")) exitWith {false};
+	
+	_return = false;
+	
+	if (driver _veh == _unit) then {
+		_return = true;
+	};
+	
+	_return
+};
+
+mf_fnc_isUnitCoPilot = {
+	_unit = _this select 0;
+	
+	if (vehicle _unit == _unit) exitWith {false};
+
+	private ["_veh", "_cfg", "_trts", "_return", "_trt"];
+
+	_veh = (vehicle _unit);
+	_cfg = configFile >> "CfgVehicles" >> typeOf (_veh);
+	_trts = _cfg >> "turrets";
+	
+	if (!(_veh isKindOf "air")) exitWith {false};
+
+	_return = false;
+
+	for "_i" from 0 to (count _trts - 1) do {
+		_trt = _trts select _i;
+
+		if (getNumber(_trt >> "isCoPilot") == 1) exitWith {
+			_return = (_veh turretUnit [_i] == _unit);
+		};
+	};
+
+	_return
+};
+
 radioNetArray_west = [["101", "102", "103", "104", "105", "106", "107", "108"], ["111", "112", "113", "114", "115", "116", "117", "118"], ["121", "122", "123", "124", "125", "126", "127", "128"], ["131", "132", "133", "134", "135", "136", "137", "138"], ["141", "142", "143", "144", "145", "146", "147", "148"], ["151", "152", "153", "154", "155", "156", "157", "158"], ["161", "162", "163", "164", "165", "166", "167", "168"], ["171", "172", "173", "174", "175", "176", "177", "178"]];
 
 radioNetArray_east = [["201", "202", "203", "204", "205", "206", "207", "208"], ["211", "212", "213", "214", "215", "216", "217", "218"], ["221", "222", "223", "224", "225", "226", "227", "228"], ["231", "232", "233", "234", "235", "236", "237", "238"], ["241", "242", "243", "244", "245", "246", "247", "248"], ["251", "252", "253", "254", "255", "256", "257", "258"], ["261", "262", "263", "264", "265", "266", "267", "268"], ["271", "272", "273", "274", "275", "276", "277", "278"]];

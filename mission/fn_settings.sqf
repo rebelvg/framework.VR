@@ -13,3 +13,4 @@ murshun_dance_canDance = false;
 
 //framework
 murshun_customEnemyLoadouts = false;
+mf_onlyPilotsCanFly = false;
