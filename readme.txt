@@ -30,6 +30,7 @@ https://gist.github.com/rebelvg/a16187f3a7b930fd958b0f0c9db7782f
 If music related arrays are empty, script will use all available songs or themes.
 
 You need to set mf_groupChannel for all playable units.
+Used for automatic acre2 and tfar configuration.
 Example.
 this setVariable ["mf_groupChannel", [1, 1]];
 [1, 1] is a special radio array, 1 is a squad, 1 is a team.
@@ -37,7 +38,6 @@ Squads available - 1 to 6, squad 7 is reserved for command network.
 Teams available - 1 to 4, team 5 is reserved for squad command network.
 So in total you can have 6 squads with 4 fireteams per squad which is more than enough which can cover up to 96 players (not counting any command players).
 Colors will be applied automatically.
-Modified roster script adds frequencies to the roster.
 
 To enable suicide set murshun_easywayout_canSuicide to true in the init.sqf.
 To disable JIP teleportation set murshun_allowJipTeleporting to false in the inti.sqf (JIP teleportation enabled by default in the murshun_menu pbo).
