@@ -64,13 +64,13 @@ Just set murshun_customEnemyLoadouts to true in the init.sqf and create a loadou
 So for example your enemies are opfor just create loadoutArray_east and fill it accordingly to the standard.
 
 Framework now supports respawn integration in a gameplay form.
-All you need is a "base_marker" on the base. As mission maker you can move it after each objective to other places you want.
 If you want to have an object that will respawn players near it you need to place
 0 = [this] spawn mf_fnc_addReviveBase;
 in the object's init.
 Only officers and squad leaders will be able to call for respawn.
 If you, as mission maker, want to respawn people on the base_marker you can execute
 [] spawn murshun_spectator_reviveAllPlayers_fnc;
+If base_marker is not present, they will respawn on the position they first spawned in.
 in your tasks. Execute only once from the server side.
 
 Framework now supports random generation of radio frequencies for each squad.
