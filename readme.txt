@@ -97,7 +97,7 @@ What I mean by items is stuff like - bandages, earplugs, etc, not mags or weapon
 That's happening because acre scans boxes for radios, and if a box has to many items in it, acre will produce freezes cause it's trying to scan to many items in one frame.
 It's an engine limitation, can't be easily fixed completely atm, acre team is working on a workaround and optimizing.
 
-New option to allow only pilot to control fly helicopters.
+New option to allow only pilot to fly helicopters.
 To enabled it switch mf_onlyPilotsCanFly to true in the fn_settings.sqf
 The way it works it restricts pilot sit for everyone but pilots, but allows for the use of co-pilot sit while restricting taking controls for non-pilots.
 However, it allows to switch sits while flying and allows taking controls while flying, to help during emergency situations.
