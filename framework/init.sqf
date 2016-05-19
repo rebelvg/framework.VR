@@ -35,38 +35,42 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 	[false] call acre_api_fnc_setFullDuplex;
 };
 
-if (!isNil "mf_onlyPilotsCanFly") then {
-	if (mf_onlyPilotsCanFly) then {
-		player addEventHandler ["GetInMan", {
-			_unit = _this select 0;
-			_className = tolower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
-			
-			if ([_unit] call mf_fnc_isUnitPilot) then {
-				if (_className != "pilot") then {
-					unassignVehicle _unit;
-					moveOut _unit;
-					
-					systemChat "Only pilots can fly.";
-				};
-			};
-		}];
-		
-		player addEventHandler ["SeatSwitchedMan", {
-			_unit = _this select 0;
-			_className = tolower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
-			
-			if ([_unit] call mf_fnc_isUnitPilot) then {
-				if (_className != "pilot") then {
-					_veh = _this select 0;
-					
-					if ((getPosATL _veh) select 2 < 5) then {
+[] spawn {
+	waitUntil {!isNull player};
+	
+	if (!isNil "mf_onlyPilotsCanFly") then {
+		if (mf_onlyPilotsCanFly) then {
+			player addEventHandler ["GetInMan", {
+				_unit = _this select 0;
+				_className = tolower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
+				
+				if ([_unit] call mf_fnc_isUnitPilot) then {
+					if (_className != "pilot") then {
 						unassignVehicle _unit;
 						moveOut _unit;
 						
-						systemChat "Can change sits only when flying.";
+						systemChat "Only pilots can fly.";
 					};
 				};
-			};
-		}];
+			}];
+			
+			player addEventHandler ["SeatSwitchedMan", {
+				_unit = _this select 0;
+				_className = tolower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
+				
+				if ([_unit] call mf_fnc_isUnitPilot) then {
+					if (_className != "pilot") then {
+						_veh = _this select 0;
+						
+						if ((getPosATL _veh) select 2 < 5) then {
+							unassignVehicle _unit;
+							moveOut _unit;
+							
+							systemChat "Can change sits only when flying.";
+						};
+					};
+				};
+			}];
+		};
 	};
 };
