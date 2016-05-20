@@ -2,7 +2,7 @@ _vehicle = _this select 0;
 
 [_vehicle] execVM "musicRadio\radioInit.sqf";
 
-if (!isNil "mf_onlyPilotsCanFly") then {
+if (!isNil "mf_onlyPilotsCanFly" && isMultiplayer) then {
 	if (mf_onlyPilotsCanFly) then {
 		if (_vehicle isKindOf "air") then {
 			_vehicle addEventHandler ["ControlsShifted", {

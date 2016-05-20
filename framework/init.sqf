@@ -38,7 +38,7 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 [] spawn {
 	waitUntil {!isNull player};
 	
-	if (!isNil "mf_onlyPilotsCanFly") then {
+	if (!isNil "mf_onlyPilotsCanFly" && isMultiplayer) then {
 		if (mf_onlyPilotsCanFly) then {
 			player addEventHandler ["GetInMan", {
 				_unit = _this select 0;
