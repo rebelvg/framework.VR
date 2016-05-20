@@ -10,6 +10,7 @@ murshun_radioSongs = [];
 murshun_easywayout_canSuicide = false;
 murshun_allowJipTeleporting = true;
 murshun_dance_canDance = false;
+murshun_menu_allowMenu = true;
 
 //framework
 murshun_customEnemyLoadouts = false;
