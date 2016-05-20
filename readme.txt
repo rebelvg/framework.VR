@@ -102,4 +102,4 @@ To enable it switch mf_onlyPilotsCanFly to true in the fn_settings.sqf
 The way it works it restricts pilot sit for everyone but pilots, but allows for the use of co-pilot sit while restricting taking controls for non-pilots.
 However, it allows to switch sits while flying and allows taking controls while flying, to help during emergency situations.
 So basically it just restricts taking off for non-pilots.
-Works only in multiplayer.
+Activates only in multiplayer.
