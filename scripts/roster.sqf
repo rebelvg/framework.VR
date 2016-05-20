@@ -55,27 +55,8 @@
 //
 //
 //
-/*
-*****************************************************************************************************************************************
-*/
-/*
-_radioNetArray = [];
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-switch (side player) do {
-case WEST: {
-		_radioNetArray = radioNetArray_west;
-	};
-case EAST: {
-		_radioNetArray = radioNetArray_east;
-	};
-case RESISTANCE: {
-		_radioNetArray = radioNetArray_guer;
-	};
-case CIVILIAN: {
-		_radioNetArray = radioNetArray_civ;
-	};
-};
-*/
 if (isClass(configFile >> "CfgPatches" >> "skippy_roster")) exitWith {};
 
 private["_includeAI","_rank","_role","_strRank","_strRole","_strGrp","_strColorGrp","_strFinal","_oldGrp","_newGrp","_unitsArr"];
@@ -241,11 +222,7 @@ case 2:{//only playable units
 				_teamColor = "'#FFFFFF'";
 			};
 		};
-		
-		//_freq = _radioNetArray select _squad select (_team - 1);
 
-		//_strFinal =  _strFinal + "<font color="+_strColorGrp+">"+_strGrp+"</font>" + _strRank + "<font color="+_teamColor+">"+name _x+"</font>" + _strRole + " " + "(" + _freq + ")" + "<br/>";
-		
 		_strFinal =  _strFinal + "<font color="+_strColorGrp+">"+_strGrp+"</font>" + _strRank + "<font color="+_teamColor+">"+name _x+"</font>" + _strRole + "<br/>";
 
 		_oldGrp = group _x;
