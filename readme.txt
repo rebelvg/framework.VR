@@ -70,13 +70,8 @@ in the object's init.
 Only officers and squad leaders will be able to call for respawn.
 If you, as mission maker, want to respawn people on the base_marker you can execute
 [] spawn murshun_spectator_reviveAllPlayers_fnc;
-If base_marker is not present, they will respawn on the position they first spawned in.
 in your tasks. Execute only once from the server side.
-
-Framework now supports random generation of radio frequencies for each squad.
-Can be useful for TVTs.
-To enable random frequency generation switch murshun_framework_generateRandomFreqs to true in the init.sqf
-Team roster and radio briefing will reflect all that data.
+If base_marker is not present, they will respawn on the position they first spawned in.
 
 Recommended settings for TVT missions.
 description.ext - enableDebugConsole = 0;
