@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=876;
+		nextID=879;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={590.54791,89.341324,469.38953};
-		dir[]={0.0004904333,-0.68809503,0.72575533};
-		up[]={0.0004651901,0.72551709,0.68821561};
-		aside[]={1.0000707,5.0351878e-007,-0.0006771381};
+		pos[]={609.10699,30,533.85303};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -53,7 +53,9 @@ addons[]=
 	"A3_Characters_F_OPFOR",
 	"A3_Characters_F_INDEP",
 	"ace_viewdistance",
-	"A3_Structures_F_Civ_Accessories"
+	"A3_Structures_F_Civ_Accessories",
+	"ace_refuel",
+	"ace_rearm"
 };
 randomSeed=5706534;
 class ScenarioData
@@ -185,7 +187,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=43;
+		items=45;
 		class Item0
 		{
 			dataType="Marker";
@@ -10621,6 +10623,72 @@ class Mission
 								};
 							};
 							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item43
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={529.27118,5,549.69019};
+			};
+			id=876;
+			type="ACE_moduleRefuelSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleRefuelSettings_rate";
+					expression="_this setVariable ['rate',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item44
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={529.37128,5,558.01434};
+			};
+			id=878;
+			type="ACE_moduleRearmSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ACE_moduleRearmSettings_level";
+					expression="_this setVariable ['level',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
 						};
 					};
 				};
