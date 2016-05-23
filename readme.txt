@@ -5,7 +5,7 @@ Latest ARMA 3.
 CBA.
 ACE3.
 ALIVE.
-TFAR.
+TFAR or ACRE2.
 DAC.
 Spectator, Jip teleporting script, Cigs and Suicide script are located in the murshun mod pack. All are completely optional.
 

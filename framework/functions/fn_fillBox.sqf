@@ -11,8 +11,6 @@ if (isNil "_side") then {
 	_side = side _box;
 };
 
-_box setVariable ["tf_side", _side, true];
-
 switch (_side) do {
 case WEST: {
 		_loadoutArray = call mf_fnc_loadoutWest;
@@ -45,6 +43,8 @@ if (count _loadoutArray == 3) then {
 		
 		[_box, 1] call murshun_fillBox_fnc;
 	} else {
+		_box setVariable ["tf_side", _side, true];
+		
 		if (ace_medical_level > 1) then {
 			_box addItemCargoGlobal ["ACE_elasticBandage", 20];
 			_box addItemCargoGlobal ["ACE_quikclot", 20];

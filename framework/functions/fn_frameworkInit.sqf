@@ -70,7 +70,7 @@ murshun_giveWeapon_fnc = {
 					};
 				};
 			};
-		} foreach _mags;
+		} forEach _mags;
 		
 		{
 			if (count _x == 2) then {
@@ -78,7 +78,7 @@ murshun_giveWeapon_fnc = {
 					_unit addMagazines _x;
 				};
 			};
-		} foreach _mags;
+		} forEach _mags;
 
 		{
 			if (count _x != 0) then {
@@ -92,7 +92,7 @@ murshun_giveWeapon_fnc = {
 					_unit addSecondaryWeaponItem _x;
 				};
 			};
-		} foreach _devices;
+		} forEach _devices;
 	};
 };
 
@@ -106,7 +106,7 @@ murshun_giveItems_fnc = {
 				for "_i" from 1 to (_x select 1) do {_unit addItem (_x select 0)};
 			};
 		};
-	} foreach _array;
+	} forEach _array;
 };
 
 murshun_giveLinkItems = {
@@ -117,7 +117,7 @@ murshun_giveLinkItems = {
 		if (count _x != 0) then {
 			_unit linkItem _x;
 		};
-	} foreach _array;
+	} forEach _array;
 };
 
 murshun_fillBox_fnc = {
@@ -137,11 +137,11 @@ murshun_fillBox_fnc = {
 							_unit addMagazineCargoGlobal [_x select 0, ceil (40 * _multiplier)];
 						};
 					};
-				} foreach _mags;
+				} forEach _mags;
 			};
-		} foreach _weaponsArray;
+		} forEach _weaponsArray;
 
-	} foreach (_loadoutArray select 0);
+	} forEach (_loadoutArray select 0);
 
 	{
 		if (count _x == 2) then {
@@ -149,13 +149,13 @@ murshun_fillBox_fnc = {
 				_unit addItemCargoGlobal [_x select 0, ceil ((_x select 1) * _multiplier)];
 			};
 		};
-	} foreach (_loadoutArray select 2);
+	} forEach (_loadoutArray select 2);
 };
 
 mf_disableAI_fnc = {
 	{
 		_x disableAI "ANIM";
-	} foreach (switchableUnits - [player]);
+	} forEach (switchableUnits - [player]);
 };
 
 mf_debugLoadout_fnc = {
@@ -164,7 +164,7 @@ mf_debugLoadout_fnc = {
 	{
 		[_x] call mf_fnc_giveLoadout;
 		[_x] spawn murshun_assignTeam_fnc;
-	} foreach (switchableUnits - [player]);
+	} forEach (switchableUnits - [player]);
 };
 
 murshun_assignTeam_fnc = {
@@ -192,7 +192,7 @@ mf_fnc_dynamicItems = {
 		
 		{
 			_box addItemCargoGlobal [_x, 1];
-		} foreach _itemsArray;
+		} forEach _itemsArray;
 		
 		while {alive _box} do {
 			sleep (1/10);
@@ -203,7 +203,7 @@ mf_fnc_dynamicItems = {
 				if (!(_x in (_getItemCargo select 0))) then {
 					_box addItemCargoGlobal [_x, 1];
 				};
-			} foreach _itemsArray;
+			} forEach _itemsArray;
 		};
 	};	
 };
