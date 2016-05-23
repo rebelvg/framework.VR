@@ -188,10 +188,13 @@ mf_fnc_dynamicItems = {
 	
 	if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 		_itemsArray = (getItemCargo _box) select 0;
+		
 		clearItemCargoGlobal _box;
 		
+		if (count _itemsArray == 0) exitWith {};
+		
 		{
-			_box addItemCargoGlobal [_x, 1];
+			_box addItemCargoGlobal [_x, 3];
 		} forEach _itemsArray;
 		
 		while {alive _box} do {
@@ -200,10 +203,16 @@ mf_fnc_dynamicItems = {
 			_getItemCargo = getItemCargo _box;
 			
 			{
-				if (!(_x in (_getItemCargo select 0))) then {
-					_box addItemCargoGlobal [_x, 1];
+				if (_x in (_getItemCargo select 0)) then {
+					_index = (_getItemCargo select 0) find _x;
+					
+					if (_getItemCargo select 1 select _index < 3) then {
+						_box addItemCargoGlobal [_x, 1];
+					};
+				} else {
+					_box addItemCargoGlobal [_x, 3];
 				};
-			} forEach _itemsArray;
+			} foreach _itemsArray;
 		};
 	};	
 };

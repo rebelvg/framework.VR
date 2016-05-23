@@ -285,8 +285,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={517.24591,5,566.88177};
-				angles[]={0,6.2732205,0};
+				position[]={517.24597,5,566.88202};
+				angles[]={0,6.2732191,0};
 			};
 			id=13;
 			type="ACE_ModuleRespawn";
@@ -326,7 +326,7 @@ class Mission
 									"BOOL"
 								};
 							};
-							value=1;
+							value=0;
 						};
 					};
 				};

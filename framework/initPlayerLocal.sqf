@@ -1,8 +1,6 @@
 waitUntil {!isNil "murshun_frameworkInit"};
 
-[player] call mf_fnc_giveLoadout;
 [player] spawn murshun_assignTeam_fnc;
-[] execVM "scripts\acreSettings.sqf";
 [] execVM "scripts\tfarSettings.sqf";
 
 if (didJIP) then {

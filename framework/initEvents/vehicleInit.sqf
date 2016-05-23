@@ -28,6 +28,7 @@ if (!isNil "mf_onlyPilotsCanFly" && isMultiplayer) then {
 
 if (!isServer) exitWith {};
 
-if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
-	clearItemCargoGlobal _vehicle;
-};
+clearMagazineCargoGlobal _vehicle;
+clearWeaponCargoGlobal _vehicle;
+clearItemCargoGlobal _vehicle;
+clearBackpackCargoGlobal _vehicle;
