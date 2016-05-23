@@ -1,7 +1,15 @@
 waitUntil {!isNil "murshun_frameworkInit"};
 
+if (!(isClass (configFile >> "CfgPatches" >> "acre_main"))) then {
+	[player] call mf_fnc_giveLoadout;
+	[] execVM "scripts\tfarSettings.sqf";
+	
+	ace_respawn_SavePreDeathGear = true;
+} else {
+	ace_respawn_SavePreDeathGear = false;
+};
+
 [player] spawn murshun_assignTeam_fnc;
-[] execVM "scripts\tfarSettings.sqf";
 
 if (didJIP) then {
 	[[[2, false, true], "scripts\roster.sqf"], "BIS_fnc_execVM"] call BIS_fnc_MP;
