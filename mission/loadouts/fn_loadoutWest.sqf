@@ -13,6 +13,7 @@ eqpArray = [classesArray, [fashionArray, weaponsArray]];
 
 _basicMedicine = [["ACE_elasticBandage", 5], ["ACE_morphine", 2], ["ACE_epinephrine", 2]];
 _advancedMedicine = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 2], ["ACE_epinephrine", 2], ["ACE_atropine", 2], ["ACE_tourniquet", 1]];
+
 _basicMedicMedicine = [["ACE_elasticBandage", 10], ["ACE_morphine", 3], ["ACE_epinephrine", 3], ["ACE_salineIV_500", 2]];
 _advancedMedicMedicine = [["ACE_elasticBandage", 10], ["ACE_quikclot", 10], ["ACE_morphine", 3], ["ACE_epinephrine", 3], ["ACE_atropine", 3], ["ACE_tourniquet", 2], ["ACE_personalAidKit", 2], ["ACE_salineIV_500", 2]];
 
@@ -23,10 +24,18 @@ _pilotFashionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_m
 _slRifleArray = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]];
 _rifleArray = ["arifle_MX_F", [["30Rnd_65x39_caseless_mag", 7]], []];
 _mgArray = ["arifle_MX_SW_F", [["100Rnd_65x39_caseless_mag_Tracer", 7]], ["bipod_01_F_snd"]];
+_glRifleArray = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], []];
+
 _handgunArray = ["hgun_P07_F", [["16Rnd_9x21_Mag", 3]], []];
+
 _atLauncherArray = ["launch_NLAW_F", [], []];
-_msLauncherArray = ["launch_B_Titan_short_F", [["Titan_AT", 3]], []];
+_msATLauncherArray = ["launch_B_Titan_short_F", [["Titan_AT", 3]], []];
+_msAALauncherArray = ["launch_B_Titan_F", [["Titan_AA", 3]], []];
+
 _binocularsArray = ["Laserdesignator", [], []];
+
+_smokeGrenade = "SmokeShellBlue";
+_fragGrenade = "HandGrenade";
 
 _loadoutArray = [
 	[
@@ -69,7 +78,7 @@ _loadoutArray = [
 			["missile specialist (at)"],
 			[
 				_fashionArray,
-				[_rifleArray, _msLauncherArray]
+				[_rifleArray, _msATLauncherArray]
 			]
 		],
 		[
@@ -92,12 +101,26 @@ _loadoutArray = [
 				_pilotFashionArray,
 				[_handgunArray]
 			]
+		],
+		[
+			["grenadier"],
+			[
+				_fashionArray,
+				[_glRifleArray]
+			]
+		],
+		[
+			["missile specialist (aa)"],
+			[
+				_fashionArray,
+				[_rifleArray, _msAALauncherArray]
+			]
 		]
 	], //equipment per class
 	[
 		[
 			["all"],
-			[["ACRE_PRC343", 1], ["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], ["SmokeShellBlue", 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items, acre radios go here
+			[["ACRE_PRC343", 1], ["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_smokeGrenade, 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items, acre radios go here
 			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "tf_anprc152", "NVGoggles"] //link items, tfar radios go here
 		],
 		[
@@ -138,8 +161,8 @@ _loadoutArray = [
 		["ACE_Clacker", 2],
 		["EWK_Cig1", 100],
 		["murshun_cigs_matches", 40],	
-		["SmokeShellBlue", 100],
-		["HandGrenade", 20]
+		[_smokeGrenade, 100],
+		[_fragGrenade, 20]
 	] //content for boxes
 ];
 

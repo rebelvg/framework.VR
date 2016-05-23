@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=879;
+		nextID=921;
 	};
 	class MarkerIDProvider
 	{
@@ -187,7 +187,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=45;
+		items=48;
 		class Item0
 		{
 			dataType="Marker";
@@ -4085,7 +4085,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=628;
-					type="B_soldier_AT_F";
+					type="B_Soldier_GL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -4802,7 +4802,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=692;
-					type="B_soldier_AT_F";
+					type="B_Soldier_GL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5519,7 +5519,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=704;
-					type="B_soldier_AT_F";
+					type="B_Soldier_GL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -6511,7 +6511,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=721;
-					type="O_Soldier_AT_F";
+					type="O_Soldier_GL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -7221,7 +7221,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=749;
-					type="O_Soldier_AT_F";
+					type="O_Soldier_GL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -7931,7 +7931,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=761;
-					type="O_Soldier_AT_F";
+					type="O_Soldier_GL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8923,7 +8923,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=812;
-					type="I_Soldier_AT_F";
+					type="I_Soldier_GL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9633,7 +9633,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=837;
-					type="I_Soldier_AT_F";
+					type="I_Soldier_GL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10343,7 +10343,7 @@ class Mission
 						isPlayable=1;
 					};
 					id=849;
-					type="I_Soldier_AT_F";
+					type="I_Soldier_GL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10689,6 +10689,853 @@ class Mission
 								};
 							};
 							value=1;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item45
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={608.89697,5.0014391,536.95197};
+						angles[]={0,0.0022863813,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						name="b_38";
+						description="Special Weapons - SL";
+						isPlayable=1;
+					};
+					id=889;
+					type="B_Soldier_SL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={606.87299,5.0014391,534.836};
+						angles[]={0,0.0022863813,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						name="b_39";
+						isPlayable=1;
+					};
+					id=896;
+					type="B_soldier_AA_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={609.06,5.0014391,534.80096};
+						angles[]={0,0.0022863813,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						name="b_40";
+						isPlayable=1;
+					};
+					id=897;
+					type="B_soldier_AT_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={611.17499,5.0014391,534.80096};
+						angles[]={0,0.0022863813,0};
+					};
+					side="West";
+					flags=4;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						name="b_41";
+						isPlayable=1;
+					};
+					id=898;
+					type="B_soldier_AR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=888;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Special Weapons BLUFOR";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item46
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={576.98297,5.0014391,536.93701};
+						angles[]={0,0.0080983276,0};
+					};
+					side="East";
+					flags=6;
+					class Attributes
+					{
+						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						name="o_38";
+						description="Special Weapons - SL";
+						isPlayable=1;
+					};
+					id=907;
+					type="O_Soldier_SL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={574.78699,5.0014391,534.88196};
+						angles[]={0,0.0080983276,0};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						name="o_39";
+						isPlayable=1;
+					};
+					id=908;
+					type="O_Soldier_AA_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={577.08484,5.0014391,534.78387};
+						angles[]={0,0.0080983276,0};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						name="o_40";
+						isPlayable=1;
+					};
+					id=904;
+					type="O_Soldier_AT_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={579.15503,5.0014391,534.862};
+						angles[]={0,0.0080983276,0};
+					};
+					side="East";
+					flags=4;
+					class Attributes
+					{
+						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						name="o_41";
+						isPlayable=1;
+					};
+					id=909;
+					type="O_Soldier_AR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=899;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Special Weapons OPFOR";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item47
+		{
+			dataType="Group";
+			side="Independent";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={640.979,5.0014391,536.823};
+						angles[]={0,6.2773557,0};
+					};
+					side="Independent";
+					flags=6;
+					class Attributes
+					{
+						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						name="i_38";
+						description="Special Weapons - SL";
+						isPlayable=1;
+					};
+					id=918;
+					type="I_Soldier_SL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={638.84497,5.0014391,534.98102};
+						angles[]={0,6.2773557,0};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						name="i_39";
+						isPlayable=1;
+					};
+					id=919;
+					type="I_Soldier_AA_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={641.13245,5.0014391,534.84271};
+						angles[]={0,6.2773557,0};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						name="i_40";
+						isPlayable=1;
+					};
+					id=915;
+					type="I_Soldier_AT_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={643.07001,5.0014391,534.88196};
+						angles[]={0,6.2773557,0};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						name="i_41";
+						isPlayable=1;
+					};
+					id=920;
+					type="I_Soldier_AR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=910;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="_this setGroupID [_value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Special Weapons GUER";
 						};
 					};
 				};
