@@ -23,7 +23,7 @@ class EditorData
 		pos[]={609.10699,30,533.85303};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -2663,8 +2663,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={615.26001,5.8758397,585.31201};
-				angles[]={0,0.21022491,0};
+				position[]={615.29791,5.8754315,585.39978};
+				angles[]={0,0.17879456,0};
 			};
 			side="Empty";
 			flags=4;
@@ -2674,7 +2674,6 @@ class Mission
 			};
 			id=197;
 			type="Land_DataTerminal_01_F";
-			atlOffset=0.00040817261;
 			class CustomAttributes
 			{
 				class Attribute0
