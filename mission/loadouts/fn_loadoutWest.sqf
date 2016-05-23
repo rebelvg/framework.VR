@@ -17,22 +17,23 @@ _advancedMedicine = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morph
 _basicMedicMedicine = [["ACE_elasticBandage", 10], ["ACE_morphine", 3], ["ACE_epinephrine", 3], ["ACE_salineIV_500", 2]];
 _advancedMedicMedicine = [["ACE_elasticBandage", 10], ["ACE_quikclot", 10], ["ACE_morphine", 3], ["ACE_epinephrine", 3], ["ACE_atropine", 3], ["ACE_tourniquet", 2], ["ACE_personalAidKit", 2], ["ACE_salineIV_500", 2]];
 
-_leaderFashionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
-_fashionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
-_pilotFashionArray = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_Parachute", ""];
+_leaderFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
+_riflemanFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
+_pilotFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_Parachute", ""];
 
-_slRifleArray = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]];
-_rifleArray = ["arifle_MX_F", [["30Rnd_65x39_caseless_mag", 7]], []];
-_mgArray = ["arifle_MX_SW_F", [["100Rnd_65x39_caseless_mag_Tracer", 7]], ["bipod_01_F_snd"]];
-_glRifleArray = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], []];
+_leaderWeapon = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], ["optic_Aco"]];
+_riflemanWeapon = ["arifle_MX_F", [["30Rnd_65x39_caseless_mag", 7]], []];
+_mgWeapon = ["arifle_MX_SW_F", [["100Rnd_65x39_caseless_mag_Tracer", 7]], ["bipod_01_F_snd"]];
+_grenadierWeapon = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], []];
 
-_handgunArray = ["hgun_P07_F", [["16Rnd_9x21_Mag", 3]], []];
+_leaderHandgun = ["hgun_P07_F", [["16Rnd_9x21_Mag", 3]], []];
+_pilotHandgun = ["hgun_P07_F", [["16Rnd_9x21_Mag", 3]], []];
 
-_atLauncherArray = ["launch_NLAW_F", [], []];
-_msATLauncherArray = ["launch_B_Titan_short_F", [["Titan_AT", 3]], []];
-_msAALauncherArray = ["launch_B_Titan_F", [["Titan_AA", 3]], []];
+_riflemanAT = ["launch_NLAW_F", [], []];
+_specialistAT = ["launch_B_Titan_short_F", [["Titan_AT", 3]], []];
+_specialistAA = ["launch_B_Titan_F", [["Titan_AA", 3]], []];
 
-_binocularsArray = ["Laserdesignator", [], []];
+_binoculars = ["Laserdesignator", [], []];
 
 _smokeGrenade = "SmokeShellBlue";
 _fragGrenade = "HandGrenade";
@@ -42,78 +43,78 @@ _loadoutArray = [
 		[
 			["officer", "squad leader"],
 			[
-				_leaderFashionArray,
-				[_slRifleArray, _handgunArray, _binocularsArray]
+				_leaderFashion,
+				[_leaderWeapon, _leaderHandgun, _binoculars]
 			]
 		],
 		[
 			["team leader"],
 			[
-				_fashionArray,
-				[_slRifleArray, _handgunArray, _binocularsArray]
+				_riflemanFashion,
+				[_leaderWeapon, _leaderHandgun, _binoculars]
 			]
 		],
 		[
 			["rifleman"],
 			[
-				_fashionArray,
-				[_rifleArray]
+				_riflemanFashion,
+				[_riflemanWeapon]
 			]
 		],
 		[
 			["autorifleman"],
 			[
-				_fashionArray,
-				[_mgArray]
+				_riflemanFashion,
+				[_mgWeapon]
 			]
 		],
 		[
 			["rifleman (at)"],
 			[
-				_fashionArray,
-				[_rifleArray, _atLauncherArray]
+				_riflemanFashion,
+				[_riflemanWeapon, _riflemanAT]
 			]
 		],
 		[
 			["missile specialist (at)"],
 			[
-				_fashionArray,
-				[_rifleArray, _msATLauncherArray]
+				_riflemanFashion,
+				[_riflemanWeapon, _specialistAT]
 			]
 		],
 		[
 			["combat life saver"],
 			[
-				_fashionArray,
-				[_rifleArray]
+				_riflemanFashion,
+				[_riflemanWeapon]
 			]
 		],
 		[
 			["engineer"],
 			[
-				_fashionArray,
-				[_rifleArray]
+				_riflemanFashion,
+				[_riflemanWeapon]
 			]
 		],
 		[
 			["pilot"],
 			[
-				_pilotFashionArray,
-				[_handgunArray]
+				_pilotFashion,
+				[_pilotHandgun]
 			]
 		],
 		[
 			["grenadier"],
 			[
-				_fashionArray,
-				[_glRifleArray]
+				_riflemanFashion,
+				[_grenadierWeapon]
 			]
 		],
 		[
 			["missile specialist (aa)"],
 			[
-				_fashionArray,
-				[_rifleArray, _msAALauncherArray]
+				_riflemanFashion,
+				[_riflemanWeapon, _specialistAA]
 			]
 		]
 	], //equipment per class
