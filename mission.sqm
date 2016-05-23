@@ -191,7 +191,7 @@ class Mission
 		class Item0
 		{
 			dataType="Marker";
-			position[]={608.50726,5,578.18604};
+			position[]={609.67908,5,580.52979};
 			name="base_marker";
 			text="BASE";
 			type="mil_start";
