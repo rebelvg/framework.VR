@@ -23,7 +23,7 @@ class EditorData
 		pos[]={609.10699,30,533.85303};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -195,7 +195,6 @@ class Mission
 			name="base_marker";
 			text="BASE";
 			type="mil_start";
-			angle=359.84122;
 			id=1;
 		};
 		class Item1
