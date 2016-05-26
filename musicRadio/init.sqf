@@ -79,9 +79,13 @@ if (isNil "murshun_timeStarted") then {
 	murshun_timeStarted = 0;
 };
 
-player addEventHandler ["Respawn", {
-	playMusic "";
-}];
+[] spawn {
+	waitUntil {!isNull player};
+	
+	player addEventHandler ["Respawn", {
+		playMusic "";
+	}];
+};
 
 murshun_radioInit = true;
 
