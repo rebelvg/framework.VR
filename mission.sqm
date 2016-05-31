@@ -29,6 +29,7 @@ class EditorData
 binarizationWanted=0;
 addons[]=
 {
+	"A3_Ui_F",
 	"A3_Soft_F_Offroad_01",
 	"ace_respawn",
 	"alive_main",
@@ -48,14 +49,177 @@ addons[]=
 	"A3_Supplies_F_Heli_CargoNets",
 	"ace_common",
 	"ace_weather",
-	"A3_Characters_F_BLUFOR",
-	"a3_characters_f",
-	"A3_Characters_F_OPFOR",
-	"A3_Characters_F_INDEP",
+	"A3_Characters_F",
+	"ace_gforces",
+	"ACE_Parachute",
+	"ace_explosives",
 	"ace_viewdistance",
 	"A3_Structures_F_Civ_Accessories",
 	"ace_refuel",
 	"ace_rearm"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=28;
+		class Item0
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Soft_F";
+			name="Arma 3 Alpha - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item2
+		{
+			className="ace_respawn";
+			name="ace_respawn";
+		};
+		class Item3
+		{
+			className="ALiVE_main";
+			name="alive_main";
+		};
+		class Item4
+		{
+			className="ALiVE_SYS_LOGISTICS";
+			name="alive_sys_logistics";
+		};
+		class Item5
+		{
+			className="ace_captives";
+			name="ace_captives";
+		};
+		class Item6
+		{
+			className="ace_hearing";
+			name="ace_hearing";
+		};
+		class Item7
+		{
+			className="ace_medical";
+			name="ace_medical";
+		};
+		class Item8
+		{
+			className="ace_repair";
+			name="ace_repair";
+		};
+		class Item9
+		{
+			className="DAC_Source";
+			name="DAC_Source.pbo";
+		};
+		class Item10
+		{
+			className="ALiVE_SYS_playeroptions";
+			name="alive_sys_playeroptions";
+		};
+		class Item11
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted features";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item12
+		{
+			className="ace_sitting";
+			name="ace_sitting";
+		};
+		class Item13
+		{
+			className="ace_finger";
+			name="ace_finger";
+		};
+		class Item14
+		{
+			className="ace_optionsmenu";
+			name="ace_optionsmenu";
+		};
+		class Item15
+		{
+			className="A3_Structures_F_EPA";
+			name="Arma 3 Survive Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item16
+		{
+			className="A3_Props_F_Exp_A";
+			name="Arma 3 Nexus Update - Decorative and mission objects";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item17
+		{
+			className="A3_Supplies_F_Heli";
+			name="Arma 3 Helicopters - Ammoboxes and supplies";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item18
+		{
+			className="ace_common";
+			name="ace_common";
+		};
+		class Item19
+		{
+			className="ace_weather";
+			name="ace_weather";
+		};
+		class Item20
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item21
+		{
+			className="ace_gforces";
+			name="ace_gforces";
+		};
+		class Item22
+		{
+			className="ACE_Parachute";
+			name="ACE_Parachute";
+		};
+		class Item23
+		{
+			className="ace_explosives";
+			name="ace_explosives";
+		};
+		class Item24
+		{
+			className="ace_viewdistance";
+			name="ace_viewdistance";
+		};
+		class Item25
+		{
+			className="A3_Structures_F";
+			name="Arma 3 Alpha - Buildings and structures";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
+		class Item26
+		{
+			className="ace_refuel";
+			name="ace_refuel";
+		};
+		class Item27
+		{
+			className="ace_rearm";
+			name="ace_rearm";
+		};
+	};
 };
 randomSeed=5706534;
 class ScenarioData
