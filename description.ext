@@ -97,6 +97,7 @@ class CfgFunctions
 			class fillBox {};
 			class fillBoxMedical {};
 			class addReviveBase {};
+			class addParadropBase {};
 		};
 		
 		class loadouts

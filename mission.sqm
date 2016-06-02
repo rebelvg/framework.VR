@@ -2826,17 +2826,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={615.29791,5.8754315,585.39978};
-				angles[]={0,0.17879456,0};
+				position[]={615.29797,5.8758397,585.40002};
+				angles[]={0,0.17879154,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this] spawn mf_fnc_addReviveBase;";
+				init="0 = [this] spawn mf_fnc_addReviveBase; 0 = [this] spawn mf_fnc_addParadropBase;";
 			};
 			id=197;
 			type="Land_DataTerminal_01_F";
+			atlOffset=0.00040817261;
 			class CustomAttributes
 			{
 				class Attribute0
