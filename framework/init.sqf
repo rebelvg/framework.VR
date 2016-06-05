@@ -82,7 +82,11 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 [] spawn {
 	waitUntil {!isNull player};
 
+	if (isNil "base_marker") then {
+		createMarkerLocal ["base_marker", getPos player];
+	};
+
 	if (isNil "respawn") then {
-		createMarkerLocal ["respawn", getPos player];
+		createMarkerLocal ["respawn", getMarkerPos "base_marker"];
 	};
 };
