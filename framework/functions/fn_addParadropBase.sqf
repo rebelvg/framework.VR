@@ -8,7 +8,7 @@ _action = ["murshun_framework_reviveEveryone", "Paradrop To Your Group", "", {
 	_this spawn {
 		_player = _this select 1;
 		
-		_groupUnitsFar = units (group _player) select {_x distance2d _player > 100};
+		_groupUnitsFar = units (group _player) select {_x distance2d _player > 100 && !isObjectHidden _x};
 		
 		if (count _groupUnitsFar > 0) then {
 			_dropPos = getPosATL selectRandom _groupUnitsFar;
