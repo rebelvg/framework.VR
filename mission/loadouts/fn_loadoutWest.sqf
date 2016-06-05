@@ -131,7 +131,7 @@ _loadoutArray = [
 		],
 		[
 			["team leader"],
-			[["ACRE_PRC343", 1], ["murshun_cigs_lighter", 1]],
+			[["ACRE_PRC148", 1], ["murshun_cigs_lighter", 1]],
 			[]
 		],
 		[
