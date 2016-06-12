@@ -86,11 +86,13 @@ class AddonsMetaData
 		{
 			className="ALiVE_main";
 			name="alive_main";
+			author="ALiVE Mod Team";
 		};
 		class Item4
 		{
 			className="ALiVE_SYS_LOGISTICS";
 			name="alive_sys_logistics";
+			author="ALiVE Mod Team";
 		};
 		class Item5
 		{
@@ -121,6 +123,7 @@ class AddonsMetaData
 		{
 			className="ALiVE_SYS_playeroptions";
 			name="alive_sys_playeroptions";
+			author="ALiVE Mod Team";
 		};
 		class Item11
 		{

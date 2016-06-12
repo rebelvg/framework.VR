@@ -9,17 +9,6 @@ author="Murshun";
 loadScreen =  "logo.paa";
 overviewPicture = "logo.paa";
 
-showHUD[] = {
-	true,	// Scripted HUD (same as showHUD command)
-	true,	// Vehicle + soldier info
-	false,	// Vehicle radar
-	false,	// Vehicle compass
-	false,	// Tank direction indicator
-	false,	// Commanding menu
-	false,	// Group Bar
-	true	// HUD Weapon Cursors
-};
-
 class CfgTaskEnhancements
 {
 	enable       = 1;

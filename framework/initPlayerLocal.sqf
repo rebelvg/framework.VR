@@ -17,6 +17,19 @@ if (didJIP) then {
 	[2, false, true] execVM "scripts\roster.sqf";
 };
 
+[] spawn {
+	while {true} do {
+		_showHUD = [true,true,false,false,false,false,false,true];
+
+		_currentShowHUD = shownHUD;
+		if (!(_currentShowHUD isEqualTo _showHUD)) then {
+			showHUD _showHUD;
+		};
+		
+		sleep 0.3;
+	};
+};
+
 waitUntil {time > 90};
 
 _monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
