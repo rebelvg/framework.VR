@@ -26,7 +26,7 @@ if (didJIP) then {
 			showHUD _showHUD;
 		};
 		
-		sleep 0.3;
+		sleep 1;
 	};
 };
 

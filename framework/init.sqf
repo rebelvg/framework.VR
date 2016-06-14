@@ -1,8 +1,6 @@
 if (!isMultiplayer) then {
 	[] call mf_disableAI_fnc;
 	[] spawn mf_debugLoadout_fnc;
-
-	[player] spawn BIS_fnc_traceBullets;
 };
 
 murshun_debriefing_text = "";
