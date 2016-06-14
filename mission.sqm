@@ -23,7 +23,7 @@ class EditorData
 		pos[]={609.10699,30,533.85303};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -128,6 +128,7 @@ class AddonsMetaData
 		{
 			className="DAC_Source";
 			name="DAC_Source.pbo";
+			author="Silola";
 		};
 		class Item10
 		{
