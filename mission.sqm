@@ -23,7 +23,7 @@ class EditorData
 		pos[]={609.10699,30,533.85303};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -81,6 +81,8 @@ class AddonsMetaData
 		{
 			className="ace_respawn";
 			name="ace_respawn";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item3
 		{
@@ -98,21 +100,29 @@ class AddonsMetaData
 		{
 			className="ace_captives";
 			name="ace_captives";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item6
 		{
 			className="ace_hearing";
 			name="ace_hearing";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item7
 		{
 			className="ace_medical";
 			name="ace_medical";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item8
 		{
 			className="ace_repair";
 			name="ace_repair";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item9
 		{
@@ -136,16 +146,22 @@ class AddonsMetaData
 		{
 			className="ace_sitting";
 			name="ace_sitting";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item13
 		{
 			className="ace_finger";
 			name="ace_finger";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item14
 		{
 			className="ace_optionsmenu";
 			name="ace_optionsmenu";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item15
 		{
@@ -172,11 +188,15 @@ class AddonsMetaData
 		{
 			className="ace_common";
 			name="ace_common";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item19
 		{
 			className="ace_weather";
 			name="ace_weather";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item20
 		{
@@ -189,21 +209,29 @@ class AddonsMetaData
 		{
 			className="ace_gforces";
 			name="ace_gforces";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item22
 		{
 			className="ACE_Parachute";
 			name="ACE_Parachute";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item23
 		{
 			className="ace_explosives";
 			name="ace_explosives";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item24
 		{
 			className="ace_viewdistance";
 			name="ace_viewdistance";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item25
 		{
@@ -216,11 +244,15 @@ class AddonsMetaData
 		{
 			className="ace_refuel";
 			name="ace_refuel";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 		class Item27
 		{
 			className="ace_rearm";
 			name="ace_rearm";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
 		};
 	};
 };
@@ -2805,7 +2837,7 @@ class Mission
 				class Attribute1
 				{
 					property="ace_isMedicalFacility";
-					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
 					class Value
 					{
 						class data
@@ -2865,7 +2897,7 @@ class Mission
 				class Attribute1
 				{
 					property="ace_isMedicalFacility";
-					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
 					class Value
 					{
 						class data
@@ -2925,7 +2957,7 @@ class Mission
 				class Attribute1
 				{
 					property="ace_isMedicalFacility";
-					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
 					class Value
 					{
 						class data
@@ -2985,7 +3017,7 @@ class Mission
 				class Attribute1
 				{
 					property="ace_isMedicalFacility";
-					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
 					class Value
 					{
 						class data
@@ -3045,7 +3077,7 @@ class Mission
 				class Attribute1
 				{
 					property="ace_isMedicalFacility";
-					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
 					class Value
 					{
 						class data
@@ -3105,7 +3137,7 @@ class Mission
 				class Attribute1
 				{
 					property="ace_isMedicalFacility";
-					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
 					class Value
 					{
 						class data
@@ -3165,7 +3197,7 @@ class Mission
 				class Attribute1
 				{
 					property="ace_isMedicalFacility";
-					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
 					class Value
 					{
 						class data
@@ -3225,7 +3257,7 @@ class Mission
 				class Attribute1
 				{
 					property="ace_isMedicalFacility";
-					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
 					class Value
 					{
 						class data
@@ -3478,7 +3510,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -3497,7 +3529,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -3540,7 +3572,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -3559,7 +3591,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -3601,7 +3633,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -3620,7 +3652,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -3662,7 +3694,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -3681,7 +3713,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -3761,7 +3793,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -3780,7 +3812,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -3823,7 +3855,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -3842,7 +3874,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -3885,7 +3917,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -3904,7 +3936,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -3948,7 +3980,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -3967,7 +3999,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4010,7 +4042,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4029,7 +4061,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4072,7 +4104,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4091,7 +4123,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4132,7 +4164,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4151,7 +4183,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4195,7 +4227,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4214,7 +4246,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4257,7 +4289,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4276,7 +4308,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4319,7 +4351,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4338,7 +4370,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4379,7 +4411,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4398,7 +4430,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4478,7 +4510,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4497,7 +4529,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4540,7 +4572,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4559,7 +4591,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4602,7 +4634,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4621,7 +4653,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4665,7 +4697,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4684,7 +4716,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4727,7 +4759,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4746,7 +4778,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4789,7 +4821,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4808,7 +4840,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4849,7 +4881,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4868,7 +4900,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4912,7 +4944,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4931,7 +4963,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -4974,7 +5006,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -4993,7 +5025,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5036,7 +5068,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5055,7 +5087,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5096,7 +5128,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5115,7 +5147,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5195,7 +5227,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5214,7 +5246,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5257,7 +5289,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5276,7 +5308,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5319,7 +5351,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5338,7 +5370,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5382,7 +5414,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5401,7 +5433,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5444,7 +5476,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5463,7 +5495,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5506,7 +5538,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5525,7 +5557,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5566,7 +5598,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5585,7 +5617,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5629,7 +5661,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5648,7 +5680,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5691,7 +5723,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5710,7 +5742,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5753,7 +5785,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5772,7 +5804,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5813,7 +5845,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5832,7 +5864,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5912,7 +5944,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5931,7 +5963,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -5973,7 +6005,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -5992,7 +6024,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6034,7 +6066,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6053,7 +6085,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6095,7 +6127,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6114,7 +6146,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6193,7 +6225,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6212,7 +6244,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6254,7 +6286,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6273,7 +6305,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6315,7 +6347,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6334,7 +6366,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6377,7 +6409,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6396,7 +6428,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6438,7 +6470,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6457,7 +6489,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6499,7 +6531,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6518,7 +6550,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6560,7 +6592,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6579,7 +6611,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6622,7 +6654,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6641,7 +6673,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6683,7 +6715,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6702,7 +6734,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6744,7 +6776,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6763,7 +6795,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6805,7 +6837,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6824,7 +6856,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6903,7 +6935,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6922,7 +6954,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -6964,7 +6996,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -6983,7 +7015,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7025,7 +7057,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7044,7 +7076,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7087,7 +7119,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7106,7 +7138,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7148,7 +7180,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7167,7 +7199,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7209,7 +7241,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7228,7 +7260,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7270,7 +7302,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7289,7 +7321,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7332,7 +7364,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7351,7 +7383,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7393,7 +7425,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7412,7 +7444,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7454,7 +7486,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7473,7 +7505,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7515,7 +7547,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7534,7 +7566,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7613,7 +7645,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7632,7 +7664,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7674,7 +7706,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7693,7 +7725,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7735,7 +7767,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7754,7 +7786,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7797,7 +7829,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7816,7 +7848,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7858,7 +7890,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7877,7 +7909,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7919,7 +7951,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7938,7 +7970,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -7980,7 +8012,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -7999,7 +8031,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8042,7 +8074,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8061,7 +8093,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8103,7 +8135,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8122,7 +8154,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8164,7 +8196,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8183,7 +8215,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8225,7 +8257,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8244,7 +8276,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8324,7 +8356,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8343,7 +8375,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8385,7 +8417,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8404,7 +8436,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8446,7 +8478,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8465,7 +8497,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8507,7 +8539,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8526,7 +8558,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8605,7 +8637,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8624,7 +8656,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8666,7 +8698,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8685,7 +8717,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8727,7 +8759,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8746,7 +8778,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8789,7 +8821,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8808,7 +8840,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8850,7 +8882,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8869,7 +8901,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8911,7 +8943,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8930,7 +8962,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -8972,7 +9004,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -8991,7 +9023,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9034,7 +9066,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9053,7 +9085,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9095,7 +9127,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9114,7 +9146,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9156,7 +9188,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9175,7 +9207,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9217,7 +9249,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9236,7 +9268,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9315,7 +9347,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9334,7 +9366,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9376,7 +9408,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9395,7 +9427,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9437,7 +9469,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9456,7 +9488,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9499,7 +9531,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9518,7 +9550,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9560,7 +9592,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9579,7 +9611,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9621,7 +9653,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9640,7 +9672,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9682,7 +9714,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9701,7 +9733,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9744,7 +9776,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9763,7 +9795,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9805,7 +9837,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9824,7 +9856,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9866,7 +9898,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9885,7 +9917,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -9927,7 +9959,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -9946,7 +9978,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -10025,7 +10057,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -10044,7 +10076,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -10086,7 +10118,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -10105,7 +10137,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -10147,7 +10179,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -10166,7 +10198,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -10209,7 +10241,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -10228,7 +10260,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -10270,7 +10302,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -10289,7 +10321,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -10331,7 +10363,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -10350,7 +10382,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -10392,7 +10424,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -10411,7 +10443,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -10454,7 +10486,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -10473,7 +10505,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -10515,7 +10547,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -10534,7 +10566,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -10576,7 +10608,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -10595,7 +10627,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -10637,7 +10669,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -10656,7 +10688,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -10776,7 +10808,7 @@ class Mission
 				class Attribute0
 				{
 					property="ace_isMedicalFacility";
-					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
 					class Value
 					{
 						class data
@@ -10893,7 +10925,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -10912,7 +10944,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -10955,7 +10987,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -10974,7 +11006,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -11017,7 +11049,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -11036,7 +11068,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -11079,7 +11111,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -11098,7 +11130,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -11177,7 +11209,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -11196,7 +11228,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -11238,7 +11270,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -11257,7 +11289,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -11299,7 +11331,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -11318,7 +11350,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -11360,7 +11392,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -11379,7 +11411,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -11458,7 +11490,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -11477,7 +11509,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -11519,7 +11551,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -11538,7 +11570,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -11580,7 +11612,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -11599,7 +11631,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -11641,7 +11673,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -11660,7 +11692,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
