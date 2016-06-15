@@ -1,13 +1,9 @@
 if (!isServer) exitWith {};
 
-//["SPAWNMARKERNAME", "ATTACKMARKERNAME", "BLUFOR", WEST] spawn fnc_InfantryAttack;
-fnc_InfantryAttack = {
-	private ["_marker","_attackMarker","_faction","_side","_times","_soldierArray","_randomGroupLeader","_spawnMarker","_grp","_groupLeader","_randomGroupMember","_groupMember","_wp","_formations","_chosenFormations"];
-	
-	_marker = _this select 0;
-	_attackMarker = _this select 1;
-	_faction = _this select 2;
-	_side = _this select 3;
+//["SPAWNMARKERNAME", "BLUFOR", WEST] call mf_fnc_spawnGroup;
+mf_fnc_spawnGroup = {
+	params ["_marker", "_faction", "_side"];
+	private ["_soldierArray","_randomGroupLeader","_spawnMarker","_grp","_groupLeader","_randomGroupMember","_groupMember"];
 
 	switch (_faction) do
 	{
@@ -45,23 +41,51 @@ fnc_InfantryAttack = {
 		_x setSkill ["courage", 0.8];
 		_x setSkill ["reloadSpeed", 0.3];
 		_x setSkill ["commanding", 0.8];
-	} forEach units group _groupLeader;
+	} forEach (units group _groupLeader);
 	
-	_wp = _grp addWaypoint [[getMarkerPos _attackMarker, 25 * sqrt random 1, random 360] call BIS_fnc_relPos, 0];
-	_wp setWaypointType "SAD";
-	_wp setWaypointBehaviour "AWARE";
-	_wp setWaypointCombatMode "RED";
+	_grp
 };
 
-//["SPAWNMARKERNAME", "ATTACKMARKERNAME", "BLUFOR", "BLUFOR Car", WEST] spawn fnc_VehicleAttack;
-fnc_VehicleAttack = {
-	private ["_marker","_attackMarker","_faction","_vehicle","_side","_times","_soldierArray","_vehicleArray","_spawnMarker","_randomUnit","_randomVehicle","_grp","_veh","_vehicleCommander","_vehicleDriver","_vehicleGunner","_wp","_formations","_chosenFormations"];
+//["SPAWNMARKERNAME", "ATTACKMARKERNAME", "BLUFOR", WEST] spawn mf_fnc_InfantryAttack;
+mf_fnc_InfantryAttack = {
+	params ["_marker", "_attackMarker", "_faction", "_side"];
 	
-	_marker = _this select 0;
-	_attackMarker = _this select 1;
-	_faction = _this select 2;
-	_vehicle = _this select 3;
-	_side = _this select 4;
+	_grp = [_marker, _faction, _side] call mf_fnc_spawnGroup;
+	
+	[_grp, getMarkerPos _attackMarker, 50] call CBA_fnc_taskAttack;
+};
+
+//["SPAWNMARKERNAME", "ATTACKMARKERNAME", "BLUFOR", WEST] spawn mf_fnc_InfantryDefend;
+mf_fnc_InfantryDefend = {
+	params ["_marker", "_attackMarker", "_faction", "_side"];
+	
+	_grp = [_marker, _faction, _side] call mf_fnc_spawnGroup;
+	
+	[_grp, getMarkerPos _attackMarker, 50] call CBA_fnc_taskDefend;
+};
+
+//["SPAWNMARKERNAME", "ATTACKMARKERNAME", "BLUFOR", WEST] spawn mf_fnc_InfantryPartol;
+mf_fnc_InfantryPartol = {
+	params ["_marker", "_attackMarker", "_faction", "_side"];
+	
+	_grp = [_marker, _faction, _side] call mf_fnc_spawnGroup;
+	
+	[_grp, getMarkerPos _attackMarker, 200, 5] call CBA_fnc_taskPatrol;
+};
+
+//["SPAWNMARKERNAME", "ATTACKMARKERNAME", "BLUFOR", WEST] spawn mf_fnc_InfantrySearchArea;
+mf_fnc_InfantrySearchArea = {
+	params ["_marker", "_attackMarker", "_faction", "_side"];
+	
+	_grp = [_marker, _faction, _side] call mf_fnc_spawnGroup;
+	
+	[_grp, _attackMarker] call CBA_fnc_taskSearchArea;
+};
+
+//["SPAWNMARKERNAME", "ATTACKMARKERNAME", "BLUFOR", "BLUFOR Car", WEST] spawn mf_fnc_VehicleAttack;
+mf_fnc_VehicleAttack = {
+	params ["_marker", "_attackMarker", "_faction", "_vehicle", "_side"];
+	private ["_soldierArray","_vehicleArray","_spawnMarker","_randomUnit","_randomVehicle","_grp","_veh","_vehicleCommander","_vehicleDriver","_vehicleGunner","_wp"];
 
 	switch (_faction) do
 	{
@@ -140,25 +164,15 @@ fnc_VehicleAttack = {
 		_x setSkill ["courage", 0.8];
 		_x setSkill ["reloadSpeed", 0.3];
 		_x setSkill ["commanding", 0.8];
-	} forEach units group _vehicleDriver;
+	} forEach (units group _vehicleDriver);
 	
-	_wp = _grp addWaypoint [[getMarkerPos _attackMarker, 50 * sqrt random 1, random 360] call BIS_fnc_relPos, 0];
-	_wp setWaypointType "UNLOAD";
-	_wp setWaypointSpeed "LIMITED";
-	_wp setWaypointBehaviour "AWARE";
-	_wp setWaypointCombatMode "RED";
+	[_grp, getMarkerPos _attackMarker, 50, "UNLOAD", "AWARE", "RED", "LIMITED"] call CBA_fnc_addWaypoint;
 };
 
-//["SPAWNMARKERNAME", "ATTACKMARKERNAME", "BLUFOR", "BLUFOR Air", WEST] spawn fnc_AirAttack;
-fnc_AirAttack = {
-	private ["_marker","_attackMarker","_faction","_vehicle","_side","_times","_soldierArray","_vehicleArray","_spawnMarker","_randomUnit","_randomVehicle","_grp","_veh","_vehicleCommander","_vehicleDriver","_vehicleGunner","_wp","_formations","_chosenFormations"];
-	
-	_marker = _this select 0;
-	_attackMarker = _this select 1;
-	_faction = _this select 2;
-	_vehicle = _this select 3;
-	_side = _this select 4;
-	_times = _this select 5;
+//["SPAWNMARKERNAME", "ATTACKMARKERNAME", "BLUFOR", "BLUFOR Air", WEST] spawn mf_fnc_AirAttack;
+mf_fnc_AirAttack = {
+	params ["_marker", "_attackMarker", "_faction", "_vehicle", "_side"];
+	private ["_soldierArray","_vehicleArray","_spawnMarker","_randomVehicle","_grp","_veh","_vehicleCommander","_vehicleDriver","_vehicleGunner","_wp"];
 
 	switch (_faction) do
 	{
@@ -228,7 +242,7 @@ fnc_AirAttack = {
 	{
 		removeBackpack _x;
 		_x addBackpack "B_Parachute";
-	} foreach units group _vehicleDriver;
+	} foreach (units group _vehicleDriver);
 
 	{
 		_x setSkill ["general", 0.8];
@@ -241,15 +255,11 @@ fnc_AirAttack = {
 		_x setSkill ["courage", 0.8];
 		_x setSkill ["reloadSpeed", 0.3];
 		_x setSkill ["commanding", 0.8];
-	} forEach units group _vehicleDriver;	
+	} forEach (units group _vehicleDriver);
 
 	_veh flyInHeight 200;
 	
-	_wp = _grp addWaypoint [[getMarkerPos _attackMarker, 50 * sqrt random 1, random 360] call BIS_fnc_relPos, 0];
-	_wp setWaypointType "SAD";
-	_wp setWaypointSpeed "LIMITED";
-	_wp setWaypointBehaviour "AWARE";
-	_wp setWaypointCombatMode "RED";
+	[_grp, getMarkerPos _attackMarker, 50] call CBA_fnc_taskAttack;
 	
 	waitUntil {
 		_veh distance2d getMarkerPos _attackMarker < 400 or !(canMove _veh)
@@ -266,21 +276,12 @@ fnc_AirAttack = {
 		};
 	} foreach (fullCrew [_veh, "cargo"]);
 	
-	_veh flyInHeight 100;
-	
-	_wp = _grpParatroops addWaypoint [[getMarkerPos _attackMarker, 25 * sqrt random 1, random 360] call BIS_fnc_relPos, 0];
-	_wp setWaypointType "SAD";
-	_wp setWaypointBehaviour "AWARE";
-	_wp setWaypointCombatMode "RED";
+	[_grpParatroops, getMarkerPos _attackMarker, 50] call CBA_fnc_taskAttack;
 };
 
-//["SPAWNMARKERNAME", 30, 1, 300, "Sh_82mm_AMOS"] spawn fnc_MortarAttack;
-fnc_MortarAttack = {
-	_marker = _this select 0;
-	_number = _this select 1;
-	_sleep = _this select 2;
-	_radius = _this select 3;
-	_round = _this select 4;
+//["SPAWNMARKERNAME", 30, 1, 300, "Sh_82mm_AMOS"] spawn mf_fnc_MortarAttack;
+mf_fnc_MortarAttack = {
+	params ["_marker", "_number", "_sleep", "_radius", "_round"];
 
 	for "_i" from 0 to floor _number do
 	{

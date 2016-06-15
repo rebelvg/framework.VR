@@ -35,6 +35,8 @@ _specialistAA = ["launch_B_Titan_F", [["Titan_AA", 3]], []];
 
 _binoculars = ["Laserdesignator", [], []];
 
+_boxAT = "launch_NLAW_F";
+
 _smokeGrenade = "SmokeShellBlue";
 _fragGrenade = "HandGrenade";
 
@@ -161,7 +163,8 @@ _loadoutArray = [
 		["ACE_CableTie", 10],
 		["ACE_Clacker", 2],
 		["EWK_Cig1", 100],
-		["murshun_cigs_matches", 40],	
+		["murshun_cigs_matches", 40],
+		[_boxAT, 20],
 		[_smokeGrenade, 100],
 		[_fragGrenade, 20]
 	] //content for boxes
