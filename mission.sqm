@@ -23,7 +23,7 @@ class EditorData
 		pos[]={609.10699,30,533.85303};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -1372,8 +1372,8 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={504.97058,5,558.50482};
-				angles[]={0,6.2732205,0};
+				position[]={504.97101,5,558.505};
+				angles[]={0,6.2732191,0};
 			};
 			id=20;
 			type="ACE_moduleRepairSettings";
@@ -1394,7 +1394,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=3;
+							value=0;
 						};
 					};
 				};
@@ -1451,7 +1451,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
