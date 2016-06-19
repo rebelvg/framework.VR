@@ -55,11 +55,11 @@ if (count _loadoutArray == 3) then {
 		[_box, 1/4] call murshun_fillBox_fnc;
 
 		if (_box isKindOf "car") then {
-			[_box, 3] call ace_repair_fnc_addSpareParts;
+			[_box, 3, "ACE_Wheel"] call ace_repair_fnc_addSpareParts;
 		};
 
 		if (_box isKindOf "tank") then {
-			[_box, 3] call ace_repair_fnc_addSpareParts;
+			[_box, 3, "ACE_Track"] call ace_repair_fnc_addSpareParts;
 		};
 
 		if (_box isKindOf "air") then {
