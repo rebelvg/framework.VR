@@ -19,7 +19,7 @@ if (didJIP) then {
 
 [] spawn {
 	while {true} do {
-		_showHUD = [true,true,false,false,false,false,false,true];
+		_showHUD = [true,true,false,true,false,false,false,true];
 
 		_currentShowHUD = shownHUD;
 		if (!(_currentShowHUD isEqualTo _showHUD)) then {
