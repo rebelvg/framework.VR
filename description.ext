@@ -82,11 +82,12 @@ class CfgFunctions
 			file = "framework\functions";
 			
 			class frameworkInit {preInit = 1;};
+			class attackInit {preInit = 1;};
 			class giveLoadout {};
 			class fillBox {};
 			class fillBoxMedical {};
 			class addReviveBase {};
-			class addParadropBase {};
+			class addParadropBase {};			
 		};
 		
 		class loadouts
