@@ -143,7 +143,7 @@ _loadoutArray = [
 		],
 		[
 			["engineer"],
-			[["ACE_M26_Clacker", 1], ["ACE_DefusalKit", 1]],
+			[["ACE_M26_Clacker", 1], ["ACE_DefusalKit", 1], ["DemoCharge_Remote_Mag", 2]],
 			[]
 		],
 		[
