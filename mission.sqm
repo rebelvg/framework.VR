@@ -138,7 +138,7 @@ class AddonsMetaData
 		class Item11
 		{
 			className="A3_Modules_F_Curator";
-			name="Arma 3 Zeus Update - Scripted features";
+			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
@@ -166,14 +166,14 @@ class AddonsMetaData
 		class Item15
 		{
 			className="A3_Props_F_Exp_A";
-			name="Arma 3 Nexus Update - Decorative and mission objects";
+			name="Arma 3 Nexus Update - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
 		class Item16
 		{
 			className="A3_Supplies_F_Heli";
-			name="Arma 3 Helicopters - Ammoboxes and supplies";
+			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
@@ -222,7 +222,7 @@ class AddonsMetaData
 		class Item23
 		{
 			className="A3_Structures_F";
-			name="Arma 3 Alpha - Buildings and structures";
+			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
