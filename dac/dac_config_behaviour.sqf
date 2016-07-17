@@ -19,7 +19,7 @@ switch (_this select 0) do
 case 0:
 	{
 		//_setSkill = ["aimingAccuracy","aimingShake","aimingSpeed","Endurance","spotDistance","spotTime","courage","reloadSpeed","commanding","general"];
-		_setSkill   = [[0.1,0.2],[0.1,0.2],[0.1,0.2],[0.2,0.5],[0.2,0.5],[0.2,0.5],[0.2,0.6],[0.1,0.2],[0.1,0.3],[0.2,0.6]];
+		_setSkill   = [[0.15,0.25],[0.15,0.25],[0.15,0.25],[0.25,0.55],[0.25,0.55],[0.25,0.55],[0.25,0.65],[0.15,0.25],[0.15,0.35],[0.25,0.65]];
 		_setCombat  = ["green","white","yellow"];
 		_setBehav   = ["careless","safe","aware"];
 		_setSpeed   = ["limited","normal"];
@@ -31,7 +31,7 @@ case 0:
 		_setPatrol  = ["45 + (20 * (skill _leader))","(60 + (random 60)) + ((skill _leader) * 50)"];
 		_setSearch  = ["40 + ((skill _leader) * 150)","50 + ((skill _leader) * 50)"];
 		_setSupport = [1,0];
-		_setJoin    = 2;
+		_setJoin    = 0;
 		_setEmpVeh  = [[150,100],[150,100]];
 		_setSupTime = ["5 + ((skill _unit) * (5 * DAC_AI_Level))",2,5];
 		_setHidTime = ["(((10 * DAC_AI_Level) + ((skill _leader) * 50)) / ((count units _group) + 1))"];
