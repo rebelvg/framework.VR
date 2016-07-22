@@ -128,12 +128,12 @@ _loadoutArray = [
 		],
 		[
 			["officer", "squad leader"],
-			[["ACRE_PRC148", 1], ["murshun_cigs_lighter", 1]],
+			[["ACRE_PRC152", 1], ["murshun_cigs_lighter", 1]],
 			[]
 		],
 		[
 			["team leader"],
-			[["ACRE_PRC148", 1], ["murshun_cigs_lighter", 1]],
+			[["ACRE_PRC152", 1], ["murshun_cigs_lighter", 1]],
 			[]
 		],
 		[
@@ -148,7 +148,7 @@ _loadoutArray = [
 		],
 		[
 			["pilot"],
-			[["ACRE_PRC148", 1]],
+			[["ACRE_PRC152", 1]],
 			[]
 		]
 	], //personal items per class

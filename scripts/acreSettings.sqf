@@ -47,6 +47,7 @@ _radios = [] call acre_api_fnc_getCurrentRadioList;
 
 _343Radios = (items player) select {[_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC343"};
 _148Radios = (items player) select {[_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC148"};
+_152Radios = (items player) select {[_x] call acre_api_fnc_getBaseRadio == "ACRE_PRC152"};
 
 if (!isNil {_343Radios select 0}) then {
 	[(_343Radios select 0), _channel + (_team - 1) * 16] call acre_api_fnc_setRadioChannel;
@@ -56,6 +57,10 @@ if (!isNil {_343Radios select 0}) then {
 
 if (!isNil {_148Radios select 0}) then {
 	[(_148Radios select 0), "RIGHT"] call acre_api_fnc_setRadioSpatial;
+};
+
+if (!isNil {_152Radios select 0}) then {
+	[(_152Radios select 0), "RIGHT"] call acre_api_fnc_setRadioSpatial;
 };
 
 _className = tolower gettext (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
