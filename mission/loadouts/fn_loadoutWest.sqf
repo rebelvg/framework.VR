@@ -37,8 +37,8 @@ _binoculars = ["Laserdesignator", [], []];
 
 _boxAT = "launch_NLAW_F";
 
-_smokeGrenade = "SmokeShellBlue";
-_fragGrenade = "HandGrenade";
+_nonLethalGrenade = "SmokeShellBlue";
+_lethalGrenade = "HandGrenade";
 
 _loadoutArray = [
 	[
@@ -123,7 +123,7 @@ _loadoutArray = [
 	[
 		[
 			["all"],
-			[["ACRE_PRC343", 1], ["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_smokeGrenade, 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items, acre radios go here
+			[["ACRE_PRC343", 1], ["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items, acre radios go here
 			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "tf_anprc152", "NVGoggles"] //link items, tfar radios go here
 		],
 		[
@@ -165,8 +165,8 @@ _loadoutArray = [
 		["EWK_Cig1", 100],
 		["murshun_cigs_matches", 40],
 		[_boxAT, 20],
-		[_smokeGrenade, 100],
-		[_fragGrenade, 20]
+		[_nonLethalGrenade, 100],
+		[_lethalGrenade, 20]
 	] //content for boxes
 ];
 
