@@ -23,7 +23,7 @@ class EditorData
 		pos[]={609.10699,30,533.85303};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,0};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -1543,7 +1543,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={542.25269,5,558.08252};
+				position[]={551.54828,5,577.24561};
 				angles[]={0,6.2732205,0};
 			};
 			id=21;
@@ -1554,7 +1554,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={542.36102,5,567.48999};
+				position[]={541.96191,5,566.92188};
 				angles[]={0,6.2732191,0};
 			};
 			id=23;
@@ -10784,7 +10784,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={528.58771,5,568.88647};
+				position[]={528.62701,5,567.04492};
 			};
 			id=876;
 			type="ACE_moduleRefuelSettings";
