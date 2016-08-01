@@ -153,20 +153,18 @@ _loadoutArray = [
 		]
 	], //personal items per class
 	[
-		["ACE_EarPlugs", 20],
-		["ACE_Flashlight_XL50", 20],
 		["ToolKit", 2],
 		["ACE_wirecutter", 2],
-		["ACE_SpareBarrel", 4],
-		["DemoCharge_Remote_Mag", 20],
-		["SatchelCharge_Remote_Mag", 4],
+		["ACE_SpareBarrel", 4],		
 		["ACE_CableTie", 10],
 		["ACE_Clacker", 2],
 		["EWK_Cig1", 100],
 		["murshun_cigs_matches", 40],
 		[_boxAT, 20],
 		[_nonLethalGrenade, 100],
-		[_lethalGrenade, 20]
+		[_lethalGrenade, 20],
+		["DemoCharge_Remote_Mag", 20],
+		["SatchelCharge_Remote_Mag", 4]
 	] //content for boxes
 ];
 
