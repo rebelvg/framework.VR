@@ -155,7 +155,7 @@ _loadoutArray = [
 	[
 		["ToolKit", 2],
 		["ACE_wirecutter", 2],
-		["ACE_SpareBarrel", 4],		
+		["ACE_SpareBarrel", 4],
 		["ACE_CableTie", 10],
 		["ACE_Clacker", 2],
 		["EWK_Cig1", 100],
