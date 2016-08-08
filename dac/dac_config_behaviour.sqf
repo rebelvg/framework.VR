@@ -22,7 +22,7 @@ case 0:
 		_setSkill   = [[0.15,0.25],[0.15,0.25],[0.15,0.25],[0.25,0.55],[0.25,0.55],[0.25,0.55],[0.25,0.65],[0.15,0.25],[0.15,0.35],[0.25,0.65]];
 		_setCombat  = ["green","white","yellow"];
 		_setBehav   = ["careless","safe","aware"];
-		_setSpeed   = ["limited","normal"];
+		_setSpeed   = ["limited","normal","full"];
 		_setForm    = ["line","vee","column","wedge","stag column","ech left","ech right","file","diamond"];
 		_setFleeing = [0,200];
 		_setHeliVal = [50,100,0.7,1];
