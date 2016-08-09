@@ -1,13 +1,6 @@
 waitUntil {!isNil "murshun_frameworkInit"};
 
-if (!(isClass (configFile >> "CfgPatches" >> "acre_main"))) then {
-	[player] call mf_fnc_giveLoadout;
-	[] execVM "scripts\tfarSettings.sqf";
-	
-	ace_respawn_SavePreDeathGear = true;
-} else {
-	ace_respawn_SavePreDeathGear = false;
-};
+[] execVM "scripts\tfarSettings.sqf";
 
 [player] spawn murshun_assignTeam_fnc;
 
