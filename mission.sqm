@@ -2820,7 +2820,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="0 = [this] spawn mf_fnc_addReviveBase; 0 = [this] spawn mf_fnc_addTeleportBase;";
+				init="0 = [this] spawn mf_fnc_addReviveBase;";
 			};
 			id=197;
 			type="Land_DataTerminal_01_F";

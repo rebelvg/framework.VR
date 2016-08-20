@@ -98,3 +98,7 @@ The way it works it restricts pilot sit for everyone but pilots, but allows for 
 However, it allows to switch sits while flying and allows taking controls while flying, to help during emergency situations.
 So basically it just restricts taking off for non-pilots.
 Activates only in multiplayer.
+
+Add
+0 = [this] spawn mf_fnc_addTeleportBase;
+to the box if you want this box to have a teleport to your squad option.
