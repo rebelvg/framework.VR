@@ -1,7 +1,8 @@
 //https://community.bistudio.com/wiki/Arma_3_Tasks_Overhaul
 
-//creates task, waits until the hostage is 50m from the base marker, completes task
-//hostage must be an object in the editor
+//creates task, waits until the hostage is 50m from the base_marker, completes task
+//hostage must be an unit in the editor
+//can be any unit or object
 
 [WEST, "task_id", ["Task description.", "Hostage Rescue"], hostage, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
@@ -24,7 +25,7 @@ waitUntil {
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
 
-//waits until at least one player is 50m from the position marker
+//waits until at least one player is 50m from the position_marker
 
 [WEST, "task_id", ["Task description.", "Visit Position"], "position_marker", "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
@@ -34,7 +35,7 @@ waitUntil {
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
 
-//waits until more than 80% of players (not spectators) are 50m from the base marker
+//waits until more than 80% of players (not spectators) are 50m from the base_marker
 
 _marker = "base_marker";
 _radius = 50;
@@ -59,7 +60,7 @@ waitUntil {
 	}, "BIS_fnc_spawn"] call BIS_fnc_MP;
 };
 
-//waits until there's no east side units in the 500m radius of the attack marker
+//waits until there's no east side units in the 500m radius of the attack_marker
 //checks if at least one of the players is around too (to prevent auto-completion if using dac or alive or other dynamic ai spawn systems)
 
 _marker = "attack_marker";
