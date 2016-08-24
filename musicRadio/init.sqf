@@ -163,5 +163,7 @@ if (isServer) then {
 			
 			murshun_skipTrack = false;
 		} foreach murshun_radioSongs;
+		
+		sleep (1/10);
 	};	
 };

@@ -198,8 +198,6 @@ mf_fnc_dynamicItems = {
 		} forEach _itemsArray;
 		
 		while {alive _box} do {
-			sleep (1/10);
-			
 			_getItemCargo = getItemCargo _box;
 			
 			{
@@ -213,6 +211,8 @@ mf_fnc_dynamicItems = {
 					_box addItemCargoGlobal [_x, 2];
 				};
 			} foreach _itemsArray;
+			
+			sleep (1/10);
 		};
 	};	
 };
