@@ -5,8 +5,9 @@ Latest ARMA 3.
 CBA.
 ACE3.
 ALIVE.
-TFAR or ACRE2.
 DAC.
+Optionals.
+TFAR or ACRE2.
 
 Framework Info.
 Spectator is located inside of our murshun pack. You can switch it by changing the value murshun_spectator_enable in the mission\fn_settings.sqf
