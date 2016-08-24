@@ -7,20 +7,9 @@ ACE3.
 ALIVE.
 TFAR or ACRE2.
 DAC.
-Spectator, Jip teleporting script, Cigs and Suicide script are located in the murshun mod pack. All are completely optional.
 
 Framework Info.
-
-Spectator is located inside of our murshun pack. If you want to enable it you must add a few lines.
-
-[] execVM "murshun_menu\spectator\init.sqf";
-in init.sqf
-
-[] execVM "murshun_menu\spectator\onPlayerKilled.sqf";
-in onPlayerKilled.sqf
-
-[] execVM "murshun_menu\spectator\onPlayerRespawn.sqf";
-in onPlayerRespawn.sqf
+Spectator is located inside of our murshun pack. You can switch it by changing the value murshun_spectator_enable in the mission\fn_settings.sqf
 
 Framework should not throw ANY script errors. If you see any errors connected to the framework, you're probably doing something wrong, ask rebel.
 
@@ -38,9 +27,6 @@ Squads available - 1 to 6, squad 7 is reserved for command network.
 Teams available - 1 to 4, team 5 is reserved for squad command network.
 So in total you can have 6 squads with 4 fireteams per squad which is more than enough which can cover up to 96 players (not counting any command players).
 Colors will be applied automatically.
-
-To enable suicide set murshun_easywayout_canSuicide to true in the init.sqf.
-To disable JIP teleportation set murshun_allowJipTeleporting to false in the inti.sqf (JIP teleportation enabled by default in the murshun_menu pbo).
 
 Radios are now automatically added to any vehicle.
 To add radio to an object use the line below.
@@ -93,7 +79,7 @@ That's happening because acre scans boxes for radios, and if a box has to many i
 It's an engine limitation, can't be easily fixed completely atm, acre team is working on a workaround and optimizing.
 
 New option to allow only pilots to fly helicopters.
-To enable it switch mf_onlyPilotsCanFly to true in the fn_settings.sqf
+To enable it switch mf_onlyPilotsCanFly to true in the mission\fn_settings.sqf
 The way it works it restricts pilot sit for everyone but pilots, but allows for the use of co-pilot sit while restricting taking controls for non-pilots.
 However, it allows to switch sits while flying and allows taking controls while flying, to help during emergency situations.
 So basically it just restricts taking off for non-pilots.

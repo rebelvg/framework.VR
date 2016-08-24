@@ -95,13 +95,12 @@ waitUntil {
 //eliminate enemy team, west vs east
 //reason why this doesn't use allPlayers is because it will auto-complete in the editor/single-player
 //also waits for mission to actually start to prevent auto-completion when players are still loading in the lobby
-//this works because spectators are counted as civilians
 
 [] spawn {
 	[WEST, "west_task_id", ["Task description.", "Eliminate East Side Team"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 	
 	waitUntil {
-		{side _x == EAST} count (playableUnits + switchableUnits) == 0 && time > 0
+		{side _x == EAST && !isObjectHidden _x} count (playableUnits + switchableUnits) == 0 && time > 0
 	};
 	
 	["west_task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
@@ -111,7 +110,7 @@ waitUntil {
 	[EAST, "east_task_id", ["Task description.", "Eliminate West Side Team"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 	
 	waitUntil {
-		{side _x == WEST} count (playableUnits + switchableUnits) == 0 && time > 0
+		{side _x == WEST && !isObjectHidden _x} count (playableUnits + switchableUnits) == 0 && time > 0
 	};
 	
 	["east_task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
