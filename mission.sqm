@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=921;
+		nextID=922;
 	};
 	class MarkerIDProvider
 	{
@@ -372,7 +372,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=47;
+		items=48;
 		class Item0
 		{
 			dataType="Marker";
@@ -2733,12 +2733,13 @@ class Mission
 		class Item17
 		{
 			dataType="Trigger";
-			position[]={602.14301,5,797.96399};
+			position[]={600,5,800};
 			class Attributes
 			{
 				name="z1";
+				text="example zone";
 				condition="time > 1";
-				onActivation="fun = [""z1"",[1,1,0],[6,3,60,10],[],[],[],[0,0,0,0,2]] spawn DAC_Zone;";
+				onActivation="fun = [""z1"",[1,1,0],[6,3,60,10],[],[],[],[0,0,0,2,2]] spawn DAC_Zone;";
 				sizeA=200;
 				sizeB=200;
 				interuptable=1;
@@ -11691,6 +11692,26 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item47
+		{
+			dataType="Trigger";
+			position[]={600,5,1300};
+			class Attributes
+			{
+				name="z2";
+				text="example camp";
+				condition="time > 1";
+				onActivation="fun = [""z2"",[1,1,0],[],[],[],[1,0,0,1,100,10],[0,0,0,2,2]] spawn DAC_Zone;";
+				sizeA=200;
+				sizeB=200;
+				interuptable=1;
+				repeatable=1;
+				activationBy="LOGIC";
+				isRectangle=1;
+			};
+			id=921;
+			type="EmptyDetector";
 		};
 	};
 };
