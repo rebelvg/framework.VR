@@ -1,5 +1,3 @@
-waitUntil {!isNil "murshun_frameworkInit"};
-
 [] execVM "scripts\tfarSettings.sqf";
 
 [player] spawn murshun_assignTeam_fnc;
@@ -10,18 +8,14 @@ if (didJIP) then {
 	[2, false, true] execVM "scripts\roster.sqf";
 };
 
-[] spawn {
-	while {true} do {
-		_showHUD = [true,true,false,true,false,false,false,true];
+[{
+	_showHUD = [true,true,false,true,false,false,false,true];
 
-		_currentShowHUD = shownHUD;
-		if (!(_currentShowHUD isEqualTo _showHUD)) then {
-			showHUD _showHUD;
-		};
-		
-		sleep 1;
+	_currentShowHUD = shownHUD;
+	if (!(_currentShowHUD isEqualTo _showHUD)) then {
+		showHUD _showHUD;
 	};
-};
+}, 1, []] call CBA_fnc_addPerFrameHandler;
 
 waitUntil {time > 90};
 

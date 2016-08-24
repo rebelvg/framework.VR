@@ -297,5 +297,3 @@ tf_freq_guer_lr = _freqs;
 tf_freq_west = [0,7,radioNetArray_west select 0,0,"_murshun",-1,0,"_SP_PLAYER_",false];
 tf_freq_east = [0,7,radioNetArray_east select 0,0,"_murshun",-1,0,"_SP_PLAYER_",false];
 tf_freq_guer = [0,7,radioNetArray_guer select 0,0,"_murshun",-1,0,"_SP_PLAYER_",false];
-
-murshun_frameworkInit = true;
