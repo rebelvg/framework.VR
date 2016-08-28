@@ -8,7 +8,7 @@ _action = ["murshun_framework_teleport", "Teleport To Your Team", "", {
 	_this spawn {
 		_player = _this select 1;
 		
-		_groupUnitsFar = allPlayers select {side _x == side _player && _x distance2d _player > 100 && !isObjectHidden _x && (vehicle _x == _x or (vehicle _x) emptyPositions "cargo" == 0)};
+		_groupUnitsFar = allPlayers select {side _x == side _player && _x distance2d _player > 100 && !isObjectHidden _x && (vehicle _x == _x or (vehicle _x) emptyPositions "cargo" != 0)};
 		
 		if (count _groupUnitsFar > 0) then {
 			_unit = selectRandom _groupUnitsFar;
