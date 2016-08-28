@@ -134,7 +134,7 @@ murshun_fillBox_fnc = {
 				{
 					if (count _x == 2) then {
 						if (count (_x select 0) != 0) then {
-							_unit addMagazineCargoGlobal [_x select 0, ceil (40 * _multiplier)];
+							_unit addMagazineCargoGlobal [_x select 0, ceil (60 * _multiplier)];
 						};
 					};
 				} forEach _mags;

@@ -6,6 +6,14 @@ if (!isMultiplayer) then {
 	DAC_Marker = 2;
 };
 
+if (isNil "murshun_ffArray") then {
+	murshun_ffArray = [];
+};
+
+if (isNil "murshun_respawnArray") then {
+	murshun_respawnArray = [];
+};
+
 murshun_debriefing_text = "";
 
 addMissionEventHandler ["Ended", {

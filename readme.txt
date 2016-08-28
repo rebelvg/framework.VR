@@ -67,6 +67,7 @@ Alive Require Module - Disable Admin Actions - Yes.
 Alive Player Options - Max View Distance - 1500.
 Alive Player Options - Min Terrain Grid - 2.
 Ace View Distance Limiter - 1500.
+mission\fn_settings.sqf - murshun_allowJipTeleporting = false;
 
 Some examples are located in the examples folder.
 
