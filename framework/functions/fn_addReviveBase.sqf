@@ -14,6 +14,8 @@ _action = ["murshun_framework_reviveEveryone", "Revive Everyone (At This Base)",
 		sleep 5;
 		
 		[_pos] spawn murshun_spectator_reviveAllPlayers_fnc;
+		
+		systemChat "Done.";
 	};
 }, {true}] call ace_interact_menu_fnc_createAction;
 [_obj, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
