@@ -1,12 +1,12 @@
-[] execVM "scripts\tfarSettings.sqf";
-
-[player] spawn murshun_assignTeam_fnc;
+[] execVM "scripts\radioBriefing.sqf";
 
 if (didJIP) then {
-	[[[2, false, true], "scripts\roster.sqf"], "BIS_fnc_execVM"] call BIS_fnc_MP;
+	[[[], "scripts\teamRoster.sqf"], "BIS_fnc_execVM"] call BIS_fnc_MP;
 } else {
-	[2, false, true] execVM "scripts\roster.sqf";
+	[] execVM "scripts\teamRoster.sqf";
 };
+
+[player] spawn murshun_assignTeam_fnc;
 
 [{
 	_showHUD = [true,true,false,true,false,false,false,true];
@@ -31,7 +31,7 @@ _dateArray = date;
 	} else {
 		_dateArray set [_forEachIndex, str _x];
 	};
-} foreach _dateArray;
+} forEach _dateArray;
 
 [parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>""%1""</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", (_dateArray select 2) + "." + _month + "." + (_dateArray select 0), (_dateArray select 3) + ":" + (_dateArray select 4)], true, nil, 9, 1, 0] spawn BIS_fnc_textTiles;
 
@@ -40,7 +40,7 @@ sleep 11;
 {
 	[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>%1</t><br /><t shadow='2' align='right' size='1.4'>%2</t>", "Starring", name _x], true, nil, 1, 0.5, 0] spawn BIS_fnc_textTiles;
 	sleep 1.5;
-} foreach allPlayers;
+} forEach allPlayers;
 
 sleep 0.5;
 

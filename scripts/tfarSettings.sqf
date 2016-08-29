@@ -1,131 +1,35 @@
 if (!(isClass (configFile >> "CfgPatches" >> "task_force_radio"))) exitWith {};
 
-_radioNetArray = [];
+_radioNetArray = [["101", "102", "103", "104", "105", "106", "107", "108"], ["111", "112", "113", "114", "115", "116", "117", "118"], ["121", "122", "123", "124", "125", "126", "127", "128"], ["131", "132", "133", "134", "135", "136", "137", "138"], ["141", "142", "143", "144", "145", "146", "147", "148"], ["151", "152", "153", "154", "155", "156", "157", "158"], ["161", "162", "163", "164", "165", "166", "167", "168"], ["171", "172", "173", "174", "175", "176", "177", "178"]];
 
-switch (side player) do {
-case WEST: {
-		_radioNetArray = radioNetArray_west;
-	};
-case EAST: {
-		_radioNetArray = radioNetArray_east;
-	};
-case RESISTANCE: {
-		_radioNetArray = radioNetArray_guer;
-	};
-case CIVILIAN: {
-		_radioNetArray = radioNetArray_civ;
-	};
+_mf_groupChannel = player getVariable ["mf_groupChannel", [6, 4]];
+_channel = _mf_groupChannel select 0;
+_team = _mf_groupChannel select 1;
+
+if (isNil {_radioNetArray select _channel}) exitWith {};
+
+waitUntil {
+	time > 0
 };
 
-player createDiarySubject ["radioFrequencies", "Radio Frequencies"];
+if (!(call TFAR_fnc_haveSWRadio)) exitWith {};
 
-player createDiaryRecord ["radioFrequencies", ["Short Range Frequencies", format ["<br/>
-<font color='#FFEC00'><font size='20'>COMMAND NET</font></font color> <br/>
-Commander, Squad Leaders, Special  <font color='#FFEC00'>[</font color><font color='#8A8A8A'>Alt Channel - %1</font color><font color='#FFEC00'>]</font color><br/><br/>
+_currentSwRadio = call TFAR_fnc_activeSwRadio;
 
-<font size='20'>COMMAND</font><br/>
-Commander + Medic             	           	  <font color='#FFEC00'>[</font color>Channel 5 - %2<font color='#FFEC00'>]</font color><br/><br/>
+{
+	[_currentSwRadio, _forEachIndex + 1, _x] call TFAR_fnc_SetChannelFrequency;
+} foreach (_radioNetArray select _channel);
 
-<font size='20'>ALPHA</font><br/>
-Squad Leader + Fireteam Leaders    <font color='#FFEC00'>[</font color><font color='#8A8A8A'>Alt Channel - %3</font color><font color='#FFEC00'>]</font color><br/>
-Squad Leader + Medic                <font color='#FFEC00'>[</font color>Channel 5 - %3<font color='#FFEC00'>]</font color><br/>
-<font color='#FF9980'>Fireteam 1</font color>                           	<font color='#FFEC00'>[</font color>Channel 1 - %4<font color='#FFEC00'>]</font color><br/>
-<font color='#99E699'>Fireteam 2</font color>                            <font color='#FFEC00'>[</font color>Channel 2 - %5<font color='#FFEC00'>]</font color><br/><br/>
+_className = tolower gettext (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
 
-<font size='20'>BRAVO</font><br/>
-Squad Leader + Fireteam Leaders    <font color='#FFEC00'>[</font color><font color='#8A8A8A'>Alt Channel - %6</font color><font color='#FFEC00'>]</font color><br/>
-Squad Leader + Medic                <font color='#FFEC00'>[</font color>Channel 5 - %6<font color='#FFEC00'>]</font color><br/>
-<font color='#FF9980'>Fireteam 1</font color>                           	<font color='#FFEC00'>[</font color>Channel 1 - %7<font color='#FFEC00'>]</font color><br/>
-<font color='#99E699'>Fireteam 2</font color>                            <font color='#FFEC00'>[</font color>Channel 2 - %8<font color='#FFEC00'>]</font color><br/><br/>
+[_currentSwRadio, _team - 1] call TFAR_fnc_setSwChannel;
 
-<font size='20'>CHARLIE</font><br/>
-Squad Leader + Fireteam Leaders    <font color='#FFEC00'>[</font color><font color='#8A8A8A'>Alt Channel - %9</font color><font color='#FFEC00'>]</font color><br/>
-Squad Leader + Medic                <font color='#FFEC00'>[</font color>Channel 5 - %9<font color='#FFEC00'>]</font color><br/>
-<font color='#FF9980'>Fireteam 1</font color>                           	<font color='#FFEC00'>[</font color>Channel 1 - %10<font color='#FFEC00'>]</font color><br/>
-<font color='#99E699'>Fireteam 2</font color>                            <font color='#FFEC00'>[</font color>Channel 2 - %11<font color='#FFEC00'>]</font color><br/><br/><br/>
-
-Radios are automatically set up for ease of use.<br/>
-<font color='#FFEC00'>[</font color>CAPS<font color='#FFEC00'>]</font color> is bound for inter-group communication.<br/>
-<font color='#FFEC00'>[</font color><font color='#8A8A8A'>T</font color><font color='#FFEC00'>]</font color> is bound for for higher-up communication.<br/>
-Fireteam members do not have an alternative channel.<br/><br/>
-
-<t underline='true'>IMPORTANT</t> - Remember the radio channels for your squad<br/>
-so you can re-establish communications if leaders are KIA or missing.",
-(_radioNetArray select 0) select 7,
-(_radioNetArray select 7) select 4,
-(_radioNetArray select 1) select 4,
-(_radioNetArray select 1) select 0,
-(_radioNetArray select 1) select 1,
-(_radioNetArray select 2) select 4,
-(_radioNetArray select 2) select 0,
-(_radioNetArray select 2) select 1,
-(_radioNetArray select 3) select 4,
-(_radioNetArray select 3) select 0,
-(_radioNetArray select 3) select 1]]];
-
-player createDiaryRecord ["radioFrequencies", ["Long Range Frequencies", format ["<br/>
-<font color='#FFEC00'><font size='20'>COMMAND NET</font></font color> <br/>
-Commander, Squad Leaders, Vehicles  <font color='#FFEC00'>[</font color><font color='#8A8A8A'>Channel 1 - 31</font color><font color='#FFEC00'>]</font color><br/><br/><br/>
-
-Radios are automatically set up for ease of use.<br/>
-<font color='#FFEC00'>[</font color>CAPS<font color='#FFEC00'>]</font color> is bound for inter-group communication."]]];
-
-[_radioNetArray] spawn {
-	params ["_radioNetArray"];
-	
-	_mf_groupChannel = player getVariable ["mf_groupChannel", [6, 4]];
-	_channel = _mf_groupChannel select 0;
-	_team = _mf_groupChannel select 1;
-
-	if (isNil {_radioNetArray select _channel}) exitWith {};
-	
-	if ({_x call TFAR_fnc_isPrototypeRadio} count (assignedItems player) == 0) exitWith {};
-
-	waitUntil {
-		time > 0 and call TFAR_fnc_haveSWRadio
-	};
-
-	_currentSwRadio = call TFAR_fnc_activeSwRadio;
-
-	{
-		[_currentSwRadio, _forEachIndex + 1, _x] call TFAR_fnc_SetChannelFrequency;
-	} foreach (_radioNetArray select _channel);
-
-	_className = tolower gettext (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
-
-	[_currentSwRadio, _team - 1] call TFAR_fnc_setSwChannel;
-
-	if (_className == "officer" or _className == "squad leader") then {
-		[_currentSwRadio, 8, (_radioNetArray select 0) select 7] call TFAR_fnc_SetChannelFrequency;
-		[_currentSwRadio, 7] call TFAR_fnc_setAdditionalSwChannel;
-	};
-
-	if (_className == "team leader") then {
-		[_currentSwRadio, 8, (_radioNetArray select 0) select 7] call TFAR_fnc_SetChannelFrequency;
-		[_currentSwRadio, 4] call TFAR_fnc_setAdditionalSwChannel;
-	};
+if (_className == "officer" or _className == "squad leader") then {
+	[_currentSwRadio, 8, (_radioNetArray select 0) select 7] call TFAR_fnc_SetChannelFrequency;
+	[_currentSwRadio, 7] call TFAR_fnc_setAdditionalSwChannel;
 };
 
-[] spawn {
-	if (count (player call TFAR_fnc_backpackLR) == 0) exitWith {};
-	
-	waitUntil {
-		time > 0 and call TFAR_fnc_haveLRRadio
-	};
-	
-	_currentLrRadio = player call TFAR_fnc_backpackLR;
-	
-	_lrSettings = [0,7,["31","32","33","34","35","36","37","38","39","40"],0,"_murshun",-1,0,false];
-	
-	[_currentLrRadio select 0, _currentLrRadio select 1, _lrSettings] call TFAR_fnc_setLrSettings;
+if (_className == "team leader") then {
+	[_currentSwRadio, 8, (_radioNetArray select 0) select 7] call TFAR_fnc_SetChannelFrequency;
+	[_currentSwRadio, 4] call TFAR_fnc_setAdditionalSwChannel;
 };
-
-player addEventHandler ["GetInMan", {
-	if (count (player call TFAR_fnc_vehicleLr) == 0) exitWith {};
-
-	_currentVehRadio = player call TFAR_fnc_vehicleLr;
-	
-	_lrSettings = [0,7,["31","32","33","34","35","36","37","38","39","40"],0,"_murshun",-1,0,false];
-	
-	[_currentVehRadio select 0, _currentVehRadio select 1, _lrSettings] call TFAR_fnc_setLrSettings;
-}];

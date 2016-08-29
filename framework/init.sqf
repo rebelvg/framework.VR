@@ -45,50 +45,52 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 };
 
 [] spawn {
+	if (!hasInterface) exitWith {};
+
 	waitUntil {!isNull player};
 	
-	if (!isNil "mf_onlyPilotsCanFly" && isMultiplayer) then {
-		if (mf_onlyPilotsCanFly) then {
-			player addEventHandler ["GetInMan", {
-				_unit = _this select 0;
-				_veh = _this select 2;
-				_className = tolower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
-				
-				if ([_unit] call mf_fnc_isUnitPilot) then {
-					if (_className != "pilot") then {
-						
-						if ((getPosATL _veh) select 2 < 5) then {
-							unassignVehicle _unit;
-							moveOut _unit;
-							
-							systemChat "Only pilots can fly.";
-						};
-					};
-				};
-			}];
-			
-			player addEventHandler ["SeatSwitchedMan", {
-				_unit = _this select 0;
-				_veh = _this select 2;
-				_className = tolower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
-				
-				if ([_unit] call mf_fnc_isUnitPilot) then {
-					if (_className != "pilot") then {
-						
-						if ((getPosATL _veh) select 2 < 5) then {
-							unassignVehicle _unit;
-							moveOut _unit;
-							
-							systemChat "Can change sits only when flying.";
-						};
-					};
-				};
-			}];
-		};
-	};
+	if (!isMultiplayer) exitWith {};
+	
+	if (isNil "mf_onlyPilotsCanFly") exitWith {};
+	
+	if (!mf_onlyPilotsCanFly) exitWith {};
+
+	player addEventHandler ["GetInMan", {
+		params ["_unit", "_position", "_veh"];
+		_className = tolower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
+		
+		if (_className == "pilot") exitWith {};
+		
+		if (!([_unit] call mf_fnc_isUnitPilot)) exitWith {};
+		
+		if ((getPosATL _veh) select 2 > 5) exitWith {};
+
+		unassignVehicle _unit;
+		moveOut _unit;
+		
+		systemChat "Only pilots can fly.";
+	}];
+	
+	player addEventHandler ["SeatSwitchedMan", {
+		params ["_unit", "_unit2", "_veh"];
+		_className = tolower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
+		
+		if (_className == "pilot") exitWith {};
+		
+		if (!([_unit] call mf_fnc_isUnitPilot)) exitWith {};
+		
+		if ((getPosATL _veh) select 2 > 5) exitWith {};
+
+		unassignVehicle _unit;
+		moveOut _unit;
+		
+		systemChat "Can change sits only when flying.";
+	}];
 };
 
 [] spawn {
+	if (!hasInterface) exitWith {};
+	
 	waitUntil {!isNull player};
 
 	if (isNil "base_marker") then {
