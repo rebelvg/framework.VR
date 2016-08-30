@@ -1,42 +1,3 @@
-if (!isMultiplayer) then {
-	[] call mf_disableAI_fnc;
-	[] spawn mf_debugLoadout_fnc;
-	
-	DAC_Com_Values = [1,2,3,1];
-	DAC_Marker = 2;
-};
-
-if (isNil "murshun_ffArray") then {
-	murshun_ffArray = [];
-};
-
-if (isNil "murshun_respawnArray") then {
-	murshun_respawnArray = [];
-};
-
-murshun_debriefing_text = "";
-
-addMissionEventHandler ["Ended", {
-	murshun_debriefing_text = format [
-	"---Friendly Fire Logs---<br/>
-	%1<br/>
-	---Spectators---<br/>
-	%2<br/>
-	---Players---<br/>
-	%3<br/>
-	---Players Killed---<br/>
-	%4<br/>
-	---AI Killed---<br/>
-	%5
-	",
-	str (murshun_ffArray apply {(_x select 1) + " damaged " + (_x select 0) + " " + str ceil ((time - (_x select 2))/60) + " minutes ago"}),
-	str murshun_respawnArray,
-	str (allPlayers apply {name _x}),
-	murshun_framework_playersKilled,
-	murshun_framework_unitsKilled
-	];
-}];
-
 if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 	[false, true] call acre_api_fnc_setupMission;
 	[true] call acre_api_fnc_setRevealToAI;
@@ -101,3 +62,34 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 		createMarkerLocal ["respawn", getMarkerPos "base_marker"];
 	};
 };
+
+if (isNil "murshun_ffArray") then {
+	murshun_ffArray = [];
+};
+
+if (isNil "murshun_respawnArray") then {
+	murshun_respawnArray = [];
+};
+
+murshun_debriefing_text = "";
+
+addMissionEventHandler ["Ended", {
+	murshun_debriefing_text = format [
+	"---Friendly Fire Logs---<br/>
+	%1<br/>
+	---Spectators---<br/>
+	%2<br/>
+	---Players---<br/>
+	%3<br/>
+	---Players Killed---<br/>
+	%4<br/>
+	---AI Killed---<br/>
+	%5
+	",
+	str (murshun_ffArray apply {(_x select 1) + " damaged " + (_x select 0) + " " + str ceil ((time - (_x select 2))/60) + " minutes ago"}),
+	str murshun_respawnArray,
+	str (allPlayers apply {name _x}),
+	murshun_framework_playersKilled,
+	murshun_framework_unitsKilled
+	];
+}];

@@ -6,7 +6,7 @@ if (didJIP) then {
 	[] execVM "scripts\teamRoster.sqf";
 };
 
-[player] spawn murshun_assignTeam_fnc;
+[player] call murshun_assignTeam_fnc;
 
 [{
 	_showHUD = [true,true,false,true,false,false,false,true];

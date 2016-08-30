@@ -159,24 +159,20 @@ mf_disableAI_fnc = {
 };
 
 mf_debugLoadout_fnc = {
-	waitUntil {time > 0};
-
 	{
 		[_x] call mf_fnc_giveLoadout;
-		[_x] spawn murshun_assignTeam_fnc;
+		[_x] call murshun_assignTeam_fnc;
 	} forEach (switchableUnits - [player]);
 };
 
 murshun_assignTeam_fnc = {
 	_unit = _this select 0;
+	
 	_mf_groupChannel = _unit getVariable ["mf_groupChannel", [6, 4]];
-
 	_squad = _mf_groupChannel select 0;
 	_team = _mf_groupChannel select 1;
 
 	_teamsArray = ["MAIN", "RED", "GREEN", "BLUE", "YELLOW"];
-
-	waitUntil {time > 0};
 
 	if (_team > 0 and _team < 5) then {
 		[[_unit, _teamsArray select _team], "ace_interaction_fnc_joinTeam"] call BIS_fnc_MP;
@@ -186,35 +182,41 @@ murshun_assignTeam_fnc = {
 mf_fnc_dynamicItems = {
 	_box = _this select 0;
 	
-	if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
-		_itemsArray = (getItemCargo _box) select 0;
+	if (!(isClass (configFile >> "CfgPatches" >> "acre_main"))) exitWith {};
+	
+	_itemsArray = (getItemCargo _box) select 0;
+	
+	clearItemCargoGlobal _box;
+	
+	if (count _itemsArray == 0) exitWith {};
+	
+	{
+		_box addItemCargoGlobal [_x, 2];
+	} forEach _itemsArray;
+
+	[{
+		params ["_args", "_handle"];
+		_box = _args select 0;
+		_itemsArray = _args select 1;
 		
-		clearItemCargoGlobal _box;
+		if (!alive _box) exitWith {
+			[_handle] call CBA_fnc_removePerFrameHandler;
+		};
 		
-		if (count _itemsArray == 0) exitWith {};
+		_getItemCargo = getItemCargo _box;
 		
 		{
-			_box addItemCargoGlobal [_x, 2];
-		} forEach _itemsArray;
-		
-		while {alive _box} do {
-			_getItemCargo = getItemCargo _box;
-			
-			{
-				if (_x in (_getItemCargo select 0)) then {
-					_index = (_getItemCargo select 0) find _x;
-					
-					if (_getItemCargo select 1 select _index < 2) then {
-						_box addItemCargoGlobal [_x, 1];
-					};
-				} else {
-					_box addItemCargoGlobal [_x, 2];
+			if (_x in (_getItemCargo select 0)) then {
+				_index = (_getItemCargo select 0) find _x;
+				
+				if (_getItemCargo select 1 select _index < 2) then {
+					_box addItemCargoGlobal [_x, 1];
 				};
-			} foreach _itemsArray;
-			
-			sleep (1/10);
-		};
-	};	
+			} else {
+				_box addItemCargoGlobal [_x, 2];
+			};
+		} foreach _itemsArray;
+	}, 1/2, [_box, _itemsArray]] call CBA_fnc_addPerFrameHandler;
 };
 
 mf_fnc_isUnitPilot = {
