@@ -123,7 +123,7 @@ _loadoutArray = [
 	[
 		[
 			["all"],
-			[["ACRE_PRC343", 1], ["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items, acre radios go here
+			[["ACRE_PRC343", 1], ["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 4], [_lethalGrenade, 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items, acre radios go here
 			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "tf_anprc152", "NVGoggles"] //link items, tfar radios go here
 		],
 		[
@@ -161,8 +161,8 @@ _loadoutArray = [
 		["murshun_cigs_cigpack", 20],
 		["murshun_cigs_matches", 20],
 		[_boxAT, 20],
-		[_nonLethalGrenade, 100],
-		[_lethalGrenade, 20],
+		[_nonLethalGrenade, 200],
+		[_lethalGrenade, 80],
 		["DemoCharge_Remote_Mag", 20],
 		["SatchelCharge_Remote_Mag", 4]
 	] //content for boxes
