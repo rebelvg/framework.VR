@@ -6,8 +6,8 @@ if (!isMultiplayer) then {
 	DAC_Marker = 2;
 };
 
-if (!isNil "ZE_Zeus") then {
-	if (isMultiplayer) then {
+if (isMultiplayer) then {
+	if (!isNil "ZE_Zeus") then {
 		deleteVehicle ZE_Zeus;
 	};
 };
