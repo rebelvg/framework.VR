@@ -1,5 +1,5 @@
 _unit = _this select 0;
-_className = tolower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
+_className = toLower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
 
 _loadoutArray = [];
 
@@ -32,15 +32,13 @@ if (count _loadoutArray == 3) then {
 
 	{
 		{
-			_allClassesArray = _allClassesArray + [tolower _x];
+			_allClassesArray = _allClassesArray + [toLower _x];
 		} foreach (_x select 0);
 	} foreach (_loadoutArray select 0);
 
 	if (!(_className in _allClassesArray)) then {
-		if (!isMultiplayer) then {
-			systemChat format ["Can't find loadout for %1, falling back to rifleman.", _className];
-		};
-		
+		systemChat format ["Can't find loadout for %1, falling back to rifleman.", _className];
+
 		_className = "rifleman";
 	};
 
