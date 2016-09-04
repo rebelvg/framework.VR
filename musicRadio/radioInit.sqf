@@ -1,6 +1,8 @@
 _radio = _this select 0;
 
-waitUntil {!isNil "murshun_radioInit"};
+if (isNil "murshun_musicRadiosArray") then {
+	murshun_musicRadiosArray = [];
+};
 
 if (!isNil {_radio getVariable "murshun_radio_actionAdded"}) exitWith {};
 

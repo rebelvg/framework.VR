@@ -69,7 +69,9 @@ KK_fnc_arrayShufflePlus = {
 	_arr
 };
 
-murshun_musicRadiosArray = [];
+if (isNil "murshun_musicRadiosArray") then {
+	murshun_musicRadiosArray = [];
+};
 
 if (isNil "murshun_whatSong") then {
 	murshun_whatSong = "";
@@ -80,6 +82,8 @@ if (isNil "murshun_timeStarted") then {
 };
 
 [] spawn {
+	if (!hasInterface) exitWith {};
+
 	waitUntil {!isNull player};
 	
 	player addEventHandler ["Respawn", {
@@ -87,9 +91,9 @@ if (isNil "murshun_timeStarted") then {
 	}];
 };
 
-murshun_radioInit = true;
-
-if (isServer) then {
+[] spawn {
+	if (!isServer) exitWith {};
+	
 	waitUntil {time > 15};
 	
 	_musicArray = [];
@@ -97,8 +101,6 @@ if (isServer) then {
 	if (!isNil "murshun_radioSongs") then {
 		if (count murshun_radioSongs != 0) then {
 			_musicArray = murshun_radioSongs;
-			
-			_musicArray = _musicArray select {getText (configFile >> "CfgMusic" >> _x >> "tag") == "Poddy Music"};
 		};
 	};
 	
@@ -113,17 +115,17 @@ if (isServer) then {
 				} foreach murshun_radioThemes;
 				
 				_musicArray = _musicArray apply {configName _x};
-				
-				_musicArray = _musicArray select {getText (configFile >> "CfgMusic" >> _x >> "tag") == "Poddy Music"};
 			};
 		};
 	};
 	
 	if (count _musicArray == 0) then {
-		_musicArray = "gettext (_x >> 'tag') == 'Poddy Music'" configClasses (configFile >> "CfgMusic");
+		_musicArray = "true" configClasses (configFile >> "CfgMusic");
 		
 		_musicArray = _musicArray apply {configName _x};
 	};
+	
+	_musicArray = _musicArray select {getText (configFile >> "CfgMusic" >> _x >> "tag") == "Poddy Music"};
 	
 	if (count _musicArray == 0) exitWith {};
 	
@@ -153,17 +155,7 @@ if (isServer) then {
 				};
 			} foreach murshun_musicRadiosArray;
 			
-			murshun_skipTrack = false;
-			
-			_time = time;
-			waitUntil {
-				sleep 1;
-				time > (_time + _songLength) or murshun_skipTrack
-			};
-			
-			murshun_skipTrack = false;
+			sleep _songLength;
 		} foreach murshun_radioSongs;
-		
-		sleep (1/10);
 	};	
 };
