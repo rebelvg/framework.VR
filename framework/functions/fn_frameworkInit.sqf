@@ -155,6 +155,7 @@ murshun_fillBox_fnc = {
 mf_disableAI_fnc = {
 	{
 		_x disableAI "ANIM";
+		_x switchMove "";
 	} forEach (switchableUnits - [player]);
 };
 
