@@ -60,6 +60,9 @@ If you, as mission maker, want to respawn people on the base_marker you can exec
 [] spawn murshun_spectator_reviveAllPlayers_fnc;
 in your tasks. Execute only once from the server side.
 If base_marker is not present, they will respawn on the position they first spawned in.
+Or respawn people at a specific location using example below.
+[getMarkerPos "base_marker"] spawn murshun_spectator_reviveAllPlayers_fnc;
+Or use any other command that returns coordinates.
 
 Recommended settings for TVT missions.
 description.ext - enableDebugConsole = 0;

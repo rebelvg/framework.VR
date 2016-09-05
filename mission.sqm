@@ -43,8 +43,6 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"ace_finger",
 	"ace_optionsmenu",
-	"A3_Structures_F_EPA_Civ_Camping",
-	"A3_Props_F_Exp_A_Military_Equipment",
 	"A3_Supplies_F_Heli_CargoNets",
 	"ace_common",
 	"ace_weather",
@@ -61,7 +59,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=26;
+		items=24;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -158,82 +156,68 @@ class AddonsMetaData
 		};
 		class Item14
 		{
-			className="A3_Structures_F_EPA";
-			name="Arma 3 Survive Episode - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="http://www.arma3.com";
-		};
-		class Item15
-		{
-			className="A3_Props_F_Exp_A";
-			name="Arma 3 Nexus Update - Decorative and Mission Objects";
-			author="Bohemia Interactive";
-			url="http://www.arma3.com";
-		};
-		class Item16
-		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item17
+		class Item15
 		{
 			className="ace_common";
 			name="ACE3 - Common";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item18
+		class Item16
 		{
 			className="ace_weather";
 			name="ACE3 - Weather";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item19
+		class Item17
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item20
+		class Item18
 		{
 			className="ace_parachute";
 			name="ACE3 - Parachute";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item21
+		class Item19
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item22
+		class Item20
 		{
 			className="ace_viewdistance";
 			name="ACE3 - View Distance";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item23
+		class Item21
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item24
+		class Item22
 		{
 			className="ace_refuel";
 			name="ACE3 - Refuel";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item25
+		class Item23
 		{
 			className="ace_rearm";
 			name="ACE3 - Rearm";
@@ -372,7 +356,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=48;
+		items=46;
 		class Item0
 		{
 			dataType="Marker";
@@ -2755,125 +2739,6 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={615.28015,5.4322958,585.3642};
-				angles[]={0,1.7361503,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				skill=0.60000002;
-			};
-			id=191;
-			type="Land_WoodenTable_small_F";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ace_isRepairFacility";
-					expression="_this setVariable ['ace_isRepairFacility',_value, true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ace_isMedicalFacility";
-					expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item19
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={615.29797,5.8758397,585.40002};
-				angles[]={0,0.17879154,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				init="0 = [this] spawn mf_fnc_addReviveBase;";
-			};
-			id=197;
-			type="Land_DataTerminal_01_F";
-			atlOffset=0.00040817261;
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ace_isRepairFacility";
-					expression="_this setVariable ['ace_isRepairFacility',_value, true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ace_isMedicalFacility";
-					expression="_this setVariable [""ace_medical_isMedicalFacility"", _value,  true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item20
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={612.87799,5.6349964,562.72998};
 				angles[]={0,3.2722654,0};
 			};
@@ -2929,7 +2794,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item21
+		class Item19
 		{
 			dataType="Object";
 			class PositionInfo
@@ -2989,7 +2854,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item22
+		class Item20
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3049,7 +2914,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item23
+		class Item21
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3109,7 +2974,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item24
+		class Item22
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3169,7 +3034,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item25
+		class Item23
 		{
 			dataType="Object";
 			class PositionInfo
@@ -3229,7 +3094,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item26
+		class Item24
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -3300,7 +3165,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item27
+		class Item25
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -3429,7 +3294,7 @@ class Mission
 				nAttributes=6;
 			};
 		};
-		class Item28
+		class Item26
 		{
 			dataType="Group";
 			side="West";
@@ -3714,7 +3579,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item29
+		class Item27
 		{
 			dataType="Group";
 			side="West";
@@ -4431,7 +4296,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item30
+		class Item28
 		{
 			dataType="Group";
 			side="West";
@@ -5148,7 +5013,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item31
+		class Item29
 		{
 			dataType="Group";
 			side="West";
@@ -5865,7 +5730,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item32
+		class Item30
 		{
 			dataType="Group";
 			side="East";
@@ -6147,7 +6012,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item33
+		class Item31
 		{
 			dataType="Group";
 			side="East";
@@ -6857,7 +6722,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item34
+		class Item32
 		{
 			dataType="Group";
 			side="East";
@@ -7567,7 +7432,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item35
+		class Item33
 		{
 			dataType="Group";
 			side="East";
@@ -8277,7 +8142,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item36
+		class Item34
 		{
 			dataType="Group";
 			side="Independent";
@@ -8559,7 +8424,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item37
+		class Item35
 		{
 			dataType="Group";
 			side="Independent";
@@ -9269,7 +9134,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item38
+		class Item36
 		{
 			dataType="Group";
 			side="Independent";
@@ -9979,7 +9844,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item39
+		class Item37
 		{
 			dataType="Group";
 			side="Independent";
@@ -10689,7 +10554,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item40
+		class Item38
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -10741,7 +10606,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item41
+		class Item39
 		{
 			dataType="Object";
 			class PositionInfo
@@ -10780,7 +10645,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item42
+		class Item40
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -10813,7 +10678,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item43
+		class Item41
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -10846,7 +10711,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item44
+		class Item42
 		{
 			dataType="Group";
 			side="West";
@@ -11131,7 +10996,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item45
+		class Item43
 		{
 			dataType="Group";
 			side="East";
@@ -11412,7 +11277,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item46
+		class Item44
 		{
 			dataType="Group";
 			side="Independent";
@@ -11693,7 +11558,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item47
+		class Item45
 		{
 			dataType="Trigger";
 			position[]={600,5,1300};
