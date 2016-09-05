@@ -265,6 +265,7 @@ mf_fnc_isUnitCoPilot = {
 
 //ace block
 ace_respawn_SavePreDeathGear = false;
+ace_medical_playerDamageThreshold = 20;
 ace_sitting_enable = true;
 
 //tfar block
