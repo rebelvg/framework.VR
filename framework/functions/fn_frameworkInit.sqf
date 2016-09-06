@@ -176,7 +176,7 @@ murshun_assignTeam_fnc = {
 	_teamsArray = ["MAIN", "RED", "GREEN", "BLUE", "YELLOW"];
 
 	if (_team > 0 and _team < 5) then {
-		[[_unit, _teamsArray select _team], "ace_interaction_fnc_joinTeam"] call BIS_fnc_MP;
+		[_unit, _teamsArray select _team] call ace_interaction_fnc_joinTeam;
 	};
 };
 
