@@ -26,7 +26,7 @@ if (count _152Radios > 0) then {
 	[(_152Radios select 0), "RIGHT"] call acre_api_fnc_setRadioSpatial;
 };
 
-_className = toLower gettext (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
+_className = toLower getText (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
 
 if (_className == "team leader") then {
 	if (count _343Radios > 1) then {

@@ -49,6 +49,8 @@ murshun_createRadio_fnc = {
 	_hiddenRadio attachTo [_radio, [0, 0, 0]];
 	_radio setVariable ["murshun_hiddenRadio", _hiddenRadio, true];
 	
+	if (murshun_whatSong == "") exitWith {};
+	
 	if (_radio isKindOf "air") then {
 		[[_hiddenRadio, "loud_" + murshun_whatSong], "say3d"] call BIS_fnc_MP;
 	} else {
@@ -109,7 +111,7 @@ if (isNil "murshun_timeStarted") then {
 			if (count murshun_radioThemes != 0) then {
 				{
 					if (count _x != 0) then {
-						_searchString = format ["gettext (_x >> 'theme') == '%1'", _x];
+						_searchString = format ["getText (_x >> 'theme') == '%1'", _x];
 						_musicArray = _musicArray + (_searchString configClasses (configFile >> "CfgMusic"));
 					};
 				} foreach murshun_radioThemes;

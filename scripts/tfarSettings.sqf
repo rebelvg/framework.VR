@@ -20,7 +20,7 @@ _currentSwRadio = call TFAR_fnc_activeSwRadio;
 	[_currentSwRadio, _forEachIndex + 1, _x] call TFAR_fnc_SetChannelFrequency;
 } foreach (_radioNetArray select _channel);
 
-_className = toLower gettext (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
+_className = toLower getText (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
 
 [_currentSwRadio, _team - 1] call TFAR_fnc_setSwChannel;
 

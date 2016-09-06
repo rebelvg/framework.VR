@@ -13,7 +13,7 @@ _vehicle = _this select 0;
 
 	_vehicle addEventHandler ["ControlsShifted", {
 		params ["_veh", "_unit"];			
-		_className = toLower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
+		_className = toLower getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
 		
 		if (_className == "pilot") exitWith {};
 		

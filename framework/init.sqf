@@ -18,7 +18,7 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 
 	player addEventHandler ["GetInMan", {
 		params ["_unit", "_position", "_veh"];
-		_className = toLower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
+		_className = toLower getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
 		
 		if (_className == "pilot") exitWith {};
 		
@@ -34,7 +34,7 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 	
 	player addEventHandler ["SeatSwitchedMan", {
 		params ["_unit", "_unit2", "_veh"];
-		_className = toLower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
+		_className = toLower getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
 		
 		if (_className == "pilot") exitWith {};
 		

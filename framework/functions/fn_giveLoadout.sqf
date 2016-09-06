@@ -1,5 +1,5 @@
 _unit = _this select 0;
-_className = toLower gettext (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
+_className = toLower getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
 
 _loadoutArray = [];
 
