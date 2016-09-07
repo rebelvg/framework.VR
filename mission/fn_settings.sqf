@@ -8,8 +8,6 @@ murshun_radioSongs = [];
 
 //mods
 murshun_easywayout_canSuicide = false;
-murshun_allowJipTeleporting = true;
-murshun_menu_allowMenu = true;
 murshun_spectator_enable = true;
 
 //framework
