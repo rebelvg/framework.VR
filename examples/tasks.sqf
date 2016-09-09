@@ -54,7 +54,12 @@ waitUntil {
 	waitUntil {
 		{isObjectHidden _x} count allPlayers == count allPlayers && count allPlayers > 0
 	};
-	
+
+	_string = format ["Mission failed. Mission will end in 15 seconds."];
+	[_string, "systemChat"] call BIS_fnc_MP;
+
+	sleep 15;
+
 	[{
 		["Failed1", false, true, true] call BIS_fnc_endMission;
 	}, "BIS_fnc_spawn"] call BIS_fnc_MP;
