@@ -1,9 +1,6 @@
 if (!isMultiplayer) then {
 	[] call mf_disableAI_fnc;
 	[] call mf_debugLoadout_fnc;
-	
-	DAC_Com_Values = [1,2,3,1];
-	DAC_Marker = 2;
 };
 
 if (isMultiplayer) then {

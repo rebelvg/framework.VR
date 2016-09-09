@@ -2709,7 +2709,7 @@ class Mission
 			class Attributes
 			{
 				name="z1";
-				text="example zone";
+				text="zone";
 				condition="time > 1";
 				onActivation="fun = [""z1"",[1,1,0],[6,3,60,10],[],[],[],[0,0,0,2,2]] spawn DAC_Zone;";
 				sizeA=200;
@@ -11429,7 +11429,7 @@ class Mission
 			class Attributes
 			{
 				name="z2";
-				text="example camp";
+				text="camp";
 				condition="time > 1";
 				onActivation="fun = [""z2"",[1,1,0,0],[],[],[],[1,0,0,1,100,10],[0,0,0,2,2]] spawn DAC_Zone;";
 				sizeA=200;

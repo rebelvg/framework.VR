@@ -280,3 +280,8 @@ if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
 	tf_same_sw_frequencies_for_side = true;
 	tf_same_lr_frequencies_for_side = true;
 };
+
+if (!isMultiplayer) then {	
+	DAC_Com_Values = [1,2,3,1];
+	DAC_Marker = 2;
+};
