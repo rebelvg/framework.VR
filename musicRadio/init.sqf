@@ -39,7 +39,7 @@ murshun_removeRadio_fnc = {
 
 murshun_createRadio_fnc = {
 	_radio = _this select 0;
-	_hiddenRadio = "Land_FMradio_F" createVehicle [0, 0, 0];
+	_hiddenRadio = "#particlesource" createVehicle [0, 0, 0];
 	
 	[[_hiddenRadio, true], "hideObjectGlobal", false] call BIS_fnc_MP;
 	hideObject _hiddenRadio;
