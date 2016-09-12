@@ -123,17 +123,12 @@ _loadoutArray = [
 	[
 		[
 			["all"],
-			[["ACRE_PRC343", 1], ["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 4], [_lethalGrenade, 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items, acre radios go here
+			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 4], [_lethalGrenade, 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items, acre radios go here
 			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "tf_anprc152", "NVGoggles"] //link items, tfar radios go here
 		],
 		[
-			["officer", "squad leader"],
-			[["ACRE_PRC152", 1], ["murshun_cigs_lighter", 1]],
-			[]
-		],
-		[
-			["team leader"],
-			[["ACRE_PRC152", 1], ["murshun_cigs_lighter", 1]],
+			["officer", "squad leader", "team leader"],
+			[["murshun_cigs_lighter", 1]],
 			[]
 		],
 		[
@@ -147,7 +142,17 @@ _loadoutArray = [
 			[]
 		],
 		[
-			["pilot"],
+			["team leader", "missile specialist (at)", "autorifleman", "rifleman (at)", "rifleman", "grenadier", "missile specialist (aa)"],
+			[["ACRE_PRC343", 1]],
+			[]
+		],
+		[
+			["officer", "squad leader", "team leader", "combat life saver", "engineer"],
+			[["ACRE_PRC148", 1]],
+			[]
+		],
+		[
+			["officer", "squad leader", "pilot"],
 			[["ACRE_PRC152", 1]],
 			[]
 		]

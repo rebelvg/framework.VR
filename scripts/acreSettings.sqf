@@ -19,18 +19,10 @@ if (count _343Radios > 0) then {
 };
 
 if (count _148Radios > 0) then {
-	[(_148Radios select 0), "RIGHT"] call acre_api_fnc_setRadioSpatial;
+	[(_148Radios select 0), _channel] call acre_api_fnc_setRadioChannel;
+	[(_148Radios select 0), "LEFT"] call acre_api_fnc_setRadioSpatial;
 };
 
 if (count _152Radios > 0) then {
 	[(_152Radios select 0), "RIGHT"] call acre_api_fnc_setRadioSpatial;
-};
-
-_className = toLower getText (configFile >> "CfgVehicles" >> typeOf player >> "displayName");
-
-if (_className == "team leader") then {
-	if (count _343Radios > 1) then {
-		[(_343Radios select 1), _channel + 64] call acre_api_fnc_setRadioChannel;
-		[(_343Radios select 1), "RIGHT"] call acre_api_fnc_setRadioSpatial;
-	};
 };

@@ -10606,13 +10606,13 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 3]];";
 						name="b_38";
-						description="Special Weapons - SL";
+						description="Alpha - Special Weapons - TL";
 						isPlayable=1;
 					};
 					id=889;
-					type="B_Soldier_SL_F";
+					type="B_Soldier_TL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10668,7 +10668,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 3]];";
 						name="b_39";
 						isPlayable=1;
 					};
@@ -10729,7 +10729,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 3]];";
 						name="b_40";
 						isPlayable=1;
 					};
@@ -10790,7 +10790,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 3]];";
 						name="b_41";
 						isPlayable=1;
 					};
@@ -10886,13 +10886,13 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 3]];";
 						name="o_38";
-						description="Special Weapons - SL";
+						description="Alpha - Special Weapons - TL";
 						isPlayable=1;
 					};
 					id=907;
-					type="O_Soldier_SL_F";
+					type="O_Soldier_TL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10947,7 +10947,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 3]];";
 						name="o_39";
 						isPlayable=1;
 					};
@@ -11007,7 +11007,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 3]];";
 						name="o_40";
 						isPlayable=1;
 					};
@@ -11067,7 +11067,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 3]];";
 						name="o_41";
 						isPlayable=1;
 					};
@@ -11163,13 +11163,13 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 3]];";
 						name="i_38";
-						description="Special Weapons - SL";
+						description="Alpha - Special Weapons - TL";
 						isPlayable=1;
 					};
 					id=918;
-					type="I_Soldier_SL_F";
+					type="I_Soldier_TL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11224,7 +11224,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 3]];";
 						name="i_39";
 						isPlayable=1;
 					};
@@ -11284,7 +11284,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 3]];";
 						name="i_40";
 						isPlayable=1;
 					};
@@ -11344,7 +11344,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="this setVariable [""mf_groupChannel"", [4, 5]];";
+						init="this setVariable [""mf_groupChannel"", [1, 3]];";
 						name="i_41";
 						isPlayable=1;
 					};
