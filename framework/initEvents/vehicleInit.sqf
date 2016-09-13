@@ -2,13 +2,15 @@ _vehicle = _this select 0;
 
 [_vehicle] execVM "musicRadio\radioInit.sqf";
 
-[] spawn {
+[_vehicle] spawn {
+	params ["_vehicle"];
+
 	if (!isMultiplayer) exitWith {};
-	
+
 	if (isNil "mf_onlyPilotsCanFly") exitWith {};
-	
+
 	if (!mf_onlyPilotsCanFly) exitWith {};
-	
+
 	if (!(_vehicle isKindOf "air")) exitWith {};
 
 	_vehicle addEventHandler ["ControlsShifted", {
