@@ -6,7 +6,7 @@ if (didJIP) then {
 	[] execVM "scripts\teamRoster.sqf";
 };
 
-[player] call murshun_assignTeam_fnc;
+[{!isNull findDisplay 46}, murshun_assignTeam_fnc, [player]] call CBA_fnc_waitUntilAndExecute;
 
 [{
 	_showHUD = [true,true,false,true,false,false,false,true];
