@@ -8,15 +8,6 @@ if (didJIP) then {
 
 [{!isNull findDisplay 46}, murshun_assignTeam_fnc, [player]] call CBA_fnc_waitUntilAndExecute;
 
-[{
-	_showHUD = [true,true,false,true,false,false,false,true];
-
-	_currentShowHUD = shownHUD;
-	if (!(_currentShowHUD isEqualTo _showHUD)) then {
-		showHUD _showHUD;
-	};
-}, 1, []] call CBA_fnc_addPerFrameHandler;
-
 waitUntil {time > 90};
 
 _monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];

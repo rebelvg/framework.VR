@@ -8,7 +8,7 @@ ALIVE.
 DAC.
 
 Optionals.
-TFAR or ACRE2.
+ACRE2.
 
 Framework Info.
 Spectator is located inside of our murshun pack. You can switch it by changing the value murshun_spectator_enable in the mission\fn_settings.sqf
@@ -16,9 +16,6 @@ Spectator is located inside of our murshun pack. You can switch it by changing t
 Framework should not throw ANY script errors. If you see any errors connected to the framework, you're probably doing something wrong, ask rebel.
 
 Framework settings are located in the mission\fn_settings.sqf
-List of songs and themes for murshun radio.
-https://gist.github.com/rebelvg/a16187f3a7b930fd958b0f0c9db7782f
-If music related arrays are empty, script will use all available songs or themes.
 
 You need to set mf_groupChannel for all playable units.
 Used for automatic acre2 and tfar configuration.
@@ -29,12 +26,6 @@ Squads available - 1 to 6, squad 7 is reserved for command network.
 Teams available - 1 to 4, team 5 is reserved for squad command network.
 So in total you can have 6 squads with 4 fireteams per squad which is more than enough which can cover up to 96 players (not counting any command players).
 Colors will be applied automatically.
-
-Radios are now automatically added to any vehicle.
-To add radio to an object use the line below.
-0 = [this] execVM "musicRadio\radioInit.sqf";
-Script will automatically detect if the object is a vehicle or a static object and will act accordingly.
-To start the radio use ace-interaction menu.
 
 Framework supports per-side loadouts.
 Visit mission\loadouts folder.
@@ -55,7 +46,10 @@ Framework now supports respawn integration in a gameplay form.
 If you want to have an object that will respawn players near it you need to place
 0 = [this] spawn mf_fnc_addReviveBase;
 in the object's init.
-Only officers and squad leaders will be able to call for respawn.
+Add
+0 = [this] spawn mf_fnc_addTeleportBase;
+to the box if you want this box to have a teleport to your squad option.
+
 If you, as mission maker, want to respawn people on the base_marker you can execute
 [] spawn murshun_spectator_reviveAllPlayers_fnc;
 in your tasks. Execute only once from the server side.
@@ -71,18 +65,6 @@ Alive Player Options - Max View Distance - 1500.
 Alive Player Options - Min Terrain Grid - 2.
 Ace View Distance Limiter - 1500.
 
-Some examples are located in the examples folder.
-
-ACRE2 and TFAR details.
-Framework now supports both radio systems and is backwards compatible.
-Just leave tfar and acre radios in the loadouts, they will be added only if the respective mod is enabled.
-Missions made for acre will work with tfar if we suddenly decide to switch back.
-To fight some of the acre performance issues, framework removes all items from ai units and boxes.
-And boxes on the base will have infinite number items.
-What I mean by items is stuff like - bandages, earplugs, etc, not mags or weapons or uniforms.
-That's happening because acre scans boxes for radios, and if a box has to many items in it, acre will produce freezes cause it's trying to scan too many items in one frame.
-It's an engine limitation, can't be easily fixed completely atm, acre team is working on a workaround and optimizing.
-
 New option to allow only pilots to fly helicopters.
 To enable it switch mf_onlyPilotsCanFly to true in the mission\fn_settings.sqf
 The way it works it restricts pilot sit for everyone but pilots, but allows for the use of co-pilot sit while restricting taking controls for non-pilots.
@@ -90,6 +72,12 @@ However, it allows to switch sits while flying and allows taking controls while 
 So basically it just restricts taking off for non-pilots.
 Activates only in multiplayer.
 
-Add
-0 = [this] spawn mf_fnc_addTeleportBase;
-to the box if you want this box to have a teleport to your squad option.
+Radios are now automatically added to any vehicle.
+To add radio to an object use the line below.
+0 = [this] execVM "musicRadio\radioInit.sqf";
+Script will automatically detect if the object is a vehicle or a static object and will act accordingly.
+To start the radio use ace-interaction menu.
+
+List of songs and themes for murshun radio.
+https://gist.github.com/rebelvg/a16187f3a7b930fd958b0f0c9db7782f
+If music related arrays are empty, script will use all available songs or themes.

@@ -123,8 +123,8 @@ _loadoutArray = [
 	[
 		[
 			["all"],
-			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 4], [_lethalGrenade, 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items, acre radios go here
-			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "tf_anprc152", "NVGoggles"] //link items, tfar radios go here
+			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 4], [_lethalGrenade, 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items
+			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "NVGoggles"] //link items
 		],
 		[
 			["officer", "squad leader", "team leader"],
