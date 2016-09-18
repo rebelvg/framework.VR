@@ -11,11 +11,11 @@ weaponsArray = [weaponArray1, handgunArray1];
 eqpArray = [classesArray, [fashionArray, weaponsArray]];
 */
 
-_basicMedicine = [["ACE_elasticBandage", 5], ["ACE_morphine", 2], ["ACE_epinephrine", 2]];
-_advancedMedicine = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 2], ["ACE_epinephrine", 2], ["ACE_atropine", 2], ["ACE_tourniquet", 1], ["ACE_personalAidKit", 1]];
+_basicMedicine = [["ACE_elasticBandage", 5], ["ACE_morphine", 3], ["ACE_epinephrine", 1]];
+_advancedMedicine = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 3], ["ACE_epinephrine", 1], ["ACE_tourniquet", 1], ["ACE_personalAidKit", 1]];
 
-_basicMedicMedicine = [["ACE_elasticBandage", 10], ["ACE_morphine", 3], ["ACE_epinephrine", 3], ["ACE_salineIV_500", 2]];
-_advancedMedicMedicine = [["ACE_elasticBandage", 10], ["ACE_quikclot", 10], ["ACE_morphine", 3], ["ACE_epinephrine", 3], ["ACE_atropine", 3], ["ACE_tourniquet", 2], ["ACE_personalAidKit", 2], ["ACE_salineIV_500", 2]];
+_basicMedicMedicine = [["ACE_elasticBandage", 5], ["ACE_morphine", 3], ["ACE_epinephrine", 1], ["ACE_salineIV_250", 1]];
+_advancedMedicMedicine = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 3], ["ACE_epinephrine", 1], ["ACE_tourniquet", 1], ["ACE_personalAidKit", 1], ["ACE_salineIV_250", 1]];
 
 _leaderFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
 _riflemanFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
