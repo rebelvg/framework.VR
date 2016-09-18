@@ -18,7 +18,7 @@ Framework should not throw ANY script errors. If you see any errors connected to
 Framework settings are located in the mission\fn_settings.sqf
 
 You need to set mf_groupChannel for all playable units.
-Used for automatic acre2 and tfar configuration.
+Used for automatic radio configuration.
 Example.
 this setVariable ["mf_groupChannel", [1, 1]];
 [1, 1] is a special radio array, 1 is a squad, 1 is a team.
