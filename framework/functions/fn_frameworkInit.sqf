@@ -266,7 +266,6 @@ mf_fnc_isUnitCoPilot = {
 
 //ace block
 ace_respawn_SavePreDeathGear = false;
-ace_sitting_enable = true;
 
 //tfar block
 if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
