@@ -2,7 +2,7 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 	player createDiarySubject ["radioFrequencies", "Radio Frequencies"];
 	player createDiaryRecord ["radioFrequencies", ["Short Range Frequencies", format ["<br/>
 <font color='#FFEC00'><font size='20'>COMMAND NET</font></font color> <br/>
-Commander, Squad Leaders, Special  <font color='#FFEC00'>[</font color><font color='#8A8A8A'>PRC152 / Channel - 1</font color><font color='#FFEC00'>]</font color><br/><br/>
+Commander, Squad Leaders, Special  <font color='#FFEC00'>[</font color><font color='#8A8A8A'>PRC152 / Channel - 33</font color><font color='#FFEC00'>]</font color><br/><br/>
 
 <font size='20'>COMMAND</font><br/>
 Commander + Medic             	           	  <font color='#FFEC00'>[</font color>PRC148 / Channel - 7<font color='#FFEC00'>]</font color><br/><br/>
