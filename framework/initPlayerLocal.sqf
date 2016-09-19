@@ -10,11 +10,11 @@ if (didJIP) then {
 
 [] call mf_fnc_onlyPilotsCanFlyPlayer;
 
-if (isNil "base_marker") then {
+if (!("base_marker" in allMapMarkers)) then {
 	createMarkerLocal ["base_marker", getPos player];
 };
 
-if (isNil "respawn") then {
+if (!("respawn" in allMapMarkers)) then {
 	createMarkerLocal ["respawn", getMarkerPos "base_marker"];
 };
 
