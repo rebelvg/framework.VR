@@ -66,11 +66,11 @@ So basically it just restricts taking off for non-pilots.
 Activates only in multiplayer.
 
 You can make vehicle respawnable by adding
-0 = [this, WEST] spawn mf_fnc_vehicleRespawn;
+0 = [this, WEST] spawn mf_fnc_addVehicleRespawn;
 to the vehicle init, with WEST as an example of selected loadout.
 Or if you want for vehicle to respawn empty just use
-0 = [this] spawn mf_fnc_vehicleRespawn;
-Please test this before adding this to your mission, vehicle respawning can be inconsistent and vehicles can accidentally respawn at a position which is already occupied. It should work fine most of the time but needs checking.
+0 = [this] spawn mf_fnc_addVehicleRespawn;
+Please test this before adding this to your mission, vehicle respawning can be inconsistent and vehicles can accidentally respawn at a position which is already occupied. It should work fine most of the time but needs checking. Vehicle should respawn at the exact same position it was placed at the start of the mission. Keep this area clear of other vehicles.
 
 Radios are now automatically added to any vehicle.
 To add radio to an object use the line below.

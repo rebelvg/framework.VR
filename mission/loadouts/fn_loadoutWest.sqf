@@ -52,7 +52,7 @@ _loadoutArray = [
 		[
 			["team leader"],
 			[
-				_riflemanFashion,
+				_leaderFashion,
 				[_leaderWeapon, _leaderHandgun, _binoculars]
 			]
 		],

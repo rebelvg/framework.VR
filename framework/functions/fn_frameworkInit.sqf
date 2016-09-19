@@ -264,14 +264,15 @@ mf_fnc_isUnitCoPilot = {
 	_return
 };
 
-mf_fnc_vehicleRespawn = {
+mf_fnc_addVehicleRespawn = {
 	params ["_vehicle", ["_side", sideEmpty]];
 	
 	if (!isServer) exitWith {};
 	
 	if (_vehicle isKindOf "Man") exitWith {};
 	
-	_vehicle setVariable ["mf_vehicleRespawnPos", getPos _vehicle];
+	_vehicle setVariable ["mf_vehicleRespawnPos", getPosATL _vehicle];
+	_vehicle setVariable ["mf_vehicleDir", getDir _vehicle];
 	_vehicle setVariable ["mf_vehicleLoadoutSide", _side];
 	
 	_vehicle addMPEventHandler ["MPKilled", {
@@ -281,19 +282,22 @@ mf_fnc_vehicleRespawn = {
 			if (!isServer) exitWith {};
 			
 			_spawnPos = _vehicle getVariable "mf_vehicleRespawnPos";
+			_vehDir = _vehicle getVariable "mf_vehicleDir";
 			_loadoutSide = _vehicle getVariable "mf_vehicleLoadoutSide";
 			_vehClass = typeOf _vehicle;
 			
 			sleep 30;
 			
-			if (_vehicle distance _spawnPos < 20) then {
+			if (_vehicle distance _spawnPos < 100) then {
 				deleteVehicle _vehicle;
 			};
 			
-			_newVehicle = _vehClass createVehicle _spawnPos;
+			_newVehicle = _vehClass createVehicle [0,0,0];
+			_newVehicle setDir _vehDir;
+			_newVehicle setPosATL _spawnPos;
 			
 			[_newVehicle, _loadoutSide] spawn mf_fnc_fillBox;
-			[_newVehicle, _loadoutSide] spawn mf_fnc_vehicleRespawn;
+			[_newVehicle, _loadoutSide] spawn mf_fnc_addVehicleRespawn;
 			
 			_string = format ["Vehicle %1 respawned at %2.", _vehClass, _spawnPos];
 			[_string, "systemChat"] call BIS_fnc_MP;
