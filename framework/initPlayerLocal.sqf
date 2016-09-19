@@ -15,7 +15,7 @@ if (!("base_marker" in allMapMarkers)) then {
 };
 
 if (!("respawn" in allMapMarkers)) then {
-	createMarkerLocal ["respawn", getMarkerPos "base_marker"];
+	createMarkerLocal ["respawn", getPos player];
 };
 
 waitUntil {time > 90};
