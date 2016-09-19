@@ -7,9 +7,9 @@ murshun_radioThemes = [];
 murshun_radioSongs = [];
 
 //mods
-murshun_easywayout_canSuicide = false;
 murshun_spectator_enable = true;
+murshun_easywayout_canSuicide = false;
 
 //framework
-murshun_customEnemyLoadouts = false;
+mf_customEnemyLoadouts = false;
 mf_onlyPilotsCanFly = false;

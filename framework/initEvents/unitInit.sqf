@@ -8,8 +8,8 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 	};
 };
 
-if (!isNil "murshun_customEnemyLoadouts") then {
-	if (murshun_customEnemyLoadouts) then {
+if (!isNil "mf_customEnemyLoadouts") then {
+	if (mf_customEnemyLoadouts) then {
 		if (!(_unit in (switchableUnits + playableUnits))) then {
 			[_unit] call mf_fnc_giveLoadout;
 		};

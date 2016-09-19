@@ -17,14 +17,15 @@ if (ace_medical_level > 1) then {
 	_box addItemCargoGlobal ["ACE_morphine", 20];
 	_box addItemCargoGlobal ["ACE_epinephrine", 20];
 	_box addItemCargoGlobal ["ACE_atropine", 20];
-	_box addItemCargoGlobal ["ACE_tourniquet", 10];
-	_box addItemCargoGlobal ["ACE_salineIV_250", 10];
-	_box addItemCargoGlobal ["ACE_personalAidKit", 10];
+	_box addItemCargoGlobal ["ACE_tourniquet", 20];
+	_box addItemCargoGlobal ["ACE_personalAidKit", 20];
+	_box addItemCargoGlobal ["ACE_salineIV_250", 20];	
 } else {
 	_box addItemCargoGlobal ["ACE_elasticBandage", 100];
+	_box addItemCargoGlobal ["ACE_quikclot", 100];
 	_box addItemCargoGlobal ["ACE_morphine", 20];
 	_box addItemCargoGlobal ["ACE_epinephrine", 20];
-	_box addItemCargoGlobal ["ACE_salineIV_250", 10];
+	_box addItemCargoGlobal ["ACE_salineIV_250", 20];
 };
 
 [_box] spawn mf_fnc_dynamicItems;

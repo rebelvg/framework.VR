@@ -1,7 +1,5 @@
 _vehicle = _this select 0;
 
-[_vehicle] execVM "musicRadio\radioInit.sqf";
-
 [_vehicle] spawn {
 	params ["_vehicle"];
 

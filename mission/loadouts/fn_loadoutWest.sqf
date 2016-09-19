@@ -26,12 +26,12 @@ _riflemanWeapon = ["arifle_MX_F", [["30Rnd_65x39_caseless_mag", 7]], []];
 _mgWeapon = ["arifle_MX_SW_F", [["100Rnd_65x39_caseless_mag_Tracer", 7]], ["bipod_01_F_snd"]];
 _grenadierWeapon = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 3]], []];
 
-_leaderHandgun = ["hgun_P07_F", [["16Rnd_9x21_Mag", 3]], []];
-_pilotHandgun = ["hgun_P07_F", [["16Rnd_9x21_Mag", 3]], []];
+_leaderHandgun = ["hgun_P07_F", [["16Rnd_9x21_Mag", 1]], []];
+_pilotHandgun = ["hgun_P07_F", [["16Rnd_9x21_Mag", 1]], []];
 
 _riflemanAT = ["launch_NLAW_F", [], []];
-_specialistAT = ["launch_B_Titan_short_F", [["Titan_AT", 3]], []];
-_specialistAA = ["launch_B_Titan_F", [["Titan_AA", 3]], []];
+_specialistAT = ["launch_B_Titan_short_F", [["Titan_AT", 2]], []];
+_specialistAA = ["launch_B_Titan_F", [["Titan_AA", 2]], []];
 
 _binoculars = ["Laserdesignator", [], []];
 
@@ -123,7 +123,7 @@ _loadoutArray = [
 	[
 		[
 			["all"],
-			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 4], [_lethalGrenade, 2], ["ACE_CableTie", 2]] + _advancedMedicine, //items
+			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 3], [_lethalGrenade, 1], ["ACE_CableTie", 1]] + _advancedMedicine, //items
 			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "NVGoggles"] //link items
 		],
 		[

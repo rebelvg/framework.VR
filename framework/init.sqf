@@ -6,15 +6,15 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 };
 
 [] spawn {
-	if (!hasInterface) exitWith {};
-
-	waitUntil {!isNull player};
+	if (!hasInterface) exitWith {};	
 	
 	if (!isMultiplayer) exitWith {};
 	
 	if (isNil "mf_onlyPilotsCanFly") exitWith {};
 	
 	if (!mf_onlyPilotsCanFly) exitWith {};
+	
+	waitUntil {!isNull player};
 
 	player addEventHandler ["GetInMan", {
 		params ["_unit", "_position", "_veh"];

@@ -39,16 +39,10 @@ Also for boxes and cars.
 If framework can't find the correct side loadoutArray it will skip the loadouts distribution.
 
 You can create custom loadouts for enemies now.
-Just set murshun_customEnemyLoadouts to true in the init.sqf and create a loadoutArray for your enemy side.
+Just set mf_customEnemyLoadouts to true in the init.sqf and create a loadoutArray for your enemy side.
 So for example your enemies are opfor just create loadoutArray_east and fill it accordingly to the standard.
 
 Framework now supports respawn integration in a gameplay form.
-If you want to have an object that will respawn players near it you need to place
-0 = [this] spawn mf_fnc_addReviveBase;
-in the object's init.
-Add
-0 = [this] spawn mf_fnc_addTeleportBase;
-to the box if you want this box to have a teleport to your squad option.
 
 If you, as mission maker, want to respawn people on the base_marker you can execute
 [] spawn murshun_spectator_reviveAllPlayers_fnc;
