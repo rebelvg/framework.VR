@@ -3,7 +3,7 @@ _className = toLower getText (configFile >> "CfgVehicles" >> typeOf _unit >> "di
 
 _loadoutArray = [];
 
-switch (side _unit) do {
+switch (side group _unit) do {
 case WEST: {
 		_loadoutArray = call mf_fnc_loadoutWest;
 	};
