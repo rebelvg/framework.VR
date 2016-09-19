@@ -5,64 +5,6 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 	[false] call acre_api_fnc_setFullDuplex;
 };
 
-[] spawn {
-	if (!hasInterface) exitWith {};	
-	
-	if (!isMultiplayer) exitWith {};
-	
-	if (isNil "mf_onlyPilotsCanFly") exitWith {};
-	
-	if (!mf_onlyPilotsCanFly) exitWith {};
-	
-	waitUntil {!isNull player};
-
-	player addEventHandler ["GetInMan", {
-		params ["_unit", "_position", "_veh"];
-		_className = toLower getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
-		
-		if (_className == "pilot") exitWith {};
-		
-		if (!([_unit] call mf_fnc_isUnitPilot)) exitWith {};
-		
-		if ((getPosATL _veh) select 2 > 5) exitWith {};
-
-		unassignVehicle _unit;
-		moveOut _unit;
-		
-		systemChat "Only pilots can fly.";
-	}];
-	
-	player addEventHandler ["SeatSwitchedMan", {
-		params ["_unit", "_unit2", "_veh"];
-		_className = toLower getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName");
-		
-		if (_className == "pilot") exitWith {};
-		
-		if (!([_unit] call mf_fnc_isUnitPilot)) exitWith {};
-		
-		if ((getPosATL _veh) select 2 > 5) exitWith {};
-
-		unassignVehicle _unit;
-		moveOut _unit;
-		
-		systemChat "Can change sits only when flying.";
-	}];
-};
-
-[] spawn {
-	if (!hasInterface) exitWith {};
-	
-	waitUntil {!isNull player};
-
-	if (isNil "base_marker") then {
-		createMarkerLocal ["base_marker", getPos player];
-	};
-
-	if (isNil "respawn") then {
-		createMarkerLocal ["respawn", getMarkerPos "base_marker"];
-	};
-};
-
 if (isNil "murshun_ffArray") then {
 	murshun_ffArray = [];
 };
@@ -71,10 +13,10 @@ if (isNil "murshun_respawnArray") then {
 	murshun_respawnArray = [];
 };
 
-murshun_debriefing_text = "";
+mf_debriefingText = "";
 
 addMissionEventHandler ["Ended", {
-	murshun_debriefing_text = format [
+	mf_debriefingText = format [
 	"---Friendly Fire Logs---<br/>
 	%1<br/>
 	---Spectators---<br/>

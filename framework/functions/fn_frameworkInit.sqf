@@ -264,7 +264,43 @@ mf_fnc_isUnitCoPilot = {
 	_return
 };
 
-//ace block
+mf_fnc_vehicleRespawn = {
+	params ["_vehicle", ["_side", sideEmpty]];
+	
+	if (!isServer) exitWith {};
+	
+	if (_vehicle isKindOf "Man") exitWith {};
+	
+	_vehicle setVariable ["mf_vehicleRespawnPos", getPos _vehicle];
+	_vehicle setVariable ["mf_vehicleLoadoutSide", _side];
+	
+	_vehicle addMPEventHandler ["MPKilled", {
+		_this spawn {
+			params ["_vehicle"];
+			
+			if (!isServer) exitWith {};
+			
+			_spawnPos = _vehicle getVariable "mf_vehicleRespawnPos";
+			_loadoutSide = _vehicle getVariable "mf_vehicleLoadoutSide";
+			_vehClass = typeOf _vehicle;
+			
+			sleep 30;
+			
+			if (_vehicle distance _spawnPos < 20) then {
+				deleteVehicle _vehicle;
+			};
+			
+			_newVehicle = _vehClass createVehicle _spawnPos;
+			
+			[_newVehicle, _loadoutSide] spawn mf_fnc_fillBox;
+			[_newVehicle, _loadoutSide] spawn mf_fnc_vehicleRespawn;
+			
+			_string = format ["Vehicle %1 respawned at %2.", _vehClass, _spawnPos];
+			[_string, "systemChat"] call BIS_fnc_MP;
+		};
+	}];
+};
+
 ace_respawn_SavePreDeathGear = false;
 
 if (!isMultiplayer) then {	

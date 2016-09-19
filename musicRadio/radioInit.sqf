@@ -6,7 +6,7 @@ if (isNil "murshun_musicRadiosArray") then {
 	murshun_musicRadiosArray = [];
 };
 
-if (!isNil {_radio getVariable "murshun_radio_actionAdded"}) exitWith {};
+if (!isNil {_radio getVariable "mf_radio_actionAdded"}) exitWith {};
 
 if (_radio isKindOf "thing" or _radio isKindOf "static") then {
 	if (isServer) then {
@@ -50,6 +50,8 @@ if (_radio isKindOf "thing" or _radio isKindOf "static") then {
 		
 		_radio addMPEventHandler ["MPKilled", {
 			_radio = _this select 0;
+			
+			if (!isServer) exitWith {};
 
 			[[_radio], "murshun_stopSongOnRadio_fnc"] call BIS_fnc_MP;			
 
@@ -139,4 +141,4 @@ if (_radio isKindOf "thing" or _radio isKindOf "static") then {
 	[_radio, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;	
 };
 
-_radio setVariable ["murshun_radio_actionAdded", true];
+_radio setVariable ["mf_radio_actionAdded", true];

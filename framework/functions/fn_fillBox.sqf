@@ -1,15 +1,10 @@
-_box = _this select 0;
-_side = _this select 1;
+params ["_box", ["_side", sideEmpty]];
 
 if (!isServer) exitWith {};
 
 _loadoutArray = [];
 
 waitUntil {time > 0};
-
-if (isNil "_side") then {
-	_side = side _box;
-};
 
 switch (_side) do {
 case WEST: {

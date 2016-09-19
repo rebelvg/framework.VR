@@ -42,8 +42,7 @@ You can create custom loadouts for enemies now.
 Just set mf_customEnemyLoadouts to true in the init.sqf and create a loadoutArray for your enemy side.
 So for example your enemies are opfor just create loadoutArray_east and fill it accordingly to the standard.
 
-Framework now supports respawn integration in a gameplay form.
-
+Framework now supports respawn integration in a gameplay form. Depends on the murshun spectator.
 If you, as mission maker, want to respawn people on the base_marker you can execute
 [] spawn murshun_spectator_reviveAllPlayers_fnc;
 in your tasks. Execute only once from the server side.
@@ -65,6 +64,13 @@ The way it works it restricts pilot sit for everyone but pilots, but allows for 
 However, it allows to switch sits while flying and allows taking controls while flying, to help during emergency situations.
 So basically it just restricts taking off for non-pilots.
 Activates only in multiplayer.
+
+You can make vehicle respawnable by adding
+0 = [this, WEST] spawn mf_fnc_vehicleRespawn;
+to the vehicle init, with WEST as an example of selected loadout.
+Or if you want for vehicle to respawn empty just use
+0 = [this] spawn mf_fnc_vehicleRespawn;
+Please test this before adding this to your mission, vehicle respawning can be inconsistent and vehicles can accidentally respawn at a position which is already occupied. It should work fine most of the time but needs checking.
 
 Radios are now automatically added to any vehicle.
 To add radio to an object use the line below.

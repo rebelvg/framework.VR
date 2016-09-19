@@ -39,7 +39,7 @@ class CfgDebriefingSections
 	class PrintMurshunDebriefing
 	{
 		title = "Murshun Debriefing Screen";
-		variable = "murshun_debriefing_text";
+		variable = "mf_debriefingText";
 	};
 };
 
@@ -90,6 +90,8 @@ class CfgFunctions
 			class giveLoadout {};
 			class fillBox {};
 			class fillBoxMedical {};
+			class onlyPilotsCanFlyPlayer {};
+			class onlyPilotsCanFlyVehicle {};
 		};
 		
 		class loadouts

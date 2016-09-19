@@ -8,6 +8,16 @@ if (didJIP) then {
 
 [{!isNull findDisplay 46}, murshun_assignTeam_fnc, [player]] call CBA_fnc_waitUntilAndExecute;
 
+[] call mf_fnc_onlyPilotsCanFlyPlayer;
+
+if (isNil "base_marker") then {
+	createMarkerLocal ["base_marker", getPos player];
+};
+
+if (isNil "respawn") then {
+	createMarkerLocal ["respawn", getMarkerPos "base_marker"];
+};
+
 waitUntil {time > 90};
 
 _monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
