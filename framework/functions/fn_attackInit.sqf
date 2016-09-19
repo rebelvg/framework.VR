@@ -46,7 +46,7 @@ mf_fnc_SpawnGroup = {
 	_grp
 };
 
-//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR", WEST] spawn mf_fnc_InfantryAttack;
+//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR", WEST] call mf_fnc_InfantryAttack;
 mf_fnc_InfantryAttack = {
 	params ["_pos", "_attackPos", "_faction", "_side"];
 	
@@ -55,7 +55,7 @@ mf_fnc_InfantryAttack = {
 	[_grp, _attackPos, 50] call CBA_fnc_taskAttack;
 };
 
-//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR", WEST] spawn mf_fnc_InfantryDefend;
+//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR", WEST] call mf_fnc_InfantryDefend;
 mf_fnc_InfantryDefend = {
 	params ["_pos", "_attackPos", "_faction", "_side"];
 	
@@ -64,7 +64,7 @@ mf_fnc_InfantryDefend = {
 	[_grp, _attackPos, 50] call CBA_fnc_taskDefend;
 };
 
-//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR", WEST] spawn mf_fnc_InfantryPartol;
+//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR", WEST] call mf_fnc_InfantryPartol;
 mf_fnc_InfantryPartol = {
 	params ["_pos", "_attackPos", "_faction", "_side"];
 	
@@ -73,7 +73,7 @@ mf_fnc_InfantryPartol = {
 	[_grp, _attackPos, 200, 5] call CBA_fnc_taskPatrol;
 };
 
-//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR", "BLUFOR Car", WEST] spawn mf_fnc_VehicleAttack;
+//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR", "BLUFOR Car", WEST] call mf_fnc_VehicleAttack;
 mf_fnc_VehicleAttack = {
 	params ["_pos", "_attackPos", "_faction", "_vehicle", "_side"];
 	private ["_soldierArray","_vehicleArray","_spawnPos","_randomUnit","_randomVehicle","_grp","_veh","_vehicleCommander","_vehicleDriver","_vehicleGunner","_wp"];
@@ -160,7 +160,7 @@ mf_fnc_VehicleAttack = {
 	[_grp, _attackPos, 50, "UNLOAD", "AWARE", "RED", "LIMITED"] call CBA_fnc_addWaypoint;
 };
 
-//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR", "BLUFOR Air", WEST] spawn mf_fnc_AirAttack;
+//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR", "BLUFOR Air", WEST] call mf_fnc_AirAttack;
 mf_fnc_AirAttack = {
 	params ["_pos", "_attackPos", "_faction", "_vehicle", "_side"];
 	private ["_soldierArray","_vehicleArray","_spawnPos","_randomVehicle","_grp","_veh","_vehicleCommander","_vehicleDriver","_vehicleGunner","_wp"];
@@ -222,18 +222,6 @@ mf_fnc_AirAttack = {
 		_vehicleCrew moveInTurret [_veh, (_x select 3)];
 		_attackGroup pushBack _vehicleCrew;
 	} foreach (fullCrew [_veh, "turret", true]);
-	
-	{
-		_vehicleCrew = _grp createUnit [_crewUnit, [0,0,0], [], 0, "FORM"];
-		_vehicleCrew setRank "PRIVATE";
-		_vehicleCrew moveInCargo [_veh, (_x select 2)];
-		_attackGroup pushBack _vehicleCrew;
-	} foreach (fullCrew [_veh, "cargo", true]);
-	
-	{
-		removeBackpack _x;
-		_x addBackpack "B_Parachute";
-	} foreach (units group _vehicleDriver);
 
 	{
 		_x setSkill ["general", 0.8];
@@ -251,23 +239,6 @@ mf_fnc_AirAttack = {
 	_veh flyInHeight 200;
 	
 	[_grp, _attackPos, 50] call CBA_fnc_taskAttack;
-	
-	waitUntil {
-		_veh distance2d _attackPos < 400 or !(canMove _veh)
-	};
-	
-	{
-		_unit = _x select 0;
-		
-		if (alive _unit) then {
-			unassignVehicle _unit;
-			moveOut _unit;
-			[_unit] joinSilent _grpParatroops;
-			sleep 0.7;
-		};
-	} foreach (fullCrew [_veh, "cargo"]);
-	
-	[_grpParatroops, _attackPos, 50] call CBA_fnc_taskAttack;
 };
 
 //[getMarkerPos "SPAWNMARKERNAME", 30, 1, 300, "Sh_82mm_AMOS"] spawn mf_fnc_MortarAttack;
@@ -281,6 +252,6 @@ mf_fnc_MortarAttack = {
 		_mortar = createVehicle [_round, [0,0,0], [], 0, "FLY"];
 		_mortar setPos _psn;
 		_mortar setVelocity [0,0,-15];
-		sleep _sleep;
+		sleep ((_sleep / 2) + random _sleep);
 	};
 };
