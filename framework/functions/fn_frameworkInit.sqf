@@ -303,7 +303,7 @@ mf_fnc_vehicleRespawn = {
 
 ace_respawn_SavePreDeathGear = false;
 
-if (!isMultiplayer) then {	
+if (!isMultiplayer) then {
 	DAC_Com_Values = [1,2,3,1];
 	DAC_Marker = 2;
 };
