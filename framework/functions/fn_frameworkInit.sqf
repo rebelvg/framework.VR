@@ -311,3 +311,5 @@ if (!isMultiplayer) then {
 	DAC_Com_Values = [1,2,3,1];
 	DAC_Marker = 2;
 };
+
+mf_version = 1.0;
