@@ -27,3 +27,7 @@ addMissionEventHandler ["EntityKilled", {
 		};
 	};
 }];
+
+if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
+	[mf_fnc_fixAcreDesync, 20, []] call CBA_fnc_addPerFrameHandler;
+};

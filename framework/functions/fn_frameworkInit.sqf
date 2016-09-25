@@ -305,6 +305,31 @@ mf_fnc_addVehicleRespawn = {
 	}];
 };
 
+mf_fnc_fixAcreDesync = {
+	if (ACRE_SERVER_GEAR_DESYNCED) then {
+		{
+			if (alive _x) then {
+				[{
+					[player] call mf_fnc_giveLoadout;
+					[] execVM "scripts\acreSettings.sqf";
+				}, "BIS_fnc_spawn", _x] call BIS_fnc_MP;
+
+				_string = format ["%1: Framework detected acre desync. Attempting to fix it by reissuing the loadout.", name _x];
+				[_string, "systemChat"] call BIS_fnc_MP;
+			} else {
+				deleteVehicle _x;
+			};			
+		} forEach ACRE_SERVER_DESYNCED_PLAYERS;
+
+		ACRE_SERVER_GEAR_DESYNCED = false;
+		ACRE_SERVER_DESYNCED_PLAYERS = [];
+		publicVariable "ACRE_SERVER_GEAR_DESYNCED";
+		publicVariable "ACRE_SERVER_DESYNCED_PLAYERS";
+		
+		["", "hintSilent"] call BIS_fnc_MP;
+	};
+};
+
 ace_respawn_SavePreDeathGear = false;
 
 if (!isMultiplayer) then {
@@ -312,4 +337,4 @@ if (!isMultiplayer) then {
 	DAC_Marker = 2;
 };
 
-mf_version = 1.0;
+mf_version = 1.01;
