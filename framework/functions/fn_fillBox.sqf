@@ -38,8 +38,6 @@ if (count _loadoutArray == 3) then {
 		
 		[_box, 1] call murshun_fillBox_fnc;
 	} else {
-		_box setVariable ["tf_side", _side, true];
-
 		_box addItemCargoGlobal ["ACE_elasticBandage", 10];
 		_box addItemCargoGlobal ["ACE_quikclot", 10];
 		
