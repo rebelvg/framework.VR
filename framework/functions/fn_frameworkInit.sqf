@@ -125,6 +125,14 @@ murshun_fillBox_fnc = {
 	_multiplier = _this select 1;
 
 	{
+		if (count _x == 2) then {
+			if (count (_x select 0) != 0) then {
+				_unit addItemCargoGlobal [_x select 0, ceil ((_x select 1) * _multiplier)];
+			};
+		};
+	} forEach (_loadoutArray select 2);
+
+	{
 		_weaponsArray = _x select 1 select 1;
 		
 		{
@@ -142,14 +150,6 @@ murshun_fillBox_fnc = {
 		} forEach _weaponsArray;
 
 	} forEach (_loadoutArray select 0);
-
-	{
-		if (count _x == 2) then {
-			if (count (_x select 0) != 0) then {
-				_unit addItemCargoGlobal [_x select 0, ceil ((_x select 1) * _multiplier)];
-			};
-		};
-	} forEach (_loadoutArray select 2);
 };
 
 mf_disableAI_fnc = {
