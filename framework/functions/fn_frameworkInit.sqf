@@ -187,9 +187,22 @@ mf_fnc_dynamicItems = {
 	
 	_itemsArray = (getItemCargo _box) select 0;
 	
+	if (count _itemsArray == 0) exitWith {};
+	
+	//clearItemCargoGlobal is broken for JIP clients, it removes items and for some reason hides weapons for JIP clients
 	clearItemCargoGlobal _box;
 	
-	if (count _itemsArray == 0) exitWith {};
+	//"fix" removes weapons and adds them again
+	_weaponsArray = getWeaponCargo _box;
+	
+	clearWeaponCargoGlobal _box;
+	
+	{
+		_weapon = _x;
+		_amount = (_weaponsArray select 1) select _forEachIndex;
+		
+		_box addItemCargoGlobal [_weapon, _amount];
+	} forEach (_weaponsArray select 0);
 	
 	{
 		_box addItemCargoGlobal [_x, 2];
