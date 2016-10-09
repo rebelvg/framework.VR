@@ -15,9 +15,9 @@ waitUntil {
 //waits until objects are not alive
 //can be anything, units, vehicles, boxes
 
-_objArray = [obj_01, obj_02, obj_03];
-
 [WEST, "task_id", ["Task description.", "Search And Destroy"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
+
+_objArray = [obj_01, obj_02, obj_03];
 
 waitUntil {
 	{alive _x} count _objArray == 0
@@ -37,10 +37,10 @@ waitUntil {
 
 //waits until more than 80% of players (not spectators) are 50m from the base_marker
 
+[WEST, "task_id", ["Task description.", "RTB"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
+
 _marker = "base_marker";
 _radius = 50;
-
-[WEST, "task_id", ["Task description.", "RTB"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
 	{_x distance getMarkerPos _marker < _radius} count allPlayers >= ({!isObjectHidden _x} count allPlayers) * 0.8 && {_x distance getMarkerPos _marker < _radius} count allPlayers > 0
@@ -68,11 +68,11 @@ waitUntil {
 //waits until there's no east side units in the 500m radius of the attack_marker
 //checks if at least one of the players is around too (to prevent auto-completion if using dac or alive or other dynamic ai spawn systems)
 
+[WEST, "task_id", ["Task description.", "Clear Area"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
+
 _marker = "attack_marker";
 _radius = 500;
 _enemySide = EAST;
-
-[WEST, "task_id", ["Task description.", "Clear Area"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
 	{side _x == _enemySide && _x distance2d getMarkerPos _marker < _radius} count allUnits == 0 && {_x distance2d getMarkerPos _marker < _radius} count allPlayers > 0
@@ -83,11 +83,11 @@ waitUntil {
 //waits until there's more players in the 500m area then east side units
 //task already implies that players should be in the area
 
+[WEST, "task_id", ["Task description.", "Overrun Area"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
+
 _marker = "overrun_marker";
 _radius = 500;
 _enemySide = EAST;
-
-[WEST, "task_id", ["Task description.", "Overrun Area"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
 	{_x distance2d getMarkerPos _marker < _radius} count allPlayers > {side _x == _enemySide && _x distance2d getMarkerPos _marker < _radius} count allUnits

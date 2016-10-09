@@ -38,8 +38,11 @@ if (count _loadoutArray == 3) then {
 		
 		[_box, 1] call murshun_fillBox_fnc;
 	} else {
-		_box addItemCargoGlobal ["ACE_elasticBandage", 10];
-		_box addItemCargoGlobal ["ACE_quikclot", 10];
+		_box addItemCargoGlobal ["ACE_elasticBandage", 20];
+		_box addItemCargoGlobal ["ACE_quikclot", 20];
+		_box addItemCargoGlobal ["ACE_morphine", 4];
+		_box addItemCargoGlobal ["ACE_epinephrine", 4];
+		_box addItemCargoGlobal ["ACE_salineIV_250", 4];	
 		
 		[_box, 1/4] call murshun_fillBox_fnc;
 

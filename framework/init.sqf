@@ -3,6 +3,7 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 	[true] call acre_api_fnc_setRevealToAI;
 	[0] call acre_api_fnc_setLossModelScale;
 	[false] call acre_api_fnc_setFullDuplex;
+	[true] call acre_api_fnc_ignoreAntennaDirection;
 };
 
 if (isNil "murshun_ffArray") then {
