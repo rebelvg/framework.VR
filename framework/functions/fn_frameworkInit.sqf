@@ -348,10 +348,18 @@ mf_fnc_fixAcreDesync = {
 };
 
 ace_respawn_SavePreDeathGear = false;
+ace_respawn_removeDeadBodiesDisconnected = true;
+ace_finger_enabled = true;
+ace_finger_indicatorColor = [1,1,1,0.4];
+ace_map_gestures_enabled = true;
+ace_map_DefaultChannel = 1;
+ace_medical_menu_allow = 1;
+ace_nametags_showPlayerRanks = false;
+ace_medical_ai_enabledFor = 0;
 
 if (!isMultiplayer) then {
 	DAC_Com_Values = [1,2,3,1];
 	DAC_Marker = 2;
 };
 
-mf_version = 1.05;
+mf_version = 1.06;
