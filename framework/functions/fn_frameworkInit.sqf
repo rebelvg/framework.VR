@@ -189,7 +189,7 @@ mf_fnc_dynamicItems = {
 	
 	if (count _itemsArray == 0) exitWith {};
 	
-	//clearItemCargoGlobal is broken for JIP clients, it removes items and for some reason hides weapons for JIP clients
+	//clearItemCargoGlobal is broken for JIP clients, it hides weapons for JIP clients
 	clearItemCargoGlobal _box;
 	
 	//"fix" removes weapons and adds them again
