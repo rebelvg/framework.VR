@@ -142,8 +142,8 @@ _loadoutArray = [
 			[]
 		],
 		[
-			["team leader", "missile specialist (at)", "autorifleman", "rifleman (at)", "rifleman", "grenadier", "missile specialist (aa)"],
-			[["ACRE_PRC343", 1]],
+			["officer", "squad leader", "pilot"],
+			[["ACRE_PRC152", 1]],
 			[]
 		],
 		[
@@ -152,8 +152,8 @@ _loadoutArray = [
 			[]
 		],
 		[
-			["officer", "squad leader", "pilot"],
-			[["ACRE_PRC152", 1]],
+			["team leader", "missile specialist (at)", "autorifleman", "rifleman (at)", "rifleman", "grenadier", "missile specialist (aa)"],
+			[["ACRE_PRC343", 1]],
 			[]
 		]
 	], //personal items per class
