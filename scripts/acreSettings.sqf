@@ -21,6 +21,7 @@ if (count _343Radios > 0) then {
 if (count _148Radios > 0) then {
 	[(_148Radios select 0), _channel] call acre_api_fnc_setRadioChannel;
 	[(_148Radios select 0), "LEFT"] call acre_api_fnc_setRadioSpatial;
+	[(_148Radios select 0)] call acre_api_fnc_setCurrentRadio;
 };
 
 if (count _152Radios > 0) then {
