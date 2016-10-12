@@ -1,6 +1,7 @@
 _radio = _this select 0;
 
-if (toLower getText (configFile >> "CfgVehicles" >> typeof _radio >> "simulation") == "parachute") exitWith {};
+_simType = toLower getText (configFile >> "CfgVehicles" >> typeOf _radio >> "simulation");
+if (_simType == "parachute" or _simType == "paraglide") exitWith {};
 
 if (isNil "murshun_musicRadiosArray") then {
 	murshun_musicRadiosArray = [];

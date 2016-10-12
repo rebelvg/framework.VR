@@ -27,7 +27,6 @@ _mgWeapon = ["arifle_MX_SW_F", [["100Rnd_65x39_caseless_mag_Tracer", 7]], ["bipo
 _grenadierWeapon = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 7], ["1Rnd_HE_Grenade_shell", 7]], []];
 
 _leaderHandgun = ["hgun_P07_F", [["16Rnd_9x21_Mag", 1]], []];
-_pilotHandgun = ["hgun_P07_F", [["16Rnd_9x21_Mag", 1]], []];
 
 _riflemanAT = ["launch_NLAW_F", [], []];
 _specialistAT = ["launch_B_Titan_short_F", [["Titan_AT", 2]], []];
@@ -102,7 +101,7 @@ _loadoutArray = [
 			["pilot"],
 			[
 				_pilotFashion,
-				[_pilotHandgun]
+				[_riflemanWeapon]
 			]
 		],
 		[

@@ -241,6 +241,9 @@ mf_fnc_isUnitPilot = {
 	_veh = (vehicle _unit);
 	
 	if (!(_veh isKindOf "air")) exitWith {false};
+
+	_simType = toLower getText (configFile >> "CfgVehicles" >> typeOf _veh >> "simulation");
+	if (_simType == "parachute" or _simType == "paraglide") exitWith {false};
 	
 	_return = false;
 	
@@ -263,13 +266,16 @@ mf_fnc_isUnitCoPilot = {
 	_trts = _cfg >> "turrets";
 	
 	if (!(_veh isKindOf "air")) exitWith {false};
+	
+	_simType = toLower getText (configFile >> "CfgVehicles" >> typeOf _veh >> "simulation");
+	if (_simType == "parachute" or _simType == "paraglide") exitWith {false};
 
 	_return = false;
 
 	for "_i" from 0 to (count _trts - 1) do {
 		_trt = _trts select _i;
 
-		if (getNumber(_trt >> "isCoPilot") == 1) exitWith {
+		if (getNumber (_trt >> "isCoPilot") == 1) exitWith {
 			_return = (_veh turretUnit [_i] == _unit);
 		};
 	};
