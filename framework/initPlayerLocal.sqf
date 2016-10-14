@@ -1,3 +1,5 @@
+[] execVM "framework\scripts\frameworkBriefing.sqf";
+
 [] execVM "scripts\radioBriefing.sqf";
 
 if (didJIP) then {
