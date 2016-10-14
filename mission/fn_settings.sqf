@@ -2,14 +2,14 @@
 //do not remove the file
 //more info is in the readme.txt
 
-//radio
-murshun_radioThemes = [];
-murshun_radioSongs = [];
+//framework
+mf_customEnemyLoadouts = false;
+mf_onlyPilotsCanFly = false;
 
 //mods
 murshun_spectator_enable = true;
 murshun_easywayout_canSuicide = false;
 
-//framework
-mf_customEnemyLoadouts = false;
-mf_onlyPilotsCanFly = false;
+//radio
+murshun_radioThemes = [];
+murshun_radioSongs = [];
