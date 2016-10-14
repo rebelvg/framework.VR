@@ -41,7 +41,6 @@ mf_fnc_ai_applySkill = {
 	params ["_grp"];
 	
 	{
-		_x setSkill ["general", 0.8];
 		_x setSkill ["aimingAccuracy", 0.2];
 		_x setSkill ["aimingShake", 0.2];
 		_x setSkill ["aimingSpeed", 0.2];
@@ -51,6 +50,7 @@ mf_fnc_ai_applySkill = {
 		_x setSkill ["courage", 0.8];
 		_x setSkill ["reloadSpeed", 0.4];
 		_x setSkill ["commanding", 0.8];
+		_x setSkill ["general", 0.8];
 	} forEach (units _grp);
 };
 
