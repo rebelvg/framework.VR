@@ -1,4 +1,4 @@
-_vars = ["mf_version", "mf_customEnemyLoadouts", "mf_onlyPilotsCanFly", "murshun_spectator_enable", "murshun_easywayout_canSuicide"];
+_vars = ["mf_version", "mf_customEnemyLoadouts", "mf_onlyPilotsCanFly", "murshun_spectator_enable", "murshun_easywayout_canSuicide", "murshun_radioThemes", "murshun_radioSongs"];
 
 _finalString = "Variable values on mission start.<br/><br/>";
 
