@@ -59,7 +59,7 @@ or
 -------------------------------
 SPECTATOR FUNCTIONS.
 
--- Spectator respawn.
+-- Spectator revive.
 [getMarkerPos "base_marker"] spawn murshun_spectator_reviveAllPlayers_fnc;
 or
 [] spawn murshun_spectator_reviveAllPlayers_fnc;
