@@ -1,6 +1,6 @@
-[] execVM "framework\scripts\frameworkBriefing.sqf";
+[] call compile preprocessFileLineNumbers "framework\scripts\frameworkBriefing.sqf";
 
-[] execVM "scripts\radioBriefing.sqf";
+[] call compile preprocessFileLineNumbers "scripts\radioBriefing.sqf";
 
 if (didJIP) then {
 	[[[], "scripts\teamRoster.sqf"], "BIS_fnc_execVM"] call BIS_fnc_MP;
