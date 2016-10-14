@@ -121,6 +121,21 @@ _loadoutArray = [
 	], //equipment per class
 	[
 		[
+			["team leader", "missile specialist (at)", "autorifleman", "rifleman (at)", "rifleman", "grenadier", "missile specialist (aa)"],
+			[["ACRE_PRC343", 1]],
+			[]
+		],
+		[
+			["officer", "squad leader", "team leader", "combat life saver", "engineer"],
+			[["ACRE_PRC148", 1]],
+			[]
+		],
+		[
+			["officer", "squad leader", "pilot"],
+			[["ACRE_PRC152", 1]],
+			[]
+		],
+		[
 			["all"],
 			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 3], [_lethalGrenade, 1], ["ACE_CableTie", 1]] + _advancedMedicine, //items
 			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "NVGoggles"] //link items
@@ -138,21 +153,6 @@ _loadoutArray = [
 		[
 			["engineer"],
 			[["ACE_M26_Clacker", 1], ["ACE_DefusalKit", 1], ["DemoCharge_Remote_Mag", 2]],
-			[]
-		],
-		[
-			["team leader", "missile specialist (at)", "autorifleman", "rifleman (at)", "rifleman", "grenadier", "missile specialist (aa)"],
-			[["ACRE_PRC343", 1]],
-			[]
-		],
-		[
-			["officer", "squad leader", "team leader", "combat life saver", "engineer"],
-			[["ACRE_PRC148", 1]],
-			[]
-		],
-		[
-			["officer", "squad leader", "pilot"],
-			[["ACRE_PRC152", 1]],
 			[]
 		]
 	], //personal items per class
