@@ -154,16 +154,20 @@ murshun_fillBox_fnc = {
 
 mf_disableAI_fnc = {
 	{
-		_x disableAI "ANIM";
-		_x switchMove "";
-	} forEach (switchableUnits - [player]);
+		if (!isPlayer _x) then {
+			_x disableAI "ANIM";
+			_x switchMove "";
+		};
+	} forEach switchableUnits;
 };
 
 mf_debugLoadout_fnc = {
 	{
-		[_x] call mf_fnc_giveLoadout;
-		[_x] call murshun_assignTeam_fnc;
-	} forEach (switchableUnits - [player]);
+		if (!isPlayer _x) then {
+			[_x] call mf_fnc_giveLoadout;
+			[_x] call murshun_assignTeam_fnc;
+		};
+	} forEach switchableUnits;
 };
 
 murshun_assignTeam_fnc = {
