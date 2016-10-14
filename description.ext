@@ -1,3 +1,6 @@
+#include "framework\CfgFunctions.hpp"
+#include "framework\CfgInitEvents.hpp"
+
 enableDebugConsole = 1;
 forceRotorLibSimulation = 2;
 saving = 0;
@@ -11,11 +14,11 @@ overviewPicture = "logo.paa";
 
 class CfgTaskEnhancements
 {
-	enable       = 1;
-	3d           = 0;
-	3dDrawDist   = 0;
-	share        = 0;
-	propagate    = 0;
+	enable = 1;
+	3d = 0;
+	3dDrawDist = 0;
+	share = 0;
+	propagate = 0;
 };
 
 class CfgDebriefing
@@ -40,75 +43,5 @@ class CfgDebriefingSections
 	{
 		title = "Murshun Debriefing Screen";
 		variable = "mf_debriefingText";
-	};
-};
-
-class Extended_Init_EventHandlers
-{
-	class CAManBase
-	{
-		unitInit = "_this execVM 'framework\initEvents\unitInit.sqf'";
-	};
-	
-	class Car
-	{
-		carInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
-		radioInit = "_this execVM 'musicRadio\radioInit.sqf'";
-	};
-	class Tank
-	{
-		tankInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
-		radioInit = "_this execVM 'musicRadio\radioInit.sqf'";
-	};
-	class Air
-	{
-		airInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
-		radioInit = "_this execVM 'musicRadio\radioInit.sqf'";
-	};
-	class Ship
-	{
-		shipInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
-		radioInit = "_this execVM 'musicRadio\radioInit.sqf'";
-	};
-	
-	class ReammoBox_F
-	{
-		boxInit = "_this execVM 'framework\initEvents\boxInit.sqf'";
-	};
-};
-
-class CfgFunctions
-{
-	class MF
-	{
-		class functions
-		{
-			file = "framework\functions";
-			
-			class frameworkInit {preInit = 1;};
-			class attackInit {preInit = 1;};
-			class giveLoadout {};
-			class fillBox {};
-			class fillBoxMedical {};
-			class onlyPilotsCanFlyPlayer {};
-			class onlyPilotsCanFlyVehicle {};
-		};
-		
-		class loadouts
-		{
-			file = "mission\loadouts";
-			
-			class loadoutWest {};
-			class loadoutEast {};
-			class loadoutGuer {};
-			class loadoutCiv {};
-		};
-		
-		class mission
-		{
-			file = "mission";
-			
-			class settings {preInit = 1;};
-		};
 	};
 };
