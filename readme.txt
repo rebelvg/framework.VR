@@ -87,6 +87,7 @@ Pilots restriction is ignored.
 DAC has debug mode enabled.
 
 -- Things framework does automatically.
+Sets loadouts on respawn.
 Sets ACRE radio channels.
 Applies team colors.
 Clears boxes.
