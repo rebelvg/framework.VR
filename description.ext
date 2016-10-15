@@ -1,10 +1,23 @@
 #include "framework\CfgFunctions.hpp"
 #include "framework\CfgInitEvents.hpp"
 
+class Header
+{
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 128;
+};
+
+saving = 0;
+disabledAI = 1;
 enableDebugConsole = 1;
 forceRotorLibSimulation = 2;
-saving = 0;
+
+respawnDialog = 0;
 respawnButton = 1;
+respawn = 3;
+respawnDelay = 30;
+respawnTemplates[] = {};
 
 onLoadName = "Framework";
 onLoadMission = "";
