@@ -357,6 +357,14 @@ mf_fnc_fixAcreDesync = {
 	};
 };
 
+mf_fnc_addMusicRadio = {
+	params ["_radio"];
+	
+	if (!isNil "murshun_musicRadio_fnc_addRadio") then {
+		[_radio] call murshun_musicRadio_fnc_addRadio;
+	};
+};
+
 ace_respawn_SavePreDeathGear = false;
 ace_respawn_removeDeadBodiesDisconnected = true;
 ace_finger_enabled = true;

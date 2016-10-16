@@ -8,22 +8,18 @@ class Extended_Init_EventHandlers
 	class Car
 	{
 		carInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
-		radioInit = "_this execVM 'musicRadio\radioInit.sqf'";
 	};
 	class Tank
 	{
 		tankInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
-		radioInit = "_this execVM 'musicRadio\radioInit.sqf'";
 	};
 	class Air
 	{
 		airInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
-		radioInit = "_this execVM 'musicRadio\radioInit.sqf'";
 	};
 	class Ship
 	{
 		shipInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
-		radioInit = "_this execVM 'musicRadio\radioInit.sqf'";
 	};
 	
 	class ReammoBox_F

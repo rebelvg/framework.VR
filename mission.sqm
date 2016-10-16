@@ -7600,7 +7600,7 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				init="0 = [this] execVM ""musicRadio\radioInit.sqf"";";
+				init="0 = [this] call mf_fnc_addMusicRadio;";
 			};
 			id=872;
 			type="Land_Loudspeakers_F";

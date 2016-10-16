@@ -20,12 +20,13 @@ SETTINGS.
 -- Variables.
 Settings - mission\fn_settings.sqf
 
-mf_customEnemyLoadouts - bool, loadouts for non-playable units will be overwritten by framework loadout system.
+mf_customEnemyLoadouts - bool, custom loadouts for non-playable.
 mf_onlyPilotsCanFly - bool, forbids taking off by non-pilots.
 
-murshun_spectator_enable - bool, enables murshun spectator, located in murshun mod pack.
-murshun_easywayout_canSuicide - bool, enables easywayout mod, located in murshun mod pack.
+murshun_spectator_enable - bool, enables murshun spectator.
+murshun_easywayout_enable - bool, enables easywayout mod.
 
+murshun_musicRadio_enable - bool, enables murshun music radio.
 murshun_radioThemes - array, sets themes for music radio, leave empty for all themes.
 murshun_radioSongs - array, sets songs for music radio, leave empty for all songs.
 https://gist.github.com/rebelvg/a16187f3a7b930fd958b0f0c9db7782f
@@ -53,7 +54,7 @@ or
 0 = [this] spawn mf_fnc_addVehicleRespawn;
 
 -- Music radio for an object.
-0 = [this] execVM "musicRadio\radioInit.sqf";
+0 = [this] call mf_fnc_addMusicRadio;
 -------------------------------
 
 -------------------------------
