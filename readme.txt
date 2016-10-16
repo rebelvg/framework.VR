@@ -20,7 +20,7 @@ SETTINGS.
 -- Variables.
 Settings - mission\fn_settings.sqf
 
-mf_customEnemyLoadouts - bool, custom loadouts for non-playable.
+mf_customEnemyLoadouts - bool, custom loadouts for non-playable units.
 mf_onlyPilotsCanFly - bool, forbids taking off by non-pilots.
 
 murshun_spectator_enable - bool, enables murshun spectator.
