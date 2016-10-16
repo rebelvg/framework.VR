@@ -25,7 +25,7 @@ waitUntil {time > 90};
 _monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 _month = date select 1;
-_month = _monthArray select _month - 1;
+_month = _monthArray select (_month - 1);
 _dateArray = date;
 
 {
