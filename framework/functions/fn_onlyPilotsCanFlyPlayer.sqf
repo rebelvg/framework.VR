@@ -1,7 +1,5 @@
 if (!isMultiplayer) exitWith {};
 
-if (isNil "mf_onlyPilotsCanFly") exitWith {};
-
 if (!mf_onlyPilotsCanFly) exitWith {};
 
 _className = toLower getText (configFile >> "CfgVehicles" >> typeOf player >> "displayName");

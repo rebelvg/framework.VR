@@ -153,12 +153,13 @@ murshun_fillBox_fnc = {
 };
 
 mf_disableAI_fnc = {
-	{
-		if (!isPlayer _x) then {
-			_x disableAI "ANIM";
-			_x switchMove "";
+	params ["_unit"];
+	
+	if (_unit in switchableUnits) then {
+		if (!isPlayer _unit) then {
+			_unit disableAI "ANIM";
 		};
-	} forEach switchableUnits;
+	};
 };
 
 mf_debugLoadout_fnc = {
@@ -363,6 +364,14 @@ mf_fnc_addMusicRadio = {
 	if (!isNil "murshun_musicRadio_fnc_addRadio") then {
 		[_radio] call murshun_musicRadio_fnc_addRadio;
 	};
+};
+
+if (!isNil "mf_customEnemyLoadouts") then {
+	mf_customEnemyLoadouts = false;
+};
+
+if (!isNil "mf_onlyPilotsCanFly") then {
+	mf_onlyPilotsCanFly = false;
 };
 
 ace_respawn_SavePreDeathGear = false;

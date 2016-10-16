@@ -1,5 +1,4 @@
 if (!isMultiplayer) then {
-	[] call mf_disableAI_fnc;
 	[] call mf_debugLoadout_fnc;
 };
 

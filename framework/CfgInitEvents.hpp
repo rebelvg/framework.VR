@@ -1,4 +1,4 @@
-class Extended_Init_EventHandlers
+class Extended_InitPost_EventHandlers
 {
 	class CAManBase
 	{
