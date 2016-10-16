@@ -21,6 +21,15 @@ class CfgFunctions
 			class spawnerInit {preInit = 1;};
 		};
 		
+		class initEvents
+		{
+			file = "framework\initEvents";
+			
+			class unitInit {};
+			class vehicleInit {};
+			class boxInit {};
+		};
+		
 		class loadouts
 		{
 			file = "mission\loadouts";

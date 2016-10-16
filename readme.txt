@@ -86,14 +86,4 @@ All playable units have movement disabled.
 Zeus is enabled.
 Pilots restriction is ignored.
 DAC has debug mode enabled.
-
--- Things framework does automatically.
-Manages loadouts on spawn and respawn.
-Sets ACRE radio channels.
-Applies team colors.
-Clears boxes.
-Clears vehicle containers.
-Adds music radio to vehicles.
-ACRE items optimizations.
-ACRE client-server inventory desync fixes.
 -------------------------------

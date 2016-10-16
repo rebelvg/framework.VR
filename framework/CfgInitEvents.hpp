@@ -2,28 +2,28 @@ class Extended_Init_EventHandlers
 {
 	class CAManBase
 	{
-		unitInit = "_this execVM 'framework\initEvents\unitInit.sqf'";
+		unitInit = "_this call mf_fnc_unitInit";
 	};
 	
 	class Car
 	{
-		carInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
+		carInit = "_this call mf_fnc_vehicleInit";
 	};
 	class Tank
 	{
-		tankInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
+		tankInit = "_this call mf_fnc_vehicleInit";
 	};
 	class Air
 	{
-		airInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
+		airInit = "_this call mf_fnc_vehicleInit";
 	};
 	class Ship
 	{
-		shipInit = "_this execVM 'framework\initEvents\vehicleInit.sqf'";
+		shipInit = "_this call mf_fnc_vehicleInit";
 	};
 	
 	class ReammoBox_F
 	{
-		boxInit = "_this execVM 'framework\initEvents\boxInit.sqf'";
+		boxInit = "_this call mf_fnc_boxInit";
 	};
 };
