@@ -11,7 +11,7 @@ _strFinal = "";
 _oldGrp = grpNull;
 _newGrp = grpNull;
 
-_unitsArr = (playableUnits + switchableUnits) select {side _x == side player};
+_unitsArr = (playableUnits + switchableUnits) select {side group _x == side group player};
 
 {
 	_newGrp = group _x;
@@ -38,7 +38,7 @@ _unitsArr = (playableUnits + switchableUnits) select {side _x == side player};
 	
 	_oldGrp = group _x;
 	
-	_mf_groupChannel = _x getVariable ["mf_groupChannel", [6, 4]];
+	_mf_groupChannel = _x getVariable ["mf_groupChannel", [9, 5]];
 	
 	_squad = _mf_groupChannel select 0;
 	_team = _mf_groupChannel select 1;

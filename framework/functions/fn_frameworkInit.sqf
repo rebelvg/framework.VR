@@ -173,7 +173,7 @@ mf_debugLoadout_fnc = {
 murshun_assignTeam_fnc = {
 	_unit = _this select 0;
 	
-	_mf_groupChannel = _unit getVariable ["mf_groupChannel", [6, 4]];
+	_mf_groupChannel = _unit getVariable ["mf_groupChannel", [9, 5]];
 	_squad = _mf_groupChannel select 0;
 	_team = _mf_groupChannel select 1;
 
@@ -372,4 +372,4 @@ if (!isMultiplayer) then {
 	DAC_Marker = 2;
 };
 
-mf_version = 1.11;
+mf_version = 1.12;

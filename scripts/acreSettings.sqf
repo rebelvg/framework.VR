@@ -1,6 +1,6 @@
 if (!(isClass (configFile >> "CfgPatches" >> "acre_main"))) exitWith {};
 
-_mf_groupChannel = player getVariable ["mf_groupChannel", [6, 4]];
+_mf_groupChannel = player getVariable ["mf_groupChannel", [9, 5]];
 _channel = _mf_groupChannel select 0;
 _team = _mf_groupChannel select 1;
 
