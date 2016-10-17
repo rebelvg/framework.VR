@@ -28,8 +28,7 @@ addMissionEventHandler ["Ended", {
 	---Players Killed---<br/>
 	%4<br/>
 	---AI Killed---<br/>
-	%5
-	",
+	%5",
 	str (murshun_ffArray apply {(_x select 1) + " damaged " + (_x select 0) + " " + str ceil ((time - (_x select 2))/60) + " minutes ago"}),
 	str murshun_respawnArray,
 	str (allPlayers apply {name _x}),

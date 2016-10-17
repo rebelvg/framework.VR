@@ -335,14 +335,14 @@ mf_fnc_fixAcreDesync = {
 			if (alive _x) then {
 				[{
 					[player] call mf_fnc_giveLoadout;
-					[] execVM "scripts\acreSettings.sqf";
+					[] call mf_fnc_acreSettings;
 					
 					ACRE_SERVER_GEAR_DESYNC_CHECK_STAGE = 0;
 					ACRE_SERVER_GEAR_DESYNC_CHECK = false;
 					ACRE_SERVER_GEAR_DESYNC_REQUESTCOUNT = 0;
 				}, "BIS_fnc_spawn", _x] call BIS_fnc_MP;
 
-				_string = format ["%1: Framework detected acre desync. Attempting to fix it by reissuing the loadout.", name _x];
+				_string = format ["%1: Framework detected acre inventory desync. Attempting to fix it by reissuing the loadout.", name _x];
 				[_string, "systemChat"] call BIS_fnc_MP;
 			} else {
 				deleteVehicle _x;
@@ -389,4 +389,4 @@ if (!isMultiplayer) then {
 	DAC_Marker = 2;
 };
 
-mf_version = 1.14;
+mf_version = 1.15;

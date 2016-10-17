@@ -1,1 +1,1 @@
-[] execVM "framework\onPlayerKilled.sqf";
+[] execVM "framework\init\onPlayerKilled.sqf";

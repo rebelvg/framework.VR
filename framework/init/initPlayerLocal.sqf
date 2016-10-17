@@ -1,11 +1,11 @@
-[] call compile preprocessFileLineNumbers "framework\scripts\frameworkBriefing.sqf";
+[] call mf_fnc_frameworkBriefing;
 
-[] call compile preprocessFileLineNumbers "scripts\radioBriefing.sqf";
+[] call mf_fnc_radioBriefing;
 
 if (didJIP) then {
-	[[[], "scripts\teamRoster.sqf"], "BIS_fnc_execVM"] call BIS_fnc_MP;
+	[[], "mf_fnc_teamRoster"] call BIS_fnc_MP;
 } else {
-	[] execVM "scripts\teamRoster.sqf";
+	[] call mf_fnc_teamRoster;
 };
 
 [{!isNull findDisplay 46}, murshun_assignTeam_fnc, [player]] call CBA_fnc_waitUntilAndExecute;

@@ -1,1 +1,1 @@
-[] execVM "framework\onPlayerRespawn.sqf";
+[] execVM "framework\init\onPlayerRespawn.sqf";

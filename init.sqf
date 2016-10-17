@@ -1,4 +1,2 @@
-[] execVM "framework\init.sqf";
+[] execVM "framework\init\init.sqf";
 [] execVM "mission\init.sqf";
-
-//mission settings are now located in the mission\fn_settings.sqf

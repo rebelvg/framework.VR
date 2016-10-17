@@ -1,5 +1,4 @@
-#include "framework\CfgFunctions.hpp"
-#include "framework\CfgInitEvents.hpp"
+#include "framework\CfgSettings.hpp"
 
 class Header
 {
@@ -24,37 +23,3 @@ onLoadMission = "";
 author = "Murshun";
 loadScreen = "logo.paa";
 overviewPicture = "logo.paa";
-
-class CfgTaskEnhancements
-{
-	enable = 1;
-	3d = 0;
-	3dDrawDist = 0;
-	share = 0;
-	propagate = 0;
-};
-
-class CfgDebriefing
-{
-	class Completed1
-	{
-		title = "Mission Completed!";
-		subtitle = "Good Job!";
-		description = "";
-	};
-	class Failed1
-	{
-		title = "Mission Failed!";
-		subtitle = "Come on, guys.";
-		description = "";
-	};	
-};
-
-class CfgDebriefingSections
-{
-	class PrintMurshunDebriefing
-	{
-		title = "Murshun Debriefing Screen";
-		variable = "mf_debriefingText";
-	};
-};
