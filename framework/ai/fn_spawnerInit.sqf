@@ -137,7 +137,7 @@ mf_fnc_ai_infantryPatrol = {
 	
 	_grp = [_pos, _faction, _side] call mf_fnc_ai_createGroup;
 	
-	[_grp, _attackPos, 200, 5] call CBA_fnc_taskPatrol;
+	[_grp, _attackPos, 100, 5] call CBA_fnc_taskPatrol;
 	
 	units _grp
 };
@@ -162,7 +162,7 @@ mf_fnc_ai_vehicleAttack = {
 	[_grp, _veh, _soldierArray select 0, _soldierArray select 0] call mf_fnc_ai_createCrew;
 	[_grp] call mf_fnc_ai_applySkill;
 	
-	[_grp, _attackPos, 50] call CBA_fnc_taskAttack;
+	[_grp, _attackPos, 100] call CBA_fnc_taskAttack;
 	
 	units _grp
 };
@@ -187,14 +187,14 @@ mf_fnc_ai_airAttack = {
 	[_grp, _veh, _soldierArray select 1, _soldierArray select 0] call mf_fnc_ai_createCrew;
 	[_grp] call mf_fnc_ai_applySkill;
 	
-	[_grp, _attackPos, 100] call CBA_fnc_taskAttack;
+	[_grp, _attackPos, 300, 5] call CBA_fnc_taskPatrol;
 	
 	units _grp
 };
 
 //[getMarkerPos "SPAWNMARKERNAME", 30, 1, 300, "Sh_82mm_AMOS"] spawn mf_fnc_ai_mortarAttack;
 mf_fnc_ai_mortarAttack = {
-	params ["_pos", "_number", "_sleep", "_radius", "_round"];
+	params ["_pos", "_number", "_interval", "_radius", "_round"];
 
 	for "_i" from 0 to floor _number do
 	{
@@ -203,6 +203,6 @@ mf_fnc_ai_mortarAttack = {
 		_mortar = createVehicle [_round, [0,0,0], [], 0, "FLY"];
 		_mortar setPos _psn;
 		_mortar setVelocity [0,0,-15];
-		sleep ((_sleep / 2) + random _sleep);
+		sleep _interval;
 	};
 };
