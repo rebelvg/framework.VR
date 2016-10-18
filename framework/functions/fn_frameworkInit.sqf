@@ -335,7 +335,7 @@ mf_fnc_fixAcreDesync = {
 			if (alive _x) then {
 				[{
 					[player] call mf_fnc_giveLoadout;
-					[] call mf_fnc_acreSettings;
+					[] spawn mf_fnc_acreSettings;
 					
 					ACRE_SERVER_GEAR_DESYNC_CHECK_STAGE = 0;
 					ACRE_SERVER_GEAR_DESYNC_CHECK = false;
