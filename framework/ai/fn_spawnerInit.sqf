@@ -165,7 +165,7 @@ mf_fnc_ai_airPatrol = {
 	[_grp, _veh, _soldierArray select 1, _soldierArray select 1] call mf_fnc_ai_createCrew;
 	[_grp] call mf_fnc_ai_applySkill;
 	
-	[_grp, _attackPos, 300, 5] call CBA_fnc_taskPatrol;
+	[_grp, _attackPos, 300, 5, "SAD"] call CBA_fnc_taskPatrol;
 	
 	units _grp
 };
