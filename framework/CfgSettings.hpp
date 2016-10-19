@@ -52,9 +52,14 @@ class CfgFunctions
 		
 		class mission
 		{
-			file = "mission";
-			
-			class settings {preInit = 1;};
+			class frameworkSettings {
+				preInit = 1;
+				file = "mission\fn_settings.sqf";
+			};
+			class spawnerSettings {
+				preInit = 1;
+				file = "mission\ai\fn_units.sqf";
+			};
 		};
 	};
 };

@@ -1,40 +1,13 @@
-if (!isServer) exitWith {};
-
-mf_fnc_ai_soldierArray = {
-	params ["_faction"];
-
-	_soldierArray = switch (_faction) do
-	{
-	case "BLUFOR": { ["B_Soldier_SL_F","B_soldier_AR_F","B_soldier_exp_F","B_soldier_GL_F","B_soldier_AA_F","B_soldier_M_F","B_medic_F","B_soldier_repair_F","B_Soldier_F","B_soldier_LAT_F","B_soldier_lite_F","B_soldier_TL_F"] };
-	case "OPFOR": { ["O_Soldier_SL_F","O_soldier_AR_F","O_soldier_exp_F","O_soldier_GL_F","O_soldier_M_F","O_medic_F","O_soldier_AA_F","O_soldier_repair_F","O_Soldier_F","O_soldier_LAT_F","O_soldier_lite_F","O_soldier_TL_F"] };
-	case "GUER": { ["I_Soldier_SL_F","I_soldier_AR_F","I_soldier_exp_F","I_soldier_GL_F","I_soldier_AA_F","I_soldier_M_F","I_medic_F","I_soldier_repair_F","I_Soldier_F","I_soldier_LAT_F","I_soldier_lite_F","I_soldier_TL_F"] };
-	case "BLUFOR Crew": { ["B_crew_F","B_Helipilot_F"] };
-	case "OPFOR Crew": { ["O_crew_F","O_Helipilot_F"] };
-	case "GUER Crew": { ["I_crew_F","I_Helipilot_F"] };
-		default { [] };
+if (isNil "mf_fnc_ai_soldierArray") then {
+	mf_fnc_ai_soldierArray = {
+		[]
 	};
-
-	_soldierArray
 };
 
-mf_fnc_ai_vehicleArray = {
-	params ["_vehicle"];
-
-	_vehicleArray = switch (_vehicle) do
-	{
-	case "BLUFOR Car": { ["B_MRAP_01_F"] };
-	case "BLUFOR Armor": { ["B_APC_Wheeled_01_cannon_F"] };
-	case "BLUFOR Air": { ["B_Heli_Transport_01_F"] };
-	case "OPFOR Car": { ["O_MRAP_02_F"] };
-	case "OPFOR Armor": { ["O_APC_Wheeled_02_rcws_F"] };
-	case "OPFOR Air": { ["O_Heli_Light_02_F"] };
-	case "GUER Car": { ["I_MRAP_03_F"] };
-	case "GUER Armor": { ["I_APC_Wheeled_03_cannon_F"] };
-	case "GUER Air": { ["I_Heli_light_03_F"] };
-		default { [] };
+if (isNil "mf_fnc_ai_vehicleArray") then {
+	mf_fnc_ai_vehicleArray = {
+		[]
 	};
-
-	_vehicleArray
 };
 
 mf_fnc_ai_applySkill = {
@@ -109,9 +82,10 @@ mf_fnc_ai_createCrew = {
 	} foreach (fullCrew [_veh, "turret", true]);
 };
 
-//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR", WEST] call mf_fnc_ai_infantryAttack;
 mf_fnc_ai_infantryAttack = {
 	params ["_pos", "_attackPos", "_faction", "_side"];
+	
+	if (!isServer) exitWith {};
 	
 	_grp = [_pos, _faction, _side] call mf_fnc_ai_createGroup;
 	
@@ -120,9 +94,10 @@ mf_fnc_ai_infantryAttack = {
 	units _grp
 };
 
-//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR", WEST] call mf_fnc_ai_infantryDefend;
 mf_fnc_ai_infantryDefend = {
 	params ["_pos", "_attackPos", "_faction", "_side"];
+	
+	if (!isServer) exitWith {};
 	
 	_grp = [_pos, _faction, _side] call mf_fnc_ai_createGroup;
 	
@@ -131,9 +106,10 @@ mf_fnc_ai_infantryDefend = {
 	units _grp
 };
 
-//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR", WEST] call mf_fnc_ai_infantryPatrol;
 mf_fnc_ai_infantryPatrol = {
 	params ["_pos", "_attackPos", "_faction", "_side"];
+	
+	if (!isServer) exitWith {};
 	
 	_grp = [_pos, _faction, _side] call mf_fnc_ai_createGroup;
 	
@@ -142,10 +118,11 @@ mf_fnc_ai_infantryPatrol = {
 	units _grp
 };
 
-//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR Crew", "BLUFOR Car", WEST] call mf_fnc_ai_vehicleAttack;
 mf_fnc_ai_vehicleAttack = {
 	params ["_pos", "_attackPos", "_faction", "_vehicle", "_side"];
 	private ["_soldierArray","_vehicleArray","_spawnPos","_grp","_veh"];
+	
+	if (!isServer) exitWith {};
 	
 	_soldierArray = [_faction] call mf_fnc_ai_soldierArray;
 	
@@ -167,10 +144,11 @@ mf_fnc_ai_vehicleAttack = {
 	units _grp
 };
 
-//[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "BLUFOR Crew", "BLUFOR Air", WEST] call mf_fnc_ai_airAttack;
-mf_fnc_ai_airAttack = {
+mf_fnc_ai_airPatrol = {
 	params ["_pos", "_attackPos", "_faction", "_vehicle", "_side"];
 	private ["_soldierArray","_vehicleArray","_spawnPos","_grp","_veh"];
+	
+	if (!isServer) exitWith {};
 
 	_soldierArray = [_faction] call mf_fnc_ai_soldierArray;
 	
@@ -184,7 +162,7 @@ mf_fnc_ai_airAttack = {
 	_veh = createVehicle [selectRandom _vehicleArray, _spawnPos, [], 0, "FLY"];
 
 	_grp = createGroup _side;
-	[_grp, _veh, _soldierArray select 1, _soldierArray select 0] call mf_fnc_ai_createCrew;
+	[_grp, _veh, _soldierArray select 1, _soldierArray select 1] call mf_fnc_ai_createCrew;
 	[_grp] call mf_fnc_ai_applySkill;
 	
 	[_grp, _attackPos, 300, 5] call CBA_fnc_taskPatrol;
@@ -192,9 +170,10 @@ mf_fnc_ai_airAttack = {
 	units _grp
 };
 
-//[getMarkerPos "SPAWNMARKERNAME", 30, 1, 300, "Sh_82mm_AMOS"] spawn mf_fnc_ai_mortarAttack;
 mf_fnc_ai_mortarAttack = {
 	params ["_pos", "_number", "_interval", "_radius", "_round"];
+	
+	if (!isServer) exitWith {};
 
 	for "_i" from 0 to floor _number do
 	{

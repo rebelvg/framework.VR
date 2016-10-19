@@ -158,6 +158,7 @@ mf_disableAI_fnc = {
 	if (_unit in switchableUnits) then {
 		if (!isPlayer _unit) then {
 			_unit disableAI "ANIM";
+			_unit switchMove "";
 		};
 	};
 };
@@ -387,4 +388,4 @@ if (!isMultiplayer) then {
 	DAC_Marker = 2;
 };
 
-mf_version = 1.16;
+mf_version = 1.17;

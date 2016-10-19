@@ -30,6 +30,9 @@ murshun_musicRadio_enable - bool, enables murshun music radio.
 murshun_radioThemes - array, sets themes for music radio, leave empty for all themes.
 murshun_radioSongs - array, sets songs for music radio, leave empty for all songs.
 https://gist.github.com/rebelvg/a16187f3a7b930fd958b0f0c9db7782f
+
+-- AI spawn.
+Settings - mission\ai\fn_units.sqf
 -------------------------------
 
 -------------------------------
