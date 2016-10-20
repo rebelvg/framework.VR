@@ -148,7 +148,6 @@ murshun_fillBox_fnc = {
 				} forEach _mags;
 			};
 		} forEach _weaponsArray;
-
 	} forEach (_loadoutArray select 0);
 };
 
