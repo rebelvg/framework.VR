@@ -103,22 +103,6 @@ class CfgTaskEnhancements
 	propagate = 0;
 };
 
-class CfgDebriefing
-{
-	class Completed1
-	{
-		title = "Mission Completed!";
-		subtitle = "Good Job!";
-		description = "";
-	};
-	class Failed1
-	{
-		title = "Mission Failed!";
-		subtitle = "Come on, guys.";
-		description = "";
-	};	
-};
-
 class CfgDebriefingSections
 {
 	class PrintMurshunDebriefing

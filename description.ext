@@ -23,3 +23,19 @@ onLoadMission = "";
 author = "Murshun";
 loadScreen = "logo.paa";
 overviewPicture = "logo.paa";
+
+class CfgDebriefing
+{
+	class Completed1
+	{
+		title = "Mission Completed!";
+		subtitle = "Good Job!";
+		description = "";
+	};
+	class Failed1
+	{
+		title = "Mission Failed!";
+		subtitle = "Come On, Guys.";
+		description = "";
+	};	
+};
