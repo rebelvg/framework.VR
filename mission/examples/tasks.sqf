@@ -102,21 +102,21 @@ waitUntil {
 
 [] spawn {
 	[WEST, "west_task_id", ["Task description.", "Eliminate East Side Team"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
-	
+
 	waitUntil {
 		{side _x == EAST && !isObjectHidden _x} count (playableUnits + switchableUnits) == 0 && time > 0
 	};
-	
+
 	["west_task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
 };
 
 [] spawn {
 	[EAST, "east_task_id", ["Task description.", "Eliminate West Side Team"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
-	
+
 	waitUntil {
 		{side _x == WEST && !isObjectHidden _x} count (playableUnits + switchableUnits) == 0 && time > 0
 	};
-	
+
 	["east_task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
 };
 

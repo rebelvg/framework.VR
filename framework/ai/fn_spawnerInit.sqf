@@ -12,7 +12,7 @@ if (isNil "mf_fnc_ai_vehicleArray") then {
 
 mf_fnc_ai_applySkill = {
 	params ["_grp"];
-	
+
 	{
 		_x setSkill ["aimingAccuracy", 0.2];
 		_x setSkill ["aimingShake", 0.2];
@@ -32,7 +32,7 @@ mf_fnc_ai_createGroup = {
 	private ["_soldierArray","_spawnPos","_grp","_groupLeader","_groupMember"];
 
 	_soldierArray = [_faction] call mf_fnc_ai_soldierArray;
-	
+
 	if (count _soldierArray == 0) exitWith {};
 
 	_spawnPos = [_pos, 50 * sqrt random 1, random 360] call BIS_fnc_relPos;
@@ -45,9 +45,9 @@ mf_fnc_ai_createGroup = {
 	{
 		_groupMember = _grp createUnit [selectRandom _soldierArray, _spawnPos, [], 0, "FORM"];
 	};
-	
+
 	[_grp] call mf_fnc_ai_applySkill;
-	
+
 	_grp
 };
 
@@ -84,95 +84,95 @@ mf_fnc_ai_createCrew = {
 
 mf_fnc_ai_infantryAttack = {
 	params ["_pos", "_attackPos", "_faction", "_side"];
-	
+
 	if (!isServer) exitWith {};
-	
+
 	_grp = [_pos, _faction, _side] call mf_fnc_ai_createGroup;
-	
+
 	[_grp, _attackPos, 50] call CBA_fnc_taskAttack;
-	
+
 	units _grp
 };
 
 mf_fnc_ai_infantryDefend = {
 	params ["_pos", "_attackPos", "_faction", "_side"];
-	
+
 	if (!isServer) exitWith {};
-	
+
 	_grp = [_pos, _faction, _side] call mf_fnc_ai_createGroup;
-	
+
 	[_grp, _attackPos, 50] call CBA_fnc_taskDefend;
-	
+
 	units _grp
 };
 
 mf_fnc_ai_infantryPatrol = {
 	params ["_pos", "_attackPos", "_faction", "_side"];
-	
+
 	if (!isServer) exitWith {};
-	
+
 	_grp = [_pos, _faction, _side] call mf_fnc_ai_createGroup;
-	
+
 	[_grp, _attackPos, 100, 5] call CBA_fnc_taskPatrol;
-	
+
 	units _grp
 };
 
 mf_fnc_ai_vehicleAttack = {
 	params ["_pos", "_attackPos", "_faction", "_vehicle", "_side"];
 	private ["_soldierArray","_vehicleArray","_spawnPos","_grp","_veh"];
-	
+
 	if (!isServer) exitWith {};
-	
+
 	_soldierArray = [_faction] call mf_fnc_ai_soldierArray;
-	
+
 	if (count _soldierArray < 1) exitWith {};
 
 	_vehicleArray = [_vehicle] call mf_fnc_ai_vehicleArray;
-	
+
 	if (count _vehicleArray == 0) exitWith {};
 
 	_spawnPos = [_pos, 100 * sqrt random 1, random 360] call BIS_fnc_relPos;
 	_veh = (selectRandom _vehicleArray) createVehicle _spawnPos;
-	
+
 	_grp = createGroup _side;
 	[_grp, _veh, _soldierArray select 0, _soldierArray select 0] call mf_fnc_ai_createCrew;
 	[_grp] call mf_fnc_ai_applySkill;
-	
+
 	[_grp, _attackPos, 100] call CBA_fnc_taskAttack;
-	
+
 	units _grp
 };
 
 mf_fnc_ai_airPatrol = {
 	params ["_pos", "_attackPos", "_faction", "_vehicle", "_side"];
 	private ["_soldierArray","_vehicleArray","_spawnPos","_grp","_veh"];
-	
+
 	if (!isServer) exitWith {};
 
 	_soldierArray = [_faction] call mf_fnc_ai_soldierArray;
-	
+
 	if (count _soldierArray < 2) exitWith {};
 
 	_vehicleArray = [_vehicle] call mf_fnc_ai_vehicleArray;
-	
+
 	if (count _vehicleArray == 0) exitWith {};
-	
+
 	_spawnPos = [_pos, 100 * sqrt random 1, random 360] call BIS_fnc_relPos;
 	_veh = createVehicle [selectRandom _vehicleArray, _spawnPos, [], 0, "FLY"];
 
 	_grp = createGroup _side;
 	[_grp, _veh, _soldierArray select 1, _soldierArray select 1] call mf_fnc_ai_createCrew;
 	[_grp] call mf_fnc_ai_applySkill;
-	
+
 	[_grp, _attackPos, 300, 5, "SAD"] call CBA_fnc_taskPatrol;
-	
+
 	units _grp
 };
 
 mf_fnc_ai_mortarAttack = {
 	params ["_pos", "_number", "_interval", "_radius", "_round"];
-	
+
 	if (!isServer) exitWith {};
 
 	for "_i" from 0 to floor _number do

@@ -16,4 +16,4 @@ if (mf_customEnemyLoadouts) then {
 	if (!(_unit in (switchableUnits + playableUnits))) then {
 		[_unit] call mf_fnc_giveLoadout;
 	};
-};	
+};

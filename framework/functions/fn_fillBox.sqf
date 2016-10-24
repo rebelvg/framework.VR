@@ -35,15 +35,15 @@ clearBackpackCargoGlobal _box;
 if (count _loadoutArray == 3) then {
 	if (_box isKindOf "thing") then {
 		_box allowDamage false;
-		
+
 		[_box, 1] call murshun_fillBox_fnc;
 	} else {
 		_box addItemCargoGlobal ["ACE_elasticBandage", 20];
 		_box addItemCargoGlobal ["ACE_quikclot", 20];
 		_box addItemCargoGlobal ["ACE_morphine", 4];
 		_box addItemCargoGlobal ["ACE_epinephrine", 4];
-		_box addItemCargoGlobal ["ACE_salineIV_250", 4];	
-		
+		_box addItemCargoGlobal ["ACE_salineIV_250", 4];
+
 		[_box, 1/4] call murshun_fillBox_fnc;
 
 		if (_box isKindOf "car") then {

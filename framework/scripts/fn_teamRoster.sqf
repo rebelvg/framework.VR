@@ -32,17 +32,17 @@ _unitsArr = (playableUnits + switchableUnits) select {side group _x == side grou
 				_strColorGrp = "'#990099'";
 			};
 		};
-		
+
 		_strFinal = _strFinal + "<br/>" + "<font color=" + _strColorGrp + ">" + (groupID (group _x)) + "</font>" + "<br/>";
 	};
-	
+
 	_oldGrp = group _x;
-	
+
 	_mf_groupChannel = _x getVariable ["mf_groupChannel", [9, 5]];
-	
+
 	_squad = _mf_groupChannel select 0;
 	_team = _mf_groupChannel select 1;
-	
+
 	_teamColor = "";
 	switch (_team) do {
 	case 1: {
@@ -58,7 +58,7 @@ _unitsArr = (playableUnits + switchableUnits) select {side group _x == side grou
 			_teamColor = "'#FFFF00'";
 		};
 	};
-	
+
 	_strRole = " - " + getText (configFile >> "CfgVehicles" >> typeOf _x >> "displayName");
 
 	_strFinal =  _strFinal + "<font color=" + _teamColor + ">" + name _x + "</font>" + _strRole + "<br/>";

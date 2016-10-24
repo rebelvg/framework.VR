@@ -27,7 +27,7 @@ if (count _loadoutArray == 3) then {
 	removeUniform _unit;
 	removeVest _unit;
 	removeHeadgear _unit;
-	
+
 	_allClassesArray = [];
 
 	{
@@ -54,7 +54,7 @@ if (count _loadoutArray == 3) then {
 				[_unit, _fashionArray select 3] call murshun_giveBackpack_fnc;
 				[_unit, _fashionArray select 4] call murshun_giveGoggles_fnc;
 			};
-			
+
 			{
 				if (count _x == 3) then {
 					if (_className in (_x select 0) || "all" in (_x select 0)) then {
@@ -71,7 +71,7 @@ if (count _loadoutArray == 3) then {
 				[_unit, _x] call murshun_giveWeapon_fnc;
 			} foreach _weaponsArray;
 		};
-	} foreach (_loadoutArray select 0);	
+	} foreach (_loadoutArray select 0);
 };
 
 if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {

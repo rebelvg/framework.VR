@@ -5,7 +5,7 @@ class CfgFunctions
 		class functions
 		{
 			file = "framework\functions";
-			
+
 			class frameworkInit {preInit = 1;};
 			class giveLoadout {};
 			class fillBox {};
@@ -13,43 +13,43 @@ class CfgFunctions
 			class onlyPilotsCanFlyPlayer {};
 			class onlyPilotsCanFlyVehicle {};
 		};
-		
+
 		class ai
 		{
 			file = "framework\ai";
-			
+
 			class spawnerInit {preInit = 1;};
 		};
-		
+
 		class initEvents
 		{
 			file = "framework\initEvents";
-			
+
 			class unitInit {};
 			class vehicleInit {};
 			class boxInit {};
 		};
-		
+
 		class scripts
 		{
 			file = "framework\scripts";
-			
+
 			class frameworkBriefing {};
 			class acreSettings {};
 			class radioBriefing {};
 			class teamRoster {};
 		};
-		
+
 		class loadouts
 		{
 			file = "mission\loadouts";
-			
+
 			class loadoutWest {};
 			class loadoutEast {};
 			class loadoutGuer {};
 			class loadoutCiv {};
 		};
-		
+
 		class mission
 		{
 			class frameworkSettings {
@@ -70,7 +70,7 @@ class Extended_InitPost_EventHandlers
 	{
 		unitInit = "_this call mf_fnc_unitInit";
 	};
-	
+
 	class Car
 	{
 		carInit = "_this call mf_fnc_vehicleInit";
@@ -87,7 +87,7 @@ class Extended_InitPost_EventHandlers
 	{
 		shipInit = "_this call mf_fnc_vehicleInit";
 	};
-	
+
 	class ReammoBox_F
 	{
 		boxInit = "_this call mf_fnc_boxInit";
