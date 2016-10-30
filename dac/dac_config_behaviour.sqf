@@ -19,7 +19,7 @@ switch (_this select 0) do
 case 0:
 	{
 		//_setSkill = ["aimingAccuracy","aimingShake","aimingSpeed","endurance","spotDistance","spotTime","courage","reloadSpeed","commanding","general"];
-		_setSkill   = [[0.25,0.35],[0.25,0.35],[0.25,0.35],[0.35,0.65],[0.35,0.65],[0.35,0.65],[0.35,0.65],[0.25,0.35],[0.25,0.65],[0.35,0.75]];
+		_setSkill   = [[0.25,0.35],[0.25,0.35],[0.25,0.35],[0.35,0.65],[0.35,0.65],[0.35,0.65],[0.35,0.65],[0.35,0.35],[0.35,0.65],[0.35,0.65]];
 		_setCombat  = ["green","white","yellow"];
 		_setBehav   = ["careless","safe","aware"];
 		_setSpeed   = ["limited","normal","full"];
