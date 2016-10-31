@@ -14,7 +14,7 @@ _TypNumber = _this select 0;_TempArray = [];
 switch (_TypNumber) do
 {
 	//-------------------------------------------------------------------------------------------------
-	// REDFOR (A3)
+	// EAST
 case 0:
 	{
 		//crew, pilot, sl, all other units
@@ -24,7 +24,7 @@ case 0:
 		_Unit_Pool_A = ["O_Heli_Light_02_F"];
 	};
 	//-------------------------------------------------------------------------------------------------
-	// BLUFOR (A3)
+	// WEST
 case 1:
 	{
 		_Unit_Pool_S = ["B_crew_F","B_Helipilot_F","B_Soldier_SL_F","B_soldier_AR_F","B_soldier_exp_F","B_soldier_GL_F","B_soldier_AA_F","B_soldier_M_F","B_medic_F","B_soldier_repair_F","B_Soldier_F","B_soldier_LAT_F","B_soldier_lite_F","B_soldier_TL_F"];
@@ -33,7 +33,7 @@ case 1:
 		_Unit_Pool_A = ["B_Heli_Transport_01_F"];
 	};
 	//-------------------------------------------------------------------------------------------------
-	// Independent (A3)
+	// RESISTANCE
 case 2:
 	{
 		_Unit_Pool_S = ["I_crew_F","I_Helipilot_F","I_Soldier_SL_F","I_soldier_AR_F","I_soldier_exp_F","I_soldier_GL_F","I_soldier_AA_F","I_soldier_M_F","I_medic_F","I_soldier_repair_F","I_Soldier_F","I_soldier_LAT_F","I_soldier_lite_F","I_soldier_TL_F"];
@@ -42,7 +42,7 @@ case 2:
 		_Unit_Pool_A = ["I_Heli_light_03_F"];
 	};
 	//-------------------------------------------------------------------------------------------------
-	// Civilians (A3)
+	// CIVILIAN
 case 3:
 	{
 		_Unit_Pool_S = ["C_man_1","C_man_1","C_man_1","C_man_polo_1_F","C_man_polo_2_F","C_man_polo_3_F","C_man_polo_4_F","C_man_polo_5_F","C_man_polo_6_F","C_man_1_1_F","C_man_1_2_F","C_man_1_3_F"];
