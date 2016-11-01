@@ -392,4 +392,4 @@ if (!isMultiplayer) then {
 	DAC_Marker = 2;
 };
 
-mf_version = 1.23;
+mf_version = 1.24;

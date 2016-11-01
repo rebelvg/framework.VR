@@ -11,8 +11,6 @@ player addEventHandler ["GetInMan", {
 
 	if (!([_unit] call mf_fnc_isUnitPilot)) exitWith {};
 
-	if ((getPosATL _veh) select 2 > 3) exitWith {};
-
 	unassignVehicle _unit;
 	moveOut _unit;
 
@@ -24,7 +22,7 @@ player addEventHandler ["SeatSwitchedMan", {
 
 	if (!([_unit] call mf_fnc_isUnitPilot)) exitWith {};
 
-	if ((getPosATL _veh) select 2 > 3) exitWith {};
+	if (speed _veh != 0) exitWith {};
 
 	unassignVehicle _unit;
 	moveOut _unit;

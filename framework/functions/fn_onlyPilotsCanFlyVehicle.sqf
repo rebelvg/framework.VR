@@ -16,12 +16,13 @@ _vehicle addEventHandler ["ControlsShifted", {
 
 	if (_className == "pilot") exitWith {};
 
-	if ((getPosATL _veh) select 2 > 3) exitWith {};
+	if (speed _veh != 0) exitWith {};
 
 	[[[_veh, _unit], {
 		params ["_veh", "_unit"];
 
 		_unit action ["SuspendVehicleControl", _veh];
+
 		systemChat "Can take controls only when flying.";
 	}], "BIS_fnc_spawn", _unit] call BIS_fnc_MP;
 }];
