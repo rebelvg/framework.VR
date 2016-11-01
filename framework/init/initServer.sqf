@@ -8,21 +8,21 @@ if (isMultiplayer) then {
 	};
 };
 
-murshun_framework_playersKilled = 0;
-murshun_framework_unitsKilled = 0;
-publicVariable "murshun_framework_playersKilled";
-publicVariable "murshun_framework_unitsKilled";
+mf_playersKilled = 0;
+mf_aiKilled = 0;
+publicVariable "mf_playersKilled";
+publicVariable "mf_aiKilled";
 
 addMissionEventHandler ["EntityKilled", {
 	_unitKilled = _this select 0;
 
 	if (_unitKilled isKindOf "CAManBase") then {
 		if (isPlayer _unitKilled) then {
-			murshun_framework_playersKilled = murshun_framework_playersKilled + 1;
-			publicVariable "murshun_framework_playersKilled";
+			mf_playersKilled = mf_playersKilled + 1;
+			publicVariable "mf_playersKilled";
 		} else {
-			murshun_framework_unitsKilled = murshun_framework_unitsKilled + 1;
-			publicVariable "murshun_framework_unitsKilled";
+			mf_aiKilled = mf_aiKilled + 1;
+			publicVariable "mf_aiKilled";
 		};
 	};
 }];

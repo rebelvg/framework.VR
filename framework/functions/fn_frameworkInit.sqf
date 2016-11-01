@@ -374,6 +374,10 @@ if (!isNil "mf_onlyPilotsCanFly") then {
 	mf_onlyPilotsCanFly = false;
 };
 
+if (!isNil "mf_debriefingText") then {
+	mf_debriefingText = "";
+};
+
 ace_respawn_SavePreDeathGear = false;
 ace_respawn_removeDeadBodiesDisconnected = true;
 ace_finger_enabled = true;

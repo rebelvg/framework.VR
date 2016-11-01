@@ -15,8 +15,6 @@ if (isNil "murshun_respawnArray") then {
 	murshun_respawnArray = [];
 };
 
-mf_debriefingText = "";
-
 addMissionEventHandler ["Ended", {
 	mf_debriefingText = format [
 	"---Friendly Fire Logs---<br/>
@@ -29,10 +27,10 @@ addMissionEventHandler ["Ended", {
 	%4<br/>
 	---AI Killed---<br/>
 	%5",
-	str (murshun_ffArray apply {(_x select 1) + " damaged " + (_x select 0) + " " + str ceil ((time - (_x select 2))/60) + " minutes ago"}),
+	str (murshun_ffArray apply {(_x select 1) + " damaged " + (_x select 0) + " " + str ceil ((CBA_missionTime - (_x select 2))/60) + " minutes ago"}),
 	str murshun_respawnArray,
 	str (allPlayers apply {name _x}),
-	murshun_framework_playersKilled,
-	murshun_framework_unitsKilled
+	mf_playersKilled,
+	mf_aiKilled
 	];
 }];
