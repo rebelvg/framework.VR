@@ -16,6 +16,7 @@ private [
 switch (_this select 0) do
 {
 	//-------------------------------------------------------------------------------------------------------------------------
+    //infantry
 case 0:
 	{
 		//_setSkill = ["aimingAccuracy","aimingShake","aimingSpeed","endurance","spotDistance","spotTime","courage","reloadSpeed","commanding","general"];
@@ -23,6 +24,27 @@ case 0:
 		_setCombat  = ["green","white","yellow"];
 		_setBehav   = ["careless","safe","aware"];
 		_setSpeed   = ["limited","normal","full"];
+		_setForm    = ["line","vee","column","wedge","stag column","ech left","ech right","file","diamond"];
+		_setFleeing = [0,200];
+		_setHeliVal = [100,300,1,1];
+		_setPause   = [[5,10],[5,10],[5,10],[20,30,5,5],[1,3],[0,0]];
+		_setBldgBeh = [3,50,120,600,2];
+		_setPatrol  = ["45 + (20 * (skill _leader))","(60 + (random 60)) + ((skill _leader) * 50)"];
+		_setSearch  = ["40 + ((skill _leader) * 150)","50 + ((skill _leader) * 50)"];
+		_setSupport = [0,0];
+		_setJoin    = 1;
+		_setEmpVeh  = [[150,100],[150,100]];
+		_setSupTime = ["5 + ((skill _unit) * (5 * DAC_AI_Level))",2,5];
+		_setHidTime = ["(((10 * DAC_AI_Level) + ((skill _leader) * 50)) / ((count units _group) + 1))"];
+	};
+    //vehicles
+case 4:
+	{
+		//_setSkill = ["aimingAccuracy","aimingShake","aimingSpeed","endurance","spotDistance","spotTime","courage","reloadSpeed","commanding","general"];
+		_setSkill   = [[0.25,0.35],[0.25,0.35],[0.25,0.35],[0.45,0.65],[0.45,0.65],[0.45,0.65],[0.45,0.65],[0.45,0.35],[0.45,0.65],[0.45,0.65]];
+		_setCombat  = ["green","white","yellow"];
+		_setBehav   = ["careless","safe","aware"];
+		_setSpeed   = ["limited","normal"];
 		_setForm    = ["line","vee","column","wedge","stag column","ech left","ech right","file","diamond"];
 		_setFleeing = [0,200];
 		_setHeliVal = [100,300,1,1];
