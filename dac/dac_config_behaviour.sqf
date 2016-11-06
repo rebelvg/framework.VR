@@ -21,8 +21,8 @@ case 0:
 	{
 		//"aimingAccuracy", "aimingShake", "aimingSpeed", "endurance", "spotDistance", "spotTime", "courage", "reloadSpeed", "commanding", "general"
 		_setSkill   = [[0.45,0.65],[0.45,0.65],[0.45,0.65],[0.65,0.85],[0.65,0.85],[0.65,0.85],[0.65,0.85],[0.65,0.85],[0.65,0.85],[0.65,0.85]];
-		_setCombat  = ["green","white","yellow"];
-		_setBehav   = ["careless","safe","aware"];
+		_setCombat  = ["yellow"];
+		_setBehav   = ["safe","aware"];
 		_setSpeed   = ["limited","normal","full"];
 		_setForm    = ["line","vee","column","wedge","stag column","ech left","ech right","file","diamond"];
 		_setFleeing = [0,200];
@@ -41,8 +41,8 @@ case 0:
 case 4:
 	{
 		_setSkill   = [[0.25,0.45],[0.25,0.45],[0.25,0.45],[0.45,0.65],[0.45,0.65],[0.45,0.65],[0.45,0.65],[0.45,0.65],[0.45,0.65],[0.45,0.65]];
-		_setCombat  = ["green","white","yellow"];
-		_setBehav   = ["careless","safe","aware"];
+		_setCombat  = ["yellow"];
+		_setBehav   = ["safe","aware"];
 		_setSpeed   = ["limited","normal"];
 		_setForm    = ["line","vee","column","wedge","stag column","ech left","ech right","file","diamond"];
 		_setFleeing = [0,200];
