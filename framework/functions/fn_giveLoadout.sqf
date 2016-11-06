@@ -37,7 +37,7 @@ if (count _loadoutArray == 3) then {
 	} foreach (_loadoutArray select 0);
 
 	if (!(_className in _allClassesArray)) then {
-		systemChat format ["Can't find loadout for %1, falling back to rifleman.", _className];
+		systemChat format ["Loadout %2: Can't find loadout for %1, falling back to rifleman.", _className, side group _unit];
 
 		_className = "rifleman";
 	};
