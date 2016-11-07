@@ -69,7 +69,6 @@ mf_fnc_ai_createGroup = {
 
     _grp = createGroup _side;
     _groupLeader = _grp createUnit [_soldierArray select 0, _spawnPos, [], 0, "FORM"];
-    _groupLeader setRank "SERGEANT";
 
     for "_i" from 0 to floor 6 do
     {
@@ -87,37 +86,33 @@ mf_fnc_ai_createCrew = {
     if (_veh emptyPositions "driver" > 0) then
     {
         _vehicleDriver = _grp createUnit [_driver, [0,0,0], [], 0, "FORM"];
-        _vehicleDriver setRank "CORPORAL";
         _vehicleDriver moveInDriver _veh;
     };
 
     if (_veh emptyPositions "commander" > 0) then
     {
         _vehicleCommander = _grp createUnit [_crew, [0,0,0], [], 0, "FORM"];
-        _vehicleCommander setRank "SERGEANT";
         _vehicleCommander moveInCommander _veh;
     };
 
     if (_veh emptyPositions "gunner" > 0) then
     {
         _vehicleGunner = _grp createUnit [_crew, [0,0,0], [], 0, "FORM"];
-        _vehicleGunner setRank "PRIVATE";
         _vehicleGunner moveInGunner _veh;
     };
 
     {
         _vehicleCrew = _grp createUnit [_crew, [0,0,0], [], 0, "FORM"];
-        _vehicleCrew setRank "PRIVATE";
         _vehicleCrew moveInTurret [_veh, (_x select 3)];
     } foreach (fullCrew [_veh, "turret", true]);
 };
 
 mf_fnc_ai_infantryAttack = {
-    params ["_pos", "_attackPos", "_faction", "_side"];
+    params ["_pos", "_attackPos", "_faction"];
 
     if (!isServer) exitWith {};
 
-    _grp = [_pos, _faction, _side] call mf_fnc_ai_createGroup;
+    _grp = [_pos, _faction] call mf_fnc_ai_createGroup;
 
     [_grp, _attackPos, 50, "SAD", "AWARE", "YELLOW"] call CBA_fnc_addWaypoint;
 
@@ -125,11 +120,11 @@ mf_fnc_ai_infantryAttack = {
 };
 
 mf_fnc_ai_infantryDefend = {
-    params ["_pos", "_attackPos", "_faction", "_side"];
+    params ["_pos", "_attackPos", "_faction"];
 
     if (!isServer) exitWith {};
 
-    _grp = [_pos, _faction, _side] call mf_fnc_ai_createGroup;
+    _grp = [_pos, _faction] call mf_fnc_ai_createGroup;
 
     [_grp, _attackPos, 50] call CBA_fnc_taskDefend;
 
@@ -137,11 +132,11 @@ mf_fnc_ai_infantryDefend = {
 };
 
 mf_fnc_ai_infantryPatrol = {
-    params ["_pos", "_attackPos", "_faction", "_side"];
+    params ["_pos", "_attackPos", "_faction"];
 
     if (!isServer) exitWith {};
 
-    _grp = [_pos, _faction, _side] call mf_fnc_ai_createGroup;
+    _grp = [_pos, _faction] call mf_fnc_ai_createGroup;
 
     [_grp, _attackPos, 100, 5, "SAD"] call CBA_fnc_taskPatrol;
 
