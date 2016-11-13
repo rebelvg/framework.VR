@@ -22,6 +22,7 @@ Settings - mission\fn_settings.sqf
 
 mf_customEnemyLoadouts - bool, custom loadouts for non-playable units.
 mf_onlyPilotsCanFly - bool, forbids taking off by non-pilots.
+mf_forceSideNVGs - array, forces NVGs for selected sides (WEST, EAST, RESISTANCE, CIVILIAN), non-playable units only.
 
 murshun_spectator_enable - bool, enables murshun spectator.
 murshun_easywayout_enable - bool, enables easywayout mod.

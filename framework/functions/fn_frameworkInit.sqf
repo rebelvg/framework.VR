@@ -374,6 +374,10 @@ if (!isNil "mf_onlyPilotsCanFly") then {
 	mf_onlyPilotsCanFly = false;
 };
 
+if (!isNil "mf_forceSideNVGs") then {
+	mf_forceSideNVGs = [];
+};
+
 if (!isNil "mf_debriefingText") then {
 	mf_debriefingText = "";
 };
@@ -392,4 +396,4 @@ if (!isMultiplayer) then {
 	DAC_Marker = 2;
 };
 
-mf_version = 1.29;
+mf_version = 1.3;

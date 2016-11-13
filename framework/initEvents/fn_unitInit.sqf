@@ -12,8 +12,12 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
 	};
 };
 
-if (mf_customEnemyLoadouts) then {
-	if (!(_unit in (switchableUnits + playableUnits))) then {
-		[_unit] call mf_fnc_giveLoadout;
-	};
+if (!(_unit in (switchableUnits + playableUnits))) then {
+    if (mf_customEnemyLoadouts) then {
+        [_unit] call mf_fnc_giveLoadout;
+    };
+
+    if (side _unit in mf_forceSideNVGs) then {
+        _unit linkItem "ACE_NVG_Gen1";
+    };
 };

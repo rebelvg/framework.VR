@@ -5,6 +5,7 @@
 //framework
 mf_customEnemyLoadouts = false;
 mf_onlyPilotsCanFly = false;
+mf_forceSideNVGs = [];
 
 //mods
 murshun_spectator_enable = true;
