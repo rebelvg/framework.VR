@@ -132,13 +132,13 @@ mf_fnc_ai_infantryDefend = {
 };
 
 mf_fnc_ai_infantryPatrol = {
-    params ["_pos", "_attackPos", "_faction"];
+    params ["_pos", "_attackPos", "_faction", ["_radius", 100]];
 
     if (!isServer) exitWith {};
 
     _grp = [_pos, _faction] call mf_fnc_ai_createGroup;
 
-    [_grp, _attackPos, 100, 5] call CBA_fnc_taskPatrol;
+    [_grp, _attackPos, _radius, 5] call CBA_fnc_taskPatrol;
 
     _grp
 };
@@ -172,7 +172,7 @@ mf_fnc_ai_vehicleAttack = {
 };
 
 mf_fnc_ai_airPatrol = {
-    params ["_pos", "_attackPos", "_faction", "_vehicle"];
+    params ["_pos", "_attackPos", "_faction", "_vehicle", ["_radius", 300]];
     private ["_soldierArray","_vehicleArray","_spawnPos","_grp","_veh","_side"];
 
     if (!isServer) exitWith {};
@@ -194,7 +194,7 @@ mf_fnc_ai_airPatrol = {
     [_grp, _veh, _soldierArray select 1, _soldierArray select 1] call mf_fnc_ai_createCrew;
     [_grp] call mf_fnc_ai_applySkill;
 
-    [_grp, _attackPos, 300, 5] call CBA_fnc_taskPatrol;
+    [_grp, _attackPos, _radius, 5] call CBA_fnc_taskPatrol;
 
     _grp
 };
