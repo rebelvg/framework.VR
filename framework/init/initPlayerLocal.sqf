@@ -20,7 +20,7 @@ if (!("respawn" in allMapMarkers)) then {
 	createMarkerLocal ["respawn", getPos player];
 };
 
-waitUntil {time > 300};
+waitUntil {time > 180};
 
 _monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
