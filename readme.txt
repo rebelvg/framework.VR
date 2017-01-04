@@ -7,7 +7,6 @@ INFO.
 Latest ARMA 3.
 CBA.
 ACE3.
-ALIVE.
 DAC.
 
 -- Optionals.
