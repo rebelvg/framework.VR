@@ -14,16 +14,15 @@ _box allowDamage false;
 if (ace_medical_level > 1) then {
 	_box addItemCargoGlobal ["ACE_elasticBandage", 100];
 	_box addItemCargoGlobal ["ACE_quikclot", 100];
-	_box addItemCargoGlobal ["ACE_morphine", 20];
-	_box addItemCargoGlobal ["ACE_epinephrine", 20];
+	_box addItemCargoGlobal ["ACE_morphine", 40];
+	_box addItemCargoGlobal ["ACE_epinephrine", 40];
 	_box addItemCargoGlobal ["ACE_tourniquet", 20];
 	_box addItemCargoGlobal ["ACE_personalAidKit", 20];
 	_box addItemCargoGlobal ["ACE_salineIV_250", 20];
 } else {
-	_box addItemCargoGlobal ["ACE_elasticBandage", 100];
-	_box addItemCargoGlobal ["ACE_quikclot", 100];
-	_box addItemCargoGlobal ["ACE_morphine", 20];
-	_box addItemCargoGlobal ["ACE_epinephrine", 20];
+	_box addItemCargoGlobal ["ACE_elasticBandage", 200];
+	_box addItemCargoGlobal ["ACE_morphine", 40];
+	_box addItemCargoGlobal ["ACE_epinephrine", 40];
 	_box addItemCargoGlobal ["ACE_salineIV_250", 20];
 };
 

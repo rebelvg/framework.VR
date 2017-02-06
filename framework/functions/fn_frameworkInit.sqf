@@ -382,18 +382,9 @@ if (!isNil "mf_debriefingText") then {
 	mf_debriefingText = "";
 };
 
-ace_respawn_SavePreDeathGear = false;
-ace_respawn_removeDeadBodiesDisconnected = true;
-ace_finger_enabled = true;
-ace_map_gestures_enabled = true;
-ace_map_DefaultChannel = 1;
-ace_medical_menu_allow = 1;
-ace_medical_ai_enabledFor = 0;
-acex_sitting_enable = true;
-
 if (!isMultiplayer) then {
 	DAC_Com_Values = [1,2,3,1];
 	DAC_Marker = 2;
 };
 
-mf_version = 1.32;
+mf_version = 1.33;

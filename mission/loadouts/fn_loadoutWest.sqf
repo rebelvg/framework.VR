@@ -11,11 +11,15 @@ weaponsArray = [weaponArray1, handgunArray1];
 eqpArray = [classesArray, [fashionArray, weaponsArray]];
 */
 
-_basicMedicine = [["ACE_elasticBandage", 5], ["ACE_morphine", 3], ["ACE_epinephrine", 1]];
+_basicMedicine = [["ACE_elasticBandage", 10], ["ACE_morphine", 3], ["ACE_epinephrine", 1]];
 _advancedMedicine = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 3], ["ACE_epinephrine", 1], ["ACE_tourniquet", 1], ["ACE_personalAidKit", 1]];
 
-_basicMedicMedicine = [["ACE_elasticBandage", 5], ["ACE_morphine", 3], ["ACE_epinephrine", 1], ["ACE_salineIV_250", 1]];
-_advancedMedicMedicine = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 3], ["ACE_epinephrine", 1], ["ACE_tourniquet", 1], ["ACE_personalAidKit", 1], ["ACE_salineIV_250", 1]];
+_medicine = _basicMedicine;
+
+_basicMedicMedicine = [["ACE_elasticBandage", 20], ["ACE_morphine", 6], ["ACE_epinephrine", 2], ["ACE_salineIV_250", 1]];
+_advancedMedicMedicine = [["ACE_elasticBandage", 10], ["ACE_quikclot", 10], ["ACE_morphine", 6], ["ACE_epinephrine", 2], ["ACE_tourniquet", 1], ["ACE_personalAidKit", 1], ["ACE_salineIV_250", 1]];
+
+_medicMedicine = _basicMedicMedicine;
 
 _leaderFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
 _riflemanFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_AssaultPack_cbr", ""];
@@ -121,13 +125,8 @@ _loadoutArray = [
 	], //equipment per class
 	[
 		[
-			["team leader", "missile specialist (at)", "autorifleman", "rifleman (at)", "rifleman", "grenadier", "missile specialist (aa)"],
+			["all"],
 			[["ACRE_PRC343", 1]],
-			[]
-		],
-		[
-			["officer", "squad leader", "team leader", "combat life saver", "engineer"],
-			[["ACRE_PRC148", 1]],
 			[]
 		],
 		[
@@ -137,7 +136,7 @@ _loadoutArray = [
 		],
 		[
 			["all"],
-			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 3], [_lethalGrenade, 1], ["ACE_CableTie", 1]] + _advancedMedicine, //items
+			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 3], [_lethalGrenade, 1], ["ACE_CableTie", 1]] + _medicine, //items
 			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "NVGoggles"] //link items
 		],
 		[
@@ -147,7 +146,7 @@ _loadoutArray = [
 		],
 		[
 			["combat life saver"],
-			_advancedMedicMedicine,
+			_medicMedicine,
 			[]
 		],
 		[
