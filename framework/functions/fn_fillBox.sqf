@@ -1,5 +1,11 @@
 params ["_box", ["_side", sideEmpty]];
 
+if (!isMultiplayer || ("AddVirtualArsenal" call BIS_fnc_getParamValue) == 1) then {
+	if (_box isKindOf "thing") then {
+		_box addAction ["Virtual Arsenal", {["Open", true] call BIS_fnc_arsenal}];
+	};
+};
+
 if (!isServer) exitWith {};
 
 _loadoutArray = [];
@@ -18,12 +24,6 @@ case RESISTANCE: {
 	};
 case CIVILIAN: {
 		_loadoutArray = call mf_fnc_loadoutCiv;
-	};
-};
-
-if (!isMultiplayer) then {
-	if (_box isKindOf "thing") then {
-		_box addAction ["Virtual Arsenal", {["Open", true] call BIS_fnc_arsenal}];
 	};
 };
 

@@ -1,3 +1,29 @@
+class Params
+{
+	class AddVirtualArsenal
+	{
+		title = "Add Virtual Arsenal";
+        texts[] = {"No","Yes"};
+		values[] = {0,1};
+		default = 0;
+        isGlobal = 1;
+	};
+    class AddZeus
+	{
+		title = "Add Zeus";
+        texts[] = {"No","Yes"};
+		values[] = {0,1};
+		default = 0;
+	};
+	class StartTime
+	{
+		title = "Start Time";
+		texts[] = {"Default","Night","Morning","Day","Evening"};
+		values[] = {-1,0,6,12,18};
+		default = -1;
+	};
+};
+
 class CfgFunctions
 {
 	class MF
