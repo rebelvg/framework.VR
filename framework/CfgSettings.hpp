@@ -6,7 +6,6 @@ class Params
         texts[] = {"Default","Yes"};
 		values[] = {0,1};
 		default = 0;
-        isGlobal = 1;
 	};
     class AddZeus
 	{
