@@ -4,7 +4,7 @@ if (!isMultiplayer || mf_forceVirtualArsenal || ("AddVirtualArsenal" call BIS_fn
     if (_box isKindOf "thing") then {
         _box addAction ["Virtual Arsenal", {["Open", true] spawn BIS_fnc_arsenal}];
     } else {
-        _action = ["mf_va_veh_action", "Ammo Arsenal", "", {["Open", false] spawn BIS_fnc_arsenal}, {true}] call ace_interact_menu_fnc_createAction;
+        _action = ["mf_va_veh_action", "Virtual Arsenal", "", {["Open", true] spawn BIS_fnc_arsenal}, {true}] call ace_interact_menu_fnc_createAction;
         [_box, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
     }
 };
