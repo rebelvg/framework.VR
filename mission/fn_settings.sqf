@@ -3,9 +3,11 @@
 //more info is in the readme.txt
 
 //framework
+mf_forceVirtualArsenal = false;
 mf_customEnemyLoadouts = false;
 mf_onlyPilotsCanFly = false;
 mf_forceSideNVGs = [];
+mf_addParadropOption = false;
 
 //mods
 murshun_spectator_enable = true;

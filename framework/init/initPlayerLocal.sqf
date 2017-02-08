@@ -1,6 +1,8 @@
 [] call mf_fnc_frameworkBriefing;
-
 [] call mf_fnc_radioBriefing;
+
+[player] call mf_fnc_giveLoadout;
+[] spawn mf_fnc_acreSettings;
 
 if (didJIP) then {
 	[[], "mf_fnc_teamRoster"] call BIS_fnc_MP;

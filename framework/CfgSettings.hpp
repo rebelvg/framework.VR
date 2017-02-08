@@ -3,7 +3,7 @@ class Params
 	class AddVirtualArsenal
 	{
 		title = "Add Virtual Arsenal";
-        texts[] = {"No","Yes"};
+        texts[] = {"Default","Yes"};
 		values[] = {0,1};
 		default = 0;
         isGlobal = 1;
@@ -11,7 +11,7 @@ class Params
     class AddZeus
 	{
 		title = "Add Zeus";
-        texts[] = {"No","Yes"};
+        texts[] = {"Default","Yes"};
 		values[] = {0,1};
 		default = 0;
 	};

@@ -148,6 +148,12 @@ murshun_fillBox_fnc = {
 				} forEach _mags;
 			};
 		} forEach _weaponsArray;
+
+        if ("rifleman" in ((_x select 0) apply {toLower _x})) then {
+            {
+                _unit addItemCargoGlobal [_x select 0, ceil (5 * _multiplier)];
+            } forEach _weaponsArray;
+        };
 	} forEach (_loadoutArray select 0);
 };
 
@@ -366,6 +372,42 @@ mf_fnc_addMusicRadio = {
 	};
 };
 
+mf_teamParadrop_fnc = {
+	_player = _this select 0;
+
+    _code = {side _x == side _player && _x distance2d _player > 100 && !isObjectHidden _x && (vehicle _x == _x or (count fullCrew [vehicle _x, "", true] > count fullCrew [vehicle _x, "", false]))};
+
+	_groupUnitsFar = (units group _player) select _code;
+
+	if (count _groupUnitsFar == 0) then {
+		_groupUnitsFar = allUnits select _code;
+	};
+
+	if (count _groupUnitsFar > 0) then {
+		_unit = selectRandom _groupUnitsFar;
+
+		if (vehicle _unit == _unit) then {
+			_LX = (getPos _unit select 0) + (3 * sin ((getDir _unit) - 180));
+			_LY = (getPos _unit select 1) + (3 * cos ((getDir _unit) - 180));
+			_LZ = (getPos _unit select 2);
+
+            _parachute = createVehicle ["Steerable_Parachute_F", [_LX,_LY,_LZ + 300], [], 0, "NONE"];
+            _player moveInDriver _parachute;
+		} else {
+			_player moveInAny vehicle _unit;
+		};
+
+		_string = format ["%1 teleported to %2 using team paradrop.", name _player, name _unit];
+		[_string, "systemChat"] call BIS_fnc_MP;
+	} else {
+		systemChat "Team members should be at least 100m away and not in a full vehicle.";
+	};
+};
+
+if (!isNil "mf_forceVirtualArsenal") then {
+	mf_forceVirtualArsenal = false;
+};
+
 if (!isNil "mf_customEnemyLoadouts") then {
 	mf_customEnemyLoadouts = false;
 };
@@ -378,6 +420,10 @@ if (!isNil "mf_forceSideNVGs") then {
 	mf_forceSideNVGs = [];
 };
 
+if (!isNil "mf_addParadropOption") then {
+	mf_addParadropOption = false;
+};
+
 if (!isNil "mf_debriefingText") then {
 	mf_debriefingText = "";
 };
@@ -387,4 +433,4 @@ if (!isMultiplayer) then {
 	DAC_Marker = 2;
 };
 
-mf_version = 1.33;
+mf_version = 1.34;
