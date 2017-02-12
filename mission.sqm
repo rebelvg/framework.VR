@@ -430,6 +430,10 @@ class Mission
 		forecastWeather=0;
 		forecastWind=0;
 		forecastWaves=0;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
 		year=2016;
 		month=1;
 		day=1;
@@ -464,7 +468,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, WEST] spawn mf_fnc_fillBox;";
+				init="0 = [this, WEST] spawn mf_fnc_fillBox; 0 = [this, WEST] spawn mf_fnc_addVehicleRespawn;";
 			};
 			id=6;
 			type="C_Offroad_01_F";
@@ -505,7 +509,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, RESISTANCE] spawn mf_fnc_fillBox;";
+				init="0 = [this, RESISTANCE] spawn mf_fnc_fillBox; 0 = [this, RESISTANCE] spawn mf_fnc_addVehicleRespawn;";
 			};
 			id=12;
 			type="C_Offroad_01_F";
@@ -1234,7 +1238,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="0 = [this, EAST] spawn mf_fnc_fillBox;";
+				init="0 = [this, EAST] spawn mf_fnc_fillBox; 0 = [this, EAST] spawn mf_fnc_addVehicleRespawn;";
 			};
 			id=9;
 			type="C_Offroad_01_F";

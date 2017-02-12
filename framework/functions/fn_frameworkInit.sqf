@@ -326,7 +326,7 @@ mf_fnc_addVehicleRespawn = {
 			_newVehicle setDir _vehDir;
 			_newVehicle setPosATL _spawnPos;
 
-			[_newVehicle, _loadoutSide] spawn mf_fnc_fillBox;
+            [[_newVehicle, _loadoutSide], "mf_fnc_fillBox", true, true] call BIS_fnc_MP;
 			[_newVehicle, _loadoutSide] spawn mf_fnc_addVehicleRespawn;
 
 			_string = format ["Vehicle %1 respawned at %2.", _vehClass, _spawnPos];

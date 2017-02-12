@@ -93,29 +93,29 @@ class Extended_InitPost_EventHandlers
 {
     class CAManBase
     {
-        unitInit = "_this call mf_fnc_unitInit";
+        frameworkUnitInit = "_this call mf_fnc_unitInit";
     };
 
     class Car
     {
-        carInit = "_this call mf_fnc_vehicleInit";
+        frameworkCarInit = "_this call mf_fnc_vehicleInit";
     };
     class Tank
     {
-        tankInit = "_this call mf_fnc_vehicleInit";
+        frameworkTankInit = "_this call mf_fnc_vehicleInit";
     };
     class Air
     {
-        airInit = "_this call mf_fnc_vehicleInit";
+        frameworkAirInit = "_this call mf_fnc_vehicleInit";
     };
     class Ship
     {
-        shipInit = "_this call mf_fnc_vehicleInit";
+        frameworkShipInit = "_this call mf_fnc_vehicleInit";
     };
 
     class ReammoBox_F
     {
-        boxInit = "_this call mf_fnc_boxInit";
+        frameworkBoxInit = "_this call mf_fnc_boxInit";
     };
 };
 
@@ -166,7 +166,7 @@ class ACE_Settings {
         typeName = "SCALAR";
     };
     class ace_weather_enableServerController {
-        value = 1;
+        value = 0;
         typeName = "BOOL";
     };
     class ace_weather_useACEWeather {
