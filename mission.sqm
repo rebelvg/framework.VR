@@ -36,7 +36,6 @@ addons[]=
 	"ace_repair",
 	"dac_source",
 	"A3_Modules_F_Curator_Curator",
-	"ace_optionsmenu",
 	"A3_Supplies_F_Heli_CargoNets",
 	"A3_Characters_F",
 	"ace_explosives",
@@ -48,7 +47,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=13;
+		items=12;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -99,40 +98,33 @@ class AddonsMetaData
 		};
 		class Item7
 		{
-			className="ace_optionsmenu";
-			name="ACE3 - Options Menu";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item8
-		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item9
+		class Item8
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item10
+		class Item9
 		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item11
+		class Item10
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item12
+		class Item11
 		{
 			className="ace_parachute";
 			name="ACE3 - Parachute";
@@ -444,7 +436,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=34;
+		items=33;
 		class Item0
 		{
 			dataType="Marker";
@@ -1078,7 +1070,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={515,5,570};
+				position[]={515,5,580};
 			};
 			id=21;
 			type="DAC_Source_Extern";
@@ -1088,7 +1080,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={515,5,580};
+				position[]={515,5,590};
 			};
 			id=72;
 			type="ModuleCurator_F";
@@ -1194,39 +1186,6 @@ class Mission
 		};
 		class Item8
 		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={515,5,590};
-			};
-			id=170;
-			type="ACE_moduleAllowConfigExport";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ACE_moduleAllowConfigExport_allowconfigurationExport";
-					expression="_this setVariable ['allowconfigurationExport',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				nAttributes=1;
-			};
-		};
-		class Item9
-		{
 			dataType="Object";
 			class PositionInfo
 			{
@@ -1266,7 +1225,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item10
+		class Item9
 		{
 			dataType="Trigger";
 			position[]={600,5,800};
@@ -1286,7 +1245,7 @@ class Mission
 			id=174;
 			type="EmptyDetector";
 		};
-		class Item11
+		class Item10
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1345,7 +1304,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item12
+		class Item11
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1404,7 +1363,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item13
+		class Item12
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1463,7 +1422,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item14
+		class Item13
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1522,7 +1481,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item15
+		class Item14
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1581,7 +1540,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item16
+		class Item15
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1640,7 +1599,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item17
+		class Item16
 		{
 			dataType="Group";
 			side="West";
@@ -1881,7 +1840,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item18
+		class Item17
 		{
 			dataType="Group";
 			side="West";
@@ -2467,7 +2426,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item19
+		class Item18
 		{
 			dataType="Group";
 			side="West";
@@ -3053,7 +3012,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item20
+		class Item19
 		{
 			dataType="Group";
 			side="East";
@@ -3290,7 +3249,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item21
+		class Item20
 		{
 			dataType="Group";
 			side="East";
@@ -3869,7 +3828,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item22
+		class Item21
 		{
 			dataType="Group";
 			side="East";
@@ -4448,7 +4407,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item23
+		class Item22
 		{
 			dataType="Group";
 			side="Independent";
@@ -4685,7 +4644,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item24
+		class Item23
 		{
 			dataType="Group";
 			side="Independent";
@@ -5264,7 +5223,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item25
+		class Item24
 		{
 			dataType="Group";
 			side="Independent";
@@ -5843,7 +5802,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item26
+		class Item25
 		{
 			dataType="Object";
 			class PositionInfo
@@ -5882,7 +5841,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item27
+		class Item26
 		{
 			dataType="Trigger";
 			position[]={600,5,1300};
@@ -5902,7 +5861,7 @@ class Mission
 			id=921;
 			type="EmptyDetector";
 		};
-		class Item28
+		class Item27
 		{
 			dataType="Group";
 			side="West";
@@ -6118,7 +6077,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item29
+		class Item28
 		{
 			dataType="Group";
 			side="East";
@@ -6334,7 +6293,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item30
+		class Item29
 		{
 			dataType="Group";
 			side="Independent";
@@ -6550,7 +6509,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item31
+		class Item30
 		{
 			dataType="Group";
 			side="West";
@@ -7193,7 +7152,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item32
+		class Item31
 		{
 			dataType="Group";
 			side="East";
@@ -7791,7 +7750,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item33
+		class Item32
 		{
 			dataType="Group";
 			side="Independent";
