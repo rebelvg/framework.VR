@@ -171,7 +171,7 @@ _loadoutArray = [
 		[_lethalGrenade, 80],
 		["DemoCharge_Remote_Mag", 20],
 		["SatchelCharge_Remote_Mag", 4]
-	] //content for boxes
+	] + _medicine //content for boxes
 ];
 
 //output of the function, do not remove or change
