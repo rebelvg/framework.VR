@@ -1275,7 +1275,7 @@ class Mission
 				name="z1";
 				text="zone";
 				condition="time > 1";
-				onActivation="0 = [""z1"",[1,1,0],[9,2,180,20],[],[],[],[0,0,0,2,2]] spawn DAC_Zone;";
+				onActivation="0 = [""z1"",[1,1,0],[9,2,90,10],[],[],[],[0,0,0,2,2]] spawn DAC_Zone;";
 				sizeA=200;
 				sizeB=200;
 				interuptable=1;
