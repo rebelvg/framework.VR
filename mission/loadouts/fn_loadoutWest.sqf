@@ -43,6 +43,9 @@ _boxAT = "launch_NLAW_F";
 _nonLethalGrenade = "SmokeShellBlue";
 _lethalGrenade = "HandGrenade";
 
+_items = [["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 3], [_lethalGrenade, 1], ["ACE_CableTie", 1]];
+_linkItems = ["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "NVGoggles"];
+
 _loadoutArray = [
 	[
 		[
@@ -136,8 +139,8 @@ _loadoutArray = [
 		],
 		[
 			["all"],
-			[["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 3], [_lethalGrenade, 1], ["ACE_CableTie", 1]] + _medicine, //items
-			["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "NVGoggles"] //link items
+			_items + _medicine, //items
+			_linkItems //link items
 		],
 		[
 			["officer", "squad leader", "team leader"],

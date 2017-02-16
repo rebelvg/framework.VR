@@ -3,10 +3,12 @@
 //creates task, waits until the unit is 50m from the marker, completes task
 //can be unit or object
 
-[WEST, "task_id", ["Task description.", "Rescue"], unit, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
+_obj = unit;
+
+[WEST, "task_id", ["Task description.", "Rescue"], _obj, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-	unit distance getMarkerPos "marker" < 50
+	_obj distance getMarkerPos "marker" < 50
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
@@ -14,9 +16,9 @@ waitUntil {
 //waits until objects are not alive
 //can be anything, units, vehicles, boxes
 
-[WEST, "task_id", ["Task description.", "Search And Destroy"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
-
 _objArray = [obj_01, obj_02, obj_03];
+
+[WEST, "task_id", ["Task description.", "Search And Destroy"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
 	{alive _x} count _objArray == 0
@@ -26,20 +28,22 @@ waitUntil {
 
 //waits until at least one player is 50m from the marker
 
-[WEST, "task_id", ["Task description.", "Visit Position"], "marker", "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
+_marker = "marker";
+
+[WEST, "task_id", ["Task description.", "Visit Position"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-	{_x distance getMarkerPos "marker" < 50} count allPlayers > 0
+	{_x distance getMarkerPos _marker < 50} count allPlayers > 0
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
 
 //waits until more than 80% of players (not spectators) are 50m from the marker
 
-[WEST, "task_id", ["Task description.", "Visit Position (Group)"], "marker", "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
-
 _marker = "marker";
 _radius = 50;
+
+[WEST, "task_id", ["Task description.", "Visit Position (Group)"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
 	{_x distance getMarkerPos _marker < _radius} count allPlayers >= ({!isObjectHidden _x} count allPlayers) * 0.8 && {_x distance getMarkerPos _marker < _radius} count allPlayers > 0
@@ -67,11 +71,11 @@ waitUntil {
 //waits until there's no east side units in the 500m radius of the marker
 //checks if at least one of the players is around too (to prevent auto-completion if using dac or alive or other dynamic ai systems)
 
-[WEST, "task_id", ["Task description.", "Clear Area"], "marker", "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
-
 _marker = "marker";
 _radius = 500;
 _enemySide = EAST;
+
+[WEST, "task_id", ["Task description.", "Clear Area"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
 	{side _x == _enemySide && _x distance2d getMarkerPos _marker < _radius} count allUnits == 0 && {_x distance2d getMarkerPos _marker < _radius} count allPlayers > 0
@@ -82,11 +86,11 @@ waitUntil {
 //waits until there's more players in the 500m radius of the marker than east side units
 //task already implies that players should be in the area
 
-[WEST, "task_id", ["Task description.", "Overrun Area"], "marker", "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
-
 _marker = "marker";
 _radius = 500;
 _enemySide = EAST;
+
+[WEST, "task_id", ["Task description.", "Overrun Area"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
 	{_x distance2d getMarkerPos _marker < _radius} count allPlayers > {side _x == _enemySide && _x distance2d getMarkerPos _marker < _radius} count allUnits
