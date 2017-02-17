@@ -29,7 +29,7 @@ case 0:
 		_setHeliVal = [100,300,1,1];
 		_setPause   = [[5,10],[5,10],[5,10],[20,30,5,5],[1,3],[0,0]];
 		_setBldgBeh = [0,50,120,600,2];
-		_setPatrol  = ["0","0"];
+		_setPatrol  = [0,0];
 		_setSearch  = ["40 + ((skill _leader) * 150)","50 + ((skill _leader) * 50)"];
 		_setSupport = [0,0];
 		_setJoin    = 0;
@@ -49,7 +49,7 @@ case 4:
 		_setHeliVal = [100,300,1,1];
 		_setPause   = [[5,10],[5,10],[5,10],[20,30,5,5],[1,3],[0,0]];
 		_setBldgBeh = [0,50,120,600,2];
-		_setPatrol  = ["0","0"];
+		_setPatrol  = [0,0];
 		_setSearch  = ["40 + ((skill _leader) * 150)","50 + ((skill _leader) * 50)"];
 		_setSupport = [0,0];
 		_setJoin    = 0;
