@@ -47,131 +47,136 @@ _items = [["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 3
 _linkItems = ["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "NVGoggles"];
 
 _loadoutArray = [
-	[
-		[
-			["officer", "squad leader"],
-			[
-				_leaderFashion,
-				[_leaderWeapon, _leaderHandgun, _binoculars]
-			]
-		],
-		[
-			["team leader"],
-			[
-				_leaderFashion,
-				[_leaderWeapon, _leaderHandgun, _binoculars]
-			]
-		],
-		[
-			["rifleman"],
-			[
-				_riflemanFashion,
-				[_riflemanWeapon]
-			]
-		],
-		[
-			["autorifleman"],
-			[
-				_riflemanFashion,
-				[_mgWeapon]
-			]
-		],
-		[
-			["rifleman (at)"],
-			[
-				_riflemanFashion,
-				[_riflemanWeapon, _riflemanAT]
-			]
-		],
-		[
-			["missile specialist (at)"],
-			[
-				_riflemanFashion,
-				[_riflemanWeapon, _specialistAT]
-			]
-		],
-		[
-			["combat life saver"],
-			[
-				_riflemanFashion,
-				[_riflemanWeapon]
-			]
-		],
-		[
-			["engineer"],
-			[
-				_riflemanFashion,
-				[_riflemanWeapon]
-			]
-		],
-		[
-			["pilot"],
-			[
-				_pilotFashion,
-				[_riflemanWeapon]
-			]
-		],
-		[
-			["grenadier"],
-			[
-				_riflemanFashion,
-				[_grenadierWeapon]
-			]
-		],
-		[
-			["missile specialist (aa)"],
-			[
-				_riflemanFashion,
-				[_riflemanWeapon, _specialistAA]
-			]
-		]
-	], //equipment per class
-	[
-		[
-			["all"],
-			[["ACRE_PRC343", 1]],
-			[]
-		],
-		[
-			["officer", "squad leader", "pilot"],
-			[["ACRE_PRC152", 1]],
-			[]
-		],
-		[
-			["all"],
-			_items + _medicine, //items
-			_linkItems //link items
-		],
-		[
-			["officer", "squad leader", "team leader"],
-			[["murshun_cigs_lighter", 1]],
-			[]
-		],
-		[
-			["combat life saver"],
-			_medicMedicine,
-			[]
-		],
-		[
-			["engineer"],
-			[["ACE_M26_Clacker", 1], ["ACE_DefusalKit", 1], ["DemoCharge_Remote_Mag", 2]],
-			[]
-		]
-	], //personal items per class
-	[
-		["ToolKit", 2],
-		["ACE_wirecutter", 2],
-		["ACE_SpareBarrel", 4],
-		["ACE_CableTie", 10],
-		["ACE_Clacker", 2],
-		["murshun_cigs_cigpack", 20],
-		["murshun_cigs_matches", 20],
-		[_boxAT, 20],
-		[_nonLethalGrenade, 200],
-		[_lethalGrenade, 80],
-		["DemoCharge_Remote_Mag", 20],
-		["SatchelCharge_Remote_Mag", 4]
-	] + _medicine //content for boxes
+    [
+        [
+            ["officer", "squad leader"],
+            [
+                _leaderFashion,
+                [_leaderWeapon, _leaderHandgun, _binoculars]
+            ]
+        ],
+        [
+            ["team leader"],
+            [
+                _leaderFashion,
+                [_leaderWeapon, _leaderHandgun, _binoculars]
+            ]
+        ],
+        [
+            ["rifleman"],
+            [
+                _riflemanFashion,
+                [_riflemanWeapon]
+            ]
+        ],
+        [
+            ["autorifleman"],
+            [
+                _riflemanFashion,
+                [_mgWeapon]
+            ]
+        ],
+        [
+            ["rifleman (at)"],
+            [
+                _riflemanFashion,
+                [_riflemanWeapon, _riflemanAT]
+            ]
+        ],
+        [
+            ["missile specialist (at)"],
+            [
+                _riflemanFashion,
+                [_riflemanWeapon, _specialistAT]
+            ]
+        ],
+        [
+            ["combat life saver"],
+            [
+                _riflemanFashion,
+                [_riflemanWeapon]
+            ]
+        ],
+        [
+            ["engineer", "crewman"],
+            [
+                _riflemanFashion,
+                [_riflemanWeapon]
+            ]
+        ],
+        [
+            ["pilot"],
+            [
+                _pilotFashion,
+                [_riflemanWeapon]
+            ]
+        ],
+        [
+            ["grenadier"],
+            [
+                _riflemanFashion,
+                [_grenadierWeapon]
+            ]
+        ],
+        [
+            ["missile specialist (aa)"],
+            [
+                _riflemanFashion,
+                [_riflemanWeapon, _specialistAA]
+            ]
+        ]
+    ], //equipment per class
+    [
+        [
+            ["all"],
+            [["ACRE_PRC343", 1]],
+            []
+        ],
+        [
+            ["officer", "squad leader", "pilot", "crewman"],
+            [["ACRE_PRC152", 1]],
+            []
+        ],
+        [
+            ["all"],
+            _items + _medicine, //items
+            _linkItems //link items
+        ],
+        [
+            ["officer", "squad leader", "team leader"],
+            [["murshun_cigs_lighter", 1]],
+            []
+        ],
+        [
+            ["combat life saver"],
+            _medicMedicine,
+            []
+        ],
+        [
+            ["engineer"],
+            [["ACE_M26_Clacker", 1], ["ACE_DefusalKit", 1], ["DemoCharge_Remote_Mag", 2]],
+            []
+        ],
+        [
+            ["crewman"],
+            [["ToolKit", 1]],
+            []
+        ]
+    ], //personal items per class
+    [
+        ["ToolKit", 2],
+        ["ACE_wirecutter", 2],
+        ["ACE_SpareBarrel", 4],
+        ["ACE_CableTie", 10],
+        ["ACE_Clacker", 2],
+        ["murshun_cigs_cigpack", 20],
+        ["murshun_cigs_matches", 20],
+        [_boxAT, 20],
+        [_nonLethalGrenade, 200],
+        [_lethalGrenade, 80],
+        ["DemoCharge_Remote_Mag", 20],
+        ["SatchelCharge_Remote_Mag", 4]
+    ] + _medicine //content for boxes
 ];
 
 //output of the function, do not remove or change

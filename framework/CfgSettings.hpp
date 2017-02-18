@@ -139,13 +139,30 @@ class CfgDebriefingSections
 
 class ACE_Settings {
     //mission
+    class ace_captives_allowHandcuffOwnSide {
+        value = 0;
+        typeName = "BOOL";
+        force = 1;
+    };
+    class ace_captives_requireSurrender {
+        value = 2;
+        typeName = "SCALAR";
+        force = 1;
+    };
+    class ace_captives_allowSurrender {
+        value = 1;
+        typeName = "BOOL";
+        force = 1;
+    };
     class ace_rearm_level {
         value = 1;
         typeName = "SCALAR";
+        force = 1;
     };
     class ace_refuel_rate {
         value = 1;
         typeName = "SCALAR";
+        force = 1;
     };
     class ace_respawn_savePreDeathGear {
         value = 1;
@@ -160,17 +177,21 @@ class ACE_Settings {
     class ace_viewdistance_enabled {
         value = 1;
         typeName = "BOOL";
+        force = 1;
     };
     class ace_viewdistance_limitViewDistance {
         value = 4000;
         typeName = "SCALAR";
+        force = 1;
     };
     class ace_weather_enableServerController {
         value = 0;
         typeName = "BOOL";
+        force = 1;
     };
     class ace_weather_useACEWeather {
         value = 0;
         typeName = "BOOL";
+        force = 1;
     };
 };
