@@ -329,7 +329,7 @@ mf_fnc_addVehicleRespawn = {
             [[_newVehicle, _loadoutSide], "mf_fnc_fillBox", true, true] call BIS_fnc_MP;
 			[_newVehicle, _loadoutSide] spawn mf_fnc_addVehicleRespawn;
 
-			_string = format ["Vehicle %1 respawned at %2.", _vehClass, _spawnPos];
+			_string = format ["Vehicle %1 respawned at %2.", _vehClass, mapGridPosition _spawnPos];
 			[_string, "systemChat"] call BIS_fnc_MP;
 		};
 	}];
