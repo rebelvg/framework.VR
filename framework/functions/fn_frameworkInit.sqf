@@ -1,407 +1,392 @@
 murshun_giveUniform_fnc = {
-	_unit = _this select 0;
-	_string = _this select 1;
+    params ["_unit", "_className"];
 
-	if (count _string != 0) then {
-		_unit forceAddUniform _string;
-	};
+    if (count _className != 0) then {
+        _unit forceAddUniform _className;
+    };
 };
 
 murshun_giveVest_fnc = {
-	_unit = _this select 0;
-	_string = _this select 1;
+    params ["_unit", "_className"];
 
-	if (count _string != 0) then {
-		_unit addVest _string;
-	};
+    if (count _className != 0) then {
+        _unit addVest _className;
+    };
 };
 
 murshun_giveHeadgear_fnc = {
-	_unit = _this select 0;
-	_string = _this select 1;
+    params ["_unit", "_className"];
 
-	if (count _string != 0) then {
-		_unit addHeadgear _string;
-	};
+    if (count _className != 0) then {
+        _unit addHeadgear _className;
+    };
 };
 
 murshun_giveBackpack_fnc = {
-	_unit = _this select 0;
-	_string = _this select 1;
+    params ["_unit", "_className"];
 
-	if (count _string != 0) then {
-		_unit addBackpack _string;
-	};
+    if (count _className != 0) then {
+        _unit addBackpack _className;
+    };
 };
 
 murshun_giveGoggles_fnc = {
-	_unit = _this select 0;
-	_string = _this select 1;
+    params ["_unit", "_className"];
 
-	if (count _string != 0) then {
-		_unit addGoggles _string;
-	};
+    if (count _className != 0) then {
+        _unit addGoggles _className;
+    };
 };
 
 murshun_giveWeapon_fnc = {
-	_unit = _this select 0;
-	_array = _this select 1;
+    params ["_unit", "_weaponArray"];
 
-	if (count _array == 3) then {
-		_weapon = _array select 0;
-		_mags = _array select 1;
-		_devices = _array select 2;
+    _weaponArray params [["_weapon", ""], ["_mags", []], ["_devices", []]];
 
-		if (count _weapon != 0) then {
-			_unit addWeapon _weapon;
-		};
+    if (count _weapon != 0) then {
+        _unit addWeapon _weapon;
+    };
 
-		{
-			if (count _x == 2) then {
-				if (count (_x select 0) != 0) then {
-					if (([_weapon] call ace_common_fnc_getItemType) select 1 == "primary") then {
-						_unit addPrimaryWeaponItem (_x select 0);
-					};
-					if (([_weapon] call ace_common_fnc_getItemType) select 1 == "handgun") then {
-						_unit addHandgunItem (_x select 0);
-					};
-					if (([_weapon] call ace_common_fnc_getItemType) select 1 == "secondary") then {
-						_unit addSecondaryWeaponItem (_x select 0);
-					};
-				};
-			};
-		} forEach _mags;
+    {
+        _x params [["_mag", ""], ["_count", 0]];
 
-		{
-			if (count _x == 2) then {
-				if (count (_x select 0) != 0) then {
-					_unit addMagazines _x;
-				};
-			};
-		} forEach _mags;
+        if (count _mag != 0) then {
+            if (([_weapon] call ace_common_fnc_getItemType) select 1 == "primary") then {
+                _unit addPrimaryWeaponItem _mag;
+            };
+            if (([_weapon] call ace_common_fnc_getItemType) select 1 == "handgun") then {
+                _unit addHandgunItem _mag;
+            };
+            if (([_weapon] call ace_common_fnc_getItemType) select 1 == "secondary") then {
+                _unit addSecondaryWeaponItem _mag;
+            };
+        };
+    } forEach _mags;
 
-		{
-			if (count _x != 0) then {
-				if (([_weapon] call ace_common_fnc_getItemType) select 1 == "primary") then {
-					_unit addPrimaryWeaponItem _x;
-				};
-				if (([_weapon] call ace_common_fnc_getItemType) select 1 == "handgun") then {
-					_unit addHandgunItem _x;
-				};
-				if (([_weapon] call ace_common_fnc_getItemType) select 1 == "secondary") then {
-					_unit addSecondaryWeaponItem _x;
-				};
-			};
-		} forEach _devices;
-	};
+    {
+        _x params [["_mag", ""], ["_count", 0]];
+
+        if (count _mag != 0) then {
+            _unit addMagazines [_mag, _count];
+        };
+    } forEach _mags;
+
+    {
+        if (count _x != 0) then {
+            if (([_weapon] call ace_common_fnc_getItemType) select 1 == "primary") then {
+                _unit addPrimaryWeaponItem _x;
+            };
+            if (([_weapon] call ace_common_fnc_getItemType) select 1 == "handgun") then {
+                _unit addHandgunItem _x;
+            };
+            if (([_weapon] call ace_common_fnc_getItemType) select 1 == "secondary") then {
+                _unit addSecondaryWeaponItem _x;
+            };
+        };
+    } forEach _devices;
 };
 
 murshun_giveItems_fnc = {
-	_unit = _this select 0;
-	_array = _this select 1;
+    params ["_unit", "_array"];
 
-	{
-		if (count _x == 2) then {
-			if (count (_x select 0) != 0) then {
-				for "_i" from 1 to (_x select 1) do {_unit addItem (_x select 0)};
-			};
-		};
-	} forEach _array;
+    {
+        _x params [["_item", ""], ["_count", 0]];
+
+        if (count _item != 0) then {
+            for "_i" from 1 to _count do {_unit addItem _item};
+        };
+    } forEach _array;
 };
 
 murshun_giveLinkItems = {
-	_unit = _this select 0;
-	_array = _this select 1;
+    params ["_unit", "_array"];
 
-	{
-		if (count _x != 0) then {
-			_unit linkItem _x;
-		};
-	} forEach _array;
+    {
+        if (count _x != 0) then {
+            _unit linkItem _x;
+        };
+    } forEach _array;
 };
 
 murshun_fillBox_fnc = {
-	_unit = _this select 0;
-	_multiplier = _this select 1;
+    params ["_unit", "_multiplier"];
 
-	{
-		if (count _x == 2) then {
-			if (count (_x select 0) != 0) then {
-				_unit addItemCargoGlobal [_x select 0, ceil ((_x select 1) * _multiplier)];
-			};
-		};
-	} forEach (_loadoutArray select 2);
+    _loadoutArray params [["_eqps", []], ["_items", []], ["_boxes", []]];
 
-	{
-		_weaponsArray = _x select 1 select 1;
+    {
+        _x params [["_item", ""], ["_count", 0]];
 
-		{
-			if (count _x == 3) then {
-				_mags = _x select 1;
-
-				{
-					if (count _x == 2) then {
-						if (count (_x select 0) != 0) then {
-							_unit addMagazineCargoGlobal [_x select 0, ceil (60 * _multiplier)];
-						};
-					};
-				} forEach _mags;
-			};
-		} forEach _weaponsArray;
-
-        if ("rifleman" in ((_x select 0) apply {toLower _x})) then {
-            {
-                _unit addItemCargoGlobal [_x select 0, ceil (5 * _multiplier)];
-            } forEach _weaponsArray;
+        if (count _item != 0) then {
+            _unit addItemCargoGlobal [_item, ceil (_count * _multiplier)];
         };
-	} forEach (_loadoutArray select 0);
+    } forEach _boxes;
+
+    {
+        _x params [["_classes", []], ["_eqp", []]];
+        _eqp params [["_fashion", []], ["_weapons", []]];
+
+        {
+            _x params [["_weapon", ""], ["_mags", []]];
+
+            {
+                _x params [["_mag", ""], ["_count", 0]];
+
+                if (count _mag != 0) then {
+                    _unit addMagazineCargoGlobal [_mag, ceil (60 * _multiplier)];
+                };
+            } forEach _mags;
+        } forEach _weapons;
+
+        if ("rifleman" in (_classes apply {toLower _x})) then {
+            {
+                _x params [["_weapon", ""]];
+                _unit addItemCargoGlobal [_weapon, ceil (5 * _multiplier)];
+            } forEach _weapons;
+        };
+    } forEach _eqps;
 };
 
 mf_disableAI_fnc = {
-	params ["_unit"];
+    params ["_unit"];
 
-	if (_unit in switchableUnits) then {
-		if (!isPlayer _unit) then {
-			_unit disableAI "ANIM";
-			_unit switchMove "";
-		};
-	};
+    if (_unit in switchableUnits) then {
+        if (!isPlayer _unit) then {
+            _unit disableAI "ANIM";
+            _unit switchMove "";
+        };
+    };
 };
 
 mf_debugLoadout_fnc = {
-	{
-		if (!isPlayer _x) then {
-			[_x] call mf_fnc_giveLoadout;
-			[_x] call murshun_assignTeam_fnc;
-		};
-	} forEach switchableUnits;
+    {
+        if (!isPlayer _x) then {
+            [_x] call mf_fnc_giveLoadout;
+            [_x] call murshun_assignTeam_fnc;
+        };
+    } forEach switchableUnits;
 };
 
 murshun_assignTeam_fnc = {
-	_unit = _this select 0;
+    params ["_unit"];
 
-	_mf_groupChannel = _unit getVariable ["mf_groupChannel", [9, 5]];
-	_squad = _mf_groupChannel select 0;
-	_team = _mf_groupChannel select 1;
+    _mf_groupChannel = _unit getVariable ["mf_groupChannel", [9, 5]];
+    _mf_groupChannel params ["_squad", "_team"];
 
-	_teamsArray = ["MAIN", "RED", "GREEN", "BLUE", "YELLOW"];
+    _teamsArray = ["MAIN", "RED", "GREEN", "BLUE", "YELLOW"];
 
-	if (_team > 0 and _team < 5) then {
-		[_unit, _teamsArray select _team] call ace_interaction_fnc_joinTeam;
-	};
+    if (_team > 0 and _team < 5) then {
+        [_unit, _teamsArray select _team] call ace_interaction_fnc_joinTeam;
+    };
 };
 
 mf_fnc_dynamicItems = {
-	_box = _this select 0;
+    _box = _this select 0;
 
-	if (!(isClass (configFile >> "CfgPatches" >> "acre_main"))) exitWith {};
+    if (!(isClass (configFile >> "CfgPatches" >> "acre_main"))) exitWith {};
 
-	_itemsArray = (getItemCargo _box) select 0;
+    _itemsArray = (getItemCargo _box) select 0;
 
-	if (count _itemsArray == 0) exitWith {};
+    if (count _itemsArray == 0) exitWith {};
 
-	//clearItemCargoGlobal is broken for JIP clients, it hides weapons for JIP clients
-	clearItemCargoGlobal _box;
+    //clearItemCargoGlobal is broken for JIP clients, it hides weapons for JIP clients
+    clearItemCargoGlobal _box;
 
-	//"fix" removes weapons and adds them again
-	_weaponsArray = getWeaponCargo _box;
+    //"fix" removes weapons and adds them again
+    _weaponsArray = getWeaponCargo _box;
+    _weaponsArray params ["_items", "_count"];
 
-	clearWeaponCargoGlobal _box;
+    clearWeaponCargoGlobal _box;
 
-	{
-		_weapon = _x;
-		_amount = (_weaponsArray select 1) select _forEachIndex;
+    {
+        _amount = _count select _forEachIndex;
+        _box addItemCargoGlobal [_x, _amount];
+    } forEach _items;
 
-		_box addItemCargoGlobal [_weapon, _amount];
-	} forEach (_weaponsArray select 0);
+    {
+        _box addItemCargoGlobal [_x, 2];
+    } forEach _itemsArray;
 
-	{
-		_box addItemCargoGlobal [_x, 2];
-	} forEach _itemsArray;
+    [{
+        params ["_args", "_handle"];
+        _args params ["_box", "_itemsArray"];
 
-	[{
-		params ["_args", "_handle"];
-		_box = _args select 0;
-		_itemsArray = _args select 1;
+        if (!alive _box) exitWith {
+            [_handle] call CBA_fnc_removePerFrameHandler;
+        };
 
-		if (!alive _box) exitWith {
-			[_handle] call CBA_fnc_removePerFrameHandler;
-		};
+        _getItemCargo = getItemCargo _box;
+        _getItemCargo params ["_items", "_count"];
 
-		_getItemCargo = getItemCargo _box;
+        {
+            if (_x in _items) then {
+                _index = _items find _x;
 
-		{
-			if (_x in (_getItemCargo select 0)) then {
-				_index = (_getItemCargo select 0) find _x;
-
-				if (_getItemCargo select 1 select _index < 2) then {
-					_box addItemCargoGlobal [_x, 1];
-				};
-			} else {
-				_box addItemCargoGlobal [_x, 2];
-			};
-		} foreach _itemsArray;
-	}, 1/2, [_box, _itemsArray]] call CBA_fnc_addPerFrameHandler;
+                if (_count select _index < 2) then {
+                    _box addItemCargoGlobal [_x, 1];
+                };
+            } else {
+                _box addItemCargoGlobal [_x, 2];
+            };
+        } forEach _itemsArray;
+    }, 1/2, [_box, _itemsArray]] call CBA_fnc_addPerFrameHandler;
 };
 
 mf_fnc_isUnitPilot = {
-	_unit = _this select 0;
+    _unit = _this select 0;
 
-	if (vehicle _unit == _unit) exitWith {false};
+    if (vehicle _unit == _unit) exitWith {false};
 
-	_veh = (vehicle _unit);
+    _veh = (vehicle _unit);
 
-	if (!(_veh isKindOf "air")) exitWith {false};
+    if (!(_veh isKindOf "air")) exitWith {false};
 
-	_simType = toLower getText (configFile >> "CfgVehicles" >> typeOf _veh >> "simulation");
-	if (_simType == "parachute" or _simType == "paraglide") exitWith {false};
+    _simType = toLower getText (configFile >> "CfgVehicles" >> typeOf _veh >> "simulation");
+    if (_simType == "parachute" or _simType == "paraglide") exitWith {false};
 
-	_return = false;
+    _return = false;
 
-	if (driver _veh == _unit) then {
-		_return = true;
-	};
+    if (driver _veh == _unit) then {
+        _return = true;
+    };
 
-	_return
+    _return
 };
 
 mf_fnc_isUnitCoPilot = {
-	_unit = _this select 0;
+    _unit = _this select 0;
 
-	if (vehicle _unit == _unit) exitWith {false};
+    if (vehicle _unit == _unit) exitWith {false};
 
-	private ["_veh", "_cfg", "_trts", "_return", "_trt"];
+    private ["_veh", "_cfg", "_trts", "_return", "_trt"];
 
-	_veh = (vehicle _unit);
-	_cfg = configFile >> "CfgVehicles" >> typeOf (_veh);
-	_trts = _cfg >> "turrets";
+    _veh = (vehicle _unit);
+    _cfg = configFile >> "CfgVehicles" >> typeOf (_veh);
+    _trts = _cfg >> "turrets";
 
-	if (!(_veh isKindOf "air")) exitWith {false};
+    if (!(_veh isKindOf "air")) exitWith {false};
 
-	_simType = toLower getText (configFile >> "CfgVehicles" >> typeOf _veh >> "simulation");
-	if (_simType == "parachute" or _simType == "paraglide") exitWith {false};
+    _simType = toLower getText (configFile >> "CfgVehicles" >> typeOf _veh >> "simulation");
+    if (_simType == "parachute" or _simType == "paraglide") exitWith {false};
 
-	_return = false;
+    _return = false;
 
-	for "_i" from 0 to (count _trts - 1) do {
-		_trt = _trts select _i;
+    for "_i" from 0 to (count _trts - 1) do {
+        _trt = _trts select _i;
 
-		if (getNumber (_trt >> "isCoPilot") == 1) exitWith {
-			_return = (_veh turretUnit [_i] == _unit);
-		};
-	};
+        if (getNumber (_trt >> "isCoPilot") == 1) exitWith {
+            _return = (_veh turretUnit [_i] == _unit);
+        };
+    };
 
-	_return
+    _return
 };
 
 mf_fnc_addVehicleRespawn = {
-	params ["_vehicle", ["_side", sideEmpty]];
+    params ["_vehicle", ["_side", sideEmpty]];
 
-	if (!isServer) exitWith {};
+    if (!isServer) exitWith {};
 
-	if (_vehicle isKindOf "Man") exitWith {};
+    if (_vehicle isKindOf "Man") exitWith {};
 
-	_vehicle setVariable ["mf_vehicleRespawnPos", getPosATL _vehicle];
-	_vehicle setVariable ["mf_vehicleDir", getDir _vehicle];
-	_vehicle setVariable ["mf_vehicleLoadoutSide", _side];
+    _vehicle setVariable ["mf_vehicleRespawnPos", getPosATL _vehicle];
+    _vehicle setVariable ["mf_vehicleDir", getDir _vehicle];
+    _vehicle setVariable ["mf_vehicleLoadoutSide", _side];
 
-	_vehicle addMPEventHandler ["MPKilled", {
-		_this spawn {
-			params ["_vehicle"];
+    _vehicle addMPEventHandler ["MPKilled", {
+        _this spawn {
+            params ["_vehicle"];
 
-			if (!isServer) exitWith {};
+            if (!isServer) exitWith {};
 
-			_spawnPos = _vehicle getVariable "mf_vehicleRespawnPos";
-			_vehDir = _vehicle getVariable "mf_vehicleDir";
-			_loadoutSide = _vehicle getVariable "mf_vehicleLoadoutSide";
-			_vehClass = typeOf _vehicle;
+            _spawnPos = _vehicle getVariable "mf_vehicleRespawnPos";
+            _vehDir = _vehicle getVariable "mf_vehicleDir";
+            _loadoutSide = _vehicle getVariable "mf_vehicleLoadoutSide";
+            _vehClass = typeOf _vehicle;
 
-			sleep 30;
+            sleep 30;
 
-			if (_vehicle distance _spawnPos < 100) then {
-				deleteVehicle _vehicle;
-			};
+            if (_vehicle distance _spawnPos < 100) then {
+                deleteVehicle _vehicle;
+            };
 
-			_newVehicle = _vehClass createVehicle [0,0,0];
-			_newVehicle setDir _vehDir;
-			_newVehicle setPosATL _spawnPos;
+            _newVehicle = _vehClass createVehicle [0,0,0];
+            _newVehicle setDir _vehDir;
+            _newVehicle setPosATL _spawnPos;
 
             [[_newVehicle, _loadoutSide], "mf_fnc_fillBox", true, true] call BIS_fnc_MP;
-			[_newVehicle, _loadoutSide] spawn mf_fnc_addVehicleRespawn;
+            [_newVehicle, _loadoutSide] spawn mf_fnc_addVehicleRespawn;
 
-			_string = format ["Vehicle %1 respawned at %2.", _vehClass, mapGridPosition _spawnPos];
-			[_string, "systemChat"] call BIS_fnc_MP;
-		};
-	}];
+            _string = format ["Vehicle %1 respawned at %2.", _vehClass, mapGridPosition _spawnPos];
+            [_string, "systemChat"] call BIS_fnc_MP;
+        };
+    }];
 };
 
 mf_fnc_addMusicRadio = {
-	params ["_radio"];
-
-	if (!isNil "murshun_musicRadio_fnc_addRadio") then {
-		[_radio] call murshun_musicRadio_fnc_addRadio;
-	};
+    if (!isNil "murshun_musicRadio_fnc_addRadio") then {
+        _this call murshun_musicRadio_fnc_addRadio;
+    };
 };
 
 mf_teamParadrop_fnc = {
-	_player = _this select 0;
+    _player = _this select 0;
 
     _code = {side _x == side _player && _x distance2d _player > 100 && !isObjectHidden _x && (vehicle _x == _x or (count fullCrew [vehicle _x, "", true] > count fullCrew [vehicle _x, "", false]))};
 
-	_groupUnitsFar = (units group _player) select _code;
+    _groupUnitsFar = (units group _player) select _code;
 
-	if (count _groupUnitsFar == 0) then {
-		_groupUnitsFar = allUnits select _code;
-	};
+    if (count _groupUnitsFar == 0) then {
+        _groupUnitsFar = allUnits select _code;
+    };
 
-	if (count _groupUnitsFar > 0) then {
-		_unit = selectRandom _groupUnitsFar;
+    if (count _groupUnitsFar > 0) then {
+        _unit = selectRandom _groupUnitsFar;
 
-		if (vehicle _unit == _unit) then {
-			_LX = (getPos _unit select 0) + (3 * sin ((getDir _unit) - 180));
-			_LY = (getPos _unit select 1) + (3 * cos ((getDir _unit) - 180));
-			_LZ = (getPos _unit select 2);
+        if (vehicle _unit == _unit) then {
+            _LX = (getPos _unit select 0) + (3 * sin ((getDir _unit) - 180));
+            _LY = (getPos _unit select 1) + (3 * cos ((getDir _unit) - 180));
+            _LZ = (getPos _unit select 2);
 
             _parachute = createVehicle ["Steerable_Parachute_F", [_LX,_LY,_LZ + 300], [], 0, "NONE"];
             _player moveInDriver _parachute;
-		} else {
-			_player moveInAny vehicle _unit;
-		};
+        } else {
+            _player moveInAny vehicle _unit;
+        };
 
-		_string = format ["%1 teleported to %2 using team paradrop.", name _player, name _unit];
-		[_string, "systemChat"] call BIS_fnc_MP;
-	} else {
-		systemChat "Team members should be at least 100m away and not in a full vehicle.";
-	};
+        _string = format ["%1 teleported to %2 using team paradrop.", name _player, name _unit];
+        [_string, "systemChat"] call BIS_fnc_MP;
+    } else {
+        systemChat "Team members should be at least 100m away and not in a full vehicle.";
+    };
 };
 
 if (!isNil "mf_forceVirtualArsenal") then {
-	mf_forceVirtualArsenal = false;
+    mf_forceVirtualArsenal = false;
 };
 
 if (!isNil "mf_customEnemyLoadouts") then {
-	mf_customEnemyLoadouts = false;
+    mf_customEnemyLoadouts = false;
 };
 
 if (!isNil "mf_onlyPilotsCanFly") then {
-	mf_onlyPilotsCanFly = false;
+    mf_onlyPilotsCanFly = false;
 };
 
 if (!isNil "mf_forceSideNVGs") then {
-	mf_forceSideNVGs = [];
+    mf_forceSideNVGs = [];
 };
 
 if (!isNil "mf_addParadropOption") then {
-	mf_addParadropOption = false;
+    mf_addParadropOption = false;
 };
 
 if (!isNil "mf_debriefingText") then {
-	mf_debriefingText = "";
+    mf_debriefingText = "";
 };
 
 if (!isMultiplayer) then {
-	DAC_Com_Values = [1,2,3,1];
-	DAC_Marker = 2;
+    DAC_Com_Values = [1,2,3,1];
+    DAC_Marker = 2;
 };
 
-mf_version = 1.35;
+mf_version = 1.36;
