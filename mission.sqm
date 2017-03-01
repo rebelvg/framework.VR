@@ -5810,25 +5810,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -5846,7 +5827,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -5870,25 +5889,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -5906,7 +5906,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -5930,25 +5968,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -5966,7 +5985,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -6026,25 +6083,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -6062,7 +6100,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -6086,25 +6162,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -6122,7 +6179,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -6146,25 +6241,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -6182,7 +6258,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -6242,25 +6356,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -6278,7 +6373,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -6302,25 +6435,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -6338,7 +6452,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -6362,25 +6514,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -6398,7 +6531,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -8297,25 +8468,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -8333,7 +8485,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -8357,25 +8547,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -8393,7 +8564,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -8417,25 +8626,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -8453,7 +8643,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -8513,25 +8741,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -8549,7 +8758,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -8573,25 +8820,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -8609,7 +8837,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -8633,25 +8899,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -8669,7 +8916,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
@@ -8729,25 +9014,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -8765,7 +9031,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item1
@@ -8789,25 +9093,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -8825,7 +9110,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 				class Item2
@@ -8849,25 +9172,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -8885,7 +9189,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=3;
 					};
 				};
 			};
