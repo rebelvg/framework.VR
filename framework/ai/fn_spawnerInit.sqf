@@ -114,19 +114,19 @@ mf_fnc_ai_infantryAttack = {
 
     _grp = [_pos, _faction] call mf_fnc_ai_createGroup;
 
-    [_grp, _attackPos, 50, "MOVE", "AWARE", "YELLOW"] call CBA_fnc_addWaypoint;
+    [_grp, _attackPos, 25, "MOVE", "AWARE", "YELLOW"] call CBA_fnc_addWaypoint;
 
     _grp
 };
 
 mf_fnc_ai_infantryDefend = {
-    params ["_pos", "_attackPos", "_faction"];
+    params ["_pos", "_attackPos", "_faction", ["_radius", 25]];
 
     if (!isServer) exitWith {};
 
     _grp = [_pos, _faction] call mf_fnc_ai_createGroup;
 
-    [_grp, _attackPos, 50] call CBA_fnc_taskDefend;
+    [_grp, _attackPos, _radius] call CBA_fnc_taskDefend;
 
     _grp
 };
@@ -166,7 +166,7 @@ mf_fnc_ai_vehicleAttack = {
     [_grp, _veh, _soldierArray select 0, _soldierArray select 0] call mf_fnc_ai_createCrew;
     [_grp] call mf_fnc_ai_applySkill;
 
-    [_grp, _attackPos, 100, "MOVE", "SAFE", "YELLOW", "LIMITED"] call CBA_fnc_addWaypoint;
+    [_grp, _attackPos, 50, "MOVE", "SAFE", "YELLOW", "LIMITED"] call CBA_fnc_addWaypoint;
 
     _grp
 };
