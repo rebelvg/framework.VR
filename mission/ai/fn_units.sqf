@@ -4,6 +4,7 @@
 /*
 list of functions
 
+[getMarkerPos "SPAWNMARKERNAME", "EAST"] call mf_fnc_ai_createGroup;
 [getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "EAST"] call mf_fnc_ai_infantryAttack;
 [getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "EAST"] call mf_fnc_ai_infantryDefend;
 [getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "EAST"] call mf_fnc_ai_infantryPatrol;

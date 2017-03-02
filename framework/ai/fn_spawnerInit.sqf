@@ -63,7 +63,7 @@ mf_fnc_ai_createGroup = {
 
     if (count _soldierArray == 0) exitWith {};
 
-    _spawnPos = [_pos, 50 * sqrt random 1, random 360] call BIS_fnc_relPos;
+    _spawnPos = [_pos, 25 * sqrt random 1, random 360] call BIS_fnc_relPos;
 
     _side = [_soldierArray select 0] call mf_fnc_ai_getSide;
 
@@ -157,7 +157,7 @@ mf_fnc_ai_vehicleAttack = {
 
     if (count _vehicleArray == 0) exitWith {};
 
-    _spawnPos = [_pos, 100 * sqrt random 1, random 360] call BIS_fnc_relPos;
+    _spawnPos = [_pos, 50 * sqrt random 1, random 360] call BIS_fnc_relPos;
     _veh = (selectRandom _vehicleArray) createVehicle _spawnPos;
 
     _side = [_soldierArray select 0] call mf_fnc_ai_getSide;
@@ -166,7 +166,7 @@ mf_fnc_ai_vehicleAttack = {
     [_grp, _veh, _soldierArray select 0, _soldierArray select 0] call mf_fnc_ai_createCrew;
     [_grp] call mf_fnc_ai_applySkill;
 
-    [_grp, _attackPos, 100, "MOVE", "AWARE", "YELLOW"] call CBA_fnc_addWaypoint;
+    [_grp, _attackPos, 100, "MOVE", "SAFE", "YELLOW", "LIMITED"] call CBA_fnc_addWaypoint;
 
     _grp
 };
