@@ -303,15 +303,23 @@ mf_fnc_addVehicleRespawn = {
             _loadoutSide = _vehicle getVariable "mf_vehicleLoadoutSide";
             _vehClass = typeOf _vehicle;
 
-            sleep 30;
+            sleep 25;
 
-            if (_vehicle distance _spawnPos < 100) then {
-                deleteVehicle _vehicle;
+            _wrecks = (allDead select {_x distance _spawnPos < 25});
+
+            if (count _wrecks > 0) then {
+                {
+                    deleteVehicle _x;
+                } forEach _wrecks;
             };
 
-            _newVehicle = _vehClass createVehicle [0,0,0];
+            sleep 5;
+
+            _spawnPos params ["_x", "_y"];
+
+            _newVehicle = _vehClass createVehicle ([[0,0,0], 50 * sqrt random 1, random 360] call BIS_fnc_relPos);
             _newVehicle setDir _vehDir;
-            _newVehicle setPosATL _spawnPos;
+            _newVehicle setPosATL [_x, _y, 0];
 
             [[_newVehicle, _loadoutSide], "mf_fnc_fillBox", true, true] call BIS_fnc_MP;
             [_newVehicle, _loadoutSide] spawn mf_fnc_addVehicleRespawn;
