@@ -45,7 +45,7 @@ case 2:
 	//CIVILIAN
 case 3:
 	{
-		_Unit_Pool_S = ["C_man_1","C_man_1","C_man_1","C_man_polo_1_F","C_man_polo_2_F","C_man_polo_3_F","C_man_polo_4_F","C_man_polo_5_F","C_man_polo_6_F","C_man_1_1_F","C_man_1_2_F","C_man_1_3_F"];
+		_Unit_Pool_S = ["C_man_1","C_man_1","C_man_1","C_man_1"];
 		_Unit_Pool_V = ["C_Offroad_01_F"];
 		_Unit_Pool_T = [];
 		_Unit_Pool_A = ["C_Heli_Light_01_civil_F"];
