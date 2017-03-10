@@ -168,7 +168,7 @@ mf_fnc_ai_vehicleAttack = {
 
     [_grp, _attackPos, 50, "MOVE", "SAFE", "YELLOW", "LIMITED"] call CBA_fnc_addWaypoint;
 
-    _grp
+    _veh
 };
 
 mf_fnc_ai_airPatrol = {
@@ -196,7 +196,7 @@ mf_fnc_ai_airPatrol = {
 
     [_grp, _attackPos, _radius, 5] call CBA_fnc_taskPatrol;
 
-    _grp
+    _veh
 };
 
 mf_fnc_ai_mortarAttack = {
