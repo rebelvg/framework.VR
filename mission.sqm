@@ -5768,10 +5768,10 @@ class Mission
 			position[]={600,5,1300};
 			class Attributes
 			{
-				name="z2";
+				name="c1";
 				text="camp";
 				condition="time > 1";
-				onActivation="0 = [""z2"",[1,1,0,0],[],[],[],[1,0,0,1,100,12,[z1]],[0,0,0,2,2]] spawn DAC_Zone;";
+				onActivation="0 = [""c1"",[1,1,0,0],[],[],[],[1,0,0,1,100,12,[z1]],[0,0,0,2,2]] spawn DAC_Zone;";
 				sizeA=200;
 				sizeB=200;
 				interuptable=1;
