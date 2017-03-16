@@ -114,7 +114,7 @@ mf_fnc_ai_infantryAttack = {
 
     _grp = [_pos, _faction] call mf_fnc_ai_createGroup;
 
-    [_grp, _attackPos, 25, "MOVE", "AWARE", "YELLOW"] call CBA_fnc_addWaypoint;
+    [_grp, _attackPos, 25, "MOVE", "AWARE", "YELLOW", "FULL"] call CBA_fnc_addWaypoint;
 
     _grp
 };
