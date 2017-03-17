@@ -11,8 +11,8 @@ weaponsArray = [weaponArray1, handgunArray1];
 eqpArray = [classesArray, [fashionArray, weaponsArray]];
 */
 
-_basicMedicine = [["ACE_elasticBandage", 10], ["ACE_morphine", 3], ["ACE_epinephrine", 1]];
-_advancedMedicine = [["ACE_elasticBandage", 5], ["ACE_quikclot", 5], ["ACE_morphine", 3], ["ACE_epinephrine", 1], ["ACE_tourniquet", 1], ["ACE_personalAidKit", 1]];
+_basicMedicine = [["ACE_elasticBandage", 20], ["ACE_morphine", 6], ["ACE_epinephrine", 2]];
+_advancedMedicine = [["ACE_elasticBandage", 10], ["ACE_quikclot", 10], ["ACE_morphine", 6], ["ACE_epinephrine", 2], ["ACE_tourniquet", 1], ["ACE_personalAidKit", 1]];
 
 _medicine = _basicMedicine;
 
