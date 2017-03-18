@@ -5,9 +5,9 @@
 [] spawn mf_fnc_acreSettings;
 
 if (didJIP) then {
-	[[], "mf_fnc_teamRoster"] call BIS_fnc_MP;
+    [[], "mf_fnc_teamRoster"] call BIS_fnc_MP;
 } else {
-	[] call mf_fnc_teamRoster;
+    [] call mf_fnc_teamRoster;
 };
 
 [{!isNull findDisplay 46}, murshun_assignTeam_fnc, [player]] call CBA_fnc_waitUntilAndExecute;
@@ -17,25 +17,25 @@ if (didJIP) then {
 player setVariable ["ace_medical_medicClass", 1, true];
 
 if (!("base_marker" in allMapMarkers)) then {
-	createMarkerLocal ["base_marker", getPos player];
+    createMarkerLocal ["base_marker", getPos player];
 };
 
 if (!("respawn" in allMapMarkers)) then {
-	createMarkerLocal ["respawn", getPos player];
+    createMarkerLocal ["respawn", getPos player];
 };
 
-waitUntil {time > 180};
+waitUntil {time > 180 || (!isMultiplayer && time > 10)};
 
 _monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 _date = date;
 
 {
-	if (_x < 10) then {
-		_date set [_forEachIndex, "0" + str _x];
-	} else {
-		_date set [_forEachIndex, str _x];
-	};
+    if (_x < 10) then {
+        _date set [_forEachIndex, "0" + str _x];
+    } else {
+        _date set [_forEachIndex, str _x];
+    };
 } forEach _date;
 
 date params ["_year", "_month", "_day", "_hour", "_minute"];
@@ -49,8 +49,8 @@ _date params ["_year", "_month", "_day", "_hour", "_minute"];
 sleep 11;
 
 {
-	[parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>%1</t><br/><t shadow='2' align='right' size='1.4'>%2</t>", "Starring", name _x], true, nil, 1, 0.5, 0] spawn BIS_fnc_textTiles;
-	sleep 1.5;
+    [parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>%1</t><br/><t shadow='2' align='right' size='1.4'>%2</t>", "Starring", name _x], true, nil, 1, 0.5, 0] spawn BIS_fnc_textTiles;
+    sleep 1.5;
 } forEach allPlayers;
 
 sleep 0.5;
