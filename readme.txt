@@ -19,10 +19,10 @@ SETTINGS.
 -- Variables.
 Settings - mission\fn_settings.sqf
 
-mf_forceVirtualArsenal - bool, makes virtual arsenal available by default.
 mf_customEnemyLoadouts - bool, custom loadouts for non-playable units.
 mf_onlyPilotsCanFly - bool, forbids taking off by non-pilots.
 mf_forceSideNVGs - array, forces NVGs for selected sides (WEST, EAST, RESISTANCE, CIVILIAN), non-playable units only.
+mf_forceVirtualArsenal - bool, makes virtual arsenal available by default.
 mf_addParadropOption - bool, adds paradrop option to the ammo box.
 
 murshun_spectator_enable - bool, enables murshun spectator.

@@ -20,7 +20,7 @@ respawnTemplates[] = {};
 
 onLoadName = "Framework";
 onLoadMission = "";
-author = "Murshun";
+author = "KLPQ";
 loadScreen = "logo.paa";
 overviewPicture = "logo.paa";
 

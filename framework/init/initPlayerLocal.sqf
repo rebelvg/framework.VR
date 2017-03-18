@@ -14,6 +14,8 @@ if (didJIP) then {
 
 [] call mf_fnc_onlyPilotsCanFlyPlayer;
 
+player setVariable ["ace_medical_medicClass", 1, true];
+
 if (!("base_marker" in allMapMarkers)) then {
 	createMarkerLocal ["base_marker", getPos player];
 };
@@ -59,6 +61,6 @@ _worldName = getText (configFile >> "CfgWorlds" >> worldName >> "description");
 
 sleep 11;
 
-_whoDunIt = getMissionConfigValue ["author", "Murshun"];
+_whoDunIt = getMissionConfigValue ["author", "KLPQ"];
 
 [parseText format ["<t font='PuristaBold' shadow='2' align='right' size='1.6'>%1</t><br/><t shadow='2' align='right' size='1.6'>%2</t>", "Created and Directed", "by " + _whoDunIt], true, nil, 9, 1, 0] spawn BIS_fnc_textTiles;

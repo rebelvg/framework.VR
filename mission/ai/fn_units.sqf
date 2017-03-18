@@ -10,7 +10,7 @@ list of functions
 [getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "EAST"] call mf_fnc_ai_infantryPatrol;
 [getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "EAST Crew", "EAST Car"] call mf_fnc_ai_vehicleAttack;
 [getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "EAST Crew", "EAST Air"] call mf_fnc_ai_airPatrol;
-[getMarkerPos "SPAWNMARKERNAME", 30, 1, 300, "Sh_82mm_AMOS"] spawn mf_fnc_ai_mortarAttack;
+[getMarkerPos "SPAWNMARKERNAME", 30, 5, 300, "Sh_82mm_AMOS"] spawn mf_fnc_ai_mortarAttack;
 */
 
 mf_fnc_ai_soldierArray = {
