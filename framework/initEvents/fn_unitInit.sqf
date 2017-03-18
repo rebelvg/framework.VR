@@ -12,7 +12,7 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
     };
 };
 
-[_unit] spawn {
+[{
     params ["_unit"];
 
     if (!(_unit in (switchableUnits + playableUnits))) then {
@@ -24,4 +24,4 @@ if (isClass (configFile >> "CfgPatches" >> "acre_main")) then {
             _unit linkItem "ACE_NVG_Gen1";
         };
     };
-};
+}, [_unit]] call CBA_fnc_execNextFrame;
