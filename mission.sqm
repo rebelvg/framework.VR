@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=994;
+		nextID=995;
 	};
 	class MarkerIDProvider
 	{
@@ -40,13 +40,14 @@ addons[]=
 	"ace_explosives",
 	"A3_Structures_F_Civ_Accessories",
 	"ace_gforces",
-	"ace_parachute"
+	"ace_parachute",
+	"klpq_framework"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=11;
+		items=12;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -122,6 +123,11 @@ class AddonsMetaData
 			name="ACE3 - Parachute";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
+		};
+		class Item11
+		{
+			className="klpq_framework";
+			name="klpq_framework";
 		};
 	};
 };
@@ -428,7 +434,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=35;
+		items=36;
 		class Item0
 		{
 			dataType="Marker";
@@ -9258,6 +9264,16 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item35
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={505,5,570};
+			};
+			id=994;
+			type="KLPQ_framework";
 		};
 	};
 };

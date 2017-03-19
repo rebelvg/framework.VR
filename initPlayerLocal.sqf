@@ -1,1 +1,1 @@
-[] execVM "framework\init\initPlayerLocal.sqf";
+[] execVM "klpq_framework\init\initPlayerLocal.sqf";

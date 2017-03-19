@@ -3,6 +3,7 @@
 //more info is in the readme.txt
 
 //framework
+klpq_framework_enable = true;
 mf_customEnemyLoadouts = false;
 mf_onlyPilotsCanFly = false;
 mf_forceSideNVGs = [];

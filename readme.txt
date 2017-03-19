@@ -8,6 +8,7 @@ Latest ARMA 3.
 CBA.
 ACE3.
 DAC.
+KLPQ framework addon.
 
 -- Optionals.
 ACRE2.
