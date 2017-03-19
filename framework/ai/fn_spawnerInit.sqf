@@ -63,7 +63,7 @@ mf_fnc_ai_createGroup = {
 
     if (count _soldierArray == 0) exitWith {};
 
-    _spawnPos = [_pos, 25 * sqrt random 1, random 360] call BIS_fnc_relPos;
+    _spawnPos = (_pos getPos [random 10, random 360]);
 
     _side = [_soldierArray select 0] call mf_fnc_ai_getSide;
 
@@ -85,24 +85,24 @@ mf_fnc_ai_createCrew = {
 
     if (_veh emptyPositions "driver" > 0) then
     {
-        _vehicleDriver = _grp createUnit [_driver, [0,0,0], [], 0, "FORM"];
+        _vehicleDriver = _grp createUnit [_driver, getPos _veh, [], 0, "FORM"];
         _vehicleDriver moveInDriver _veh;
     };
 
     if (_veh emptyPositions "commander" > 0) then
     {
-        _vehicleCommander = _grp createUnit [_crew, [0,0,0], [], 0, "FORM"];
+        _vehicleCommander = _grp createUnit [_crew, getPos _veh, [], 0, "FORM"];
         _vehicleCommander moveInCommander _veh;
     };
 
     if (_veh emptyPositions "gunner" > 0) then
     {
-        _vehicleGunner = _grp createUnit [_crew, [0,0,0], [], 0, "FORM"];
+        _vehicleGunner = _grp createUnit [_crew, getPos _veh, [], 0, "FORM"];
         _vehicleGunner moveInGunner _veh;
     };
 
     {
-        _vehicleCrew = _grp createUnit [_crew, [0,0,0], [], 0, "FORM"];
+        _vehicleCrew = _grp createUnit [_crew, getPos _veh, [], 0, "FORM"];
         _vehicleCrew moveInTurret [_veh, (_x select 3)];
     } foreach (fullCrew [_veh, "turret", true]);
 };
@@ -157,7 +157,7 @@ mf_fnc_ai_vehicleAttack = {
 
     if (count _vehicleArray == 0) exitWith {};
 
-    _spawnPos = [_pos, 50 * sqrt random 1, random 360] call BIS_fnc_relPos;
+    _spawnPos = (_pos getPos [random 25, random 360]);
     _veh = (selectRandom _vehicleArray) createVehicle _spawnPos;
 
     _side = [_soldierArray select 0] call mf_fnc_ai_getSide;
@@ -185,7 +185,7 @@ mf_fnc_ai_airPatrol = {
 
     if (count _vehicleArray == 0) exitWith {};
 
-    _spawnPos = [_pos, 100 * sqrt random 1, random 360] call BIS_fnc_relPos;
+    _spawnPos = (_pos getPos [random 100, random 360]);
     _veh = createVehicle [selectRandom _vehicleArray, _spawnPos, [], 0, "FLY"];
 
     _side = [_soldierArray select 1] call mf_fnc_ai_getSide;
@@ -206,7 +206,7 @@ mf_fnc_ai_mortarAttack = {
 
     for "_i" from 1 to floor _number do
     {
-        _psn = [_pos, _radius * sqrt random 1, random 360] call BIS_fnc_relPos;
+        _psn = (_pos getPos [random _radius, random 360]);
         _psn set [2, (_psn select 2) + 200];
         _mortar = createVehicle [_round, [0,0,0], [], 0, "FLY"];
         _mortar setPos _psn;

@@ -1,41 +1,41 @@
 murshun_giveUniform_fnc = {
     params ["_unit", "_className"];
 
-    if (count _className != 0) then {
-        _unit forceAddUniform _className;
-    };
+    if (!isClass (configFile >> "CfgWeapons" >> _className)) exitWith {};
+
+    _unit forceAddUniform _className;
 };
 
 murshun_giveVest_fnc = {
     params ["_unit", "_className"];
 
-    if (count _className != 0) then {
-        _unit addVest _className;
-    };
+    if (!isClass (configFile >> "CfgWeapons" >> _className)) exitWith {};
+
+    _unit addVest _className;
 };
 
 murshun_giveHeadgear_fnc = {
     params ["_unit", "_className"];
 
-    if (count _className != 0) then {
-        _unit addHeadgear _className;
-    };
+    if (!isClass (configFile >> "CfgWeapons" >> _className)) exitWith {};
+
+    _unit addHeadgear _className;
 };
 
 murshun_giveBackpack_fnc = {
     params ["_unit", "_className"];
 
-    if (count _className != 0) then {
-        _unit addBackpack _className;
-    };
+    if (!isClass (configFile >> "CfgVehicles" >> _className)) exitWith {};
+
+    _unit addBackpack _className;
 };
 
 murshun_giveGoggles_fnc = {
     params ["_unit", "_className"];
 
-    if (count _className != 0) then {
-        _unit addGoggles _className;
-    };
+    if (!isClass (configFile >> "CfgGlasses" >> _className)) exitWith {};
+
+    _unit addGoggles _className;
 };
 
 murshun_giveWeapon_fnc = {
@@ -43,7 +43,7 @@ murshun_giveWeapon_fnc = {
 
     _weaponArray params [["_weapon", ""], ["_mags", []], ["_devices", []]];
 
-    if (count _weapon != 0) then {
+    if (isClass (configFile >> "CfgWeapons" >> _weapon)) then {
         _unit addWeapon _weapon;
     };
 
@@ -66,7 +66,7 @@ murshun_giveWeapon_fnc = {
     {
         _x params [["_mag", ""], ["_count", 0]];
 
-        if (count _mag != 0) then {
+        if (isClass (configFile >> "CfgMagazines" >> _mag)) then {
             _unit addMagazines [_mag, _count];
         };
     } forEach _mags;
@@ -109,7 +109,7 @@ murshun_giveLinkItems = {
 };
 
 murshun_fillBox_fnc = {
-    params ["_unit", "_multiplier"];
+    params ["_box", "_multiplier"];
 
     _loadoutArray params [["_eqps", []], ["_items", []], ["_boxes", []]];
 
@@ -117,7 +117,7 @@ murshun_fillBox_fnc = {
         _x params [["_item", ""], ["_count", 0]];
 
         if (count _item != 0) then {
-            _unit addItemCargoGlobal [_item, ceil (_count * _multiplier)];
+            _box addItemCargoGlobal [_item, ceil (_count * _multiplier)];
         };
     } forEach _boxes;
 
@@ -131,8 +131,8 @@ murshun_fillBox_fnc = {
             {
                 _x params [["_mag", ""], ["_count", 0]];
 
-                if (count _mag != 0) then {
-                    _unit addMagazineCargoGlobal [_mag, ceil (60 * _multiplier)];
+                if (isClass (configFile >> "CfgMagazines" >> _mag)) then {
+                    _box addMagazineCargoGlobal [_mag, ceil (60 * _multiplier)];
                 };
             } forEach _mags;
         } forEach _weapons;
@@ -140,7 +140,7 @@ murshun_fillBox_fnc = {
         if ("rifleman" in (_classes apply {toLower _x})) then {
             {
                 _x params [["_weapon", ""]];
-                _unit addItemCargoGlobal [_weapon, ceil (5 * _multiplier)];
+                _box addItemCargoGlobal [_weapon, ceil (5 * _multiplier)];
             } forEach _weapons;
         };
     } forEach _eqps;
@@ -368,10 +368,6 @@ mf_teamParadrop_fnc = {
     };
 };
 
-if (!isNil "mf_forceVirtualArsenal") then {
-    mf_forceVirtualArsenal = false;
-};
-
 if (!isNil "mf_customEnemyLoadouts") then {
     mf_customEnemyLoadouts = false;
 };
@@ -382,6 +378,10 @@ if (!isNil "mf_onlyPilotsCanFly") then {
 
 if (!isNil "mf_forceSideNVGs") then {
     mf_forceSideNVGs = [];
+};
+
+if (!isNil "mf_forceVirtualArsenal") then {
+    mf_forceVirtualArsenal = false;
 };
 
 if (!isNil "mf_addParadropOption") then {
@@ -397,4 +397,4 @@ if (!isMultiplayer) then {
     DAC_Marker = 2;
 };
 
-mf_version = 1.38;
+mf_version = 1.39;

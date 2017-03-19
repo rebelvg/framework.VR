@@ -12,7 +12,7 @@ clearBackpackCargoGlobal _box;
 _box allowDamage false;
 
 if (ace_medical_level > 1) then {
-    _box addItemCargoGlobal ["ACE_elasticBandage", 100];
+    _box addItemCargoGlobal ["ACE_fieldDressing", 100];
     _box addItemCargoGlobal ["ACE_quikclot", 100];
     _box addItemCargoGlobal ["ACE_morphine", 40];
     _box addItemCargoGlobal ["ACE_epinephrine", 40];
@@ -21,7 +21,7 @@ if (ace_medical_level > 1) then {
     _box addItemCargoGlobal ["ACE_bloodIV_250", 20];
     _box addItemCargoGlobal ["ACE_bloodIV_500", 20];
 } else {
-    _box addItemCargoGlobal ["ACE_elasticBandage", 200];
+    _box addItemCargoGlobal ["ACE_fieldDressing", 200];
     _box addItemCargoGlobal ["ACE_morphine", 40];
     _box addItemCargoGlobal ["ACE_epinephrine", 40];
     _box addItemCargoGlobal ["ACE_bloodIV_250", 20];
