@@ -93,9 +93,9 @@ class CfgFunctions
 
 class CfgDebriefingSections
 {
-    class PrintMurshunDebriefing
+    class FrameworkDebriefingScreen
     {
-        title = "Murshun Debriefing Screen";
+        title = "KLPQ Debriefing Screen";
         variable = "mf_debriefingText";
     };
 };
