@@ -42,7 +42,10 @@ _loadoutArray params [["_eqps", []], ["_items", []], ["_boxes", []]];
 } forEach _eqps;
 
 if (!(_className in _allClassesArray)) then {
-    systemChat format ["Loadout %2: Can't find loadout for %1, falling back to rifleman.", _className, side group _unit];
+    if (isPlayer _unit || !isMultiplayer) then {
+        _string = format ["Loadout %2: Can't find loadout for %1, falling back to rifleman.", _className, side group _unit];
+        [_string, "systemChat"] call BIS_fnc_MP;
+    };
 
     _className = "rifleman";
 };
