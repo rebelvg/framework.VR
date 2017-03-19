@@ -127,7 +127,9 @@ class AddonsMetaData
 		class Item11
 		{
 			className="klpq_framework";
-			name="klpq_framework";
+			name="KLPQ Framework";
+			author="KLPQ";
+			url="http://arma.klpq.men/";
 		};
 	};
 };
