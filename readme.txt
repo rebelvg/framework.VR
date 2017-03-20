@@ -20,6 +20,7 @@ SETTINGS.
 -- Variables.
 Settings - mission\fn_settings.sqf
 
+klpq_framework_enable - bool, enables framework.
 mf_customEnemyLoadouts - bool, custom loadouts for non-playable units.
 mf_onlyPilotsCanFly - bool, forbids taking off by non-pilots.
 mf_forceSideNVGs - array, forces NVGs for selected sides (WEST, EAST, RESISTANCE, CIVILIAN), non-playable units only.
@@ -32,7 +33,6 @@ murshun_easywayout_enable - bool, enables easywayout mod.
 murshun_musicRadio_enable - bool, enables murshun music radio.
 murshun_radioThemes - array, sets themes for music radio, leave empty for all themes.
 murshun_radioSongs - array, sets songs for music radio, leave empty for all songs.
-https://gist.github.com/rebelvg/a16187f3a7b930fd958b0f0c9db7782f
 
 -- AI spawn.
 Settings - mission\ai\fn_units.sqf
@@ -83,7 +83,7 @@ Boxes - mission\boxes folder.
 DETAILS.
 
 -- Variables.
-mf_version - number, contains framework version number.
+klpq_framework_version - number, contains framework version number.
 
 -- Editor/Singleplayer settings.
 Loadout boxes have virtual arsenal added.
