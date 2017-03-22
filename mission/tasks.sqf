@@ -12,5 +12,4 @@ Mission making checklist helper
 7. Test balance, don't use too many AI, something around 100 units is enough.
 8. Final touches, change mission name and author in the editor (attributes/general) and in the description.ext file.
 9. Change weather and date to your liking.
-
 */
