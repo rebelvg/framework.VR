@@ -10,6 +10,6 @@ Mission making checklist helper
 5. Right around here you can start placing custom objects and bases.
 6. Generate AI using DAC or any other AI spawner, framework has some functions for AI creation.
 7. Test balance, don't use too many AI, something around 100 units is enough.
-8. Final touches, change mission name and author in the editor (attributes/general) and in the description.ext file.
-9. Change weather and date to your liking.
+8. Change weather and date to your liking.
+9. Final touches, change mission name and author in the editor (attributes/general) and in the description.ext file.
 */
