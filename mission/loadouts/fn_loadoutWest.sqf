@@ -42,7 +42,7 @@ _boxAT = "launch_NLAW_F";
 _nonLethalGrenade = "SmokeShellBlue";
 _lethalGrenade = "HandGrenade";
 
-_items = [["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 3], [_lethalGrenade, 1], ["ACE_CableTie", 1]];
+_items = [["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 3], ["ACE_CableTie", 1]];
 _linkItems = ["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "NVGoggles"];
 
 _loadoutArray = [
