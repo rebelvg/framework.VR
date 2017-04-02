@@ -27,12 +27,12 @@ mf_forceSideNVGs - array, forces NVGs for selected sides (WEST, EAST, RESISTANCE
 mf_forceVirtualArsenal - bool, makes virtual arsenal available by default.
 mf_addParadropOption - bool, adds paradrop option to the ammo box.
 
-murshun_spectator_enable - bool, enables murshun spectator.
+murshun_spectator_enable - bool, enables spectator.
 murshun_easywayout_enable - bool, enables easywayout mod.
 
-murshun_musicRadio_enable - bool, enables murshun music radio.
-murshun_radioThemes - array, sets themes for music radio, leave empty for all themes.
-murshun_radioSongs - array, sets songs for music radio, leave empty for all songs.
+klpq_musicRadio_enable - bool, enables music radio.
+klpq_musicRadio_radioThemes - array, sets themes for music radio, leave empty for all themes.
+klpq_musicRadio_radioSongs - array, sets songs for music radio, leave empty for all songs.
 
 -- AI spawn.
 Settings - mission\ai\fn_units.sqf
