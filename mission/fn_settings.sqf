@@ -15,6 +15,6 @@ murshun_spectator_enable = true;
 murshun_easywayout_enable = false;
 
 //radio
-murshun_musicRadio_enable = true;
-murshun_radioThemes = [];
-murshun_radioSongs = [];
+klpq_musicRadio_enable = true;
+klpq_musicRadio_radioThemes = [];
+klpq_musicRadio_radioSongs = [];
