@@ -1,14 +1,15 @@
 //https://community.bistudio.com/wiki/Arma_3_Tasks_Overhaul
 
 //creates task, waits until the unit is 50m from the marker, completes task
-//can be unit or object
+//can be anything, unit, vehicle, box
 
 _obj = unit;
+_marker = "marker";
 
 [WEST, "task_id", ["Task description.", "Rescue"], _obj, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-	_obj distance getMarkerPos "marker" < 50
+	_obj distance getMarkerPos _marker < 50
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
@@ -18,7 +19,7 @@ waitUntil {
 
 _objArray = [obj_01, obj_02, obj_03];
 
-[WEST, "task_id", ["Task description.", "Search And Destroy"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
+[WEST, "task_id", ["Task description.", "Search and Destroy"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
 	{alive _x} count _objArray == 0

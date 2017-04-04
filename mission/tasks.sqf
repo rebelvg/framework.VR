@@ -6,7 +6,7 @@ Mission making checklist helper
 1. Create loadouts.
 2. Test loadouts, check mags and equipment, AI units won't have items, part of framework's acre optimizations. You can switch between units on the fly in editor, press U.
 3. Create tasks.
-4. Test tasks, you'll have admin teleport and admin invincibility options in editor (murshun menu/enable admin actions).
+4. Test tasks, you'll have admin teleport and admin invincibility options in editor (klpq menu/enable admin actions).
 5. Right around here you can start placing custom objects and bases.
 6. Generate AI using DAC or any other AI spawner, framework has some functions for AI creation.
 7. Test balance, don't use too many AI, something around 100 units is enough.
