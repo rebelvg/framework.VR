@@ -32,6 +32,7 @@ murshun_easywayout_enable - bool, enables easywayout mod.
 
 klpq_musicRadio_enable - bool, enables music radio.
 klpq_musicRadio_radioThemes - array, sets themes for music radio, leave empty for all themes.
+klpq_musicRadio_startRadioSongs - array, sets certain songs for music radio to play first.
 klpq_musicRadio_radioSongs - array, sets songs for music radio, leave empty for all songs.
 
 -- AI spawn.
