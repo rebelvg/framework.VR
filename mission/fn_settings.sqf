@@ -10,8 +10,10 @@ mf_forceSideNVGs = [];
 mf_forceVirtualArsenal = false;
 mf_addParadropOption = false;
 
-//mods
+//menu
 murshun_spectator_enable = true;
+
+//mods
 murshun_easywayout_enable = false;
 
 //radio
@@ -19,3 +21,4 @@ klpq_musicRadio_enable = true;
 klpq_musicRadio_radioThemes = [];
 klpq_musicRadio_startRadioSongs = [];
 klpq_musicRadio_radioSongs = [];
+klpq_musicRadio_enableBackpackRadioMP = false;

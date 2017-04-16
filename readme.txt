@@ -20,20 +20,22 @@ SETTINGS.
 -- Variables.
 Settings - mission\fn_settings.sqf
 
+KLPQ Framework.
 klpq_framework_enable - bool, enables framework.
 mf_customEnemyLoadouts - bool, custom loadouts for non-playable units.
 mf_onlyPilotsCanFly - bool, forbids taking off by non-pilots.
 mf_forceSideNVGs - array, forces NVGs for selected sides (WEST, EAST, RESISTANCE, CIVILIAN), non-playable units only.
 mf_forceVirtualArsenal - bool, makes virtual arsenal available by default.
-mf_addParadropOption - bool, adds paradrop option to the ammo box.
+mf_addParadropOption - bool, adds paradrop to friendlies option to the ammo box.
 
+KLPQ Menu.
 murshun_spectator_enable - bool, enables spectator.
+
+Mods.
 murshun_easywayout_enable - bool, enables easywayout mod.
 
-klpq_musicRadio_enable - bool, enables music radio.
-klpq_musicRadio_radioThemes - array, sets themes for music radio, leave empty for all themes.
-klpq_musicRadio_startRadioSongs - array, sets certain songs for music radio to play first.
-klpq_musicRadio_radioSongs - array, sets songs for music radio, leave empty for all songs.
+KLPQ Music Radio.
+https://github.com/rebelvg/klpq_musicRadio/blob/master/readme.txt
 
 -- AI spawn.
 Settings - mission\ai\fn_units.sqf
