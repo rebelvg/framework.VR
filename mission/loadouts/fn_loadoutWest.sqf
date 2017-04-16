@@ -11,8 +11,8 @@ weaponsArray = [weaponArray1, handgunArray1];
 eqpArray = [classesArray, [fashionArray, weaponsArray]];
 */
 
-_basicMedicine = [["ACE_fieldDressing", 20], ["ACE_morphine", 10], ["ACE_epinephrine", 2]];
-_advancedMedicine = [["ACE_fieldDressing", 10], ["ACE_quikclot", 10], ["ACE_morphine", 10], ["ACE_epinephrine", 2], ["ACE_tourniquet", 1], ["ACE_personalAidKit", 1]];
+_basicMedicine = [["ACE_fieldDressing", 20], ["ACE_morphine", 10], ["ACE_epinephrine", 2], ["ACE_bloodIV_250", 1]];
+_advancedMedicine = [["ACE_fieldDressing", 10], ["ACE_quikclot", 10], ["ACE_morphine", 10], ["ACE_epinephrine", 2], ["ACE_tourniquet", 1], ["ACE_personalAidKit", 1], ["ACE_bloodIV_250", 1]];
 
 _medicine = _basicMedicine;
 
@@ -24,20 +24,24 @@ _medicMedicine = _basicMedicMedicine;
 _leaderFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_Kitbag_cbr", ""];
 _riflemanFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_HelmetB_sand", "B_Kitbag_cbr", ""];
 _crewFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_HelmetCrew_B", "B_Kitbag_cbr", ""];
+_pilotFashion = _crewFashion;
 
 _leaderWeapon = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 15], ["1Rnd_HE_Grenade_shell", 7]], ["optic_Aco"]];
 _riflemanWeapon = ["arifle_MX_F", [["30Rnd_65x39_caseless_mag", 15]], []];
-_mgWeapon = ["arifle_MX_SW_F", [["100Rnd_65x39_caseless_mag_Tracer", 7]], ["bipod_01_F_snd"]];
+
+_mgMag = "100Rnd_65x39_caseless_mag_Tracer";
+_mgWeapon = ["arifle_MX_SW_F", [[_mgMag, 7]], ["bipod_01_F_snd"]];
+_mgAmmo = ["", [[_mgMag, 3]], []];
 
 _leaderHandgun = ["hgun_P07_F", [["16Rnd_9x21_Mag", 1]], []];
 
-_riflemanAT = ["launch_NLAW_F", [], []];
+_boxAT = "launch_NLAW_F";
+
+_riflemanAT = [_boxAT, [], []];
 _specialistAT = ["launch_B_Titan_short_F", [["Titan_AT", 2]], []];
 _specialistAA = ["launch_B_Titan_F", [["Titan_AA", 2]], []];
 
 _binoculars = ["Laserdesignator", [], []];
-
-_boxAT = "launch_NLAW_F";
 
 _nonLethalGrenade = "SmokeShellBlue";
 _lethalGrenade = "HandGrenade";
@@ -79,7 +83,7 @@ _loadoutArray = [
             ["rifleman (at)"],
             [
                 _riflemanFashion,
-                [_riflemanWeapon, _riflemanAT]
+                [_riflemanWeapon, _mgAmmo, _riflemanAT]
             ]
         ],
         [
@@ -104,9 +108,16 @@ _loadoutArray = [
             ]
         ],
         [
-            ["pilot", "crewman"],
+            ["crewman"],
             [
                 _crewFashion,
+                [_riflemanWeapon]
+            ]
+        ],
+        [
+            ["pilot"],
+            [
+                _pilotFashion,
                 [_riflemanWeapon]
             ]
         ],
