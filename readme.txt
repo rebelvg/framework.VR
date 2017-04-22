@@ -32,9 +32,7 @@ KLPQ Menu.
 murshun_spectator_enable - bool, enables spectator.
 
 Mods.
-murshun_easywayout_enable - bool, enables easywayout mod.
-
-KLPQ Music Radio.
+https://github.com/rebelvg/murshun_easywayout/blob/master/readme.txt
 https://github.com/rebelvg/klpq_musicRadio/blob/master/readme.txt
 
 -- AI spawn.
