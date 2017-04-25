@@ -179,7 +179,11 @@ _loadoutArray = [
         [_lethalGrenade, 80],
         ["DemoCharge_Remote_Mag", 20],
         ["SatchelCharge_Remote_Mag", 4]
-    ] + _medicine //content for boxes
+    ] + _medicine, //content for boxes
+    [
+        "", //face
+        "" //voice
+    ] //identity, ai only
 ];
 
 //output of the function, do not remove or change
