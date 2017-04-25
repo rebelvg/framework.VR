@@ -41,13 +41,30 @@ _riflemanAT = [_boxAT, [], []];
 _specialistAT = ["launch_B_Titan_short_F", [["Titan_AT", 2]], []];
 _specialistAA = ["launch_B_Titan_F", [["Titan_AA", 2]], []];
 
-_binoculars = ["Laserdesignator", [], []];
+_binoculars = ["ACE_VectorDay", [], []];
 
 _nonLethalGrenade = "SmokeShellBlue";
 _lethalGrenade = "HandGrenade";
 
 _items = [["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_nonLethalGrenade, 3], ["ACE_CableTie", 2]];
 _linkItems = ["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "NVGoggles"];
+
+_boxItems = [
+    ["ToolKit", 10],
+    ["ACE_wirecutter", 2],
+    ["ACE_SpareBarrel", 10],
+    ["ACE_CableTie", 80],
+    ["ACE_Clacker", 4],
+    ["murshun_cigs_cigpack", 40],
+    ["murshun_cigs_matches", 40],
+    [_boxAT, 20],
+    [_nonLethalGrenade, 200],
+    [_lethalGrenade, 80],
+    ["DemoCharge_Remote_Mag", 20],
+    ["SatchelCharge_Remote_Mag", 4]
+];
+
+_boxMedicine = _medicine apply {[_x select 0, (_x select 1) * 60]};
 
 _loadoutArray = [
     [
@@ -166,20 +183,7 @@ _loadoutArray = [
             []
         ]
     ], //personal items per class
-    [
-        ["ToolKit", 2],
-        ["ACE_wirecutter", 2],
-        ["ACE_SpareBarrel", 4],
-        ["ACE_CableTie", 10],
-        ["ACE_Clacker", 2],
-        ["murshun_cigs_cigpack", 20],
-        ["murshun_cigs_matches", 20],
-        [_boxAT, 20],
-        [_nonLethalGrenade, 200],
-        [_lethalGrenade, 80],
-        ["DemoCharge_Remote_Mag", 20],
-        ["SatchelCharge_Remote_Mag", 4]
-    ] + _medicine, //content for boxes
+    _boxItems + _boxMedicine, //content for boxes
     [
         "", //face
         "" //voice
