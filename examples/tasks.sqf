@@ -9,7 +9,7 @@ _marker = "mission_marker";
 [WEST, "task_id", ["Task description.", "Rescue"], _obj, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-	_obj distance getMarkerPos _marker < 50
+    _obj distance getMarkerPos _marker < 50
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
@@ -22,7 +22,7 @@ _objArray = [mission_obj_01, mission_obj_02, mission_obj_03];
 [WEST, "task_id", ["Task description.", "Search and Destroy"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-	{alive _x} count _objArray == 0
+    {alive _x} count _objArray == 0
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
@@ -34,7 +34,7 @@ _marker = "mission_marker";
 [WEST, "task_id", ["Task description.", "Visit Position"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-	{_x distance getMarkerPos _marker < 50} count allPlayers > 0
+    {_x distance getMarkerPos _marker < 50} count allPlayers > 0
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
@@ -48,7 +48,7 @@ _percent = 0.8;
 [WEST, "task_id", ["Task description.", "Visit Position (Group)"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-	{_x distance getMarkerPos _marker < _radius} count allPlayers >= ({!isObjectHidden _x} count allPlayers) * _percent && {_x distance getMarkerPos _marker < _radius} count allPlayers > 0
+    {_x distance getMarkerPos _marker < _radius} count allPlayers >= ({!isObjectHidden _x} count allPlayers) * _percent && {_x distance getMarkerPos _marker < _radius} count allPlayers > 0
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
@@ -61,7 +61,7 @@ _radius = 1000;
 [WEST, "task_id", ["Task description.", "Leave Position"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-	{_x distance getMarkerPos _marker < _radius} count allPlayers == 0
+    {_x distance getMarkerPos _marker < _radius} count allPlayers == 0
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
@@ -69,11 +69,11 @@ waitUntil {
 //this block will spawn a thread that will monitor mission failure if everyone is dead (aka spectating)
 
 [] spawn {
-	waitUntil {
-		{isObjectHidden _x} count allPlayers == count allPlayers && count allPlayers > 0 && time > 0
-	};
+    waitUntil {
+        {isObjectHidden _x} count allPlayers == count allPlayers && count allPlayers > 0 && time > 0
+    };
 
-	_string = format ["Mission failed."];
+    _string = format ["Mission failed."];
     _string remoteExec ["systemChat"];
 };
 
@@ -87,7 +87,7 @@ _enemySide = EAST;
 [WEST, "task_id", ["Task description.", "Clear Area"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-	{side _x == _enemySide && _x distance2d getMarkerPos _marker < _radius} count allUnits == 0 && {_x distance2d getMarkerPos _marker < _radius} count allPlayers > 0
+    {side _x == _enemySide && _x distance2d getMarkerPos _marker < _radius} count allUnits == 0 && {_x distance2d getMarkerPos _marker < _radius} count allPlayers > 0
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
@@ -102,7 +102,7 @@ _enemySide = EAST;
 [WEST, "task_id", ["Task description.", "Overrun Area"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-	{_x distance2d getMarkerPos _marker < _radius} count allPlayers > {side _x == _enemySide && _x distance2d getMarkerPos _marker < _radius} count allUnits
+    {_x distance2d getMarkerPos _marker < _radius} count allPlayers > {side _x == _enemySide && _x distance2d getMarkerPos _marker < _radius} count allUnits
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
@@ -125,23 +125,23 @@ _action = ["mission_itemAction", "Mission Action", "", {
 //also waits for mission to actually start to prevent auto-completion when players are still loading in the lobby
 
 [] spawn {
-	[WEST, "west_task_id", ["Task description.", "Eliminate East Side Team"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
+    [WEST, "west_task_id", ["Task description.", "Eliminate East Side Team"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
-	waitUntil {
-		{side _x == EAST && !isObjectHidden _x} count (playableUnits + switchableUnits) == 0 && time > 0
-	};
+    waitUntil {
+        {side _x == EAST && !isObjectHidden _x} count (playableUnits + switchableUnits) == 0 && time > 0
+    };
 
-	["west_task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
+    ["west_task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
 };
 
 [] spawn {
-	[EAST, "east_task_id", ["Task description.", "Eliminate West Side Team"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
+    [EAST, "east_task_id", ["Task description.", "Eliminate West Side Team"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
-	waitUntil {
-		{side _x == WEST && !isObjectHidden _x} count (playableUnits + switchableUnits) == 0 && time > 0
-	};
+    waitUntil {
+        {side _x == WEST && !isObjectHidden _x} count (playableUnits + switchableUnits) == 0 && time > 0
+    };
 
-	["east_task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
+    ["east_task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
 };
 
 //call mission completed
