@@ -1,10 +1,10 @@
 //https://community.bistudio.com/wiki/Arma_3_Tasks_Overhaul
 
-//creates task, waits until the unit is 50m from the marker, completes task
+//creates task, waits until object is 50m from the marker, completes task
 //can be anything, unit, vehicle, box
 
-_obj = unit;
-_marker = "marker";
+_obj = mission_unit;
+_marker = "mission_marker";
 
 [WEST, "task_id", ["Task description.", "Rescue"], _obj, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
@@ -17,7 +17,7 @@ waitUntil {
 //waits until objects are not alive
 //can be anything, units, vehicles, boxes
 
-_objArray = [obj_01, obj_02, obj_03];
+_objArray = [mission_obj_01, mission_obj_02, mission_obj_03];
 
 [WEST, "task_id", ["Task description.", "Search and Destroy"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
@@ -29,7 +29,7 @@ waitUntil {
 
 //waits until at least one player is 50m from the marker
 
-_marker = "marker";
+_marker = "mission_marker";
 
 [WEST, "task_id", ["Task description.", "Visit Position"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
@@ -41,38 +41,46 @@ waitUntil {
 
 //waits until more than 80% of players (not spectators) are 50m from the marker
 
-_marker = "marker";
+_marker = "mission_marker";
 _radius = 50;
+_percent = 0.8;
 
 [WEST, "task_id", ["Task description.", "Visit Position (Group)"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-	{_x distance getMarkerPos _marker < _radius} count allPlayers >= ({!isObjectHidden _x} count allPlayers) * 0.8 && {_x distance getMarkerPos _marker < _radius} count allPlayers > 0
+	{_x distance getMarkerPos _marker < _radius} count allPlayers >= ({!isObjectHidden _x} count allPlayers) * _percent && {_x distance getMarkerPos _marker < _radius} count allPlayers > 0
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
 
-//this block will spawn a thread that will end a mission if everyone is dead (aka spectating)
+//waits until no players are 1km from the marker
+
+_marker = "mission_marker";
+_radius = 1000;
+
+[WEST, "task_id", ["Task description.", "Leave Position"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
+
+waitUntil {
+	{_x distance getMarkerPos _marker < _radius} count allPlayers == 0
+};
+
+["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
+
+//this block will spawn a thread that will monitor mission failure if everyone is dead (aka spectating)
 
 [] spawn {
 	waitUntil {
-		{isObjectHidden _x} count allPlayers == count allPlayers && count allPlayers > 0
+		{isObjectHidden _x} count allPlayers == count allPlayers && count allPlayers > 0 && time > 0
 	};
 
-	_string = format ["Mission failed. Mission will end in 15 seconds."];
-	[_string, "systemChat"] call BIS_fnc_MP;
-
-	sleep 15;
-
-	[{
-		["Failed1", false, true, true] call BIS_fnc_endMission;
-	}, "BIS_fnc_spawn"] call BIS_fnc_MP;
+	_string = format ["Mission failed."];
+    _string remoteExec ["systemChat"];
 };
 
 //waits until there's no east side units in the 500m radius of the marker
 //checks if at least one of the players is around too (to prevent auto-completion if using dac or alive or other dynamic ai systems)
 
-_marker = "marker";
+_marker = "mission_marker";
 _radius = 500;
 _enemySide = EAST;
 
@@ -87,7 +95,7 @@ waitUntil {
 //waits until there's more players in the 500m radius of the marker than east side units
 //task already implies that players should be in the area
 
-_marker = "marker";
+_marker = "mission_marker";
 _radius = 500;
 _enemySide = EAST;
 
@@ -98,6 +106,17 @@ waitUntil {
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
+
+//this block will add ace action to the item
+
+_obj = mission_obj;
+
+_action = ["mission_itemAction", "Mission Action", "", {
+    params ["_item"];
+
+    deleteVehicle _item;
+}, {true}] call ace_interact_menu_fnc_createAction;
+[_obj, 0, ["ACE_MainActions"], _action] remoteExec ["ace_interact_menu_fnc_addActionToObject", 0, _obj];
 
 //this block creates two simultaneous tasks that run at the same time
 //simple tvt tasks
@@ -127,12 +146,8 @@ waitUntil {
 
 //call mission completed
 
-[{
-	["Completed1", true, true, true] call BIS_fnc_endMission;
-}, "BIS_fnc_spawn"] call BIS_fnc_MP;
+["Completed1", true, true, true] remoteExec ["BIS_fnc_endMission"];
 
 //call mission failed
 
-[{
-	["Failed1", false, true, true] call BIS_fnc_endMission;
-}, "BIS_fnc_spawn"] call BIS_fnc_MP;
+["Failed1", false, true, true] remoteExec ["BIS_fnc_endMission"];
