@@ -5,11 +5,12 @@
 
 _obj = mission_unit;
 _marker = "mission_marker";
+_radius = 50;
 
 [WEST, "task_id", ["Task description.", "Rescue"], _obj, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-    _obj distance getMarkerPos _marker < 50
+    _obj distance getMarkerPos _marker < _radius
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
@@ -30,11 +31,12 @@ waitUntil {
 //waits until at least one player is 50m from the marker
 
 _marker = "mission_marker";
+_radius = 50;
 
 [WEST, "task_id", ["Task description.", "Visit Position"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-    {_x distance getMarkerPos _marker < 50} count allPlayers > 0
+    {_x distance getMarkerPos _marker < _radius} count allPlayers > 0
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
