@@ -9,7 +9,7 @@ Mission making checklist helper
 4. Test tasks, you'll have admin teleport and admin invincibility options in editor (klpq menu/enable admin actions).
 5. Right around here you can start placing custom objects and bases.
 6. Generate AI using DAC or any other AI spawner, framework has some functions for AI creation.
-7. Test balance, don't use too many AI, something around 100 units is enough.
+7. Test balance, don't use too many AI, something around 100 units at one moment is enough.
 8. Change weather and date to your liking.
 9. Final touches, change mission name and author in the editor (attributes/general) and in the description.ext file.
 */
