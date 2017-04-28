@@ -4,7 +4,7 @@
 /*
 Mission making checklist helper
 1. Create loadouts.
-2. Test loadouts, check mags and equipment, AI units won't have items, part of framework's acre optimizations. You can switch between units on the fly in editor, press U.
+2. Test loadouts, check mags and equipment, AI units won't have items, boxes will have dynamic items (not unlimited), part of framework's acre optimizations. You can switch between units on the fly in editor, press U.
 3. Create tasks.
 4. Test tasks, you'll have admin teleport and admin invincibility options in editor (klpq menu/enable admin actions).
 5. Right around here you can start placing custom objects and bases.

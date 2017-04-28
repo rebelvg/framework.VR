@@ -12,3 +12,4 @@ clearItemCargoGlobal _box;
 clearBackpackCargoGlobal _box;
 
 _box addItemCargoGlobal ["SmokeShellBlue", 10];
+_box addBackpackCargoGlobal ["B_Kitbag_cbr", 10];
