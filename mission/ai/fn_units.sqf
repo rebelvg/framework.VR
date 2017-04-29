@@ -20,7 +20,7 @@ mf_fnc_ai_soldierArray = {
     {
         //"sl", "all other units", minimum 1 unit
     case "EAST": { ["O_Soldier_SL_F","O_soldier_AR_F","O_soldier_exp_F","O_soldier_GL_F","O_soldier_AA_F","O_soldier_M_F","O_medic_F","O_soldier_repair_F","O_Soldier_F","O_soldier_LAT_F","O_soldier_lite_F","O_soldier_TL_F"] };
-        //"crew", "pilot", should have 2 units
+        //"crew", "pilot", should be 2 units
     case "EAST Crew": { ["O_crew_F","O_Helipilot_F"] };
     case "WEST": { ["B_Soldier_SL_F","B_soldier_AR_F","B_soldier_exp_F","B_soldier_GL_F","B_soldier_AA_F","B_soldier_M_F","B_medic_F","B_soldier_repair_F","B_Soldier_F","B_soldier_LAT_F","B_soldier_lite_F","B_soldier_TL_F"] };
     case "WEST Crew": { ["B_crew_F","B_Helipilot_F"] };
