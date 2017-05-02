@@ -10,7 +10,7 @@ list of functions
 [getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "EAST", _radius, _count] call mf_fnc_ai_infantryPatrol;
 [getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "EAST Crew", "EAST Car"] call mf_fnc_ai_vehicleAttack;
 [getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "EAST Crew", "EAST Air", _radius] call mf_fnc_ai_airPatrol;
-[getMarkerPos "SPAWNMARKERNAME", _number, _interval, _radius, "Sh_82mm_AMOS"] spawn mf_fnc_ai_mortarAttack;
+[getMarkerPos "SPAWNMARKERNAME", _count, _interval, _radius, "Sh_82mm_AMOS"] call mf_fnc_ai_mortarAttack;
 */
 
 mf_fnc_ai_soldierArray = {
@@ -18,7 +18,7 @@ mf_fnc_ai_soldierArray = {
 
     _soldierArray = switch (_faction) do
     {
-        //"sl", "all other units", minimum 1 unit
+        //"sl", "all other units", minimum 2 units
     case "EAST": { ["O_Soldier_SL_F","O_soldier_AR_F","O_soldier_exp_F","O_soldier_GL_F","O_soldier_AA_F","O_soldier_M_F","O_medic_F","O_soldier_repair_F","O_Soldier_F","O_soldier_LAT_F","O_soldier_lite_F","O_soldier_TL_F"] };
         //"crew", "pilot", should be 2 units
     case "EAST Crew": { ["O_crew_F","O_Helipilot_F"] };
