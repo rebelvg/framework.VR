@@ -8,6 +8,7 @@ list of functions
 [getMarkerPos "mission_spawn", getMarkerPos "mission_attack", "EAST", _count] call mf_fnc_ai_infantryAttack;
 [getMarkerPos "mission_spawn", getMarkerPos "mission_attack", "EAST", _radius, _count] call mf_fnc_ai_infantryDefend;
 [getMarkerPos "mission_spawn", getMarkerPos "mission_attack", "EAST", _radius, _count] call mf_fnc_ai_infantryPatrol;
+[getMarkerPos "mission_spawn", "EAST", _radius, _count] call kf_fnc_ai_infantryBunker;
 [getMarkerPos "mission_spawn", getMarkerPos "mission_attack", "EAST Crew", "EAST Car"] call mf_fnc_ai_vehicleAttack;
 [getMarkerPos "mission_spawn", getMarkerPos "mission_attack", "EAST Crew", "EAST Air", _radius] call mf_fnc_ai_airPatrol;
 [getMarkerPos "mission_spawn", _count, _interval, _radius, "Sh_82mm_AMOS"] call mf_fnc_ai_mortarAttack;
