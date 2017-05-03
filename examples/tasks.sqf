@@ -18,12 +18,12 @@ waitUntil {
 //waits until objects are not alive
 //can be anything, units, vehicles, boxes
 
-_objArray = [mission_obj_01, mission_obj_02, mission_obj_03];
+_objs = [mission_obj_01, mission_obj_02, mission_obj_03];
 
 [WEST, "task_id", ["Task description.", "Search and Destroy"], nil, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-    {alive _x} count _objArray == 0
+    {alive _x} count _objs == 0
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
@@ -75,8 +75,7 @@ waitUntil {
         {isObjectHidden _x} count allPlayers == count allPlayers && count allPlayers > 0 && time > 0
     };
 
-    _string = format ["Mission failed."];
-    _string remoteExec ["systemChat"];
+    "Mission failed." remoteExec ["systemChat"];
 };
 
 //waits until there's no east side units in the 500m radius of the marker

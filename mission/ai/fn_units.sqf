@@ -4,13 +4,13 @@
 /*
 list of functions
 
-[getMarkerPos "SPAWNMARKERNAME", "EAST", _count] call mf_fnc_ai_createGroup;
-[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "EAST", _count] call mf_fnc_ai_infantryAttack;
-[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "EAST", _radius, _count] call mf_fnc_ai_infantryDefend;
-[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "EAST", _radius, _count] call mf_fnc_ai_infantryPatrol;
-[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "EAST Crew", "EAST Car"] call mf_fnc_ai_vehicleAttack;
-[getMarkerPos "SPAWNMARKERNAME", getMarkerPos "ATTACKMARKERNAME", "EAST Crew", "EAST Air", _radius] call mf_fnc_ai_airPatrol;
-[getMarkerPos "SPAWNMARKERNAME", _count, _interval, _radius, "Sh_82mm_AMOS"] call mf_fnc_ai_mortarAttack;
+[getMarkerPos "mission_spawn", "EAST", _count] call mf_fnc_ai_createGroup;
+[getMarkerPos "mission_spawn", getMarkerPos "mission_attack", "EAST", _count] call mf_fnc_ai_infantryAttack;
+[getMarkerPos "mission_spawn", getMarkerPos "mission_attack", "EAST", _radius, _count] call mf_fnc_ai_infantryDefend;
+[getMarkerPos "mission_spawn", getMarkerPos "mission_attack", "EAST", _radius, _count] call mf_fnc_ai_infantryPatrol;
+[getMarkerPos "mission_spawn", getMarkerPos "mission_attack", "EAST Crew", "EAST Car"] call mf_fnc_ai_vehicleAttack;
+[getMarkerPos "mission_spawn", getMarkerPos "mission_attack", "EAST Crew", "EAST Air", _radius] call mf_fnc_ai_airPatrol;
+[getMarkerPos "mission_spawn", _count, _interval, _radius, "Sh_82mm_AMOS"] call mf_fnc_ai_mortarAttack;
 */
 
 mf_fnc_ai_soldierArray = {
