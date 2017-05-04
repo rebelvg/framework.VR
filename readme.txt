@@ -84,7 +84,7 @@ Boxes - mission\boxes folder.
 DETAILS.
 
 -- Variables.
-klpq_framework_version - number, contains framework version number.
+klpq_framework_version - string, contains framework semver version number.
 
 -- Editor/Singleplayer settings.
 Loadout boxes have virtual arsenal added.
