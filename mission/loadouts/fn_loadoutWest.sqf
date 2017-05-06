@@ -23,8 +23,8 @@ _medicMedicine = _basicMedicMedicine;
 
 _riflemanFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_HelmetB_sand", "B_Kitbag_cbr", ""];
 _leaderFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_Kitbag_cbr", ""];
-_pilotFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_PilotHelmetHeli_B", "B_Kitbag_cbr", ""];
 _crewFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_HelmetCrew_B", "B_Kitbag_cbr", ""];
+_pilotFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_PilotHelmetHeli_B", "B_Kitbag_cbr", ""];
 
 _riflemanPrimary = ["arifle_MX_F", [["30Rnd_65x39_caseless_mag", 15]], []];
 _specPrimary = ["arifle_MXC_F", [["30Rnd_65x39_caseless_mag", 10]], []];
