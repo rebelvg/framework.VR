@@ -20,12 +20,12 @@ mf_fnc_ai_soldierArray = {
     _soldierArray = switch (_faction) do
     {
         //"sl", "all other units", minimum 2 units
-    case "EAST": { ["O_Soldier_SL_F","O_soldier_AR_F","O_soldier_exp_F","O_soldier_GL_F","O_soldier_AA_F","O_soldier_M_F","O_medic_F","O_soldier_repair_F","O_Soldier_F","O_soldier_LAT_F","O_soldier_lite_F","O_soldier_TL_F"] };
+    case "EAST": { ["O_Soldier_SL_F","O_medic_F","O_engineer_F","O_soldier_TL_F","O_Soldier_AT_F","O_soldier_AA_F","O_soldier_AR_F","O_soldier_LAT_F","O_soldier_GL_F","O_soldier_M_F","O_Soldier_F"] };
         //"crew", "pilot", should be 2 units
     case "EAST Crew": { ["O_crew_F","O_Helipilot_F"] };
-    case "WEST": { ["B_Soldier_SL_F","B_soldier_AR_F","B_soldier_exp_F","B_soldier_GL_F","B_soldier_AA_F","B_soldier_M_F","B_medic_F","B_soldier_repair_F","B_Soldier_F","B_soldier_LAT_F","B_soldier_lite_F","B_soldier_TL_F"] };
+    case "WEST": { ["B_Soldier_SL_F","B_medic_F","B_engineer_F","B_soldier_TL_F","B_soldier_AT_F","B_soldier_AA_F","B_soldier_AR_F","B_soldier_LAT_F","B_soldier_GL_F","B_soldier_M_F","B_Soldier_F"] };
     case "WEST Crew": { ["B_crew_F","B_Helipilot_F"] };
-    case "GUER": { ["I_Soldier_SL_F","I_soldier_AR_F","I_soldier_exp_F","I_soldier_GL_F","I_soldier_AA_F","I_soldier_M_F","I_medic_F","I_soldier_repair_F","I_Soldier_F","I_soldier_LAT_F","I_soldier_lite_F","I_soldier_TL_F"] };
+    case "GUER": { ["I_Soldier_SL_F","I_medic_F","I_engineer_F","I_soldier_TL_F","I_Soldier_AT_F","I_soldier_AA_F","I_soldier_AR_F","I_soldier_LAT_F","I_soldier_GL_F","I_soldier_M_F","I_Soldier_F"] };
     case "GUER Crew": { ["I_crew_F","I_Helipilot_F"] };
         default { [] };
     };
