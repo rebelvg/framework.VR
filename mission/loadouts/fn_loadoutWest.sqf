@@ -82,14 +82,14 @@ _loadoutArray = [
             ["combat life saver"],
             [
                 _riflemanFashion,
-                [_riflemanPrimary]
+                [_specPrimary]
             ]
         ],
         [
             ["engineer"],
             [
                 _riflemanFashion,
-                [_riflemanPrimary]
+                [_specPrimary]
             ]
         ],
         [
