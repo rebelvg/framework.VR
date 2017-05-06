@@ -29,7 +29,6 @@ _pilotFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_PilotHelmetHe
 _riflemanPrimary = ["arifle_MX_F", [["30Rnd_65x39_caseless_mag", 15]], []];
 _specPrimary = ["arifle_MXC_F", [["30Rnd_65x39_caseless_mag", 10]], []];
 _glRifleWeapon = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 15], ["1Rnd_HE_Grenade_shell", 7]], ["optic_Aco"]];
-
 _leaderPrimary = _glRifleWeapon;
 
 _mgMag = "100Rnd_65x39_caseless_mag_Tracer";
@@ -37,6 +36,7 @@ _mgWeapon = ["arifle_MX_SW_F", [[_mgMag, 15]], ["bipod_01_F_snd"]];
 _mgMags = ["", [[_mgMag, 7]], []];
 
 _handgunWeapon = ["hgun_P07_F", [["16Rnd_9x21_Mag", 1]], []];
+_leaderSecond = _handgunWeapon;
 
 _atLauncher = "launch_NLAW_F";
 
@@ -75,7 +75,7 @@ _loadoutArray = [
             ["officer", "squad leader"],
             [
                 _leaderFashion,
-                [_leaderPrimary, _handgunWeapon, _binoculars]
+                [_leaderPrimary, _leaderSecond, _binoculars]
             ]
         ],
         [
@@ -96,7 +96,7 @@ _loadoutArray = [
             ["team leader"],
             [
                 _riflemanFashion,
-                [_leaderPrimary, _handgunWeapon, _binoculars]
+                [_leaderPrimary, _leaderSecond, _binoculars]
             ]
         ],
         [
