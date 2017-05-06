@@ -128,14 +128,14 @@ _loadoutArray = [
             ]
         ],
         [
-            ["pilot"],
+            ["pilot", "helicopter pilot"],
             [
                 _pilotFashion,
                 [_specPrimary]
             ]
         ],
         [
-            ["crewman"],
+            ["crewman", "helicopter crew"],
             [
                 _crewFashion,
                 [_specPrimary]
@@ -208,7 +208,7 @@ _loadoutArray = [
             []
         ],
         [
-            ["pilot", "crewman"],
+            ["pilot", "helicopter pilot", "crewman", "helicopter crew"],
             [["ToolKit", 1]],
             []
         ],
