@@ -30,8 +30,8 @@ _crewFashion = [_uniform, _vest, "H_HelmetCrew_B", "B_Kitbag_cbr", ""];
 _pilotFashion = [_uniform, _vest, "H_PilotHelmetHeli_B", "B_Kitbag_cbr", ""];
 
 _riflemanPrimary = ["arifle_MX_F", [["30Rnd_65x39_caseless_mag", 15]], []];
-_specPrimary = ["arifle_MXC_F", [["30Rnd_65x39_caseless_mag", 10]], []];
-_glRifleWeapon = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 15], ["1Rnd_HE_Grenade_shell", 7]], ["optic_Aco"]];
+_specPrimary = ["arifle_MXC_F", [["30Rnd_65x39_caseless_mag", 15]], []];
+_glRifleWeapon = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 15], ["1Rnd_HE_Grenade_shell", 15]], ["optic_Aco"]];
 _leaderPrimary = _glRifleWeapon;
 
 _mgMag = "100Rnd_65x39_caseless_mag_Tracer";
@@ -60,7 +60,7 @@ _boxItems = [
     ["ACE_wirecutter", 2],
     ["ACE_SpareBarrel", 10],
     ["ACE_CableTie", 80],
-    ["ACE_Clacker", 4],
+    ["ACE_Clacker", 10],
     ["murshun_cigs_cigpack", 40],
     ["murshun_cigs_matches", 40],
     [_atLauncher, 20],
