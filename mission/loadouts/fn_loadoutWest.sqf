@@ -21,10 +21,12 @@ _advancedMedicMedicine = [["ACE_fieldDressing", 20], ["ACE_quikclot", 20], ["ACE
 
 _medicMedicine = _basicMedicMedicine;
 
-_riflemanFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_HelmetB_sand", "B_Kitbag_cbr", ""];
-_leaderFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_MilCap_mcamo", "B_Kitbag_cbr", ""];
-_crewFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_HelmetCrew_B", "B_Kitbag_cbr", ""];
-_pilotFashion = ["U_B_CombatUniform_mcam", "V_BandollierB_rgr", "H_PilotHelmetHeli_B", "B_Kitbag_cbr", ""];
+_uniform = "U_B_CombatUniform_mcam";
+_vest = "V_BandollierB_rgr";
+_riflemanFashion = [_uniform, _vest, "H_HelmetB_sand", "B_Kitbag_cbr", ""];
+_leaderFashion = [_uniform, _vest, "H_MilCap_mcamo", "B_Kitbag_cbr", ""];
+_crewFashion = [_uniform, _vest, "H_HelmetCrew_B", "B_Kitbag_cbr", ""];
+_pilotFashion = [_uniform, _vest, "H_PilotHelmetHeli_B", "B_Kitbag_cbr", ""];
 
 _riflemanPrimary = ["arifle_MX_F", [["30Rnd_65x39_caseless_mag", 15]], []];
 _specPrimary = ["arifle_MXC_F", [["30Rnd_65x39_caseless_mag", 10]], []];
@@ -65,9 +67,14 @@ _boxItems = [
     [_fragGrenade, 80],
     ["DemoCharge_Remote_Mag", 20],
     ["SatchelCharge_Remote_Mag", 4]
-];
+]; //content for boxes
 
 _boxMedicine = _medicine apply {[_x select 0, (_x select 1) * 60]};
+
+_identity = [
+    "", //face
+    "" //voice
+]; //identity, ai only
 
 _loadoutArray = [
     [
@@ -223,11 +230,8 @@ _loadoutArray = [
             []
         ]
     ], //personal items per class
-    _boxItems + _boxMedicine, //content for boxes
-    [
-        "", //face
-        "" //voice
-    ] //identity, ai only
+    _boxItems + _boxMedicine,
+    _identity
 ];
 
 //output of the function, do not remove or change
