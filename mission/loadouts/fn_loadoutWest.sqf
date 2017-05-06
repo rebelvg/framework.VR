@@ -24,6 +24,7 @@ _medicMedicine = _basicMedicMedicine;
 _uniform = "U_B_CombatUniform_mcam";
 _vest = "V_BandollierB_rgr";
 _riflemanFashion = [_uniform, _vest, "H_HelmetB_sand", "B_Kitbag_cbr", ""];
+_specFashion = [_uniform, _vest, "H_HelmetB_sand", "B_Carryall_mcamo", ""];
 _leaderFashion = [_uniform, _vest, "H_MilCap_mcamo", "B_Kitbag_cbr", ""];
 _crewFashion = [_uniform, _vest, "H_HelmetCrew_B", "B_Kitbag_cbr", ""];
 _pilotFashion = [_uniform, _vest, "H_PilotHelmetHeli_B", "B_Kitbag_cbr", ""];
@@ -88,14 +89,14 @@ _loadoutArray = [
         [
             ["combat life saver"],
             [
-                _riflemanFashion,
+                _specFashion,
                 [_specPrimary]
             ]
         ],
         [
             ["engineer"],
             [
-                _riflemanFashion,
+                _specFashion,
                 [_specPrimary]
             ]
         ],
@@ -109,14 +110,14 @@ _loadoutArray = [
         [
             ["missile specialist (at)"],
             [
-                _riflemanFashion,
+                _specFashion,
                 [_specPrimary, _atMissileWeapon]
             ]
         ],
         [
             ["missile specialist (aa)"],
             [
-                _riflemanFashion,
+                _specFashion,
                 [_specPrimary, _aaMissileWeapon]
             ]
         ],
