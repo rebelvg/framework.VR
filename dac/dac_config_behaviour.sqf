@@ -13,6 +13,8 @@ private [
 "_setFleeing","_setHeliVal","_setPause","_setBldgBeh","_setSupport","_setJoin","_setEmpVeh","_setSupTime","_setHidTime"
 ];
 
+private _conf = missionConfigFile >> "KF_AI" >> "Behaviour";
+
 switch (_this select 0) do
 {
 	//-------------------------------------------------------------------------------------------------------------------------
@@ -20,7 +22,7 @@ switch (_this select 0) do
 case 0:
 	{
 		//"aimingAccuracy", "aimingShake", "aimingSpeed", "endurance", "spotDistance", "spotTime", "courage", "reloadSpeed", "commanding", "general"
-		_setSkill   = [[0.45,0.65],[0.45,0.65],[0.45,0.65],[0.65,0.85],[0.65,0.85],[0.65,0.85],[0.65,0.85],[0.65,0.85],[0.65,0.85],[0.65,0.85]];
+		_setSkill   = getArray (_conf >> "NORMAL" >> "Infantry" >> "skill");
 		_setCombat  = ["yellow"];
 		_setBehav   = ["safe","aware"];
 		_setSpeed   = ["limited","normal","full"];
@@ -40,7 +42,7 @@ case 0:
     //vehicles
 case 4:
 	{
-		_setSkill   = [[0.25,0.45],[0.25,0.45],[0.25,0.45],[0.45,0.65],[0.45,0.65],[0.45,0.65],[0.45,0.65],[0.45,0.65],[0.45,0.65],[0.45,0.65]];
+		_setSkill   = getArray (_conf >> "NORMAL" >> "Vehicles" >> "skill");
 		_setCombat  = ["yellow"];
 		_setBehav   = ["safe"];
 		_setSpeed   = ["limited","normal"];

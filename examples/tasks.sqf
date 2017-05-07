@@ -63,7 +63,7 @@ _radius = 1000;
 [WEST, "task_id", ["Task description.", "Leave Position"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-    {_x distance getMarkerPos _marker < _radius} count allPlayers == 0
+    {_x distance getMarkerPos _marker < _radius} count allPlayers == 0 && {!isObjectHidden _x} count allPlayers > 0
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;

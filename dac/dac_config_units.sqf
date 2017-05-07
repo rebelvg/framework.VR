@@ -11,63 +11,65 @@
 private ["_TypNumber","_TempArray","_Unit_Pool_S","_Unit_Pool_V","_Unit_Pool_T","_Unit_Pool_A"];
 _TypNumber = _this select 0;_TempArray = [];
 
+private _conf = missionConfigFile >> "KF_AI" >> "Units";
+
 switch (_TypNumber) do
 {
-	//-------------------------------------------------------------------------------------------------
-	//EAST
+    //-------------------------------------------------------------------------------------------------
+    //EAST
 case 0:
-	{
-		//"crew", "pilot", "sl", "all other units", minimum 4 units
-		_Unit_Pool_S = ["O_crew_F","O_Helipilot_F","O_Soldier_SL_F","O_medic_F","O_engineer_F","O_soldier_TL_F","O_Soldier_AT_F","O_soldier_AA_F","O_soldier_AR_F","O_soldier_LAT_F","O_soldier_GL_F","O_soldier_M_F","O_Soldier_F"];
-		_Unit_Pool_V = ["O_MRAP_02_F"];
-		_Unit_Pool_T = ["O_APC_Wheeled_02_rcws_F","O_MBT_02_cannon_F"];
-		_Unit_Pool_A = ["O_Heli_Light_02_F"];
-	};
-	//-------------------------------------------------------------------------------------------------
-	//WEST
+    {
+        //"crew", "pilot", "sl", "all other units", minimum 4 units
+        _Unit_Pool_S = (getArray (_conf >> "EAST" >> "crew")) + (getArray (_conf >> "EAST" >> "infantry"));
+        _Unit_Pool_V = getArray (_conf >> "EAST" >> "wheeled");
+        _Unit_Pool_T = getArray (_conf >> "EAST" >> "armored");
+        _Unit_Pool_A = getArray (_conf >> "EAST" >> "air");
+    };
+    //-------------------------------------------------------------------------------------------------
+    //WEST
 case 1:
-	{
-		_Unit_Pool_S = ["B_crew_F","B_Helipilot_F","B_Soldier_SL_F","B_medic_F","B_engineer_F","B_soldier_TL_F","B_soldier_AT_F","B_soldier_AA_F","B_soldier_AR_F","B_soldier_LAT_F","B_soldier_GL_F","B_soldier_M_F","B_Soldier_F"];
-		_Unit_Pool_V = ["B_MRAP_01_F"];
-		_Unit_Pool_T = ["B_APC_Wheeled_01_cannon_F","B_MBT_01_TUSK_F"];
-		_Unit_Pool_A = ["B_Heli_Transport_01_F"];
-	};
-	//-------------------------------------------------------------------------------------------------
-	//RESISTANCE
+    {
+        _Unit_Pool_S = (getArray (_conf >> "WEST" >> "crew")) + (getArray (_conf >> "WEST" >> "infantry"));
+        _Unit_Pool_V = getArray (_conf >> "WEST" >> "wheeled");
+        _Unit_Pool_T = getArray (_conf >> "WEST" >> "armored");
+        _Unit_Pool_A = getArray (_conf >> "WEST" >> "air");
+    };
+    //-------------------------------------------------------------------------------------------------
+    //RESISTANCE
 case 2:
-	{
-		_Unit_Pool_S = ["I_crew_F","I_Helipilot_F","I_Soldier_SL_F","I_medic_F","I_engineer_F","I_soldier_TL_F","I_Soldier_AT_F","I_soldier_AA_F","I_soldier_AR_F","I_soldier_LAT_F","I_soldier_GL_F","I_soldier_M_F","I_Soldier_F"];
-		_Unit_Pool_V = ["I_MRAP_03_F"];
-		_Unit_Pool_T = ["I_APC_Wheeled_03_cannon_F","I_MBT_03_cannon_F"];
-		_Unit_Pool_A = ["I_Heli_light_03_F"];
-	};
-	//-------------------------------------------------------------------------------------------------
-	//CIVILIAN
+    {
+        _Unit_Pool_S = (getArray (_conf >> "GUER" >> "crew")) + getArray ((_conf >> "GUER" >> "infantry"));
+        _Unit_Pool_V = getArray (_conf >> "GUER" >> "wheeled");
+        _Unit_Pool_T = getArray (_conf >> "GUER" >> "armored");
+        _Unit_Pool_A = getArray (_conf >> "GUER" >> "air");
+    };
+    //-------------------------------------------------------------------------------------------------
+    //CIVILIAN
 case 3:
-	{
-		_Unit_Pool_S = ["C_man_1","C_man_1","C_man_1","C_man_1"];
-		_Unit_Pool_V = ["C_Offroad_01_F"];
-		_Unit_Pool_T = [];
-		_Unit_Pool_A = ["C_Heli_Light_01_civil_F"];
-	};
-	//-------------------------------------------------------------------------------------------------
-	Default
-	{
-		if(DAC_Basic_Value != 5) then
-		{
-			DAC_Basic_Value = 5;publicvariable "DAC_Basic_Value",
-			hintc "Error: DAC_Config_Units > No valid config number";
-		};
-		if(true) exitwith {};
-	};
+    {
+        _Unit_Pool_S = ["C_man_1","C_man_1","C_man_1","C_man_1"];
+        _Unit_Pool_V = ["C_Offroad_01_F"];
+        _Unit_Pool_T = [];
+        _Unit_Pool_A = ["C_Heli_Light_01_civil_F"];
+    };
+    //-------------------------------------------------------------------------------------------------
+    Default
+    {
+        if(DAC_Basic_Value != 5) then
+        {
+            DAC_Basic_Value = 5;publicvariable "DAC_Basic_Value",
+            hintc "Error: DAC_Config_Units > No valid config number";
+        };
+        if(true) exitwith {};
+    };
 };
 
 if(count _this == 2) then
 {
-	_TempArray = _TempArray + [_Unit_Pool_S,_Unit_Pool_V,_Unit_Pool_T,_Unit_Pool_A];
+    _TempArray = _TempArray + [_Unit_Pool_S,_Unit_Pool_V,_Unit_Pool_T,_Unit_Pool_A];
 }
 else
 {
-	_TempArray = _Unit_Pool_V + _Unit_Pool_T + _Unit_Pool_A;
+    _TempArray = _Unit_Pool_V + _Unit_Pool_T + _Unit_Pool_A;
 };
 _TempArray

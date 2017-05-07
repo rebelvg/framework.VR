@@ -22,6 +22,8 @@ author = "KLPQ";
 loadScreen = "klpq_framework\logo.paa";
 overviewPicture = "klpq_framework\logo.paa";
 
+#include "kf_ai.hpp"
+
 class CfgDebriefing
 {
 	class Completed1
