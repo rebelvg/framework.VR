@@ -4,16 +4,6 @@
 /*
 list of functions
 
-_unitCount - int.
-_skill - string, behaviour name.
-_radius - number.
-_wpCount - int.
-_threshold - int.
-_flyHeight - number.
-_roundCount - int.
-_interval - number.
-_height - number.
-
 _grp = [getMarkerPos "mission_spawn", "EAST", _unitCount, _skill] call mf_fnc_ai_createGroup;
 [_grp, getMarkerPos "mission_attack", _radius] call kf_fnc_ai_infantryAttack;
 [_grp, getMarkerPos "mission_attack", _radius] call kf_fnc_ai_infantryDefend;
