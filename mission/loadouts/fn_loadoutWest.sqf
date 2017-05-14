@@ -218,7 +218,7 @@ _loadoutArray = [
         [
             ["pilot", "helicopter pilot", "crewman", "helicopter crew"],
             [["ToolKit", 1]],
-            []
+            ["ItemGPS"]
         ],
         [
             ["grenadier"],

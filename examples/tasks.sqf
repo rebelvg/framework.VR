@@ -28,7 +28,7 @@ waitUntil {
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
 
-//waits until at least one player is 50m from the marker
+//waits until at least one player on foot is 50m from the marker
 
 _marker = "mission_marker";
 _radius = 50;
@@ -36,7 +36,7 @@ _radius = 50;
 [WEST, "task_id", ["Task description.", "Visit Position"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-    {_x distance getMarkerPos _marker < _radius} count allPlayers > 0
+    {_x distance getMarkerPos _marker < _radius && vehicle _x == _x} count allPlayers > 0
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
@@ -79,7 +79,7 @@ waitUntil {
 };
 
 //waits until there's no east side units in the 500m radius of the marker
-//checks if at least one of the players is around too (to prevent auto-completion if using dac or alive or other dynamic ai systems)
+//checks if at least one of the players on foot is around too (to prevent auto-completion if using dac or alive or other dynamic ai systems)
 
 _marker = "mission_marker";
 _radius = 500;
@@ -88,12 +88,12 @@ _enemySide = EAST;
 [WEST, "task_id", ["Task description.", "Clear Area"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-    {side _x == _enemySide && _x distance2d getMarkerPos _marker < _radius} count allUnits == 0 && {_x distance2d getMarkerPos _marker < _radius} count allPlayers > 0
+    {side _x == _enemySide && _x distance2d getMarkerPos _marker < _radius} count allUnits == 0 && {_x distance2d getMarkerPos _marker < _radius && vehicle _x == _x} count allPlayers > 0
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
 
-//waits until there's more players in the 500m radius of the marker than east side units
+//waits until there's more players on foot in the 500m radius of the marker than east side units
 //task already implies that players should be in the area
 
 _marker = "mission_marker";
@@ -103,7 +103,7 @@ _enemySide = EAST;
 [WEST, "task_id", ["Task description.", "Overrun Area"], _marker, "ASSIGNED", 0, true, "default"] call BIS_fnc_taskCreate;
 
 waitUntil {
-    {_x distance2d getMarkerPos _marker < _radius} count allPlayers > {side _x == _enemySide && _x distance2d getMarkerPos _marker < _radius} count allUnits
+    {_x distance2d getMarkerPos _marker < _radius && vehicle _x == _x} count allPlayers > {side _x == _enemySide && _x distance2d getMarkerPos _marker < _radius} count allUnits
 };
 
 ["task_id", "SUCCEEDED", true] call BIS_fnc_taskSetState;
