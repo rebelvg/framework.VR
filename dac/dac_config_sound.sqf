@@ -12,11 +12,11 @@ if(isNil "DAC_Radio_Settings") then {DAC_Radio_Settings = [1000,[0,0],5,2,objNul
 //================
 if(false) then
 {
-	DAC_SayArrayE  	= 	[];
+    DAC_SayArrayE  	= 	[];
 }
 else
 {
-	DAC_SayArrayE  	= 	[];
+    DAC_SayArrayE  	= 	[];
 };
 
 DAC_SayArrayW  	= 	[];

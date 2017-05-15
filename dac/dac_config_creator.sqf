@@ -59,30 +59,30 @@ waituntil {(DAC_Basic_Value > 0)};
 
 if(DAC_Code < 2) then
 {
-	//===========================================|
-	// StartScriptOnServer                       |
-	//===========================================|
-	//player sidechat "ServerStart"
-	//[] execVM "myServerScript.sqf";
-	//onMapSingleClick "_fun = [_pos,_shift]execVM ""Action.sqf""";
+    //===========================================|
+    // StartScriptOnServer                       |
+    //===========================================|
+    //player sidechat "ServerStart"
+    //[] execVM "myServerScript.sqf";
+    //onMapSingleClick "_fun = [_pos,_shift]execVM ""Action.sqf""";
 }
 else
 {
-	if(DAC_Code == 3) then
-	{
-		//===========================================|
-		// StartScriptOnJipClient                    |
-		//===========================================|
-		//player sidechat "JipClientStart"
-		//[] execVM "myJipClientScript.sqf";
-	}
-	else
-	{
-		//===========================================|
-		// StartScriptOnClient                       |
-		//===========================================|
-		//player sidechat "ClientStart"
-		//[] execVM "myClientScript.sqf";
-		//onMapSingleClick "_fun = [_pos,_shift]execVM ""Action.sqf""";
-	};
+    if(DAC_Code == 3) then
+    {
+        //===========================================|
+        // StartScriptOnJipClient                    |
+        //===========================================|
+        //player sidechat "JipClientStart"
+        //[] execVM "myJipClientScript.sqf";
+    }
+    else
+    {
+        //===========================================|
+        // StartScriptOnClient                       |
+        //===========================================|
+        //player sidechat "ClientStart"
+        //[] execVM "myClientScript.sqf";
+        //onMapSingleClick "_fun = [_pos,_shift]execVM ""Action.sqf""";
+    };
 };
