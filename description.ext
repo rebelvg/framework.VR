@@ -1,8 +1,7 @@
-class Header
-{
-	gameType = Coop;
-	minPlayers = 1;
-	maxPlayers = 128;
+class Header {
+    gameType = Coop;
+    minPlayers = 1;
+    maxPlayers = 128;
 };
 
 saving = 0;
@@ -24,33 +23,27 @@ overviewPicture = "klpq_framework\logo.paa";
 
 #include "kf_ai.hpp"
 
-class CfgDebriefing
-{
-	class Completed1
-	{
-		title = "Mission Completed!";
-		subtitle = "Good Job!";
-		description = "";
-	};
-	class Failed1
-	{
-		title = "Mission Failed!";
-		subtitle = "Come On, Guys.";
-		description = "";
-	};
+class CfgDebriefing {
+    class Completed1 {
+        title = "Mission Completed!";
+        subtitle = "Good Job!";
+        description = "";
+    };
+    class Failed1 {
+        title = "Mission Failed!";
+        subtitle = "Come On, Guys.";
+        description = "";
+    };
 };
 
-class Params
-{
-    class AddVirtualArsenal
-    {
+class Params {
+    class AddVirtualArsenal {
         title = "Add Virtual Arsenal";
         texts[] = {"Default","Yes"};
         values[] = {0,1};
         default = 0;
     };
-    class AddZeus
-    {
+    class AddZeus {
         title = "Add Zeus";
         texts[] = {"Default","Yes"};
         values[] = {0,1};
@@ -58,12 +51,9 @@ class Params
     };
 };
 
-class CfgFunctions
-{
-    class MF
-    {
-        class loadouts
-        {
+class CfgFunctions {
+    class MF {
+        class loadouts {
             file = "mission\loadouts";
 
             class loadoutWest {};
@@ -72,8 +62,7 @@ class CfgFunctions
             class loadoutCiv {};
         };
 
-        class mission
-        {
+        class mission {
             class frameworkSettings {
                 preInit = 1;
                 file = "mission\fn_settings.sqf";
@@ -86,10 +75,8 @@ class CfgFunctions
     };
 };
 
-class CfgDebriefingSections
-{
-    class FrameworkDebriefingScreen
-    {
+class CfgDebriefingSections {
+    class FrameworkDebriefingScreen {
         title = "Debriefing Stats";
         variable = "mf_debriefingText";
     };

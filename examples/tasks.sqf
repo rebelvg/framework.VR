@@ -1,5 +1,7 @@
 //https://community.bistudio.com/wiki/Arma_3_Tasks_Overhaul
 
+private ["_obj", "_marker", "_radius", "_objs", "_percent", "_enemySide", "_action"];
+
 //creates task, waits until object is 50m from the marker, completes task
 //can be anything, unit, vehicle, box
 

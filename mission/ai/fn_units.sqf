@@ -21,7 +21,7 @@ mf_fnc_ai_soldierArray = {
 
     private _conf = missionConfigFile >> "KF_AI" >> "Units";
 
-    _soldierArray = switch (_faction) do
+    private _soldierArray = switch (_faction) do
     {
     case "EAST": { getArray (_conf >> "EAST" >> "infantry") };
     case "EAST Crew": { getArray (_conf >> "EAST" >> "crew") };
@@ -40,7 +40,7 @@ mf_fnc_ai_vehicleArray = {
 
     private _conf = missionConfigFile >> "KF_AI" >> "Units";
 
-    _vehicleArray = switch (_vehicle) do
+    private _vehicleArray = switch (_vehicle) do
     {
     case "EAST Car": { getArray (_conf >> "EAST" >> "wheeled") };
     case "EAST Armor": { getArray (_conf >> "EAST" >> "armored") };

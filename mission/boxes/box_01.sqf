@@ -1,6 +1,6 @@
 //0 = [this] execVM "mission\boxes\box_01.sqf";
 
-_box = _this select 0;
+params ["_box"];
 
 if (!isServer) exitWith {};
 

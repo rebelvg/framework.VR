@@ -3,7 +3,7 @@
 
 //latest loadout example is in the fn_loadoutWest.sqf
 
-_loadoutArray = [];
+private _loadoutArray = [];
 
 //output of the function, do not remove or change
 _loadoutArray

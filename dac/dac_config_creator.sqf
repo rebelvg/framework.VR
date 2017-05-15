@@ -52,7 +52,7 @@ DAC_Zones			=	[];
 
 //=============================================================================================================|
 
-_scr = [] spawn (compile preprocessFile "\DAC_Source\Scripts\DAC_Start_Creator.sqf");
+private _scr = [] spawn (compile preprocessFile "\DAC_Source\Scripts\DAC_Start_Creator.sqf");
 waituntil {scriptdone _scr};
 sleep 0.1;
 waituntil {(DAC_Basic_Value > 0)};

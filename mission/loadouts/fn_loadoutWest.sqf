@@ -11,6 +11,11 @@ weaponsArray = [weaponArray1, handgunArray1];
 eqpArray = [classesArray, [fashionArray, weaponsArray]];
 */
 
+private ["_basicMedicine", "_advancedMedicine", "_medicine", "_basicMedicMedicine", "_advancedMedicMedicine", "_medicMedicine"];
+private ["_riflemanFashion", "_specFashion", "_leaderFashion", "_crewFashion", "_pilotFashion", "_medicMedicine"];
+private ["_riflemanPrimary", "_specPrimary", "_glRifleWeapon", "_leaderPrimary", "_mgWeapon", "_handgunWeapon", "_leaderSecond", "_atLauncherWeapon", "_atMissileWeapon", "_aaMissileWeapon", "_binoculars"];
+private ["_items", "_linkItems", "_boxItems", "_boxMedicine"];
+
 _basicMedicine = [["ACE_fieldDressing", 20], ["ACE_morphine", 10], ["ACE_epinephrine", 2], ["ACE_bloodIV_250", 1]];
 _advancedMedicine = [["ACE_fieldDressing", 10], ["ACE_quikclot", 10], ["ACE_morphine", 10], ["ACE_epinephrine", 2], ["ACE_tourniquet", 1], ["ACE_personalAidKit", 1], ["ACE_bloodIV_250", 1]];
 
@@ -21,8 +26,8 @@ _advancedMedicMedicine = [["ACE_fieldDressing", 20], ["ACE_quikclot", 20], ["ACE
 
 _medicMedicine = _basicMedicMedicine;
 
-_uniform = "U_B_CombatUniform_mcam";
-_vest = "V_BandollierB_rgr";
+private _uniform = "U_B_CombatUniform_mcam";
+private _vest = "V_BandollierB_rgr";
 _riflemanFashion = [_uniform, _vest, "H_HelmetB_sand", "B_Kitbag_cbr", ""];
 _specFashion = [_uniform, _vest, "H_HelmetB_sand", "B_Carryall_mcamo", ""];
 _leaderFashion = [_uniform, _vest, "H_MilCap_mcamo", "B_Kitbag_cbr", ""];
@@ -34,14 +39,14 @@ _specPrimary = ["arifle_MXC_F", [["30Rnd_65x39_caseless_mag", 15]], []];
 _glRifleWeapon = ["arifle_MX_GL_F", [["30Rnd_65x39_caseless_mag", 15], ["1Rnd_HE_Grenade_shell", 15]], ["optic_Aco"]];
 _leaderPrimary = _glRifleWeapon;
 
-_mgMag = "100Rnd_65x39_caseless_mag_Tracer";
+private _mgMag = "100Rnd_65x39_caseless_mag_Tracer";
 _mgWeapon = ["arifle_MX_SW_F", [[_mgMag, 15]], ["bipod_01_F_snd"]];
-_mgMags = ["", [[_mgMag, 7]], []];
+private _mgMags = ["", [[_mgMag, 7]], []];
 
 _handgunWeapon = ["hgun_P07_F", [["16Rnd_9x21_Mag", 1]], []];
 _leaderSecond = _handgunWeapon;
 
-_atLauncher = "launch_NLAW_F";
+private _atLauncher = "launch_NLAW_F";
 
 _atLauncherWeapon = [_atLauncher, [], []];
 _atMissileWeapon = ["launch_B_Titan_short_F", [["Titan_AT", 2]], []];
@@ -49,8 +54,8 @@ _aaMissileWeapon = ["launch_B_Titan_F", [["Titan_AA", 2]], []];
 
 _binoculars = ["ACE_VectorDay", [], []];
 
-_additionGrenade = "SmokeShellBlue";
-_fragGrenade = "HandGrenade";
+private _additionGrenade = "SmokeShellBlue";
+private _fragGrenade = "HandGrenade";
 
 _items = [["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_additionGrenade, 3], ["ACE_CableTie", 2]];
 _linkItems = ["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "NVGoggles"];
@@ -72,12 +77,12 @@ _boxItems = [
 
 _boxMedicine = _medicine apply {[_x select 0, (_x select 1) * 60]};
 
-_identity = [
+private _identity = [
     "", //face
     "" //voice
 ]; //identity, ai only
 
-_loadoutArray = [
+private _loadoutArray = [
     [
         [
             ["officer", "squad leader"],
