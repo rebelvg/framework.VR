@@ -46,17 +46,16 @@ Settings - mission\ai\fn_units.sqf
 Loadouts - mission\loadouts folder.
 
 #### Boxes
-Sides - WEST, EAST, RESISTANCE, CIVILIAN.
+Sides - **WEST**, **EAST**, **RESISTANCE**, **CIVILIAN**.
 - ```0 = [this, WEST] spawn mf_fnc_fillBox;```
 - ```0 = [this] spawn mf_fnc_fillBoxMedical;```
 
 ### Framework Functions
 
 #### Vehicle respawn
-Sides - WEST, EAST, RESISTANCE, CIVILIAN.
-```0 = [this, WEST] spawn mf_fnc_addVehicleRespawn;```
-or
-```0 = [this] spawn mf_fnc_addVehicleRespawn;```
+Sides - **WEST**, **EAST**, **RESISTANCE**, **CIVILIAN**.
+- ```0 = [this, WEST] spawn mf_fnc_addVehicleRespawn;```
+- ```0 = [this] spawn mf_fnc_addVehicleRespawn;```
 
 #### Music radio for an object
 ```0 = [this] call mf_fnc_addMusicRadio;```
@@ -64,9 +63,8 @@ or
 ### Spectator Functions
 
 #### Spectator Revive
-```[getMarkerPos "base_marker"] spawn murshun_spectator_reviveAllPlayers_fnc;```
-or
-```[] spawn murshun_spectator_reviveAllPlayers_fnc;```
+- ```[getMarkerPos "base_marker"] spawn murshun_spectator_reviveAllPlayers_fnc;```
+- ```[] spawn murshun_spectator_reviveAllPlayers_fnc;```
 
 ## Examples
 
