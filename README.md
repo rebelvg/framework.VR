@@ -15,14 +15,9 @@ Arma 3 framework (template mission) for KLPQ operations.
 ### Optionals
 - ACRE2.
 
-## Usage
+## Settings ```mission\fn_settings.sqf```
 
-### Settings
-
-#### Variables
-- Settings - ```mission\fn_settings.sqf```
-
-#### KLPQ Framework
+### KLPQ Framework
 - ```klpq_framework_enable``` - bool, enables framework.
 - ```mf_customEnemyLoadouts``` - bool, custom loadouts for non-playable units.
 - ```mf_onlyPilotsCanFly``` - bool, forbids taking off by non-pilots.
@@ -30,39 +25,35 @@ Arma 3 framework (template mission) for KLPQ operations.
 - ```mf_forceVirtualArsenal``` - bool, makes virtual arsenal available on the ammo box in multiplayer.
 - ```mf_addParadropOption``` - bool, adds paradrop to friendlies option to the ammo box.
 
-#### KLPQ Menu
+### KLPQ Menu
 - ```murshun_spectator_enable``` - bool, enables spectator.
 
-#### Mods
+### Mods
 - https://github.com/rebelvg/murshun_easywayout
 - https://github.com/rebelvg/klpq_musicRadio
 
-#### AI Spawn
-- Settings - ```mission\ai\fn_units.sqf```
+## AI ```mission\ai\fn_units.sqf```
 
-### Loadouts
+## Loadouts ```mission\loadouts```
 
-#### Units
-- Loadouts - ```mission\loadouts``` folder.
+## Framework Functions
 
-#### Boxes
+### Boxes
 Sides - **WEST**, **EAST**, **RESISTANCE**, **CIVILIAN**.
 - ```0 = [this, WEST] spawn mf_fnc_fillBox;```
 - ```0 = [this] spawn mf_fnc_fillBoxMedical;```
 
-### Framework Functions
-
-#### Vehicle respawn
+### Vehicle respawn
 Sides - **WEST**, **EAST**, **RESISTANCE**, **CIVILIAN**.
 - ```0 = [this, WEST] spawn mf_fnc_addVehicleRespawn;```
 - ```0 = [this] spawn mf_fnc_addVehicleRespawn;```
 
-#### Music radio for an object
+### Music radio for an object
 - ```0 = [this] call mf_fnc_addMusicRadio;```
 
-### Spectator Functions
+## Spectator Functions
 
-#### Spectator Revive
+### Spectator Revive
 - ```[getMarkerPos "base_marker"] spawn murshun_spectator_reviveAllPlayers_fnc;```
 - ```[] spawn murshun_spectator_reviveAllPlayers_fnc;```
 
