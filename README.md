@@ -43,13 +43,13 @@ Sides - **WEST**, **EAST**, **RESISTANCE**, **CIVILIAN**.
 - ```0 = [this, WEST] spawn mf_fnc_fillBox;```
 - ```0 = [this] spawn mf_fnc_fillBoxMedical;```
 
-### Vehicle respawn
+### Vehicle Respawn
 Sides - **WEST**, **EAST**, **RESISTANCE**, **CIVILIAN**.
 - ```0 = [this, WEST] spawn mf_fnc_addVehicleRespawn;```
 - ```0 = [this] spawn mf_fnc_addVehicleRespawn;```
 
-### Music radio for an object
-- ```0 = [this] call mf_fnc_addMusicRadio;```
+### Music Radio
+- ```0 = [this] call mf_fnc_addMusicRadio;``` - adds music radio to an object.
 
 ## Spectator Functions
 
