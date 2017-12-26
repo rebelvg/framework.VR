@@ -47,10 +47,8 @@ Loadouts - mission\loadouts folder.
 
 #### Boxes
 Sides - WEST, EAST, RESISTANCE, CIVILIAN.
-```
-0 = [this, WEST] spawn mf_fnc_fillBox;
-0 = [this] spawn mf_fnc_fillBoxMedical;
-```
+- ```0 = [this, WEST] spawn mf_fnc_fillBox;```
+- ```0 = [this] spawn mf_fnc_fillBoxMedical;```
 
 ### Framework Functions
 
