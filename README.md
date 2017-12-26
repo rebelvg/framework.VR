@@ -20,7 +20,7 @@ Arma 3 framework (template mission) for KLPQ operations.
 ### Settings
 
 #### Variables
-Settings - mission\fn_settings.sqf
+- Settings - ```mission\fn_settings.sqf```
 
 #### KLPQ Framework
 - ```klpq_framework_enable``` - bool, enables framework.
@@ -38,12 +38,12 @@ Settings - mission\fn_settings.sqf
 - https://github.com/rebelvg/klpq_musicRadio
 
 #### AI Spawn
-Settings - mission\ai\fn_units.sqf
+- Settings - ```mission\ai\fn_units.sqf```
 
 ### Loadouts
 
 #### Units
-Loadouts - mission\loadouts folder.
+- Loadouts - ```mission\loadouts``` folder.
 
 #### Boxes
 Sides - **WEST**, **EAST**, **RESISTANCE**, **CIVILIAN**.
@@ -58,7 +58,7 @@ Sides - **WEST**, **EAST**, **RESISTANCE**, **CIVILIAN**.
 - ```0 = [this] spawn mf_fnc_addVehicleRespawn;```
 
 #### Music radio for an object
-```0 = [this] call mf_fnc_addMusicRadio;```
+- ```0 = [this] call mf_fnc_addMusicRadio;```
 
 ### Spectator Functions
 
@@ -67,9 +67,8 @@ Sides - **WEST**, **EAST**, **RESISTANCE**, **CIVILIAN**.
 - ```[] spawn murshun_spectator_reviveAllPlayers_fnc;```
 
 ## Examples
-
-- Tasks - examples\tasks.sqf
-- Boxes - mission\boxes folder
+- Tasks - ```examples\tasks.sqf```
+- Boxes - ```mission\boxes``` folder
 
 ## Details
 
