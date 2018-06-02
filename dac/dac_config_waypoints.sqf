@@ -112,7 +112,8 @@ if((_DAC_WP_Typ < 5) && (_DAC_WP_Typ >= 0)) then
         Default {
             if(DAC_Basic_Value != 5) then
             {
-                DAC_Basic_Value = 5;publicvariable "DAC_Basic_Value";
+                DAC_Basic_Value = 5;
+                publicVariable "DAC_Basic_Value";
                 hintc "Error: DAC_Config_Waypoints > No valid config number";
             };
             if(true) exitwith {};

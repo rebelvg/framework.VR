@@ -55,7 +55,8 @@ case 6:
     {
         if(DAC_Basic_Value != 5) then
         {
-            DAC_Basic_Value = 5;publicvariable "DAC_Basic_Value";
+            DAC_Basic_Value = 5;
+            publicVariable "DAC_Basic_Value";
             hintc "Error: DAC_Config_Weapons > No valid config number";
         };
         if(true) exitwith {};

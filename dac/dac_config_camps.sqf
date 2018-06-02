@@ -57,7 +57,8 @@ case 2:
     Default {
         if(DAC_Basic_Value != 5) then
         {
-            DAC_Basic_Value = 5;publicvariable "DAC_Basic_Value";
+            DAC_Basic_Value = 5;
+            publicVariable "DAC_Basic_Value";
             hintc "Error: DAC_Config_Camps > No valid config number";
         };
         if(true) exitwith {};
