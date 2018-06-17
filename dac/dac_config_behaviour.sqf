@@ -22,7 +22,7 @@ switch (_this select 0) do
 case 0:
     {
         //"aimingAccuracy", "aimingShake", "aimingSpeed", "endurance", "spotDistance", "spotTime", "courage", "reloadSpeed", "commanding", "general"
-        _setSkill   = getArray (_conf >> "NORMAL" >> "Infantry" >> "skill");
+        _setSkill   = getArray (_conf >> "LOW" >> "Infantry" >> "skill");
         _setCombat  = ["yellow"];
         _setBehav   = ["safe","aware"];
         _setSpeed   = ["limited","normal","full"];
@@ -42,7 +42,7 @@ case 0:
     //vehicles
 case 4:
     {
-        _setSkill   = getArray (_conf >> "NORMAL" >> "Vehicles" >> "skill");
+        _setSkill   = getArray (_conf >> "LOW" >> "Vehicles" >> "skill");
         _setCombat  = ["yellow"];
         _setBehav   = ["safe"];
         _setSpeed   = ["limited","normal"];
