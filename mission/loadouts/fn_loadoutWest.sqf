@@ -176,7 +176,7 @@ private _loadoutArray = [
             []
         ],
         [
-            ["officer", "squad leader", "pilot", "crewman"],
+            ["officer", "squad leader", "team leader", "pilot", "crewman"],
             [["ACRE_PRC152", 1]],
             []
         ],

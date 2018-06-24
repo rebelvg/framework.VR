@@ -1,7 +1,7 @@
 # KLPQ Operations Framework
 
 ## Overview
-Arma 3 framework (template mission) for KLPQ operations.
+Arma 3 Framework (template mission) for KLPQ operations.
 
 ## Dependencies
 
