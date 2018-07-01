@@ -28,7 +28,7 @@ class KF_AI {
         };
     };
 
-    class Behaviour {
+    class Behavior {
         class LOW {
             class Infantry {
                 //"aimingAccuracy", "aimingShake", "aimingSpeed", "endurance", "spotDistance", "spotTime", "courage", "reloadSpeed", "commanding", "general"
