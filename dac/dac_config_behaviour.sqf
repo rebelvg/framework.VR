@@ -13,7 +13,7 @@ private [
 "_setFleeing","_setHeliVal","_setPause","_setBldgBeh","_setSupport","_setJoin","_setEmpVeh","_setSupTime","_setHidTime"
 ];
 
-private _conf = missionConfigFile >> "KF_AI" >> "Behaviour";
+private _conf = missionConfigFile >> "KF_AI" >> "Behavior";
 
 switch (_this select 0) do
 {
