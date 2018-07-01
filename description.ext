@@ -63,10 +63,9 @@ class CfgFunctions {
         };
 
         class mission {
-            class frameworkSettings {
-                preInit = 1;
-                file = "mission\fn_settings.sqf";
-            };
+            file = "mission";
+
+            class settings {preInit = 1;};
         };
     };
 };
