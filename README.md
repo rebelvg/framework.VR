@@ -15,7 +15,8 @@ Arma 3 Framework (Template Mission) for KLPQ operations.
 ### Optionals
 - ACRE2.
 
-## Settings `mission\fn_settings.sqf`
+## Settings
+https://github.com/rebelvg/framework.VR/blob/master/mission/fn_settings.sqf
 
 ### KLPQ Framework
 - `klpq_framework_enable` - bool, enables framework.
@@ -33,7 +34,7 @@ Arma 3 Framework (Template Mission) for KLPQ operations.
 - https://github.com/rebelvg/klpq_musicRadio
 
 ## AI
-- https://github.com/rebelvg/framework.VR/wiki/AI-Functions
+https://github.com/rebelvg/framework.VR/wiki/AI-Functions
 
 ## Loadouts `mission\loadouts`
 
