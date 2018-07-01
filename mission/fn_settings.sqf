@@ -8,7 +8,7 @@ mf_customEnemyLoadouts = false;
 mf_onlyPilotsCanFly = false;
 mf_forceSideNVGs = [];
 mf_forceVirtualArsenal = false;
-mf_addParadropOption = false;
+mf_addParadropOption = true;
 
 //menu
 murshun_spectator_enable = true;
