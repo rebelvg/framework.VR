@@ -1,7 +1,7 @@
 # KLPQ Operations Framework
 
 ## Overview
-Arma 3 Framework (template mission) for KLPQ operations.
+Arma 3 Framework (Template Mission) for KLPQ operations.
 
 ## Dependencies
 
@@ -15,56 +15,56 @@ Arma 3 Framework (template mission) for KLPQ operations.
 ### Optionals
 - ACRE2.
 
-## Settings ```mission\fn_settings.sqf```
+## Settings `mission\fn_settings.sqf`
 
 ### KLPQ Framework
-- ```klpq_framework_enable``` - bool, enables framework.
-- ```mf_customEnemyLoadouts``` - bool, custom loadouts for non-playable units.
-- ```mf_onlyPilotsCanFly``` - bool, forbids taking off by non-pilots.
-- ```mf_forceSideNVGs``` - array, forces NVGs for selected sides (WEST, EAST, RESISTANCE, CIVILIAN), non-playable units only.
-- ```mf_forceVirtualArsenal``` - bool, makes virtual arsenal available on the ammo box in multiplayer.
-- ```mf_addParadropOption``` - bool, adds paradrop to friendlies option to the ammo box.
+- `klpq_framework_enable` - bool, enables framework.
+- `mf_customEnemyLoadouts` - bool, custom loadouts for non-playable units.
+- `mf_onlyPilotsCanFly` - bool, forbids taking off by non-pilots.
+- `mf_forceSideNVGs` - array, forces NVGs for selected sides (WEST, EAST, RESISTANCE, CIVILIAN), non-playable units only.
+- `mf_forceVirtualArsenal` - bool, makes virtual arsenal available on the ammo box in multiplayer.
+- `mf_addParadropOption` - bool, adds paradrop to friendlies option to the ammo box.
 
 ### KLPQ Menu
-- ```murshun_spectator_enable``` - bool, enables spectator.
+- `murshun_spectator_enable` - bool, enables spectator.
 
 ### Mods
 - https://github.com/rebelvg/murshun_easywayout
 - https://github.com/rebelvg/klpq_musicRadio
 
-## AI ```mission\ai\fn_units.sqf```
+## AI `mission\ai\fn_units.sqf`
 
-## Loadouts ```mission\loadouts```
+## Loadouts `mission\loadouts`
 
 ## Framework Functions
 
 ### Boxes
 Sides - **WEST**, **EAST**, **RESISTANCE**, **CIVILIAN**.
-- ```0 = [this, WEST] spawn mf_fnc_fillBox;```
-- ```0 = [this] spawn mf_fnc_fillBoxMedical;```
+- `0 = [this, WEST] spawn mf_fnc_fillBox;`
+- `0 = [this] spawn mf_fnc_fillBoxMedical;`
 
 ### Vehicle Respawn
 Sides - **WEST**, **EAST**, **RESISTANCE**, **CIVILIAN**.
-- ```0 = [this, WEST] spawn mf_fnc_addVehicleRespawn;```
-- ```0 = [this] spawn mf_fnc_addVehicleRespawn;```
+- `0 = [this, WEST] spawn mf_fnc_addVehicleRespawn;`
+- `0 = [this] spawn mf_fnc_addVehicleRespawn;`
 
 ### Music Radio
-- ```0 = [this] call mf_fnc_addMusicRadio;``` - adds music radio to an object.
+- `0 = [this] call mf_fnc_addMusicRadio;` - adds music radio to an object.
 
 ## Spectator Functions
 
 ### Spectator Revive
-- ```[getMarkerPos "base_marker"] spawn murshun_spectator_reviveAllPlayers_fnc;```
-- ```[] spawn murshun_spectator_reviveAllPlayers_fnc;```
+- `[getMarkerPos "base_marker"] spawn murshun_spectator_reviveAllPlayers_fnc;`
+- `[] spawn murshun_spectator_reviveAllPlayers_fnc;`
 
 ## Examples
-- Tasks - ```examples\tasks.sqf```
-- Boxes - ```mission\boxes``` folder
+- Tasks - `examples\tasks.sqf`
+- Boxes - `mission\boxes` folder
 
 ## Details
 
 ### Variables
-- ```klpq_framework_version``` - string, contains framework semver version number.
+- `klpq_framework_version` - string, contains framework semver version number.
 
 ### Editor/Singleplayer Settings
 - Loadout boxes have virtual arsenal added.
