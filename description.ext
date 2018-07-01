@@ -24,12 +24,12 @@ overviewPicture = "klpq_framework\logo.paa";
 #include "kf_ai.hpp"
 
 class CfgDebriefing {
-    class Completed1 {
+    class KF_Completed {
         title = "Mission Completed!";
         subtitle = "Good Job!";
         description = "";
     };
-    class Failed1 {
+    class KF_Failed {
         title = "Mission Failed!";
         subtitle = "Come On, Guys.";
         description = "";
@@ -66,10 +66,6 @@ class CfgFunctions {
             class frameworkSettings {
                 preInit = 1;
                 file = "mission\fn_settings.sqf";
-            };
-            class spawnerSettings {
-                preInit = 1;
-                file = "mission\ai\fn_units.sqf";
             };
         };
     };

@@ -149,8 +149,8 @@ _action = ["mission_itemAction", "Mission Action", "", {
 
 //call mission completed
 
-["Completed1", true, true, true] remoteExec ["BIS_fnc_endMission"];
+["KF_Completed", true, true, true] remoteExec ["BIS_fnc_endMission"];
 
 //call mission failed
 
-["Failed1", false, true, true] remoteExec ["BIS_fnc_endMission"];
+["KF_Failed", false, true, true] remoteExec ["BIS_fnc_endMission"];
