@@ -32,7 +32,8 @@ Arma 3 Framework (Template Mission) for KLPQ operations.
 - https://github.com/rebelvg/murshun_easywayout
 - https://github.com/rebelvg/klpq_musicRadio
 
-## AI `mission\ai\fn_units.sqf`
+## AI
+- https://github.com/rebelvg/framework.VR/wiki/AI-Functions
 
 ## Loadouts `mission\loadouts`
 
