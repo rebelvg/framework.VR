@@ -1,16 +1,6 @@
 //place all mission related stuff here
 //do not overwrite this file when copying framework from mission to mission
 
-/*
-classesArray = ["class1", "class2", "class3"];
-fashionArray = ["uniform", "vest", "headgear", "backpack", "goggles"];
-weaponArray1 = ["rifle1", [["mag1", number], ["mag2", number]], ["device1", "device2"]];
-weaponArray2 = ["rifle2", [["mag1", number], ["mag2", number]], ["device1", "device2"]];
-handgunArray1 = ["handgun", [["mag", number]], ["device"]];
-weaponsArray = [weaponArray1, handgunArray1];
-eqpArray = [classesArray, [fashionArray, weaponsArray]];
-*/
-
 private ["_basicMedicine", "_advancedMedicine", "_medicine", "_basicMedicMedicine", "_advancedMedicMedicine", "_medicMedicine"];
 private ["_riflemanFashion", "_specFashion", "_leaderFashion", "_crewFashion", "_pilotFashion", "_medicMedicine"];
 private ["_riflemanPrimary", "_specPrimary", "_glRifleWeapon", "_leaderPrimary", "_mgWeapon", "_handgunWeapon", "_leaderSecond", "_atLauncherWeapon", "_atMissileWeapon", "_aaMissileWeapon", "_binoculars"];

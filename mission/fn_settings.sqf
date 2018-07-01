@@ -1,6 +1,5 @@
 //this is a preInit settings file, do not add any code here, only change the variables available
 //do not remove the file
-//more info is in the readme
 
 //framework
 klpq_framework_enable = true;
