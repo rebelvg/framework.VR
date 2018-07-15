@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=129;
+	toggles=1;
 	class ItemIDProvider
 	{
 		nextID=1374;
@@ -23,7 +23,7 @@ class EditorData
 		pos[]={608.88098,30,533.77197};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -544,7 +544,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={505,5,570};
+				position[]={515,5,590};
 			};
 			id=21;
 			type="DAC_Source_Extern";
