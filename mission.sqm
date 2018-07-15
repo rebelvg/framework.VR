@@ -23,7 +23,7 @@ class EditorData
 		pos[]={608.88098,30,533.77197};
 		dir[]={0,-0.70710683,0.70710683};
 		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		aside[]={0.99999994,0,0};
 	};
 };
 binarizationWanted=0;
@@ -1392,7 +1392,6 @@ class Mission
 						skill=0.60000002;
 						rank="CAPTAIN";
 						init="call{this setVariable [""mf_groupChannel"", [7, 5]];}";
-						name="b_1";
 						isPlayer=1;
 						isPlayable=1;
 					};
@@ -1492,7 +1491,6 @@ class Mission
 					{
 						skill=0.60000002;
 						init="call{this setVariable [""mf_groupChannel"", [7, 5]];}";
-						name="b_2";
 						isPlayable=1;
 					};
 					id=71;
@@ -1553,7 +1551,6 @@ class Mission
 					{
 						skill=0.60000002;
 						init="call{this setVariable [""mf_groupChannel"", [7, 5]];}";
-						name="b_3";
 						isPlayable=1;
 					};
 					id=924;
@@ -1689,7 +1686,6 @@ class Mission
 					{
 						rank="CAPTAIN";
 						init="this setVariable [""mf_groupChannel"", [7, 5]];";
-						name="o_1";
 						isPlayable=1;
 					};
 					id=1247;
@@ -1787,7 +1783,6 @@ class Mission
 					class Attributes
 					{
 						init="this setVariable [""mf_groupChannel"", [7, 5]];";
-						name="o_2";
 						isPlayable=1;
 					};
 					id=306;
@@ -1847,7 +1842,6 @@ class Mission
 					class Attributes
 					{
 						init="this setVariable [""mf_groupChannel"", [7, 5]];";
-						name="o_3";
 						isPlayable=1;
 					};
 					id=927;
@@ -1982,7 +1976,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [8, 5]];}";
-						name="b_4";
 						isPlayable=1;
 					};
 					id=1169;
@@ -2099,7 +2092,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [8, 5]];}";
-						name="b_5";
 						isPlayable=1;
 					};
 					id=1170;
@@ -2216,7 +2208,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [8, 5]];}";
-						name="b_6";
 						isPlayable=1;
 					};
 					id=1171;
@@ -2370,7 +2361,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [9, 5]];}";
-						name="b_7";
 						isPlayable=1;
 					};
 					id=1173;
@@ -2487,7 +2477,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [9, 5]];}";
-						name="b_8";
 						isPlayable=1;
 					};
 					id=1174;
@@ -2604,7 +2593,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [9, 5]];}";
-						name="b_9";
 						isPlayable=1;
 					};
 					id=1175;
@@ -2758,7 +2746,6 @@ class Mission
 					class Attributes
 					{
 						init="this setVariable [""mf_groupChannel"", [8, 5]];";
-						name="o_4";
 						isPlayable=1;
 					};
 					id=1177;
@@ -2875,7 +2862,6 @@ class Mission
 					class Attributes
 					{
 						init="this setVariable [""mf_groupChannel"", [8, 5]];";
-						name="o_5";
 						isPlayable=1;
 					};
 					id=1178;
@@ -2992,7 +2978,6 @@ class Mission
 					class Attributes
 					{
 						init="this setVariable [""mf_groupChannel"", [8, 5]];";
-						name="o_6";
 						isPlayable=1;
 					};
 					id=1179;
@@ -3146,7 +3131,6 @@ class Mission
 					class Attributes
 					{
 						init="this setVariable [""mf_groupChannel"", [9, 5]];";
-						name="o_7";
 						isPlayable=1;
 					};
 					id=1181;
@@ -3263,7 +3247,6 @@ class Mission
 					class Attributes
 					{
 						init="this setVariable [""mf_groupChannel"", [9, 5]];";
-						name="o_8";
 						isPlayable=1;
 					};
 					id=1182;
@@ -3380,7 +3363,6 @@ class Mission
 					class Attributes
 					{
 						init="this setVariable [""mf_groupChannel"", [9, 5]];";
-						name="o_9";
 						isPlayable=1;
 					};
 					id=1183;
@@ -3544,7 +3526,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="b_10";
 						isPlayable=1;
 					};
 					id=1204;
@@ -3604,7 +3585,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="b_11";
 						isPlayable=1;
 					};
 					id=1221;
@@ -3664,7 +3644,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="b_12";
 						isPlayable=1;
 					};
 					id=1222;
@@ -3724,7 +3703,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="b_13";
 						isPlayable=1;
 					};
 					id=1223;
@@ -3784,7 +3762,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="b_14";
 						isPlayable=1;
 					};
 					id=1224;
@@ -3844,7 +3821,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="b_15";
 						isPlayable=1;
 					};
 					id=1225;
@@ -3941,7 +3917,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="b_16";
 						isPlayable=1;
 					};
 					id=1227;
@@ -4001,7 +3976,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="b_17";
 						isPlayable=1;
 					};
 					id=1228;
@@ -4061,7 +4035,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="b_18";
 						isPlayable=1;
 					};
 					id=1229;
@@ -4121,7 +4094,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="b_19";
 						isPlayable=1;
 					};
 					id=1230;
@@ -4181,7 +4153,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="b_20";
 						isPlayable=1;
 					};
 					id=1231;
@@ -4241,7 +4212,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="b_21";
 						isPlayable=1;
 					};
 					id=1232;
@@ -4338,7 +4308,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="b_22";
 						isPlayable=1;
 					};
 					id=1234;
@@ -4398,7 +4367,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="b_23";
 						isPlayable=1;
 					};
 					id=1235;
@@ -4458,7 +4426,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="b_24";
 						isPlayable=1;
 					};
 					id=1240;
@@ -4518,7 +4485,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="b_25";
 						isPlayable=1;
 					};
 					id=1237;
@@ -4578,7 +4544,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="b_26";
 						isPlayable=1;
 					};
 					id=1238;
@@ -4638,7 +4603,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="b_27";
 						isPlayable=1;
 					};
 					id=1239;
@@ -4735,7 +4699,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="o_10";
 						isPlayable=1;
 					};
 					id=1251;
@@ -4795,7 +4758,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="o_11";
 						isPlayable=1;
 					};
 					id=1272;
@@ -4855,7 +4817,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="o_12";
 						isPlayable=1;
 					};
 					id=1273;
@@ -4915,7 +4876,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="o_13";
 						isPlayable=1;
 					};
 					id=1274;
@@ -4975,7 +4935,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="o_14";
 						isPlayable=1;
 					};
 					id=1275;
@@ -5035,7 +4994,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="o_15";
 						isPlayable=1;
 					};
 					id=1276;
@@ -5132,7 +5090,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="o_16";
 						isPlayable=1;
 					};
 					id=1278;
@@ -5192,7 +5149,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="o_17";
 						isPlayable=1;
 					};
 					id=1279;
@@ -5252,7 +5208,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="o_18";
 						isPlayable=1;
 					};
 					id=1280;
@@ -5312,7 +5267,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="o_19";
 						isPlayable=1;
 					};
 					id=1281;
@@ -5372,7 +5326,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="o_20";
 						isPlayable=1;
 					};
 					id=1282;
@@ -5432,7 +5385,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="o_21";
 						isPlayable=1;
 					};
 					id=1283;
@@ -5529,7 +5481,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="o_22";
 						isPlayable=1;
 					};
 					id=1285;
@@ -5589,7 +5540,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="o_23";
 						isPlayable=1;
 					};
 					id=1286;
@@ -5649,7 +5599,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="o_24";
 						isPlayable=1;
 					};
 					id=1296;
@@ -5709,7 +5658,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="o_25";
 						isPlayable=1;
 					};
 					id=1288;
@@ -5769,7 +5717,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="o_26";
 						isPlayable=1;
 					};
 					id=1289;
@@ -5829,7 +5776,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="o_27";
 						isPlayable=1;
 					};
 					id=1290;
@@ -5927,7 +5873,6 @@ class Mission
 					{
 						rank="CAPTAIN";
 						init="call{this setVariable [""mf_groupChannel"", [7, 5]];}";
-						name="i_1";
 						isPlayable=1;
 					};
 					id=1298;
@@ -5987,7 +5932,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [7, 5]];}";
-						name="i_2";
 						isPlayable=1;
 					};
 					id=1315;
@@ -6047,7 +5991,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [7, 5]];}";
-						name="i_3";
 						isPlayable=1;
 					};
 					id=1316;
@@ -6144,7 +6087,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [8, 5]];}";
-						name="i_4";
 						isPlayable=1;
 					};
 					id=1317;
@@ -6223,7 +6165,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [8, 5]];}";
-						name="i_5";
 						isPlayable=1;
 					};
 					id=1318;
@@ -6302,7 +6243,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [8, 5]];}";
-						name="i_6";
 						isPlayable=1;
 					};
 					id=1319;
@@ -6418,7 +6358,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [9, 5]];}";
-						name="i_7";
 						isPlayable=1;
 					};
 					id=1320;
@@ -6497,7 +6436,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [9, 5]];}";
-						name="i_8";
 						isPlayable=1;
 					};
 					id=1321;
@@ -6576,7 +6514,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [9, 5]];}";
-						name="i_9";
 						isPlayable=1;
 					};
 					id=1322;
@@ -6692,7 +6629,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="i_10";
 						isPlayable=1;
 					};
 					id=1324;
@@ -6752,7 +6688,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="i_11";
 						isPlayable=1;
 					};
 					id=1345;
@@ -6812,7 +6747,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="i_12";
 						isPlayable=1;
 					};
 					id=1346;
@@ -6872,7 +6806,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="i_13";
 						isPlayable=1;
 					};
 					id=1347;
@@ -6932,7 +6865,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="i_14";
 						isPlayable=1;
 					};
 					id=1348;
@@ -6992,7 +6924,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [1, 1]];}";
-						name="i_15";
 						isPlayable=1;
 					};
 					id=1349;
@@ -7089,7 +7020,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="i_16";
 						isPlayable=1;
 					};
 					id=1351;
@@ -7149,7 +7079,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="i_17";
 						isPlayable=1;
 					};
 					id=1352;
@@ -7209,7 +7138,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="i_18";
 						isPlayable=1;
 					};
 					id=1353;
@@ -7269,7 +7197,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="i_19";
 						isPlayable=1;
 					};
 					id=1354;
@@ -7329,7 +7256,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="i_20";
 						isPlayable=1;
 					};
 					id=1355;
@@ -7389,7 +7315,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [2, 2]];}";
-						name="i_21";
 						isPlayable=1;
 					};
 					id=1356;
@@ -7486,7 +7411,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="i_22";
 						isPlayable=1;
 					};
 					id=1358;
@@ -7546,7 +7470,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="i_23";
 						isPlayable=1;
 					};
 					id=1359;
@@ -7606,7 +7529,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="i_24";
 						isPlayable=1;
 					};
 					id=1369;
@@ -7666,7 +7588,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="i_25";
 						isPlayable=1;
 					};
 					id=1361;
@@ -7726,7 +7647,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="i_26";
 						isPlayable=1;
 					};
 					id=1362;
@@ -7786,7 +7706,6 @@ class Mission
 					class Attributes
 					{
 						init="call{this setVariable [""mf_groupChannel"", [3, 3]];}";
-						name="i_27";
 						isPlayable=1;
 					};
 					id=1363;
