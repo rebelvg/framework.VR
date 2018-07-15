@@ -8,7 +8,7 @@
 //    silola@freenet.de     //
 //////////////////////////////
 
-scalar = "any";DAC_Init_Camps = 0;
+DAC_Init_Camps = 0;
 
 waituntil{time > 0.3};
 
