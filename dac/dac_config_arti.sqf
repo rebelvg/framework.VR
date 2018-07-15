@@ -72,7 +72,7 @@ case 3:
         {
             DAC_Basic_Value = 5;
             publicVariable "DAC_Basic_Value";
-            hintc "Error: DAC_Config_Camps > No valid config number";
+            hintc "Error: DAC_Config_Arti > No valid config number";
         };
         if(true) exitwith {};
     };
