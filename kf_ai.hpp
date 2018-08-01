@@ -10,6 +10,7 @@ class KF_AI {
             air[] = {"O_Heli_Light_02_F"};
             naval[] = {"O_Boat_Transport_01_F"};
         };
+
         class WEST {
             infantry[] = {"B_Soldier_SL_F", "B_medic_F", "B_engineer_F", "B_soldier_TL_F", "B_soldier_AT_F", "B_soldier_AA_F", "B_soldier_AR_F", "B_soldier_LAT_F", "B_soldier_GL_F", "B_soldier_M_F", "B_Soldier_F"};
             crew[] = {"B_crew_F", "B_Helipilot_F"};
@@ -18,6 +19,7 @@ class KF_AI {
             air[] = {"B_Heli_Transport_01_F"};
             naval[] = {"B_Boat_Transport_01_F"};
         };
+
         class GUER {
             infantry[] = {"I_Soldier_SL_F", "I_medic_F", "I_engineer_F", "I_soldier_TL_F", "I_Soldier_AT_F", "I_soldier_AA_F", "I_soldier_AR_F", "I_soldier_LAT_F", "I_soldier_GL_F", "I_soldier_M_F", "I_Soldier_F"};
             crew[] = {"I_crew_F", "I_Helipilot_F"};
@@ -29,23 +31,25 @@ class KF_AI {
     };
 
     class Behavior {
-        class LOW {
-            class Infantry {
-                //"aimingAccuracy", "aimingShake", "aimingSpeed", "endurance", "spotDistance", "spotTime", "courage", "reloadSpeed", "commanding", "general"
-                skill[] = {{0.2, 0.4}, {0.2, 0.4}, {0.02, 0.04}, {0.4, 0.6}, {0.2, 0.4}, {0.2, 0.4}, {0.4, 0.6}, {0.4, 0.6}, {0.4, 0.6}, {0.2, 0.4}};
-            };
-            class Vehicles {
-                skill[] = {{0.1, 0.3}, {0.1, 0.3}, {0.01, 0.03}, {0.3, 0.5}, {0.1, 0.3}, {0.1, 0.3}, {0.3, 0.5}, {0.3, 0.5}, {0.3, 0.5}, {0.1, 0.3}};
-            };
-        };
         class NORMAL {
             class Infantry {
+                //"aimingAccuracy", "aimingShake", "aimingSpeed", "endurance", "spotDistance", "spotTime", "courage", "reloadSpeed", "commanding", "general"
                 skill[] = {{0.3, 0.5}, {0.3, 0.5}, {0.03, 0.05}, {0.5, 0.7}, {0.3, 0.5}, {0.3, 0.5}, {0.5, 0.7}, {0.5, 0.7}, {0.5, 0.7}, {0.3, 0.5}};
             };
             class Vehicles {
                 skill[] = {{0.2, 0.4}, {0.2, 0.4}, {0.02, 0.04}, {0.4, 0.6}, {0.2, 0.4}, {0.2, 0.4}, {0.4, 0.6}, {0.4, 0.6}, {0.4, 0.6}, {0.2, 0.4}};
             };
         };
+
+        class LOW {
+            class Infantry {
+                skill[] = {{0.2, 0.4}, {0.2, 0.4}, {0.02, 0.04}, {0.4, 0.6}, {0.2, 0.4}, {0.2, 0.4}, {0.4, 0.6}, {0.4, 0.6}, {0.4, 0.6}, {0.2, 0.4}};
+            };
+            class Vehicles {
+                skill[] = {{0.1, 0.3}, {0.1, 0.3}, {0.01, 0.03}, {0.3, 0.5}, {0.1, 0.3}, {0.1, 0.3}, {0.3, 0.5}, {0.3, 0.5}, {0.3, 0.5}, {0.1, 0.3}};
+            };
+        };
+
         class HIGH {
             class Infantry {
                 skill[] = {{0.4, 0.6}, {0.4, 0.6}, {0.04, 0.06}, {0.6, 0.8}, {0.4, 0.6}, {0.4, 0.6}, {0.6, 0.8}, {0.6, 0.8}, {0.6, 0.8}, {0.4, 0.6}};
@@ -64,6 +68,7 @@ class KLPQ_MyDAC: KF_AI {
         garbageCollectionTime = 180;
         garbageCollectionRadius = 150;
     };
+
     class Behavior {
         class NORMAL {
             class Infantry {
@@ -74,6 +79,7 @@ class KLPQ_MyDAC: KF_AI {
                 speed[] = {"LIMITED", "NORMAL", "FULL"};
                 formation[] = {"LINE", "VEE", "COLUMN", "WEDGE", "STAG COLUMN", "ECH LEFT", "ECH RIGHT", "FILE", "DIAMOND"};
             };
+
             class Vehicles {
                 class Wheeled {
                     skill[] = {{0.2, 0.4}, {0.2, 0.4}, {0.02, 0.04}, {0.4, 0.6}, {0.2, 0.4}, {0.2, 0.4}, {0.4, 0.6}, {0.4, 0.6}, {0.4, 0.6}, {0.2, 0.4}};
@@ -90,6 +96,30 @@ class KLPQ_MyDAC: KF_AI {
                 };
                 class Naval: Wheeled {
                     speed[] = {"LIMITED", "NORMAL"};
+                };
+            };
+        };
+
+        class LOW: NORMAL {
+            class Infantry: Infantry {
+                skill[] = {{0.2, 0.4}, {0.2, 0.4}, {0.02, 0.04}, {0.4, 0.6}, {0.2, 0.4}, {0.2, 0.4}, {0.4, 0.6}, {0.4, 0.6}, {0.4, 0.6}, {0.2, 0.4}};
+            };
+
+            class Vehicles: Vehicles {
+                class Wheeled: Wheeled {
+                    skill[] = {{0.1, 0.3}, {0.1, 0.3}, {0.01, 0.03}, {0.3, 0.5}, {0.1, 0.3}, {0.1, 0.3}, {0.3, 0.5}, {0.3, 0.5}, {0.3, 0.5}, {0.1, 0.3}};
+                };
+            };
+        };
+
+        class HIGH: NORMAL {
+            class Infantry: Infantry {
+                skill[] = {{0.4, 0.6}, {0.4, 0.6}, {0.04, 0.06}, {0.6, 0.8}, {0.4, 0.6}, {0.4, 0.6}, {0.6, 0.8}, {0.6, 0.8}, {0.6, 0.8}, {0.4, 0.6}};
+            };
+
+            class Vehicles: Vehicles {
+                class Wheeled: Wheeled {
+                    skill[] = {{0.3, 0.5}, {0.3, 0.5}, {0.03, 0.05}, {0.5, 0.7}, {0.3, 0.5}, {0.3, 0.5}, {0.5, 0.7}, {0.5, 0.7}, {0.5, 0.7}, {0.3, 0.5}};
                 };
             };
         };
