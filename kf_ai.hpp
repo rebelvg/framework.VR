@@ -56,3 +56,42 @@ class KF_AI {
         };
     };
 };
+
+class KLPQ_MyDAC: KF_AI {
+    class Settings {
+        isReduceEnabled = true;
+        reduceDistance = 900;
+        garbageCollectionTime = 180;
+        garbageCollectionRadius = 150;
+    };
+    class Behavior {
+        class NORMAL {
+            class Infantry {
+                //"aimingAccuracy", "aimingShake", "aimingSpeed", "endurance", "spotDistance", "spotTime", "courage", "reloadSpeed", "commanding", "general"
+                skill[] = {{0.3, 0.5}, {0.3, 0.5}, {0.03, 0.05}, {0.5, 0.7}, {0.3, 0.5}, {0.3, 0.5}, {0.5, 0.7}, {0.5, 0.7}, {0.5, 0.7}, {0.3, 0.5}};
+                behavior[] = {"SAFE", "AWARE"};
+                combatMode[] = {"YELLOW"};
+                speed[] = {"LIMITED", "NORMAL", "FULL"};
+                formation[] = {"LINE", "VEE", "COLUMN", "WEDGE", "STAG COLUMN", "ECH LEFT", "ECH RIGHT", "FILE", "DIAMOND"};
+            };
+            class Vehicles {
+                class Wheeled {
+                    skill[] = {{0.2, 0.4}, {0.2, 0.4}, {0.02, 0.04}, {0.4, 0.6}, {0.2, 0.4}, {0.2, 0.4}, {0.4, 0.6}, {0.4, 0.6}, {0.4, 0.6}, {0.2, 0.4}};
+                    behavior[] = {"SAFE"};
+                    combatMode[] = {"YELLOW"};
+                    speed[] = {"LIMITED"};
+                    formation[] = {"LINE", "VEE", "COLUMN", "WEDGE", "STAG COLUMN", "ECH LEFT", "ECH RIGHT", "FILE", "DIAMOND"};
+                };
+                class Armored: Wheeled {
+                    speed[] = {"LIMITED", "NORMAL"};
+                };
+                class Air: Wheeled {
+                    speed[] = {"LIMITED", "NORMAL", "FULL"};
+                };
+                class Naval: Wheeled {
+                    speed[] = {"LIMITED", "NORMAL"};
+                };
+            };
+        };
+    };
+};

@@ -9,6 +9,9 @@ mf_forceSideNVGs = [];
 mf_forceVirtualArsenal = false;
 mf_addParadropOption = true;
 
+//myDac
+klpq_myDac_enableDebugHint = true;
+
 //menu
 murshun_spectator_enable = true;
 
