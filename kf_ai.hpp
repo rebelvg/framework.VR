@@ -83,18 +83,21 @@ class KLPQ_MyDAC: KF_AI {
             class Vehicles {
                 class Wheeled {
                     skill[] = {{0.2, 0.4}, {0.2, 0.4}, {0.02, 0.04}, {0.4, 0.6}, {0.2, 0.4}, {0.2, 0.4}, {0.4, 0.6}, {0.4, 0.6}, {0.4, 0.6}, {0.2, 0.4}};
-                    behavior[] = {"SAFE"};
+                    behavior[] = {"AWARE"};
                     combatMode[] = {"YELLOW"};
-                    speed[] = {"LIMITED"};
+                    speed[] = {"NORMAL"};
                     formation[] = {"LINE", "VEE", "COLUMN", "WEDGE", "STAG COLUMN", "ECH LEFT", "ECH RIGHT", "FILE", "DIAMOND"};
                 };
                 class Armored: Wheeled {
+                    behavior[] = {"SAFE", "AWARE"};
                     speed[] = {"LIMITED", "NORMAL"};
                 };
                 class Air: Wheeled {
+                    behavior[] = {"SAFE", "AWARE"};
                     speed[] = {"LIMITED", "NORMAL", "FULL"};
                 };
                 class Naval: Wheeled {
+                    behavior[] = {"SAFE", "AWARE"};
                     speed[] = {"LIMITED", "NORMAL"};
                 };
             };
