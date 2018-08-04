@@ -89,8 +89,8 @@ class KLPQ_MyDAC: KF_AI {
                     formation[] = {"LINE", "VEE", "COLUMN", "WEDGE", "STAG COLUMN", "ECH LEFT", "ECH RIGHT", "FILE", "DIAMOND"};
                 };
                 class Armored: Wheeled {
-                    behavior[] = {"SAFE", "AWARE"};
-                    speed[] = {"LIMITED", "NORMAL"};
+                    behavior[] = {"AWARE"};
+                    speed[] = {"NORMAL"};
                 };
                 class Air: Wheeled {
                     behavior[] = {"SAFE", "AWARE"};
