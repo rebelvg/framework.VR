@@ -21,8 +21,8 @@ private _vest = "V_BandollierB_rgr";
 _riflemanFashion = [_uniform, _vest, "H_HelmetB_sand", "B_Kitbag_cbr", ""];
 _specFashion = [_uniform, _vest, "H_HelmetB_sand", "B_Carryall_mcamo", ""];
 _leaderFashion = [_uniform, _vest, "H_MilCap_mcamo", "B_Kitbag_cbr", ""];
-_crewFashion = [_uniform, _vest, "H_HelmetCrew_B", "B_Kitbag_cbr", ""];
 _pilotFashion = [_uniform, _vest, "H_PilotHelmetHeli_B", "B_Kitbag_cbr", ""];
+_crewFashion = [_uniform, _vest, "H_HelmetCrew_B", "B_Kitbag_cbr", ""];
 
 _riflemanPrimary = ["arifle_MX_F", [["30Rnd_65x39_caseless_mag", 15]], []];
 _specPrimary = ["arifle_MXC_F", [["30Rnd_65x39_caseless_mag", 15]], []];
