@@ -31,11 +31,11 @@ addons[]=
 {
 	"A3_Ui_F",
 	"A3_Soft_F_Offroad_01",
-	"dac_source",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Supplies_F_Heli_CargoNets",
 	"A3_Structures_F_Civ_Accessories",
 	"A3_Soft_F_Gamma_Truck_01",
+	"A3_Soft_F_Exp_Truck_01",
 	"ace_realisticnames",
 	"ace_rearm",
 	"ace_cargo",
@@ -69,35 +69,36 @@ class AddonsMetaData
 		};
 		class Item2
 		{
-			className="DAC_Source";
-			name="DAC_Source.pbo";
-			author="Silola";
-		};
-		class Item3
-		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item4
+		class Item3
 		{
 			className="A3_Supplies_F_Heli";
 			name="Arma 3 Helicopters - Ammoboxes and Supplies";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item4
 		{
 			className="A3_Structures_F";
 			name="Arma 3 - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item5
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item6
+		{
+			className="A3_Soft_F_Exp";
+			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -445,7 +446,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=44;
+		items=41;
 		class Item0
 		{
 			dataType="Marker";
@@ -540,16 +541,6 @@ class Mission
 			};
 		};
 		class Item3
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={515,5,590};
-			};
-			id=21;
-			type="DAC_Source_Extern";
-		};
-		class Item4
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -658,7 +649,7 @@ class Mission
 				nAttributes=5;
 			};
 		};
-		class Item5
+		class Item4
 		{
 			dataType="Object";
 			class PositionInfo
@@ -699,27 +690,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item6
-		{
-			dataType="Trigger";
-			position[]={600,5,800};
-			class Attributes
-			{
-				name="z1";
-				text="zone";
-				condition="time > 1";
-				onActivation="0 = [""z1"",[1,1,0],[12,2,120,10],[],[],[],[0,0,0,2,2]] spawn DAC_Zone;";
-				sizeA=200;
-				sizeB=200;
-				interuptable=1;
-				repeatable=1;
-				activationBy="LOGIC";
-				isRectangle=1;
-			};
-			id=174;
-			type="EmptyDetector";
-		};
-		class Item7
+		class Item5
 		{
 			dataType="Object";
 			class PositionInfo
@@ -778,7 +749,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item8
+		class Item6
 		{
 			dataType="Object";
 			class PositionInfo
@@ -837,7 +808,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item9
+		class Item7
 		{
 			dataType="Object";
 			class PositionInfo
@@ -896,7 +867,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item10
+		class Item8
 		{
 			dataType="Object";
 			class PositionInfo
@@ -955,7 +926,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item11
+		class Item9
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1014,7 +985,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item12
+		class Item10
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1073,7 +1044,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item13
+		class Item11
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1112,27 +1083,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item14
-		{
-			dataType="Trigger";
-			position[]={600,5,1300};
-			class Attributes
-			{
-				name="c1";
-				text="camp";
-				condition="time > 1";
-				onActivation="0 = [""c1"",[1,1,0,0],[],[],[],[1,0,0,1,100,12,[z1]],[0,0,0,2,2]] spawn DAC_Zone;";
-				sizeA=200;
-				sizeB=200;
-				interuptable=1;
-				repeatable=1;
-				activationBy="LOGIC";
-				isRectangle=1;
-			};
-			id=921;
-			type="EmptyDetector";
-		};
-		class Item15
+		class Item12
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1172,7 +1123,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item16
+		class Item13
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1212,7 +1163,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item17
+		class Item14
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1252,7 +1203,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item18
+		class Item15
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1292,7 +1243,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item19
+		class Item16
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1332,7 +1283,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item20
+		class Item17
 		{
 			dataType="Object";
 			class PositionInfo
@@ -1372,7 +1323,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item21
+		class Item18
 		{
 			dataType="Group";
 			side="West";
@@ -1665,7 +1616,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item22
+		class Item19
 		{
 			dataType="Group";
 			side="East";
@@ -1954,7 +1905,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item23
+		class Item20
 		{
 			dataType="Group";
 			side="West";
@@ -2001,7 +1952,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -2116,7 +2067,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -2231,7 +2182,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -2337,7 +2288,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item24
+		class Item21
 		{
 			dataType="Group";
 			side="West";
@@ -2384,7 +2335,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -2499,7 +2450,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -2614,7 +2565,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -2720,7 +2671,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item25
+		class Item22
 		{
 			dataType="Group";
 			side="East";
@@ -2767,7 +2718,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -2882,7 +2833,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -2997,7 +2948,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -3103,7 +3054,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item26
+		class Item23
 		{
 			dataType="Group";
 			side="East";
@@ -3150,7 +3101,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -3265,7 +3216,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -3380,7 +3331,7 @@ class Mission
 						class Attribute1
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -3486,7 +3437,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item27
+		class Item24
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -3496,7 +3447,7 @@ class Mission
 			id=994;
 			type="KLPQ_framework";
 		};
-		class Item28
+		class Item25
 		{
 			dataType="Group";
 			side="West";
@@ -3882,7 +3833,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item29
+		class Item26
 		{
 			dataType="Group";
 			side="West";
@@ -4268,7 +4219,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item30
+		class Item27
 		{
 			dataType="Group";
 			side="West";
@@ -4654,7 +4605,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item31
+		class Item28
 		{
 			dataType="Group";
 			side="East";
@@ -5040,7 +4991,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item32
+		class Item29
 		{
 			dataType="Group";
 			side="East";
@@ -5426,7 +5377,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item33
+		class Item30
 		{
 			dataType="Group";
 			side="East";
@@ -5812,7 +5763,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item34
+		class Item31
 		{
 			dataType="Group";
 			side="Independent";
@@ -6025,7 +5976,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item35
+		class Item32
 		{
 			dataType="Group";
 			side="Independent";
@@ -6053,7 +6004,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -6130,7 +6081,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -6207,7 +6158,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -6294,7 +6245,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item36
+		class Item33
 		{
 			dataType="Group";
 			side="Independent";
@@ -6322,7 +6273,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -6399,7 +6350,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -6476,7 +6427,7 @@ class Mission
 						class Attribute0
 						{
 							property="ace_isEngineer";
-							expression="if (_value != -1) then {_this setVariable ['ace_isEngineer',_value, true];}";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
 							class Value
 							{
 								class data
@@ -6563,7 +6514,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item37
+		class Item34
 		{
 			dataType="Group";
 			side="Independent";
@@ -6949,7 +6900,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item38
+		class Item35
 		{
 			dataType="Group";
 			side="Independent";
@@ -7335,7 +7286,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item39
+		class Item36
 		{
 			dataType="Group";
 			side="Independent";
@@ -7721,7 +7672,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item40
+		class Item37
 		{
 			dataType="Marker";
 			position[]={579,87394144,570};
@@ -7732,7 +7683,7 @@ class Mission
 			id=1370;
 			atlOffset=87394136;
 		};
-		class Item41
+		class Item38
 		{
 			dataType="Marker";
 			position[]={643,87394144,570};
@@ -7743,7 +7694,7 @@ class Mission
 			id=1371;
 			atlOffset=87394136;
 		};
-		class Item42
+		class Item39
 		{
 			dataType="Object";
 			class PositionInfo
@@ -7782,7 +7733,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item43
+		class Item40
 		{
 			dataType="Object";
 			class PositionInfo
