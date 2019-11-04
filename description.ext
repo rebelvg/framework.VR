@@ -21,6 +21,8 @@ author = "KLPQ";
 loadScreen = "klpq_framework\logo.paa";
 overviewPicture = "klpq_framework\logo.paa";
 
+cba_settings_hasSettingsFile = 1;
+
 #include "kf_ai.hpp"
 
 class CfgDebriefing {
