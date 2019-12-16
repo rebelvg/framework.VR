@@ -49,7 +49,7 @@ class Params {
         title = "Add Zeus";
         texts[] = {"Default","Yes"};
         values[] = {0,1};
-        default = 0;
+        default = 1;
     };
 };
 
