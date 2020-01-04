@@ -45,8 +45,8 @@ _binoculars = ["ACE_VectorDay", [], []];
 private _additionGrenade = "SmokeShellBlue";
 private _fragGrenade = "HandGrenade";
 
-_items = [["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_additionGrenade, 3], ["ACE_CableTie", 2]];
-_linkItems = ["ItemMap", "ItemCompass", "ItemWatch", "ItemGPS", "NVGoggles"];
+_items = [["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_additionGrenade, 3], ["ACE_CableTie", 2], ["ACE_DAGR", 1]];
+_linkItems = ["ItemMap", "ItemCompass", "ItemWatch", "NVGoggles"];
 
 _boxItems = [
     ["ToolKit", 10],
