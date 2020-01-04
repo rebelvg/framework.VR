@@ -1,18 +1,16 @@
 //place all mission related stuff here
 //do not overwrite this file when copying framework from mission to mission
 
-private ["_basicMedicine", "_advancedMedicine", "_medicine", "_basicMedicMedicine", "_advancedMedicMedicine", "_medicMedicine"];
+private ["_basicMedicine", "_medicine", "_basicMedicMedicine", "_medicMedicine"];
 private ["_riflemanFashion", "_specFashion", "_leaderFashion", "_crewFashion", "_pilotFashion", "_medicMedicine"];
 private ["_riflemanPrimary", "_specPrimary", "_glRifleWeapon", "_leaderPrimary", "_mgWeapon", "_handgunWeapon", "_leaderSecond", "_atLauncherWeapon", "_atMissileWeapon", "_aaMissileWeapon", "_binoculars"];
 private ["_items", "_linkItems", "_boxItems", "_boxMedicine"];
 
-_basicMedicine = [["ACE_fieldDressing", 20], ["ACE_morphine", 10], ["ACE_epinephrine", 2], ["ACE_bloodIV_250", 1]];
-_advancedMedicine = [["ACE_fieldDressing", 10], ["ACE_quikclot", 10], ["ACE_morphine", 10], ["ACE_epinephrine", 2], ["ACE_tourniquet", 1], ["ACE_personalAidKit", 1], ["ACE_bloodIV_250", 1]];
+_basicMedicine = [["ACE_fieldDressing", 20], ["ACE_morphine", 10], ["ACE_splint", 5], ["ACE_epinephrine", 2], ["ACE_tourniquet", 1], ["ACE_bloodIV_250", 1]];
 
 _medicine = _basicMedicine;
 
-_basicMedicMedicine = [["ACE_fieldDressing", 40], ["ACE_morphine", 20], ["ACE_epinephrine", 4], ["ACE_bloodIV_250", 2]];
-_advancedMedicMedicine = [["ACE_fieldDressing", 20], ["ACE_quikclot", 20], ["ACE_morphine", 20], ["ACE_epinephrine", 4], ["ACE_tourniquet", 2], ["ACE_personalAidKit", 2], ["ACE_bloodIV_250", 2]];
+_basicMedicMedicine = [["ACE_fieldDressing", 40], ["ACE_morphine", 20], ["ACE_splint", 10], ["ACE_tourniquet", 2], ["ACE_epinephrine", 4], ["ACE_bloodIV_250", 2]];
 
 _medicMedicine = _basicMedicMedicine;
 
