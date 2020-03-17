@@ -122,10 +122,10 @@ private _loadoutArray = [
             ]
         ],
         [
-            ["rifleman (at)"],
+            ["asst. autorifleman"],
             [
                 _riflemanFashion,
-                [_riflemanPrimary, _mgMags, _atLauncherWeapon]
+                [_riflemanPrimary, _mgMags,_binoculars]
             ]
         ],
         [
@@ -204,7 +204,7 @@ private _loadoutArray = [
             []
         ],
         [
-            ["rifleman (at)"],
+            ["asst. autorifleman"],
             [],
             []
         ],
