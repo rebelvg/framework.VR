@@ -70,6 +70,13 @@ class CfgFunctions {
             class settings {preInit = 1;};
         };
     };
+    class KIB{    
+    class mission {
+        file = "mission";                     
+        class kib_markers {};        
+        class addVehicleRespawnWithMarker {};                   
+        };        
+    };
 };
 
 class CfgDebriefingSections {

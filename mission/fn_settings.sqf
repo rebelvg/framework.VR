@@ -24,3 +24,8 @@ klpq_musicRadio_radioThemes = [];
 klpq_musicRadio_startRadioSongs = [];
 klpq_musicRadio_radioSongs = [];
 klpq_musicRadio_enableBackpackRadioMP = false;
+
+//Map markers
+
+klpq_marker_update_rate_inf = 25;
+klpq_marker_update_rate_vehicle = 2;

@@ -6,11 +6,11 @@ private ["_riflemanFashion", "_specFashion", "_leaderFashion", "_crewFashion", "
 private ["_riflemanPrimary", "_specPrimary", "_glRifleWeapon", "_leaderPrimary", "_mgWeapon", "_handgunWeapon", "_leaderSecond", "_atLauncherWeapon", "_atMissileWeapon", "_aaMissileWeapon", "_binoculars"];
 private ["_items", "_linkItems", "_boxItems", "_boxMedicine"];
 
-_basicMedicine = [["ACE_fieldDressing", 20], ["ACE_morphine", 10], ["ACE_splint", 5], ["ACE_epinephrine", 2], ["ACE_tourniquet", 1], ["ACE_bloodIV_250", 1]];
+_basicMedicine = [["ACE_fieldDressing", 20], ["ACE_morphine", 5], ["ACE_splint", 5], ["ACE_epinephrine", 2],["ACE_adenosine",2], ["ACE_tourniquet", 5], ["ACE_bloodIV_250", 1]];
 
 _medicine = _basicMedicine;
 
-_basicMedicMedicine = [["ACE_fieldDressing", 40], ["ACE_morphine", 20], ["ACE_splint", 10], ["ACE_tourniquet", 2], ["ACE_epinephrine", 4], ["ACE_bloodIV_250", 2]];
+_basicMedicMedicine = [["ACE_fieldDressing", 40], ["ACE_morphine", 20], ["ACE_splint", 10], ["ACE_tourniquet", 2], ["ACE_epinephrine", 10],["ACE_adenosine",10], ["ACE_bloodIV_250", 4]];
 
 _medicMedicine = _basicMedicMedicine;
 
@@ -45,7 +45,7 @@ _binoculars = ["ACE_VectorDay", [], []];
 private _additionGrenade = "SmokeShellBlue";
 private _fragGrenade = "HandGrenade";
 
-_items = [["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_additionGrenade, 3], ["ACE_CableTie", 2], ["ACE_DAGR", 1]];
+_items = [["ACE_EarPlugs", 1], ["ACE_Flashlight_XL50", 1], [_additionGrenade, 3],[_fragGrenade,2],["ACE_EntrenchingTool",1],["ACE_MapTools",1], ["ACE_CableTie", 2], ["ACE_DAGR", 1]];
 _linkItems = ["ItemMap", "ItemCompass", "ItemWatch", "NVGoggles"];
 
 _boxItems = [
@@ -60,7 +60,8 @@ _boxItems = [
     [_additionGrenade, 200],
     [_fragGrenade, 80],
     ["DemoCharge_Remote_Mag", 20],
-    ["SatchelCharge_Remote_Mag", 4]
+    ["SatchelCharge_Remote_Mag", 4],
+    ["ACE_artilleryTable",1]
 ]; //content for boxes
 
 _boxMedicine = _medicine apply {[_x select 0, (_x select 1) * 60]};
@@ -122,10 +123,10 @@ private _loadoutArray = [
             ]
         ],
         [
-            ["rifleman (at)"],
+            ["asst. autorifleman"],
             [
                 _riflemanFashion,
-                [_riflemanPrimary, _mgMags, _atLauncherWeapon]
+                [_riflemanPrimary, _mgMags,_binoculars]
             ]
         ],
         [
@@ -204,7 +205,7 @@ private _loadoutArray = [
             []
         ],
         [
-            ["rifleman (at)"],
+            ["asst. autorifleman"],
             [],
             []
         ],
