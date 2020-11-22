@@ -1,10 +1,7 @@
-
 /*
-0 = [this, WEST,"o_recon","ColorRed","racoon",0.6] spawn KIB_fnc_addVehicleRespawnWithMarker; 
+0 = [this, WEST,"o_recon","ColorRed","racoon",0.6] spawn KIB_fnc_addVehicleRespawnWithMarker;
 OR
-0 = [this, WEST,"o_recon","ColorRed","racoon",0.6, "optionalMarker"] spawn KIB_fnc_addVehicleRespawnWithMarker; 
-
-
+0 = [this, WEST,"o_recon","ColorRed","racoon",0.6, "optionalMarker"] spawn KIB_fnc_addVehicleRespawnWithMarker;
 
 1: _vehicle - техника, если ставите в инит техники, то прописывайте this
 2: WEST - сторона игроков, необходимо для того, чтобы техника респавнилась с вооружением которое подхватывается из лодаута
@@ -25,19 +22,17 @@ o_med
 o_hq
 
 https://community.bistudio.com/wiki/Arma_3_CfgMarkerColors //marker colors
-ColorRed	
-ColorBrown	
-ColorOrange	
-ColorYellow	
+ColorRed
+ColorBrown
+ColorOrange
+ColorYellow
 ColorKhaki
-ColorGreen	
+ColorGreen
 ColorBlue
 ColorPink
 */
 
 params ["_vehicle", ["_side", sideEmpty],["_markertype","o_unknown"],["_markerColor","ColorGrey"],["_markeText",""],["_markerTransparency",0.5],["_markerPlaced",false]];
-
-
 
 if (!isServer) exitWith {};
 
@@ -53,10 +48,9 @@ _vehicle setVariable ["kib_markeText",_markeText];
 _vehicle setVariable ["kib_markerTransparency",_markerTransparency];
 _vehicle setVariable ["kib_placed",_markerPlaced];
 
-waitUntil {time > 3}; 
-[_vehicle,_markertype,_markerColor,_markeText,_markerTransparency,_markerPlaced] spawn KIB_fnc_kib_markers;
+waitUntil {time > 3};
 
-
+[_vehicle,_markertype,_markerColor,_markeText,_markerTransparency,_markerPlaced] spawn KIB_fnc_markers;
 
 if (typeName _markerPlaced == "STRING") then {
     _obj = _vehicle;
@@ -88,15 +82,15 @@ _vehicle addMPEventHandler ["MPKilled", {
         private _vehDir = _vehicle getVariable "mf_vehicleDir";
         private _loadoutSide = _vehicle getVariable "mf_vehicleLoadoutSide";
         private _vehClass = typeOf _vehicle;
-        
+
         private _markertype = _vehicle getVariable "kib_markertype";
         private _markerColor = _vehicle getVariable "kib_markerColor";
         private _markeText = _vehicle getVariable "kib_markeText";
         private _markerTransparency = _vehicle getVariable "kib_markerTransparency";
         private _markerPlaced = _vehicle getVariable "kib_placed";
-        
-        sleep 55;       
-        //sleep 5;   //debug     
+
+        sleep 55;
+        //sleep 5;   //debug
 
         private _wrecks = (allDead select {_x distance _spawnPos < 15});
 
@@ -112,12 +106,12 @@ _vehicle addMPEventHandler ["MPKilled", {
         private _newVehicle = _vehClass createVehicle ([0, 0, 0] getPos [random 50, random 360]);
         _newVehicle setDir _vehDir;
         _newVehicle setPosATL [_x, _y, 0];
-        
+
 
         [[_newVehicle, _loadoutSide], "mf_fnc_fillBox", true, true] call BIS_fnc_MP;
 
         [_newVehicle, _loadoutSide,_markertype,_markerColor,_markeText,_markerTransparency,_markerPlaced] spawn KIB_fnc_addVehicleRespawnWithMarker;
-       
+
         if (typeName _markerPlaced == "STRING") then {
             _obj = _newVehicle;
             [_obj, {
@@ -135,7 +129,7 @@ _vehicle addMPEventHandler ["MPKilled", {
 
             [_obj, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject
             }] remoteExec ["BIS_fnc_spawn", 0, _obj];
-        };     
+        };
 
         format ["Vehicle %1 respawned at %2.", _vehClass, mapGridPosition _spawnPos] remoteExec ["systemChat"];
     };

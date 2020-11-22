@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={613.55756,80.358177,489.31207};
-		dir[]={-0.0018436224,-0.62894952,0.77747285};
-		up[]={-0.0014914323,0.77743781,0.62894851};
-		aside[]={1.0000131,-3.3782271e-008,0.0023713561};
+		pos[]={608.88098,30,533.77197};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -44,7 +44,6 @@ addons[]=
 	"A3_Soft_F_Gamma_Truck_02",
 	"A3_Characters_F",
 	"ace_explosives",
-	"cfp_uniforms",
 	"ace_gforces",
 	"ace_parachute",
 	"klpq_framework"
@@ -53,7 +52,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=16;
+		items=15;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -147,18 +146,12 @@ class AddonsMetaData
 		};
 		class Item13
 		{
-			className="cfp_uniforms";
-			name="cfp_uniforms";
-			author="CFP Team";
-		};
-		class Item14
-		{
 			className="ace_parachute";
 			name="ACE3 - Parachute";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item15
+		class Item14
 		{
 			className="klpq_framework";
 			name="KLPQ Framework";
@@ -728,7 +721,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="call{0 = [this] spawn mf_fnc_fillBoxMedical; 0 = [this, ""mil_triangle"",""ColorOrange"",""medbox"",0.6] spawn KIB_fnc_kib_markers; }";
+				init="call{0 = [this] spawn mf_fnc_fillBoxMedical; 0 = [this, ""mil_triangle"",""ColorOrange"",""medbox"",0.6] spawn KIB_fnc_markers; }";
 			};
 			id=364;
 			type="CargoNet_01_box_F";
@@ -787,7 +780,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="call{0 = [this, WEST] spawn mf_fnc_fillBox;  0 = [this, ""mil_triangle"",""ColorOrange"",""ammobox"",0.6] spawn KIB_fnc_kib_markers; }";
+				init="call{0 = [this, WEST] spawn mf_fnc_fillBox;  0 = [this, ""mil_triangle"",""ColorOrange"",""ammobox"",0.6] spawn KIB_fnc_markers; }";
 			};
 			id=365;
 			type="CargoNet_01_box_F";
@@ -846,7 +839,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="call{0 = [this] spawn mf_fnc_fillBoxMedical; 0 = [this, ""mil_triangle"",""ColorOrange"",""medbox"",0.6] spawn KIB_fnc_kib_markers; }";
+				init="call{0 = [this] spawn mf_fnc_fillBoxMedical; 0 = [this, ""mil_triangle"",""ColorOrange"",""medbox"",0.6] spawn KIB_fnc_markers; }";
 			};
 			id=366;
 			type="CargoNet_01_box_F";
@@ -905,7 +898,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="call{0 = [this, EAST] spawn mf_fnc_fillBox; 0 = [this, ""mil_triangle"",""ColorOrange"",""ammobox"",0.6] spawn KIB_fnc_kib_markers; }";
+				init="call{0 = [this, EAST] spawn mf_fnc_fillBox; 0 = [this, ""mil_triangle"",""ColorOrange"",""ammobox"",0.6] spawn KIB_fnc_markers; }";
 			};
 			id=367;
 			type="CargoNet_01_box_F";
@@ -964,7 +957,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="call{0 = [this] spawn mf_fnc_fillBoxMedical; 0 = [this, ""mil_triangle"",""ColorOrange"",""medbox"",0.6] spawn KIB_fnc_kib_markers; }";
+				init="call{0 = [this] spawn mf_fnc_fillBoxMedical; 0 = [this, ""mil_triangle"",""ColorOrange"",""medbox"",0.6] spawn KIB_fnc_markers; }";
 			};
 			id=368;
 			type="CargoNet_01_box_F";
@@ -1023,7 +1016,7 @@ class Mission
 			class Attributes
 			{
 				skill=0.60000002;
-				init="call{0 = [this, RESISTANCE] spawn mf_fnc_fillBox; 0 = [this, ""mil_triangle"",""ColorOrange"",""ammobox"",0.6] spawn KIB_fnc_kib_markers; }";
+				init="call{0 = [this, RESISTANCE] spawn mf_fnc_fillBox; 0 = [this, ""mil_triangle"",""ColorOrange"",""ammobox"",0.6] spawn KIB_fnc_markers; }";
 			};
 			id=369;
 			type="CargoNet_01_box_F";
@@ -1615,7 +1608,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""SL""]; this setVariable [""mf_groupChannel"", [7, 5]];" \n "0 = [this, ""o_inf"",""ColorYellow"",""SL"",0.6] spawn KIB_fnc_kib_markers; }";
+				init="call{this setVariable [""kf_groupId"", ""SL""]; this setVariable [""mf_groupChannel"", [7, 5]];" \n "0 = [this, ""o_inf"",""ColorYellow"",""SL"",0.6] spawn KIB_fnc_markers; }";
 			};
 			id=1037;
 			class CustomAttributes
@@ -1904,7 +1897,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""SL""]; this setVariable [""mf_groupChannel"", [7, 5]]; 0 = [this, ""o_inf"",""ColorYellow"",""SL"",0.6] spawn KIB_fnc_kib_markers; }";
+				init="call{this setVariable [""kf_groupId"", ""SL""]; this setVariable [""mf_groupChannel"", [7, 5]]; 0 = [this, ""o_inf"",""ColorYellow"",""SL"",0.6] spawn KIB_fnc_markers; }";
 			};
 			id=1040;
 			class CustomAttributes
@@ -3832,7 +3825,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""FT Alpha""]; this setVariable [""mf_groupChannel"", [1, 1]]; 0 = [this, ""o_inf"",""ColorRed"",""Alpha"",0.6] spawn KIB_fnc_kib_markers;}";
+				init="call{this setVariable [""kf_groupId"", ""FT Alpha""]; this setVariable [""mf_groupChannel"", [1, 1]]; 0 = [this, ""o_inf"",""ColorRed"",""Alpha"",0.6] spawn KIB_fnc_markers;}";
 			};
 			id=1203;
 			class CustomAttributes
@@ -4218,7 +4211,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""FT Bravo""]; this setVariable [""mf_groupChannel"", [2, 2]]; 0 = [this, ""o_inf"",""ColorBlue"",""Bravo"",0.6] spawn KIB_fnc_kib_markers;}";
+				init="call{this setVariable [""kf_groupId"", ""FT Bravo""]; this setVariable [""mf_groupChannel"", [2, 2]]; 0 = [this, ""o_inf"",""ColorBlue"",""Bravo"",0.6] spawn KIB_fnc_markers;}";
 			};
 			id=1226;
 			class CustomAttributes
@@ -4604,7 +4597,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""FT Charlie""]; this setVariable [""mf_groupChannel"", [3, 3]]; 0 = [this, ""o_inf"",""ColorGreen"",""Charlie"",0.6] spawn KIB_fnc_kib_markers;}";
+				init="call{this setVariable [""kf_groupId"", ""FT Charlie""]; this setVariable [""mf_groupChannel"", [3, 3]]; 0 = [this, ""o_inf"",""ColorGreen"",""Charlie"",0.6] spawn KIB_fnc_markers;}";
 			};
 			id=1233;
 			class CustomAttributes
@@ -4990,7 +4983,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""FT Alpha""]; this setVariable [""mf_groupChannel"", [1, 1]]; 0 = [this, ""o_inf"",""ColorRed"",""Alpha"",0.6] spawn KIB_fnc_kib_markers;}";
+				init="call{this setVariable [""kf_groupId"", ""FT Alpha""]; this setVariable [""mf_groupChannel"", [1, 1]]; 0 = [this, ""o_inf"",""ColorRed"",""Alpha"",0.6] spawn KIB_fnc_markers;}";
 			};
 			id=1250;
 			class CustomAttributes
@@ -5376,7 +5369,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""FT Bravo""]; this setVariable [""mf_groupChannel"", [2, 2]]; 0 = [this, ""o_inf"",""ColorBlue"",""Bravo"",0.6] spawn KIB_fnc_kib_markers;}";
+				init="call{this setVariable [""kf_groupId"", ""FT Bravo""]; this setVariable [""mf_groupChannel"", [2, 2]]; 0 = [this, ""o_inf"",""ColorBlue"",""Bravo"",0.6] spawn KIB_fnc_markers;}";
 			};
 			id=1277;
 			class CustomAttributes
@@ -5762,7 +5755,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""FT Charlie""]; this setVariable [""mf_groupChannel"", [3, 3]]; 0 = [this, ""o_inf"",""ColorGreen"",""Charlie"",0.6] spawn KIB_fnc_kib_markers;}";
+				init="call{this setVariable [""kf_groupId"", ""FT Charlie""]; this setVariable [""mf_groupChannel"", [3, 3]]; 0 = [this, ""o_inf"",""ColorGreen"",""Charlie"",0.6] spawn KIB_fnc_markers;}";
 			};
 			id=1284;
 			class CustomAttributes
@@ -5975,7 +5968,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""SL""]; this setVariable [""mf_groupChannel"", [7, 5]]; 0 = [this, ""o_inf"",""ColorYellow"",""SL"",0.6] spawn KIB_fnc_kib_markers; }";
+				init="call{this setVariable [""kf_groupId"", ""SL""]; this setVariable [""mf_groupChannel"", [7, 5]]; 0 = [this, ""o_inf"",""ColorYellow"",""SL"",0.6] spawn KIB_fnc_markers; }";
 			};
 			id=1297;
 			class CustomAttributes
@@ -6899,7 +6892,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""FT Alpha""]; this setVariable [""mf_groupChannel"", [1, 1]]; 0 = [this, ""o_inf"",""ColorRed"",""Alpha"",0.6] spawn KIB_fnc_kib_markers;}";
+				init="call{this setVariable [""kf_groupId"", ""FT Alpha""]; this setVariable [""mf_groupChannel"", [1, 1]]; 0 = [this, ""o_inf"",""ColorRed"",""Alpha"",0.6] spawn KIB_fnc_markers;}";
 			};
 			id=1323;
 			class CustomAttributes
@@ -7285,7 +7278,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""FT Bravo""]; this setVariable [""mf_groupChannel"", [2, 2]]; 0 = [this, ""o_inf"",""ColorBlue"",""Bravo"",0.6] spawn KIB_fnc_kib_markers;}";
+				init="call{this setVariable [""kf_groupId"", ""FT Bravo""]; this setVariable [""mf_groupChannel"", [2, 2]]; 0 = [this, ""o_inf"",""ColorBlue"",""Bravo"",0.6] spawn KIB_fnc_markers;}";
 			};
 			id=1350;
 			class CustomAttributes
@@ -7671,7 +7664,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""FT Charlie""]; this setVariable [""mf_groupChannel"", [3, 3]]; 0 = [this, ""o_inf"",""ColorGreen"",""Charlie"",0.6] spawn KIB_fnc_kib_markers;" \n "}";
+				init="call{this setVariable [""kf_groupId"", ""FT Charlie""]; this setVariable [""mf_groupChannel"", [3, 3]]; 0 = [this, ""o_inf"",""ColorGreen"",""Charlie"",0.6] spawn KIB_fnc_markers;" \n "}";
 			};
 			id=1357;
 			class CustomAttributes
@@ -8157,7 +8150,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""FT Delta""]; this setVariable [""mf_groupChannel"", [4, 4]]; 0 = [this, ""o_inf"",""ColorRed"",""Delta"",0.6] spawn KIB_fnc_kib_markers;}";
+				init="call{this setVariable [""kf_groupId"", ""FT Delta""]; this setVariable [""mf_groupChannel"", [4, 4]]; 0 = [this, ""o_inf"",""ColorRed"",""Delta"",0.6] spawn KIB_fnc_markers;}";
 			};
 			id=1400;
 			class CustomAttributes
@@ -8543,7 +8536,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""FT Delta""]; this setVariable [""mf_groupChannel"", [4, 4]]; 0 = [this, ""o_inf"",""ColorRed"",""Delta"",0.6] spawn KIB_fnc_kib_markers;}";
+				init="call{this setVariable [""kf_groupId"", ""FT Delta""]; this setVariable [""mf_groupChannel"", [4, 4]]; 0 = [this, ""o_inf"",""ColorRed"",""Delta"",0.6] spawn KIB_fnc_markers;}";
 			};
 			id=1475;
 			class CustomAttributes
@@ -8929,7 +8922,7 @@ class Mission
 			};
 			class Attributes
 			{
-				init="call{this setVariable [""kf_groupId"", ""FT Delta""]; this setVariable [""mf_groupChannel"", [4, 4]]; 0 = [this, ""o_inf"",""ColorRed"",""Delta"",0.6] spawn KIB_fnc_kib_markers;}";
+				init="call{this setVariable [""kf_groupId"", ""FT Delta""]; this setVariable [""mf_groupChannel"", [4, 4]]; 0 = [this, ""o_inf"",""ColorRed"",""Delta"",0.6] spawn KIB_fnc_markers;}";
 			};
 			id=1527;
 			class CustomAttributes
