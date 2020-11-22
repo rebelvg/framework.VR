@@ -73,7 +73,7 @@ class CfgFunctions {
 
     class KIB {
         class mission {
-            file = "mission";
+            file = "mission\kib";
 
             class markers {};
             class addVehicleRespawnWithMarker {};
