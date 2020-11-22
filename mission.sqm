@@ -1405,7 +1405,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male05ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -1424,7 +1424,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.97000003;
+									value=1;
 								};
 							};
 						};
@@ -1447,7 +1447,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=4;
+						class Attribute4
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=6;
 					};
 				};
 				class Item1
@@ -1471,25 +1509,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -1507,7 +1526,102 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=6;
 					};
 				};
 				class Item2
@@ -1563,7 +1677,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -1582,7 +1696,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.99000001;
+									value=1;
 								};
 							};
 						};
@@ -1605,7 +1719,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=4;
+						class Attribute4
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=6;
 					};
 				};
 			};
@@ -1700,7 +1852,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male02PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -1719,7 +1871,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.01;
+									value=1;
 								};
 							};
 						};
@@ -1742,7 +1894,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=4;
+						class Attribute4
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=6;
 					};
 				};
 				class Item1
@@ -1765,25 +1955,6 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute1
-						{
 							property="ace_isHandcuffed";
 							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
@@ -1801,7 +1972,102 @@ class Mission
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=6;
 					};
 				};
 				class Item2
@@ -1856,7 +2122,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -1875,7 +2141,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.94999999;
+									value=1;
 								};
 							};
 						};
@@ -1898,7 +2164,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=4;
+						class Attribute4
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=6;
 					};
 				};
 			};
@@ -1960,8 +2264,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -1998,8 +2302,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
+							property="unitName";
+							expression="_this setname _value;";
 							class Value
 							{
 								class data
@@ -2011,14 +2315,14 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03ENG";
+									value="";
 								};
 							};
 						};
 						class Attribute3
 						{
-							property="pitch";
-							expression="_this setpitch _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -2027,17 +2331,17 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=0.98000002;
+									value="RussianHead_4";
 								};
 							};
 						};
 						class Attribute4
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -2053,7 +2357,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						class Attribute5
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						nAttributes=7;
 					};
 				};
 				class Item1
@@ -2076,8 +2418,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -2114,8 +2456,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
+							property="unitName";
+							expression="_this setname _value;";
 							class Value
 							{
 								class data
@@ -2127,11 +2469,49 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male10ENG";
+									value="";
 								};
 							};
 						};
 						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute5
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2150,10 +2530,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute6
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
@@ -2162,14 +2542,14 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="Male01GRE";
 								};
 							};
 						};
-						nAttributes=5;
+						nAttributes=7;
 					};
 				};
 				class Item2
@@ -2192,8 +2572,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -2230,8 +2610,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
+							property="unitName";
+							expression="_this setname _value;";
 							class Value
 							{
 								class data
@@ -2243,14 +2623,14 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male02ENG";
+									value="";
 								};
 							};
 						};
 						class Attribute3
 						{
-							property="pitch";
-							expression="_this setpitch _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -2259,17 +2639,17 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=1.01;
+									value="RussianHead_4";
 								};
 							};
 						};
 						class Attribute4
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -2285,7 +2665,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						class Attribute5
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						nAttributes=7;
 					};
 				};
 			};
@@ -2347,8 +2765,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -2385,8 +2803,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
+							property="unitName";
+							expression="_this setname _value;";
 							class Value
 							{
 								class data
@@ -2398,11 +2816,49 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="";
 								};
 							};
 						};
 						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute5
 						{
 							property="pitch";
 							expression="_this setpitch _value;";
@@ -2421,10 +2877,10 @@ class Mission
 								};
 							};
 						};
-						class Attribute4
+						class Attribute6
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							property="speaker";
+							expression="_this setspeaker _value;";
 							class Value
 							{
 								class data
@@ -2433,14 +2889,14 @@ class Mission
 									{
 										type[]=
 										{
-											"BOOL"
+											"STRING"
 										};
 									};
-									value=0;
+									value="Male01GRE";
 								};
 							};
 						};
-						nAttributes=5;
+						nAttributes=7;
 					};
 				};
 				class Item1
@@ -2463,8 +2919,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -2501,8 +2957,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
+							property="unitName";
+							expression="_this setname _value;";
 							class Value
 							{
 								class data
@@ -2514,14 +2970,14 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male08ENG";
+									value="";
 								};
 							};
 						};
 						class Attribute3
 						{
-							property="pitch";
-							expression="_this setpitch _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -2530,17 +2986,17 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=1.04;
+									value="RussianHead_4";
 								};
 							};
 						};
 						class Attribute4
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -2556,7 +3012,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						class Attribute5
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						nAttributes=7;
 					};
 				};
 				class Item2
@@ -2579,8 +3073,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -2617,8 +3111,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
+							property="unitName";
+							expression="_this setname _value;";
 							class Value
 							{
 								class data
@@ -2630,14 +3124,14 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male11ENG";
+									value="";
 								};
 							};
 						};
 						class Attribute3
 						{
-							property="pitch";
-							expression="_this setpitch _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -2646,17 +3140,17 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=0.94999999;
+									value="RussianHead_4";
 								};
 							};
 						};
 						class Attribute4
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -2672,7 +3166,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						class Attribute5
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						nAttributes=7;
 					};
 				};
 			};
@@ -2734,8 +3266,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -2772,8 +3304,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
+							property="unitName";
+							expression="_this setname _value;";
 							class Value
 							{
 								class data
@@ -2785,14 +3317,14 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male02PER";
+									value="";
 								};
 							};
 						};
 						class Attribute3
 						{
-							property="pitch";
-							expression="_this setpitch _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -2801,17 +3333,17 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=0.99000001;
+									value="RussianHead_4";
 								};
 							};
 						};
 						class Attribute4
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -2827,7 +3359,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						class Attribute5
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						nAttributes=7;
 					};
 				};
 				class Item1
@@ -2850,8 +3420,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -2888,8 +3458,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
+							property="unitName";
+							expression="_this setname _value;";
 							class Value
 							{
 								class data
@@ -2901,14 +3471,14 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="";
 								};
 							};
 						};
 						class Attribute3
 						{
-							property="pitch";
-							expression="_this setpitch _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -2917,17 +3487,17 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=1.05;
+									value="RussianHead_4";
 								};
 							};
 						};
 						class Attribute4
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -2943,7 +3513,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						class Attribute5
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						nAttributes=7;
 					};
 				};
 				class Item2
@@ -2966,8 +3574,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -3004,8 +3612,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
+							property="unitName";
+							expression="_this setname _value;";
 							class Value
 							{
 								class data
@@ -3017,14 +3625,14 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="";
 								};
 							};
 						};
 						class Attribute3
 						{
-							property="pitch";
-							expression="_this setpitch _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -3033,17 +3641,17 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=0.98000002;
+									value="RussianHead_4";
 								};
 							};
 						};
 						class Attribute4
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -3059,7 +3667,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						class Attribute5
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						nAttributes=7;
 					};
 				};
 			};
@@ -3121,8 +3767,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -3159,8 +3805,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
+							property="unitName";
+							expression="_this setname _value;";
 							class Value
 							{
 								class data
@@ -3172,14 +3818,14 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03PER";
+									value="";
 								};
 							};
 						};
 						class Attribute3
 						{
-							property="pitch";
-							expression="_this setpitch _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -3188,17 +3834,17 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=1.05;
+									value="RussianHead_4";
 								};
 							};
 						};
 						class Attribute4
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -3214,7 +3860,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						class Attribute5
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						nAttributes=7;
 					};
 				};
 				class Item1
@@ -3237,8 +3921,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -3275,8 +3959,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
+							property="unitName";
+							expression="_this setname _value;";
 							class Value
 							{
 								class data
@@ -3288,14 +3972,14 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male02PER";
+									value="";
 								};
 							};
 						};
 						class Attribute3
 						{
-							property="pitch";
-							expression="_this setpitch _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -3304,17 +3988,17 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=1.05;
+									value="RussianHead_4";
 								};
 							};
 						};
 						class Attribute4
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -3330,7 +4014,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						class Attribute5
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						nAttributes=7;
 					};
 				};
 				class Item2
@@ -3353,8 +4075,8 @@ class Mission
 					{
 						class Attribute0
 						{
-							property="ace_isHandcuffed";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
 							class Value
 							{
 								class data
@@ -3391,8 +4113,8 @@ class Mission
 						};
 						class Attribute2
 						{
-							property="speaker";
-							expression="_this setspeaker _value;";
+							property="unitName";
+							expression="_this setname _value;";
 							class Value
 							{
 								class data
@@ -3404,14 +4126,14 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male02PER";
+									value="";
 								};
 							};
 						};
 						class Attribute3
 						{
-							property="pitch";
-							expression="_this setpitch _value;";
+							property="face";
+							expression="_this setface _value;";
 							class Value
 							{
 								class data
@@ -3420,17 +4142,17 @@ class Mission
 									{
 										type[]=
 										{
-											"SCALAR"
+											"STRING"
 										};
 									};
-									value=0.95999998;
+									value="RussianHead_4";
 								};
 							};
 						};
 						class Attribute4
 						{
-							property="ace_isSurrendered";
-							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleSurrender}";
+							property="ace_isHandcuffed";
+							expression="if (_value) then {[objNull, [_this], true] call ace_captives_fnc_moduleHandcuffed}";
 							class Value
 							{
 								class data
@@ -3446,7 +4168,45 @@ class Mission
 								};
 							};
 						};
-						nAttributes=5;
+						class Attribute5
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						nAttributes=7;
 					};
 				};
 			};
@@ -3531,7 +4291,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -3550,11 +4310,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -3590,7 +4388,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -3609,11 +4407,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -3649,7 +4485,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -3668,11 +4504,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -3708,7 +4582,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -3727,11 +4601,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item4
@@ -3767,7 +4679,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -3786,11 +4698,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item5
@@ -3826,7 +4776,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -3845,11 +4795,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 			};
@@ -3924,7 +4912,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -3943,11 +4931,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -3983,7 +5009,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4002,11 +5028,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -4042,7 +5106,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4061,11 +5125,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -4101,7 +5203,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4120,11 +5222,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item4
@@ -4160,7 +5300,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4179,11 +5319,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item5
@@ -4219,7 +5397,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4238,11 +5416,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 			};
@@ -4317,7 +5533,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4336,11 +5552,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -4376,7 +5630,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4395,11 +5649,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -4435,7 +5727,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4454,11 +5746,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -4494,7 +5824,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4513,11 +5843,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item4
@@ -4553,7 +5921,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4572,11 +5940,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item5
@@ -4612,7 +6018,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4631,11 +6037,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 			};
@@ -4710,7 +6154,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4729,11 +6173,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -4769,7 +6251,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4788,11 +6270,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -4828,7 +6348,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4847,11 +6367,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -4887,7 +6445,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4906,11 +6464,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item4
@@ -4946,7 +6542,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -4965,11 +6561,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item5
@@ -5005,7 +6639,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5024,11 +6658,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 			};
@@ -5103,7 +6775,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5122,11 +6794,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -5162,7 +6872,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5181,11 +6891,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -5221,7 +6969,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5240,11 +6988,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -5280,7 +7066,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5299,11 +7085,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item4
@@ -5339,7 +7163,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5358,11 +7182,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item5
@@ -5398,7 +7260,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5417,11 +7279,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 			};
@@ -5496,7 +7396,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5515,11 +7415,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -5555,7 +7493,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5574,11 +7512,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -5614,7 +7590,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5633,11 +7609,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -5673,7 +7687,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5692,11 +7706,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item4
@@ -5732,7 +7784,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5751,11 +7803,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item5
@@ -5791,7 +7881,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5810,11 +7900,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 			};
@@ -5890,7 +8018,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5909,11 +8037,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.02;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -5949,7 +8115,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -5968,11 +8134,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.02;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -6008,7 +8212,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -6027,11 +8231,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.02;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 			};
@@ -6125,7 +8367,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -6144,11 +8386,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.02;
+									value=1;
 								};
 							};
 						};
-						nAttributes=3;
+						class Attribute3
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=5;
 					};
 				};
 				class Item1
@@ -6203,7 +8483,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -6222,11 +8502,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.02;
+									value=1;
 								};
 							};
 						};
-						nAttributes=3;
+						class Attribute3
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=5;
 					};
 				};
 				class Item2
@@ -6281,7 +8599,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -6300,11 +8618,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.02;
+									value=1;
 								};
 							};
 						};
-						nAttributes=3;
+						class Attribute3
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=5;
 					};
 				};
 			};
@@ -6398,7 +8754,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -6417,11 +8773,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.02;
+									value=1;
 								};
 							};
 						};
-						nAttributes=3;
+						class Attribute3
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=5;
 					};
 				};
 				class Item1
@@ -6476,7 +8870,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -6495,11 +8889,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.02;
+									value=1;
 								};
 							};
 						};
-						nAttributes=3;
+						class Attribute3
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=5;
 					};
 				};
 				class Item2
@@ -6554,7 +8986,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -6573,11 +9005,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.02;
+									value=1;
 								};
 							};
 						};
-						nAttributes=3;
+						class Attribute3
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=5;
 					};
 				};
 			};
@@ -6652,7 +9122,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -6671,11 +9141,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -6711,7 +9219,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -6730,11 +9238,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -6770,7 +9316,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -6789,11 +9335,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -6829,7 +9413,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -6848,11 +9432,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item4
@@ -6888,7 +9510,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -6907,11 +9529,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item5
@@ -6947,7 +9607,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -6966,11 +9626,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 			};
@@ -7045,7 +9743,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -7064,11 +9762,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -7104,7 +9840,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -7123,11 +9859,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -7163,7 +9937,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -7182,11 +9956,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -7222,7 +10034,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -7241,11 +10053,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item4
@@ -7281,7 +10131,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -7300,11 +10150,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item5
@@ -7340,7 +10228,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -7359,11 +10247,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 			};
@@ -7438,7 +10364,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -7457,11 +10383,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -7497,7 +10461,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -7516,11 +10480,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -7556,7 +10558,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -7575,11 +10577,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -7615,7 +10655,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -7634,11 +10674,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item4
@@ -7674,7 +10752,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -7693,11 +10771,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item5
@@ -7733,7 +10849,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -7752,11 +10868,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 			};
@@ -7931,7 +11085,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -7950,11 +11104,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -7990,7 +11182,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8009,11 +11201,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -8049,7 +11279,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8068,11 +11298,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -8108,7 +11376,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8127,11 +11395,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item4
@@ -8167,7 +11473,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8186,11 +11492,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item5
@@ -8226,7 +11570,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8245,11 +11589,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=0.98000002;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 			};
@@ -8324,7 +11706,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8343,11 +11725,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -8383,7 +11803,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8402,11 +11822,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -8442,7 +11900,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8461,11 +11919,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -8501,7 +11997,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8520,11 +12016,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item4
@@ -8560,7 +12094,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8579,11 +12113,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item5
@@ -8619,7 +12191,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01PER";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8638,11 +12210,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 			};
@@ -8717,7 +12327,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8736,11 +12346,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item1
@@ -8776,7 +12424,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8795,11 +12443,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item2
@@ -8835,7 +12521,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8854,11 +12540,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item3
@@ -8894,7 +12618,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8913,11 +12637,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item4
@@ -8953,7 +12715,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -8972,11 +12734,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 				class Item5
@@ -9012,7 +12812,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03GRE";
+									value="Male01GRE";
 								};
 							};
 						};
@@ -9031,11 +12831,49 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.03;
+									value=1;
 								};
 							};
 						};
-						nAttributes=2;
+						class Attribute2
+						{
+							property="unitName";
+							expression="_this setname _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RussianHead_4";
+								};
+							};
+						};
+						nAttributes=4;
 					};
 				};
 			};
