@@ -1405,7 +1405,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -1481,7 +1481,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -1541,7 +1541,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -1617,7 +1617,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -1677,7 +1677,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -1753,7 +1753,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -1852,7 +1852,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -1928,7 +1928,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -1987,7 +1987,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -2063,7 +2063,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -2122,7 +2122,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -2198,7 +2198,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -2334,7 +2334,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -2391,7 +2391,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -2488,7 +2488,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -2545,7 +2545,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -2642,7 +2642,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -2699,7 +2699,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -2835,7 +2835,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -2892,7 +2892,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -2989,7 +2989,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -3046,7 +3046,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -3143,7 +3143,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -3200,7 +3200,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -3336,7 +3336,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -3393,7 +3393,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -3490,7 +3490,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -3547,7 +3547,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -3644,7 +3644,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -3701,7 +3701,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -3837,7 +3837,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -3894,7 +3894,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -3991,7 +3991,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -4048,7 +4048,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -4145,7 +4145,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -4202,7 +4202,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -4291,7 +4291,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -4348,7 +4348,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -4388,7 +4388,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -4445,7 +4445,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -4485,7 +4485,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -4542,7 +4542,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -4582,7 +4582,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -4639,7 +4639,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -4679,7 +4679,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -4736,7 +4736,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -4776,7 +4776,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -4833,7 +4833,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -4912,7 +4912,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -4969,7 +4969,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -5009,7 +5009,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -5066,7 +5066,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -5106,7 +5106,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -5163,7 +5163,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -5203,7 +5203,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -5260,7 +5260,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -5300,7 +5300,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -5357,7 +5357,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -5397,7 +5397,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -5454,7 +5454,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -5533,7 +5533,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -5590,7 +5590,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -5630,7 +5630,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -5687,7 +5687,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -5727,7 +5727,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -5784,7 +5784,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -5824,7 +5824,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -5881,7 +5881,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -5921,7 +5921,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -5978,7 +5978,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -6018,7 +6018,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -6075,7 +6075,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -6154,7 +6154,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -6211,7 +6211,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -6251,7 +6251,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -6308,7 +6308,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -6348,7 +6348,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -6405,7 +6405,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -6445,7 +6445,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -6502,7 +6502,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -6542,7 +6542,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -6599,7 +6599,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -6639,7 +6639,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -6696,7 +6696,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -6775,7 +6775,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -6832,7 +6832,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -6872,7 +6872,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -6929,7 +6929,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -6969,7 +6969,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -7026,7 +7026,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -7066,7 +7066,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -7123,7 +7123,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -7163,7 +7163,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -7220,7 +7220,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -7260,7 +7260,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -7317,7 +7317,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -7396,7 +7396,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -7453,7 +7453,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -7493,7 +7493,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -7550,7 +7550,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -7590,7 +7590,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -7647,7 +7647,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -7687,7 +7687,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -7744,7 +7744,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -7784,7 +7784,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -7841,7 +7841,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -7881,7 +7881,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -7938,7 +7938,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -8018,7 +8018,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -8075,7 +8075,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -8115,7 +8115,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -8172,7 +8172,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -8212,7 +8212,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -8269,7 +8269,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -8367,7 +8367,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -8424,7 +8424,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -8483,7 +8483,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -8540,7 +8540,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -8599,7 +8599,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -8656,7 +8656,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -8754,7 +8754,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -8811,7 +8811,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -8870,7 +8870,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -8927,7 +8927,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -8986,7 +8986,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -9043,7 +9043,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -9122,7 +9122,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -9179,7 +9179,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -9219,7 +9219,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -9276,7 +9276,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -9316,7 +9316,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -9373,7 +9373,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -9413,7 +9413,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -9470,7 +9470,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -9510,7 +9510,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -9567,7 +9567,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -9607,7 +9607,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -9664,7 +9664,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -9743,7 +9743,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -9800,7 +9800,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -9840,7 +9840,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -9897,7 +9897,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -9937,7 +9937,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -9994,7 +9994,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -10034,7 +10034,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -10091,7 +10091,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -10131,7 +10131,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -10188,7 +10188,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -10228,7 +10228,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -10285,7 +10285,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -10364,7 +10364,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -10421,7 +10421,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -10461,7 +10461,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -10518,7 +10518,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -10558,7 +10558,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -10615,7 +10615,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -10655,7 +10655,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -10712,7 +10712,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -10752,7 +10752,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -10809,7 +10809,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -10849,7 +10849,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -10906,7 +10906,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -11085,7 +11085,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -11142,7 +11142,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -11182,7 +11182,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -11239,7 +11239,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -11279,7 +11279,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -11336,7 +11336,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -11376,7 +11376,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -11433,7 +11433,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -11473,7 +11473,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -11530,7 +11530,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -11542,7 +11542,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6,5,-5};
+						position[]={6,5.0004392,-5};
 					};
 					side="West";
 					flags=4;
@@ -11552,7 +11552,7 @@ class Mission
 					};
 					id=1543;
 					type="B_soldier_AA_F";
-					atlOffset=-0.0014390945;
+					atlOffset=-0.00099992752;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11570,7 +11570,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -11627,7 +11627,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -11706,7 +11706,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -11763,7 +11763,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -11803,7 +11803,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -11860,7 +11860,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -11900,7 +11900,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -11957,7 +11957,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -11997,7 +11997,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -12054,7 +12054,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -12094,7 +12094,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -12151,7 +12151,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -12191,7 +12191,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -12248,7 +12248,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -12327,7 +12327,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -12384,7 +12384,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -12424,7 +12424,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -12481,7 +12481,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -12521,7 +12521,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -12578,7 +12578,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -12618,7 +12618,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -12675,7 +12675,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -12715,7 +12715,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -12772,7 +12772,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
@@ -12812,7 +12812,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male01GRE";
+									value="ACE_NoVoice";
 								};
 							};
 						};
@@ -12869,7 +12869,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="RussianHead_4";
+									value="Default";
 								};
 							};
 						};
